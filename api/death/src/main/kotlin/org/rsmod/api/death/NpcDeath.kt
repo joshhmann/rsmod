@@ -7,11 +7,13 @@ import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.config.refs.varns
 import org.rsmod.api.config.refs.varps
+import org.rsmod.api.drop.table.NpcDropTableRegistry
 import org.rsmod.api.npc.access.StandardNpcAccess
 import org.rsmod.api.npc.vars.typePlayerUidVarn
 import org.rsmod.api.player.output.soundSynth
 import org.rsmod.api.player.vars.intVarp
 import org.rsmod.api.player.vars.typeNpcUidVarp
+import org.rsmod.api.random.GameRandom
 import org.rsmod.api.repo.npc.NpcRepository
 import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.game.entity.Npc
@@ -29,6 +31,8 @@ constructor(
     private val seqTypes: SeqTypeList,
     private val players: PlayerList,
     private val objRepo: ObjRepository,
+    private val dropTableRegistry: NpcDropTableRegistry,
+    private val random: GameRandom,
 ) {
     public suspend fun deathNoDrops(access: StandardNpcAccess) {
         access.death(npcRepo, seqTypes, players)
@@ -43,10 +47,26 @@ constructor(
     }
 
     private fun Npc.spawnDeathDrops(dropCoords: CoordGrid) {
-        // TODO: Drop tables.
         val hero = findHero(players)
-        if (hero != null) {
-            val duration = hero.lootDropDuration ?: constants.lootdrop_duration
+        // Only spawn drops when at least one player damaged this NPC. If hero is null,
+        // the kill was caused by the server (e.g. NPC-vs-NPC) and no loot should appear.
+        if (hero == null) return
+
+        val duration = hero.lootDropDuration ?: constants.lootdrop_duration
+
+        val npcTypeId = id
+        val dropTable = dropTableRegistry.find(npcTypeId)
+
+        if (dropTable != null) {
+            // Roll the registered drop table and spawn each resulting item on the ground.
+            val drops = dropTable.roll(random)
+            for (drop in drops) {
+                objRepo.add(drop.obj, dropCoords, duration, hero)
+            }
+        } else {
+            // Fallback: no drop table registered for this NPC — drop only bones.
+            // This matches the vanilla behaviour for un-tabled mobs (e.g. bosses handled
+            // by custom scripts that never register a drop table entry).
             objRepo.add(objs.bones, dropCoords, duration, hero)
         }
     }

@@ -51146,3 +51146,293 @@ examine = 'A knight in fancy armour.'
 npc = 'dom_pet'
 examine = 'Doom on a small scale.'
 
+
+
+# F2P Monster Combat Definitions (ported from Kronos-184, validated against rev 228)
+
+[[config]]
+npc = 'chicken'
+examine = 'A chicken.'
+attack_type = 'Stab'
+attack_anim = 55
+attack_sound = 661
+attack_speed = 4
+defend_anim = 56
+death_anim = 57
+
+[[config]]
+npc = 'chicken_brown'
+examine = 'A chicken.'
+attack_type = 'Stab'
+attack_anim = 55
+attack_sound = 661
+attack_speed = 4
+defend_anim = 56
+death_anim = 57
+
+[[config]]
+npc = 'rooster'
+examine = 'A rooster.'
+attack_type = 'Stab'
+attack_anim = 55
+attack_sound = 661
+attack_speed = 4
+defend_anim = 56
+death_anim = 57
+
+[[config]]
+npc = 'cow'
+examine = 'A cow.'
+attack_type = 'Crush'
+attack_anim = 59
+attack_sound = 661
+attack_speed = 4
+defend_anim = 60
+death_anim = 62
+
+[[config]]
+npc = 'cow2'
+examine = 'A cow.'
+attack_type = 'Crush'
+attack_anim = 59
+attack_sound = 661
+attack_speed = 4
+defend_anim = 60
+death_anim = 62
+
+[[config]]
+npc = 'cow3'
+examine = 'A cow.'
+attack_type = 'Crush'
+attack_anim = 59
+attack_sound = 661
+attack_speed = 4
+defend_anim = 60
+death_anim = 62
+
+[[config]]
+npc = 'cow_beef'
+examine = 'A cow.'
+attack_type = 'Crush'
+attack_anim = 59
+attack_sound = 661
+attack_speed = 4
+defend_anim = 60
+death_anim = 62
+
+[[config]]
+npc = 'goblin'
+examine = 'An ugly green creature.'
+attack_type = 'Crush'
+attack_anim = 309
+attack_sound = 358
+attack_speed = 4
+defend_anim = 312
+defend_sound = 359
+death_anim = 313
+death_sound = 360
+
+[[config]]
+npc = 'goblin_2'
+examine = 'An ugly green creature.'
+attack_type = 'Crush'
+attack_anim = 309
+attack_sound = 358
+attack_speed = 4
+defend_anim = 312
+defend_sound = 359
+death_anim = 313
+death_sound = 360
+
+[[config]]
+npc = 'goblin_3'
+examine = 'An ugly green creature.'
+attack_type = 'Crush'
+attack_anim = 309
+attack_sound = 358
+attack_speed = 4
+defend_anim = 312
+defend_sound = 359
+death_anim = 313
+death_sound = 360
+
+[[config]]
+npc = 'goblin_chef'
+examine = 'An ugly green creature.'
+attack_type = 'Crush'
+attack_anim = 309
+attack_sound = 358
+attack_speed = 4
+defend_anim = 312
+defend_sound = 359
+death_anim = 313
+death_sound = 360
+
+[[config]]
+npc = 'goblin_guard'
+examine = 'An ugly green creature.'
+attack_type = 'Crush'
+attack_anim = 310
+attack_sound = 358
+attack_speed = 4
+defend_anim = 312
+defend_sound = 359
+death_anim = 313
+death_sound = 360
+
+[[config]]
+npc = 'giant_rat'
+examine = 'A giant rat.'
+attack_type = 'Crush'
+attack_anim = 138
+attack_sound = 661
+attack_speed = 4
+defend_anim = 139
+death_anim = 141
+
+[[config]]
+npc = 'giant_rat_2'
+examine = 'A giant rat.'
+attack_type = 'Crush'
+attack_anim = 138
+attack_sound = 661
+attack_speed = 4
+defend_anim = 139
+death_anim = 141
+
+[[config]]
+npc = 'giant_rat_3'
+examine = 'A giant rat.'
+attack_type = 'Crush'
+attack_anim = 138
+attack_sound = 661
+attack_speed = 4
+defend_anim = 139
+death_anim = 141
+
+[[config]]
+npc = 'guard'
+examine = 'He tries to keep order.'
+attack_type = 'Stab'
+attack_anim = 386
+attack_sound = 2566
+attack_speed = 5
+defend_anim = 388
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'guard_2'
+examine = 'He tries to keep order.'
+attack_type = 'Stab'
+attack_anim = 386
+attack_sound = 2566
+attack_speed = 5
+defend_anim = 388
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'guard_3'
+examine = 'He tries to keep order.'
+attack_type = 'Stab'
+attack_anim = 386
+attack_sound = 2566
+attack_speed = 5
+defend_anim = 388
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'scorpion'
+examine = 'A vicious little stinger.'
+attack_type = 'Stab'
+attack_anim = 270
+attack_sound = 661
+attack_speed = 6
+defend_anim = 271
+death_anim = 273
+
+[[config]]
+npc = 'imp'
+examine = 'A cheeky little imp.'
+attack_type = 'Stab'
+attack_anim = 169
+attack_sound = 358
+attack_speed = 4
+defend_anim = 170
+death_anim = 172
+
+[[config]]
+npc = 'dark_wizard'
+examine = 'A practicer of dark arts.'
+attack_type = 'Magic'
+attack_anim = 1162
+attack_sound = 220
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'bearded_dark_wizard'
+examine = 'A practicer of dark arts.'
+attack_type = 'Magic'
+attack_anim = 1162
+attack_sound = 220
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'young_dark_wizard'
+examine = 'He works evil magic.'
+attack_type = 'Magic'
+attack_anim = 1162
+attack_sound = 220
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'black_knight'
+examine = 'A dark-hearted knight.'
+attack_type = 'Slash'
+attack_anim = 386
+attack_sound = 2566
+attack_speed = 5
+defend_anim = 388
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'aggressive_black_knight'
+examine = 'A dark-hearted knight.'
+attack_type = 'Slash'
+attack_anim = 386
+attack_sound = 2566
+attack_speed = 5
+defend_anim = 388
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'lesser_demon'
+examine = 'A demon from the fiery depths.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+death_anim = 67
+

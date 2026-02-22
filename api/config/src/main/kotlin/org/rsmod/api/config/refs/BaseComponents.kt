@@ -89,4 +89,16 @@ object BaseComponents : ComponentReferences() {
     val fade_overlay_message = find("fade_overlay:message", 9045250929562636923)
 
     val music_now_playing_text = find("music:now_playing_text", 7229867128976358672)
+
+    val quest_scroll_title = find("questscroll:quest_title")
+    val quest_scroll_model = find("questscroll:quest_model")
+    val quest_scroll_points = find("questscroll:quest_points")
+    val quest_scroll_award = find("questscroll:award_text")
+    val quest_scroll_reward1 = find("questscroll:quest_reward1")
+    val quest_scroll_reward2 = find("questscroll:quest_reward2")
+    val quest_scroll_reward3 = find("questscroll:quest_reward3")
+    val quest_scroll_reward4 = find("questscroll:quest_reward4")
+    val quest_scroll_reward5 = find("questscroll:quest_reward5")
+    val quest_scroll_reward6 = find("questscroll:quest_reward6")
+    val quest_scroll_reward7 = find("questscroll:quest_reward7")
 }

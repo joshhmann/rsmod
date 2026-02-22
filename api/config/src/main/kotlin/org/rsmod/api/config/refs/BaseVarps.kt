@@ -47,11 +47,13 @@ object BaseVarps : VarpReferences() {
     val runemysteries = find("runemysteries", 14303645)
     val hetty = find("hetty", 15211569)
     val hunt = find("hunt", 16119493)
+    val desertrescue = find("desertrescue")
     val rjquest = find("rjquest", 32689106)
     val imp = find("imp", 36320802)
     val dragonquest = find("dragonquest", 39952498)
     val vampire = find("vampire", 40406460)
     val sheep = find("sheep", 40633441)
+    val pirate_quest = find("100_pirate_quest")
 
     val colosseum_glory = find("colosseum_glory", 937435372)
 
@@ -103,4 +105,12 @@ object BaseVarps : VarpReferences() {
      * to be restored later.
      */
     val temp_restore_65527 = find("temp_restore_65527")
+
+    /* Poison / Venom mechanics — used by content/mechanics/poison */
+    val poison_damage = find("poison_damage")
+    val venom_damage = find("venom_damage")
+    val poison_sub_tick = find("poison_sub_tick")
+    val poison_immunity_ticks = find("poison_immunity_ticks")
+    val venom_immunity_ticks = find("venom_immunity_ticks")
+    val hp_orb_toxin = find("hp_orb_toxin")
 }

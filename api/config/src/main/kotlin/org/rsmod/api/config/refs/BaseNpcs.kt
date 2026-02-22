@@ -7,12 +7,12 @@ import org.rsmod.api.type.refs.npc.NpcReferences
 typealias npcs = BaseNpcs
 
 object BaseNpcs : NpcReferences() {
-    val man = find("man", 1329978397240899572)
-    val man2 = find("man2", 1329978397240899573)
-    val man3 = find("man3", 1329978397240899574)
-    val woman = find("woman", 5318832715787091329)
-    val woman2 = find("woman2", 5318832715787091330)
-    val woman3 = find("woman3", 5318832715787091331)
+    val man = find("man", 8763388999323217354)
+    val man2 = find("man2", 8763388999323217355)
+    val man3 = find("man3", 8763388999323217356)
+    val woman = find("woman", 3528871281014633303)
+    val woman2 = find("woman2", 3528871281014633304)
+    val woman3 = find("woman3", 3528871281014633305)
     val man_indoor = find("man_indoor", 1329978397240903284)
     val uri_emote_1 = find("trail_master_uri", 2255033183848053726)
     val uri_emote_2 = find("uri_emote", 4998005704130117537)

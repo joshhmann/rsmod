@@ -38,6 +38,9 @@ object LumbridgeNpcs : NpcReferences() {
     val hewey = find("mistmyst_hewey", 7376540171675674022)
     val fishing_tutor = find("aide_tutor_fishing", 4335984535090215880)
     val millie = find("millie_the_miller", 89073509135537075)
+    val duke_of_lumbridge = find("duke_of_lumbridge")
+    val gillie_groats = find("gillie_the_milkmaid", 8262063475332109549)
+    val fred_the_farmer = find("fred_the_farmer")
 }
 
 internal object LumbridgeNpcEditor : NpcEditor() {
@@ -137,5 +140,10 @@ internal object LumbridgeNpcEditor : NpcEditor() {
         }
 
         edit(lumbridge_npcs.millie) { wanderRange = 1 }
+
+        edit(lumbridge_npcs.duke_of_lumbridge) { moveRestrict = indoors }
+
+        edit(lumbridge_npcs.gillie_groats) { wanderRange = 1 }
+        edit(lumbridge_npcs.fred_the_farmer) { moveRestrict = indoors }
     }
 }

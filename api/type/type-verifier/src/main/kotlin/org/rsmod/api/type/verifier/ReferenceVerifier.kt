@@ -175,6 +175,6 @@ constructor(private val references: TypeReferenceResolverMap) {
         }
 
     private companion object {
-        private const val MAX_ERROR_LINES: Int = 50
+        private const val MAX_ERROR_LINES: Int = 1000
     }
 }

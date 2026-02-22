@@ -53,6 +53,38 @@ object BaseSeqs : SeqReferences() {
         find("human_woodcutting_trailblazer_axe", 1396237693275185632)
     val human_woodcutting_crystal_axe = find("human_woodcutting_crystal_axe", 1396236516752534637)
 
+    val human_firemaking = find("human_firemaking")
+
+    val human_bone_sacrifice = find("human_bone_sacrifice") // altar offering anim (seq 3705)
+
+    val human_mining_bronze_pickaxe = find("human_mining_bronze_pickaxe")
+    val human_mining_iron_pickaxe = find("human_mining_iron_pickaxe")
+    val human_mining_steel_pickaxe = find("human_mining_steel_pickaxe")
+    val human_mining_black_pickaxe = find("human_mining_black_pickaxe")
+    val human_mining_mithril_pickaxe = find("human_mining_mithril_pickaxe")
+    val human_mining_adamant_pickaxe = find("human_mining_adamant_pickaxe")
+    val human_mining_rune_pickaxe = find("human_mining_rune_pickaxe")
+    val human_mining_gilded_pickaxe = find("human_mining_gilded_pickaxe")
+    val human_mining_dragon_pickaxe = find("human_mining_dragon_pickaxe")
+    val human_mining_dragon_pickaxe_pretty = find("human_mining_dragon_pickaxe_pretty")
+    val human_mining_3a_pickaxe = find("human_mining_3a_pickaxe")
+    val human_mining_infernal_pickaxe = find("human_mining_infernal_pickaxe")
+    val human_mining_zalcano_pickaxe = find("human_mining_zalcano_pickaxe")
+    val human_mining_crystal_pickaxe = find("human_mining_crystal_pickaxe")
+    val human_mining_trailblazer_pickaxe_no_infernal =
+        find("human_mining_trailblazer_pickaxe_no_infernal")
+    val human_mining_trailblazer_pickaxe =
+        find("human_mining_trailblazer_pickaxe") // altar offering anim (seq 3705)
+
+    val human_pickpocket = find("human_pickpocket") // pickpocket NPC anim (ID 881)
+    val human_thieving_stall = find("human_thieving_stall") // steal from stall anim (ID 881)
+
+    val human_fishing_net = find("human_fishing_net") // net spot anim
+    val human_fishing_bignet = find("human_fishing_bignet") // big net spot anim
+    val human_fishing_bait = find("human_fishing_bait") // rod/bait/fly/barb anim
+    val human_fishing_cage = find("human_fishing_cage") // cage/lobster-pot anim
+    val human_fishing_harpoon = find("human_fishing_harpoon") // harpoon anim
+
     val chatquiz1 = find("chatquiz1", 7867308265649250370)
     val chatquiz2 = find("chatquiz2", 6914569973419682947)
     val chatquiz3 = find("chatquiz3", 1596317404102498126)
@@ -265,6 +297,10 @@ object BaseSeqs : SeqReferences() {
     val emote_trick = find("emote_trick", 7267332313681955035)
     val emote_varlamore_salute = find("emote_varlamore_salute", 7246467433788849920)
     val emote_varlamore_salute_loop = find("emote_varlamore_salute_loop", 5016367684387565325)
+
+    val human_smithing = find("human_smithing") // anvil smithing anim
+    val human_fletching_knife = find("human_fletching_knife") // fletching with knife anim
+    val human_herblore = find("human_herblore") // herb cleaning / potion mixing anim
 
     val cow_update_graze = find("cow_update_graze", 1478576823858649669)
 }

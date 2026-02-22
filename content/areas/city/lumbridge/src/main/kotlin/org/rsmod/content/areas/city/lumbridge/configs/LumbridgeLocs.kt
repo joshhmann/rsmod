@@ -8,4 +8,7 @@ object LumbridgeLocs : LocReferences() {
     val winch = find("winch", 3005742587901703282)
     val farmerfred_axe_logs = find("log_withaxe", 3945491204872604074)
     val farmerfred_logs = find("log_withoutaxe", 4989925034077424035)
+    val hopper = find("hopper1", 299960034990052969)
+    val hopper_controls = find("hopperlevers1", 7903479332866702642)
+    val flour_bin = find("millbase", 6777221574337899206)
 }
