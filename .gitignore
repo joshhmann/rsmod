@@ -47,3 +47,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Local Dev Artifacts ###
+.g3/
+.gradle-worker-*/
+build_log*.txt
+install_log*.txt
+run_log*.txt
