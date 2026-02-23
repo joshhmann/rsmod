@@ -16,8 +16,8 @@ package org.rsmod.content.skills.fletching.scripts
 // 4. ARROW SHAFT CREATION: objs.knife + objs.logs → 15 arrow shafts (level 1, 5 XP)
 //    (requires the log type; shaft production is knife-on-log like bow-making)
 //
-// NOTE: No GUI "make-X" interface in this version. All interactions produce 1 unit
-//   (or 15 arrows). Future: add quantity selection interface.
+// NOTE: Bow making and stringing use countDialog make-X selection.
+// Arrow making remains single-action in this pass.
 //
 // Animations:
 //   seqs.human_fletching_knife — added to BaseSeqs.kt alongside this module.
@@ -94,13 +94,27 @@ class Fletching @Inject constructor(private val xpMods: XpModifiers) : PluginScr
             mes("You don't have any logs to fletch.")
             return
         }
-        invDel(inv, def.log, count = 1)
-        anim(seqs.human_fletching_knife)
-        delay(4)
-        val xp = def.shortbowXp * xpMods.get(player, stats.fletching)
-        statAdvance(stats.fletching, xp)
-        invAdd(inv, def.shortbow_u)
-        mes("You fletch the logs into an unstrung bow.")
+        val count = countDialog("How many would you like to make?")
+        if (count == 0) {
+            return
+        }
+        val startCoords = player.coords
+        repeat(count) {
+            if (player.coords != startCoords) {
+                return
+            }
+            val deleted = invDel(inv, def.log, count = 1, strict = true)
+            if (deleted.failure) {
+                mes("You don't have any logs to fletch.")
+                return
+            }
+            anim(seqs.human_fletching_knife)
+            delay(4)
+            val xp = def.shortbowXp * xpMods.get(player, stats.fletching)
+            statAdvance(stats.fletching, xp)
+            invAdd(inv, def.shortbow_u)
+            mes("You fletch the logs into an unstrung bow.")
+        }
     }
 
     private suspend fun ProtectedAccess.stringBow(def: StringDef) {
@@ -112,14 +126,28 @@ class Fletching @Inject constructor(private val xpMods: XpModifiers) : PluginScr
             mes("You need an unstrung bow and a bowstring.")
             return
         }
-        invDel(inv, def.unstrung, count = 1)
-        invDel(inv, objs.bowstring, count = 1)
-        anim(seqs.human_fletching_knife)
-        delay(4)
-        val xp = def.xp * xpMods.get(player, stats.fletching)
-        statAdvance(stats.fletching, xp)
-        invAdd(inv, def.strung)
-        mes("You string the bow.")
+        val count = countDialog("How many would you like to make?")
+        if (count == 0) {
+            return
+        }
+        val startCoords = player.coords
+        repeat(count) {
+            if (player.coords != startCoords) {
+                return
+            }
+            val removedBow = invDel(inv, def.unstrung, count = 1, strict = true)
+            val removedString = invDel(inv, objs.bowstring, count = 1, strict = true)
+            if (removedBow.failure || removedString.failure) {
+                mes("You need an unstrung bow and a bowstring.")
+                return
+            }
+            anim(seqs.human_fletching_knife)
+            delay(4)
+            val xp = def.xp * xpMods.get(player, stats.fletching)
+            statAdvance(stats.fletching, xp)
+            invAdd(inv, def.strung)
+            mes("You string the bow.")
+        }
     }
 
     private suspend fun ProtectedAccess.fletchArrows(def: ArrowDef) {

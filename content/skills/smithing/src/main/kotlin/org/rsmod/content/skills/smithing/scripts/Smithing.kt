@@ -17,7 +17,7 @@ package org.rsmod.content.skills.smithing.scripts
 //   seqs.human_smithing — added to BaseSeqs.kt alongside this module.
 //
 // TODO:
-//   - Smithing interface (make-X dialogue like real OSRS)
+//   - Smithing interface item selection (make-X quantity now supported per selected product)
 //   - Gold bars / silver bars from gold/silver ore (jewellery crafting)
 //   - Cannonballs, nails, bolts
 //   - Platebody requiring 5 bars
@@ -126,17 +126,31 @@ class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScri
             mes("You need a Smithing level of ${def.levelReq} to smith this.")
             return
         }
-        if (!inv.contains(def.bar)) {
+        if (invTotal(inv, def.bar) < def.barCount) {
             mes("You don't have enough bars to smith this item.")
             return
         }
-        invDel(inv, def.bar, count = def.barCount)
-        anim(seqs.human_smithing)
-        delay(5)
-        val xp = def.xp * xpMods.get(player, stats.smithing)
-        statAdvance(stats.smithing, xp)
-        invAdd(inv, def.product, count = def.productCount)
-        mes("You hammer the bars into an item.")
+        val count = countDialog("How many would you like to make?")
+        if (count == 0) {
+            return
+        }
+        val startCoords = player.coords
+        repeat(count) {
+            if (player.coords != startCoords) {
+                return
+            }
+            val removed = invDel(inv, def.bar, count = def.barCount, strict = true)
+            if (removed.failure) {
+                mes("You don't have enough bars to smith this item.")
+                return
+            }
+            anim(seqs.human_smithing)
+            delay(5)
+            val xp = def.xp * xpMods.get(player, stats.smithing)
+            statAdvance(stats.smithing, xp)
+            invAdd(inv, def.product, count = def.productCount)
+            mes("You hammer the bars into an item.")
+        }
     }
 
     companion object {

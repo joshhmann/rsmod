@@ -88,12 +88,30 @@ class Herblore @Inject constructor(private val xpMods: XpModifiers) : PluginScri
             mes("You need a Herblore level of ${def.levelReq} to make this potion.")
             return
         }
-        invDel(inv, def.clean, count = 1)
-        invDel(inv, objs.vial_of_water, count = 1)
-        anim(seqs.human_herblore)
-        delay(1)
-        // No XP for adding herb to vial — XP is given when secondary is added.
-        invAdd(inv, unfPotion)
+        if (!inv.contains(def.clean) || !inv.contains(objs.vial_of_water)) {
+            mes("You don't have the required ingredients.")
+            return
+        }
+        val count = countDialog("How many would you like to make?")
+        if (count == 0) {
+            return
+        }
+        val startCoords = player.coords
+        repeat(count) {
+            if (player.coords != startCoords) {
+                return
+            }
+            val removedHerb = invDel(inv, def.clean, count = 1, strict = true)
+            val removedVial = invDel(inv, objs.vial_of_water, count = 1, strict = true)
+            if (removedHerb.failure || removedVial.failure) {
+                mes("You don't have the required ingredients.")
+                return
+            }
+            anim(seqs.human_herblore)
+            delay(1)
+            // No XP for adding herb to vial — XP is given when secondary is added.
+            invAdd(inv, unfPotion)
+        }
     }
 
     private suspend fun ProtectedAccess.mixPotion(def: PotionDef) {
@@ -105,14 +123,28 @@ class Herblore @Inject constructor(private val xpMods: XpModifiers) : PluginScri
             mes("You don't have the required ingredients.")
             return
         }
-        invDel(inv, def.secondary, count = 1)
-        invDel(inv, def.unfPotion, count = 1)
-        anim(seqs.human_herblore)
-        delay(1)
-        val xp = def.mixXp * xpMods.get(player, stats.herblore)
-        statAdvance(stats.herblore, xp)
-        invAdd(inv, def.product)
-        mes("You mix the ingredients into a potion.")
+        val count = countDialog("How many would you like to make?")
+        if (count == 0) {
+            return
+        }
+        val startCoords = player.coords
+        repeat(count) {
+            if (player.coords != startCoords) {
+                return
+            }
+            val removedSecondary = invDel(inv, def.secondary, count = 1, strict = true)
+            val removedUnf = invDel(inv, def.unfPotion, count = 1, strict = true)
+            if (removedSecondary.failure || removedUnf.failure) {
+                mes("You don't have the required ingredients.")
+                return
+            }
+            anim(seqs.human_herblore)
+            delay(1)
+            val xp = def.mixXp * xpMods.get(player, stats.herblore)
+            statAdvance(stats.herblore, xp)
+            invAdd(inv, def.product)
+            mes("You mix the ingredients into a potion.")
+        }
     }
 
     companion object {
