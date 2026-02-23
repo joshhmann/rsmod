@@ -19,6 +19,8 @@ dependencyResolutionManagement {
     }
 }
 
+includeBuild("../DTX")
+
 include(
     "api",
     "content",

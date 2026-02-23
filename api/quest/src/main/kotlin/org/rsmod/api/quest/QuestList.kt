@@ -50,7 +50,7 @@ public object QuestList {
             id = 4,
             name = "Romeo & Juliet",
             varp = BaseVarps.rjquest,
-            maxStage = 2,
+            maxStage = 8,
             rewards = questRewards { extra("5 Quest Points") },
         )
 

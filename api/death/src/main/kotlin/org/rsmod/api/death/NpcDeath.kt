@@ -16,9 +16,11 @@ import org.rsmod.api.player.vars.typeNpcUidVarp
 import org.rsmod.api.random.GameRandom
 import org.rsmod.api.repo.npc.NpcRepository
 import org.rsmod.api.repo.obj.ObjRepository
+import org.rsmod.events.EventBus
 import org.rsmod.game.entity.Npc
 import org.rsmod.game.entity.Player
 import org.rsmod.game.entity.PlayerList
+import org.rsmod.game.entity.npc.NpcStateEvents
 import org.rsmod.game.entity.npc.NpcUid
 import org.rsmod.game.type.seq.SeqTypeList
 import org.rsmod.map.CoordGrid
@@ -33,16 +35,17 @@ constructor(
     private val objRepo: ObjRepository,
     private val dropTableRegistry: NpcDropTableRegistry,
     private val random: GameRandom,
+    private val eventBus: EventBus,
 ) {
     public suspend fun deathNoDrops(access: StandardNpcAccess) {
-        access.death(npcRepo, seqTypes, players)
+        access.death(npcRepo, seqTypes, players, eventBus)
     }
 
     public suspend fun deathWithDrops(
         access: StandardNpcAccess,
         dropCoords: CoordGrid = access.coords,
     ) {
-        access.death(npcRepo, seqTypes, players)
+        access.death(npcRepo, seqTypes, players, eventBus)
         access.npc.spawnDeathDrops(dropCoords)
     }
 
@@ -102,6 +105,7 @@ public suspend fun StandardNpcAccess.death(
     npcRepo: NpcRepository,
     seqTypes: SeqTypeList,
     players: PlayerList,
+    eventBus: EventBus,
 ) {
     walk(coords)
     noneMode()
@@ -124,6 +128,9 @@ public suspend fun StandardNpcAccess.death(
             player.lastCombat = 0
         }
     }
+
+    val hero = npc.findHero(players)
+    eventBus.publish(NpcStateEvents.Death(npc, hero))
 
     val deathAnim = param(params.death_anim)
     anim(deathAnim)

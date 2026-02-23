@@ -119,6 +119,41 @@ public sealed class HeldObjEvents(id: Number) : OpEvent(id.toLong()) {
         public val type: UnpackedObjType,
         public val inventory: Inventory,
     ) : HeldObjEvents(obj.id)
+
+    public class Op6(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldObjEvents(obj.id)
+
+    public class Op7(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldObjEvents(obj.id)
+
+    public class Op8(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldObjEvents(obj.id)
+
+    public class Op9(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldObjEvents(obj.id)
+
+    public class Op10(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldObjEvents(obj.id)
 }
 
 public sealed class HeldContentEvents(id: Number) : OpEvent(id.toLong()) {
@@ -151,6 +186,41 @@ public sealed class HeldContentEvents(id: Number) : OpEvent(id.toLong()) {
     ) : HeldContentEvents(type.contentGroup)
 
     public class Op5(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldContentEvents(type.contentGroup)
+
+    public class Op6(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldContentEvents(type.contentGroup)
+
+    public class Op7(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldContentEvents(type.contentGroup)
+
+    public class Op8(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldContentEvents(type.contentGroup)
+
+    public class Op9(
+        public val slot: Int,
+        public val obj: InvObj,
+        public val type: UnpackedObjType,
+        public val inventory: Inventory,
+    ) : HeldContentEvents(type.contentGroup)
+
+    public class Op10(
         public val slot: Int,
         public val obj: InvObj,
         public val type: UnpackedObjType,

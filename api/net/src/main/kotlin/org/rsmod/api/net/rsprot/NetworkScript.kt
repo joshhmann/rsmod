@@ -56,8 +56,9 @@ constructor(
     private fun SessionStart.startSession() {
         val slot = player.slotId
 
-        val playerInfo = service.playerInfoProtocol.alloc(slot, OldSchoolClientType.DESKTOP)
-        val npcInfo = service.npcInfoProtocol.alloc(slot, OldSchoolClientType.DESKTOP)
+        val playerInfo =
+            playerInfo ?: service.playerInfoProtocol.alloc(slot, OldSchoolClientType.DESKTOP)
+        val npcInfo = npcInfo ?: service.npcInfoProtocol.alloc(slot, OldSchoolClientType.DESKTOP)
 
         val client = RspClient(session, playerInfo, npcInfo) as Client<Any, Any>
         val cycle = RspCycle(session, playerInfo, npcInfo, xtea, objTypes, regionReg)
@@ -65,7 +66,11 @@ constructor(
         player.client = client
         player.clientCycle = cycle
 
-        cycle.init(player)
+        if (reconnect) {
+            cycle.initReconnect(player)
+        } else {
+            cycle.init(player)
+        }
     }
 
     private fun SessionStateEvent.Delete.closeSession() {

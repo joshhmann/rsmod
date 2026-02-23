@@ -120,6 +120,11 @@ constructor(
             InteractionOp.Op3 -> AiLocEvents.Op3(this, type)
             InteractionOp.Op4 -> AiLocEvents.Op4(this, type)
             InteractionOp.Op5 -> AiLocEvents.Op5(this, type)
+            InteractionOp.Op6 -> AiLocEvents.Op6(this, type)
+            InteractionOp.Op7 -> AiLocEvents.Op7(this, type)
+            InteractionOp.Op8 -> AiLocEvents.Op8(this, type)
+            InteractionOp.Op9 -> AiLocEvents.Op9(this, type)
+            InteractionOp.Op10 -> AiLocEvents.Op10(this, type)
         }
 
     private fun BoundLocInfo.toContentOp(
@@ -133,6 +138,11 @@ constructor(
             InteractionOp.Op3 -> AiLocContentEvents.Op3(this, type, contentGroup)
             InteractionOp.Op4 -> AiLocContentEvents.Op4(this, type, contentGroup)
             InteractionOp.Op5 -> AiLocContentEvents.Op5(this, type, contentGroup)
+            InteractionOp.Op6 -> AiLocContentEvents.Op6(this, type, contentGroup)
+            InteractionOp.Op7 -> AiLocContentEvents.Op7(this, type, contentGroup)
+            InteractionOp.Op8 -> AiLocContentEvents.Op8(this, type, contentGroup)
+            InteractionOp.Op9 -> AiLocContentEvents.Op9(this, type, contentGroup)
+            InteractionOp.Op10 -> AiLocContentEvents.Op10(this, type, contentGroup)
         }
 
     private fun BoundLocInfo.toUnimplementedOp(
@@ -145,6 +155,11 @@ constructor(
             InteractionOp.Op3 -> AiLocUnimplementedEvents.Op3(this, type)
             InteractionOp.Op4 -> AiLocUnimplementedEvents.Op4(this, type)
             InteractionOp.Op5 -> AiLocUnimplementedEvents.Op5(this, type)
+            InteractionOp.Op6 -> AiLocUnimplementedEvents.Op6(this, type)
+            InteractionOp.Op7 -> AiLocUnimplementedEvents.Op7(this, type)
+            InteractionOp.Op8 -> AiLocUnimplementedEvents.Op8(this, type)
+            InteractionOp.Op9 -> AiLocUnimplementedEvents.Op9(this, type)
+            InteractionOp.Op10 -> AiLocUnimplementedEvents.Op10(this, type)
         }
 
     private fun BoundLocInfo.toDefaultOp(
@@ -157,6 +172,11 @@ constructor(
             InteractionOp.Op3 -> AiLocDefaultEvents.Op3(this, type)
             InteractionOp.Op4 -> AiLocDefaultEvents.Op4(this, type)
             InteractionOp.Op5 -> AiLocDefaultEvents.Op5(this, type)
+            InteractionOp.Op6 -> AiLocDefaultEvents.Op6(this, type)
+            InteractionOp.Op7 -> AiLocDefaultEvents.Op7(this, type)
+            InteractionOp.Op8 -> AiLocDefaultEvents.Op8(this, type)
+            InteractionOp.Op9 -> AiLocDefaultEvents.Op9(this, type)
+            InteractionOp.Op10 -> AiLocDefaultEvents.Op10(this, type)
         }
 
     private fun BoundLocInfo.toAp(type: UnpackedLocType, op: InteractionOp): AiLocEvents.Ap =
@@ -166,6 +186,11 @@ constructor(
             InteractionOp.Op3 -> AiLocEvents.Ap3(this, type)
             InteractionOp.Op4 -> AiLocEvents.Ap4(this, type)
             InteractionOp.Op5 -> AiLocEvents.Ap5(this, type)
+            InteractionOp.Op6 -> AiLocEvents.Ap6(this, type)
+            InteractionOp.Op7 -> AiLocEvents.Ap7(this, type)
+            InteractionOp.Op8 -> AiLocEvents.Ap8(this, type)
+            InteractionOp.Op9 -> AiLocEvents.Ap9(this, type)
+            InteractionOp.Op10 -> AiLocEvents.Ap10(this, type)
         }
 
     private fun BoundLocInfo.toContentAp(
@@ -179,6 +204,11 @@ constructor(
             InteractionOp.Op3 -> AiLocContentEvents.Ap3(this, type, contentGroup)
             InteractionOp.Op4 -> AiLocContentEvents.Ap4(this, type, contentGroup)
             InteractionOp.Op5 -> AiLocContentEvents.Ap5(this, type, contentGroup)
+            InteractionOp.Op6 -> AiLocContentEvents.Ap6(this, type, contentGroup)
+            InteractionOp.Op7 -> AiLocContentEvents.Ap7(this, type, contentGroup)
+            InteractionOp.Op8 -> AiLocContentEvents.Ap8(this, type, contentGroup)
+            InteractionOp.Op9 -> AiLocContentEvents.Ap9(this, type, contentGroup)
+            InteractionOp.Op10 -> AiLocContentEvents.Ap10(this, type, contentGroup)
         }
 
     private fun BoundLocInfo.toDefaultAp(
@@ -191,7 +221,13 @@ constructor(
             InteractionOp.Op3 -> AiLocDefaultEvents.Ap3(this, type)
             InteractionOp.Op4 -> AiLocDefaultEvents.Ap4(this, type)
             InteractionOp.Op5 -> AiLocDefaultEvents.Ap5(this, type)
+            InteractionOp.Op6 -> AiLocDefaultEvents.Ap6(this, type)
+            InteractionOp.Op7 -> AiLocDefaultEvents.Ap7(this, type)
+            InteractionOp.Op8 -> AiLocDefaultEvents.Ap8(this, type)
+            InteractionOp.Op9 -> AiLocDefaultEvents.Ap9(this, type)
+            InteractionOp.Op10 -> AiLocDefaultEvents.Ap10(this, type)
         }
+            as AiLocDefaultEvents.Ap
 
     public fun hasOp(type: UnpackedLocType, op: InteractionOp): Boolean = type.hasOp(op)
 }

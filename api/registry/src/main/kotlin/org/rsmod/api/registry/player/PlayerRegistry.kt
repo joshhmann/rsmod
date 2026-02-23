@@ -108,4 +108,9 @@ constructor(
     public fun nextFreeSlot(): Int? = playerList.nextFreeSlot()
 
     public fun isOnline(userId: Long): Boolean = playerList.any { it.userId == userId }
+
+    public fun findOnline(username: String): Player? =
+        playerList.find { it.username.equals(username, ignoreCase = true) }
+
+    public fun findOnline(userId: Long): Player? = playerList.find { it.userId == userId }
 }

@@ -55,6 +55,9 @@ object BaseVarps : VarpReferences() {
     val sheep = find("sheep", 40633441)
     val pirate_quest = find("100_pirate_quest")
 
+    val slayer_count = find("slayer_count")
+    val slayer_target = find("slayer_target")
+
     val colosseum_glory = find("colosseum_glory", 937435372)
 
     val collection_count_other_max = find("collection_count_other_max", 1049110024)

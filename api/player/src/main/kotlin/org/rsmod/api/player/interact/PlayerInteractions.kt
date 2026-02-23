@@ -56,6 +56,11 @@ public class PlayerInteractions @Inject constructor(private val eventBus: EventB
             InteractionOp.Op3 -> PlayerEvents.Op3(this)
             InteractionOp.Op4 -> PlayerEvents.Op4(this)
             InteractionOp.Op5 -> PlayerEvents.Op5(this)
+            InteractionOp.Op6 -> PlayerEvents.Op6(this)
+            InteractionOp.Op7 -> PlayerEvents.Op7(this)
+            InteractionOp.Op8 -> PlayerEvents.Op8(this)
+            InteractionOp.Op9 -> PlayerEvents.Op9(this)
+            InteractionOp.Op10 -> PlayerEvents.Op10(this)
         }
 
     private fun Player.toAp(op: InteractionOp): PlayerEvents.Ap =
@@ -65,5 +70,10 @@ public class PlayerInteractions @Inject constructor(private val eventBus: EventB
             InteractionOp.Op3 -> PlayerEvents.Ap3(this)
             InteractionOp.Op4 -> PlayerEvents.Ap4(this)
             InteractionOp.Op5 -> PlayerEvents.Ap5(this)
+            InteractionOp.Op6 -> PlayerEvents.Ap6(this)
+            InteractionOp.Op7 -> PlayerEvents.Ap7(this)
+            InteractionOp.Op8 -> PlayerEvents.Ap8(this)
+            InteractionOp.Op9 -> PlayerEvents.Ap9(this)
+            InteractionOp.Op10 -> PlayerEvents.Ap10(this)
         }
 }

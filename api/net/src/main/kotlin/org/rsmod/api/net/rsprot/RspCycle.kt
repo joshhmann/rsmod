@@ -50,6 +50,8 @@ class RspCycle(
 
     private var knownRegionUid: Int? = null
 
+    private var knownRegionMutationCount: Int = 0
+
     private var cachedRegionZoneProvider: RebuildRegion.RebuildRegionZoneProvider? = null
 
     private val playerExtendedInfo: PlayerAvatarExtendedInfo
@@ -60,6 +62,12 @@ class RspCycle(
 
     fun init(player: Player) {
         player.updateCoords()
+        player.queueRebuildLogin()
+    }
+
+    fun initReconnect(player: Player) {
+        player.updateCoords()
+        playerInfo.onReconnect()
         player.queueRebuildLogin()
     }
 
@@ -164,13 +172,12 @@ class RspCycle(
         // as such we should expect the region to always be valid at this point.
         checkNotNull(region) { "Unexpected invalid region: uid=$regionUid, coords=$coords" }
 
-        // TODO: When implementing `net` module properly, figure out what the best way would be to
-        //  "invalidate" the `cachedRebuildRegion` if the region is somehow altered. This can
-        //  happen in regions such as the Gauntlet. (If we decide to keep this as a cached value
-        //  as opposed to reconstructing it every time)
-        if (regionUid != knownRegionUid) {
+        // figuring out what the best way would be to "invalidate" the `cachedRebuildRegion` if
+        // the region is somehow altered. This can happen in regions such as the Gauntlet.
+        if (regionUid != knownRegionUid || regionMutationCount != knownRegionMutationCount) {
             cachedRegionZoneProvider = createRegionZoneProvider(region)
             knownRegionUid = regionUid
+            knownRegionMutationCount = regionMutationCount
         }
 
         val zoneProvider = cachedRegionZoneProvider ?: createRegionZoneProvider(region)

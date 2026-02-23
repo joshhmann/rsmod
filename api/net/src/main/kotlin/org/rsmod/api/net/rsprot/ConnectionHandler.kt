@@ -5,6 +5,7 @@ import jakarta.inject.Inject
 import net.rsprot.crypto.xtea.XteaKey
 import net.rsprot.protocol.api.GameConnectionHandler
 import net.rsprot.protocol.api.login.GameLoginResponseHandler
+import net.rsprot.protocol.common.client.OldSchoolClientType
 import net.rsprot.protocol.loginprot.incoming.util.AuthenticationType
 import net.rsprot.protocol.loginprot.incoming.util.LoginBlock
 import net.rsprot.protocol.loginprot.incoming.util.OtpAuthenticationType
@@ -13,6 +14,7 @@ import org.rsmod.api.account.AccountManager
 import org.rsmod.api.account.loader.request.AccountLoadAuth
 import org.rsmod.api.config.refs.modlevels
 import org.rsmod.api.net.rsprot.player.AccountLoadResponseHook
+import org.rsmod.api.net.rsprot.player.SessionStart
 import org.rsmod.api.net.rsprot.provider.Js5Store
 import org.rsmod.api.pw.hash.PasswordHashing
 import org.rsmod.api.realm.Realm
@@ -175,14 +177,32 @@ private constructor(
         }
     }
 
-    // TODO: Token authentication handling.
     private fun tokenLogin(
         responseHandler: GameLoginResponseHandler<Player>,
         block: LoginBlock<AuthenticationType>,
-        @Suppress("unused") auth: AuthenticationType.TokenAuthentication,
+        auth: AuthenticationType.TokenAuthentication,
     ) {
-        logger.warn { "Unhandled login authentication for: $block" }
-        responseHandler.writeFailedResponse(LoginResponse.InvalidLoginPacket)
+        val realmConfig = realm.config
+        val responseHook =
+            AccountLoadResponseHook(
+                world = world,
+                config = realmConfig,
+                update = update,
+                eventBus = eventBus,
+                accountRegistry = accountReg,
+                playerRegistry = playerReg,
+                devModeModLevel = devModeModLevel,
+                loginBlock = block,
+                channelResponses = responseHandler,
+                inputPassword = CharArray(0),
+                verifyPassword = { _, _ -> true },
+                verifyTotp = ::verifyTotp,
+            )
+        val loadAuth = AccountLoadAuth.TokenAuth(auth.token.data.copyOf())
+        val requestSubmitted = accountManager.load(loadAuth, block.username, responseHook)
+        if (!requestSubmitted) {
+            responseHandler.writeFailedResponse(LoginResponse.LoginServerLoadError)
+        }
     }
 
     private fun OtpAuthenticationType.toAccountLoadAuth(): AccountLoadAuth =
@@ -205,7 +225,81 @@ private constructor(
         responseHandler: GameLoginResponseHandler<Player>,
         block: LoginBlock<XteaKey>,
     ) {
-        // TODO: Reconnection.
-        responseHandler.writeFailedResponse(LoginResponse.ConnectFail)
+        if (!block.crc.validate(js5Crc)) {
+            responseHandler.writeFailedResponse(LoginResponse.OutOfDateReload)
+            return
+        }
+
+        val player = playerReg.findOnline(block.username)
+        if (player == null) {
+            responseHandler.writeFailedResponse(LoginResponse.BadSessionId)
+            return
+        }
+
+        val expectedSeeds = player.sessionSeeds
+        if (expectedSeeds == null || !expectedSeeds.contentEquals(block.authentication.key)) {
+            responseHandler.writeFailedResponse(LoginResponse.BadSessionId)
+            return
+        }
+
+        if (player.sessionId != block.sessionId) {
+            responseHandler.writeFailedResponse(LoginResponse.BadSessionId)
+            return
+        }
+
+        if (player.loggingOut) {
+            responseHandler.writeFailedResponse(LoginResponse.BadSessionId)
+            return
+        }
+
+        accountReg.queueReconnect(player) { handleGameReconnect(player, responseHandler, block) }
+    }
+
+    @OptIn(ExperimentalUnsignedTypes::class)
+    private fun handleGameReconnect(
+        player: Player,
+        responseHandler: GameLoginResponseHandler<Player>,
+        block: LoginBlock<XteaKey>,
+    ) {
+        val slotId = player.slotId
+        val playerInfo =
+            responseHandler.networkService.playerInfoProtocol.alloc(
+                slotId,
+                OldSchoolClientType.DESKTOP,
+            )
+        val npcInfo =
+            responseHandler.networkService.npcInfoProtocol.alloc(
+                slotId,
+                OldSchoolClientType.DESKTOP,
+            )
+        val response = LoginResponse.ReconnectOk(playerInfo)
+
+        val oldClient = player.client
+        if (oldClient is RspClient) {
+            oldClient.unregister(responseHandler.networkService, player)
+        }
+
+        val session = responseHandler.writeSuccessfulResponse(response, block)
+        val disconnectionHook = Runnable { player.clientDisconnected.set(true) }
+        session.setDisconnectionHook(disconnectionHook)
+
+        if (player.clientDisconnected.get()) {
+            return
+        }
+
+        player.sessionSeeds = block.seed
+        player.sessionId = block.sessionId
+        player.clientDisconnected.set(false)
+        player.clientDisconnectedCycles = 0
+
+        eventBus.publish(
+            SessionStart(
+                player = player,
+                session = session,
+                reconnect = true,
+                playerInfo = playerInfo,
+                npcInfo = npcInfo,
+            )
+        )
     }
 }

@@ -31,6 +31,6 @@ public object LocLayerConstants {
             LocShapeConstants.ROOFEDGE_L,
             LocShapeConstants.ROOFEDGE_SQUARE_CORNER -> GROUND
             LocShapeConstants.GROUND_DECOR -> GROUND_DECOR
-            else -> throw NotImplementedError("Conversion for loc shape not implemented: $shape")
+            else -> GROUND
         }
 }

@@ -13,6 +13,7 @@ public class PlayerRegionProcessor @Inject constructor(private val regionReg: Re
     private fun Player.assignRegionUid() {
         val region = regionReg[coords]
         regionUid = region?.uid
+        regionMutationCount = region?.mutationCount ?: 0
     }
 
     private fun Player.assignLastKnownNormalCoord() {

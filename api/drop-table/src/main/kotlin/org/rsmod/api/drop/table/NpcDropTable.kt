@@ -12,9 +12,9 @@ import org.rsmod.game.type.obj.ObjType
  *
  * If [tables] is empty only the [always] items are dropped.
  */
-public data class NpcDropTable(
-    public val always: List<AlwaysDrop>,
-    public val tables: List<WeightedTable>,
+public open class NpcDropTable(
+    public open val always: List<AlwaysDrop>,
+    public open val tables: List<WeightedTable>,
 ) {
     /** Pre-computed total weight across all [tables] for fast rolling. */
     public val totalTableWeight: Int = tables.sumOf { it.weight }

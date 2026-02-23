@@ -17,6 +17,7 @@ constructor(
     private val accountManager: AccountManager,
 ) {
     private val pendingLogins = ConcurrentLinkedQueue<QueuedLogin>()
+    private val pendingReconnects = ConcurrentLinkedQueue<QueuedReconnect>()
     private val pendingLogouts = ConcurrentLinkedQueue<QueuedLogout>()
 
     public fun queueLogin(
@@ -28,6 +29,11 @@ constructor(
         pendingLogins.add(queued)
     }
 
+    public fun queueReconnect(player: Player, callback: (Player) -> Unit) {
+        val queued = QueuedReconnect(player, callback)
+        pendingReconnects.add(queued)
+    }
+
     public fun queueLogout(player: Player) {
         accountManager.save(player, ::queueSaveResponse)
     }
@@ -35,8 +41,14 @@ constructor(
     public fun handleLogins(count: Int = DEFAULT_LOGINS_PER_CYCLE) {
         var left = count
         while (left-- > 0) {
-            val next = pendingLogins.poll() ?: break
-            val (player, response, callback) = next
+            val nextReconnect = pendingReconnects.poll()
+            if (nextReconnect != null) {
+                nextReconnect.callback(nextReconnect.player)
+                continue
+            }
+
+            val nextLogin = pendingLogins.poll() ?: break
+            val (player, response, callback) = nextLogin
             callback(player, response)
         }
     }
@@ -74,6 +86,8 @@ constructor(
         val response: AccountLoadResponse.Ok,
         val callback: (Player, AccountLoadResponse.Ok) -> Unit,
     )
+
+    private data class QueuedReconnect(val player: Player, val callback: (Player) -> Unit)
 
     private data class QueuedLogout(val player: Player, val callback: (Player) -> Unit)
 

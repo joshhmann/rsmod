@@ -15,6 +15,7 @@ import org.rsmod.api.player.events.interact.NpcUDefaultEvents
 import org.rsmod.api.player.events.interact.NpcUEvents
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.events.EventBus
+import org.rsmod.game.entity.npc.NpcStateEvents
 import org.rsmod.game.type.comp.ComponentType
 import org.rsmod.game.type.content.ContentGroupType
 import org.rsmod.game.type.npc.NpcType
@@ -278,3 +279,10 @@ public fun ScriptContext.onModifyNpcHit(
  */
 public fun ScriptContext.onNpcHit(type: NpcType, action: NpcHitEvents.Impact.() -> Unit): Unit =
     onEvent(type.id, action)
+
+public fun ScriptContext.onNpcDeath(
+    type: NpcType,
+    action: NpcStateEvents.Death.() -> Unit,
+): Unit = onEvent(type.id, action)
+
+public fun ScriptContext.onNpcDeath(action: NpcStateEvents.Death.() -> Unit): Unit = onEvent(action)

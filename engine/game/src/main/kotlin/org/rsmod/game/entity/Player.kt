@@ -214,6 +214,13 @@ public class Player(
 
     public var lastLogin: LocalDateTime = LocalDateTime.now()
 
+    public var sessionSeeds: IntArray? = null
+    public var sessionId: Long = 0
+
+    public val aggroTolerance: MutableMap<Long, Int> = mutableMapOf()
+
+    public var regionMutationCount: Int = 0
+
     /*
      * There are various ways a player can be removed from the game:
      * - Client disconnection: when the player x-logs out of their client. This results in the

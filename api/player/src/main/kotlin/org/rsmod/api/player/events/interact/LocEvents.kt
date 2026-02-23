@@ -36,6 +36,21 @@ public sealed class LocEvents {
     public class Op5(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
         Op(loc, vis, type)
 
+    public class Op6(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op7(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op8(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op9(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op10(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
     /**
      * @param loc The _base_ loc target of the event.
      * @param vis The current _visual_ representation of [loc], based on the player's varps. If
@@ -62,6 +77,21 @@ public sealed class LocEvents {
         Ap(loc, vis, type)
 
     public class Ap5(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap6(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap7(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap8(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap9(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap10(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
         Ap(loc, vis, type)
 }
 
@@ -95,6 +125,21 @@ public sealed class LocContentEvents {
     public class Op5(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
         Op(loc, vis, type, content)
 
+    public class Op6(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, vis, type, content)
+
+    public class Op7(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, vis, type, content)
+
+    public class Op8(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, vis, type, content)
+
+    public class Op9(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, vis, type, content)
+
+    public class Op10(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, vis, type, content)
+
     /**
      * @param loc The _base_ loc target of the event.
      * @param vis The current _visual_ representation of [loc], based on the player's varps. If
@@ -122,6 +167,21 @@ public sealed class LocContentEvents {
         Ap(loc, vis, type, content)
 
     public class Ap5(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, vis, type, content)
+
+    public class Ap6(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, vis, type, content)
+
+    public class Ap7(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, vis, type, content)
+
+    public class Ap8(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, vis, type, content)
+
+    public class Ap9(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, vis, type, content)
+
+    public class Ap10(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType, content: Int) :
         Ap(loc, vis, type, content)
 }
 
@@ -154,6 +214,21 @@ public sealed class LocDefaultEvents {
     public class Op5(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
         Op(loc, vis, type)
 
+    public class Op6(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op7(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op8(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op9(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op10(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
     /**
      * @param loc The _base_ loc target of the event.
      * @param vis The current _visual_ representation of [loc], based on the player's varps. If
@@ -180,6 +255,21 @@ public sealed class LocDefaultEvents {
         Ap(loc, vis, type)
 
     public class Ap5(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap6(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap7(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap8(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap9(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Ap(loc, vis, type)
+
+    public class Ap10(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
         Ap(loc, vis, type)
 }
 
@@ -210,6 +300,21 @@ public sealed class LocUnimplementedEvents {
         Op(loc, vis, type)
 
     public class Op5(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op6(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op7(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op8(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op9(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
+        Op(loc, vis, type)
+
+    public class Op10(loc: BoundLocInfo, vis: BoundLocInfo, type: UnpackedLocType) :
         Op(loc, vis, type)
 }
 

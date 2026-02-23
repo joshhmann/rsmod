@@ -276,6 +276,7 @@ constructor(
 
         // Trigger the region's zone registration.
         region.registerZone(copyZone, regionZone)
+        region.incrementMutation()
     }
 
     /**

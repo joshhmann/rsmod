@@ -14,6 +14,9 @@ public data class Region(
     public val uid: Int,
     public var slot: Int,
 ) {
+    public var mutationCount: Int = 0
+        private set
+
     private var remappedLocCoords: RemappedRegionLocMap? = null
     private val normalZones: NormalRegionZoneMap = NormalRegionZoneMap()
 
@@ -37,6 +40,11 @@ public data class Region(
     }
 
     public fun toZoneList(level: Int): List<ZoneKey> = buildList { addZones(level) }
+
+    @InternalApi
+    public fun incrementMutation() {
+        mutationCount++
+    }
 
     @InternalApi
     public fun remapLocCoords(regionCoords: CoordGrid, normalCoords: CoordGrid) {

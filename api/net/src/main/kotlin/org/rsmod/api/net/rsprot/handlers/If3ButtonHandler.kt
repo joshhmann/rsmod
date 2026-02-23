@@ -45,6 +45,28 @@ constructor(
                 8 -> IfButtonOp.Op8
                 9 -> IfButtonOp.Op9
                 10 -> IfButtonOp.Op10
+                11 -> IfButtonOp.Op11
+                12 -> IfButtonOp.Op12
+                13 -> IfButtonOp.Op13
+                14 -> IfButtonOp.Op14
+                15 -> IfButtonOp.Op15
+                16 -> IfButtonOp.Op16
+                17 -> IfButtonOp.Op17
+                18 -> IfButtonOp.Op18
+                19 -> IfButtonOp.Op19
+                20 -> IfButtonOp.Op20
+                21 -> IfButtonOp.Op21
+                22 -> IfButtonOp.Op22
+                23 -> IfButtonOp.Op23
+                24 -> IfButtonOp.Op24
+                25 -> IfButtonOp.Op25
+                26 -> IfButtonOp.Op26
+                27 -> IfButtonOp.Op27
+                28 -> IfButtonOp.Op28
+                29 -> IfButtonOp.Op29
+                30 -> IfButtonOp.Op30
+                31 -> IfButtonOp.Op31
+                32 -> IfButtonOp.Op32
                 else -> throw NotImplementedError("Unhandled If3Button op: $this")
             }
 

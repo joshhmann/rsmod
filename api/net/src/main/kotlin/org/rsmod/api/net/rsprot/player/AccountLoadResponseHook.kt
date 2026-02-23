@@ -4,7 +4,6 @@ import com.github.michaelbull.logging.InlineLogger
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit
 import net.rsprot.protocol.api.login.GameLoginResponseHandler
-import net.rsprot.protocol.loginprot.incoming.util.AuthenticationType
 import net.rsprot.protocol.loginprot.incoming.util.LoginBlock
 import net.rsprot.protocol.loginprot.outgoing.LoginResponse
 import net.rsprot.protocol.loginprot.outgoing.util.AuthenticatorResponse
@@ -36,7 +35,7 @@ class AccountLoadResponseHook(
     private val accountRegistry: AccountRegistry,
     private val playerRegistry: PlayerRegistry,
     private val devModeModLevel: UnpackedModLevelType,
-    private val loginBlock: LoginBlock<AuthenticationType>,
+    private val loginBlock: LoginBlock<*>,
     private val channelResponses: GameLoginResponseHandler<Player>,
     private val inputPassword: CharArray,
     private val verifyPassword: (String, CharArray) -> Boolean,
@@ -100,9 +99,14 @@ class AccountLoadResponseHook(
             }
         }
 
-        val storedHashedPassword = response.account.hashedPassword
-        val passwordVerified = verifyPassword(storedHashedPassword, inputPassword)
-        if (!ignoreAuthentication && !passwordVerified) {
+        val auth = response.auth
+        val authenticated =
+            when (auth) {
+                is AccountLoadAuth.TokenAuth -> verifyToken(response.account, auth.token)
+                else -> verifyPassword(response.account.hashedPassword, inputPassword)
+            }
+
+        if (!ignoreAuthentication && !authenticated) {
             writeErrorResponse(LoginResponse.InvalidUsernameOrPassword)
             return
         }
@@ -120,6 +124,11 @@ class AccountLoadResponseHook(
         }
 
         safeQueueLogin(response)
+    }
+
+    private fun verifyToken(account: CharacterAccountData, token: ByteArray): Boolean {
+        // TODO: Implement proper token verification.
+        return config.devMode
     }
 
     private fun validateTwoFactor(
@@ -153,6 +162,7 @@ class AccountLoadResponseHook(
         val requiresImmediateCode =
             when (auth) {
                 is AccountLoadAuth.TrustedDevice -> account.knownDevice != auth.identifier
+                is AccountLoadAuth.TokenAuth -> false
                 AccountLoadAuth.UnknownDevice -> true
             }
 
@@ -240,6 +250,8 @@ class AccountLoadResponseHook(
         }
 
         val response = player.createLoginResponse(slotId, loadResponse.auth)
+        player.sessionSeeds = loginBlock.seed
+        player.sessionId = loginBlock.sessionId
         val session = channelResponses.writeSuccessfulResponse(response, loginBlock)
 
         val disconnectionHook = Runnable { player.clientDisconnected.set(true) }
@@ -293,6 +305,7 @@ class AccountLoadResponseHook(
                 lastKnownDevice = knownDevice
                 AuthenticatorResponse.AuthenticatorCode(knownDevice)
             }
+            is AccountLoadAuth.TokenAuth,
             AccountLoadAuth.UnknownDevice -> AuthenticatorResponse.NoAuthenticator
         }
 

@@ -132,6 +132,11 @@ private constructor(
             HeldOp.Op3 -> access.opHeld3(obj, type, inventory, invSlot)
             HeldOp.Op4 -> access.opHeld4(obj, type, inventory, invSlot)
             HeldOp.Op5 -> access.opHeld5(obj, type, inventory, invSlot)
+            HeldOp.Op6 -> access.opHeld6(obj, type, inventory, invSlot)
+            HeldOp.Op7 -> access.opHeld7(obj, type, inventory, invSlot)
+            HeldOp.Op8 -> access.opHeld8(obj, type, inventory, invSlot)
+            HeldOp.Op9 -> access.opHeld9(obj, type, inventory, invSlot)
+            HeldOp.Op10 -> access.opHeld10(obj, type, inventory, invSlot)
         }
     }
 
@@ -239,6 +244,106 @@ private constructor(
             return
         }
         dropOp.dropOrDestroy(this, inventory, invSlot, obj, type)
+    }
+
+    private suspend fun ProtectedAccess.opHeld6(
+        obj: InvObj,
+        type: UnpackedObjType,
+        inventory: Inventory,
+        invSlot: Int,
+    ) {
+        val typeScript = eventBus.suspend[HeldObjEvents.Op6::class.java, type.id]
+        if (typeScript != null) {
+            typeScript(HeldObjEvents.Op6(invSlot, obj, type, inventory))
+            return
+        }
+        val groupScript = eventBus.suspend[HeldContentEvents.Op6::class.java, type.contentGroup]
+        if (groupScript != null) {
+            groupScript(HeldContentEvents.Op6(invSlot, obj, type, inventory))
+            return
+        }
+        mes(constants.dm_default, ChatType.Engine)
+        logger.debug { "OpHeld6 for `${type.name}` is not implemented: type=$type" }
+    }
+
+    private suspend fun ProtectedAccess.opHeld7(
+        obj: InvObj,
+        type: UnpackedObjType,
+        inventory: Inventory,
+        invSlot: Int,
+    ) {
+        val typeScript = eventBus.suspend[HeldObjEvents.Op7::class.java, type.id]
+        if (typeScript != null) {
+            typeScript(HeldObjEvents.Op7(invSlot, obj, type, inventory))
+            return
+        }
+        val groupScript = eventBus.suspend[HeldContentEvents.Op7::class.java, type.contentGroup]
+        if (groupScript != null) {
+            groupScript(HeldContentEvents.Op7(invSlot, obj, type, inventory))
+            return
+        }
+        mes(constants.dm_default, ChatType.Engine)
+        logger.debug { "OpHeld7 for `${type.name}` is not implemented: type=$type" }
+    }
+
+    private suspend fun ProtectedAccess.opHeld8(
+        obj: InvObj,
+        type: UnpackedObjType,
+        inventory: Inventory,
+        invSlot: Int,
+    ) {
+        val typeScript = eventBus.suspend[HeldObjEvents.Op8::class.java, type.id]
+        if (typeScript != null) {
+            typeScript(HeldObjEvents.Op8(invSlot, obj, type, inventory))
+            return
+        }
+        val groupScript = eventBus.suspend[HeldContentEvents.Op8::class.java, type.contentGroup]
+        if (groupScript != null) {
+            groupScript(HeldContentEvents.Op8(invSlot, obj, type, inventory))
+            return
+        }
+        mes(constants.dm_default, ChatType.Engine)
+        logger.debug { "OpHeld8 for `${type.name}` is not implemented: type=$type" }
+    }
+
+    private suspend fun ProtectedAccess.opHeld9(
+        obj: InvObj,
+        type: UnpackedObjType,
+        inventory: Inventory,
+        invSlot: Int,
+    ) {
+        val typeScript = eventBus.suspend[HeldObjEvents.Op9::class.java, type.id]
+        if (typeScript != null) {
+            typeScript(HeldObjEvents.Op9(invSlot, obj, type, inventory))
+            return
+        }
+        val groupScript = eventBus.suspend[HeldContentEvents.Op9::class.java, type.contentGroup]
+        if (groupScript != null) {
+            groupScript(HeldContentEvents.Op9(invSlot, obj, type, inventory))
+            return
+        }
+        mes(constants.dm_default, ChatType.Engine)
+        logger.debug { "OpHeld9 for `${type.name}` is not implemented: type=$type" }
+    }
+
+    private suspend fun ProtectedAccess.opHeld10(
+        obj: InvObj,
+        type: UnpackedObjType,
+        inventory: Inventory,
+        invSlot: Int,
+    ) {
+        val typeScript = eventBus.suspend[HeldObjEvents.Op10::class.java, type.id]
+        if (typeScript != null) {
+            typeScript(HeldObjEvents.Op10(invSlot, obj, type, inventory))
+            return
+        }
+        val groupScript = eventBus.suspend[HeldContentEvents.Op10::class.java, type.contentGroup]
+        if (groupScript != null) {
+            groupScript(HeldContentEvents.Op10(invSlot, obj, type, inventory))
+            return
+        }
+        mes(constants.dm_default, ChatType.Engine)
+        logger.debug { "OpHeld10 for `${type.name}` is not implemented: type=$type" }
     }
 
     private fun objectVerify(

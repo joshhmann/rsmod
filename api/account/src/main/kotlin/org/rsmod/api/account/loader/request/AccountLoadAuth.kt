@@ -7,6 +7,8 @@ public sealed class AccountLoadAuth {
 
     public data class TrustedDevice(val identifier: Int) : InitialRequest()
 
+    public data class TokenAuth(val token: ByteArray) : InitialRequest()
+
     public sealed class CodeInput : AccountLoadAuth() {
         public abstract val otp: Int
     }

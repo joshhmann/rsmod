@@ -3,6 +3,7 @@ package org.rsmod.game.entity.npc
 import org.rsmod.events.KeyedEvent
 import org.rsmod.events.UnboundEvent
 import org.rsmod.game.entity.Npc
+import org.rsmod.game.entity.Player
 
 public class NpcStateEvents {
     public data class Create(val npc: Npc) : UnboundEvent
@@ -18,6 +19,10 @@ public class NpcStateEvents {
     }
 
     public data class Spawn(val npc: Npc) : KeyedEvent {
+        override val id: Long = npc.id.toLong()
+    }
+
+    public data class Death(val npc: Npc, val killer: Player?) : KeyedEvent {
         override val id: Long = npc.id.toLong()
     }
 }

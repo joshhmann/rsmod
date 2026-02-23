@@ -20,6 +20,16 @@ public sealed class NpcEvents {
 
     public class Op5(npc: Npc) : Op(npc)
 
+    public class Op6(npc: Npc) : Op(npc)
+
+    public class Op7(npc: Npc) : Op(npc)
+
+    public class Op8(npc: Npc) : Op(npc)
+
+    public class Op9(npc: Npc) : Op(npc)
+
+    public class Op10(npc: Npc) : Op(npc)
+
     public sealed class Ap(public val npc: Npc) : ApEvent(npc.id.toLong())
 
     public class Ap1(npc: Npc) : Ap(npc)
@@ -31,6 +41,16 @@ public sealed class NpcEvents {
     public class Ap4(npc: Npc) : Ap(npc)
 
     public class Ap5(npc: Npc) : Ap(npc)
+
+    public class Ap6(npc: Npc) : Ap(npc)
+
+    public class Ap7(npc: Npc) : Ap(npc)
+
+    public class Ap8(npc: Npc) : Ap(npc)
+
+    public class Ap9(npc: Npc) : Ap(npc)
+
+    public class Ap10(npc: Npc) : Ap(npc)
 }
 
 public sealed class NpcContentEvents {
@@ -46,6 +66,16 @@ public sealed class NpcContentEvents {
 
     public class Op5(npc: Npc, category: Int) : Op(npc, category)
 
+    public class Op6(npc: Npc, category: Int) : Op(npc, category)
+
+    public class Op7(npc: Npc, category: Int) : Op(npc, category)
+
+    public class Op8(npc: Npc, category: Int) : Op(npc, category)
+
+    public class Op9(npc: Npc, category: Int) : Op(npc, category)
+
+    public class Op10(npc: Npc, category: Int) : Op(npc, category)
+
     public sealed class Ap(public val npc: Npc, contentGroup: Int) : ApEvent(contentGroup.toLong())
 
     public class Ap1(npc: Npc, category: Int) : Ap(npc, category)
@@ -57,6 +87,16 @@ public sealed class NpcContentEvents {
     public class Ap4(npc: Npc, category: Int) : Ap(npc, category)
 
     public class Ap5(npc: Npc, category: Int) : Ap(npc, category)
+
+    public class Ap6(npc: Npc, category: Int) : Ap(npc, category)
+
+    public class Ap7(npc: Npc, category: Int) : Ap(npc, category)
+
+    public class Ap8(npc: Npc, category: Int) : Ap(npc, category)
+
+    public class Ap9(npc: Npc, category: Int) : Ap(npc, category)
+
+    public class Ap10(npc: Npc, category: Int) : Ap(npc, category)
 }
 
 public sealed class NpcDefaultEvents {
@@ -72,6 +112,16 @@ public sealed class NpcDefaultEvents {
 
     public class Op5(npc: Npc) : Op(npc)
 
+    public class Op6(npc: Npc) : Op(npc)
+
+    public class Op7(npc: Npc) : Op(npc)
+
+    public class Op8(npc: Npc) : Op(npc)
+
+    public class Op9(npc: Npc) : Op(npc)
+
+    public class Op10(npc: Npc) : Op(npc)
+
     public sealed class Ap(public val npc: Npc) : ApDefaultEvent()
 
     public class Ap1(npc: Npc) : Ap(npc)
@@ -83,6 +133,16 @@ public sealed class NpcDefaultEvents {
     public class Ap4(npc: Npc) : Ap(npc)
 
     public class Ap5(npc: Npc) : Ap(npc)
+
+    public class Ap6(npc: Npc) : Ap(npc)
+
+    public class Ap7(npc: Npc) : Ap(npc)
+
+    public class Ap8(npc: Npc) : Ap(npc)
+
+    public class Ap9(npc: Npc) : Ap(npc)
+
+    public class Ap10(npc: Npc) : Ap(npc)
 }
 
 public sealed class NpcUnimplementedEvents {
@@ -97,6 +157,16 @@ public sealed class NpcUnimplementedEvents {
     public class Op4(npc: Npc) : Op(npc)
 
     public class Op5(npc: Npc) : Op(npc)
+
+    public class Op6(npc: Npc) : Op(npc)
+
+    public class Op7(npc: Npc) : Op(npc)
+
+    public class Op8(npc: Npc) : Op(npc)
+
+    public class Op9(npc: Npc) : Op(npc)
+
+    public class Op10(npc: Npc) : Op(npc)
 }
 
 public class NpcTEvents {

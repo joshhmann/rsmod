@@ -179,6 +179,11 @@ constructor(
             InteractionOp.Op3 -> LocEvents.Op3(base, vis, type)
             InteractionOp.Op4 -> LocEvents.Op4(base, vis, type)
             InteractionOp.Op5 -> LocEvents.Op5(base, vis, type)
+            InteractionOp.Op6 -> LocEvents.Op6(base, vis, type)
+            InteractionOp.Op7 -> LocEvents.Op7(base, vis, type)
+            InteractionOp.Op8 -> LocEvents.Op8(base, vis, type)
+            InteractionOp.Op9 -> LocEvents.Op9(base, vis, type)
+            InteractionOp.Op10 -> LocEvents.Op10(base, vis, type)
         }
 
     private fun toContentOp(
@@ -194,6 +199,11 @@ constructor(
             InteractionOp.Op3 -> LocContentEvents.Op3(base, vis, type, contentGroup)
             InteractionOp.Op4 -> LocContentEvents.Op4(base, vis, type, contentGroup)
             InteractionOp.Op5 -> LocContentEvents.Op5(base, vis, type, contentGroup)
+            InteractionOp.Op6 -> LocContentEvents.Op6(base, vis, type, contentGroup)
+            InteractionOp.Op7 -> LocContentEvents.Op7(base, vis, type, contentGroup)
+            InteractionOp.Op8 -> LocContentEvents.Op8(base, vis, type, contentGroup)
+            InteractionOp.Op9 -> LocContentEvents.Op9(base, vis, type, contentGroup)
+            InteractionOp.Op10 -> LocContentEvents.Op10(base, vis, type, contentGroup)
         }
 
     private fun toUnimplementedOp(
@@ -208,6 +218,11 @@ constructor(
             InteractionOp.Op3 -> LocUnimplementedEvents.Op3(base, vis, type)
             InteractionOp.Op4 -> LocUnimplementedEvents.Op4(base, vis, type)
             InteractionOp.Op5 -> LocUnimplementedEvents.Op5(base, vis, type)
+            InteractionOp.Op6 -> LocUnimplementedEvents.Op6(base, vis, type)
+            InteractionOp.Op7 -> LocUnimplementedEvents.Op7(base, vis, type)
+            InteractionOp.Op8 -> LocUnimplementedEvents.Op8(base, vis, type)
+            InteractionOp.Op9 -> LocUnimplementedEvents.Op9(base, vis, type)
+            InteractionOp.Op10 -> LocUnimplementedEvents.Op10(base, vis, type)
         }
 
     private fun toDefaultOp(
@@ -222,6 +237,11 @@ constructor(
             InteractionOp.Op3 -> LocDefaultEvents.Op3(base, vis, type)
             InteractionOp.Op4 -> LocDefaultEvents.Op4(base, vis, type)
             InteractionOp.Op5 -> LocDefaultEvents.Op5(base, vis, type)
+            InteractionOp.Op6 -> LocDefaultEvents.Op6(base, vis, type)
+            InteractionOp.Op7 -> LocDefaultEvents.Op7(base, vis, type)
+            InteractionOp.Op8 -> LocDefaultEvents.Op8(base, vis, type)
+            InteractionOp.Op9 -> LocDefaultEvents.Op9(base, vis, type)
+            InteractionOp.Op10 -> LocDefaultEvents.Op10(base, vis, type)
         }
 
     private fun toAp(
@@ -236,6 +256,11 @@ constructor(
             InteractionOp.Op3 -> LocEvents.Ap3(base, vis, type)
             InteractionOp.Op4 -> LocEvents.Ap4(base, vis, type)
             InteractionOp.Op5 -> LocEvents.Ap5(base, vis, type)
+            InteractionOp.Op6 -> LocEvents.Ap6(base, vis, type)
+            InteractionOp.Op7 -> LocEvents.Ap7(base, vis, type)
+            InteractionOp.Op8 -> LocEvents.Ap8(base, vis, type)
+            InteractionOp.Op9 -> LocEvents.Ap9(base, vis, type)
+            InteractionOp.Op10 -> LocEvents.Ap10(base, vis, type)
         }
 
     private fun toContentAp(
@@ -251,6 +276,11 @@ constructor(
             InteractionOp.Op3 -> LocContentEvents.Ap3(base, vis, type, contentGroup)
             InteractionOp.Op4 -> LocContentEvents.Ap4(base, vis, type, contentGroup)
             InteractionOp.Op5 -> LocContentEvents.Ap5(base, vis, type, contentGroup)
+            InteractionOp.Op6 -> LocContentEvents.Ap6(base, vis, type, contentGroup)
+            InteractionOp.Op7 -> LocContentEvents.Ap7(base, vis, type, contentGroup)
+            InteractionOp.Op8 -> LocContentEvents.Ap8(base, vis, type, contentGroup)
+            InteractionOp.Op9 -> LocContentEvents.Ap9(base, vis, type, contentGroup)
+            InteractionOp.Op10 -> LocContentEvents.Ap10(base, vis, type, contentGroup)
         }
 
     private fun toDefaultAp(
@@ -265,6 +295,11 @@ constructor(
             InteractionOp.Op3 -> LocDefaultEvents.Ap3(base, vis, type)
             InteractionOp.Op4 -> LocDefaultEvents.Ap4(base, vis, type)
             InteractionOp.Op5 -> LocDefaultEvents.Ap5(base, vis, type)
+            InteractionOp.Op6 -> LocDefaultEvents.Ap6(base, vis, type)
+            InteractionOp.Op7 -> LocDefaultEvents.Ap7(base, vis, type)
+            InteractionOp.Op8 -> LocDefaultEvents.Ap8(base, vis, type)
+            InteractionOp.Op9 -> LocDefaultEvents.Ap9(base, vis, type)
+            InteractionOp.Op10 -> LocDefaultEvents.Ap10(base, vis, type)
         }
 
     private fun UnpackedLocType.multiVarValue(vars: VarPlayerIntMap): Int? {

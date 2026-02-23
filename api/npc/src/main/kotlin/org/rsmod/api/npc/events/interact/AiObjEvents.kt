@@ -17,6 +17,14 @@ public sealed class AiObjEvents {
 
     public class Op6(obj: Obj) : Op(obj)
 
+    public class Op7(obj: Obj) : Op(obj)
+
+    public class Op8(obj: Obj) : Op(obj)
+
+    public class Op9(obj: Obj) : Op(obj)
+
+    public class Op10(obj: Obj) : Op(obj)
+
     public sealed class Ap(public val obj: Obj) : ApEvent(obj.type.toLong())
 
     public class Ap1(obj: Obj) : Ap(obj)
@@ -28,6 +36,16 @@ public sealed class AiObjEvents {
     public class Ap4(obj: Obj) : Ap(obj)
 
     public class Ap5(obj: Obj) : Ap(obj)
+
+    public class Ap6(obj: Obj) : Ap(obj)
+
+    public class Ap7(obj: Obj) : Ap(obj)
+
+    public class Ap8(obj: Obj) : Ap(obj)
+
+    public class Ap9(obj: Obj) : Ap(obj)
+
+    public class Ap10(obj: Obj) : Ap(obj)
 }
 
 public sealed class AiObjContentEvents {
@@ -45,6 +63,14 @@ public sealed class AiObjContentEvents {
 
     public class Op6(obj: Obj, content: Int) : Op(obj, content)
 
+    public class Op7(obj: Obj, content: Int) : Op(obj, content)
+
+    public class Op8(obj: Obj, content: Int) : Op(obj, content)
+
+    public class Op9(obj: Obj, content: Int) : Op(obj, content)
+
+    public class Op10(obj: Obj, content: Int) : Op(obj, content)
+
     public sealed class Ap(public val obj: Obj, contentGroup: Int) : ApEvent(contentGroup.toLong())
 
     public class Ap1(obj: Obj, content: Int) : Ap(obj, content)
@@ -56,6 +82,16 @@ public sealed class AiObjContentEvents {
     public class Ap4(obj: Obj, content: Int) : Ap(obj, content)
 
     public class Ap5(obj: Obj, content: Int) : Ap(obj, content)
+
+    public class Ap6(obj: Obj, content: Int) : Ap(obj, content)
+
+    public class Ap7(obj: Obj, content: Int) : Ap(obj, content)
+
+    public class Ap8(obj: Obj, content: Int) : Ap(obj, content)
+
+    public class Ap9(obj: Obj, content: Int) : Ap(obj, content)
+
+    public class Ap10(obj: Obj, content: Int) : Ap(obj, content)
 }
 
 public sealed class AiObjDefaultEvents {
@@ -73,6 +109,14 @@ public sealed class AiObjDefaultEvents {
 
     public class Op6(obj: Obj) : Op(obj)
 
+    public class Op7(obj: Obj) : Op(obj)
+
+    public class Op8(obj: Obj) : Op(obj)
+
+    public class Op9(obj: Obj) : Op(obj)
+
+    public class Op10(obj: Obj) : Op(obj)
+
     public sealed class Ap(public val obj: Obj) : ApDefaultEvent()
 
     public class Ap1(obj: Obj) : Ap(obj)
@@ -84,4 +128,14 @@ public sealed class AiObjDefaultEvents {
     public class Ap4(obj: Obj) : Ap(obj)
 
     public class Ap5(obj: Obj) : Ap(obj)
+
+    public class Ap6(obj: Obj) : Ap(obj)
+
+    public class Ap7(obj: Obj) : Ap(obj)
+
+    public class Ap8(obj: Obj) : Ap(obj)
+
+    public class Ap9(obj: Obj) : Ap(obj)
+
+    public class Ap10(obj: Obj) : Ap(obj)
 }

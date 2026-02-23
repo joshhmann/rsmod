@@ -7,7 +7,12 @@ public enum class HeldOp(public val slot: Int) {
     Op3(3),
     Op4(4),
     /** Commonly the `Drop` or `Destroy` op. */
-    Op5(5);
+    Op5(5),
+    Op6(6),
+    Op7(7),
+    Op8(8),
+    Op9(9),
+    Op10(10);
 
     public companion object {
         public operator fun get(slot: Int): HeldOp? =
@@ -17,6 +22,11 @@ public enum class HeldOp(public val slot: Int) {
                 3 -> Op3
                 4 -> Op4
                 5 -> Op5
+                6 -> Op6
+                7 -> Op7
+                8 -> Op8
+                9 -> Op9
+                10 -> Op10
                 else -> null
             }
     }

@@ -101,6 +101,11 @@ constructor(private val objTypes: ObjTypeList, private val eventBus: EventBus) {
             InteractionOp.Op3 -> ObjEvents.Op3(this)
             InteractionOp.Op4 -> ObjEvents.Op4(this)
             InteractionOp.Op5 -> ObjEvents.Op5(this)
+            InteractionOp.Op6 -> ObjEvents.Op6(this)
+            InteractionOp.Op7 -> ObjEvents.Op7(this)
+            InteractionOp.Op8 -> ObjEvents.Op8(this)
+            InteractionOp.Op9 -> ObjEvents.Op9(this)
+            InteractionOp.Op10 -> ObjEvents.Op10(this)
         }
 
     private fun Obj.toContentOp(contentGroup: Int, op: InteractionOp): ObjContentEvents.Op =
@@ -110,6 +115,11 @@ constructor(private val objTypes: ObjTypeList, private val eventBus: EventBus) {
             InteractionOp.Op3 -> ObjContentEvents.Op3(this, contentGroup)
             InteractionOp.Op4 -> ObjContentEvents.Op4(this, contentGroup)
             InteractionOp.Op5 -> ObjContentEvents.Op5(this, contentGroup)
+            InteractionOp.Op6 -> ObjContentEvents.Op6(this, contentGroup)
+            InteractionOp.Op7 -> ObjContentEvents.Op7(this, contentGroup)
+            InteractionOp.Op8 -> ObjContentEvents.Op8(this, contentGroup)
+            InteractionOp.Op9 -> ObjContentEvents.Op9(this, contentGroup)
+            InteractionOp.Op10 -> ObjContentEvents.Op10(this, contentGroup)
         }
 
     private fun Obj.toDefaultOp(op: InteractionOp): ObjDefaultEvents.Op =
@@ -119,6 +129,11 @@ constructor(private val objTypes: ObjTypeList, private val eventBus: EventBus) {
             InteractionOp.Op3 -> ObjDefaultEvents.Op3(this)
             InteractionOp.Op4 -> ObjDefaultEvents.Op4(this)
             InteractionOp.Op5 -> ObjDefaultEvents.Op5(this)
+            InteractionOp.Op6 -> ObjDefaultEvents.Op6(this)
+            InteractionOp.Op7 -> ObjDefaultEvents.Op7(this)
+            InteractionOp.Op8 -> ObjDefaultEvents.Op8(this)
+            InteractionOp.Op9 -> ObjDefaultEvents.Op9(this)
+            InteractionOp.Op10 -> ObjDefaultEvents.Op10(this)
         }
 
     private fun Obj.toAp(op: InteractionOp): ObjEvents.Ap =
@@ -128,6 +143,11 @@ constructor(private val objTypes: ObjTypeList, private val eventBus: EventBus) {
             InteractionOp.Op3 -> ObjEvents.Ap3(this)
             InteractionOp.Op4 -> ObjEvents.Ap4(this)
             InteractionOp.Op5 -> ObjEvents.Ap5(this)
+            InteractionOp.Op6 -> ObjEvents.Ap6(this)
+            InteractionOp.Op7 -> ObjEvents.Ap7(this)
+            InteractionOp.Op8 -> ObjEvents.Ap8(this)
+            InteractionOp.Op9 -> ObjEvents.Ap9(this)
+            InteractionOp.Op10 -> ObjEvents.Ap10(this)
         }
 
     private fun Obj.toContentAp(contentGroup: Int, op: InteractionOp): ObjContentEvents.Ap =
@@ -137,14 +157,24 @@ constructor(private val objTypes: ObjTypeList, private val eventBus: EventBus) {
             InteractionOp.Op3 -> ObjContentEvents.Ap3(this, contentGroup)
             InteractionOp.Op4 -> ObjContentEvents.Ap4(this, contentGroup)
             InteractionOp.Op5 -> ObjContentEvents.Ap5(this, contentGroup)
+            InteractionOp.Op6 -> ObjContentEvents.Ap6(this, contentGroup)
+            InteractionOp.Op7 -> ObjContentEvents.Ap7(this, contentGroup)
+            InteractionOp.Op8 -> ObjContentEvents.Ap8(this, contentGroup)
+            InteractionOp.Op9 -> ObjContentEvents.Ap9(this, contentGroup)
+            InteractionOp.Op10 -> ObjContentEvents.Ap10(this, contentGroup)
         }
 
     private fun Obj.toDefaultAp(op: InteractionOp): ObjDefaultEvents.Ap =
         when (op) {
             InteractionOp.Op1 -> ObjDefaultEvents.Ap1(this)
-            InteractionOp.Op2 -> ObjDefaultEvents.Ap1(this)
-            InteractionOp.Op3 -> ObjDefaultEvents.Ap1(this)
-            InteractionOp.Op4 -> ObjDefaultEvents.Ap1(this)
-            InteractionOp.Op5 -> ObjDefaultEvents.Ap1(this)
+            InteractionOp.Op2 -> ObjDefaultEvents.Ap2(this)
+            InteractionOp.Op3 -> ObjDefaultEvents.Ap3(this)
+            InteractionOp.Op4 -> ObjDefaultEvents.Ap4(this)
+            InteractionOp.Op5 -> ObjDefaultEvents.Ap5(this)
+            InteractionOp.Op6 -> ObjDefaultEvents.Ap6(this)
+            InteractionOp.Op7 -> ObjDefaultEvents.Ap7(this)
+            InteractionOp.Op8 -> ObjDefaultEvents.Ap8(this)
+            InteractionOp.Op9 -> ObjDefaultEvents.Ap9(this)
+            InteractionOp.Op10 -> ObjDefaultEvents.Ap10(this)
         }
 }

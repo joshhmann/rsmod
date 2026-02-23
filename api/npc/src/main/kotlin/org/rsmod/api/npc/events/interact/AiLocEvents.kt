@@ -21,6 +21,16 @@ public sealed class AiLocEvents {
 
     public class Op5(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
 
+    public class Op6(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op7(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op8(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op9(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op10(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
     public sealed class Ap(public val loc: BoundLocInfo, public val type: UnpackedLocType) :
         ApEvent(type.id.toLong())
 
@@ -33,6 +43,16 @@ public sealed class AiLocEvents {
     public class Ap4(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
 
     public class Ap5(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap6(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap7(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap8(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap9(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap10(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
 }
 
 public sealed class AiLocContentEvents {
@@ -57,6 +77,21 @@ public sealed class AiLocContentEvents {
     public class Op5(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
         Op(loc, type, content)
 
+    public class Op6(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, type, content)
+
+    public class Op7(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, type, content)
+
+    public class Op8(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, type, content)
+
+    public class Op9(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, type, content)
+
+    public class Op10(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Op(loc, type, content)
+
     public sealed class Ap(
         public val loc: BoundLocInfo,
         public val type: UnpackedLocType,
@@ -77,6 +112,21 @@ public sealed class AiLocContentEvents {
 
     public class Ap5(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
         Ap(loc, type, content)
+
+    public class Ap6(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, type, content)
+
+    public class Ap7(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, type, content)
+
+    public class Ap8(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, type, content)
+
+    public class Ap9(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, type, content)
+
+    public class Ap10(loc: BoundLocInfo, type: UnpackedLocType, content: Int) :
+        Ap(loc, type, content)
 }
 
 public sealed class AiLocDefaultEvents {
@@ -93,6 +143,16 @@ public sealed class AiLocDefaultEvents {
 
     public class Op5(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
 
+    public class Op6(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op7(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op8(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op9(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op10(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
     public sealed class Ap(public val loc: BoundLocInfo, public val type: UnpackedLocType) :
         ApEvent(type.id.toLong())
 
@@ -105,6 +165,16 @@ public sealed class AiLocDefaultEvents {
     public class Ap4(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
 
     public class Ap5(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap6(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap7(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap8(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap9(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
+
+    public class Ap10(loc: BoundLocInfo, type: UnpackedLocType) : Ap(loc, type)
 }
 
 public sealed class AiLocUnimplementedEvents {
@@ -120,6 +190,16 @@ public sealed class AiLocUnimplementedEvents {
     public class Op4(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
 
     public class Op5(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op6(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op7(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op8(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op9(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
+
+    public class Op10(loc: BoundLocInfo, type: UnpackedLocType) : Op(loc, type)
 }
 
 public class AiLocTEvents {
