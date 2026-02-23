@@ -10,7 +10,7 @@ import org.rsmod.plugin.scripts.ScriptContext
 
 class FatherAereck : PluginScript() {
     override fun ScriptContext.startup() {
-        // Quest-specific handler in `restless-ghost` owns Father Aereck interactions.
+        onOpNpc1(lumbridge_npcs.father_aereck) { startDialogue(it.npc) }
     }
 
     private suspend fun ProtectedAccess.startDialogue(npc: Npc) =

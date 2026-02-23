@@ -1,0 +1,40 @@
+# Edgeville & Barbarian Village NPC Spawns
+# Region 48, 51
+# Format: plane_regionX_regionY_localX_localZ
+
+# Edgeville Banker
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_48_51_44_39'
+
+# Edgeville General Store
+[[spawn]]
+npc = 'generalshopkeeper1'
+coords = '0_48_51_45_42'
+
+[[spawn]]
+npc = 'generalassistant1'
+coords = '0_48_51_46_42'
+
+# Brother Jered - Monastery
+[[spawn]]
+npc = 'brother_jered'
+coords = '0_48_51_38_44'
+
+# Barbarian Village - Peka's Helm Shop
+[[spawn]]
+npc = 'peksa'
+coords = '0_48_51_36_33'
+
+# Wilderness Dungeon - Hill Giants
+[[spawn]]
+npc = 'wilderness_hill_giant'
+coords = '0_48_51_48_46'
+
+[[spawn]]
+npc = 'wilderness_hill_giant2'
+coords = '0_48_51_49_47'
+
+[[spawn]]
+npc = 'wilderness_hill_giant3'
+coords = '0_48_51_50_45'

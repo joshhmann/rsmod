@@ -1,0 +1,58 @@
+# Draynor Village NPC Spawns
+# Region 50, 49 (Draynor Village)
+# Format: plane_regionX_regionY_localX_localZ
+
+# Banker - South Draynor Bank
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_50_49_31_50'
+
+# General Store
+[[spawn]]
+npc = 'generalshopkeeper1'
+coords = '0_50_49_8_52'
+
+[[spawn]]
+npc = 'generalassistant1'
+coords = '0_50_49_9_52'
+
+# Witch Aggie - North house
+[[spawn]]
+npc = 'aggie'
+coords = '0_50_49_18_52'
+
+# Morgan - Wandering merchant (various locations)
+[[spawn]]
+npc = 'morgan'
+coords = '0_50_49_15_50'
+
+[[spawn]]
+npc = 'morgan'
+coords = '0_50_49_20_48'
+
+[[spawn]]
+npc = 'morgan'
+coords = '0_50_49_25_51'
+
+# Town Crier
+[[spawn]]
+npc = 'pmod_town_crier_draynor'
+coords = '0_50_49_20_50'
+
+# Draynor Manor - Count Draynor (region 50, 48)
+[[spawn]]
+npc = 'count_draynor'
+coords = '0_50_48_32_44'
+
+# Draynor Skeletons (wilderness area)
+[[spawn]]
+npc = 'draynor_skeleton'
+coords = '0_50_49_45_35'
+
+[[spawn]]
+npc = 'draynor_skeleton'
+coords = '0_50_49_48_40'
+
+[[spawn]]
+npc = 'draynor_skeleton'
+coords = '0_50_49_50_38'

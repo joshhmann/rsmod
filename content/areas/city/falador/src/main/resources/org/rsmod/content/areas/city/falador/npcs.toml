@@ -1,0 +1,156 @@
+# Falador NPC Spawns
+# Region 47, 52 (Falador center)
+# Format: plane_regionX_regionY_localX_localY
+
+# === WEST BANK ===
+[[spawn]]
+npc = 'falador_banker'
+coords = '0_47_52_10_30'
+direction = 'east'
+
+[[spawn]]
+npc = 'falador_banker'
+coords = '0_47_52_10_32'
+direction = 'east'
+
+[[spawn]]
+npc = 'falador_banker'
+coords = '0_47_52_10_34'
+direction = 'east'
+
+[[spawn]]
+npc = 'falador_banker'
+coords = '0_47_52_10_36'
+direction = 'east'
+
+# === EAST BANK ===
+[[spawn]]
+npc = 'falador_banker'
+coords = '0_47_52_52_30'
+direction = 'west'
+
+[[spawn]]
+npc = 'falador_banker'
+coords = '0_47_52_52_32'
+direction = 'west'
+
+[[spawn]]
+npc = 'falador_banker'
+coords = '0_47_52_52_34'
+direction = 'west'
+
+# === WAYNE'S CHAINS (South-west) ===
+[[spawn]]
+npc = 'wayne'
+coords = '0_47_52_14_20'
+direction = 'east'
+
+# === FLYNN'S MACE SHOP (South) ===
+[[spawn]]
+npc = 'flynn'
+coords = '0_47_52_32_15'
+direction = 'north'
+
+# === SIR AMIK VARZE (White Knights' Castle) ===
+[[spawn]]
+npc = 'sir_amik_varze'
+coords = '0_47_52_42_52'
+direction = 'south'
+
+# === WHITE KNIGHTS (Castle) ===
+[[spawn]]
+npc = 'white_knight'
+coords = '0_47_52_38_48'
+direction = 'south'
+
+[[spawn]]
+npc = 'white_knight'
+coords = '0_47_52_46_48'
+direction = 'south'
+
+[[spawn]]
+npc = 'white_knight_yellow_plumes'
+coords = '0_47_52_40_50'
+direction = 'south'
+
+[[spawn]]
+npc = 'white_knight_green_plumes'
+coords = '0_47_52_44_50'
+direction = 'south'
+
+[[spawn]]
+npc = 'white_knight_blue_plumes'
+coords = '0_47_52_42_46'
+direction = 'south'
+
+# === FALADOR GUARDS ===
+[[spawn]]
+npc = 'fai_falador_guard1'
+coords = '0_47_52_20_40'
+
+[[spawn]]
+npc = 'fai_falador_guard1'
+coords = '0_47_52_45_40'
+
+[[spawn]]
+npc = 'fai_falador_guard1'
+coords = '0_47_52_32_38'
+
+[[spawn]]
+npc = 'fai_falador_guard1'
+coords = '0_47_52_25_25'
+
+[[spawn]]
+npc = 'fai_falador_guard1'
+coords = '0_47_52_40_25'
+
+# === GIANTS IN MINE (North-east) ===
+[[spawn]]
+npc = 'hill_giant'
+coords = '0_47_52_58_18'
+
+[[spawn]]
+npc = 'hill_giant'
+coords = '0_47_52_56_20'
+
+[[spawn]]
+npc = 'hill_giant'
+coords = '0_47_52_60_16'
+
+# === DWARVES IN MINE ===
+[[spawn]]
+npc = 'dwarf'
+coords = '0_47_52_56_8'
+
+[[spawn]]
+npc = 'dwarf'
+coords = '0_47_52_58_10'
+
+# === PARTY ROOM (North-east) ===
+[[spawn]]
+npc = 'party_pete'
+coords = '0_47_52_50_10'
+direction = 'south'
+
+# === DORIC (North of Falador) ===
+[[spawn]]
+npc = 'doric'
+coords = '0_47_52_20_58'
+direction = 'south'
+
+# === CITIZENS ===
+[[spawn]]
+npc = 'man'
+coords = '0_47_52_28_28'
+
+[[spawn]]
+npc = 'man'
+coords = '0_47_52_35_28'
+
+[[spawn]]
+npc = 'woman'
+coords = '0_47_52_30_32'
+
+[[spawn]]
+npc = 'woman'
+coords = '0_47_52_38_32'

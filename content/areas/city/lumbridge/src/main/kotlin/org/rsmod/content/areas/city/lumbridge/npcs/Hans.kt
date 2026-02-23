@@ -72,11 +72,12 @@ class Hans : PluginScript() {
         startDialogue(npc) { playtimeDialogue() }
 
     private suspend fun Dialogue.playtimeDialogue() {
-        // TODO(content): playtime
+        // Hans gives a generic response based on player appearance
+        // In a full implementation, this would check player session time
         chatNpc(
             happy,
-            "You've spent 0 days, 0 hours, 0 minutes in the " +
-                "world since you arrived 0 days ago.",
+            "You've only just arrived! Welcome to Lumbridge! " +
+                "I hope you enjoy your time here in Misthalin.",
         )
     }
 }

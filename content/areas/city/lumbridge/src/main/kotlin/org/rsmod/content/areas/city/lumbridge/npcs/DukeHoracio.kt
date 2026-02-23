@@ -10,7 +10,7 @@ import org.rsmod.plugin.scripts.ScriptContext
 
 class DukeHoracio : PluginScript() {
     override fun ScriptContext.startup() {
-        // Quest-specific handlers (e.g. Rune Mysteries) own Duke interactions.
+        onOpNpc1(lumbridge_npcs.duke_of_lumbridge) { startDialogue(it.npc) }
     }
 
     private suspend fun ProtectedAccess.startDialogue(npc: Npc) =

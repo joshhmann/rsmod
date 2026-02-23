@@ -1,0 +1,157 @@
+# Varrock NPC Spawns
+# Region 50, 53 (Varrock center)
+# Format: plane_regionX_regionY_localX_localY
+
+# === EAST BANK (Grand Exchange area) ===
+[[spawn]]
+npc = 'banker1_east'
+coords = '0_50_53_52_14'
+direction = 'south'
+
+[[spawn]]
+npc = 'banker1_east'
+coords = '0_50_53_54_14'
+direction = 'south'
+
+[[spawn]]
+npc = 'banker1_east'
+coords = '0_50_53_56_14'
+direction = 'south'
+
+[[spawn]]
+npc = 'banker1_east'
+coords = '0_50_53_58_14'
+direction = 'south'
+
+# === WEST BANK ===
+[[spawn]]
+npc = 'banker1_west'
+coords = '0_50_53_12_31'
+direction = 'east'
+
+[[spawn]]
+npc = 'banker1_west'
+coords = '0_50_53_12_33'
+direction = 'east'
+
+[[spawn]]
+npc = 'banker1_west'
+coords = '0_50_53_12_35'
+direction = 'east'
+
+[[spawn]]
+npc = 'banker1_west'
+coords = '0_50_53_12_37'
+direction = 'east'
+
+# === GENERAL STORE (South-east Varrock) ===
+[[spawn]]
+npc = 'generalshopkeeper2'
+coords = '0_50_53_58_33'
+direction = 'west'
+
+[[spawn]]
+npc = 'generalassistant2'
+coords = '0_50_53_56_33'
+direction = 'west'
+
+# === AUBURY'S RUNE SHOP (South-east) ===
+[[spawn]]
+npc = 'aubury'
+coords = '0_50_53_58_24'
+direction = 'west'
+
+# === LOWE'S ARCHERY SHOP (East) ===
+[[spawn]]
+npc = 'lowe'
+coords = '0_50_53_58_18'
+direction = 'west'
+
+# === HORVIK'S ARMOUR SHOP (South-west) ===
+[[spawn]]
+npc = 'horvik_the_armourer'
+coords = '0_50_53_16_24'
+direction = 'east'
+
+# === THESSALIA'S CLOTHES SHOP (South-west) ===
+[[spawn]]
+npc = 'thessalia'
+coords = '0_50_53_16_15'
+direction = 'east'
+
+# === ZAFF'S STAFF SHOP (West) ===
+[[spawn]]
+npc = 'zaff'
+coords = '0_50_53_8_31'
+direction = 'east'
+
+# === APOTHECARY (South-west) ===
+[[spawn]]
+npc = 'apothecary'
+coords = '0_50_53_16_20'
+direction = 'east'
+
+# === ROMEO & JULIET (Romeo in square, Juliet in house) ===
+[[spawn]]
+npc = 'romeo'
+coords = '0_50_53_32_20'
+direction = 'south'
+
+[[spawn]]
+npc = 'juliet'
+coords = '0_50_53_46_16'
+direction = 'south'
+
+# === FATHER LAWRENCE (Church north-east) ===
+[[spawn]]
+npc = 'father_lawrence'
+coords = '0_50_53_50_7'
+direction = 'south'
+
+# === VARROCK GUARDS ===
+[[spawn]]
+npc = 'guard'
+coords = '0_50_53_25_30'
+
+[[spawn]]
+npc = 'guard'
+coords = '0_50_53_40_30'
+
+[[spawn]]
+npc = 'guard'
+coords = '0_50_53_32_35'
+
+[[spawn]]
+npc = 'guard'
+coords = '0_50_53_32_45'
+
+# === MAN/WOMAN (Citizens around square) ===
+[[spawn]]
+npc = 'man'
+coords = '0_50_53_28_25'
+
+[[spawn]]
+npc = 'man'
+coords = '0_50_53_35_25'
+
+[[spawn]]
+npc = 'woman'
+coords = '0_50_53_30_28'
+
+[[spawn]]
+npc = 'woman'
+coords = '0_50_53_38_28'
+
+# === DARK WIZARDS (South of stone circle) ===
+[[spawn]]
+npc = 'dark_wizard'
+coords = '0_50_53_18_48'
+
+[[spawn]]
+npc = 'dark_wizard'
+coords = '0_50_53_22_50'
+
+# === CAT (Stray dog/cat) ===
+[[spawn]]
+npc = 'cat'
+coords = '0_50_53_30_15'

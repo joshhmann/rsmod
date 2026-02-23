@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.atomic.AtomicBoolean
+import java.util.concurrent.atomic.AtomicInteger
 import org.java_websocket.WebSocket
 import org.java_websocket.handshake.ClientHandshake
 import org.java_websocket.server.WebSocketServer
@@ -33,6 +34,10 @@ private const val PORT = 43595
  * { "player": "TestBot", "type": "interact_loc", "id": 10820, "x": 3223, "z": 3219, "option": 1 }
  * { "player": "TestBot", "type": "interact_npc", "index": 7, "option": 1 }
  * { "player": "TestBot", "type": "spawn_item", "item_id": 1511, "count": 1 }
+ * { "player": "TestBot", "type": "clear_inventory" }
+ * { "player": "TestBot", "type": "ensure_item", "item_id": 1438, "count": 1 }
+ * { "player": "TestBot", "type": "wait_ticks", "ticks": 5 }
+ * { "player": "TestBot", "type": "get_state" }
  * ```
  *
  * The `player` field targets a specific player by name. Omitting it broadcasts to all players.
@@ -49,6 +54,9 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
     private val pendingActions = ConcurrentHashMap<String, ConcurrentLinkedQueue<BotAction>>()
     private val telemetry = ConcurrentHashMap<String, PlayerTelemetry>()
 
+    /** Current game tick for event timestamps. */
+    private val currentTick = AtomicInteger(0)
+
     fun start() {
         if (!started.compareAndSet(false, true)) return
         val server = buildServer()
@@ -56,6 +64,9 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
         server.isDaemon = true
         server.start()
     }
+
+    /** Get the current game tick. */
+    fun getCurrentTick(): Int = currentTick.get()
 
     /**
      * Broadcast game state to all connected agent clients. Called from the game thread.
@@ -65,12 +76,54 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
         player: Player,
         nearbyNpcs: List<NearbyNpcSnapshot>,
         nearbyLocs: List<NearbyLocSnapshot>,
+        combatState: CombatStateSnapshot,
+        events: List<PlayerEvent> = emptyList(),
+        actionResult: ActionResult? = null,
+        waitResult: WaitResult? = null,
     ) {
+        currentTick.set(clock.cycle)
         ensureClientTap(player)
         if (clients.isEmpty()) return
         val telemetryState = telemetry[player.avatar.name.lowercase()]
-        val snapshot = player.toSnapshot(clock.cycle, nearbyNpcs, nearbyLocs, telemetryState)
-        val json = mapper.writeValueAsString(snapshot)
+        val snapshot =
+            player.toSnapshot(
+                clock.cycle,
+                nearbyNpcs,
+                nearbyLocs,
+                combatState,
+                telemetryState,
+                events,
+            )
+
+        val payload =
+            mutableMapOf<String, Any?>(
+                "type" to "state",
+                "tick" to clock.cycle,
+                "timestamp" to System.currentTimeMillis(),
+                "player" to snapshot.player,
+                "dialog" to snapshot.dialog,
+                "gameMessages" to snapshot.gameMessages,
+                "combat" to combatState,
+                "events" to events,
+            )
+
+        // Include action result if present
+        if (actionResult != null) {
+            payload["lastAction"] =
+                mapOf("success" to actionResult.success, "message" to actionResult.message)
+        }
+
+        // Include wait result if present
+        if (waitResult != null) {
+            payload["waitResult"] =
+                mapOf(
+                    "success" to waitResult.success,
+                    "message" to waitResult.message,
+                    "waitedTicks" to waitResult.waitedTicks,
+                )
+        }
+
+        val json = mapper.writeValueAsString(payload)
         val openClients = clients.filter { it.isOpen }
         for (client in openClients) {
             client.send(json)
@@ -135,6 +188,95 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
                             itemId = node.req("item_id").asInt(),
                             count = node.get("count")?.asInt() ?: 1,
                         )
+                    "clear_inventory" -> BotAction.ClearInventory
+                    "delete_item" ->
+                        BotAction.DeleteItem(
+                            itemId = node.req("item_id").asInt(),
+                            count = node.get("count")?.asInt() ?: 1,
+                        )
+                    "ensure_item" ->
+                        BotAction.EnsureItem(
+                            itemId = node.req("item_id").asInt(),
+                            count = node.get("count")?.asInt() ?: 1,
+                        )
+                    "wait_ticks" -> BotAction.WaitTicks(ticks = node.req("ticks").asInt())
+                    "wait_for_animation" ->
+                        BotAction.WaitForAnimation(
+                            animationId = node.req("animation_id").asInt(),
+                            timeoutMs = node.get("timeout")?.asInt() ?: 5000,
+                        )
+                    "wait_for_xp" ->
+                        BotAction.WaitForXp(
+                            skill = node.req("skill").asText(),
+                            minAmount = node.req("min_amount").asInt(),
+                            timeoutMs = node.get("timeout")?.asInt() ?: 10000,
+                        )
+                    "wait_for_item" ->
+                        BotAction.WaitForItem(
+                            itemId = node.req("item_id").asInt(),
+                            timeoutMs = node.get("timeout")?.asInt() ?: 5000,
+                        )
+                    "wait_for_ready" ->
+                        BotAction.WaitForReady(timeoutMs = node.get("timeout")?.asInt() ?: 15000)
+                    "wait_for_position" ->
+                        BotAction.WaitForPosition(
+                            x = node.req("x").asInt(),
+                            z = node.req("z").asInt(),
+                            tolerance = node.get("tolerance")?.asInt() ?: 3,
+                            timeoutMs = node.get("timeout")?.asInt() ?: 30000,
+                        )
+                    "wait_for_condition" ->
+                        BotAction.WaitForCondition(
+                            conditionType = node.req("condition").asText(),
+                            timeoutMs = node.get("timeout")?.asInt() ?: 30000,
+                        )
+                    "find_path" ->
+                        BotAction.FindPath(
+                            x = node.req("x").asInt(),
+                            z = node.req("z").asInt(),
+                            plane = node.get("plane")?.asInt() ?: 0,
+                            maxWaypoints = node.get("max_waypoints")?.asInt() ?: 500,
+                        )
+                    "check_walkable" ->
+                        BotAction.CheckWalkable(
+                            x = node.req("x").asInt(),
+                            z = node.req("z").asInt(),
+                            plane = node.get("plane")?.asInt() ?: 0,
+                        )
+                    "open_door" ->
+                        BotAction.OpenDoor(
+                            x = node.req("x").asInt(),
+                            z = node.req("z").asInt(),
+                            plane = node.get("plane")?.asInt() ?: 0,
+                            timeoutMs = node.get("timeout")?.asInt() ?: 8000,
+                        )
+                    "block_door" ->
+                        BotAction.BlockDoor(
+                            x = node.req("x").asInt(),
+                            z = node.req("z").asInt(),
+                            plane = node.get("plane")?.asInt() ?: 0,
+                        )
+                    "walk_with_doors" ->
+                        BotAction.WalkWithDoors(
+                            x = node.req("x").asInt(),
+                            z = node.req("z").asInt(),
+                            plane = node.get("plane")?.asInt() ?: 0,
+                            tolerance = node.get("tolerance")?.asInt() ?: 3,
+                        )
+                    "attack_npc" ->
+                        BotAction.AttackNpc(
+                            index = node.req("index").asInt(),
+                            timeoutMs = node.get("timeout")?.asInt() ?: 10000,
+                        )
+                    "fight_until_hp" ->
+                        BotAction.FightUntilHp(
+                            threshold = node.req("threshold").asInt(),
+                            timeoutMs = node.get("timeout")?.asInt() ?: 60000,
+                        )
+                    "eat_food" -> BotAction.EatFood(foodItem = node.get("food_item")?.asText())
+                    "set_combat_style" ->
+                        BotAction.SetCombatStyle(style = node.req("style").asText())
+                    "get_state" -> BotAction.GetState
                     else -> {
                         println("[AgentBridge] Unknown action type: $type")
                         return
@@ -224,7 +366,9 @@ private fun Player.toSnapshot(
     tick: Int,
     nearbyNpcs: List<NearbyNpcSnapshot>,
     nearbyLocs: List<NearbyLocSnapshot>,
+    combatState: CombatStateSnapshot,
     telemetry: PlayerTelemetry?,
+    events: List<PlayerEvent>,
 ): StateSnapshot {
     val skills = buildMap {
         put("attack", statSnapshot(stats.attack))
@@ -254,12 +398,12 @@ private fun Player.toSnapshot(
 
     val inventory =
         inv.objs.mapIndexedNotNull { slot, obj ->
-            if (obj != null) InvItemSnapshot(slot, obj.id, obj.count) else null
+            if (obj != null) InvItemSnapshot(slot, obj.id, obj.count, null) else null
         }
 
     val equipment =
         worn.objs.mapIndexedNotNull { slot, obj ->
-            if (obj != null) InvItemSnapshot(slot, obj.id, obj.count) else null
+            if (obj != null) InvItemSnapshot(slot, obj.id, obj.count, null) else null
         }
 
     val modalInterfaceIds = ui.modals.values.toSet()
@@ -297,12 +441,25 @@ private fun Player.toSnapshot(
                 nearbyLocs = nearbyLocs,
                 dialog = dialogSnapshot,
                 gameMessages = messageBuffer,
+                combat = combatState,
             ),
         dialog = dialogSnapshot,
         gameMessages = messageBuffer,
+        events = events,
     )
 }
 
 @OptIn(InternalApi::class)
 private fun Player.statSnapshot(stat: org.rsmod.game.type.stat.StatType): SkillSnapshot =
     SkillSnapshot(level = statMap.getBaseLevel(stat).toInt() and 0xFF, xp = statMap.getXP(stat))
+
+/** Internal action result tracking. */
+data class ActionResult(
+    val success: Boolean,
+    val message: String,
+    val xpBefore: Map<String, Int>,
+    val xpAfter: Map<String, Int>,
+)
+
+/** Wait operation result for client notification. */
+data class WaitResult(val success: Boolean, val message: String, val waitedTicks: Int)

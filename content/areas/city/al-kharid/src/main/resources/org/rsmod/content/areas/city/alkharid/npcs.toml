@@ -1,0 +1,142 @@
+# Al Kharid NPC Spawns
+# Coordinates format: plane_regionX_regionY_localX_localY
+
+# Bankers (south-west of city)
+[[spawn]]
+npc = 'banker'
+coords = '0_51_49_8_8'
+direction = 'east'
+
+[[spawn]]
+npc = 'banker'
+coords = '0_51_49_10_8'
+direction = 'east'
+
+# Ellis the Tanner (near bank)
+[[spawn]]
+npc = 'ellis_tanner'
+coords = '0_51_49_26_18'
+direction = 'south'
+
+# Gem Trader (north of city, near gate to Lumbridge)
+[[spawn]]
+npc = 'gem_trader'
+coords = '0_51_49_10_52'
+direction = 'south'
+
+# Silk Trader
+[[spawn]]
+npc = 'silk_merchant'
+coords = '0_51_49_28_54'
+direction = 'south'
+
+# Zeke's Superior Scimitars
+[[spawn]]
+npc = 'zeke'
+coords = '0_51_49_37_46'
+direction = 'south'
+
+# Dommik's Crafting Store
+[[spawn]]
+npc = 'dommik'
+coords = '0_51_49_50_46'
+direction = 'south'
+
+# Louie's Armoured Legs Bazaar
+[[spawn]]
+npc = 'louie_legs'
+coords = '0_51_49_52_34'
+direction = 'south'
+
+# Ranael's Super Skirt Store
+[[spawn]]
+npc = 'ranael'
+coords = '0_51_49_52_30'
+direction = 'south'
+
+# Al Kharid General Store
+[[spawn]]
+npc = 'shop_keeper'
+coords = '0_51_49_52_24'
+direction = 'south'
+
+[[spawn]]
+npc = 'shop_assistant'
+coords = '0_51_49_50_24'
+direction = 'south'
+
+# Chancellor Hassan (in palace)
+[[spawn]]
+npc = 'hassan'
+coords = '0_51_49_44_12'
+direction = 'south'
+
+# Shantay Pass
+[[spawn]]
+npc = 'shantay'
+coords = '0_51_49_56_56'
+direction = 'south'
+
+[[spawn]]
+npc = 'shantay_guard'
+coords = '0_51_49_54_58'
+direction = 'south'
+
+[[spawn]]
+npc = 'shantay_guard'
+coords = '0_51_49_58_58'
+direction = 'south'
+
+# Al Kharid Warriors (in and around palace)
+[[spawn]]
+npc = 'al_kharid_warrior'
+coords = '0_51_49_36_8'
+
+[[spawn]]
+npc = 'al_kharid_warrior'
+coords = '0_51_49_40_8'
+
+[[spawn]]
+npc = 'al_kharid_warrior'
+coords = '0_51_49_44_6'
+
+[[spawn]]
+npc = 'al_kharid_warrior'
+coords = '0_51_49_48_8'
+
+# Al Kharid Men/Women (citizens)
+[[spawn]]
+npc = 'al_kharid_man'
+coords = '0_51_49_18_30'
+
+[[spawn]]
+npc = 'al_kharid_man'
+coords = '0_51_49_24_36'
+
+[[spawn]]
+npc = 'al_kharid_man'
+coords = '0_51_49_30_30'
+
+# Scorpions (around the mining area and north)
+[[spawn]]
+npc = 'scorpion'
+coords = '0_51_49_20_56'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_51_49_24_60'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_51_49_16_58'
+
+# Border Guards (at toll gate to Lumbridge)
+[[spawn]]
+npc = 'border_guard'
+coords = '0_51_49_4_48'
+direction = 'south'
+
+[[spawn]]
+npc = 'border_guard'
+coords = '0_51_49_4_50'
+direction = 'south'
