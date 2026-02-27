@@ -32,14 +32,15 @@ public object StandardGpCostCalculations {
         val stockDifference = initialStock.toLong() - currentStock.toLong()
         val difference = stockDifference * baseCost * (changePercentage / 100.0)
         val basePriceWithMarkup = baseCost * (exchangePercentage / 100.0)
-        var firstObjPrice = floor(basePriceWithMarkup + difference)
-        firstObjPrice = max(minCost.toDouble(), max(firstObjPrice, baseCost * cap))
+        val rawFirstObjPrice = floor(basePriceWithMarkup + difference)
+        val minPrice = (baseCost * cap).coerceAtLeast(minCost.toDouble())
+        val firstObjPrice = max(minPrice, rawFirstObjPrice).toInt()
 
         val priceChangePerObj = max(minCost, (baseCost * (changePercentage / 100.0)).toInt())
         return PriceParameters(
             basePriceWithMarkup = basePriceWithMarkup.toInt(),
             stockDifference = stockDifference.toInt(),
-            firstObjPrice = firstObjPrice.toInt(),
+            firstObjPrice = firstObjPrice,
             priceChangePerObj = priceChangePerObj,
         )
     }
@@ -83,27 +84,63 @@ public object StandardGpCostCalculations {
                 sellPercentage = sellPercentage,
                 changePercentage = changePercentage,
             )
-        var currentCost = firstObjPrice
-        var totalValue = 0
-        var exchangeCount = 0
-
-        while (exchangeCount < requestedCount && totalValue + currentCost <= availableCurrency) {
-            totalValue += currentCost
-            exchangeCount++
-            currentCost =
-                calculateShopSellSingleValue(
-                    initialStock = initialStock,
-                    currentStock = currentStock - exchangeCount,
-                    baseCost = baseCost,
-                    sellPercentage = sellPercentage,
-                    changePercentage = changePercentage,
-                )
-        }
+        val (exchangeCount, totalValue) =
+            calculateSellAccumulation(
+                initialStock = initialStock,
+                currentStock = currentStock,
+                baseCost = baseCost,
+                firstObjPrice = firstObjPrice,
+                requestedCount = requestedCount,
+                availableCurrency = availableCurrency,
+                sellPercentage = sellPercentage,
+                changePercentage = changePercentage,
+            )
 
         return BulkPriceParameters(
             count = exchangeCount,
             totalValue = totalValue,
             firstObjPrice = firstObjPrice,
+        )
+    }
+
+    private tailrec fun calculateSellAccumulation(
+        initialStock: Int,
+        currentStock: Int,
+        baseCost: Int,
+        firstObjPrice: Int,
+        requestedCount: Int,
+        availableCurrency: Int,
+        sellPercentage: Double,
+        changePercentage: Double,
+        exchangeCount: Int = 0,
+        totalValue: Int = 0,
+        currentCost: Int = firstObjPrice,
+    ): Pair<Int, Int> {
+        if (exchangeCount >= requestedCount || totalValue + currentCost > availableCurrency) {
+            return exchangeCount to totalValue
+        }
+
+        val nextCost =
+            calculateShopSellSingleValue(
+                initialStock = initialStock,
+                currentStock = currentStock - exchangeCount - 1,
+                baseCost = baseCost,
+                sellPercentage = sellPercentage,
+                changePercentage = changePercentage,
+            )
+
+        return calculateSellAccumulation(
+            initialStock = initialStock,
+            currentStock = currentStock,
+            baseCost = baseCost,
+            firstObjPrice = firstObjPrice,
+            requestedCount = requestedCount,
+            availableCurrency = availableCurrency,
+            sellPercentage = sellPercentage,
+            changePercentage = changePercentage,
+            exchangeCount = exchangeCount + 1,
+            totalValue = totalValue + currentCost,
+            currentCost = nextCost,
         )
     }
 
@@ -146,27 +183,63 @@ public object StandardGpCostCalculations {
                 buyPercentage = buyPercentage,
                 changePercentage = changePercentage,
             )
-        var currentPrice = firstObjPrice
-        var totalValue = 0
-        var exchangeCount = 0
-
-        while (exchangeCount < requestedCount && totalValue + currentPrice <= currencyCap) {
-            totalValue += currentPrice
-            exchangeCount++
-            currentPrice =
-                calculateShopBuySingleValue(
-                    initialStock = initialStock,
-                    currentStock = currentStock + exchangeCount,
-                    baseCost = baseCost,
-                    buyPercentage = buyPercentage,
-                    changePercentage = changePercentage,
-                )
-        }
+        val (exchangeCount, totalValue) =
+            calculateBuyAccumulation(
+                initialStock = initialStock,
+                currentStock = currentStock,
+                baseCost = baseCost,
+                firstObjPrice = firstObjPrice,
+                requestedCount = requestedCount,
+                currencyCap = currencyCap,
+                buyPercentage = buyPercentage,
+                changePercentage = changePercentage,
+            )
 
         return BulkPriceParameters(
             count = exchangeCount,
             totalValue = totalValue,
             firstObjPrice = firstObjPrice,
+        )
+    }
+
+    private tailrec fun calculateBuyAccumulation(
+        initialStock: Int,
+        currentStock: Int,
+        baseCost: Int,
+        firstObjPrice: Int,
+        requestedCount: Int,
+        currencyCap: Int,
+        buyPercentage: Double,
+        changePercentage: Double,
+        exchangeCount: Int = 0,
+        totalValue: Int = 0,
+        currentPrice: Int = firstObjPrice,
+    ): Pair<Int, Int> {
+        if (exchangeCount >= requestedCount || totalValue + currentPrice > currencyCap) {
+            return exchangeCount to totalValue
+        }
+
+        val nextPrice =
+            calculateShopBuySingleValue(
+                initialStock = initialStock,
+                currentStock = currentStock + exchangeCount + 1,
+                baseCost = baseCost,
+                buyPercentage = buyPercentage,
+                changePercentage = changePercentage,
+            )
+
+        return calculateBuyAccumulation(
+            initialStock = initialStock,
+            currentStock = currentStock,
+            baseCost = baseCost,
+            firstObjPrice = firstObjPrice,
+            requestedCount = requestedCount,
+            currencyCap = currencyCap,
+            buyPercentage = buyPercentage,
+            changePercentage = changePercentage,
+            exchangeCount = exchangeCount + 1,
+            totalValue = totalValue + currentPrice,
+            currentPrice = nextPrice,
         )
     }
 }

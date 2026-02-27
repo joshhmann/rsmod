@@ -138,6 +138,23 @@ public object ZoneUpdateTransformer {
         )
     }
 
+    public val ZoneProt.priority: Int
+        get() =
+            when (this) {
+                is LocDel -> 10
+                is ObjDel -> 9
+                is ObjAdd -> 8
+                is LocAddChangeV2 -> 7
+                is ObjCount -> 6
+                is ObjReveal -> 5
+                is MapAnim -> 4
+                is LocAnim -> 3
+                is SoundArea -> 2
+                is MapProjAnimV2 -> 1
+                is PartialFollowsZoneProt -> backing.priority
+                else -> 0
+            }
+
     private fun Obj.copy(): Obj = Obj(coords, entity, creationCycle, receiverId)
 
     public interface PartialFollowsZoneProt : ZoneProt {

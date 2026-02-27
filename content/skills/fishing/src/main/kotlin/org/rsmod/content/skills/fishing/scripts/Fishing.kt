@@ -79,6 +79,7 @@ import jakarta.inject.Inject
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.fishingLvl
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpNpc1
 import org.rsmod.api.script.onOpNpc2
 import org.rsmod.api.stats.levelmod.InvisibleLevels
@@ -232,6 +233,7 @@ constructor(
     private val xpMods: XpModifiers,
     private val invisibleLvls: InvisibleLevels,
     private val mapClock: MapClock,
+    private val objRepo: ObjRepository,
 ) : PluginScript() {
 
     override fun ScriptContext.startup() {
@@ -397,7 +399,7 @@ constructor(
                 val xp = catch.xp * xpMods.get(player, stats.fishing)
                 spam("You catch ${articleFor(catch.name)} ${catch.name}!")
                 statAdvance(stats.fishing, xp)
-                invAdd(inv, catch.obj, count = 1)
+                invAddOrDrop(objRepo, catch.obj, count = 1)
                 break
             }
         }

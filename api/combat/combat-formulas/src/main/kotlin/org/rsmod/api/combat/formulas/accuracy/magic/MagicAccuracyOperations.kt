@@ -24,6 +24,30 @@ private typealias StaffAttr = CombatStaffAttributes
 
 private typealias NpcAttr = CombatNpcAttributes
 
+/** Data class representing spell attack roll modification state. */
+private data class SpellAttackRollState(
+    val accumulated: Int,
+    val base: Int,
+    var additiveBonus: Int = 0,
+    var applyBlackMaskMod: Boolean = false,
+)
+
+/** Type alias for a spell attack roll modifier function. */
+private typealias SpellAttackRollModifier =
+    (SpellAttackRollState, EnumSet<SpellAttr>, EnumSet<NpcAttr>) -> SpellAttackRollState
+
+/** Data class representing staff attack roll modification state. */
+private data class StaffAttackRollState(
+    val accumulated: Int,
+    val base: Int,
+    var additiveBonus: Int = 0,
+    var applyBlackMaskMod: Boolean = false,
+)
+
+/** Type alias for a staff attack roll modifier function. */
+private typealias StaffAttackRollModifier =
+    (StaffAttackRollState, EnumSet<StaffAttr>, EnumSet<NpcAttr>) -> StaffAttackRollState
+
 public object MagicAccuracyOperations {
     /**
      * @param targetWeaknessPercent The target's elemental weakness percentage (e.g., `1` = `1%`).
@@ -34,115 +58,189 @@ public object MagicAccuracyOperations {
         spellAttributes: EnumSet<CombatSpellAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = attackRoll
+        val initialState = SpellAttackRollState(accumulated = attackRoll, base = attackRoll)
 
-        var additiveBonus = 0
-        var applyBlackMaskMod = false
+        val modifiers: List<SpellAttackRollModifier> =
+            listOf(
+                ::applyAmuletModifier,
+                ::applySmokeStaffModifier,
+                ::applyAdditiveBonusMultiplier,
+                ::applyDraconicModifier,
+                ::applyBlackMaskMultiplier,
+                ::applyDemonbaneModifier,
+                ::applyRevenantWeaponModifier,
+                ::applyWaterTomeModifier,
+                { state, spell, npc ->
+                    applySpellWeaknessModifier(state, spell, npc, targetWeaknessPercent)
+                },
+            )
 
-        if (SpellAttr.AmuletOfAvarice in spellAttributes && NpcAttr.Revenant in npcAttributes) {
-            additiveBonus += if (SpellAttr.ForinthrySurge in spellAttributes) 35 else 20
-        } else if (SpellAttr.SalveAmuletEi in spellAttributes && NpcAttr.Undead in npcAttributes) {
-            additiveBonus += 20
-        } else if (SpellAttr.SalveAmuletI in spellAttributes && NpcAttr.Undead in npcAttributes) {
-            additiveBonus += 15
-        } else if (SpellAttr.BlackMaskI in spellAttributes && NpcAttr.SlayerTask in npcAttributes) {
-            applyBlackMaskMod = true
-        }
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, spellAttributes, npcAttributes) }
+            .accumulated
+    }
 
-        // Note: Efaritay's aid mod is applied here, however, it seems that no actual magic
-        // attack can count as a "silver weapon." Unsure if this is an oversight in dps
-        // calculator, or if this is intentional. We will assume the latter for now.
-
-        if (SpellAttr.SmokeStaff in spellAttributes && SpellAttr.StandardBook in spellAttributes) {
-            additiveBonus += 10
-        }
-
-        modified = scale(modified, 100 + additiveBonus, 100)
-
-        if (NpcAttr.Draconic in npcAttributes) {
-            if (SpellAttr.DragonHunterLance in spellAttributes) {
-                modified = scale(modified, multiplier = 6, divisor = 5)
-            } else if (SpellAttr.DragonHunterWand in spellAttributes) {
-                modified = scale(modified, multiplier = 3, divisor = 2)
-            } else if (SpellAttr.DragonHunterCrossbow in spellAttributes) {
-                modified = scale(modified, multiplier = 13, divisor = 10)
+    private fun applyAmuletModifier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
+        when {
+            SpellAttr.AmuletOfAvarice in spell && NpcAttr.Revenant in npc -> {
+                state.additiveBonus += if (SpellAttr.ForinthrySurge in spell) 35 else 20
+            }
+            SpellAttr.SalveAmuletEi in spell && NpcAttr.Undead in npc -> {
+                state.additiveBonus += 20
+            }
+            SpellAttr.SalveAmuletI in spell && NpcAttr.Undead in npc -> {
+                state.additiveBonus += 15
+            }
+            SpellAttr.BlackMaskI in spell && NpcAttr.SlayerTask in npc -> {
+                state.applyBlackMaskMod = true
             }
         }
+        return state
+    }
 
-        if (applyBlackMaskMod) {
-            modified = scale(modified, multiplier = 23, divisor = 20)
+    private fun applySmokeStaffModifier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
+        if (SpellAttr.SmokeStaff in spell && SpellAttr.StandardBook in spell) {
+            state.additiveBonus += 10
         }
+        return state
+    }
 
-        if (SpellAttr.Demonbane in spellAttributes && NpcAttr.Demon in npcAttributes) {
-            var percent =
-                if (NpcAttr.DemonbaneResistance in npcAttributes) {
-                    if (SpellAttr.MarkOfDarkness in spellAttributes) 28 else 14
-                } else {
-                    if (SpellAttr.MarkOfDarkness in spellAttributes) 40 else 20
+    private fun applyAdditiveBonusMultiplier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
+        return state.copy(accumulated = scale(state.accumulated, 100 + state.additiveBonus, 100))
+    }
+
+    private fun applyDraconicModifier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
+        if (NpcAttr.Draconic !in npc) {
+            return state
+        }
+        val newAccumulated =
+            when {
+                SpellAttr.DragonHunterLance in spell -> {
+                    scale(state.accumulated, multiplier = 6, divisor = 5)
                 }
+                SpellAttr.DragonHunterWand in spell -> {
+                    scale(state.accumulated, multiplier = 3, divisor = 2)
+                }
+                SpellAttr.DragonHunterCrossbow in spell -> {
+                    scale(state.accumulated, multiplier = 13, divisor = 10)
+                }
+                else -> state.accumulated
+            }
+        return state.copy(accumulated = newAccumulated)
+    }
 
-            if (SpellAttr.PurgingStaff in spellAttributes) {
-                percent *= 2
+    private fun applyBlackMaskMultiplier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
+        if (!state.applyBlackMaskMod) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 23, divisor = 20))
+    }
+
+    private fun applyDemonbaneModifier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
+        if (SpellAttr.Demonbane !in spell || NpcAttr.Demon !in npc) {
+            return state
+        }
+        var percent =
+            if (NpcAttr.DemonbaneResistance in npc) {
+                if (SpellAttr.MarkOfDarkness in spell) 28 else 14
+            } else {
+                if (SpellAttr.MarkOfDarkness in spell) 40 else 20
             }
 
-            modified = scale(modified, 100 + percent, divisor = 100)
+        if (SpellAttr.PurgingStaff in spell) {
+            percent *= 2
         }
 
-        if (SpellAttr.RevenantWeapon in spellAttributes && NpcAttr.Revenant in npcAttributes) {
-            modified = scale(modified, multiplier = 3, divisor = 2)
-        }
+        return state.copy(accumulated = scale(state.accumulated, 100 + percent, divisor = 100))
+    }
 
+    private fun applyRevenantWeaponModifier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
+        if (SpellAttr.RevenantWeapon !in spell || NpcAttr.Revenant !in npc) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 3, divisor = 2))
+    }
+
+    private fun applyWaterTomeModifier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellAttackRollState {
         // Note: The wiki states that the Tome of water boosts water combat spell accuracy by 10%
         // against npcs; however, the dps calculator uses 20% alongside bind spells. Since we have
         // aligned all other values with the dps calculator, we are keeping it at 20% here.
-        val applyWaterTomeMod =
-            SpellAttr.WaterSpell in spellAttributes || SpellAttr.BindSpell in spellAttributes
-        if (SpellAttr.WaterTome in spellAttributes && applyWaterTomeMod) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
+        val applyWaterTomeMod = SpellAttr.WaterSpell in spell || SpellAttr.BindSpell in spell
+        if (SpellAttr.WaterTome !in spell || !applyWaterTomeMod) {
+            return state
         }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 6, divisor = 5))
+    }
 
-        // Note: In the dps calculator, the code below appears **after** the special attack
-        // modifiers for Accursed sceptre and Volatile nightmare staff. However, when using
-        // those specials, the player is not casting a spell - let alone one that matches the
-        // npc's weakness. Therefore, these conditions should never overlap, and applying
-        // these modifiers here should be safe.
-
+    private fun applySpellWeaknessModifier(
+        state: SpellAttackRollState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+        targetWeaknessPercent: Int,
+    ): SpellAttackRollState {
         val applySpellWeaknessMod =
-            NpcAttr.WindWeakness in npcAttributes && SpellAttr.WindSpell in spellAttributes ||
-                NpcAttr.EarthWeakness in npcAttributes && SpellAttr.EarthSpell in spellAttributes ||
-                NpcAttr.WaterWeakness in npcAttributes && SpellAttr.WaterSpell in spellAttributes ||
-                NpcAttr.FireWeakness in npcAttributes && SpellAttr.FireSpell in spellAttributes
+            NpcAttr.WindWeakness in npc && SpellAttr.WindSpell in spell ||
+                NpcAttr.EarthWeakness in npc && SpellAttr.EarthSpell in spell ||
+                NpcAttr.WaterWeakness in npc && SpellAttr.WaterSpell in spell ||
+                NpcAttr.FireWeakness in npc && SpellAttr.FireSpell in spell
 
-        if (applySpellWeaknessMod) {
-            val additive = (attackRoll * (targetWeaknessPercent / 100.0)).toInt()
-            modified += additive
+        if (!applySpellWeaknessMod) {
+            return state
         }
-
-        // TODO(combat): Vampyre mods? Do magic spells have a mod if a silver staff weapon is used?
-
-        return modified
+        val additive = (state.base * (targetWeaknessPercent / 100.0)).toInt()
+        return state.copy(accumulated = state.accumulated + additive)
     }
 
     public fun modifySpellAttackRoll(
         attackRoll: Int,
         spellAttributes: EnumSet<CombatSpellAttributes>,
     ): Int {
-        var modified = attackRoll
+        val initialState = SpellAttackRollState(accumulated = attackRoll, base = attackRoll)
 
-        var additiveBonus = 0
-        if (SpellAttr.SmokeStaff in spellAttributes && SpellAttr.StandardBook in spellAttributes) {
-            additiveBonus += 10
-        }
+        val modifiers: List<SpellAttackRollModifier> =
+            listOf(
+                ::applySmokeStaffModifier,
+                ::applyAdditiveBonusMultiplier,
+                ::applyWaterTomeModifier,
+            )
 
-        modified = scale(modified, 100 + additiveBonus, 100)
-
-        val applyWaterTomeMod =
-            SpellAttr.WaterSpell in spellAttributes || SpellAttr.BindSpell in spellAttributes
-        if (SpellAttr.WaterTome in spellAttributes && applyWaterTomeMod) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
-        }
-
-        return modified
+        return modifiers
+            .fold(initialState) { state, mod ->
+                mod(state, spellAttributes, EnumSet.noneOf(NpcAttr::class.java))
+            }
+            .accumulated
     }
 
     public fun modifyStaffAttackRoll(
@@ -150,32 +248,71 @@ public object MagicAccuracyOperations {
         staffAttributes: EnumSet<CombatStaffAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = attackRoll
+        val initialState = StaffAttackRollState(accumulated = attackRoll, base = attackRoll)
 
-        var additiveBonus = 0
-        var applyBlackMaskMod = false
+        val modifiers: List<StaffAttackRollModifier> =
+            listOf(
+                ::applyStaffAmuletModifier,
+                ::applyStaffAdditiveBonusMultiplier,
+                ::applyStaffBlackMaskMultiplier,
+                ::applyStaffRevenantWeaponModifier,
+            )
 
-        if (StaffAttr.AmuletOfAvarice in staffAttributes && NpcAttr.Revenant in npcAttributes) {
-            additiveBonus += if (StaffAttr.ForinthrySurge in staffAttributes) 35 else 20
-        } else if (StaffAttr.SalveAmuletEi in staffAttributes && NpcAttr.Undead in npcAttributes) {
-            additiveBonus += 20
-        } else if (StaffAttr.SalveAmuletI in staffAttributes && NpcAttr.Undead in npcAttributes) {
-            additiveBonus += 15
-        } else if (StaffAttr.BlackMaskI in staffAttributes && NpcAttr.SlayerTask in npcAttributes) {
-            applyBlackMaskMod = true
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, staffAttributes, npcAttributes) }
+            .accumulated
+    }
+
+    private fun applyStaffAmuletModifier(
+        state: StaffAttackRollState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffAttackRollState {
+        when {
+            StaffAttr.AmuletOfAvarice in staff && NpcAttr.Revenant in npc -> {
+                state.additiveBonus += if (StaffAttr.ForinthrySurge in staff) 35 else 20
+            }
+            StaffAttr.SalveAmuletEi in staff && NpcAttr.Undead in npc -> {
+                state.additiveBonus += 20
+            }
+            StaffAttr.SalveAmuletI in staff && NpcAttr.Undead in npc -> {
+                state.additiveBonus += 15
+            }
+            StaffAttr.BlackMaskI in staff && NpcAttr.SlayerTask in npc -> {
+                state.applyBlackMaskMod = true
+            }
         }
+        return state
+    }
 
-        modified = scale(modified, 100 + additiveBonus, 100)
+    private fun applyStaffAdditiveBonusMultiplier(
+        state: StaffAttackRollState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffAttackRollState {
+        return state.copy(accumulated = scale(state.accumulated, 100 + state.additiveBonus, 100))
+    }
 
-        if (applyBlackMaskMod) {
-            modified = scale(modified, multiplier = 23, divisor = 20)
+    private fun applyStaffBlackMaskMultiplier(
+        state: StaffAttackRollState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffAttackRollState {
+        if (!state.applyBlackMaskMod) {
+            return state
         }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 23, divisor = 20))
+    }
 
-        if (StaffAttr.RevenantWeapon in staffAttributes && NpcAttr.Revenant in npcAttributes) {
-            modified = scale(modified, multiplier = 3, divisor = 2)
+    private fun applyStaffRevenantWeaponModifier(
+        state: StaffAttackRollState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffAttackRollState {
+        if (StaffAttr.RevenantWeapon !in staff || NpcAttr.Revenant !in npc) {
+            return state
         }
-
-        return modified
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 3, divisor = 2))
     }
 
     // Note: Though currently empty, this serves as the attack roll modifier for pvp as a way to

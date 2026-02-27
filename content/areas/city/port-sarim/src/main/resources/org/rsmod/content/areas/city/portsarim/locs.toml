@@ -1,0 +1,12 @@
+# Port Sarim Loc Spawns
+# Format: plane_regionX_regionY_localX_localY
+
+[[spawn]]
+loc = 'bank_deposit_box'
+coords = '0_47_50_40_35' # Near Entrana monks (3048, 3235)
+direction = 'south'
+
+[[spawn]]
+loc = 'bank_deposit_box'
+coords = '0_47_50_19_18' # Near south docks (3027, 3218)
+direction = 'east'

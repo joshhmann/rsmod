@@ -1,25 +1,31 @@
 package org.rsmod.content.other.consumables.potions
 
 import jakarta.inject.Inject
+import kotlin.math.min
+import org.rsmod.api.config.constants
+import org.rsmod.api.player.output.UpdateRun
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.statBoost
 import org.rsmod.api.player.stat.statHeal
 import org.rsmod.api.script.onOpHeld2
+import org.rsmod.content.mechanics.poison.scripts.PoisonScript
 import org.rsmod.game.type.obj.ObjTypeList
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
 /**
- * Potion drinking script that handles consuming all F2P potions.
+ * Potion drinking script that handles consuming all potions.
  *
  * Features:
  * - Stat boosts (attack, strength, defence)
  * - Prayer restoration (restore toward base, not boost)
- * - Antipoison (cures poison)
+ * - Antipoison / antivenom (wired to PoisonScript)
  * - Dose tracking (4→3→2→1→vial)
  * - 3-tick delay between potions
  */
-class PotionScript @Inject constructor(private val objTypes: ObjTypeList) : PluginScript() {
+class PotionScript
+@Inject
+constructor(private val objTypes: ObjTypeList, private val poison: PoisonScript) : PluginScript() {
 
     override fun ScriptContext.startup() {
         // Register drink handler for all F2P potion doses
@@ -62,8 +68,13 @@ class PotionScript @Inject constructor(private val objTypes: ObjTypeList) : Plug
         }
 
         // Apply potion effect
-        if (effect.curesPoison) {
-            curePoison()
+        if (effect.isEnergyRestore) {
+            // Energy potion - restore run energy
+            restoreRunEnergy(effect.energyRestorePercent)
+        } else if (effect.curesVenom) {
+            with(poison) { cureVenom(effect.venomImmunityTicks, effect.poisonImmunityTicks) }
+        } else if (effect.curesPoison) {
+            with(poison) { curePoison(effect.poisonImmunityTicks) }
         } else if (effect.isRestore) {
             // Prayer potion - restore toward base (statHeal)
             statHeal(effect.stat, effect.constant, effect.percent)
@@ -79,18 +90,23 @@ class PotionScript @Inject constructor(private val objTypes: ObjTypeList) : Plug
         delay(3)
     }
 
-    /** Cure poison status. This would interface with the poison system when implemented. */
-    private fun ProtectedAccess.curePoison() {
-        // TODO: Implement poison cure when poison system exists
-        // For now, just acknowledge the antipoison was consumed
-        // player.poison = false
+    /**
+     * Restore run energy by a percentage of maximum. Energy potions restore 10% per dose in F2P.
+     *
+     * @param percent Percentage of max energy to restore (0-100)
+     */
+    private fun ProtectedAccess.restoreRunEnergy(percent: Int) {
+        val restoreAmount = (constants.run_max_energy * percent) / 100
+        val newEnergy = min(constants.run_max_energy, player.runEnergy + restoreAmount)
+        player.runEnergy = newEnergy
+        UpdateRun.energy(player, newEnergy)
     }
 }
 
 /** Local sequence references for potion-related animations. */
 private typealias food_seqs = FoodSeqs
 
-private object FoodSeqs : org.rsmod.api.type.refs.seq.SeqReferences() {
+object FoodSeqs : org.rsmod.api.type.refs.seq.SeqReferences() {
     /** Drinking animation (seq 829) - same as eating. */
     val human_eat = find("human_eat")
 }

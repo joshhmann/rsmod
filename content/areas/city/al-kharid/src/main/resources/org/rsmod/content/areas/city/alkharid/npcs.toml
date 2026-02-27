@@ -56,12 +56,12 @@ direction = 'south'
 
 # Al Kharid General Store
 [[spawn]]
-npc = 'shop_keeper'
+npc = 'generalshopkeeper3'
 coords = '0_51_49_52_24'
 direction = 'south'
 
 [[spawn]]
-npc = 'shop_assistant'
+npc = 'generalassistant3'
 coords = '0_51_49_50_24'
 direction = 'south'
 
@@ -70,6 +70,12 @@ direction = 'south'
 npc = 'hassan'
 coords = '0_51_49_44_12'
 direction = 'south'
+
+# Osman - Emir's spymaster (in palace, near Hassan)
+[[spawn]]
+npc = 'osman'
+coords = '0_51_49_46_14'
+direction = 'west'
 
 # Shantay Pass
 [[spawn]]
@@ -132,11 +138,11 @@ coords = '0_51_49_16_58'
 
 # Border Guards (at toll gate to Lumbridge)
 [[spawn]]
-npc = 'border_guard'
+npc = 'borderguard1'
 coords = '0_51_49_4_48'
 direction = 'south'
 
 [[spawn]]
-npc = 'border_guard'
+npc = 'borderguard1'
 coords = '0_51_49_4_50'
 direction = 'south'

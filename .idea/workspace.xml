@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ea540547-13ef-45ad-a2a9-6cc1a6c1920e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DTX/src/main/kotlin/dtx/table/TableHooks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../DTX/src/main/kotlin/dtx/table/TableHooks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.data/symbols/jingle.sym" beforeDir="false" afterPath="$PROJECT_DIR$/.data/symbols/jingle.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.data/symbols/midi.sym" beforeDir="false" afterPath="$PROJECT_DIR$/.data/symbols/midi.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GEMINI.md" beforeDir="false" afterPath="$PROJECT_DIR$/GEMINI.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/api/AGENTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/account/src/main/kotlin/org/rsmod/api/account/character/CharacterModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/account/src/main/kotlin/org/rsmod/api/account/character/CharacterModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache-enricher/src/main/kotlin/org/rsmod/api/cache/enricher/loc/locs.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache-enricher/src/main/kotlin/org/rsmod/api/cache/enricher/map/area/multiway.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache-enricher/src/main/kotlin/org/rsmod/api/cache/enricher/npc/npcs.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache-enricher/src/main/kotlin/org/rsmod/api/cache/enricher/obj/objs.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache-enricher/src/main/resources/org/rsmod/api/cache/enricher/npc/npcs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache-enricher/src/main/resources/org/rsmod/api/cache/enricher/npc/npcs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/area/MapAreaDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/area/MapAreaDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/area/MapAreaEncoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/area/MapAreaEncoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/loc/MapLocListDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/loc/MapLocListDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/npc/MapNpcListDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/npc/MapNpcListDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/obj/MapObjListDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/obj/MapObjListDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/tile/MapTileDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/map/tile/MapTileDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/types/TypeListMapDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/types/TypeListMapDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/types/jingle/JingleTypeDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/types/jingle/JingleTypeDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/types/midi/MidiTypeDecoder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/cache/src/main/kotlin/org/rsmod/api/cache/types/midi/MidiTypeDecoder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/accuracy/magic/MagicAccuracyOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/accuracy/magic/MagicAccuracyOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/accuracy/melee/MeleeAccuracyOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/accuracy/melee/MeleeAccuracyOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/accuracy/ranged/RangedAccuracyOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/accuracy/ranged/RangedAccuracyOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/MaxHitOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/MaxHitOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/magic/MagicMaxHitOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/magic/MagicMaxHitOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/melee/MeleeMaxHitOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/melee/MeleeMaxHitOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/ranged/RangedMaxHitOperations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-formulas/src/main/kotlin/org/rsmod/api/combat/formulas/maxhit/ranged/RangedMaxHitOperations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/combat/combat-manager/src/main/kotlin/org/rsmod/api/combat/manager/PlayerAttackManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/combat/combat-manager/src/main/kotlin/org/rsmod/api/combat/manager/PlayerAttackManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/InvBuilds.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/InvBuilds.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/ObjBuilds.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/ObjBuilds.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/VarBitBuilds.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/VarBitBuilds.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/VarpBuilds.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/builders/VarpBuilds.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/editors/ObjEdits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/editors/ObjEdits.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseComponents.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseComponents.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseContent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseContent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseInterfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseInterfaces.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseInvs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseInvs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseSeqs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseSeqs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseVarBits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseVarBits.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseVarps.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/config/src/main/kotlin/org/rsmod/api/config/refs/BaseVarps.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/db/src/main/kotlin/db/migration/V1__init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/db/src/main/kotlin/db/migration/V2__add_run_energy_to_characters.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/db/src/main/kotlin/db/migration/V3__add_realm_config_columns.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/db/src/main/kotlin/db/migration/V4__add_xp_rate_columns.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/db/src/main/kotlin/db/migration/V5__add_realms_broadcast_column.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/db/src/main/kotlin/db/migration/V6__replace_accounts_mod_group_column.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/death/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api/death/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/death/src/main/kotlin/org/rsmod/api/death/PlayerDeath.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/death/src/main/kotlin/org/rsmod/api/death/PlayerDeath.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/drop-table/src/main/kotlin/org/rsmod/api/drop/table/NpcDropTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/drop-table/src/main/kotlin/org/rsmod/api/drop/table/NpcDropTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/game-process/src/main/kotlin/org/rsmod/api/game/process/player/PlayerZoneUpdateProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/game-process/src/main/kotlin/org/rsmod/api/game/process/player/PlayerZoneUpdateProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/hunt/src/main/kotlin/org/rsmod/api/hunt/AggroTolerance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/hunt/src/main/kotlin/org/rsmod/api/hunt/AggroTolerance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/inv-plugin/src/main/kotlin/org/rsmod/api/inv/map/InvMapInit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/inv-plugin/src/main/kotlin/org/rsmod/api/inv/map/InvMapInit.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/inv-weight/src/main/kotlin/org/rsmod/api/inv/weight/InvWeight.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/inv-weight/src/main/kotlin/org/rsmod/api/inv/weight/InvWeight.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/invtx/src/integration/kotlin/org/rsmod/api/invtx/InvTransactionsTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/invtx/src/integration/kotlin/org/rsmod/api/invtx/InvTransactionsTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/RspCycle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/RspCycle.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/FriendListAddHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/FriendListAddHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/FriendListDelHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/FriendListDelHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/IgnoreListAddHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/IgnoreListAddHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/IgnoreListDelHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/net/src/main/kotlin/org/rsmod/api/net/rsprot/handlers/IgnoreListDelHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/obj-plugin/src/main/kotlin/org/rsmod/api/obj/plugin/ObjTakePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/obj-plugin/src/main/kotlin/org/rsmod/api/obj/plugin/ObjTakePlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/player/src/main/kotlin/org/rsmod/api/player/protect/ProtectedAccess.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/player/src/main/kotlin/org/rsmod/api/player/protect/ProtectedAccess.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/player/src/main/kotlin/org/rsmod/api/player/stat/PlayerSkillXP.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/player/src/main/kotlin/org/rsmod/api/player/stat/PlayerSkillXP.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/player/src/main/kotlin/org/rsmod/api/player/worn/EquipmentChecks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/player/src/main/kotlin/org/rsmod/api/player/worn/EquipmentChecks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/plugin-commons/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/api/plugin-commons/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/quest/src/main/kotlin/org/rsmod/api/quest/QuestList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/quest/src/main/kotlin/org/rsmod/api/quest/QuestList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/registry/src/main/kotlin/org/rsmod/api/registry/zone/ZoneUpdateMap.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/registry/src/main/kotlin/org/rsmod/api/registry/zone/ZoneUpdateMap.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/registry/src/main/kotlin/org/rsmod/api/registry/zone/ZoneUpdateTransformer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/registry/src/main/kotlin/org/rsmod/api/registry/zone/ZoneUpdateTransformer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/script/src/main/kotlin/org/rsmod/api/script/NpcScriptEventExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/script/src/main/kotlin/org/rsmod/api/script/NpcScriptEventExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/server-config/src/main/kotlin/org/rsmod/api/server/config/ServerConfigLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/server-config/src/main/kotlin/org/rsmod/api/server/config/ServerConfigLoader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/shops/src/main/kotlin/org/rsmod/api/shops/cost/StandardGpCostCalculations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/shops/src/main/kotlin/org/rsmod/api/shops/cost/StandardGpCostCalculations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/spells/src/main/kotlin/org/rsmod/api/spells/configs/SpellObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/spells/src/main/kotlin/org/rsmod/api/spells/configs/SpellObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-builders/src/main/kotlin/org/rsmod/api/type/builders/map/npc/MapNpcSpawnCollector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-builders/src/main/kotlin/org/rsmod/api/type/builders/map/npc/MapNpcSpawnCollector.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-builders/src/main/kotlin/org/rsmod/api/type/builders/map/obj/MapObjSpawnCollector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-builders/src/main/kotlin/org/rsmod/api/type/builders/map/obj/MapObjSpawnCollector.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/loc/LocReferenceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/loc/LocReferenceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/npc/NpcReferenceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/npc/NpcReferenceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/obj/ObjReferenceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/obj/ObjReferenceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/seq/SeqReferenceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/seq/SeqReferenceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/spot/SpotanimReferenceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/spot/SpotanimReferenceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/varbit/VarBitReferenceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/varbit/VarBitReferenceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/varp/VarpReferenceResolver.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-references/src/main/kotlin/org/rsmod/api/type/refs/varp/VarpReferenceResolver.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-updater/src/main/kotlin/org/rsmod/api/type/updater/TypeUpdaterConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-updater/src/main/kotlin/org/rsmod/api/type/updater/TypeUpdaterConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/type/type-verifier/src/main/kotlin/org/rsmod/api/type/verifier/EditorVerifier.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/type/type-verifier/src/main/kotlin/org/rsmod/api/type/verifier/EditorVerifier.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/utils/utils-format/src/main/kotlin/org/rsmod/api/utils/format/StringExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/utils/utils-format/src/main/kotlin/org/rsmod/api/utils/format/StringExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/utils/utils-system/src/main/kotlin/org/rsmod/api/utils/system/SafeServiceExit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/utils/utils-system/src/main/kotlin/org/rsmod/api/utils/system/SafeServiceExit.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/utils/utils-zone/src/main/kotlin/org/rsmod/api/utils/zone/SharedZoneEnclosedBuffers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/api/utils/utils-zone/src/main/kotlin/org/rsmod/api/utils/zone/SharedZoneEnclosedBuffers.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/configs/AlKharidInvs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/configs/AlKharidInvs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/configs/AlKharidNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/configs/AlKharidNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/BorderGuard.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/Dommik.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/Ellis.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/GemTrader.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/GeneralStore.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/LouieLegs.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/Ranael.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/SilkTrader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/SilkTrader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/kotlin/org/rsmod/content/areas/city/alkharid/npcs/Zeke.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/resources/org/rsmod/content/areas/city/alkharid/npcs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/al-kharid/src/main/resources/org/rsmod/content/areas/city/alkharid/npcs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/draynor/src/main/kotlin/org/rsmod/content/areas/city/draynor/DraynorNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/draynor/src/main/kotlin/org/rsmod/content/areas/city/draynor/DraynorNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/draynor/src/main/resources/org/rsmod/content/areas/city/draynor/npcs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/draynor/src/main/resources/org/rsmod/content/areas/city/draynor/npcs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/edgeville/src/main/kotlin/org/rsmod/content/areas/city/edgeville/EdgevilleNpcSpawns.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/edgeville/src/main/kotlin/org/rsmod/content/areas/city/edgeville/EdgevilleNpcSpawns.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/edgeville/src/main/kotlin/org/rsmod/content/areas/city/edgeville/EdgevilleNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/edgeville/src/main/kotlin/org/rsmod/content/areas/city/edgeville/EdgevilleNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/edgeville/src/main/kotlin/org/rsmod/content/areas/city/edgeville/EdgevilleScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/edgeville/src/main/kotlin/org/rsmod/content/areas/city/edgeville/EdgevilleScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/falador/src/main/kotlin/org/rsmod/content/areas/city/falador/FaladorNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/falador/src/main/kotlin/org/rsmod/content/areas/city/falador/FaladorNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/falador/src/main/kotlin/org/rsmod/content/areas/city/falador/configs/FaladorInvs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/falador/src/main/kotlin/org/rsmod/content/areas/city/falador/configs/FaladorInvs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/falador/src/main/kotlin/org/rsmod/content/areas/city/falador/npcs/Flynn.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/falador/src/main/kotlin/org/rsmod/content/areas/city/falador/npcs/Wayne.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/falador/src/main/resources/org/rsmod/content/areas/city/falador/npcs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/falador/src/main/resources/org/rsmod/content/areas/city/falador/npcs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/FlourMill.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/FlourMill.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/LumbridgeScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/LumbridgeScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeInvs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeInvs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeLocs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeLocs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeVars.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/configs/LumbridgeVars.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/Bob.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/DukeHoracio.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/FatherAereck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/FatherAereck.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/FredTheFarmer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/FredTheFarmer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/GeneralStore.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/Hans.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/SmithingApprentice.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/SmithingApprentice.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/WoodsmanTutor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/kotlin/org/rsmod/content/areas/city/lumbridge/npcs/WoodsmanTutor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/resources/org/rsmod/content/areas/city/lumbridge/npcs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/lumbridge/src/main/resources/org/rsmod/content/areas/city/lumbridge/npcs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/kotlin/org/rsmod/content/areas/city/portsarim/PortSarimNpcSpawns.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/kotlin/org/rsmod/content/areas/city/portsarim/PortSarimNpcSpawns.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/kotlin/org/rsmod/content/areas/city/portsarim/PortSarimNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/kotlin/org/rsmod/content/areas/city/portsarim/PortSarimNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/kotlin/org/rsmod/content/areas/city/portsarim/PortSarimScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/kotlin/org/rsmod/content/areas/city/portsarim/PortSarimScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/resources/org/rsmod/content/areas/city/portsarim/npcs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/port-sarim/src/main/resources/org/rsmod/content/areas/city/portsarim/npcs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/configs/VarrockInvs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/configs/VarrockInvs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/configs/VarrockNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/configs/VarrockNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Apothecary.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Apothecary.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Aubury.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Aubury.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/GeneralStore.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Horvik.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Lowe.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Thessalia.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/kotlin/org/rsmod/content/areas/city/varrock/npcs/Zaff.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/areas/city/varrock/src/main/resources/org/rsmod/content/areas/city/varrock/npcs.toml" beforeDir="false" afterPath="$PROJECT_DIR$/content/areas/city/varrock/src/main/resources/org/rsmod/content/areas/city/varrock/npcs.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/banks/BankBooth.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/banks/BankBooth.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/banks/BankConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/banks/BankConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/coops/ChickenCoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/coops/ChickenCoop.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/doors/DoorConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/doors/DoorConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/gate/GateConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/gate/GateConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/pickables/PickableConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/pickables/PickableConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/signpost/SignpostConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-locs/src/main/kotlin/org/rsmod/content/generic/locs/signpost/SignpostConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/banker/Banker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/banker/Banker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/banker/BankerConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/banker/BankerConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/cow/CowConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/cow/CowConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/cow/DairyCow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/cow/DairyCow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/person/GenericPerson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/generic/generic-npcs/src/main/kotlin/org/rsmod/content/generic/npcs/person/GenericPerson.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/configs/BankInterfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/configs/BankInterfaces.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/configs/BankObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/configs/BankObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/configs/BankVars.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/configs/BankVars.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/scripts/BankInvScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/scripts/BankInvScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/scripts/BankOpenScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/bank/src/main/kotlin/org/rsmod/content/interfaces/bank/scripts/BankOpenScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/combat-tab/src/main/kotlin/org/rsmod/content/interfaces/combat/tab/configs/CombatTabComponents.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/combat-tab/src/main/kotlin/org/rsmod/content/interfaces/combat/tab/configs/CombatTabComponents.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/emotes/src/main/kotlin/org/rsmod/content/interfaces/emotes/EmotesConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/emotes/src/main/kotlin/org/rsmod/content/interfaces/emotes/EmotesConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/emotes/src/main/kotlin/org/rsmod/content/interfaces/emotes/EmotesScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/emotes/src/main/kotlin/org/rsmod/content/interfaces/emotes/EmotesScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/equipment/src/main/kotlin/org/rsmod/content/interfaces/equipment/configs/EquipmentTabInterfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/equipment/src/main/kotlin/org/rsmod/content/interfaces/equipment/configs/EquipmentTabInterfaces.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/equipment/src/main/kotlin/org/rsmod/content/interfaces/equipment/configs/EquipmentTabInvs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/equipment/src/main/kotlin/org/rsmod/content/interfaces/equipment/configs/EquipmentTabInvs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/equipment/src/main/kotlin/org/rsmod/content/interfaces/equipment/prices/GuidePriceScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/equipment/src/main/kotlin/org/rsmod/content/interfaces/equipment/prices/GuidePriceScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/gameframe/src/main/kotlin/org/rsmod/content/interfaces/gameframe/config/GameframeComponents.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/gameframe/src/main/kotlin/org/rsmod/content/interfaces/gameframe/config/GameframeComponents.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/journal-tab/src/main/kotlin/org/rsmod/content/interfaces/journal/tab/configs/JournalComponents.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/journal-tab/src/main/kotlin/org/rsmod/content/interfaces/journal/tab/configs/JournalComponents.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/journal-tab/src/main/kotlin/org/rsmod/content/interfaces/journal/tab/configs/JournalVarBits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/journal-tab/src/main/kotlin/org/rsmod/content/interfaces/journal/tab/configs/JournalVarBits.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/configs/PrayerTabInterfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/configs/PrayerTabInterfaces.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/configs/PrayerTabObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/configs/PrayerTabObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/configs/PrayerTabVars.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/configs/PrayerTabVars.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/scripts/PrayerDrainScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/scripts/PrayerDrainScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/scripts/PrayerTabScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/scripts/PrayerTabScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/scripts/QuickPrayerScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/scripts/QuickPrayerScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/util/PlayerExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/prayer-tab/src/main/kotlin/org/rsmod/content/interfaces/prayer/tab/util/PlayerExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/settings/src/main/kotlin/org/rsmod/content/interfaces/settings/configs/SettingVarBits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/settings/src/main/kotlin/org/rsmod/content/interfaces/settings/configs/SettingVarBits.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/settings/src/main/kotlin/org/rsmod/content/interfaces/settings/scripts/ControlSettingsScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/settings/src/main/kotlin/org/rsmod/content/interfaces/settings/scripts/ControlSettingsScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/skill-guides/src/main/kotlin/org/rsmod/content/interfaces/skill/guides/configs/SkillGuideInterfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/skill-guides/src/main/kotlin/org/rsmod/content/interfaces/skill/guides/configs/SkillGuideInterfaces.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/interfaces/skill-guides/src/main/kotlin/org/rsmod/content/interfaces/skill/guides/configs/SkillGuideVarps.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/interfaces/skill-guides/src/main/kotlin/org/rsmod/content/interfaces/skill/guides/configs/SkillGuideVarps.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mechanics/aggression/src/main/kotlin/org/rsmod/content/mechanics/aggression/configs/AggressionNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/mechanics/aggression/src/main/kotlin/org/rsmod/content/mechanics/aggression/configs/AggressionNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mechanics/poison/src/main/kotlin/org/rsmod/content/mechanics/poison/scripts/PoisonScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/mechanics/poison/src/main/kotlin/org/rsmod/content/mechanics/poison/scripts/PoisonScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mechanics/stat-restore/src/main/kotlin/org/rsmod/content/mechanics/statrestore/scripts/StatRestoreScript.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/mechanics/status-effects/src/main/kotlin/org/rsmod/content/mechanics/statuseffects/scripts/StatusEffectsScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/mechanics/status-effects/src/main/kotlin/org/rsmod/content/mechanics/statuseffects/scripts/StatusEffectsScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/AgentBridgeScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/AgentBridgeScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/AgentBridgeServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/AgentBridgeServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/AgentBridgeTapClient.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/AgentBridgeTapClient.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/BotAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/BotAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/banking/BankPorcelain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/banking/BankPorcelain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/grounditems/GroundItemPorcelain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/grounditems/GroundItemPorcelain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/ironman/IronmanMode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/ironman/IronmanMode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/porcelain/BotPorcelain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/porcelain/BotPorcelain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/prayer/PrayerPorcelain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/prayer/PrayerPorcelain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/shops/ShopPorcelain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/agent-bridge/src/main/kotlin/org/rsmod/content/other/agentbridge/shops/ShopPorcelain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/commands/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/commands/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/commands/src/main/kotlin/org/rsmod/content/other/commands/AdminCommands.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/commands/src/main/kotlin/org/rsmod/content/other/commands/AdminCommands.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/consumables/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/consumables/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/consumables/src/main/kotlin/org/rsmod/content/other/consumables/food/FoodScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/consumables/src/main/kotlin/org/rsmod/content/other/consumables/food/FoodScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/consumables/src/main/kotlin/org/rsmod/content/other/consumables/potions/Potion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/consumables/src/main/kotlin/org/rsmod/content/other/consumables/potions/Potion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/consumables/src/main/kotlin/org/rsmod/content/other/consumables/potions/PotionScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/consumables/src/main/kotlin/org/rsmod/content/other/consumables/potions/PotionScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/login/src/main/kotlin/org/rsmod/content/other/login/LoginScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/mapclock/src/main/kotlin/org/rsmod/content/other/mapclock/MapClockConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/mapclock/src/main/kotlin/org/rsmod/content/other/mapclock/MapClockConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/mapclock/src/main/kotlin/org/rsmod/content/other/mapclock/MapClockScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/mapclock/src/main/kotlin/org/rsmod/content/other/mapclock/MapClockScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/DropTableNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/DropTableNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/DropTableObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/DropTableObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/F2PMonsterCombatScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/F2PMonsterCombatScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/NpcDropTablesScript.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/NpcDropTablesScript.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcrops/dtx/DtxDropTables.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcrops/dtx/DtxDropTables.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcrops/scripts/F2pDropTables.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcrops/scripts/F2pDropTables.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/SpecialAttackModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/SpecialAttackModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/boost/StatBoostSpecialAttacks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/boost/StatBoostSpecialAttacks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/configs/SpecialAttackSeqs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/configs/SpecialAttackSeqs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/configs/SpecialAttackSpotanims.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/configs/SpecialAttackSpotanims.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/ranged/DarkBowSpecialAttack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-attacks/src/main/kotlin/org/rsmod/content/other/special/attacks/ranged/DarkBowSpecialAttack.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/MagicWeaponsModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/MagicWeaponsModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/configs/SpecialWeaponObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/configs/SpecialWeaponObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/magic/TumekensShadowWeapons.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/magic/TumekensShadowWeapons.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/ranged/DarkBowWeapons.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/ranged/DarkBowWeapons.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/scripts/charge/TumekensShadowCharging.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/special-weapons/src/main/kotlin/org/rsmod/content/other/special/weapons/scripts/charge/TumekensShadowCharging.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/other/windmill/src/main/kotlin/org/rsmod/content/other/windmill/WindmillConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/other/windmill/src/main/kotlin/org/rsmod/content/other/windmill/WindmillConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/cooks-assistant/src/main/kotlin/org/rsmod/content/quests/cooksassistant/CooksAssistant.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/cooks-assistant/src/main/kotlin/org/rsmod/content/quests/cooksassistant/CooksAssistant.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/dorics-quest/src/main/kotlin/org/rsmod/content/quests/doricsquest/DoricsQuest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/dorics-quest/src/main/kotlin/org/rsmod/content/quests/doricsquest/DoricsQuest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/dragon-slayer/src/main/kotlin/org/rsmod/content/quests/dragonslayer/DragonSlayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/dragon-slayer/src/main/kotlin/org/rsmod/content/quests/dragonslayer/DragonSlayer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/imp-catcher/src/main/kotlin/org/rsmod/content/quests/impcatcher/ImpCatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/imp-catcher/src/main/kotlin/org/rsmod/content/quests/impcatcher/ImpCatcher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/pirates-treasure/src/main/kotlin/org/rsmod/content/quests/piratestreasure/PiratesTreasure.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/pirates-treasure/src/main/kotlin/org/rsmod/content/quests/piratestreasure/PiratesTreasure.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/pirates-treasure/src/main/kotlin/org/rsmod/content/quests/piratestreasure/configs/PiratesTreasureObjs.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/prince-ali-rescue/src/main/kotlin/org/rsmod/content/quests/princealirescue/configs/PrinceAliRescueObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/prince-ali-rescue/src/main/kotlin/org/rsmod/content/quests/princealirescue/configs/PrinceAliRescueObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/rune-mysteries/src/main/kotlin/org/rsmod/content/quests/runemysteries/RuneMysteries.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/rune-mysteries/src/main/kotlin/org/rsmod/content/quests/runemysteries/RuneMysteries.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/quests/vampyre-slayer/src/main/kotlin/org/rsmod/content/quests/vampyreslayer/VampyreSlayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/quests/vampyre-slayer/src/main/kotlin/org/rsmod/content/quests/vampyreslayer/VampyreSlayer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/AGENTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/agility/src/main/kotlin/org/rsmod/content/skills/agility/configs/AgilityLocs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/agility/src/main/kotlin/org/rsmod/content/skills/agility/configs/AgilityLocs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/cooking/src/main/kotlin/org/rsmod/content/skills/cooking/scripts/Cooking.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/cooking/src/main/kotlin/org/rsmod/content/skills/cooking/scripts/Cooking.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/crafting/src/main/kotlin/org/rsmod/content/skills/crafting/scripts/Crafting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/crafting/src/main/kotlin/org/rsmod/content/skills/crafting/scripts/Crafting.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/farming/src/main/kotlin/org/rsmod/content/skills/farming/scripts/Farming.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/farming/src/main/kotlin/org/rsmod/content/skills/farming/scripts/Farming.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/farming/src/main/kotlin/org/rsmod/content/skills/farming/scripts/configs/FarmingObjs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/farming/src/main/kotlin/org/rsmod/content/skills/farming/scripts/configs/FarmingObjs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/firemaking/src/main/kotlin/org/rsmod/content/skills/firemaking/scripts/Firemaking.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/firemaking/src/main/kotlin/org/rsmod/content/skills/firemaking/scripts/Firemaking.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/fishing/src/main/kotlin/org/rsmod/content/skills/fishing/scripts/Fishing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/fishing/src/main/kotlin/org/rsmod/content/skills/fishing/scripts/Fishing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/fletching/src/main/kotlin/org/rsmod/content/skills/fletching/scripts/Fletching.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/fletching/src/main/kotlin/org/rsmod/content/skills/fletching/scripts/Fletching.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/herblore/src/main/kotlin/org/rsmod/content/skills/herblore/scripts/Herblore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/herblore/src/main/kotlin/org/rsmod/content/skills/herblore/scripts/Herblore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/magic/spell-attacks/src/main/kotlin/org/rsmod/content/skills/magic/spell/attacks/standard/BindingSpells.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/magic/spell-attacks/src/main/kotlin/org/rsmod/content/skills/magic/spell/attacks/standard/BindingSpells.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/magic/spell-attacks/src/main/kotlin/org/rsmod/content/skills/magic/spell/attacks/standard/ElementalSpells.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/magic/spell-attacks/src/main/kotlin/org/rsmod/content/skills/magic/spell/attacks/standard/ElementalSpells.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/mining/src/main/kotlin/org/rsmod/content/skills/mining/configs/MiningConfigs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/mining/src/main/kotlin/org/rsmod/content/skills/mining/configs/MiningConfigs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/mining/src/main/kotlin/org/rsmod/content/skills/mining/configs/MiningRocks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/mining/src/main/kotlin/org/rsmod/content/skills/mining/configs/MiningRocks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/mining/src/main/kotlin/org/rsmod/content/skills/mining/scripts/Mining.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/mining/src/main/kotlin/org/rsmod/content/skills/mining/scripts/Mining.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/runecrafting/src/main/kotlin/org/rsmod/content/skills/runecrafting/scripts/Runecrafting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/runecrafting/src/main/kotlin/org/rsmod/content/skills/runecrafting/scripts/Runecrafting.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/runecrafting/src/main/kotlin/org/rsmod/content/skills/runecrafting/scripts/configs/RunecraftingLocs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/runecrafting/src/main/kotlin/org/rsmod/content/skills/runecrafting/scripts/configs/RunecraftingLocs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/slayer/src/main/kotlin/org/rsmod/content/skills/slayer/SlayerTasks.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/slayer/src/main/kotlin/org/rsmod/content/skills/slayer/SlayerTasks.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/slayer/src/main/kotlin/org/rsmod/content/skills/slayer/scripts/Slayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/slayer/src/main/kotlin/org/rsmod/content/skills/slayer/scripts/Slayer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/smithing/src/main/kotlin/org/rsmod/content/skills/smithing/scripts/Smithing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/smithing/src/main/kotlin/org/rsmod/content/skills/smithing/scripts/Smithing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/thieving/src/main/kotlin/org/rsmod/content/skills/thieving/scripts/Thieving.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/thieving/src/main/kotlin/org/rsmod/content/skills/thieving/scripts/Thieving.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/TreeLocs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/TreeLocs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/WoodcuttingAxes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/WoodcuttingAxes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/WoodcuttingOutfit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/WoodcuttingOutfit.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/WoodcuttingRates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/configs/WoodcuttingRates.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/scripts/Woodcutting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/skills/woodcutting/src/main/kotlin/org/rsmod/content/skills/woodcutting/scripts/Woodcutting.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeComponents.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeComponents.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeEnums.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeEnums.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeInterfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeInterfaces.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeLocs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeLocs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeNpcs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeNpcs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeSeqs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeSeqs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeVarBits.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/configs/CanoeVarBits.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/scripts/CanoeTravelling.kt" beforeDir="false" afterPath="$PROJECT_DIR$/content/travel/canoe/src/main/kotlin/org/rsmod/content/travel/canoe/scripts/CanoeTravelling.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/area/AreaIndex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/area/AreaIndex.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/stat/PlayerSkillXPTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/stat/PlayerSkillXPTable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/jingle/JingleType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/jingle/JingleType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/jingle/JingleTypeBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/jingle/JingleTypeBuilder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/midi/MidiType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/midi/MidiType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/midi/MidiTypeBuilder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/midi/MidiTypeBuilder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/midi/MidiTypeList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/game/src/main/kotlin/org/rsmod/game/type/midi/MidiTypeList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/routefinder/src/test/kotlin/org/rsmod/routefinder/loc/LocLayerConstantsTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/engine/routefinder/src/test/kotlin/org/rsmod/routefinder/loc/LocLayerConstantsTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/src/main/kotlin/org/rsmod/server/app/GameServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/src/main/kotlin/org/rsmod/server/app/GameServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/app/src/main/kotlin/org/rsmod/server/app/GameService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/app/src/main/kotlin/org/rsmod/server/app/GameService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/shared/src/main/kotlin/org/rsmod/server/shared/loader/PluginScriptLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/src/main/kotlin/org/rsmod/server/shared/loader/PluginScriptLoader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/shared/src/main/kotlin/org/rsmod/server/shared/module/SymbolModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/server/shared/src/main/kotlin/org/rsmod/server/shared/module/SymbolModule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\CRIMS\.gradle\wrapper\dists\gradle-9.0.0-bin\d6wjpkvcgsg3oed0qlfss3wgl\gradle-9.0.0" javaHome="C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.3\jbr" gradleVersion="9.0.0" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;00000000&quot;
+}</component>
+  <component name="ProjectId" id="3A6MiAvbsNesBy7dfMwA8MW8Jir" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle./run/media/josh/Data_Vault/Projects/OSRS-PS-DEV/rsmod [install && gradlew run].executor": "Run",
+    "Gradle.rsmod [:server:app:org.rsmod.server.app.GameServerKt.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "Z:/Projects/OSRS-PS-DEV/rsmod",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Kotlin.GameServer">
+    <configuration name="/run/media/josh/Data_Vault/Projects/OSRS-PS-DEV/rsmod [install &amp;&amp; gradlew run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--console=plain --console=plain" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="install" />
+            <option value="&amp;&amp;" />
+            <option value="gradlew" />
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle./run/media/josh/Data_Vault/Projects/OSRS-PS-DEV/rsmod [install &amp;&amp; gradlew run]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.33" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea540547-13ef-45ad-a2a9-6cc1a6c1920e" name="Changes" comment="" />
+      <created>1771908692238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771908692238</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

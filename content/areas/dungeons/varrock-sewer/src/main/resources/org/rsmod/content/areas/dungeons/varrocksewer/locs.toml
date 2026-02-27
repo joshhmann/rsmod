@@ -1,0 +1,56 @@
+# Varrock Sewers Location Definitions
+# Ladders and dungeon entrances
+
+# ============================
+# VARROCK PALACE ENTRANCE
+# Main entrance - east side of Varrock Palace courtyard
+# ============================
+
+# Ladder down (surface)
+[[loc]]
+type = 'manhole'
+coords = '0_50_54_20_20'
+
+# Ladder up (inside sewer - exit back to palace)
+[[loc]]
+type = 'ladder_up'
+coords = '0_50_54_20_20'
+
+# ============================
+# COOKING GUILD ENTRANCE  
+# Secondary entrance - south of Cooking Guild
+# ============================
+
+# Ladder down (surface)
+[[loc]]
+type = 'manhole'
+coords = '0_50_54_40_10'
+
+# Ladder up (inside sewer)
+[[loc]]
+type = 'ladder_up'
+coords = '0_50_54_40_10'
+
+# ============================
+# INTERNAL LADDERS
+# Ladders connecting different levels within the sewers
+# ============================
+
+# Eastern area ladder (deeper into sewers)
+[[loc]]
+type = 'ladder_down'
+coords = '0_50_54_45_35'
+
+[[loc]]
+type = 'ladder_up'  
+coords = '0_50_54_45_35'
+
+# ============================
+# EDGE CONNECTION (Members Only)
+# Connection to Edgeville Dungeon (P2P area)
+# ============================
+
+# Gate to Edgeville Dungeon (members only)
+[[loc]]
+type = 'gate'
+coords = '0_50_54_55_45'

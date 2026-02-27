@@ -5,7 +5,6 @@ import java.util.concurrent.ConcurrentHashMap
 import kotlin.math.max
 import kotlin.math.min
 import org.rsmod.api.config.refs.seqs
-import org.rsmod.api.invtx.invAdd
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.hit.queueHit
 import org.rsmod.api.player.output.mes
@@ -47,9 +46,6 @@ constructor(
     override fun ScriptContext.startup() {
         // Morgan in Draynor Village (quest start)
         onOpNpc1(vampyre_slayer_npcs.morgan) { startMorganDialogue(it.npc) }
-
-        // Dr Harlow in Blue Moon Inn (gives stake)
-        onOpNpc1(vampyre_slayer_npcs.dr_harlow) { startHarlowDialogue(it.npc) }
 
         // Count Draynor in Draynor Manor (boss)
         onOpNpc1(vampyre_slayer_npcs.count_draynor) { startDraynorDialogue(it.npc) }
@@ -134,18 +130,6 @@ constructor(
         }
     }
 
-    private suspend fun ProtectedAccess.startHarlowDialogue(npc: Npc) {
-        startDialogue(npc) {
-            when (getQuestStage(QuestList.vampyre_slayer)) {
-                0 -> {
-                    chatNpc(neutral, "Not now, friend. You look like you need Morgan first.")
-                }
-                1 -> harlowInProgressDialogue()
-                else -> chatNpc(happy, "You did it! You took that fiend down.")
-            }
-        }
-    }
-
     private suspend fun ProtectedAccess.startDraynorDialogue(npc: Npc) {
         startDialogue(npc) {
             when (getQuestStage(QuestList.vampyre_slayer)) {
@@ -191,20 +175,5 @@ constructor(
 
     private suspend fun Dialogue.morganFinishedDialogue() {
         chatNpc(happy, "Thank you! Draynor can sleep in peace again.")
-    }
-
-    private suspend fun Dialogue.harlowInProgressDialogue() {
-        if (!player.inv.contains(vampyre_slayer_objs.stake)) {
-            chatNpc(neutral, "You here for vampyre hunting? You'll need this.")
-            val addedStake = player.invAdd(player.inv, vampyre_slayer_objs.stake, 1).success
-            if (addedStake) {
-                chatNpc(happy, "Use this stake for the final blow.")
-                chatNpc(neutral, "Garlic will weaken Count Draynor while you fight.")
-            } else {
-                chatNpc(sad, "Clear one inventory slot and talk to me again for the stake.")
-            }
-        } else {
-            chatNpc(neutral, "You already have a stake. Finish the job in Draynor Manor.")
-        }
     }
 }

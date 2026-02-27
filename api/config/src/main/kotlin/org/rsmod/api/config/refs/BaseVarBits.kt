@@ -108,40 +108,135 @@ object BaseVarBits : VarBitReferences() {
     val enabled_prayers = find("prayer_allactive", 4276218542473)
     val quickprayer_active = find("quickprayer_active", 19321012450480)
 
-    val thick_skin = find("prayer_thickskin", 4276218540768)
-    val burst_of_strength = find("prayer_burstofstrength", 4276218544551)
-    val clarity_of_thought = find("prayer_clarityofthought", 4276218548334)
-    val rock_skin = find("prayer_rockskin", 4276218552117)
-    val superhuman_strength = find("prayer_superhumanstrength", 4276218555900)
-    val improved_reflexes = find("prayer_improvedreflexes", 4276218559683)
-    val rapid_restore = find("prayer_rapidrestore", 4276218563466)
-    val rapid_heal = find("prayer_rapidheal", 4276218567249)
-    val protect_item = find("prayer_protectitem", 4276218571032)
-    val steel_skin = find("prayer_steelskin", 4276218574815)
-    val ultimate_strength = find("prayer_ultimatestrength", 4276218578598)
-    val incredible_reflexes = find("prayer_incrediblereflexes", 4276218582381)
-    val protect_from_magic = find("prayer_protectfrommagic", 4276218586164)
-    val protect_from_missiles = find("prayer_protectfrommissiles", 4276218589947)
-    val protect_from_melee = find("prayer_protectfrommelee", 4276218593730)
-    val retribution = find("prayer_retribution", 4276218597513)
-    val redemption = find("prayer_redemption", 4276218601296)
-    val smite = find("prayer_smite", 4276218605079)
-    val preserve = find("prayer_preserve", 4276218648026)
-    val sharp_eye = find("prayer_sharpeye", 4276218608862)
-    val mystic_will = find("prayer_mysticwill", 4276218612645)
-    val hawk_eye = find("prayer_hawkeye", 4276218616428)
-    val mystic_lore = find("prayer_mysticlore", 4276218620211)
-    val eagle_eye = find("prayer_eagleeye", 4276218623994)
-    val mystic_might = find("prayer_mysticmight", 4276218627777)
-    val chivalry = find("prayer_chivalry", 4276218635342)
-    val piety = find("prayer_piety", 4276218639125)
-    val rigour = find("prayer_rigour", 4276218632896)
-    val augury = find("prayer_augury", 4276218644243)
-    val preserve_unlocked = find("prayer_preserve_unlocked", 73623487039670)
-    val rigour_unlocked = find("prayer_rigour_unlocked", 73623487032104)
-    val augury_unlocked = find("prayer_augury_unlocked", 73623487035887)
+    val prayer_thickskin = find("prayer_thickskin", 4276218540768)
+    val prayer_burstofstrength = find("prayer_burstofstrength", 4276218544551)
+    val prayer_clarityofthought = find("prayer_clarityofthought", 4276218548334)
+    val prayer_rockskin = find("prayer_rockskin", 4276218552117)
+    val prayer_superhumanstrength = find("prayer_superhumanstrength", 4276218555900)
+    val prayer_improvedreflexes = find("prayer_improvedreflexes", 4276218559683)
+    val prayer_rapidrestore = find("prayer_rapidrestore", 4276218563466)
+    val prayer_rapidheal = find("prayer_rapidheal", 4276218567249)
+    val prayer_protectitem = find("prayer_protectitem", 4276218571032)
+    val prayer_steelskin = find("prayer_steelskin", 4276218574815)
+    val prayer_ultimatestrength = find("prayer_ultimatestrength", 4276218578598)
+    val prayer_incrediblereflexes = find("prayer_incrediblereflexes", 4276218582381)
+    val prayer_protectfrommagic = find("prayer_protectfrommagic", 4276218586164)
+    val prayer_protectfrommissiles = find("prayer_protectfrommissiles", 4276218589947)
+    val prayer_protectfrommelee = find("prayer_protectfrommelee", 4276218593730)
+    val prayer_retribution = find("prayer_retribution", 4276218597513)
+    val prayer_redemption = find("prayer_redemption", 4276218601296)
+    val prayer_smite = find("prayer_smite", 4276218605079)
+    val prayer_preserve = find("prayer_preserve", 4276218648026)
+    val prayer_sharpeye = find("prayer_sharpeye", 4276218608862)
+    val prayer_mysticwill = find("prayer_mysticwill", 4276218612645)
+    val prayer_hawkeye = find("prayer_hawkeye", 4276218616428)
+    val prayer_mysticlore = find("prayer_mysticlore", 4276218620211)
+    val prayer_eagleeye = find("prayer_eagleeye", 4276218623994)
+    val prayer_mysticmight = find("prayer_mysticmight", 4276218627777)
+    val prayer_chivalry = find("prayer_chivalry", 4276218635342)
+    val prayer_piety = find("prayer_piety", 4276218639125)
+    val prayer_rigour = find("prayer_rigour", 4276218632896)
+    val prayer_augury = find("prayer_augury", 4276218644243)
+    val prayer_preserve_unlocked = find("prayer_preserve_unlocked", 73623487039670)
+    val prayer_rigour_unlocked = find("prayer_rigour_unlocked", 73623487032104)
+    val prayer_augury_unlocked = find("prayer_augury_unlocked", 73623487035887)
     val prayer_deadeye_unlocked = find("prayer_deadeye_unlocked", 239828214727554)
     val prayer_mystic_vigour_unlocked = find("prayer_mystic_vigour_unlocked", 239828214731337)
+
+    /* Backward compatibility aliases */
+    val thick_skin
+        get() = prayer_thickskin
+
+    val burst_of_strength
+        get() = prayer_burstofstrength
+
+    val clarity_of_thought
+        get() = prayer_clarityofthought
+
+    val rock_skin
+        get() = prayer_rockskin
+
+    val superhuman_strength
+        get() = prayer_superhumanstrength
+
+    val improved_reflexes = prayer_improvedreflexes
+    val rapid_restore
+        get() = prayer_rapidrestore
+
+    val rapid_heal
+        get() = prayer_rapidheal
+
+    val protect_item
+        get() = prayer_protectitem
+
+    val steel_skin
+        get() = prayer_steelskin
+
+    val ultimate_strength
+        get() = prayer_ultimatestrength
+
+    val incredible_reflexes
+        get() = prayer_incrediblereflexes
+
+    val protect_from_magic
+        get() = prayer_protectfrommagic
+
+    val protect_from_missiles
+        get() = prayer_protectfrommissiles
+
+    val protect_from_melee
+        get() = prayer_protectfrommelee
+
+    val retribution
+        get() = prayer_retribution
+
+    val redemption
+        get() = prayer_redemption
+
+    val smite
+        get() = prayer_smite
+
+    val sharp_eye
+        get() = prayer_sharpeye
+
+    val mystic_will
+        get() = prayer_mysticwill
+
+    val hawk_eye
+        get() = prayer_hawkeye
+
+    val mystic_lore
+        get() = prayer_mysticlore
+
+    val eagle_eye
+        get() = prayer_eagleeye
+
+    val mystic_might
+        get() = prayer_mysticmight
+
+    val chivalry
+        get() = prayer_chivalry
+
+    val piety
+        get() = prayer_piety
+
+    val rigour
+        get() = prayer_rigour
+
+    val augury
+        get() = prayer_augury
+
+    val preserve
+        get() = prayer_preserve
+
+    val preserve_unlocked
+        get() = prayer_preserve_unlocked
+
+    val rigour_unlocked
+        get() = prayer_rigour_unlocked
+
+    val augury_unlocked
+        get() = prayer_augury_unlocked
 
     val toa_client_raid_level = find("toa_client_raid_level", 185062056826088)
 
@@ -178,4 +273,13 @@ object BaseVarBits : VarBitReferences() {
     val giant_pouch_storage_count = find("giant_pouch_storage_count")
     val colossal_pouch_storage_type = find("colossal_pouch_storage_type")
     val colossal_pouch_storage_count = find("colossal_pouch_storage_count")
+
+    val bunny_ears_unlocked = find("bunny_ears_unlocked")
+    val scythe_unlocked = find("scythe_unlocked")
+
+    val adventurepath_combat_task_recommended = find("adventurepath_combat_task_recommended")
+
+    /* Compatibility aliases */
+    val adventurepath_combat_reward_claimed
+        get() = adventurepath_combat_task_recommended
 }

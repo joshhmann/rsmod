@@ -12,6 +12,7 @@ import org.rsmod.api.player.vars.enumVarp
 import org.rsmod.api.script.onIfOverlayButton
 import org.rsmod.api.utils.vars.VarEnumDelegate
 import org.rsmod.content.interfaces.settings.configs.setting_components
+import org.rsmod.content.interfaces.settings.configs.setting_varbits
 import org.rsmod.game.entity.Player
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
@@ -20,7 +21,7 @@ class ControlSettingsScript
 @Inject
 constructor(private val protectedAccess: ProtectedAccessLauncher) : PluginScript() {
     private var Player.acceptAid by boolVarBit(varbits.option_acceptaid)
-    private var Player.skullPrevention by boolVarBit(varbits.skull_prevent)
+    private var Player.skullPrevention by boolVarBit(setting_varbits.skull_prevent)
     private var Player.priorityPlayer by enumVarp<PlayerPriority>(varps.option_attackpriority)
     private var Player.priorityNpc by enumVarp<NpcPriority>(varps.option_attackpriority_npc)
 

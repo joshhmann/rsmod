@@ -35,7 +35,8 @@ class InvTransactionsTest {
     fun GameTestState.`add obj successfully`() = runBasicGameTest {
         withPlayerInit {
             check(inv.isEmpty())
-            invAdd(inv, objs.abyssal_whip, count = 2, slot = 3)
+            val result = invAdd(inv, objs.abyssal_whip, count = 2, slot = 3)
+            assertTrue(result.success)
             assertEquals(objs.abyssal_whip.id, inv[3]?.id)
             assertEquals(objs.abyssal_whip.id, inv[4]?.id)
             assertEquals(2, inv.occupiedSpace())

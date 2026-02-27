@@ -1,6 +1,8 @@
 package org.rsmod.content.quests.runemysteries
 
+import jakarta.inject.Inject
 import org.rsmod.api.invtx.invAdd
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
@@ -8,6 +10,7 @@ import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.getQuestStage
 import org.rsmod.api.quest.setQuestStage
 import org.rsmod.api.quest.showCompletionScroll
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpNpc1
 import org.rsmod.content.quests.runemysteries.configs.rune_mysteries_npcs
 import org.rsmod.content.quests.runemysteries.configs.rune_mysteries_objs
@@ -15,7 +18,7 @@ import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class RuneMysteries : PluginScript() {
+class RuneMysteries @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpNpc1(rune_mysteries_npcs.duke_of_lumbridge) { startDukeDialogue(it.npc) }
 
@@ -56,8 +59,9 @@ class RuneMysteries : PluginScript() {
         }
 
     private suspend fun Dialogue.dukeStartQuestDialogue() {
-        chatNpc(quiz, "Greetings. Welcome to my castle.")
-        val option = choice2("Have you any quests for me?", 1, "Goodbye.", 2)
+        chatNpc(happy, "Greetings. Welcome to my castle.")
+        val option =
+            choice3("Have you any quests for me?", 1, "Where can I find money?", 2, "Goodbye.", 3)
         when (option) {
             1 -> {
                 chatPlayer(quiz, "Have you any quests for me?")
@@ -73,7 +77,18 @@ class RuneMysteries : PluginScript() {
                 )
                 giveTalismanAndStartQuest()
             }
-            2 -> chatPlayer(neutral, "Goodbye.")
+            2 -> {
+                chatPlayer(quiz, "Where can I find money?")
+                chatNpc(
+                    neutral,
+                    "I've heard that there are many ways to earn gold in this kingdom.",
+                )
+                chatNpc(
+                    neutral,
+                    "You could try killing goblins, or perhaps cow hides are valuable.",
+                )
+            }
+            3 -> chatPlayer(neutral, "Goodbye.")
         }
     }
 
@@ -165,7 +180,7 @@ class RuneMysteries : PluginScript() {
                 sad,
                 "You need a free inventory slot to carry the package. Return when you have space.",
             )
-            player.invAdd(player.inv, rune_mysteries_objs.digtalisman, 1)
+            player.invAddOrDrop(objRepo, rune_mysteries_objs.digtalisman, 1)
             return
         }
     }

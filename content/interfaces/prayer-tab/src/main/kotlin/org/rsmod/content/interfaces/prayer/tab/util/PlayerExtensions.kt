@@ -13,15 +13,15 @@ internal var Player.drainCounter by intVarBit(varbits.prayer_drain_counter)
 
 internal fun ProtectedAccess.enablePrayerStatRegen(prayer: Prayer) {
     when {
-        prayer.enabled.isType(varbits.rapid_restore) -> {
+        prayer.enabled.isType(varbits.prayer_rapidrestore) -> {
             softTimer(timers.rapidrestore_regen, 100)
         }
 
-        prayer.enabled.isType(varbits.rapid_heal) -> {
+        prayer.enabled.isType(varbits.prayer_rapidheal) -> {
             softTimer(timers.health_regen, constants.health_regen_interval / 2)
         }
 
-        prayer.enabled.isType(varbits.preserve) -> {
+        prayer.enabled.isType(varbits.prayer_preserve) -> {
             clearQueue(queues.preserve_activation)
             longQueueDiscard(queues.preserve_activation, 25)
         }
@@ -30,15 +30,15 @@ internal fun ProtectedAccess.enablePrayerStatRegen(prayer: Prayer) {
 
 internal fun ProtectedAccess.disablePrayerStatRegen(prayer: Prayer) {
     when {
-        prayer.enabled.isType(varbits.rapid_restore) -> {
+        prayer.enabled.isType(varbits.prayer_rapidrestore) -> {
             clearSoftTimer(timers.rapidrestore_regen)
         }
 
-        prayer.enabled.isType(varbits.rapid_heal) -> {
+        prayer.enabled.isType(varbits.prayer_rapidheal) -> {
             softTimer(timers.health_regen, constants.health_regen_interval)
         }
 
-        prayer.enabled.isType(varbits.preserve) -> {
+        prayer.enabled.isType(varbits.prayer_preserve) -> {
             clearQueue(queues.preserve_activation)
             softTimer(timers.stat_boost_restore, constants.stat_boost_restore_interval)
         }

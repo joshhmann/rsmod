@@ -94,6 +94,9 @@ constructor(
         onIfModalButton(bank_components.worn_inventory) { wornInvOp(it.comsub, it.op) }
         onIfModalButton(bank_components.deposit_inventory) { depositInv() }
         onIfModalButton(bank_components.deposit_worn) { depositWorn() }
+        onIfModalButton(bank_components.deposit_box_deposit_inv) { depositInv() }
+        onIfModalButton(bank_components.deposit_box_deposit_worn) { depositWorn() }
+        onIfModalButton(bank_components.deposit_box_inventory) { sideInvOp(it.comsub, it.op) }
         onIfModalButton(bank_components.tabs) { selectTab(it.comsub, it.op) }
         onIfModalButton(bank_components.incinerator_confirm) { incinerate(it.comsub, it.obj) }
         onIfModalDrag(bank_components.tabs) { dragTab(it) }
@@ -195,6 +198,7 @@ constructor(
         }
         val count =
             when (op) {
+                IfButtonOp.Op1 -> resolveLeftClickQty()
                 IfButtonOp.Op2 -> resolveLeftClickQty()
                 IfButtonOp.Op3 -> 1
                 IfButtonOp.Op4 -> 5

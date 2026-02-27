@@ -412,9 +412,9 @@ private constructor(
                 "withdraw as button.",
         )
         doubleobjbox(
-            objs.shrimps,
+            objs.shrimp,
             400,
-            ocCert(objs.shrimps),
+            ocCert(objs.shrimp),
             400,
             "A noted item looks like a piece of paper with the image " +
                 "of the actual item on top of it.",

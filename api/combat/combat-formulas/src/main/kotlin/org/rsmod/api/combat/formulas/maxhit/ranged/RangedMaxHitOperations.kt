@@ -21,6 +21,27 @@ private typealias RangeAttr = CombatRangedAttributes
 
 private typealias NpcAttr = CombatNpcAttributes
 
+/** Data class representing damage modification state for PvE (with target magic). */
+private data class PvEDamageState(
+    val accumulated: Int,
+    val base: Int,
+    val targetMagic: Int,
+    var applyRevWeaponMod: Boolean = false,
+    var applyDragonbaneMod: Boolean = false,
+    var applyDemonbaneMod: Boolean = false,
+)
+
+/** Data class representing damage modification state for PvP (no target magic). */
+private data class PvPDamageState(val accumulated: Int, val base: Int)
+
+/** Type alias for a PvE damage modifier function. */
+private typealias PvEDamageModifier =
+    (PvEDamageState, EnumSet<RangeAttr>, EnumSet<NpcAttr>) -> PvEDamageState
+
+/** Type alias for a PvP damage modifier function. */
+private typealias PvPDamageModifier =
+    (PvPDamageState, EnumSet<RangeAttr>, EnumSet<NpcAttr>) -> PvPDamageState
+
 public object RangedMaxHitOperations {
     /**
      * @param targetMagic The target's magic level or magic bonus, whichever of the two is greater.
@@ -32,105 +53,178 @@ public object RangedMaxHitOperations {
         rangeAttributes: EnumSet<CombatRangedAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = baseDamage
+        val initialState =
+            PvEDamageState(accumulated = baseDamage, base = baseDamage, targetMagic = targetMagic)
 
-        if (RangeAttr.CrystalBow in rangeAttributes) {
-            val helmAdditive = if (RangeAttr.CrystalHelm in rangeAttributes) 1 else 0
-            val bodyAdditive = if (RangeAttr.CrystalBody in rangeAttributes) 3 else 0
-            val legsAdditive = if (RangeAttr.CrystalLegs in rangeAttributes) 2 else 0
-            val armourAdditive = helmAdditive + bodyAdditive + legsAdditive
-            modified = scale(modified, multiplier = 40 + armourAdditive, divisor = 40)
+        val modifiers: List<PvEDamageModifier> =
+            listOf(
+                ::applyCrystalModifier,
+                ::applyAmuletModifier,
+                ::applyTwistedBowModifier,
+                ::applyPendingModifiers,
+                ::applyRatBoneModifier,
+            )
+
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, rangeAttributes, npcAttributes) }
+            .accumulated
+    }
+
+    private fun applyCrystalModifier(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): PvEDamageState {
+        if (RangeAttr.CrystalBow !in range) {
+            return state
         }
+        val helmAdditive = if (RangeAttr.CrystalHelm in range) 1 else 0
+        val bodyAdditive = if (RangeAttr.CrystalBody in range) 3 else 0
+        val legsAdditive = if (RangeAttr.CrystalLegs in range) 2 else 0
+        val armourAdditive = helmAdditive + bodyAdditive + legsAdditive
+        return state.copy(
+            accumulated = scale(state.accumulated, multiplier = 40 + armourAdditive, divisor = 40)
+        )
+    }
 
-        var applyRevWeaponMod =
-            RangeAttr.RevenantWeapon in rangeAttributes && NpcAttr.Wilderness in npcAttributes
-        var applyDragonbaneMod =
-            RangeAttr.DragonHunterCrossbow in rangeAttributes && NpcAttr.Draconic in npcAttributes
-        var applyDemonbaneMod =
-            RangeAttr.ScorchingBow in rangeAttributes && NpcAttr.Demon in npcAttributes
+    private fun applyAmuletModifier(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): PvEDamageState {
+        // Pre-calculate flags for later use
+        state.applyRevWeaponMod = RangeAttr.RevenantWeapon in range && NpcAttr.Wilderness in npc
+        state.applyDragonbaneMod =
+            RangeAttr.DragonHunterCrossbow in range && NpcAttr.Draconic in npc
+        state.applyDemonbaneMod = RangeAttr.ScorchingBow in range && NpcAttr.Demon in npc
 
-        if (RangeAttr.AmuletOfAvarice in rangeAttributes && NpcAttr.Revenant in npcAttributes) {
-            val multiplier = if (RangeAttr.ForinthrySurge in rangeAttributes) 27 else 24
-            modified = scale(modified, multiplier, divisor = 20)
-        } else if (RangeAttr.SalveAmuletEi in rangeAttributes && NpcAttr.Undead in npcAttributes) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
-        } else if (RangeAttr.SalveAmuletI in rangeAttributes && NpcAttr.Undead in npcAttributes) {
-            modified = scale(modified, multiplier = 7, divisor = 6)
-        } else if (RangeAttr.BlackMaskI in rangeAttributes && NpcAttr.SlayerTask in npcAttributes) {
-            var multiplier = 23
+        val newAccumulated =
+            when {
+                RangeAttr.AmuletOfAvarice in range && NpcAttr.Revenant in npc -> {
+                    val multiplier = if (RangeAttr.ForinthrySurge in range) 27 else 24
+                    scale(state.accumulated, multiplier, divisor = 20)
+                }
+                RangeAttr.SalveAmuletEi in range && NpcAttr.Undead in npc -> {
+                    scale(state.accumulated, multiplier = 6, divisor = 5)
+                }
+                RangeAttr.SalveAmuletI in range && NpcAttr.Undead in npc -> {
+                    scale(state.accumulated, multiplier = 7, divisor = 6)
+                }
+                RangeAttr.BlackMaskI in range && NpcAttr.SlayerTask in npc -> {
+                    var multiplier = 23
 
-            if (applyRevWeaponMod) {
-                applyRevWeaponMod = false
-                multiplier += 10
+                    if (state.applyRevWeaponMod) {
+                        state.applyRevWeaponMod = false
+                        multiplier += 10
+                    }
+
+                    if (state.applyDragonbaneMod) {
+                        state.applyDragonbaneMod = false
+                        multiplier += 5
+                    }
+
+                    if (state.applyDemonbaneMod) {
+                        state.applyDemonbaneMod = false
+                        multiplier += 6
+                    }
+
+                    scale(state.accumulated, multiplier, divisor = 20)
+                }
+                else -> state.accumulated
             }
+        return state.copy(accumulated = newAccumulated)
+    }
 
-            if (applyDragonbaneMod) {
-                applyDragonbaneMod = false
-                multiplier += 5
-            }
+    private fun applyTwistedBowModifier(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): PvEDamageState {
+        if (RangeAttr.TwistedBow !in range) {
+            return state
+        }
+        val cap = if (NpcAttr.Xerician in npc) 350 else 250
+        val magic = min(cap, state.targetMagic)
 
-            if (applyDemonbaneMod) {
-                applyDemonbaneMod = false
-                multiplier += 6
-            }
+        val factor = 14
+        val base = 250
 
-            modified = scale(modified, multiplier, divisor = 20)
+        val linearBonus = (3 * magic - factor) / 100
+        val deviation = (3 * magic / 10) - (10 * factor)
+        val quadraticPenalty = (deviation * deviation) / 100
+
+        val multiplier = base + linearBonus - quadraticPenalty
+        return state.copy(accumulated = scale(state.accumulated, multiplier, divisor = 100))
+    }
+
+    private fun applyPendingModifiers(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): PvEDamageState {
+        var result = state.accumulated
+
+        if (state.applyRevWeaponMod) {
+            result = scale(result, multiplier = 3, divisor = 2)
         }
 
-        if (RangeAttr.TwistedBow in rangeAttributes) {
-            val cap = if (NpcAttr.Xerician in npcAttributes) 350 else 250
-            val magic = min(cap, targetMagic)
-
-            val factor = 14
-            val base = 250
-
-            val linearBonus = (3 * magic - factor) / 100
-            val deviation = (3 * magic / 10) - (10 * factor)
-            val quadraticPenalty = (deviation * deviation) / 100
-
-            val multiplier = base + linearBonus - quadraticPenalty
-            modified = scale(modified, multiplier, divisor = 100)
+        if (state.applyDragonbaneMod) {
+            result = scale(result, multiplier = 5, divisor = 4)
         }
 
-        if (applyRevWeaponMod) {
-            modified = scale(modified, multiplier = 3, divisor = 2)
-        }
-
-        if (applyDragonbaneMod) {
-            modified = scale(modified, multiplier = 5, divisor = 4)
-        }
-
-        if (applyDemonbaneMod) {
-            modified =
-                if (NpcAttr.DemonbaneResistance in npcAttributes) {
-                    scale(modified, multiplier = 121, divisor = 100)
+        if (state.applyDemonbaneMod) {
+            result =
+                if (NpcAttr.DemonbaneResistance in npc) {
+                    scale(result, multiplier = 121, divisor = 100)
                 } else {
-                    scale(modified, multiplier = 130, divisor = 100)
+                    scale(result, multiplier = 130, divisor = 100)
                 }
         }
 
-        if (RangeAttr.RatBoneWeapon in rangeAttributes && NpcAttr.Rat in npcAttributes) {
-            modified += 10
-        }
+        return state.copy(accumulated = result)
+    }
 
-        return modified
+    private fun applyRatBoneModifier(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): PvEDamageState {
+        if (RangeAttr.RatBoneWeapon !in range || NpcAttr.Rat !in npc) {
+            return state
+        }
+        return state.copy(accumulated = state.accumulated + 10)
     }
 
     public fun modifyBaseDamage(
         baseDamage: Int,
         rangeAttributes: EnumSet<CombatRangedAttributes>,
     ): Int {
-        var modified = baseDamage
+        val initialState = PvPDamageState(accumulated = baseDamage, base = baseDamage)
 
-        if (RangeAttr.CrystalBow in rangeAttributes) {
-            val helmAdditive = if (RangeAttr.CrystalHelm in rangeAttributes) 1 else 0
-            val bodyAdditive = if (RangeAttr.CrystalBody in rangeAttributes) 3 else 0
-            val legsAdditive = if (RangeAttr.CrystalLegs in rangeAttributes) 2 else 0
-            val armourAdditive = helmAdditive + bodyAdditive + legsAdditive
-            modified = scale(modified, multiplier = 40 + armourAdditive, divisor = 40)
+        val modifiers: List<PvPDamageModifier> = listOf(::applyCrystalModifierPvP)
+
+        return modifiers
+            .fold(initialState) { state, mod ->
+                mod(state, rangeAttributes, EnumSet.noneOf(NpcAttr::class.java))
+            }
+            .accumulated
+    }
+
+    private fun applyCrystalModifierPvP(
+        state: PvPDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): PvPDamageState {
+        if (RangeAttr.CrystalBow !in range) {
+            return state
         }
-
-        return modified
+        val helmAdditive = if (RangeAttr.CrystalHelm in range) 1 else 0
+        val bodyAdditive = if (RangeAttr.CrystalBody in range) 3 else 0
+        val legsAdditive = if (RangeAttr.CrystalLegs in range) 2 else 0
+        val armourAdditive = helmAdditive + bodyAdditive + legsAdditive
+        return state.copy(
+            accumulated = scale(state.accumulated, multiplier = 40 + armourAdditive, divisor = 40)
+        )
     }
 
     public fun modifyPostSpec(
@@ -140,26 +234,56 @@ public object RangedMaxHitOperations {
         rangeAttributes: EnumSet<CombatRangedAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = modifiedDamage
+        val initialState =
+            PvEDamageState(accumulated = modifiedDamage, base = modifiedDamage, targetMagic = 0)
 
+        val modifiers: List<PvEDamageModifier> =
+            listOf(
+                { state, range, npc -> applyTormentedDemonModifier(state, range, npc, attackRate) },
+                { state, range, npc -> applyBoltSpecModifier(state, range, npc, boltSpecDamage) },
+                ::applyCorpBeastModifier,
+            )
+
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, rangeAttributes, npcAttributes) }
+            .accumulated
+    }
+
+    private fun applyTormentedDemonModifier(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+        attackRate: Int,
+    ): PvEDamageState {
         val unshieldedTormentedDemon =
-            RangeAttr.Heavy in rangeAttributes && NpcAttr.TormentedDemonUnshielded in npcAttributes
-        if (unshieldedTormentedDemon) {
-            val bonusDamage = max(0, (attackRate * attackRate) - 16)
-            modified += bonusDamage
+            RangeAttr.Heavy in range && NpcAttr.TormentedDemonUnshielded in npc
+        if (!unshieldedTormentedDemon) {
+            return state
         }
+        val bonusDamage = max(0, (attackRate * attackRate) - 16)
+        return state.copy(accumulated = state.accumulated + bonusDamage)
+    }
 
+    private fun applyBoltSpecModifier(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+        boltSpecDamage: Int,
+    ): PvEDamageState {
         // TODO(combat): Vampyre mods
+        return state.copy(accumulated = state.accumulated + boltSpecDamage)
+    }
 
-        modified += boltSpecDamage
-
-        val corpBeastReduction =
-            NpcAttr.CorporealBeast in npcAttributes && RangeAttr.CorpBaneWeapon !in rangeAttributes
-        if (corpBeastReduction) {
-            modified /= 2
+    private fun applyCorpBeastModifier(
+        state: PvEDamageState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): PvEDamageState {
+        val corpBeastReduction = NpcAttr.CorporealBeast in npc && RangeAttr.CorpBaneWeapon !in range
+        if (!corpBeastReduction) {
+            return state
         }
-
-        return modified
+        return state.copy(accumulated = state.accumulated / 2)
     }
 
     public fun calculateEffectiveRanged(player: Player, attackStyle: RangedAttackStyle?): Int =

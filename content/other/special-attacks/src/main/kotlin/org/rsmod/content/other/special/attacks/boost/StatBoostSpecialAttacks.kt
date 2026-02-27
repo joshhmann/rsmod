@@ -2,7 +2,6 @@ package org.rsmod.content.other.special.attacks.boost
 
 import jakarta.inject.Inject
 import org.rsmod.api.config.constants
-import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.spotanims
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.config.refs.synths
@@ -11,6 +10,7 @@ import org.rsmod.api.repo.world.WorldRepository
 import org.rsmod.api.specials.SpecialAttackManager
 import org.rsmod.api.specials.SpecialAttackMap
 import org.rsmod.api.specials.SpecialAttackRepository
+import org.rsmod.content.other.special.attacks.configs.special_objs
 import org.rsmod.content.other.special.attacks.configs.special_seqs
 import org.rsmod.content.other.special.attacks.configs.special_spots
 import org.rsmod.game.type.seq.SeqType
@@ -19,30 +19,25 @@ import org.rsmod.game.type.spot.SpotanimType
 class StatBoostSpecialAttacks @Inject constructor(private val worldRepo: WorldRepository) :
     SpecialAttackMap {
     override fun SpecialAttackRepository.register(manager: SpecialAttackManager) {
-        registerInstant(objs.dragon_axe, ::lumberUpRed)
-        registerInstant(objs.dragon_axe_or, ::lumberUpRed)
-        registerInstant(objs.third_age_axe, ::lumberUpSilver)
-        registerInstant(objs.infernal_axe, ::lumberUpRed)
-        registerInstant(objs.infernal_axe_or, ::lumberUpRed)
-        registerInstant(objs.crystal_axe, ::lumberUpSilver)
+        registerInstant(special_objs.dragon_axe, ::lumberUpRed)
+        registerInstant(special_objs.`3a_axe`, ::lumberUpSilver)
+        registerInstant(special_objs.infernal_axe, ::lumberUpRed)
+        registerInstant(special_objs.crystal_axe, ::lumberUpSilver)
 
-        registerInstant(objs.dragon_harpoon, ::fishstabberDragonHarpoon)
-        registerInstant(objs.dragon_harpoon_or, ::fishstabberDragonHarpoonOr)
-        registerInstant(objs.infernal_harpoon, ::fishstabberInfernalHarpoon)
-        registerInstant(objs.infernal_harpoon_or, ::fishstabberInfernalHarpoonOr)
-        registerInstant(objs.infernal_harpoon_or_uncharged, ::fishstabberInfernalHarpoonOr)
-        registerInstant(objs.crystal_harpoon, ::fishstabberCrystalHarpoon)
+        registerInstant(special_objs.dragon_harpoon, ::fishstabberDragonHarpoon)
+        registerInstant(special_objs.infernal_harpoon, ::fishstabberInfernalHarpoon)
+        registerInstant(special_objs.crystal_harpoon, ::fishstabberCrystalHarpoon)
 
-        registerInstant(objs.dragon_pickaxe, ::rockKnockerDragonPickaxe)
-        registerInstant(objs.dragon_pickaxe_or_zalcano, ::rockKnockerDragonPickaxeOrZalcano)
-        registerInstant(objs.dragon_pickaxe_or_trailblazer, ::rockKnockerDragonPickaxeOrTrailblazer)
-        registerInstant(objs.dragon_pickaxe_upgraded, ::rockKnockerDragonPickaxeUpgraded)
-        registerInstant(objs.infernal_pickaxe, ::rockKnockerInfernalPickaxe)
-        registerInstant(objs.infernal_pickaxe_uncharged, ::rockKnockerInfernalPickaxe)
-        registerInstant(objs.infernal_pickaxe_or, ::rockKnockerInfernalPickaxeOr)
-        registerInstant(objs.infernal_pickaxe_or_uncharged, ::rockKnockerInfernalPickaxeOr)
-        registerInstant(objs.third_age_pickaxe, ::rockKnockerThirdAgePickaxe)
-        registerInstant(objs.crystal_pickaxe, ::rockKnockerCrystalPickaxe)
+        registerInstant(special_objs.dragon_pickaxe, ::rockKnockerDragonPickaxe)
+        registerInstant(special_objs.dragon_pickaxe_or_zalcano, ::rockKnockerDragonPickaxeOrZalcano)
+        registerInstant(
+            special_objs.dragon_pickaxe_or_trailblazer,
+            ::rockKnockerDragonPickaxeOrTrailblazer,
+        )
+        registerInstant(special_objs.infernal_pickaxe, ::rockKnockerInfernalPickaxe)
+        registerInstant(special_objs.infernal_pickaxe_uncharged, ::rockKnockerInfernalPickaxe)
+        registerInstant(special_objs.`3a_pickaxe`, ::rockKnockerThirdAgePickaxe)
+        registerInstant(special_objs.crystal_pickaxe, ::rockKnockerCrystalPickaxe)
     }
 
     private fun lumberUpRed(access: ProtectedAccess): Boolean {

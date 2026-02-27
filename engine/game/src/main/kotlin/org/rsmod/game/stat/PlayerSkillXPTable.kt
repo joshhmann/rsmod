@@ -5,10 +5,11 @@ import kotlin.math.pow
 public object PlayerSkillXPTable {
     public val XP_TABLE: IntArray =
         IntArray(126).apply {
-            var accumulatedXp = 0
+            val accumulatedXp = IntArray(126)
             for (level in 1 until size) {
-                accumulatedXp += (level + 300 * 2.0.pow(level / 7.0)).toInt()
-                this[level] = accumulatedXp / 4
+                accumulatedXp[level] =
+                    accumulatedXp[level - 1] + (level + 300 * 2.0.pow(level / 7.0)).toInt()
+                this[level] = accumulatedXp[level] / 4
             }
         }
 

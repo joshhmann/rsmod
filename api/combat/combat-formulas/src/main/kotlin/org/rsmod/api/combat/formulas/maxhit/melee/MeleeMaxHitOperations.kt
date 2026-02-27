@@ -22,133 +22,272 @@ private typealias MeleeAttr = CombatMeleeAttributes
 
 private typealias NpcAttr = CombatNpcAttributes
 
+/**
+ * Data class representing a damage modification step. Captures both the accumulated damage and
+ * original base for modifiers that need it.
+ */
+private data class DamageState(val accumulated: Int, val base: Int)
+
+/**
+ * Type alias for a damage modifier function. Takes current state and attributes, returns new state.
+ */
+private typealias DamageModifier =
+    (DamageState, EnumSet<MeleeAttr>, EnumSet<NpcAttr>) -> DamageState
+
 public object MeleeMaxHitOperations {
     public fun modifyBaseDamage(
         baseDamage: Int,
         meleeAttributes: EnumSet<CombatMeleeAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = baseDamage
+        val initialState = DamageState(accumulated = baseDamage, base = baseDamage)
 
-        if (MeleeAttr.AmuletOfAvarice in meleeAttributes && NpcAttr.Revenant in npcAttributes) {
-            val multiplier = if (MeleeAttr.ForinthrySurge in meleeAttributes) 27 else 24
-            modified = scale(modified, multiplier, divisor = 20)
-        } else if (MeleeAttr.SalveAmuletE in meleeAttributes && NpcAttr.Undead in npcAttributes) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
-        } else if (MeleeAttr.SalveAmulet in meleeAttributes && NpcAttr.Undead in npcAttributes) {
-            modified = scale(modified, multiplier = 7, divisor = 6)
-        } else if (MeleeAttr.BlackMask in meleeAttributes && NpcAttr.SlayerTask in npcAttributes) {
-            modified = scale(modified, multiplier = 7, divisor = 6)
-        }
+        // Define all modifiers in order of application
+        val modifiers: List<DamageModifier> =
+            listOf(
+                // Step 1: Amulet modifiers (mutually exclusive)
+                ::applyAmuletModifier,
+                // Step 2: Demon weapons
+                ::applyArclightModifier,
+                ::applyBurningClawsModifier,
+                // Step 3: Obsidian (additive, uses base)
+                ::applyObsidianModifier,
+                // Step 4: Type-specific multipliers
+                ::applyDragonHunterModifier,
+                ::applyKerisModifier,
+                ::applyBarroniteModifier,
+                ::applyRevenantWeaponModifier,
+                ::applySilverlightModifier,
+                ::applyLeafBladedModifier,
+                // Step 5: Additive bonuses
+                ::applyColossalBladeModifier,
+                ::applyRatBoneModifier,
+                // Step 6: Inquisitor (conditional on attack style)
+                { state, melee, npc -> applyInquisitorModifier(state, melee, npc) },
+            )
 
-        if (MeleeAttr.Arclight in meleeAttributes && NpcAttr.Demon in npcAttributes) {
-            modified =
-                if (NpcAttr.DemonbaneResistance in npcAttributes) {
-                    scale(modified, multiplier = 149, divisor = 100)
-                } else {
-                    scale(modified, multiplier = 170, divisor = 100)
-                }
-        }
-
-        if (MeleeAttr.BurningClaws in meleeAttributes && NpcAttr.Demon in npcAttributes) {
-            modified =
-                if (NpcAttr.DemonbaneResistance in npcAttributes) {
-                    scale(modified, multiplier = 207, divisor = 200)
-                } else {
-                    scale(modified, multiplier = 210, divisor = 200)
-                }
-        }
-
-        if (MeleeAttr.Obsidian in meleeAttributes && MeleeAttr.TzHaarWeapon in meleeAttributes) {
-            modified += baseDamage / 10
-        }
-
-        if (MeleeAttr.DragonHunterLance in meleeAttributes && NpcAttr.Draconic in npcAttributes) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
-        }
-
-        if (MeleeAttr.DragonHunterWand in meleeAttributes && NpcAttr.Draconic in npcAttributes) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
-        }
-
-        if (MeleeAttr.KerisWeapon in meleeAttributes && NpcAttr.Kalphite in npcAttributes) {
-            modified = scale(modified, multiplier = 133, divisor = 100)
-        }
-
-        if (MeleeAttr.KerisBreachPartisan in meleeAttributes && NpcAttr.Kalphite in npcAttributes) {
-            modified = scale(modified, multiplier = 133, divisor = 100)
-        }
-
-        if (MeleeAttr.KerisSunPartisan in meleeAttributes && NpcAttr.Kalphite in npcAttributes) {
-            modified = scale(modified, multiplier = 133, divisor = 100)
-        }
-
-        if (MeleeAttr.BarroniteMaceWeapon in meleeAttributes && NpcAttr.Golem in npcAttributes) {
-            modified = scale(modified, multiplier = 23, divisor = 20)
-        }
-
-        if (MeleeAttr.RevenantWeapon in meleeAttributes && NpcAttr.Wilderness in npcAttributes) {
-            modified = scale(modified, multiplier = 3, divisor = 2)
-        }
-
-        if (MeleeAttr.Silverlight in meleeAttributes && NpcAttr.Demon in npcAttributes) {
-            modified =
-                if (NpcAttr.DemonbaneResistance in npcAttributes) {
-                    scale(modified, multiplier = 71, divisor = 50)
-                } else {
-                    scale(modified, multiplier = 80, divisor = 50)
-                }
-        }
-
-        if (MeleeAttr.LeafBladed in meleeAttributes && NpcAttr.Leafy in npcAttributes) {
-            modified = scale(modified, multiplier = 47, divisor = 40)
-        }
-
-        if (MeleeAttr.ColossalBlade in meleeAttributes) {
-            val additive =
-                when {
-                    NpcAttr.Size2 in npcAttributes -> 4
-                    NpcAttr.Size3 in npcAttributes -> 6
-                    NpcAttr.Size4 in npcAttributes -> 8
-                    NpcAttr.Size5OrMore in npcAttributes -> 10
-                    else -> 2
-                }
-            modified += additive
-        }
-
-        if (MeleeAttr.RatBoneWeapon in meleeAttributes && NpcAttr.Rat in npcAttributes) {
-            modified += 10
-        }
-
-        if (MeleeAttr.Crush in meleeAttributes) {
-            var inquisitorPieces = 0
-            if (MeleeAttr.InquisitorHelm in meleeAttributes) {
-                inquisitorPieces++
+        // Apply all modifiers sequentially using fold
+        return modifiers
+            .fold(initialState) { state, modifier ->
+                modifier(state, meleeAttributes, npcAttributes)
             }
-            if (MeleeAttr.InquisitorTop in meleeAttributes) {
-                inquisitorPieces++
-            }
-            if (MeleeAttr.InquisitorBottom in meleeAttributes) {
-                inquisitorPieces++
-            }
+            .accumulated
+    }
 
-            val multiplierAdditive =
-                if (inquisitorPieces == 0) {
-                    0
-                } else if (MeleeAttr.InquisitorWeapon in meleeAttributes) {
-                    inquisitorPieces * 5
-                } else if (inquisitorPieces == 3) {
-                    5
-                } else {
-                    inquisitorPieces
+    // Step 1: Amulet modifiers (mutually exclusive)
+    private fun applyAmuletModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        val newAccumulated =
+            when {
+                MeleeAttr.AmuletOfAvarice in melee && NpcAttr.Revenant in npc -> {
+                    val multiplier = if (MeleeAttr.ForinthrySurge in melee) 27 else 24
+                    scale(state.base, multiplier, divisor = 20)
                 }
-
-            if (multiplierAdditive > 0) {
-                modified = scale(modified, multiplier = 200 + multiplierAdditive, divisor = 200)
+                MeleeAttr.SalveAmuletE in melee && NpcAttr.Undead in npc -> {
+                    scale(state.base, multiplier = 6, divisor = 5)
+                }
+                MeleeAttr.SalveAmulet in melee && NpcAttr.Undead in npc -> {
+                    scale(state.base, multiplier = 7, divisor = 6)
+                }
+                MeleeAttr.BlackMask in melee && NpcAttr.SlayerTask in npc -> {
+                    scale(state.base, multiplier = 7, divisor = 6)
+                }
+                else -> state.accumulated
             }
+        return state.copy(accumulated = newAccumulated)
+    }
+
+    // Step 2a: Arclight
+    private fun applyArclightModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.Arclight !in melee || NpcAttr.Demon !in npc) {
+            return state
+        }
+        val multiplier = if (NpcAttr.DemonbaneResistance in npc) 149 else 170
+        return state.copy(accumulated = scale(state.accumulated, multiplier, divisor = 100))
+    }
+
+    // Step 2b: Burning Claws
+    private fun applyBurningClawsModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.BurningClaws !in melee || NpcAttr.Demon !in npc) {
+            return state
+        }
+        val multiplier = if (NpcAttr.DemonbaneResistance in npc) 207 else 210
+        return state.copy(accumulated = scale(state.accumulated, multiplier, divisor = 200))
+    }
+
+    // Step 3: Obsidian (additive - adds base/10 to accumulated)
+    private fun applyObsidianModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.Obsidian !in melee || MeleeAttr.TzHaarWeapon !in melee) {
+            return state
+        }
+        return state.copy(accumulated = state.accumulated + state.base / 10)
+    }
+
+    // Step 4a: Dragon Hunter weapons
+    private fun applyDragonHunterModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (NpcAttr.Draconic !in npc) {
+            return state
+        }
+        val applies = MeleeAttr.DragonHunterLance in melee || MeleeAttr.DragonHunterWand in melee
+        if (!applies) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 6, divisor = 5))
+    }
+
+    // Step 4b: Keris weapons
+    private fun applyKerisModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (NpcAttr.Kalphite !in npc) {
+            return state
+        }
+        val applies =
+            MeleeAttr.KerisWeapon in melee ||
+                MeleeAttr.KerisBreachPartisan in melee ||
+                MeleeAttr.KerisSunPartisan in melee
+        if (!applies) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 133, divisor = 100))
+    }
+
+    // Step 4c: Barronite Mace
+    private fun applyBarroniteModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.BarroniteMaceWeapon !in melee || NpcAttr.Golem !in npc) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 23, divisor = 20))
+    }
+
+    // Step 4d: Revenant weapons
+    private fun applyRevenantWeaponModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.RevenantWeapon !in melee || NpcAttr.Wilderness !in npc) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 3, divisor = 2))
+    }
+
+    // Step 4e: Silverlight
+    private fun applySilverlightModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.Silverlight !in melee || NpcAttr.Demon !in npc) {
+            return state
+        }
+        val multiplier = if (NpcAttr.DemonbaneResistance in npc) 71 else 80
+        return state.copy(accumulated = scale(state.accumulated, multiplier, divisor = 50))
+    }
+
+    // Step 4f: Leaf-bladed
+    private fun applyLeafBladedModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.LeafBladed !in melee || NpcAttr.Leafy !in npc) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 47, divisor = 40))
+    }
+
+    // Step 5a: Colossal Blade (additive)
+    private fun applyColossalBladeModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.ColossalBlade !in melee) {
+            return state
+        }
+        val additive =
+            when {
+                NpcAttr.Size2 in npc -> 4
+                NpcAttr.Size3 in npc -> 6
+                NpcAttr.Size4 in npc -> 8
+                NpcAttr.Size5OrMore in npc -> 10
+                else -> 2
+            }
+        return state.copy(accumulated = state.accumulated + additive)
+    }
+
+    // Step 5b: Rat Bone (additive)
+    private fun applyRatBoneModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.RatBoneWeapon !in melee || NpcAttr.Rat !in npc) {
+            return state
+        }
+        return state.copy(accumulated = state.accumulated + 10)
+    }
+
+    // Step 6: Inquisitor (conditional on attack style)
+    private fun applyInquisitorModifier(
+        state: DamageState,
+        melee: EnumSet<MeleeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): DamageState {
+        if (MeleeAttr.Crush !in melee) {
+            return state
         }
 
-        return modified
+        val inquisitorPieces =
+            (if (MeleeAttr.InquisitorHelm in melee) 1 else 0) +
+                (if (MeleeAttr.InquisitorTop in melee) 1 else 0) +
+                (if (MeleeAttr.InquisitorBottom in melee) 1 else 0)
+
+        if (inquisitorPieces == 0) {
+            return state
+        }
+
+        val multiplierAdditive =
+            when {
+                MeleeAttr.InquisitorWeapon in melee -> inquisitorPieces * 5
+                inquisitorPieces == 3 -> 5
+                else -> inquisitorPieces
+            }
+
+        if (multiplierAdditive <= 0) {
+            return state
+        }
+
+        return state.copy(
+            accumulated =
+                scale(state.accumulated, multiplier = 200 + multiplierAdditive, divisor = 200)
+        )
     }
 
     public fun modifyPostSpec(
@@ -159,49 +298,69 @@ public object MeleeMaxHitOperations {
         meleeAttributes: EnumSet<CombatMeleeAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = modifiedDamage
+        // Gadderhammer modifier
+        val afterGadderhammer =
+            if (NpcAttr.Shade in npcAttributes) {
+                when {
+                    MeleeAttr.GadderhammerProc in meleeAttributes -> modifiedDamage * 2
+                    MeleeAttr.Gadderhammer in meleeAttributes ->
+                        scale(modifiedDamage, multiplier = 5, divisor = 4)
+                    else -> modifiedDamage
+                }
+            } else {
+                modifiedDamage
+            }
 
-        if (MeleeAttr.GadderhammerProc in meleeAttributes && NpcAttr.Shade in npcAttributes) {
-            modified *= 2
-        } else if (MeleeAttr.Gadderhammer in meleeAttributes && NpcAttr.Shade in npcAttributes) {
-            modified = scale(modified, multiplier = 5, divisor = 4)
-        }
+        // Keris proc modifier (3x damage)
+        val afterKerisProc =
+            if (MeleeAttr.KerisProc in meleeAttributes && NpcAttr.Kalphite in npcAttributes) {
+                afterGadderhammer * 3
+            } else {
+                afterGadderhammer
+            }
 
-        if (MeleeAttr.KerisProc in meleeAttributes && NpcAttr.Kalphite in npcAttributes) {
-            modified *= 3
-        }
+        // Tormented Demon unshielded modifier
+        val afterTormentedDemon =
+            if (
+                MeleeAttr.Crush in meleeAttributes &&
+                    NpcAttr.TormentedDemonUnshielded in npcAttributes
+            ) {
+                val bonusDamage = max(0, (attackRate * attackRate) - 16)
+                afterKerisProc + bonusDamage
+            } else {
+                afterKerisProc
+            }
 
-        val unshieldedTormentedDemon =
-            MeleeAttr.Crush in meleeAttributes && NpcAttr.TormentedDemonUnshielded in npcAttributes
-        if (unshieldedTormentedDemon) {
-            val bonusDamage = max(0, (attackRate * attackRate) - 16)
-            modified += bonusDamage
-        }
+        // Dharok's damage based on missing HP
+        val afterDharoks =
+            if (MeleeAttr.Dharoks in meleeAttributes) {
+                val multiplier = (maxHp - currHp) * maxHp
+                afterTormentedDemon + scale(afterTormentedDemon, multiplier, divisor = 10_000)
+            } else {
+                afterTormentedDemon
+            }
 
-        if (MeleeAttr.Dharoks in meleeAttributes) {
-            val multiplier = (maxHp - currHp) * maxHp
-            modified += scale(modified, multiplier, divisor = 10_000)
-        }
-
-        val berserkerNecklacePassive =
-            MeleeAttr.BerserkerNeck in meleeAttributes && MeleeAttr.TzHaarWeapon in meleeAttributes
-        if (berserkerNecklacePassive) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
-        }
+        // Berserker Necklace passive
+        val afterBerserker =
+            if (
+                MeleeAttr.BerserkerNeck in meleeAttributes &&
+                    MeleeAttr.TzHaarWeapon in meleeAttributes
+            ) {
+                scale(afterDharoks, multiplier = 6, divisor = 5)
+            } else {
+                afterDharoks
+            }
 
         // TODO(combat): Vampyre mods
 
-        // Corporeal beast damage reduction is applied _after_ bolt proc multipliers. This is why we
-        // handle it here instead of in a specialized `onModifyNpcHit(corp_beast)` script. Though
-        // this is for Melee max hit, this should be consistent throughout all combat styles to
-        // avoid any conflict or hardcoded checks if it were to be handled in a script.
-        val corpBeastReduction =
+        // Corporeal Beast damage reduction
+        return if (
             NpcAttr.CorporealBeast in npcAttributes && MeleeAttr.CorpBaneWeapon !in meleeAttributes
-        if (corpBeastReduction) {
-            modified /= 2
+        ) {
+            afterBerserker / 2
+        } else {
+            afterBerserker
         }
-
-        return modified
     }
 
     public fun calculateEffectiveStrength(player: Player, attackStyle: MeleeAttackStyle?): Int {

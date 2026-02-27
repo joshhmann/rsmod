@@ -1,0 +1,16 @@
+# Rune Essence Mine NPC Spawns
+# Instanced area accessed via Aubury (Varrock) or Sedridor (Wizards' Tower)
+# Contains rune essence rocks but no NPCs normally
+# This file is a placeholder for future NPC additions
+
+# === AUBURY ===
+# Aubury is located in Varrock, south of east bank
+# He teleports players to the essence mine
+
+# === SEDROR ===
+# Sedridor is located in the Wizards' Tower
+# He teleports players to the essence mine
+
+# === RUNE ESSENCE ROCKS ===
+# Mineable rune essence rocks are scattered throughout the mine
+# These are object spawns, not NPC spawns

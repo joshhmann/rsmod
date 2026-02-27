@@ -2338,3 +2338,64 @@ coords = '0_50_51_29_16'
 npc = 'duck_update_on_land_drake'
 coords = '0_50_51_28_18'
 
+
+# === SIR VANT (Cellar) ===
+[[spawn]]
+npc = 'white_knight'
+coords = '0_50_150_9_16'
+direction = 'south'
+
+# === LUMBRIDGE CASTLE BASEMENT (Plane 1) ===
+# Spiders, goblins, and rats in the castle basement
+
+[[spawn]]
+npc = 'giantspider1'
+coords = '1_50_50_20_25'
+
+[[spawn]]
+npc = 'giantspider1'
+coords = '1_50_50_22_28'
+
+[[spawn]]
+npc = 'giantspider2'
+coords = '1_50_50_18_22'
+
+[[spawn]]
+npc = 'giantspider2'
+coords = '1_50_50_24_30'
+
+[[spawn]]
+npc = 'spider'
+coords = '1_50_50_19_26'
+
+[[spawn]]
+npc = 'spider'
+coords = '1_50_50_23_24'
+
+[[spawn]]
+npc = 'goblin'
+coords = '1_50_50_25_20'
+
+[[spawn]]
+npc = 'goblin_2'
+coords = '1_50_50_26_28'
+
+[[spawn]]
+npc = 'giant_rat'
+coords = '1_50_50_17_30'
+
+[[spawn]]
+npc = 'giant_rat_2'
+coords = '1_50_50_21_18'
+
+# === LUMBRIDGE CASTLE ROOF (Plane 2) ===
+# Thieving skill training area and view
+
+[[spawn]]
+npc = 'man'
+coords = '2_50_50_20_25'
+
+[[spawn]]
+npc = 'woman'
+coords = '2_50_50_22_22'
+

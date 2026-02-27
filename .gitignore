@@ -54,3 +54,10 @@ bin/
 build_log*.txt
 install_log*.txt
 run_log*.txt
+*.log
+hs_err_pid*.log
+replay_pid*.log
+kotlin-lsp-err.txt
+packcache.log
+gradle_build.log
+tmp_*.log

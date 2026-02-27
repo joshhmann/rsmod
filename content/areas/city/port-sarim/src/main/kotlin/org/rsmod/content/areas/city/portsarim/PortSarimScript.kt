@@ -4,9 +4,7 @@ import jakarta.inject.Inject
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class PortSarimScript
-@Inject
-constructor() : PluginScript() {
+class PortSarimScript @Inject constructor() : PluginScript() {
     override fun ScriptContext.startup() {
         // NPC interaction handlers can be added here
         // - Redbeard Frank: Pirate's Treasure quest

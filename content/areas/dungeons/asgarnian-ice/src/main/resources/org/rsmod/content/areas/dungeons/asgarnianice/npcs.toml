@@ -1,0 +1,110 @@
+# Asgarnian Ice Dungeon NPC Spawns
+# Located south of Port Sarim, north of Mudskipper Point
+# Coordinates are in format: plane_regionX_regionZ_localX_localZ
+# Region calculation: regionX = x / 64, regionZ = z / 64
+# Local calculation: localX = x % 64, localZ = z % 64
+# Dungeon is around x=3000-3060, z=3150-3190 (region 46-47, 49)
+
+# ============================
+# Ice Warriors (Level 57) - F2P
+# Aggressive monsters found throughout the ice areas
+# ============================
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_20_25'
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_22_28'
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_25_30'
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_28_32'
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_30_35'
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_32_38'
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_35_40'
+
+[[spawn]]
+npc = 'ice_warrior_tapoyauik'
+coords = '0_47_49_38_42'
+
+# ============================
+# Ice Giants (Level 53) - F2P
+# Aggressive monsters, often found near blurite rocks
+# Western area near Royal Titans (multicombat)
+# ============================
+
+[[spawn]]
+npc = 'ice_giant_tapoyauik'
+coords = '0_47_49_15_20'
+
+[[spawn]]
+npc = 'ice_giant_tapoyauik'
+coords = '0_47_49_18_22'
+
+[[spawn]]
+npc = 'ice_giant_tapoyauik'
+coords = '0_47_49_20_25'
+
+[[spawn]]
+npc = 'ice_giant_tapoyauik'
+coords = '0_47_49_22_28'
+
+[[spawn]]
+npc = 'ice_giant_tapoyauik'
+coords = '0_47_49_25_30'
+
+[[spawn]]
+npc = 'ice_giant_tapoyauik'
+coords = '0_47_49_28_32'
+
+# ============================
+# Hobgoblins (Level 28/42) - F2P
+# Aggressive monsters found in the eastern area
+# ============================
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_47_49_40_25'
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_47_49_42_28'
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_47_49_45_30'
+
+[[spawn]]
+npc = 'hobgoblin_armed'
+coords = '0_47_49_48_32'
+
+[[spawn]]
+npc = 'hobgoblin_armed'
+coords = '0_47_49_50_35'
+
+[[spawn]]
+npc = 'hobgoblin_armed'
+coords = '0_47_49_52_38'
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_47_49_55_40'
+
+[[spawn]]
+npc = 'hobgoblin_armed'
+coords = '0_47_49_58_42'

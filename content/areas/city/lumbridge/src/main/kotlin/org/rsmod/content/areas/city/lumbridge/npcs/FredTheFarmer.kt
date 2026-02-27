@@ -1,8 +1,9 @@
 package org.rsmod.content.areas.city.lumbridge.npcs
 
+import jakarta.inject.Inject
 import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.stats
-import org.rsmod.api.invtx.invAdd
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
@@ -11,13 +12,14 @@ import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.getQuestStage
 import org.rsmod.api.quest.setQuestStage
 import org.rsmod.api.quest.showCompletionScroll
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpNpc1
 import org.rsmod.content.areas.city.lumbridge.configs.lumbridge_npcs
 import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class FredTheFarmer : PluginScript() {
+class FredTheFarmer @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpNpc1(lumbridge_npcs.fred_the_farmer) { startDialogue(it.npc) }
     }
@@ -116,7 +118,7 @@ class FredTheFarmer : PluginScript() {
 
     private suspend fun Dialogue.finishQuest() {
         player.statAdvance(stats.crafting, 150.0)
-        player.invAdd(player.inv, objs.coins, 60)
+        player.invAddOrDrop(objRepo, objs.coins, 60)
         access.setQuestStage(QuestList.sheep_shearer, 2)
         access.showCompletionScroll(
             quest = QuestList.sheep_shearer,

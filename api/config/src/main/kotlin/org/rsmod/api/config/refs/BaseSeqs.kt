@@ -44,11 +44,11 @@ object BaseSeqs : SeqReferences() {
     val human_woodcutting_blessed_axe = find("human_woodcutting_blessed_axe", 1396225383284091914)
     val human_woodcutting_rune_axe = find("human_woodcutting_rune_axe", 1396217670430666666)
     val human_woodcutting_gilded_axe = find("human_woodcutting_gilded_axe", 1396236183981592022)
-    val human_woodcutting_dragon_axe = find("human_woodcutting_dragon_axe", 1396222214358768025)
+    val human_woodcutting_dragon_axe = find("human_woodcutting_dragon_axe")
     val human_woodcutting_trailblazer_axe_no_infernal =
         find("human_woodcutting_trailblazer_axe_no_infernal", 1396237956789219542)
     val human_woodcutting_3a_axe = find("human_woodcutting_3a_axe", 1396233423840879315)
-    val human_woodcutting_infernal_axe = find("human_woodcutting_infernal_axe", 1396227705923916398)
+    val human_woodcutting_infernal_axe = find("human_woodcutting_infernal_axe")
     val human_woodcutting_trailblazer_axe =
         find("human_woodcutting_trailblazer_axe", 1396237693275185632)
     val human_woodcutting_crystal_axe = find("human_woodcutting_crystal_axe", 1396236516752534637)
@@ -303,4 +303,6 @@ object BaseSeqs : SeqReferences() {
     val human_herblore = find("human_herblore") // herb cleaning / potion mixing anim
 
     val cow_update_graze = find("cow_update_graze", 1478576823858649669)
+
+    val dragon_attack = find("dragon_attack", 80)
 }

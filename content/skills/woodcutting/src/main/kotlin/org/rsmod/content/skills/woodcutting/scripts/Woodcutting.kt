@@ -19,6 +19,7 @@ import org.rsmod.api.player.stat.woodcuttingLvl
 import org.rsmod.api.random.GameRandom
 import org.rsmod.api.repo.controller.ControllerRepository
 import org.rsmod.api.repo.loc.LocRepository
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.repo.player.PlayerRepository
 import org.rsmod.api.script.onAiConTimer
 import org.rsmod.api.script.onOpLoc1
@@ -61,6 +62,7 @@ constructor(
     private val xpMods: XpModifiers,
     private val invisibleLvls: InvisibleLevels,
     private val mapClock: MapClock,
+    private val objRepo: ObjRepository,
 ) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpLoc1(content.tree) { attempt(it.loc, it.type) }
@@ -146,7 +148,7 @@ constructor(
             val xp = type.treeXp * xpMods.get(player, stats.woodcutting)
             spam("You get some ${product.name.lowercase()}.")
             statAdvance(stats.woodcutting, xp)
-            invAdd(inv, product)
+            invAddOrDrop(objRepo, product)
             publish(CutLogs(player, tree, product))
         }
 

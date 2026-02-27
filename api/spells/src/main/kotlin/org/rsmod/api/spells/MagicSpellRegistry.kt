@@ -1,6 +1,7 @@
 package org.rsmod.api.spells
 
 import jakarta.inject.Inject
+import java.util.logging.Logger
 import org.rsmod.api.combat.commons.magic.MagicSpell
 import org.rsmod.api.combat.commons.magic.MagicSpellType
 import org.rsmod.api.combat.commons.magic.Spellbook
@@ -17,6 +18,9 @@ import org.rsmod.game.type.obj.isType
 public class MagicSpellRegistry
 @Inject
 constructor(private val objTypes: ObjTypeList, private val enumResolver: EnumTypeMapResolver) {
+    private val logger: Logger = Logger.getLogger(MagicSpellRegistry::class.java.name)
+    private val warnedMissingCastXp: MutableSet<Int> = hashSetOf()
+
     private lateinit var objSpells: Map<Int, MagicSpell>
     private lateinit var autocastSpells: Map<Int, MagicSpell>
 
@@ -80,9 +84,15 @@ constructor(private val objTypes: ObjTypeList, private val enumResolver: EnumTyp
         val button = unpacked.param(params.spell_button)
         val maxHit = unpacked.param(params.spell_maxhit)
         val levelReq = unpacked.param(params.spell_levelreq)
-        val experience = unpacked.paramOrNull(params.spell_castxp)
-
-        checkNotNull(experience) { "Cast xp not defined for spell obj: '$internalName' ($id)" }
+        val packedExperience = unpacked.paramOrNull(params.spell_castxp)
+        if (packedExperience == null && warnedMissingCastXp.add(id)) {
+            // Prefer boot stability over hard failure. Missing values are still surfaced.
+            logger.warning(
+                "spell_castxp missing for spell obj: '$internalName' ($id); defaulting to 0. " +
+                    "Fix via cache overlays/type editors when symbols are normalized."
+            )
+        }
+        val experience = packedExperience ?: 0
 
         val objReqs = buildList {
             fun addRequirement(objParam: ParamObj, countParam: ParamInt) {

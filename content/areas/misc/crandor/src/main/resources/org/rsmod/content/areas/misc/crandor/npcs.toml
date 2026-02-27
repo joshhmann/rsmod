@@ -1,0 +1,41 @@
+# Crandor Island NPC Spawns
+# Region: Various (Crandor is spread across multiple regions)
+# Coordinates format: plane_regionX_regionZ_localX_localZ
+
+# ============================
+# LESSER DEMONS (Level 82)
+# Dangerous F2P monsters
+# ============================
+
+[[spawn]]
+npc = "lesserdemon"
+coords = "0_43_50_25_30"
+
+[[spawn]]
+npc = "lesserdemon2"
+coords = "0_43_50_30_35"
+
+[[spawn]]
+npc = "lesserdemon3"
+coords = "0_43_50_28_40"
+
+[[spawn]]
+npc = "lesserdemon"
+coords = "0_43_50_35_38"
+
+# ============================
+# MOSS GIANTS (Level 42)
+# F2P training spot
+# ============================
+
+[[spawn]]
+npc = "mossgiant"
+coords = "0_43_50_15_20"
+
+[[spawn]]
+npc = "mossgiant2"
+coords = "0_43_50_20_15"
+
+[[spawn]]
+npc = "mossgiant3"
+coords = "0_43_50_18_25"

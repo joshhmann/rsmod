@@ -9,7 +9,7 @@ import org.rsmod.game.type.inv.UnpackedInvType
 
 public class InvMapInit @Inject constructor(invs: InvTypeList) {
     public val defaultInvs: MutableSet<UnpackedInvType> =
-        hashSetOf(invs[BaseInvs.inv], invs[BaseInvs.worn])
+        hashSetOf(invs[BaseInvs.inv], invs[BaseInvs.worn], invs[BaseInvs.tradeoffer])
 
     public fun init(player: Player) {
         putIfAbsent(player)

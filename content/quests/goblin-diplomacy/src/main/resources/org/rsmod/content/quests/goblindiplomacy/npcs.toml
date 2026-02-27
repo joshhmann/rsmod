@@ -1,0 +1,41 @@
+# Goblin Village NPC Spawns
+# North of Falador
+# Region 46, 54 (Goblin Village)
+# Format: plane_regionX_regionY_localX_localY
+
+# === GENERAL BENTNOZE (Red goblin general) ===
+[[spawn]]
+npc = 'general_bentnoze'
+coords = '0_46_54_30_35'
+direction = 'south'
+
+# === GENERAL WARTFACE (Green goblin general) ===
+[[spawn]]
+npc = 'general_wartface'
+coords = '0_46_54_34_35'
+direction = 'south'
+
+# === GOBLINS (Village inhabitants) ===
+[[spawn]]
+npc = 'goblin'
+coords = '0_46_54_20_40'
+
+[[spawn]]
+npc = 'goblin'
+coords = '0_46_54_25_45'
+
+[[spawn]]
+npc = 'goblin'
+coords = '0_46_54_35_45'
+
+[[spawn]]
+npc = 'goblin'
+coords = '0_46_54_40_40'
+
+[[spawn]]
+npc = 'goblin'
+coords = '0_46_54_22_30'
+
+[[spawn]]
+npc = 'goblin'
+coords = '0_46_54_42_30'

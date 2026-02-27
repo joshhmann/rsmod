@@ -1,5 +1,6 @@
 package org.rsmod.content.areas.city.alkharid.npcs
 
+import com.github.michaelbull.logging.InlineLogger
 import org.rsmod.api.config.refs.objs
 import org.rsmod.api.invtx.invAdd
 import org.rsmod.api.invtx.invDel
@@ -82,7 +83,15 @@ class SilkTrader : PluginScript() {
                 chatNpc(happy, "Pleasure doing business with you!")
             } else {
                 // Refund if couldn't add silk
-                player.invAdd(player.inv, objs.coins, price)
+                val refund = player.invAdd(player.inv, objs.coins, price)
+                if (!refund.success) {
+                    // This should theoretically never happen as we just deleted the same amount of
+                    // coins
+                    // and checked for space before starting.
+                    InlineLogger().error {
+                        "Failed to refund $price coins to player ${player.username} in SilkTrader"
+                    }
+                }
                 chatNpc(sad, "You don't have room for the silk.")
             }
         } else {

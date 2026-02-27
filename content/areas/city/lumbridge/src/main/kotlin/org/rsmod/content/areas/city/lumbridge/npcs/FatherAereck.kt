@@ -2,15 +2,13 @@ package org.rsmod.content.areas.city.lumbridge.npcs
 
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
-import org.rsmod.api.script.onOpNpc1
-import org.rsmod.content.areas.city.lumbridge.configs.lumbridge_npcs
 import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
 class FatherAereck : PluginScript() {
     override fun ScriptContext.startup() {
-        onOpNpc1(lumbridge_npcs.father_aereck) { startDialogue(it.npc) }
+        // Op1 removed: RestlessGhost quest script owns father_aereck Op1 across all quest stages
     }
 
     private suspend fun ProtectedAccess.startDialogue(npc: Npc) =

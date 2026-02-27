@@ -5,6 +5,7 @@ import org.rsmod.api.config.locParam
 import org.rsmod.api.config.locXpParam
 import org.rsmod.api.config.objParam
 import org.rsmod.api.config.refs.content
+import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.config.refs.synths
@@ -13,9 +14,11 @@ import org.rsmod.api.player.righthand
 import org.rsmod.api.player.stat.miningLvl
 import org.rsmod.api.random.GameRandom
 import org.rsmod.api.repo.loc.LocRepository
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpLoc1
 import org.rsmod.api.stats.levelmod.InvisibleLevels
 import org.rsmod.api.stats.xpmod.XpModifiers
+import org.rsmod.api.type.refs.obj.ObjReferences
 import org.rsmod.game.MapClock
 import org.rsmod.game.entity.Player
 import org.rsmod.game.inv.InvObj
@@ -30,11 +33,9 @@ import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
 // TODO:
-// - Gem rock random table (opal, jade, red topaz, sapphire, emerald, ruby, diamond)
 // - Prospector outfit XP bonus
 // - Infernal pickaxe smelting effect
 // - Dragon pickaxe special attack ore doubling
-// - Mining guild invisible +7 Mining level boost (add InvisibleLevelMod + WoodcuttingModule analog)
 // - Mining gloves depletion reduction (silver 33%, coal 50%, gold 33%, mithril 33%, etc.)
 // - Geode clue scroll drops (1/250)
 // - Unidentified minerals in the Mining Guild
@@ -46,6 +47,8 @@ constructor(
     private val xpMods: XpModifiers,
     private val invisibleLvls: InvisibleLevels,
     private val mapClock: MapClock,
+    private val random: GameRandom,
+    private val objRepo: ObjRepository,
 ) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpLoc1(content.ore) { mine(it.loc, it.type) }
@@ -67,8 +70,8 @@ constructor(
         }
 
         if (inv.isFull()) {
-            val product = objTypes[type.rockOre]
-            mes("Your inventory is too full to hold any more ${product.name.lowercase()}.")
+            val productName = resolveOreProductName(type)
+            mes("Your inventory is too full to hold any more $productName.")
             soundSynth(synths.pillory_wrong)
             return
         }
@@ -102,11 +105,11 @@ constructor(
         val depletes = minedOre && random.of(1, 255) <= type.rockDepleteChance
 
         if (minedOre) {
-            val product = objTypes[type.rockOre]
+            val product = resolveOreProduct(type)
             val xp = type.rockXp * xpMods.get(player, stats.mining)
-            spam("You manage to mine some ${product.name.lowercase()}.")
+            spam("You manage to mine some ${objTypes[product].name.lowercase()}.")
             statAdvance(stats.mining, xp)
-            invAdd(inv, product)
+            invAddOrDrop(objRepo, product)
         }
 
         if (depletes) {
@@ -118,14 +121,80 @@ constructor(
 
         // Rock still up — check inv space before re-queuing.
         if (inv.isFull()) {
-            val product = objTypes[type.rockOre]
-            mes("Your inventory is too full to hold any more ${product.name.lowercase()}.")
+            val productName = resolveOreProductName(type)
+            mes("Your inventory is too full to hold any more $productName.")
             soundSynth(synths.pillory_wrong)
             resetAnim()
             return
         }
 
         opLoc1(rock)
+    }
+
+    // --- Gem rock handling ---
+
+    /**
+     * Resolves the ore product for a rock. For gem rocks, rolls on the gem drop table. For regular
+     * rocks, returns the configured product item.
+     */
+    private fun ProtectedAccess.resolveOreProduct(type: UnpackedLocType): ObjType {
+        return if (type.isGemRock()) {
+            rollGemDrop()
+        } else {
+            objTypes[type.rockOre]
+        }
+    }
+
+    /** Returns the product name for inventory full messages. */
+    private fun ProtectedAccess.resolveOreProductName(type: UnpackedLocType): String {
+        return if (type.isGemRock()) {
+            "gems"
+        } else {
+            objTypes[type.rockOre].name.lowercase()
+        }
+    }
+
+    /**
+     * Checks if the rock is a gem rock based on its loc type. Gem rocks are identified by their
+     * content group being [content.ore] and having uncut_sapphire as their configured product (the
+     * placeholder for gem rocks).
+     */
+    private fun UnpackedLocType.isGemRock(): Boolean {
+        // Check if this is a gem rock by looking at the configured product
+        // Gem rocks have uncut_sapphire as their placeholder product
+        return rockOre == objs.uncut_sapphire && rockLevelReq == 40
+    }
+
+    /**
+     * Rolls on the gem rock drop table.
+     *
+     * Gem rock drop rates (OSRS):
+     * - Opal: ~46.8% (60/128)
+     * - Jade: ~22.7% (29/128)
+     * - Red topaz: ~14.8% (19/128)
+     * - Sapphire: ~7.0% (9/128)
+     * - Emerald: ~4.7% (6/128)
+     * - Ruby: ~3.1% (4/128)
+     * - Diamond: ~0.8% (1/128)
+     */
+    private fun ProtectedAccess.rollGemDrop(): ObjType {
+        val roll = random.of(1, 128)
+        return when {
+            roll <= 60 -> MiningGemObjs.uncut_opal // 60/128 = 46.9%
+            roll <= 89 -> MiningGemObjs.uncut_jade // 29/128 = 22.7%
+            roll <= 108 -> MiningGemObjs.uncut_red_topaz // 19/128 = 14.8%
+            roll <= 117 -> objs.uncut_sapphire // 9/128 = 7.0%
+            roll <= 123 -> objs.uncut_emerald // 6/128 = 4.7%
+            roll <= 127 -> objs.uncut_ruby // 4/128 = 3.1%
+            else -> objs.uncut_diamond // 1/128 = 0.8%
+        }
+    }
+
+    /** Local obj references for gems not in [objs] (BaseObjs). */
+    internal object MiningGemObjs : ObjReferences() {
+        val uncut_opal = find("uncut_opal")
+        val uncut_jade = find("uncut_jade")
+        val uncut_red_topaz = find("uncut_red_topaz")
     }
 
     companion object {

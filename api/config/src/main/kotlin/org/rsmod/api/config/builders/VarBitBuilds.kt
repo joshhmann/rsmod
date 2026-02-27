@@ -166,5 +166,26 @@ internal object VarBitBuilds : VarBitBuilder() {
             startBit = 25
             endBit = 30
         }
+
+        // Server-side cosmetic/unlock flags — packed into inv_capacity_65530 free bits (13-16).
+        // Sym entries in .local/varbit.sym at IDs 65534-65536.
+        build("bunny_ears_unlocked") {
+            baseVar = varps.inv_capacity_65530
+            startBit = 13
+            endBit = 13
+        }
+
+        build("scythe_unlocked") {
+            baseVar = varps.inv_capacity_65530
+            startBit = 14
+            endBit = 14
+        }
+
+        // Stores 0 = unclaimed, 1 = claimed (2-bit to allow future expansion).
+        build("adventurepath_combat_reward_claimed") {
+            baseVar = varps.inv_capacity_65530
+            startBit = 15
+            endBit = 16
+        }
     }
 }

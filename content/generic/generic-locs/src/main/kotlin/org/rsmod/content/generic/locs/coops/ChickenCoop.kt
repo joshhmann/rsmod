@@ -17,7 +17,7 @@ class ChickenCoop : PluginScript() {
     private suspend fun ProtectedAccess.searchCoop() {
         arriveDelay()
         val add = invAdd(inv, objs.egg)
-        if (add.failure) {
+        if (!add.success) {
             mes("You search the coop and find an egg but you don't have room to take it.")
             return
         }

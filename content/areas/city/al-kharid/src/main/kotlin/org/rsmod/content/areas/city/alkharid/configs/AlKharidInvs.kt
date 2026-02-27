@@ -11,12 +11,12 @@ import org.rsmod.game.type.inv.InvStackType
 typealias al_kharid_invs = AlKharidInvs
 
 object AlKharidInvs : InvReferences() {
-    val dommik_crafting = find("dommik_crafting")
-    val gem_trader = find("gem_trader")
-    val louie_legs = find("louie_legs")
-    val ranael_skirt = find("ranael_skirt")
-    val zeke_scimitar = find("zeke_scimitar")
-    val general_store = find("general_store")
+    val dommik_crafting = find("craftingshop_free")
+    val gem_trader = find("gemshop")
+    val louie_legs = find("legsshop")
+    val ranael_skirt = find("skirtshop")
+    val zeke_scimitar = find("scimitarshop")
+    val general_store = find("generalshop3")
 }
 
 object AlKharidInvBuilder : InvEditor() {
@@ -94,16 +94,21 @@ object AlKharidInvBuilder : InvEditor() {
             stack = InvStackType.Always
             autoSize = true
             restock = true
-            stock += stock(objs.pot_empty, count = 5, restockCycles = 100)
+            stock += stock(objs.pot_empty, count = 5, restockCycles = 10)
             stock += stock(objs.jug_empty, count = 2, restockCycles = 100)
+            stock += stock(objs.pack_jug_empty, count = 5, restockCycles = 20)
             stock += stock(objs.shears, count = 2, restockCycles = 100)
-            stock += stock(objs.bucket_empty, count = 3, restockCycles = 100)
-            stock += stock(objs.bowl_empty, count = 2, restockCycles = 100)
-            stock += stock(objs.cake_tin, count = 2, restockCycles = 100)
-            stock += stock(objs.tinderbox, count = 2, restockCycles = 100)
+            stock += stock(objs.knife, count = 5, restockCycles = 100)
+            stock += stock(objs.bucket_empty, count = 3, restockCycles = 10)
+            stock += stock(objs.pack_bucket, count = 15, restockCycles = 10)
+            stock += stock(objs.bowl_empty, count = 2, restockCycles = 50)
+            stock += stock(objs.cake_tin, count = 2, restockCycles = 50)
+            stock += stock(objs.tinderbox, count = 3, restockCycles = 100)
             stock += stock(objs.chisel, count = 2, restockCycles = 100)
             stock += stock(objs.hammer, count = 5, restockCycles = 100)
             stock += stock(objs.newcomer_map, count = 5, restockCycles = 100)
+            stock += stock(objs.sos_security_book, count = 5, restockCycles = 100)
+            stock += stock(objs.rope, count = 5, restockCycles = 100)
         }
     }
 }

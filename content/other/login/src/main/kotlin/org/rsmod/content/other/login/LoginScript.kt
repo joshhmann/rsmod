@@ -8,8 +8,10 @@ import net.rsprot.protocol.game.outgoing.misc.client.MinimapToggle
 import net.rsprot.protocol.game.outgoing.misc.client.ResetAnims
 import net.rsprot.protocol.game.outgoing.misc.player.ChatFilterSettings
 import net.rsprot.protocol.game.outgoing.varp.VarpReset
+import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.varbits
 import org.rsmod.api.inv.weight.InvWeight
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.player.output.Camera
 import org.rsmod.api.player.output.ChatType
 import org.rsmod.api.player.output.MiscOutput
@@ -22,8 +24,10 @@ import org.rsmod.api.player.stat.stat
 import org.rsmod.api.player.vars.boolVarBit
 import org.rsmod.api.player.vars.resyncVar
 import org.rsmod.api.realm.Realm
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onEvent
 import org.rsmod.api.stats.levelmod.InvisibleLevels
+import org.rsmod.api.type.refs.obj.ObjReferences
 import org.rsmod.game.MapClock
 import org.rsmod.game.entity.Player
 import org.rsmod.game.entity.player.SessionStateEvent
@@ -31,6 +35,7 @@ import org.rsmod.game.type.obj.ObjTypeList
 import org.rsmod.game.type.stat.StatTypeList
 import org.rsmod.game.type.varp.UnpackedVarpType
 import org.rsmod.game.type.varp.VarpTypeList
+import org.rsmod.map.CoordGrid
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
@@ -40,6 +45,7 @@ constructor(
     private val realm: Realm,
     private val mapClock: MapClock,
     private val objTypes: ObjTypeList,
+    private val objRepo: ObjRepository,
     private val varpTypes: VarpTypeList,
     private val statTypes: StatTypeList,
     private val invisibleLevels: InvisibleLevels,
@@ -48,6 +54,7 @@ constructor(
 
     private var Player.chatboxUnlocked: Boolean by boolVarBit(varbits.has_displayname_transmitter)
     private var Player.hideRoofs by boolVarBit(varbits.option_hide_rooftops)
+    private var Player.isNewPlayer: Boolean by boolVarBit(varbits.new_player_account)
 
     override fun ScriptContext.startup() {
         onEvent<SessionStateEvent.EngineLogin>(0L) { player.engineLogin() }
@@ -56,6 +63,7 @@ constructor(
     private fun Player.engineLogin() {
         sendHighPriority()
         sendLowPriority()
+        checkNewPlayer()
     }
 
     private fun Player.sendHighPriority() {
@@ -141,7 +149,36 @@ constructor(
         MiscOutput.setPlayerOp(this, slot = 8, op = "Report")
     }
 
+    private fun Player.checkNewPlayer() {
+        if (!isNewPlayer) {
+            return
+        }
+
+        // Give starter items
+        giveStarterItems()
+
+        // Teleport to Lumbridge spawn point
+        coords = CoordGrid(3222, 3218, 0)
+
+        // Mark as no longer a new player
+        isNewPlayer = false
+
+        mes("Welcome to RuneScape! You've arrived in Lumbridge.", ChatType.Broadcast)
+    }
+
+    private fun Player.giveStarterItems() {
+        // OSRS starter kit: bronze axe, tinderbox, small fishing net
+        // Items drop on ground if inventory is full
+        invAddOrDrop(objRepo, objs.bronze_axe)
+        invAddOrDrop(objRepo, objs.tinderbox)
+        invAddOrDrop(objRepo, LoginObjs.small_fishing_net)
+    }
+
     private fun transmitVars(): List<UnpackedVarpType> {
         return varpTypes.filterTransmitKeys().sorted().map(varpTypes::getValue)
     }
+}
+
+internal object LoginObjs : ObjReferences() {
+    val small_fishing_net = find("net")
 }

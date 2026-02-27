@@ -7,6 +7,7 @@ import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.farmingLvl
 import org.rsmod.api.random.GameRandom
 import org.rsmod.api.repo.loc.LocRepository
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpLoc1
 import org.rsmod.api.script.onOpLocU
 import org.rsmod.api.stats.xpmod.XpModifiers
@@ -45,6 +46,7 @@ constructor(
     private val random: GameRandom,
     private val locRepo: LocRepository,
     private val xpMods: XpModifiers,
+    private val objRepo: ObjRepository,
 ) : PluginScript() {
     private val patchStates = mutableMapOf<CoordGrid, PatchState>()
 
@@ -242,7 +244,7 @@ constructor(
         var harvested = 0
         repeat(harvestCount) {
             if (inv.isFull()) return@repeat
-            invAdd(inv, herb.produce)
+            invAddOrDrop(objRepo, herb.produce)
             harvested++
         }
         if (harvested == 0) {
@@ -283,7 +285,7 @@ constructor(
             listOf(
                 HerbDef(
                     seed = farming_objs.guam_seed,
-                    produce = objs.grimy_guam,
+                    produce = farming_objs.grimy_guam,
                     levelReq = 9,
                     plantXp = 11.0,
                     harvestXp = 12.5,
@@ -295,7 +297,7 @@ constructor(
                 ),
                 HerbDef(
                     seed = farming_objs.marrentill_seed,
-                    produce = objs.grimy_marrentill,
+                    produce = farming_objs.grimy_marrentill,
                     levelReq = 14,
                     plantXp = 13.5,
                     harvestXp = 15.0,

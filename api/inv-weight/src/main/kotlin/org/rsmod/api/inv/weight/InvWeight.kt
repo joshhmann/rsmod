@@ -6,21 +6,18 @@ import org.rsmod.game.type.obj.ObjTypeList
 
 public object InvWeight {
     public fun calculateWeightInGrams(player: Player, objTypes: ObjTypeList): Int {
-        var grams = 0
-        for (transmitted in player.transmittedInvs.intIterator()) {
+        return player.transmittedInvs.intIterator().asSequence().sumOf { transmitted ->
             val inv = player.invMap.backing[transmitted]
             checkNotNull(inv) { "Inv expected in `invMap`: $transmitted (invMap=${player.invMap})" }
 
-            val affectsWeight = inv.type.runWeight
-            if (!affectsWeight) {
-                continue
-            }
-
-            for (i in inv.indices) {
-                val obj = inv[i] ?: continue
-                grams += objTypes[obj].weight
+            if (!inv.type.runWeight) {
+                0
+            } else {
+                inv.indices.asSequence().sumOf { i ->
+                    val obj = inv[i]
+                    if (obj != null) objTypes[obj].weight else 0
+                }
             }
         }
-        return grams
     }
 }

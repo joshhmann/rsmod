@@ -1,0 +1,48 @@
+# Mining Guild NPC Spawns
+# Region 47, 52 (Falador - south-east, Mining Guild building)
+# Underground region connects to Dwarven Mine
+# Format: plane_regionX_regionY_localX_localY
+
+# === ENTRANCE GUARD (Above ground) ===
+# Dwarf guarding the Mining Guild entrance - requires 60 Mining
+[[spawn]]
+npc = 'fai_falador_dwarf_normal1'
+coords = '0_47_52_58_38'
+direction = 'west'
+
+# === GUILDMASTER (Inside guild) ===
+# Gadrin - sells Mining cape at 99 Mining
+[[spawn]]
+npc = 'fai_falador_dwarf_normal2'
+coords = '0_47_52_56_36'
+direction = 'south'
+
+# === SHOP KEEPERS (Inside guild) ===
+# Yarsul - Pickaxe shop
+[[spawn]]
+npc = 'fai_falador_dwarf_normal3'
+coords = '0_47_52_54_34'
+direction = 'east'
+
+# Hendor - Ore shop (zero stock)
+[[spawn]]
+npc = 'dwarf_normal'
+coords = '0_47_52_58_34'
+direction = 'west'
+
+# === MINERS (Inside guild) ===
+# Working miners wandering around
+[[spawn]]
+npc = 'fai_dwarf_worker_01'
+coords = '0_47_52_55_36'
+
+[[spawn]]
+npc = 'fai_dwarf_worker_02'
+coords = '0_47_52_57_36'
+
+# === UNDERGROUND ENTRANCE (Dwarven Mine connection) ===
+# Additional guard at the underground entrance from Dwarven Mine
+[[spawn]]
+npc = 'fai_falador_dwarf_normal1'
+coords = '0_47_52_60_32'
+direction = 'north'

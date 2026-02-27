@@ -1,0 +1,22 @@
+# Ernest the Chicken Quest NPC Spawns
+# Draynor Manor area
+
+# Veronica - south of Draynor Manor gate
+[[spawn]]
+npc = 'veronica'
+coords = '0_48_52_14_44'
+
+# Professor Oddenstein - top floor of Draynor Manor
+[[spawn]]
+npc = 'professor_oddenstein'
+coords = '2_48_52_18_42'
+
+# Ernest (as a chicken) - top floor with Professor Oddenstein
+[[spawn]]
+npc = 'ernest_the_chicken'
+coords = '2_48_52_19_43'
+
+# Ernest (human form) - appears after quest completion (same spot)
+[[spawn]]
+npc = 'ernest'
+coords = '2_48_52_19_43'

@@ -2,21 +2,12 @@
 
 package org.rsmod.content.mechanics.aggression.configs
 
-import org.rsmod.api.config.refs.varns
-import org.rsmod.api.config.refs.varps
-import org.rsmod.api.type.builders.hunt.HuntModeBuilder
+import org.rsmod.api.config.refs.huntmodes
 import org.rsmod.api.type.editors.npc.NpcEditor
-import org.rsmod.api.type.refs.hunt.HuntModeReferences
 import org.rsmod.api.type.refs.npc.NpcReferences
-import org.rsmod.game.entity.npc.NpcMode
-import org.rsmod.game.type.hunt.HuntCheckNotTooStrong
-import org.rsmod.game.type.hunt.HuntType
-import org.rsmod.game.type.hunt.HuntVis
 import org.rsmod.game.type.npc.NpcType
 
 typealias aggression_npcs = AggressionNpcs
-
-typealias aggression_hunt = AggressionHuntModes
 
 object AggressionNpcs : NpcReferences() {
     // Lumbridge + Edgeville goblin sets.
@@ -36,26 +27,6 @@ object AggressionNpcs : NpcReferences() {
     val young_dark_wizard = find("young_dark_wizard")
     val black_knight = find("black_knight")
     val aggressive_black_knight = find("aggressive_black_knight")
-}
-
-object AggressionHuntModes : HuntModeReferences() {
-    val f2p_aggressive_melee = find("f2p_aggressive_melee")
-}
-
-object AggressionHuntBuilder : HuntModeBuilder() {
-    init {
-        // Matches aggressive melee behavior, but respects "2x combat level" aggro exemption.
-        build("f2p_aggressive_melee") {
-            type = HuntType.Player
-            checkVis = HuntVis.LineOfSight
-            checkNotTooStrong = HuntCheckNotTooStrong.OutsideWilderness
-            checkNotCombat = varps.lastcombat
-            checkNotCombatSelf = varns.lastcombat
-            checkNotBusy = false
-            findKeepHunting = false
-            findNewMode = NpcMode.OpPlayer2
-        }
-    }
 }
 
 object AggressionNpcEditor : NpcEditor() {
@@ -87,7 +58,7 @@ object AggressionNpcEditor : NpcEditor() {
 
     private fun aggressiveMelee(type: NpcType) {
         edit(type) {
-            huntMode = aggression_hunt.f2p_aggressive_melee
+            huntMode = huntmodes.aggressive_melee
             huntRange = 5
         }
     }

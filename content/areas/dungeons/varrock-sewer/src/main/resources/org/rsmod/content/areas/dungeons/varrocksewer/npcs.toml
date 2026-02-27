@@ -1,0 +1,136 @@
+# Varrock Sewers NPC Spawns
+# Region 50, 54 (Varrock Sewers dungeon)
+# Coordinates format: plane_regionX_regionZ_localX_localZ
+
+# ============================
+# MOSS GIANTS (Level 42) - F2P Training Spot
+# Popular training location for F2P players
+# ============================
+
+[[spawn]]
+npc = 'mossgiant'
+coords = '0_50_54_20_25'
+
+[[spawn]]
+npc = 'mossgiant2'
+coords = '0_50_54_25_28'
+
+[[spawn]]
+npc = 'mossgiant3'
+coords = '0_50_54_22_32'
+
+[[spawn]]
+npc = 'mossgiant4'
+coords = '0_50_54_28_35'
+
+[[spawn]]
+npc = 'mossgiant'
+coords = '0_50_54_35_30'
+
+# ============================
+# ZOMBIES (Levels 13, 18, 24)
+# Found throughout the sewers
+# ============================
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_50_54_10_15'
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_50_54_15_18'
+
+[[spawn]]
+npc = 'zombie_unarmed3'
+coords = '0_50_54_12_22'
+
+[[spawn]]
+npc = 'zombie2'
+coords = '0_50_54_18_25'
+
+[[spawn]]
+npc = 'zombie2_b'
+coords = '0_50_54_20_20'
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_50_54_25_15'
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_50_54_30_18'
+
+[[spawn]]
+npc = 'zombie2'
+coords = '0_50_54_35_22'
+
+# ============================
+# SKELETONS (Levels 21, 25)
+# Armed skeletons with weapons
+# ============================
+
+[[spawn]]
+npc = 'skeleton_armed'
+coords = '0_50_54_40_20'
+
+[[spawn]]
+npc = 'skeleton_armed2'
+coords = '0_50_54_42_25'
+
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '0_50_54_38_28'
+
+[[spawn]]
+npc = 'skeleton_armed3'
+coords = '0_50_54_45_30'
+
+[[spawn]]
+npc = 'skeleton_unarmed2'
+coords = '0_50_54_40_35'
+
+[[spawn]]
+npc = 'skeleton_armed4'
+coords = '0_50_54_48_25'
+
+# ============================
+# GIANT RATS (Levels 3, 6)
+# Common low-level monsters
+# ============================
+
+[[spawn]]
+npc = 'giant_rat'
+coords = '0_50_54_5_10'
+
+[[spawn]]
+npc = 'giant_rat_2'
+coords = '0_50_54_8_12'
+
+[[spawn]]
+npc = 'giant_rat_3'
+coords = '0_50_54_10_8'
+
+[[spawn]]
+npc = 'giant_rat'
+coords = '0_50_54_15_10'
+
+[[spawn]]
+npc = 'giant_rat_2'
+coords = '0_50_54_50_40'
+
+# ============================
+# SPIDERS (Level 1)
+# Weak monsters for low levels
+# ============================
+
+[[spawn]]
+npc = 'spider'
+coords = '0_50_54_3_5'
+
+[[spawn]]
+npc = 'spider'
+coords = '0_50_54_7_8'
+
+[[spawn]]
+npc = 'spider'
+coords = '0_50_54_12_5'

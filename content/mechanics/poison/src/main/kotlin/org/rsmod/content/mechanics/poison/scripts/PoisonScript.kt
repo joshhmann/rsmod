@@ -4,13 +4,15 @@ import jakarta.inject.Inject
 import org.rsmod.api.config.refs.hitmark_groups
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.config.refs.timers
-import org.rsmod.api.config.refs.varps
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.player.hit.queueHit
 import org.rsmod.api.player.output.mes
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.vars.intVarp
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onPlayerLogin
 import org.rsmod.api.script.onPlayerSoftTimer
+import org.rsmod.content.mechanics.poison.configs.poison_varps
 import org.rsmod.game.entity.Player
 import org.rsmod.game.hit.HitType
 import org.rsmod.game.type.obj.ObjTypeList
@@ -107,35 +109,40 @@ import org.rsmod.plugin.scripts.ScriptContext
  * - [Player.isPoisonImmune]
  * - [Player.isVenomImmune]
  */
-class PoisonScript @Inject constructor(private val objTypes: ObjTypeList) : PluginScript() {
+class PoisonScript
+@Inject
+constructor(
+    private val objTypes: org.rsmod.game.type.obj.ObjTypeList,
+    private val objRepo: org.rsmod.api.repo.obj.ObjRepository,
+) : PluginScript() {
 
     // =========================================================================
     // Var delegates  (server-side-only varps — must be added to BaseVarps.kt)
     // =========================================================================
 
     /** Active poison damage per tick. 0 = not poisoned. */
-    private var Player.poisonDamage: Int by intVarp(varps.poison_damage)
+    private var Player.poisonDamage: Int by intVarp(poison_varps.poison_damage)
 
     /** Active venom damage per tick. 0 = not venomed. */
-    private var Player.venomDamage: Int by intVarp(varps.venom_damage)
+    private var Player.venomDamage: Int by intVarp(poison_varps.venom_damage)
 
     /**
      * Sub-tick counter in range 0..[POISON_HITS_PER_DECREMENT]-1. After [POISON_HITS_PER_DECREMENT]
      * fires the counter wraps to 0 and the poison damage is reduced by 1.
      */
-    private var Player.poisonSubTick: Int by intVarp(varps.poison_sub_tick)
+    private var Player.poisonSubTick: Int by intVarp(poison_varps.poison_sub_tick)
 
     /** Remaining ticks of poison immunity granted by potions. */
-    private var Player.poisonImmunityTicks: Int by intVarp(varps.poison_immunity_ticks)
+    private var Player.poisonImmunityTicks: Int by intVarp(poison_varps.poison_immunity_ticks)
 
     /** Remaining ticks of venom immunity granted by potions. */
-    private var Player.venomImmunityTicks: Int by intVarp(varps.venom_immunity_ticks)
+    private var Player.venomImmunityTicks: Int by intVarp(poison_varps.venom_immunity_ticks)
 
     /**
      * Vanilla varp 102 — HP-orb toxin indicator: `0` = no toxin `1` = poisoned (green overlay)
      * `1_000_000` = venomed (yellow/orange overlay)
      */
-    private var Player.hpOrbToxin: Int by intVarp(varps.hp_orb_toxin)
+    private var Player.hpOrbToxin: Int by intVarp(poison_varps.hp_orb_toxin)
 
     // =========================================================================
     // Startup
@@ -477,40 +484,36 @@ class PoisonScript @Inject constructor(private val objTypes: ObjTypeList) : Plug
      * onOpHeld3(objs.antivenom_plus_1) { drinkAntivenomPlus(it.obj, objs.vial) }
      */
 
-    /*
-     * Implementation helpers — uncomment together with the handler stubs above.
-     *
-     * private suspend fun ProtectedAccess.drinkAntipoison(
-     *     obj: InvObj,
-     *     remainder: ObjType,
-     *     immunityTicks: Int,
-     * ) {
-     *     invDel(invs.inv, obj)
-     *     invAdd(invs.inv, remainder, 1)
-     *     curePoison(immunityTicks)
-     * }
-     *
-     * private suspend fun ProtectedAccess.drinkAntivenom(
-     *     obj: InvObj,
-     *     remainder: ObjType,
-     * ) {
-     *     invDel(invs.inv, obj)
-     *     invAdd(invs.inv, remainder, 1)
-     *     cureVenom(venomImmunityTicks = IMMUNITY_ANTIVENOM, poisonImmunityTicks = 0)
-     * }
-     *
-     * private suspend fun ProtectedAccess.drinkAntivenomPlus(
-     *     obj: InvObj,
-     *     remainder: ObjType,
-     * ) {
-     *     invDel(invs.inv, obj)
-     *     invAdd(invs.inv, remainder, 1)
-     *     cureVenom(
-     *         venomImmunityTicks  = IMMUNITY_ANTIVENOM_PLUS,
-     *         poisonImmunityTicks = IMMUNITY_ANTIVENOM_PLUS,
-     *     )
-     * }
-     */
+    private suspend fun ProtectedAccess.drinkAntipoison(
+        obj: org.rsmod.game.inv.InvObj,
+        remainder: org.rsmod.game.type.obj.ObjType,
+        immunityTicks: Int,
+    ) {
+        invDel(inv, objTypes[obj.id]!!)
+        invAddOrDrop(objRepo, remainder, 1)
+        curePoison(immunityTicks)
+    }
+
+    private suspend fun ProtectedAccess.drinkAntivenom(
+        obj: org.rsmod.game.inv.InvObj,
+        remainder: org.rsmod.game.type.obj.ObjType,
+    ) {
+        invDel(inv, objTypes[obj.id]!!)
+        invAddOrDrop(objRepo, remainder, 1)
+        cureVenom(venomImmunityTicks = IMMUNITY_ANTIVENOM, poisonImmunityTicks = 0)
+    }
+
+    private suspend fun ProtectedAccess.drinkAntivenomPlus(
+        obj: org.rsmod.game.inv.InvObj,
+        remainder: org.rsmod.game.type.obj.ObjType,
+    ) {
+        invDel(inv, objTypes[obj.id]!!)
+        invAddOrDrop(objRepo, remainder, 1)
+        cureVenom(
+            venomImmunityTicks = IMMUNITY_ANTIVENOM_PLUS,
+            poisonImmunityTicks = IMMUNITY_ANTIVENOM_PLUS,
+        )
+    }
 
     // =========================================================================
     // Constants and Player extension functions  (companion object)
@@ -588,23 +591,23 @@ class PoisonScript @Inject constructor(private val objTypes: ObjTypeList) : Plug
          * of damage/immunity checks.
          */
         fun Player.isPoisoned(): Boolean =
-            vars[varps.poison_damage] > 0 && vars[varps.venom_damage] == 0
+            vars[poison_varps.poison_damage] > 0 && vars[poison_varps.venom_damage] == 0
 
         /** Returns `true` if the player is actively venomed. */
-        fun Player.isVenomed(): Boolean = vars[varps.venom_damage] > 0
+        fun Player.isVenomed(): Boolean = vars[poison_varps.venom_damage] > 0
 
         /**
          * Returns `true` if the player cannot be poisoned right now.
          *
          * Checks in order:
-         * 1. Potion-granted immunity window ([varps.poison_immunity_ticks] > 0).
+         * 1. Potion-granted immunity window ([varps.local_poison_immunity_ticks] > 0).
          * 2. Any worn item with `params.poison_immunity > 0` (e.g. serpentine helm, tanzanite helm,
          *    magma helm).
          *
          * @param objTypes Required to inspect worn-equipment param values.
          */
         fun Player.isPoisonImmune(objTypes: ObjTypeList): Boolean {
-            if (vars[varps.poison_immunity_ticks] > 0) return true
+            if (vars[poison_varps.poison_immunity_ticks] > 0) return true
             return hasWornImmunityParam(objTypes, params.poison_immunity)
         }
 
@@ -612,13 +615,13 @@ class PoisonScript @Inject constructor(private val objTypes: ObjTypeList) : Plug
          * Returns `true` if the player cannot be venomed right now.
          *
          * Checks in order:
-         * 1. Potion-granted venom immunity window ([varps.venom_immunity_ticks] > 0).
+         * 1. Potion-granted venom immunity window ([varps.local_venom_immunity_ticks] > 0).
          * 2. Any worn item with `params.venom_immunity > 0`.
          *
          * @param objTypes Required to inspect worn-equipment param values.
          */
         fun Player.isVenomImmune(objTypes: ObjTypeList): Boolean {
-            if (vars[varps.venom_immunity_ticks] > 0) return true
+            if (vars[poison_varps.venom_immunity_ticks] > 0) return true
             return hasWornImmunityParam(objTypes, params.venom_immunity)
         }
 

@@ -1,0 +1,38 @@
+# Strange Rocks and Monuments - Examine Texts
+# F2P Landmarks throughout Gielinor
+
+[[config]]
+loc = "dragon_slayer_qip_stone_circle"
+examine = "A circle of standing stones. It looks ancient and mysterious."
+
+[[config]]
+loc = "statue_femalewarrior"
+examine = "A statue of a fierce female warrior."
+
+[[config]]
+loc = "statue_king"
+examine = "A statue of a proud king."
+
+[[config]]
+loc = "statue_queen"
+examine = "A statue of a beautiful queen."
+
+[[config]]
+loc = "statue_malewarrior"
+examine = "A statue of a mighty warrior."
+
+[[config]]
+loc = "statue_dwarfminer"
+examine = "A statue of a hard-working dwarf miner."
+
+[[config]]
+loc = "junglestatue"
+examine = "An ancient statue from a forgotten civilization."
+
+[[config]]
+loc = "tribalstatue"
+examine = "A statue depicting an ancient tribal figure."
+
+[[config]]
+loc = "goldstatue_king"
+examine = "A golden statue of a wealthy king."

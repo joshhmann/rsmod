@@ -22,6 +22,13 @@ private typealias RangeAttr = CombatRangedAttributes
 
 private typealias NpcAttr = CombatNpcAttributes
 
+/** Data class representing attack roll modification state. */
+private data class AttackRollState(val accumulated: Int)
+
+/** Type alias for an attack roll modifier function. */
+private typealias AttackRollModifier =
+    (AttackRollState, EnumSet<RangeAttr>, EnumSet<NpcAttr>) -> AttackRollState
+
 public object RangedAccuracyOperations {
     /**
      * @param targetMagic The target's magic level or magic bonus, whichever of the two is greater.
@@ -36,89 +43,157 @@ public object RangedAccuracyOperations {
         rangeAttributes: EnumSet<CombatRangedAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = attackRoll
+        val initialState = AttackRollState(accumulated = attackRoll)
 
-        if (RangeAttr.CrystalBow in rangeAttributes) {
-            val helmAdditive = if (RangeAttr.CrystalHelm in rangeAttributes) 1 else 0
-            val bodyAdditive = if (RangeAttr.CrystalBody in rangeAttributes) 3 else 0
-            val legsAdditive = if (RangeAttr.CrystalLegs in rangeAttributes) 2 else 0
-            val armourAdditive = helmAdditive + bodyAdditive + legsAdditive
-            modified = scale(modified, multiplier = 20 + armourAdditive, divisor = 20)
+        val modifiers: List<AttackRollModifier> =
+            listOf(
+                { state, range, npc -> applyCrystalModifier(state, range, npc) },
+                { state, range, npc -> applyAmuletModifier(state, range, npc) },
+                { state, range, npc -> applyTwistedBowModifier(state, range, npc, targetMagic) },
+                { state, range, npc -> applyRevenantWeaponModifier(state, range, npc) },
+                { state, range, npc -> applyDragonbaneModifier(state, range, npc) },
+                { state, range, npc -> applyFuseModifier(state, range, npc, targetDistance) },
+                { state, range, npc -> applyScorchingBowModifier(state, range, npc) },
+            )
+
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, rangeAttributes, npcAttributes) }
+            .accumulated
+    }
+
+    private fun applyCrystalModifier(
+        state: AttackRollState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): AttackRollState {
+        if (RangeAttr.CrystalBow !in range) {
+            return state
         }
+        val helmAdditive = if (RangeAttr.CrystalHelm in range) 1 else 0
+        val bodyAdditive = if (RangeAttr.CrystalBody in range) 3 else 0
+        val legsAdditive = if (RangeAttr.CrystalLegs in range) 2 else 0
+        val armourAdditive = helmAdditive + bodyAdditive + legsAdditive
+        return state.copy(
+            accumulated = scale(state.accumulated, multiplier = 20 + armourAdditive, divisor = 20)
+        )
+    }
 
-        if (RangeAttr.AmuletOfAvarice in rangeAttributes && NpcAttr.Revenant in npcAttributes) {
-            val multiplier = if (RangeAttr.ForinthrySurge in rangeAttributes) 27 else 24
-            modified = scale(modified, multiplier, divisor = 20)
-        } else if (RangeAttr.SalveAmuletEi in rangeAttributes && NpcAttr.Undead in npcAttributes) {
-            modified = scale(modified, multiplier = 6, divisor = 5)
-        } else if (RangeAttr.SalveAmuletI in rangeAttributes && NpcAttr.Undead in npcAttributes) {
-            modified = scale(modified, multiplier = 7, divisor = 6)
-        } else if (RangeAttr.BlackMaskI in rangeAttributes && NpcAttr.SlayerTask in npcAttributes) {
-            modified = scale(modified, multiplier = 23, divisor = 20)
+    private fun applyAmuletModifier(
+        state: AttackRollState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): AttackRollState {
+        val newAccumulated =
+            when {
+                RangeAttr.AmuletOfAvarice in range && NpcAttr.Revenant in npc -> {
+                    val multiplier = if (RangeAttr.ForinthrySurge in range) 27 else 24
+                    scale(state.accumulated, multiplier, divisor = 20)
+                }
+                RangeAttr.SalveAmuletEi in range && NpcAttr.Undead in npc -> {
+                    scale(state.accumulated, multiplier = 6, divisor = 5)
+                }
+                RangeAttr.SalveAmuletI in range && NpcAttr.Undead in npc -> {
+                    scale(state.accumulated, multiplier = 7, divisor = 6)
+                }
+                RangeAttr.BlackMaskI in range && NpcAttr.SlayerTask in npc -> {
+                    scale(state.accumulated, multiplier = 23, divisor = 20)
+                }
+                else -> state.accumulated
+            }
+        return state.copy(accumulated = newAccumulated)
+    }
+
+    private fun applyTwistedBowModifier(
+        state: AttackRollState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+        targetMagic: Int,
+    ): AttackRollState {
+        if (RangeAttr.TwistedBow !in range) {
+            return state
         }
+        val cap = if (NpcAttr.Xerician in npc) 350 else 250
+        val magic = min(cap, targetMagic)
 
-        if (RangeAttr.TwistedBow in rangeAttributes) {
-            val cap = if (NpcAttr.Xerician in npcAttributes) 350 else 250
-            val magic = min(cap, targetMagic)
+        val factor = 10
+        val base = 140
 
-            val factor = 10
-            val base = 140
+        val linearBonus = (3 * magic - factor) / 100
+        val deviation = (3 * magic / 10) - (10 * factor)
+        val quadraticPenalty = (deviation * deviation) / 100
 
-            val linearBonus = (3 * magic - factor) / 100
-            val deviation = (3 * magic / 10) - (10 * factor)
-            val quadraticPenalty = (deviation * deviation) / 100
+        val multiplier = base + linearBonus - quadraticPenalty
+        return state.copy(accumulated = scale(state.accumulated, multiplier, divisor = 100))
+    }
 
-            val multiplier = base + linearBonus - quadraticPenalty
-            modified = scale(modified, multiplier, divisor = 100)
+    private fun applyRevenantWeaponModifier(
+        state: AttackRollState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): AttackRollState {
+        if (RangeAttr.RevenantWeapon !in range || NpcAttr.Wilderness !in npc) {
+            return state
         }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 3, divisor = 2))
+    }
 
-        if (RangeAttr.RevenantWeapon in rangeAttributes && NpcAttr.Wilderness in npcAttributes) {
-            modified = scale(modified, multiplier = 3, divisor = 2)
+    private fun applyDragonbaneModifier(
+        state: AttackRollState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): AttackRollState {
+        val applies = RangeAttr.DragonHunterCrossbow in range && NpcAttr.Draconic in npc
+        if (!applies) {
+            return state
         }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 13, divisor = 10))
+    }
 
-        val dragonbaneMod =
-            RangeAttr.DragonHunterCrossbow in rangeAttributes && NpcAttr.Draconic in npcAttributes
-        if (dragonbaneMod) {
-            modified = scale(modified, multiplier = 13, divisor = 10)
-        }
-
-        when {
-            RangeAttr.ShortFuse in rangeAttributes -> {
-                val multiplier =
+    private fun applyFuseModifier(
+        state: AttackRollState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+        targetDistance: Int,
+    ): AttackRollState {
+        val multiplier =
+            when {
+                RangeAttr.ShortFuse in range -> {
                     when {
                         targetDistance >= 7 -> 2
                         targetDistance >= 4 -> 3
                         else -> 4
                     }
-                modified = scale(modified, multiplier, divisor = 4)
-            }
-
-            RangeAttr.MediumFuse in rangeAttributes -> {
-                val multiplier = if (targetDistance < 4 || targetDistance >= 7) 3 else 4
-                modified = scale(modified, multiplier, divisor = 4)
-            }
-
-            RangeAttr.LongFuse in rangeAttributes -> {
-                val multiplier =
+                }
+                RangeAttr.MediumFuse in range -> {
+                    if (targetDistance < 4 || targetDistance >= 7) 3 else 4
+                }
+                RangeAttr.LongFuse in range -> {
                     when {
                         targetDistance < 4 -> 2
                         targetDistance < 7 -> 3
                         else -> 4
                     }
-                modified = scale(modified, multiplier, divisor = 4)
-            }
-        }
-
-        if (RangeAttr.ScorchingBow in rangeAttributes && NpcAttr.Demon in npcAttributes) {
-            modified =
-                if (NpcAttr.DemonbaneResistance in npcAttributes) {
-                    scale(modified, multiplier = 121, divisor = 100)
-                } else {
-                    scale(modified, multiplier = 130, divisor = 100)
                 }
-        }
+                else -> return state
+            }
+        return state.copy(accumulated = scale(state.accumulated, multiplier, divisor = 4))
+    }
 
-        return modified
+    private fun applyScorchingBowModifier(
+        state: AttackRollState,
+        range: EnumSet<RangeAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): AttackRollState {
+        if (RangeAttr.ScorchingBow !in range || NpcAttr.Demon !in npc) {
+            return state
+        }
+        val newAccumulated =
+            if (NpcAttr.DemonbaneResistance in npc) {
+                scale(state.accumulated, multiplier = 121, divisor = 100)
+            } else {
+                scale(state.accumulated, multiplier = 130, divisor = 100)
+            }
+        return state.copy(accumulated = newAccumulated)
     }
 
     public fun modifyAttackRoll(
@@ -126,44 +201,19 @@ public object RangedAccuracyOperations {
         targetDistance: Int,
         rangeAttributes: EnumSet<CombatRangedAttributes>,
     ): Int {
-        var modified = attackRoll
+        val initialState = AttackRollState(accumulated = attackRoll)
 
-        if (RangeAttr.CrystalBow in rangeAttributes) {
-            val helmAdditive = if (RangeAttr.CrystalHelm in rangeAttributes) 1 else 0
-            val bodyAdditive = if (RangeAttr.CrystalBody in rangeAttributes) 3 else 0
-            val legsAdditive = if (RangeAttr.CrystalLegs in rangeAttributes) 2 else 0
-            val armourAdditive = helmAdditive + bodyAdditive + legsAdditive
-            modified = scale(modified, multiplier = 20 + armourAdditive, divisor = 20)
-        }
+        val modifiers: List<AttackRollModifier> =
+            listOf(
+                { state, range, npc -> applyCrystalModifier(state, range, npc) },
+                { state, range, npc -> applyFuseModifier(state, range, npc, targetDistance) },
+            )
 
-        when {
-            RangeAttr.ShortFuse in rangeAttributes -> {
-                val multiplier =
-                    when {
-                        targetDistance >= 7 -> 2
-                        targetDistance >= 4 -> 3
-                        else -> 4
-                    }
-                modified = scale(modified, multiplier, divisor = 4)
+        return modifiers
+            .fold(initialState) { state, mod ->
+                mod(state, rangeAttributes, EnumSet.noneOf(NpcAttr::class.java))
             }
-
-            RangeAttr.MediumFuse in rangeAttributes -> {
-                val multiplier = if (targetDistance < 4 || targetDistance >= 7) 3 else 4
-                modified = scale(modified, multiplier, divisor = 4)
-            }
-
-            RangeAttr.LongFuse in rangeAttributes -> {
-                val multiplier =
-                    when {
-                        targetDistance < 4 -> 2
-                        targetDistance < 7 -> 3
-                        else -> 4
-                    }
-                modified = scale(modified, multiplier, divisor = 4)
-            }
-        }
-
-        return modified
+            .accumulated
     }
 
     public fun calculateEffectiveRanged(player: Player, attackStyle: RangedAttackStyle?): Int =

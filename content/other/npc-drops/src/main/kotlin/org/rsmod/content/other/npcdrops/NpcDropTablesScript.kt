@@ -23,7 +23,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
     PluginScript() {
 
     override fun ScriptContext.startup() {
-        registerManWoman()
+        // Inline drop table registrations (only for NPCs without a dedicated external file)
         registerGoblin()
         registerCow()
         registerChicken()
@@ -32,8 +32,23 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         registerScorpion()
         registerImp()
         registerDarkWizard()
-        registerLesserDemon()
-        registerBlackKnight()
+        registerKingBlackDragon()
+        registerKalphiteQueen()
+
+        // External drop table registrations from tables/
+        ManWomanDropTables.registerAll(registry)
+        BlackKnightDropTables.registerAll(registry)
+        BarbarianDropTables.registerAll(registry)
+        ZombieDropTables.registerAll(registry)
+        MossGiantDropTables.registerAll(registry)
+        RovingMossgiantDropTables.registerAll(registry)
+        HillGiantDropTables.registerAll(registry)
+        WarriorDropTables.registerAll(registry)
+        LesserDemonDropTables.registerAll(registry)
+        MuggerDropTables.registerAll(registry)
+        UnicornDropTables.registerAll(registry)
+        BearDropTables.registerAll(registry)
+        DwarfDropTables.registerAll(registry)
     }
 
     // -----------------------------------------------------------------------
@@ -106,12 +121,12 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
             // Runes table (weight 1 of 3)
             table("Runes", weight = 1) {
-                item(objs.water_rune, quantity = 6..6, weight = 3) // TODO: wiki-validate drop rates
-                item(objs.mind_rune, quantity = 1..2, weight = 3) // TODO: wiki-validate drop rates
-                item(objs.body_rune, quantity = 2..7, weight = 3)
-                item(objs.earth_rune, quantity = 4..4, weight = 3)
-                item(objs.chaos_rune, weight = 1)
-                item(objs.nature_rune, weight = 1)
+                item(objs.waterrune, quantity = 6..6, weight = 3) // TODO: wiki-validate drop rates
+                item(objs.mindrune, quantity = 1..2, weight = 3) // TODO: wiki-validate drop rates
+                item(objs.bodyrune, quantity = 2..7, weight = 3)
+                item(objs.earthrune, quantity = 4..4, weight = 3)
+                item(objs.chaosrune, weight = 1)
+                item(objs.naturerune, weight = 1)
             }
 
             // Other table (weight 1 of 3) — coins + misc items
@@ -125,6 +140,13 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 // item(DropTableObjs.air_talisman, weight = 6)
                 // item(DropTableObjs.bucket_empty, weight = 6) — already in objs.bucket_empty
                 item(objs.bucket_empty, weight = 6)
+            }
+
+            // Tertiary drops - clue scrolls (1/128 each = 2/128 total)
+            table("Tertiary", weight = 1) {
+                nothing(weight = 126) // 126/128 chance of nothing
+                item(DropTableObjs.trail_clue_beginner, weight = 1) // 1/128 beginner
+                item(DropTableObjs.trail_clue_easy_simple001, weight = 1) // 1/128 easy
             }
         }
 
@@ -231,15 +253,11 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
             // Runes / Talismans (weight 1 of 5)
             table("Runes/Talismans", weight = 1) {
-                item(objs.air_rune, quantity = 6..6, weight = 10) // TODO: wiki-validate drop rates
-                item(
-                    objs.earth_rune,
-                    quantity = 3..3,
-                    weight = 10,
-                ) // TODO: wiki-validate drop rates
-                item(objs.fire_rune, quantity = 2..2, weight = 10) // TODO: wiki-validate drop rates
-                item(objs.chaos_rune, quantity = 1..2, weight = 6) // TODO: wiki-validate drop rates
-                item(objs.nature_rune, weight = 1)
+                item(objs.airrune, quantity = 6..6, weight = 10) // TODO: wiki-validate drop rates
+                item(objs.earthrune, quantity = 3..3, weight = 10) // TODO: wiki-validate drop rates
+                item(objs.firerune, quantity = 2..2, weight = 10) // TODO: wiki-validate drop rates
+                item(objs.chaosrune, quantity = 1..2, weight = 6) // TODO: wiki-validate drop rates
+                item(objs.naturerune, weight = 1)
             }
 
             // Seeds (weight 1 of 5) — low-level farming seeds
@@ -255,6 +273,13 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
             table("Other", weight = 1) {
                 item(objs.coins, quantity = 1..30, weight = 10) // TODO: wiki-validate drop rates
                 item(objs.grain, weight = 10)
+            }
+
+            // Tertiary drops - clue scrolls (1/128 each = 2/128 total)
+            table("Tertiary", weight = 1) {
+                nothing(weight = 126) // 126/128 chance of nothing
+                item(DropTableObjs.trail_clue_beginner, weight = 1) // 1/128 beginner
+                item(DropTableObjs.trail_clue_easy_simple001, weight = 1) // 1/128 easy
             }
         }
 
@@ -272,11 +297,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         val scorpionTable = dropTable {
             // Scorpion has no guaranteed drops - only random loot
             table("Other", weight = 1) {
-                item(
-                    objs.chaos_rune,
-                    quantity = 1..1,
-                    weight = 10,
-                ) // TODO: wiki-validate drop rates
+                item(objs.chaosrune, quantity = 1..1, weight = 10) // TODO: wiki-validate drop rates
             }
         }
         registry.register(DropTableNpcs.scorpion, scorpionTable)
@@ -309,16 +330,16 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
             // Runes and equipment
             table("Loot", weight = 1) {
                 item(
-                    objs.water_rune,
+                    objs.waterrune,
                     quantity = 5..15,
                     weight = 15,
                 ) // TODO: wiki-validate drop rates
-                item(objs.body_rune, quantity = 5..15, weight = 15)
-                item(objs.mind_rune, quantity = 5..15, weight = 15)
-                item(objs.earth_rune, quantity = 5..15, weight = 10)
-                item(objs.chaos_rune, quantity = 2..5, weight = 5)
-                item(objs.nature_rune, quantity = 2..5, weight = 3)
-                item(objs.law_rune, quantity = 2..5, weight = 2)
+                item(objs.bodyrune, quantity = 5..15, weight = 15)
+                item(objs.mindrune, quantity = 5..15, weight = 15)
+                item(objs.earthrune, quantity = 5..15, weight = 10)
+                item(objs.chaosrune, quantity = 2..5, weight = 5)
+                item(objs.naturerune, quantity = 2..5, weight = 3)
+                item(objs.lawrune, quantity = 2..5, weight = 2)
             }
         }
 
@@ -341,13 +362,13 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
             // Runes
             table("Runes", weight = 1) {
                 item(
-                    objs.chaos_rune,
+                    objs.chaosrune,
                     quantity = 10..30,
                     weight = 10,
                 ) // TODO: wiki-validate drop rates
-                item(objs.death_rune, quantity = 5..15, weight = 5)
-                item(objs.blood_rune, quantity = 2..5, weight = 2)
-                item(objs.fire_rune, quantity = 30..60, weight = 10)
+                item(objs.deathrune, quantity = 5..15, weight = 5)
+                item(objs.bloodrune, quantity = 2..5, weight = 2)
+                item(objs.firerune, quantity = 30..60, weight = 10)
             }
 
             // Weapons/Armour
@@ -381,9 +402,9 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
             // Runes
             table("Runes", weight = 1) {
-                item(objs.mind_rune, quantity = 2..5, weight = 10)
-                item(objs.chaos_rune, quantity = 1..3, weight = 5)
-                item(objs.body_rune, quantity = 5..10, weight = 5)
+                item(objs.mindrune, quantity = 2..5, weight = 10)
+                item(objs.chaosrune, quantity = 1..3, weight = 5)
+                item(objs.bodyrune, quantity = 5..10, weight = 5)
             }
 
             // Other
@@ -393,5 +414,282 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         val knightNpcs: List<NpcType> =
             listOf(DropTableNpcs.black_knight, DropTableNpcs.aggressive_black_knight)
         registry.register(knightNpcs, knightTable)
+    }
+
+    // -----------------------------------------------------------------------
+    // Hill Giant
+    // Drop table source: https://oldschool.runescape.wiki/w/Hill_giant
+    // Always: Big bones
+    // Pre-roll: Giant key (1/128)
+    // -----------------------------------------------------------------------
+    private fun registerHillGiant() {
+        val hillGiantTable = dropTable {
+            always(objs.big_bones)
+
+            // Pre-roll: Giant key (1/128 chance before main table)
+            table("Pre-roll", weight = 1) {
+                nothing(weight = 127)
+                item(DropTableObjs.giant_key, weight = 1)
+            }
+
+            // Weapons and Armour (total weight: 16/128)
+            table("Weapons and Armour", weight = 16) {
+                nothing(weight = 1)
+                item(objs.iron_dagger, weight = 4)
+                item(objs.iron_med_helm, weight = 5)
+                item(DropTableObjs.iron_full_helm, weight = 5)
+                item(objs.iron_kiteshield, weight = 3)
+                item(DropTableObjs.steel_longsword, weight = 2)
+            }
+
+            // Runes and Ammunition (total weight: 24/128)
+            table("Runes and Ammunition", weight = 24) {
+                nothing(weight = 1)
+                item(objs.iron_arrow, quantity = 3, weight = 6)
+                item(objs.firerune, quantity = 15, weight = 3)
+                item(objs.waterrune, quantity = 7, weight = 3)
+                item(objs.lawrune, quantity = 2, weight = 3)
+                item(objs.steel_arrow, quantity = 10, weight = 2)
+                item(objs.mindrune, quantity = 3, weight = 2)
+                item(objs.cosmicrune, quantity = 2, weight = 2)
+                item(objs.naturerune, quantity = 6, weight = 2)
+                item(objs.chaosrune, quantity = 2, weight = 1)
+                item(objs.deathrune, quantity = 2, weight = 1)
+            }
+
+            // Coins (total weight: 65/128 for F2P)
+            table("Coins", weight = 65) {
+                item(objs.coins, quantity = 5, weight = 18)
+                item(objs.coins, quantity = 38, weight = 14)
+                item(objs.coins, quantity = 52, weight = 10)
+                item(objs.coins, quantity = 15, weight = 8)
+                item(objs.coins, quantity = 10, weight = 7)
+                item(objs.coins, quantity = 8, weight = 6)
+                item(objs.coins, quantity = 88, weight = 2)
+            }
+
+            // Other drops (total weight: 20/128)
+            table("Other", weight = 20) {
+                nothing(weight = 1)
+                item(DropTableObjs.limpwurt_root, weight = 11)
+                item(DropTableObjs.beer, weight = 6)
+                item(DropTableObjs.body_talisman, weight = 2)
+            }
+
+            // Gem Drop Table (3/128 chance)
+            table("Gem Drop Table", weight = 3) {
+                nothing(weight = 1)
+                item(objs.uncut_sapphire, weight = 32)
+                item(objs.uncut_emerald, weight = 16)
+                item(objs.uncut_ruby, weight = 8)
+                item(DropTableObjs.chaos_talisman, weight = 3)
+                item(DropTableObjs.nature_talisman, weight = 3)
+                item(objs.uncut_diamond, weight = 2)
+                item(DropTableObjs.rune_javelin, quantity = 5, weight = 1)
+                item(DropTableObjs.loop_half_key, weight = 1)
+                item(DropTableObjs.tooth_half_key, weight = 1)
+            }
+
+            // Tertiary drops (roll independently)
+            // Clue scrolls: 1/64 beginner, 1/64 easy (2/64 total = 1/32 for any clue)
+            table("Tertiary", weight = 1) {
+                nothing(weight = 62) // 62/64 chance of nothing
+                item(DropTableObjs.clue_scroll_beginner, weight = 1) // 1/64 beginner
+                item(DropTableObjs.trail_clue_easy_simple001, weight = 1) // 1/64 easy
+            }
+        }
+
+        val hillGiantNpcs: List<NpcType> =
+            listOf(
+                DropTableNpcs.hill_giant,
+                DropTableNpcs.hill_giant2,
+                DropTableNpcs.hill_giant3,
+                DropTableNpcs.wilderness_hill_giant,
+                DropTableNpcs.wilderness_hill_giant2,
+                DropTableNpcs.wilderness_hill_giant3,
+            )
+        registry.register(hillGiantNpcs, hillGiantTable)
+    }
+
+    // -----------------------------------------------------------------------
+    // Barbarian
+    // Drop table source: https://oldschool.runescape.wiki/w/Barbarian
+    // Always: Bones
+    // Main drops: Coins, Bronze equipment, Runes
+    // Tertiary: Clue scroll (beginner), Clue scroll (easy)
+    // -----------------------------------------------------------------------
+    private fun registerBarbarian() {
+        val barbarianTable = dropTable {
+            always(objs.bones)
+
+            // Coins - most common drop
+            table("Coins", weight = 50) {
+                item(objs.coins, quantity = 1..10, weight = 30)
+                item(objs.coins, quantity = 11..25, weight = 15)
+                item(objs.coins, quantity = 26..50, weight = 5)
+            }
+
+            // Bronze equipment
+            table("Bronze Equipment", weight = 25) {
+                nothing(weight = 10)
+                item(objs.bronze_axe, weight = 5)
+                item(objs.bronze_mace, weight = 4)
+                item(objs.bronze_sword, weight = 3)
+                item(objs.bronze_med_helm, weight = 2)
+                item(objs.bronze_scimitar, weight = 1)
+            }
+
+            // Runes
+            table("Runes", weight = 20) {
+                nothing(weight = 8)
+                item(objs.airrune, quantity = 5..10, weight = 5)
+                item(objs.mindrune, quantity = 3..6, weight = 4)
+                item(objs.waterrune, quantity = 3..6, weight = 2)
+                item(objs.earthrune, quantity = 2..4, weight = 1)
+            }
+
+            // Other drops
+            table("Other", weight = 10) {
+                nothing(weight = 7)
+                item(DropTableObjs.cooked_meat, weight = 2)
+                item(DropTableObjs.beer, weight = 1)
+            }
+
+            // Tertiary drops - clue scrolls (1/128 each = 2/128 total)
+            table("Tertiary", weight = 1) {
+                nothing(weight = 126) // 126/128 chance of nothing
+                item(DropTableObjs.trail_clue_beginner, weight = 1) // 1/128 beginner
+                item(DropTableObjs.trail_clue_easy_simple001, weight = 1) // 1/128 easy
+            }
+        }
+
+        val barbarianNpcs: List<NpcType> =
+            listOf(
+                DropTableNpcs.barbarian,
+                DropTableNpcs.barbarian_2,
+                DropTableNpcs.barbarian_3,
+                DropTableNpcs.barbarian_4,
+                DropTableNpcs.barbarian_5,
+            )
+        registry.register(barbarianNpcs, barbarianTable)
+    }
+
+    // -----------------------------------------------------------------------
+    // King Black Dragon (Boss)
+    // Drop table source: https://oldschool.runescape.wiki/w/King_Black_Dragon
+    // Combat Level: 276, HP: 240
+    // Always: Dragon bones, Black dragonhide
+    // Located in Wilderness (level 40+)
+    // -----------------------------------------------------------------------
+    private fun registerKingBlackDragon() {
+        val kbdTable = dropTable {
+            // Guaranteed drops
+            always(objs.dragon_bones)
+            // Note: black_dragonhide should be added when symbol is verified
+
+            // Weapons/Armour (various drop rates)
+            table("Weapons/Armour", weight = 1) {
+                item(objs.rune_longsword, weight = 10) // ~1/12
+                item(objs.adamant_platebody, weight = 9) // ~1/14
+                item(objs.adamant_kiteshield, weight = 3) // ~1/42
+                // TODO: Add dragon_med_helm when symbol is verified
+            }
+
+            // Runes and ammunition
+            table("Runes", weight = 1) {
+                item(objs.firerune, quantity = 50..100, weight = 5) // ~1/25
+                item(objs.airrune, quantity = 50..100, weight = 10) // ~1/12
+                item(objs.iron_arrow, quantity = 50..100, weight = 10) // ~1/12
+                item(objs.lawrune, quantity = 10..20, weight = 5) // ~1/25
+                item(objs.bloodrune, quantity = 10..20, weight = 5) // ~1/25
+            }
+
+            // Resources
+            table("Resources", weight = 1) {
+                item(objs.yew_logs, quantity = 10..20, weight = 10) // ~1/12
+                // TODO: Add adamantite_bar when symbol is verified
+            }
+
+            // Other
+            table("Other", weight = 1) {
+                // TODO: Add dragonstone when symbol is verified
+                item(objs.silver_ore, quantity = 10..20, weight = 5) // ~1/25
+                item(objs.coins, quantity = 1000..5000, weight = 20)
+            }
+
+            // Very rare drops
+            table("Very Rare", weight = 1) {
+                // Draconic visage - ~1/5000
+                // KBD head - ~1/128 (slayer trophy)
+            }
+        }
+
+        // Register for KBD NPC type
+        registry.register(DropTableNpcs.black_dragon, kbdTable)
+    }
+
+    // -----------------------------------------------------------------------
+    // Kalphite Queen (Boss)
+    // Drop table source: https://oldschool.runescape.wiki/w/Kalphite_Queen
+    // Combat Level: 333, HP: 255 (airborne), 255 (grounded)
+    // Two-phase fight: transforms at 50% HP (airborne ↔ grounded)
+    // Located in Kalphite Lair (requires rope to enter)
+    // -----------------------------------------------------------------------
+    private fun registerKalphiteQueen() {
+        val kqTable = dropTable {
+            // Guaranteed drops
+            always(objs.bones)
+
+            // Weapons/Armour (KQ is known for chainbody drops)
+            table("Weapons/Armour", weight = 1) {
+                // Rune chainbody is iconic KQ drop
+                item(objs.rune_chainbody, weight = 10) // ~1/12
+                item(objs.rune_sq_shield, weight = 8) // ~1/15
+                item(objs.rune_2h_sword, weight = 6) // ~1/20
+                item(DropTableObjs.dragon_chainbody, weight = 1) // Very rare, ~1/128
+                // TODO: Add dragon_2h_sword when symbol is verified
+            }
+
+            // Runes and ammunition
+            table("Runes", weight = 1) {
+                item(objs.deathrune, quantity = 50..100, weight = 10) // ~1/12
+                item(objs.bloodrune, quantity = 20..50, weight = 8) // ~1/15
+                item(objs.chaosrune, quantity = 50..100, weight = 10) // ~1/12
+                item(objs.lawrune, quantity = 30..60, weight = 8) // ~1/15
+                item(objs.naturerune, quantity = 20..40, weight = 6) // ~1/20
+            }
+
+            // Consumables (KQ drops noted wines)
+            table("Consumables", weight = 1) {
+                // Wines are a signature KQ drop
+                item(DropTableObjs.wine_of_zamorak, quantity = 5..10, weight = 15) // ~1/8
+                item(DropTableObjs.wine_of_zamorak, quantity = 10..20, weight = 10) // ~1/12
+                // TODO: Add noted wines when noted item symbols are verified
+            }
+
+            // Resources and materials
+            table("Resources", weight = 1) {
+                item(DropTableObjs.bigoysterpearls, quantity = 1..5, weight = 8) // ~1/15
+                item(DropTableObjs.shark, quantity = 1..3, weight = 10) // ~1/12
+                // TODO: Add noted ores/bars when symbols verified
+            }
+
+            // Other
+            table("Other", weight = 1) {
+                item(objs.coins, quantity = 5000..15000, weight = 20) // ~1/6
+                // KQ head - slayer trophy, ~1/128
+                // TODO: Add kalphite_queen_head when symbol verified
+            }
+
+            // Very rare drops
+            table("Very Rare", weight = 1) {
+                // Jar of sand - ~1/2000
+                // Kalphite princess pet - ~1/3000
+                // KQ head (trophy) - ~1/128
+            }
+        }
+
+        // Register for KQ NPC type
+        registry.register(DropTableNpcs.kalphite_queen, kqTable)
     }
 }

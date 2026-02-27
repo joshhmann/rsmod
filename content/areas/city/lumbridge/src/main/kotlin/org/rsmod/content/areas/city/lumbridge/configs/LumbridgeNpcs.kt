@@ -3,7 +3,6 @@
 package org.rsmod.content.areas.city.lumbridge.configs
 
 import org.rsmod.api.config.refs.content
-import org.rsmod.api.shops.config.ShopParams
 import org.rsmod.api.type.editors.npc.NpcEditor
 import org.rsmod.api.type.refs.npc.NpcReferences
 import org.rsmod.map.CoordGrid
@@ -11,43 +10,62 @@ import org.rsmod.map.CoordGrid
 typealias lumbridge_npcs = LumbridgeNpcs
 
 object LumbridgeNpcs : NpcReferences() {
-    val barfy_bill = find("canoeing_bill", 3103331168324788094)
-    val banker = find("deadman_banker_blue_south", 1536012232472220879)
-    val banker_tutor = find("aide_tutor_banker", 5183772333668041643)
-    val shop_keeper = find("generalshopkeeper1", 2140424768095690499)
-    val shop_assistant = find("generalassistant1", 2185693774375842236)
-    val gee = find("lumbridge_guide2_man", 814251163147109342)
-    val donie = find("lumbridge_guide2_woman", 3864107068297254351)
-    val hans = find("hans", 6542439647165622063)
-    val bartender = find("ram_bartender", 3782636636485213848)
-    val arthur_the_clue_hunter = find("aide_tutor_clues", 2398692310679668222)
-    val prayer_tutor = find("aide_tutor_prayer", 1945582437385617574)
-    val hatius_lumbridge_diary = find("hatius_lumbridge_diary", 7638020467539300041)
-    val bob = find("bob", 852523917703846821)
-    val woodsman_tutor = find("aide_tutor_woodsman", 7317297890904607119)
-    val smithing_apprentice = find("aide_tutor_smithing_apprentice", 4852549530127422344)
-    val father_aereck = find("father_aereck", 1703535979713856985)
-    val cook = find("cook", 817286823331370240)
-    val perdu = find("lost_property_merchant_standard", 4542005190366269979)
-    val guide = find("lumbridge_guide", 6588888450883888298)
-    val doomsayer = find("cws_doomsayer", 3139264798199587220)
-    val abigaila = find("tob_spectator_misthalin", 1602297745389622578)
-    val count_check = find("count_check", 8201562267894359108)
-    val veos = find("veos_lumbridge", 3697975897058386361)
-    val adventurer_jon = find("ap_guide_parent", 8049664089518232275)
-    val hewey = find("mistmyst_hewey", 7376540171675674022)
-    val fishing_tutor = find("aide_tutor_fishing", 4335984535090215880)
-    val millie = find("millie_the_miller", 89073509135537075)
+    val barfy_bill = find("canoeing_bill")
+    val banker = find("deadman_banker_blue_south")
+    val banker_tutor = find("aide_tutor_banker")
+    val lumbridge_shop_keeper = find("generalshopkeeper1")
+    val lumbridge_shop_assistant = find("generalassistant1")
+    val gee = find("lumbridge_guide2_man")
+    val donie = find("lumbridge_guide2_woman")
+    val hans = find("hans")
+    val bartender = find("ram_bartender")
+    val arthur_the_clue_hunter = find("aide_tutor_clues")
+    val prayer_tutor = find("aide_tutor_prayer")
+    val hatius_lumbridge_diary = find("hatius_lumbridge_diary")
+    val bob = find("bob")
+    val woodsman_tutor = find("aide_tutor_woodsman")
+    val smithing_apprentice = find("aide_tutor_smithing_apprentice")
+    val father_aereck = find("father_aereck")
+    val lost_tribe_sigmund = find("lost_tribe_sigmund")
+    val cook = find("cook")
+    val perdu = find("lost_property_merchant_standard")
+    val guide = find("lumbridge_guide")
+    val doomsayer = find("cws_doomsayer")
+    val abigaila = find("tob_spectator_misthalin")
+    val count_check = find("count_check")
+    val veos = find("veos_lumbridge")
+    val adventurer_jon = find("ap_guide_parent")
+    val hewey = find("mistmyst_hewey")
+    val fishing_tutor = find("aide_tutor_fishing")
+    val melee_tutor = find("aide_tutor_melee")
+    val ranged_tutor = find("aide_tutor_ranging")
+    val magic_tutor = find("aide_tutor_magic")
+    val cooking_tutor = find("aide_tutor_cooking")
+    val crafting_tutor = find("aide_tutor_crafting")
+    val mining_tutor = find("aide_tutor_mining")
+    val millie = find("millie_the_miller")
     val duke_of_lumbridge = find("duke_of_lumbridge")
-    val gillie_groats = find("gillie_the_milkmaid", 8262063475332109549)
+    val gillie_groats = find("gillie_the_milkmaid")
     val fred_the_farmer = find("fred_the_farmer")
+    val sir_vant = find("white_knight")
 }
 
 internal object LumbridgeNpcEditor : NpcEditor() {
     init {
-        edit(lumbridge_npcs.shop_keeper) { moveRestrict = indoors }
+        edit(lumbridge_npcs.sir_vant) {
+            name = "Sir Vant"
+            wanderRange = 0
+        }
 
-        edit(lumbridge_npcs.shop_assistant) { moveRestrict = indoors }
+        edit(lumbridge_npcs.lumbridge_shop_keeper) {
+            contentGroup = content.shop_keeper
+            moveRestrict = indoors
+        }
+
+        edit(lumbridge_npcs.lumbridge_shop_assistant) {
+            contentGroup = content.shop_assistant
+            moveRestrict = indoors
+        }
 
         edit(lumbridge_npcs.banker) { contentGroup = content.banker }
 
@@ -112,6 +130,12 @@ internal object LumbridgeNpcEditor : NpcEditor() {
 
         edit(lumbridge_npcs.smithing_apprentice) { moveRestrict = indoors }
 
+        edit(lumbridge_npcs.lost_tribe_sigmund) {
+            name = "Lumbridge Advisor"
+            respawnDir = south
+            wanderRange = 0
+        }
+
         edit(lumbridge_npcs.veos) {
             respawnDir = south
             wanderRange = 0
@@ -132,12 +156,14 @@ internal object LumbridgeNpcEditor : NpcEditor() {
             wanderRange = 0
         }
 
-        edit(lumbridge_npcs.bob) {
-            moveRestrict = indoors
-            param[ShopParams.shop_sell_percentage] = 1000
-            param[ShopParams.shop_buy_percentage] = 600
-            param[ShopParams.shop_change_percentage] = 20
-        }
+        edit(lumbridge_npcs.melee_tutor) { wanderRange = 0 }
+        edit(lumbridge_npcs.ranged_tutor) { wanderRange = 0 }
+        edit(lumbridge_npcs.magic_tutor) { wanderRange = 0 }
+        edit(lumbridge_npcs.cooking_tutor) { wanderRange = 0 }
+        edit(lumbridge_npcs.crafting_tutor) { wanderRange = 0 }
+        edit(lumbridge_npcs.mining_tutor) { wanderRange = 0 }
+
+        edit(lumbridge_npcs.bob) { moveRestrict = indoors }
 
         edit(lumbridge_npcs.millie) { wanderRange = 1 }
 

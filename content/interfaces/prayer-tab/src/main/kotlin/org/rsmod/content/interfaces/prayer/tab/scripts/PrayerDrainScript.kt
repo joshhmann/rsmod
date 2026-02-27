@@ -18,6 +18,7 @@ import org.rsmod.api.script.onPlayerLogin
 import org.rsmod.api.script.onPlayerSoftTimer
 import org.rsmod.content.interfaces.prayer.tab.PrayerRepository
 import org.rsmod.content.interfaces.prayer.tab.configs.prayer_sounds
+import org.rsmod.content.interfaces.prayer.tab.configs.prayer_varbits
 import org.rsmod.content.interfaces.prayer.tab.util.drainCounter
 import org.rsmod.game.entity.Player
 import org.rsmod.plugin.scripts.PluginScript
@@ -36,7 +37,7 @@ constructor(private val repo: PrayerRepository, private val bonuses: WornBonuses
     }
 
     private fun Player.drainPrayer() {
-        val enabledPrayers = vars[varbits.enabled_prayers]
+        val enabledPrayers = vars[prayer_varbits.enabled_prayers]
         if (enabledPrayers == 0) {
             // We favor explicitness and enforce prayer drain timer to be manually cleared instead
             // of implicitly doing so when all prayers are disabled.

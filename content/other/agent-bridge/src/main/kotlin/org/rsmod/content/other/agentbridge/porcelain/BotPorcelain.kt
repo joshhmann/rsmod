@@ -1,5 +1,6 @@
 package org.rsmod.content.other.agentbridge.porcelain
 
+import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import org.rsmod.api.config.refs.stats
@@ -45,6 +46,8 @@ constructor(
     private val npcInteractions: NpcInteractions,
     private val eventBus: EventBus,
 ) {
+    private val logger = InlineLogger()
+
     companion object {
         /** Default scan radius for finding targets. */
         private const val SCAN_RADIUS = 16
@@ -740,7 +743,7 @@ constructor(
             queue.offer(action)
         } catch (e: Exception) {
             // Fallback: actions won't be queued but we continue
-            println("[BotPorcelain] Failed to queue action: ${e.message}")
+            logger.error { "[BotPorcelain] Failed to queue action: ${e.message}" }
         }
     }
 

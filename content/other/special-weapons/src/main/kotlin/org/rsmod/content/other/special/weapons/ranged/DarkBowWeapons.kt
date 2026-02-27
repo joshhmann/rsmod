@@ -27,12 +27,11 @@ class DarkBowWeapons
 constructor(private val objTypes: ObjTypeList, private val ammunition: RangedAmmoManager) :
     WeaponMap {
     override fun WeaponRepository.register(manager: WeaponAttackManager) {
-        register(objs.dark_bow, DarkBow(manager, ammunition, objTypes))
-        register(objs.dark_bow_green, DarkBow(manager, ammunition, objTypes))
-        register(objs.dark_bow_blue, DarkBow(manager, ammunition, objTypes))
-        register(objs.dark_bow_yellow, DarkBow(manager, ammunition, objTypes))
-        register(objs.dark_bow_white, DarkBow(manager, ammunition, objTypes))
-        register(objs.dark_bow_bh, DarkBow(manager, ammunition, objTypes))
+        register(objs.darkbow, DarkBow(manager, ammunition, objTypes))
+        register(objs.darkbow_green, DarkBow(manager, ammunition, objTypes))
+        register(objs.darkbow_blue, DarkBow(manager, ammunition, objTypes))
+        register(objs.darkbow_yellow, DarkBow(manager, ammunition, objTypes))
+        register(objs.darkbow_white, DarkBow(manager, ammunition, objTypes))
     }
 
     private class DarkBow(

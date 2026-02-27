@@ -11,17 +11,17 @@ typealias edgeville_npcs = EdgevilleNpcs
 object EdgevilleNpcs : NpcReferences() {
     // Banker
     val banker = find("misc_banker")
-    
+
     // Shop
-    val general_store = find("generalshopkeeper1")
-    val shop_assistant = find("generalassistant1")
-    
+    val edgeville_general_store = find("generalshopkeeper1")
+    val edgeville_shop_assistant = find("generalassistant1")
+
     // Monastery
     val brother_jered = find("brother_jered")
-    
+
     // Barbarian Village
     val peksa = find("peksa") // Helm shop
-    
+
     // Wilderness Dungeon NPCs
     val hill_giant = find("wilderness_hill_giant")
     val hill_giant_2 = find("wilderness_hill_giant2")
@@ -31,16 +31,22 @@ object EdgevilleNpcs : NpcReferences() {
 internal object EdgevilleNpcEditor : NpcEditor() {
     init {
         edit(edgeville_npcs.banker) { contentGroup = content.banker }
-        
-        edit(edgeville_npcs.general_store) { moveRestrict = indoors }
-        edit(edgeville_npcs.shop_assistant) { moveRestrict = indoors }
-        
+
+        edit(edgeville_npcs.edgeville_general_store) {
+            contentGroup = content.shop_keeper
+            moveRestrict = indoors
+        }
+
+        edit(edgeville_npcs.edgeville_shop_assistant) {
+            contentGroup = content.shop_assistant
+            moveRestrict = indoors
+        }
+
         edit(edgeville_npcs.brother_jered) { moveRestrict = indoors }
-        
+
         edit(edgeville_npcs.peksa) { moveRestrict = indoors }
-        
-        edit(edgeville_npcs.hill_giant) { wanderRange = 3 }
-        edit(edgeville_npcs.hill_giant_2) { wanderRange = 3 }
-        edit(edgeville_npcs.hill_giant_3) { wanderRange = 3 }
+
+        // wanderRange for wilderness_hill_giant* is set in WildernessF2PNpcEditor to avoid
+        // duplicate edits
     }
 }

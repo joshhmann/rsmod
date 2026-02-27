@@ -5,7 +5,6 @@ import org.rsmod.api.config.refs.content
 import org.rsmod.api.config.refs.interfaces
 import org.rsmod.api.config.refs.jingles
 import org.rsmod.api.config.refs.npcs
-import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.config.refs.spotanims
@@ -108,7 +107,7 @@ private constructor(
                 lockedLoopAnimDialog(
                     seqs.human_cave_goblin_bow,
                     seqs.human_cave_goblin_bow_loop,
-                    varbits.lost_tribe_progress,
+                    EmotesVarBits.lost_tribe_progress,
                     "This emote can be unlocked during the Lost Tribe quest.",
                     op = op,
                     varbitStateReq = 7,
@@ -117,7 +116,7 @@ private constructor(
                 lockedLoopAnimDialog(
                     seqs.human_cave_goblin_dance,
                     seqs.human_cave_goblin_dance_loop,
-                    varbits.lost_tribe_progress,
+                    EmotesVarBits.lost_tribe_progress,
                     "This emote can be unlocked during the Lost Tribe quest.",
                     op = op,
                     varbitStateReq = 7,
@@ -381,19 +380,25 @@ private constructor(
     private suspend fun ProtectedAccess.skillCapeEmote() {
         stopAction()
 
-        if (ocIsType(player.back, objs.music_cape, objs.music_cape_t)) {
+        if (ocIsType(player.back, EmotesObjs.music_cape, EmotesObjs.music_cape_t)) {
             masteryCapeEmote(seqs.emote_air_guitar, spotanims.air_guitar_spotanim)
             return
         }
 
-        if (ocIsType(player.back, objs.quest_point_cape, objs.quest_point_cape_t)) {
+        if (ocIsType(player.back, EmotesObjs.quest_point_cape, EmotesObjs.quest_point_cape_t)) {
             val seq = seqs.skillcapes_player_quest_cape
             val spot = spotanims.skillcapes_quest_cape_spotanim
             masteryCapeEmote(seq, spot)
             return
         }
 
-        if (ocIsType(player.back, objs.achievement_diary_cape, objs.achievement_diary_cape_t)) {
+        if (
+            ocIsType(
+                player.back,
+                EmotesObjs.achievement_diary_cape,
+                EmotesObjs.achievement_diary_cape_t,
+            )
+        ) {
             achievementDiaryCapeEmote()
             return
         }
@@ -485,11 +490,11 @@ private constructor(
             return
         }
         spotanim(spotanims.smokepuff, height = 92)
-        transmog(npcs.uri_emote_1)
+        transmog(EmotesNpcs.trail_master_uri)
         delay(1)
         spotanim(spotanims.briefcase_spotanim)
         anim(seqs.emote_uri_briefcase)
-        transmog(npcs.uri_emote_2)
+        transmog(EmotesNpcs.uri_emote)
         delay(9)
         anim(seqs.poh_smash_magic_tablet)
         delay(1)

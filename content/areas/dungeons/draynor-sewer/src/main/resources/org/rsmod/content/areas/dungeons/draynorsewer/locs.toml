@@ -1,0 +1,42 @@
+# Draynor Sewers Location Definitions
+# Ladders and dungeon entrances
+
+# ============================
+# MAIN ENTRANCE
+# Manhole south of Draynor bank
+# ============================
+
+# Manhole down (surface - south of Draynor bank)
+[[loc]]
+type = 'manhole'
+coords = '0_48_51_10_10'
+
+# Ladder up (inside sewer - exit back to surface)
+[[loc]]
+type = 'ladder_up'
+coords = '0_48_51_10_10'
+
+# ============================
+# DRAYNOR MANOR BASEMENT CONNECTION
+# Eastern side of sewers connects to Draynor Manor
+# ============================
+
+# Magical entrance/exit to Draynor Manor basement
+[[loc]]
+type = 'door'
+coords = '0_48_51_55_30'
+
+# ============================
+# P2P JAIL AREA
+# Northern section with Skeleton Fremennik and Poison Spiders
+# ============================
+
+# Jail door (members only area)
+[[loc]]
+type = 'door'
+coords = '0_48_51_50_40'
+
+# Jail gate (members only)
+[[loc]]
+type = 'gate'
+coords = '0_48_51_55_45'

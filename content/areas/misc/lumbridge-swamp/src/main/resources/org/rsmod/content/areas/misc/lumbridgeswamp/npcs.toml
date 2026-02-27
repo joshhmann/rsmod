@@ -1,0 +1,207 @@
+# Lumbridge Swamp NPC Spawns
+# Coordinates are in format: plane_regionX_regionZ_localX_localZ
+
+# ==================== FISHING SPOTS ====================
+# Net/Bait fishing spots in the swamp (for shrimp, anchovies, sardine, herring)
+
+[[spawn]]
+npc = '0_50_50_freshfish'
+coords = '0_49_49_20_56'
+
+[[spawn]]
+npc = '0_50_50_freshfish'
+coords = '0_49_49_22_58'
+
+[[spawn]]
+npc = '0_50_50_freshfish'
+coords = '0_49_49_24_55'
+
+[[spawn]]
+npc = '0_50_50_freshfish'
+coords = '0_49_49_26_53'
+
+[[spawn]]
+npc = '0_50_50_freshfish'
+coords = '0_49_49_28_51'
+
+# ==================== GOBLINS (Level 2-5) ====================
+# Eastern swamp goblins
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_1'
+coords = '0_49_50_5_58'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_2'
+coords = '0_49_50_6_30'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_2'
+coords = '0_49_50_6_60'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_3'
+coords = '0_49_50_7_27'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_5'
+coords = '0_49_50_8_31'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_6'
+coords = '0_49_50_8_33'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_6'
+coords = '0_49_50_8_59'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_4'
+coords = '0_49_50_9_29'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_7'
+coords = '0_49_50_10_34'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_6'
+coords = '0_49_50_10_60'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_5'
+coords = '0_49_50_47_44'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_6'
+coords = '0_49_50_47_46'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_8'
+coords = '0_49_50_49_44'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_5'
+coords = '0_49_50_49_46'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_6'
+coords = '0_49_50_51_44'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_8'
+coords = '0_49_50_51_46'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_5'
+coords = '0_49_50_56_45'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_3'
+coords = '0_49_50_58_48'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_2'
+coords = '0_49_50_61_50'
+
+[[spawn]]
+npc = 'goblin_unarmed_melee_1'
+coords = '0_49_50_62_55'
+
+# ==================== COWS ====================
+# Cows in the south-east area of the swamp
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_18_61'
+
+[[spawn]]
+npc = 'cow2'
+coords = '0_49_51_19_57'
+
+[[spawn]]
+npc = 'cow3'
+coords = '0_49_51_29_62'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_29_56'
+
+[[spawn]]
+npc = 'cow2'
+coords = '0_49_51_24_54'
+
+[[spawn]]
+npc = 'cow3'
+coords = '0_49_51_37_59'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_42_54'
+
+[[spawn]]
+npc = 'cow2'
+coords = '0_49_51_52_54'
+
+[[spawn]]
+npc = 'cow3'
+coords = '0_49_51_51_58'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_46_57'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_50_62'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_52_50'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_55_47'
+
+[[spawn]]
+npc = 'cow3'
+coords = '0_49_51_59_23'
+
+[[spawn]]
+npc = 'cow3'
+coords = '0_49_51_60_47'
+
+[[spawn]]
+npc = 'cow3'
+coords = '0_49_51_61_27'
+
+[[spawn]]
+npc = 'cow3'
+coords = '0_49_51_61_33'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_58_29'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_60_19'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_61_36'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_61_52'
+
+[[spawn]]
+npc = 'cow'
+coords = '0_49_51_61_56'
+
+# ==================== FATHER URHNEY ====================
+# Father Urhney in his hut (west side of swamp)
+# Note: Also spawned in main lumbridge module, this ensures he's in the swamp area
+
+[[spawn]]
+npc = 'father_urhney'
+coords = '0_49_49_10_38'

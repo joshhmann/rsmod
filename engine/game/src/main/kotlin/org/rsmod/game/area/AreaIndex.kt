@@ -1,7 +1,7 @@
 package org.rsmod.game.area
 
 import it.unimi.dsi.fastutil.ints.Int2LongOpenHashMap
-import it.unimi.dsi.fastutil.ints.Int2ShortOpenHashMap
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
 import it.unimi.dsi.fastutil.shorts.ShortArrayList
 import org.rsmod.annotations.InternalApi
 import org.rsmod.map.CoordGrid
@@ -40,50 +40,39 @@ public class AreaIndex {
 
     @InternalApi
     public fun registerAll(coord: CoordGrid, areas: Iterator<Short>) {
-        val area1 = areas.nextPlusOneOrZero()
-        val area2 = areas.nextPlusOneOrZero()
-        val area3 = areas.nextPlusOneOrZero()
-        val area4 = areas.nextPlusOneOrZero()
-        val area5 = areas.nextPlusOneOrZero()
-        check(!areas.hasNext()) { "Can only register up to $MAX_AREAS_PER_KEY areas: $coord" }
-        coordAreas.register(coord.packed, area1, area2, area3, area4, area5)
+        val list = areas.nextList()
+        if (list.isNotEmpty()) {
+            coordAreas.register(coord.packed, list)
+        }
     }
 
     @InternalApi
     public fun registerAll(zone: ZoneKey, areas: Iterator<Short>) {
-        val area1 = areas.nextPlusOneOrZero()
-        val area2 = areas.nextPlusOneOrZero()
-        val area3 = areas.nextPlusOneOrZero()
-        val area4 = areas.nextPlusOneOrZero()
-        val area5 = areas.nextPlusOneOrZero()
-        check(!areas.hasNext()) { "Can only register up to $MAX_AREAS_PER_KEY areas: $zone" }
-        zoneAreas.register(zone.packed, area1, area2, area3, area4, area5)
+        val list = areas.nextList()
+        if (list.isNotEmpty()) {
+            zoneAreas.register(zone.packed, list)
+        }
     }
 
     @InternalApi
     public fun registerAll(mapSquare: MapSquareKey, areas: Iterator<Short>) {
-        val area1 = areas.nextPlusOneOrZero()
-        val area2 = areas.nextPlusOneOrZero()
-        val area3 = areas.nextPlusOneOrZero()
-        val area4 = areas.nextPlusOneOrZero()
-        val area5 = areas.nextPlusOneOrZero()
-        check(!areas.hasNext()) { "Can only register up to $MAX_AREAS_PER_KEY areas: $mapSquare" }
-        mapSquareAreas.register(mapSquare.id, area1, area2, area3, area4, area5)
+        val list = areas.nextList()
+        if (list.isNotEmpty()) {
+            mapSquareAreas.register(mapSquare.id, list)
+        }
     }
 
-    // Area ids are stored +1 internally so that `0` can be used as a valid id.
-    private fun Iterator<Short>.nextPlusOneOrZero(): Short {
-        if (!hasNext()) {
-            return 0
+    private fun Iterator<Short>.nextList(): List<Short> {
+        val list = mutableListOf<Short>()
+        while (hasNext()) {
+            list += next()
         }
-        val next = next()
-        check(next in 0..<32767) { "Area id must be in range [0..32766]. ($next)" }
-        return (next + 1).toShort()
+        return list
     }
 
     private class PackedAreaMap {
         private val areas = Int2LongOpenHashMap()
-        private val overflow = Int2ShortOpenHashMap()
+        private val overflow = Int2ObjectOpenHashMap<ShortArray>()
 
         fun get(key: Int, dest: ShortArrayList) {
             val packed = areas[key]
@@ -91,43 +80,40 @@ public class AreaIndex {
                 return
             }
             unpackInto(packed, dest)
-            if (hasOverflow(packed)) {
-                val overflowArea = overflow[key]
-                dest.add((overflowArea - 1).toShort())
+            val extra = overflow[key]
+            if (extra != null) {
+                for (area in extra) {
+                    dest.add(area)
+                }
             }
         }
 
-        fun register(
-            key: Int,
-            area1: Short,
-            area2: Short,
-            area3: Short,
-            area4: Short,
-            area5: Short,
-        ) {
+        fun register(key: Int, list: List<Short>) {
             require(key !in areas) { "Key already registered: $key" }
-            require(area1 != SHORT_ZERO) { "At least one area must be non-zero." }
 
-            val hasOverflow = area5 != SHORT_ZERO
-            areas[key] = pack(area1, area2, area3, area4, hasOverflow)
-            if (hasOverflow) {
-                overflow[key] = area5
+            val area1 = list.getOrNull(0)?.plusOne() ?: SHORT_ZERO
+            val area2 = list.getOrNull(1)?.plusOne() ?: SHORT_ZERO
+            val area3 = list.getOrNull(2)?.plusOne() ?: SHORT_ZERO
+            val area4 = list.getOrNull(3)?.plusOne() ?: SHORT_ZERO
+
+            areas[key] = pack(area1, area2, area3, area4)
+
+            if (list.size > 4) {
+                val extra = list.subList(4, list.size).toShortArray()
+                overflow[key] = extra
             }
         }
+
+        private fun Short.plusOne(): Short = (toInt() + 1).toShort()
 
         private companion object {
-            private const val AREA_BIT_COUNT = 15
+            private const val AREA_BIT_COUNT = 16
             private const val AREA_BIT_MASK = (1L shl AREA_BIT_COUNT) - 1
 
             private const val SLOT_1_OFFSET = 0
             private const val SLOT_2_OFFSET = SLOT_1_OFFSET + AREA_BIT_COUNT
             private const val SLOT_3_OFFSET = SLOT_2_OFFSET + AREA_BIT_COUNT
             private const val SLOT_4_OFFSET = SLOT_3_OFFSET + AREA_BIT_COUNT
-            private const val OVERFLOW_FLAG_OFFSET = SLOT_4_OFFSET + 1
-
-            private const val OVERFLOW_BIT_FLAG = 1L shl OVERFLOW_FLAG_OFFSET
-
-            private fun hasOverflow(packed: Long): Boolean = (packed and OVERFLOW_BIT_FLAG) != 0L
 
             private fun unpackInto(packed: Long, dest: ShortArrayList) {
                 val area1 = ((packed shr SLOT_1_OFFSET) and AREA_BIT_MASK).toShort()
@@ -151,28 +137,18 @@ public class AreaIndex {
                 }
             }
 
-            private fun pack(
-                area1: Short,
-                area2: Short,
-                area3: Short,
-                area4: Short,
-                hasOverflow: Boolean,
-            ): Long {
+            private fun pack(area1: Short, area2: Short, area3: Short, area4: Short): Long {
                 var result = 0L
                 result = result or ((area1.toLong() and AREA_BIT_MASK) shl SLOT_1_OFFSET)
                 result = result or ((area2.toLong() and AREA_BIT_MASK) shl SLOT_2_OFFSET)
                 result = result or ((area3.toLong() and AREA_BIT_MASK) shl SLOT_3_OFFSET)
                 result = result or ((area4.toLong() and AREA_BIT_MASK) shl SLOT_4_OFFSET)
-                if (hasOverflow) {
-                    result = result or OVERFLOW_BIT_FLAG
-                }
                 return result
             }
         }
     }
 
     public companion object {
-        public const val MAX_AREAS_PER_KEY: Int = 5
         private const val SHORT_ZERO: Short = 0
     }
 }

@@ -1,5 +1,6 @@
 package org.rsmod.api.cache.enricher.npc
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import jakarta.inject.Inject
@@ -31,7 +32,7 @@ constructor(
 
     override fun generate(): List<UnpackedNpcType> {
         val external = loadExternalConfigs()
-        return external.map { it.toCacheType() }
+        return external.mapNotNull { it.toCacheTypeOrNull() }
     }
 
     private fun loadExternalConfigs(): List<ExternalNpcConfig> {
@@ -43,14 +44,22 @@ constructor(
         return configs
     }
 
-    private fun ExternalNpcConfig.toCacheType(): UnpackedNpcType {
-        val id = id ?: names[npc] ?: error("Mapping with name not found: $npc")
-        val builder = NpcPluginBuilder(npc ?: "npc_${this.id}")
-        return builder.apply(this).build(id)
+    private fun ExternalNpcConfig.toCacheTypeOrNull(): UnpackedNpcType? {
+        val resolvedId =
+            id
+                ?: npc?.let(names::get)
+                ?: run {
+                    System.err.println(
+                        "[WARN] Skipping npc cache enrich config with unresolved npc name: $npc"
+                    )
+                    return null
+                }
+        val builder = NpcPluginBuilder(npc ?: "npc_$resolvedId")
+        return builder.apply(this).build(resolvedId)
     }
 
     private fun NpcPluginBuilder.apply(config: ExternalNpcConfig): NpcPluginBuilder {
-        desc = config.examine
+        desc = config.examine ?: ""
         respawnRate = config.respawnRate
         putSeq(config.attackAnim, params.attack_anim)
         putSeq(config.defendAnim, params.defend_anim)
@@ -162,10 +171,11 @@ constructor(
     }
 }
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 private data class ExternalNpcConfig(
     val npc: String?,
     val id: Int?,
-    val examine: String,
+    val examine: String?,
     val attackType: String?,
     val respawnRate: Int?,
     val bonusXp: Double?,

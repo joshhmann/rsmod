@@ -5,6 +5,7 @@ import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.type.editors.obj.ObjEditor
+import org.rsmod.content.skills.woodcutting.configs.WoodcuttingObjs as wcObjs
 
 internal object WoodcuttingAxes : ObjEditor() {
     init {
@@ -38,7 +39,7 @@ internal object WoodcuttingAxes : ObjEditor() {
             param[params.skill_anim] = seqs.human_woodcutting_adamant_axe
         }
 
-        edit(objs.blessed_axe) {
+        edit(wcObjs.blessedsnake) {
             param[params.skill_anim] = seqs.human_woodcutting_blessed_axe
             // Blessed axe does not have its `levelrequire` param defined by default.
             param[params.levelrequire] = 35
@@ -49,34 +50,14 @@ internal object WoodcuttingAxes : ObjEditor() {
             param[params.skill_anim] = seqs.human_woodcutting_rune_axe
         }
 
-        edit(objs.gilded_axe) {
+        edit(wcObjs.trail_gilded_axe) {
             contentGroup = content.woodcutting_axe
             param[params.skill_anim] = seqs.human_woodcutting_gilded_axe
         }
 
-        edit(objs.dragon_axe) {
-            contentGroup = content.woodcutting_axe
-            param[params.skill_anim] = seqs.human_woodcutting_dragon_axe
-        }
-
-        edit(objs.dragon_axe_or) {
-            contentGroup = content.woodcutting_axe
-            param[params.skill_anim] = seqs.human_woodcutting_trailblazer_axe_no_infernal
-        }
-
-        edit(objs.third_age_axe) {
+        edit(wcObjs._3a_axe) {
             contentGroup = content.woodcutting_axe
             param[params.skill_anim] = seqs.human_woodcutting_3a_axe
-        }
-
-        edit(objs.infernal_axe) {
-            contentGroup = content.woodcutting_axe
-            param[params.skill_anim] = seqs.human_woodcutting_infernal_axe
-        }
-
-        edit(objs.infernal_axe_or) {
-            contentGroup = content.woodcutting_axe
-            param[params.skill_anim] = seqs.human_woodcutting_trailblazer_axe
         }
 
         edit(objs.crystal_axe) {

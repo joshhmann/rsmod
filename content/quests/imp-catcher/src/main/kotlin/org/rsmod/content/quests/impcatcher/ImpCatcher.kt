@@ -1,7 +1,9 @@
 package org.rsmod.content.quests.impcatcher
 
+import jakarta.inject.Inject
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.invtx.invAdd
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
@@ -9,6 +11,7 @@ import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.getQuestStage
 import org.rsmod.api.quest.setQuestStage
 import org.rsmod.api.quest.showCompletionScroll
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpNpc1
 import org.rsmod.content.quests.impcatcher.configs.imp_catcher_npcs
 import org.rsmod.content.quests.impcatcher.configs.imp_catcher_objs
@@ -22,7 +25,7 @@ import org.rsmod.plugin.scripts.ScriptContext
  * Wizard Mizgog in Wizard's Tower needs help retrieving 4 magical beads stolen by imps. Reward:
  * Amulet of Accuracy (875 Magic XP).
  */
-class ImpCatcher : PluginScript() {
+class ImpCatcher @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpNpc1(imp_catcher_npcs.wizard_mizgog) { startMizgogDialogue(it.npc) }
     }
@@ -84,10 +87,10 @@ class ImpCatcher : PluginScript() {
             val added = player.invAdd(player.inv, imp_catcher_objs.amulet_of_accuracy, 1).success
             if (!added) {
                 // Restore beads if no space
-                player.invAdd(player.inv, imp_catcher_objs.black_bead, 1)
-                player.invAdd(player.inv, imp_catcher_objs.red_bead, 1)
-                player.invAdd(player.inv, imp_catcher_objs.white_bead, 1)
-                player.invAdd(player.inv, imp_catcher_objs.yellow_bead, 1)
+                player.invAddOrDrop(objRepo, imp_catcher_objs.black_bead, 1)
+                player.invAddOrDrop(objRepo, imp_catcher_objs.red_bead, 1)
+                player.invAddOrDrop(objRepo, imp_catcher_objs.white_bead, 1)
+                player.invAddOrDrop(objRepo, imp_catcher_objs.yellow_bead, 1)
                 chatNpc(sad, "You don't have enough inventory space.")
                 return
             }

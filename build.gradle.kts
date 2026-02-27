@@ -9,6 +9,11 @@ allprojects {
     version = "0.0.1"
 }
 
+project(":api") { subprojects { group = "org.rsmod.api" } }
+project(":content") { subprojects { group = "org.rsmod.content" } }
+project(":engine") { subprojects { group = "org.rsmod.engine" } }
+project(":server") { subprojects { group = "org.rsmod.server" } }
+
 dependencies {
     implementation(projects.server.install)
 }
@@ -18,6 +23,28 @@ tasks.register("run") {
     description = "Runs the RS Mod game server"
 
     dependsOn(":server:app:run")
+}
+
+tasks.register<Exec>("validateSymbols") {
+    group = "verification"
+    description = "Validate Kotlin symbol references against rev-233 symbol tables."
+    workingDir = rootProject.projectDir
+    val isWindows = System.getProperty("os.name").contains("Windows", ignoreCase = true)
+    val pythonCmd = if (isWindows) "python" else "python3"
+    val rootToolsScript = rootProject.projectDir.resolve("../tools/validate_symbols.py")
+    val localToolsScript = rootProject.projectDir.resolve("tools/validate_symbols.py")
+    val validatorScript = when {
+        rootToolsScript.exists() -> rootToolsScript
+        localToolsScript.exists() -> localToolsScript
+        else -> rootToolsScript
+    }
+    commandLine(pythonCmd, validatorScript.absolutePath, "--content-only")
+}
+
+if (providers.gradleProperty("validateSymbolsGate").orNull == "true") {
+    tasks.named("build") {
+        dependsOn("validateSymbols")
+    }
 }
 
 tasks.register<JavaExec>("install") {

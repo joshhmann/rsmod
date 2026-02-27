@@ -39,6 +39,7 @@ public class ServerConfigLoader @Inject constructor(@Toml private val objectMapp
     private fun ServerConfig.toWriteConfig() = copy(firstLaunch = false)
 
     private companion object {
+        // HYGIENE: "dev" is a server realm identifier, not an ObjType/NpcType reference
         private const val DEFAULT_REALM = "dev"
         private const val DEFAULT_WORLD = 1
     }

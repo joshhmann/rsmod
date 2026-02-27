@@ -1,0 +1,26 @@
+# F2P Altar Locations
+# Prayer restoration altars
+
+[[altar]]
+loc = "altar"
+coord = [x = 3245, y = 3207, level = 0]
+respawn = 1
+desc = "Lumbridge Church altar"
+
+[[altar]]
+loc = "altar_slab"
+coord = [x = 3242, y = 3207, level = 0]
+respawn = 1
+desc = "Lumbridge Church altar slab"
+
+[[altar]]
+loc = "altar"
+coord = [x = 3254, y = 3488, level = 0]
+respawn = 1
+desc = "Varrock Church altar (East Varrock)"
+
+[[altar]]
+loc = "monks_altar"
+coord = [x = 3050, y = 3497, level = 1]
+respawn = 1
+desc = "Edgeville Monastery altar (upper level)"

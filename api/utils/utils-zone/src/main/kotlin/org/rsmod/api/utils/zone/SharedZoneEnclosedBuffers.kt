@@ -9,6 +9,7 @@ import net.rsprot.protocol.api.util.ZonePartialEnclosedCacheBuffer
 import net.rsprot.protocol.common.client.OldSchoolClientType
 import org.rsmod.api.registry.zone.ZoneUpdateMap
 import org.rsmod.api.registry.zone.ZoneUpdateTransformer
+import org.rsmod.api.registry.zone.ZoneUpdateTransformer.priority
 import org.rsmod.map.zone.ZoneKey
 
 public class SharedZoneEnclosedBuffers
@@ -26,7 +27,10 @@ constructor(
             val protList = ZoneUpdateTransformer.collectEnclosedProtList(updates)
             // Some zone prots are always sent alongside `UpdateZonePartialFollows`, such as any
             // privately-owned obj `ObjAdd` updates.
-            val filtered = protList.filterNot { it is ZoneUpdateTransformer.PartialFollowsZoneProt }
+            val filtered =
+                protList
+                    .filterNot { it is ZoneUpdateTransformer.PartialFollowsZoneProt }
+                    .sortedByDescending { it.priority }
             if (filtered.isEmpty()) {
                 continue
             }

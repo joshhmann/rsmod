@@ -1,6 +1,7 @@
 package org.rsmod.content.quests.cooksassistant
 
-import org.rsmod.api.invtx.invAdd
+import jakarta.inject.Inject
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
@@ -8,6 +9,7 @@ import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.getQuestStage
 import org.rsmod.api.quest.setQuestStage
 import org.rsmod.api.quest.showCompletionScroll
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpNpc1
 import org.rsmod.content.quests.cooksassistant.configs.cooks_assistant_npcs
 import org.rsmod.content.quests.cooksassistant.configs.cooks_assistant_objs
@@ -15,7 +17,7 @@ import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class CooksAssistant : PluginScript() {
+class CooksAssistant @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpNpc1(cooks_assistant_npcs.cook) { startCookDialogue(it.npc) }
     }
@@ -152,13 +154,13 @@ class CooksAssistant : PluginScript() {
             chatNpc(sad, "Hmm, it seems you don't have all the ingredients after all.")
             // Return any removed items
             if (removedMilk) {
-                player.invAdd(player.inv, cooks_assistant_objs.bucket_milk, 1)
+                player.invAddOrDrop(objRepo, cooks_assistant_objs.bucket_milk, 1)
             }
             if (removedFlour) {
-                player.invAdd(player.inv, cooks_assistant_objs.pot_flour, 1)
+                player.invAddOrDrop(objRepo, cooks_assistant_objs.pot_flour, 1)
             }
             if (removedEgg) {
-                player.invAdd(player.inv, cooks_assistant_objs.egg, 1)
+                player.invAddOrDrop(objRepo, cooks_assistant_objs.egg, 1)
             }
             return
         }

@@ -1,0 +1,9 @@
+# Cooking Guild NPC Spawns
+# Coordinates format: plane_regionX_regionY_localX_localY
+# Cooking Guild location: north-west of Varrock, around coords 3143, 3449
+
+# Head Chef - located on the ground floor of the Cooking Guild
+[[spawn]]
+npc = 'head_chef'
+coords = '0_48_53_23_57'
+direction = 'south'

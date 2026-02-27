@@ -1,0 +1,58 @@
+# Varrock Museum NPC Spawns
+# Region 51, 53 (Varrock Museum area)
+# Format: plane_regionX_regionY_localX_localY
+
+# === MUSEUM GUARDS ===
+[[spawn]]
+npc = 'vm_museum_guard'
+coords = '0_51_53_10_20'
+direction = 'south'
+
+[[spawn]]
+npc = 'vm_museum_guard2'
+coords = '0_51_53_20_20'
+direction = 'south'
+
+[[spawn]]
+npc = 'vm_museum_guard3'
+coords = '0_51_53_30_20'
+direction = 'south'
+
+# === TIMELINE HISTORIAN (Ground floor) ===
+[[spawn]]
+npc = 'vm_timeline_historian'
+coords = '0_51_53_15_15'
+direction = 'east'
+
+# === NATURAL HISTORIANS (First floor - each corner of the exhibit) ===
+[[spawn]]
+npc = 'vm_natural_historian_north'
+coords = '1_51_53_15_10'
+direction = 'south'
+
+[[spawn]]
+npc = 'vm_natural_historian_south'
+coords = '1_51_53_15_30'
+direction = 'north'
+
+[[spawn]]
+npc = 'vm_natural_historian_east'
+coords = '1_51_53_25_20'
+direction = 'west'
+
+[[spawn]]
+npc = 'vm_natural_historian_west'
+coords = '1_51_53_5_20'
+direction = 'east'
+
+# === INFO BOOTH ===
+[[spawn]]
+npc = 'vm_info_booth_lady'
+coords = '0_51_53_8_18'
+direction = 'east'
+
+# === ART CRITIC ===
+[[spawn]]
+npc = 'vm_art_critic'
+coords = '0_51_53_25_15'
+direction = 'west'

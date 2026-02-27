@@ -40,7 +40,7 @@ class DairyCow : PluginScript() {
     }
 
     private fun ProtectedAccess.milkCow() {
-        val replace = invReplace(inv, objs.bucket_empty, 1, objs.bucket_of_milk)
+        val replace = invReplace(inv, objs.bucket_empty, 1, objs.bucket_milk)
         if (replace.failure) {
             return
         }

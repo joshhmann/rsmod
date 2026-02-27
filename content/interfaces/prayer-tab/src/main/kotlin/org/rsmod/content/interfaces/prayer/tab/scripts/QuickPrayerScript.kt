@@ -105,12 +105,12 @@ constructor(
             return
         }
 
-        val enabledPrayers = repo.toPrayerList(vars[varbits.enabled_prayers])
+        val enabledPrayers = repo.toPrayerList(vars[prayer_varbits.enabled_prayers])
         for (prayer in enabledPrayers) {
             disablePrayerStatRegen(prayer)
         }
         disableOverhead()
-        vars[varbits.enabled_prayers] = quickPrayerVars
+        vars[prayer_varbits.enabled_prayers] = quickPrayerVars
         vars[varbits.quickprayer_active] = 1
 
         val quickPrayers = repo.toPrayerList(quickPrayerVars)
@@ -126,13 +126,13 @@ constructor(
     }
 
     private fun ProtectedAccess.disableQuickPrayers() {
-        val enabledPrayers = repo.toPrayerList(vars[varbits.enabled_prayers])
+        val enabledPrayers = repo.toPrayerList(vars[prayer_varbits.enabled_prayers])
         for (prayer in enabledPrayers) {
             disablePrayerStatRegen(prayer)
         }
         disablePrayerDrain()
         disableOverhead()
-        vars[varbits.enabled_prayers] = 0
+        vars[prayer_varbits.enabled_prayers] = 0
         vars[varbits.quickprayer_active] = 0
         soundSynth(prayer_sounds.disable)
     }

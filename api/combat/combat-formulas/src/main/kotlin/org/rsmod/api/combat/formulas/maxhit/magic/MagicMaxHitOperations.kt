@@ -16,6 +16,82 @@ private typealias StaffAttr = CombatStaffAttributes
 
 private typealias NpcAttr = CombatNpcAttributes
 
+/** Data class representing spell base damage modification state for PvE. */
+private data class SpellBaseDamageState(
+    val accumulated: Int,
+    val base: Int,
+    val sourceMagic: Int,
+    val sourceBaseMagicDmgBonus: Int,
+    val sourceMagicPrayerBonus: Int,
+    var modifiedMagicDmgBonus: Int = 0,
+    var applyBlackMaskMod: Boolean = false,
+)
+
+/** Data class representing spell base damage modification state for PvP. */
+private data class SpellBaseDamagePvPState(
+    val accumulated: Int,
+    val base: Int,
+    val sourceMagic: Int,
+    val sourceBaseMagicDmgBonus: Int,
+    val sourceMagicPrayerBonus: Int,
+    var modifiedMagicDmgBonus: Int = 0,
+)
+
+/** Data class representing spell damage range modification state for PvE. */
+private data class SpellRangeState(
+    var min: Int,
+    var max: Int,
+    val baseDamage: Int,
+    val attackRate: Int,
+    val targetWeaknessPercent: Int,
+)
+
+/** Data class representing spell damage range modification state for PvP. */
+private data class SpellRangePvPState(var min: Int, var max: Int)
+
+/** Data class representing staff base damage modification state for PvE. */
+private data class StaffBaseDamageState(
+    val accumulated: Int,
+    val base: Int,
+    val sourceBaseMagicDmgBonus: Int,
+    val sourceMagicPrayerBonus: Int,
+    var modifiedMagicDmgBonus: Int = 0,
+    var applyBlackMaskMod: Boolean = false,
+)
+
+/** Data class representing staff base damage modification state for PvP. */
+private data class StaffBaseDamagePvPState(
+    val accumulated: Int,
+    val base: Int,
+    val sourceBaseMagicDmgBonus: Int,
+    val sourceMagicPrayerBonus: Int,
+    var modifiedMagicDmgBonus: Int = 0,
+)
+
+/** Type alias for a spell base damage modifier function (PvE). */
+private typealias SpellBaseModifier =
+    (SpellBaseDamageState, EnumSet<SpellAttr>, EnumSet<NpcAttr>) -> SpellBaseDamageState
+
+/** Type alias for a spell base damage modifier function (PvP). */
+private typealias SpellBasePvPModifier =
+    (SpellBaseDamagePvPState, EnumSet<SpellAttr>) -> SpellBaseDamagePvPState
+
+/** Type alias for a spell range modifier function (PvE). */
+private typealias SpellRangeModifier =
+    (SpellRangeState, EnumSet<SpellAttr>, EnumSet<NpcAttr>) -> SpellRangeState
+
+/** Type alias for a spell range modifier function (PvP). */
+private typealias SpellRangePvPModifier =
+    (SpellRangePvPState, EnumSet<SpellAttr>) -> SpellRangePvPState
+
+/** Type alias for a staff base damage modifier function (PvE). */
+private typealias StaffBaseModifier =
+    (StaffBaseDamageState, EnumSet<StaffAttr>, EnumSet<NpcAttr>) -> StaffBaseDamageState
+
+/** Type alias for a staff base damage modifier function (PvP). */
+private typealias StaffBasePvPModifier =
+    (StaffBaseDamagePvPState, EnumSet<StaffAttr>) -> StaffBaseDamagePvPState
+
 public object MagicMaxHitOperations {
     /**
      * @param sourceMagic The source's **current** magic level. Required for the Magic dart
@@ -33,72 +109,172 @@ public object MagicMaxHitOperations {
         spellAttributes: EnumSet<CombatSpellAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = baseDamage
+        val initialState =
+            SpellBaseDamageState(
+                accumulated = baseDamage,
+                base = baseDamage,
+                sourceMagic = sourceMagic,
+                sourceBaseMagicDmgBonus = sourceBaseMagicDmgBonus,
+                sourceMagicPrayerBonus = sourceMagicPrayerBonus,
+                modifiedMagicDmgBonus = sourceBaseMagicDmgBonus,
+            )
 
-        if (SpellAttr.MagicDart in spellAttributes) {
-            val slayerStaffBoost =
-                SpellAttr.SlayerStaffE in spellAttributes && NpcAttr.SlayerTask in npcAttributes
+        val modifiers: List<SpellBaseModifier> =
+            listOf(
+                ::applyMagicDartModifier,
+                ::applyChaosGauntletsModifier,
+                ::applyChargeSpellModifier,
+                ::applySmokeStaffDmgModifier,
+                ::applyAmuletDmgModifier,
+                ::applyPrayerDmgBonus,
+                ::applyMagicDmgBonusMultiplier,
+                ::applyBlackMaskDmgModifier,
+                ::applyDraconicDmgModifier,
+                ::applyRevenantWeaponDmgModifier,
+            )
 
-            modified =
-                if (slayerStaffBoost) {
-                    13 + (sourceMagic / 6)
-                } else {
-                    10 + (sourceMagic / 10)
-                }
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, spellAttributes, npcAttributes) }
+            .accumulated
+    }
+
+    private fun applyMagicDartModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        if (SpellAttr.MagicDart !in spell) {
+            return state
         }
+        val slayerStaffBoost = SpellAttr.SlayerStaffE in spell && NpcAttr.SlayerTask in npc
+        val newAccumulated =
+            if (slayerStaffBoost) {
+                13 + (state.sourceMagic / 6)
+            } else {
+                10 + (state.sourceMagic / 10)
+            }
+        return state.copy(accumulated = newAccumulated)
+    }
 
-        if (SpellAttr.ChaosGauntlets in spellAttributes && SpellAttr.BoltSpell in spellAttributes) {
-            modified += 3
+    private fun applyChaosGauntletsModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        if (SpellAttr.ChaosGauntlets !in spell || SpellAttr.BoltSpell !in spell) {
+            return state
         }
+        return state.copy(accumulated = state.accumulated + 3)
+    }
 
-        if (SpellAttr.ChargeSpell in spellAttributes) {
-            modified += 10
+    private fun applyChargeSpellModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        if (SpellAttr.ChargeSpell !in spell) {
+            return state
         }
+        return state.copy(accumulated = state.accumulated + 10)
+    }
 
-        var modifiedMagicDmgBonus = sourceBaseMagicDmgBonus
-
-        if (SpellAttr.SmokeStaff in spellAttributes && SpellAttr.StandardBook in spellAttributes) {
-            modifiedMagicDmgBonus += 100
+    private fun applySmokeStaffDmgModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        if (SpellAttr.SmokeStaff in spell && SpellAttr.StandardBook in spell) {
+            state.modifiedMagicDmgBonus += 100
         }
+        return state
+    }
 
-        var applyBlackMaskMod = false
-
-        if (SpellAttr.AmuletOfAvarice in spellAttributes && NpcAttr.Revenant in npcAttributes) {
-            val additive = if (SpellAttr.ForinthrySurge in spellAttributes) 350 else 200
-            modifiedMagicDmgBonus += additive
-        } else if (SpellAttr.SalveAmuletEi in spellAttributes && NpcAttr.Undead in npcAttributes) {
-            modifiedMagicDmgBonus += 200
-        } else if (SpellAttr.SalveAmuletI in spellAttributes && NpcAttr.Undead in npcAttributes) {
-            modifiedMagicDmgBonus += 150
-        } else if (SpellAttr.BlackMaskI in spellAttributes && NpcAttr.SlayerTask in npcAttributes) {
-            applyBlackMaskMod = true
-        }
-
-        modifiedMagicDmgBonus += sourceMagicPrayerBonus
-
-        val maxAdditive = scale(modified, multiplier = modifiedMagicDmgBonus, divisor = 1000)
-
-        modified += maxAdditive
-
-        if (applyBlackMaskMod) {
-            modified = scale(modified, multiplier = 23, divisor = 20)
-        }
-
-        if (NpcAttr.Draconic in npcAttributes) {
-            if (SpellAttr.DragonHunterLance in spellAttributes) {
-                modified = scale(modified, multiplier = 6, divisor = 5)
-            } else if (SpellAttr.DragonHunterWand in spellAttributes) {
-                modified = scale(modified, multiplier = 6, divisor = 5)
-            } else if (SpellAttr.DragonHunterCrossbow in spellAttributes) {
-                modified = scale(modified, multiplier = 5, divisor = 4)
+    private fun applyAmuletDmgModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        when {
+            SpellAttr.AmuletOfAvarice in spell && NpcAttr.Revenant in npc -> {
+                val additive = if (SpellAttr.ForinthrySurge in spell) 350 else 200
+                state.modifiedMagicDmgBonus += additive
+            }
+            SpellAttr.SalveAmuletEi in spell && NpcAttr.Undead in npc -> {
+                state.modifiedMagicDmgBonus += 200
+            }
+            SpellAttr.SalveAmuletI in spell && NpcAttr.Undead in npc -> {
+                state.modifiedMagicDmgBonus += 150
+            }
+            SpellAttr.BlackMaskI in spell && NpcAttr.SlayerTask in npc -> {
+                state.applyBlackMaskMod = true
             }
         }
+        return state
+    }
 
-        if (SpellAttr.RevenantWeapon in spellAttributes && NpcAttr.Wilderness in npcAttributes) {
-            modified = scale(modified, multiplier = 3, divisor = 2)
+    private fun applyPrayerDmgBonus(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        state.modifiedMagicDmgBonus += state.sourceMagicPrayerBonus
+        return state
+    }
+
+    private fun applyMagicDmgBonusMultiplier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        val maxAdditive =
+            scale(state.accumulated, multiplier = state.modifiedMagicDmgBonus, divisor = 1000)
+        return state.copy(accumulated = state.accumulated + maxAdditive)
+    }
+
+    private fun applyBlackMaskDmgModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        if (!state.applyBlackMaskMod) {
+            return state
         }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 23, divisor = 20))
+    }
 
-        return modified
+    private fun applyDraconicDmgModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        if (NpcAttr.Draconic !in npc) {
+            return state
+        }
+        val newAccumulated =
+            when {
+                SpellAttr.DragonHunterLance in spell -> {
+                    scale(state.accumulated, multiplier = 6, divisor = 5)
+                }
+                SpellAttr.DragonHunterWand in spell -> {
+                    scale(state.accumulated, multiplier = 6, divisor = 5)
+                }
+                SpellAttr.DragonHunterCrossbow in spell -> {
+                    scale(state.accumulated, multiplier = 5, divisor = 4)
+                }
+                else -> state.accumulated
+            }
+        return state.copy(accumulated = newAccumulated)
+    }
+
+    private fun applyRevenantWeaponDmgModifier(
+        state: SpellBaseDamageState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellBaseDamageState {
+        if (SpellAttr.RevenantWeapon !in spell || NpcAttr.Wilderness !in npc) {
+            return state
+        }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 3, divisor = 2))
     }
 
     /**
@@ -116,33 +292,86 @@ public object MagicMaxHitOperations {
         sourceMagicPrayerBonus: Int,
         spellAttributes: EnumSet<CombatSpellAttributes>,
     ): Int {
-        var modified = baseDamage
+        val initialState =
+            SpellBaseDamagePvPState(
+                accumulated = baseDamage,
+                base = baseDamage,
+                sourceMagic = sourceMagic,
+                sourceBaseMagicDmgBonus = sourceBaseMagicDmgBonus,
+                sourceMagicPrayerBonus = sourceMagicPrayerBonus,
+                modifiedMagicDmgBonus = sourceBaseMagicDmgBonus,
+            )
 
-        if (SpellAttr.MagicDart in spellAttributes) {
-            modified = 10 + (sourceMagic / 10)
+        val modifiers: List<SpellBasePvPModifier> =
+            listOf(
+                ::applyMagicDartModifierPvP,
+                ::applyChaosGauntletsModifierPvP,
+                ::applyChargeSpellModifierPvP,
+                ::applySmokeStaffDmgModifierPvP,
+                ::applyPrayerDmgBonusPvP,
+                ::applyMagicDmgBonusMultiplierPvP,
+            )
+
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, spellAttributes) }
+            .accumulated
+    }
+
+    private fun applyMagicDartModifierPvP(
+        state: SpellBaseDamagePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellBaseDamagePvPState {
+        if (SpellAttr.MagicDart !in spell) {
+            return state
         }
+        return state.copy(accumulated = 10 + (state.sourceMagic / 10))
+    }
 
-        if (SpellAttr.ChaosGauntlets in spellAttributes && SpellAttr.BoltSpell in spellAttributes) {
-            modified += 3
+    private fun applyChaosGauntletsModifierPvP(
+        state: SpellBaseDamagePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellBaseDamagePvPState {
+        if (SpellAttr.ChaosGauntlets !in spell || SpellAttr.BoltSpell !in spell) {
+            return state
         }
+        return state.copy(accumulated = state.accumulated + 3)
+    }
 
-        if (SpellAttr.ChargeSpell in spellAttributes) {
-            modified += 10
+    private fun applyChargeSpellModifierPvP(
+        state: SpellBaseDamagePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellBaseDamagePvPState {
+        if (SpellAttr.ChargeSpell !in spell) {
+            return state
         }
+        return state.copy(accumulated = state.accumulated + 10)
+    }
 
-        var modifiedMagicDmgBonus = sourceBaseMagicDmgBonus
-
-        if (SpellAttr.SmokeStaff in spellAttributes && SpellAttr.StandardBook in spellAttributes) {
-            modifiedMagicDmgBonus += 100
+    private fun applySmokeStaffDmgModifierPvP(
+        state: SpellBaseDamagePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellBaseDamagePvPState {
+        if (SpellAttr.SmokeStaff in spell && SpellAttr.StandardBook in spell) {
+            state.modifiedMagicDmgBonus += 100
         }
+        return state
+    }
 
-        modifiedMagicDmgBonus += sourceMagicPrayerBonus
+    private fun applyPrayerDmgBonusPvP(
+        state: SpellBaseDamagePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellBaseDamagePvPState {
+        state.modifiedMagicDmgBonus += state.sourceMagicPrayerBonus
+        return state
+    }
 
-        val maxAdditive = scale(modified, multiplier = modifiedMagicDmgBonus, divisor = 1000)
-
-        modified += maxAdditive
-
-        return modified
+    private fun applyMagicDmgBonusMultiplierPvP(
+        state: SpellBaseDamagePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellBaseDamagePvPState {
+        val maxAdditive =
+            scale(state.accumulated, multiplier = state.modifiedMagicDmgBonus, divisor = 1000)
+        return state.copy(accumulated = state.accumulated + maxAdditive)
     }
 
     /**
@@ -158,79 +387,171 @@ public object MagicMaxHitOperations {
         spellAttributes: EnumSet<CombatSpellAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): IntRange {
-        var modifiedMin = 0
-        var modifiedMax = modifiedDamage
+        val initialState =
+            SpellRangeState(
+                min = 0,
+                max = modifiedDamage,
+                baseDamage = baseDamage,
+                attackRate = attackRate,
+                targetWeaknessPercent = targetWeaknessPercent,
+            )
 
+        val modifiers: List<SpellRangeModifier> =
+            listOf(
+                ::applySpellWeaknessModifier,
+                ::applySunfireRuneModifier,
+                ::applyTomeModifier,
+                ::applyMarkOfDarknessModifier,
+                ::applyAhrimModifier,
+                ::applyTormentedDemonModifier,
+            )
+
+        val finalState =
+            modifiers.fold(initialState) { state, mod ->
+                mod(state, spellAttributes, npcAttributes)
+            }
+        return finalState.min..finalState.max
+    }
+
+    private fun applySpellWeaknessModifier(
+        state: SpellRangeState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellRangeState {
         val applySpellWeaknessMod =
-            NpcAttr.WindWeakness in npcAttributes && SpellAttr.WindSpell in spellAttributes ||
-                NpcAttr.EarthWeakness in npcAttributes && SpellAttr.EarthSpell in spellAttributes ||
-                NpcAttr.WaterWeakness in npcAttributes && SpellAttr.WaterSpell in spellAttributes ||
-                NpcAttr.FireWeakness in npcAttributes && SpellAttr.FireSpell in spellAttributes
+            NpcAttr.WindWeakness in npc && SpellAttr.WindSpell in spell ||
+                NpcAttr.EarthWeakness in npc && SpellAttr.EarthSpell in spell ||
+                NpcAttr.WaterWeakness in npc && SpellAttr.WaterSpell in spell ||
+                NpcAttr.FireWeakness in npc && SpellAttr.FireSpell in spell
 
-        if (applySpellWeaknessMod) {
-            val additive = (baseDamage * (targetWeaknessPercent / 100.0)).toInt()
-            modifiedMax += additive
+        if (!applySpellWeaknessMod) {
+            return state
         }
+        val additive = (state.baseDamage * (state.targetWeaknessPercent / 100.0)).toInt()
+        state.max += additive
+        return state
+    }
 
-        if (SpellAttr.SunfireRunePassive in spellAttributes) {
-            modifiedMin = modifiedMax / 10
+    private fun applySunfireRuneModifier(
+        state: SpellRangeState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellRangeState {
+        if (SpellAttr.SunfireRunePassive !in spell) {
+            return state
         }
+        state.min = state.max / 10
+        return state
+    }
 
+    private fun applyTomeModifier(
+        state: SpellRangeState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellRangeState {
         val applyTomeMod =
-            SpellAttr.EarthTome in spellAttributes && SpellAttr.EarthSpell in spellAttributes ||
-                SpellAttr.WaterTome in spellAttributes && SpellAttr.WaterSpell in spellAttributes ||
-                SpellAttr.FireTome in spellAttributes && SpellAttr.FireSpell in spellAttributes
+            SpellAttr.EarthTome in spell && SpellAttr.EarthSpell in spell ||
+                SpellAttr.WaterTome in spell && SpellAttr.WaterSpell in spell ||
+                SpellAttr.FireTome in spell && SpellAttr.FireSpell in spell
 
-        if (applyTomeMod) {
-            modifiedMax = scale(modifiedMax, multiplier = 11, divisor = 10)
+        if (!applyTomeMod) {
+            return state
         }
+        state.max = scale(state.max, multiplier = 11, divisor = 10)
+        return state
+    }
 
+    private fun applyMarkOfDarknessModifier(
+        state: SpellRangeState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellRangeState {
         val applyMarkOfDarknessMod =
-            SpellAttr.MarkOfDarkness in spellAttributes &&
-                SpellAttr.Demonbane in spellAttributes &&
-                NpcAttr.Demon in npcAttributes
-        if (applyMarkOfDarknessMod) {
-            val multiplier = if (SpellAttr.PurgingStaff in spellAttributes) 50 else 25
-            modifiedMax = scale(modifiedMax, multiplier = 100 + multiplier, divisor = 100)
+            SpellAttr.MarkOfDarkness in spell &&
+                SpellAttr.Demonbane in spell &&
+                NpcAttr.Demon in npc
+        if (!applyMarkOfDarknessMod) {
+            return state
         }
+        val multiplier = if (SpellAttr.PurgingStaff in spell) 50 else 25
+        state.max = scale(state.max, multiplier = 100 + multiplier, divisor = 100)
+        return state
+    }
 
-        if (SpellAttr.AhrimPassive in spellAttributes) {
-            modifiedMax = scale(modifiedMax, multiplier = 13, divisor = 10)
+    private fun applyAhrimModifier(
+        state: SpellRangeState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellRangeState {
+        if (SpellAttr.AhrimPassive !in spell) {
+            return state
         }
+        state.max = scale(state.max, multiplier = 13, divisor = 10)
+        return state
+    }
 
-        if (NpcAttr.TormentedDemonUnshielded in npcAttributes) {
-            val bonusDamage = max(0, (attackRate * attackRate) - 16)
-            modifiedMax += bonusDamage
+    private fun applyTormentedDemonModifier(
+        state: SpellRangeState,
+        spell: EnumSet<SpellAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): SpellRangeState {
+        if (NpcAttr.TormentedDemonUnshielded !in npc) {
+            return state
         }
-
-        return modifiedMin..modifiedMax
+        val bonusDamage = max(0, (state.attackRate * state.attackRate) - 16)
+        state.max += bonusDamage
+        return state
     }
 
     public fun modifySpellDamageRange(
         modifiedDamage: Int,
         spellAttributes: EnumSet<CombatSpellAttributes>,
     ): IntRange {
-        var modifiedMin = 0
-        var modifiedMax = modifiedDamage
+        val initialState = SpellRangePvPState(min = 0, max = modifiedDamage)
 
-        if (SpellAttr.SunfireRunePassive in spellAttributes) {
-            modifiedMin = modifiedMax / 10
+        val modifiers: List<SpellRangePvPModifier> =
+            listOf(::applySunfireRuneModifierPvP, ::applyTomeModifierPvP, ::applyAhrimModifierPvP)
+
+        val finalState = modifiers.fold(initialState) { state, mod -> mod(state, spellAttributes) }
+        return finalState.min..finalState.max
+    }
+
+    private fun applySunfireRuneModifierPvP(
+        state: SpellRangePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellRangePvPState {
+        if (SpellAttr.SunfireRunePassive !in spell) {
+            return state
         }
+        state.min = state.max / 10
+        return state
+    }
 
+    private fun applyTomeModifierPvP(
+        state: SpellRangePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellRangePvPState {
         val applyTomeMod =
-            SpellAttr.EarthTome in spellAttributes && SpellAttr.EarthSpell in spellAttributes ||
-                SpellAttr.WaterTome in spellAttributes && SpellAttr.WaterSpell in spellAttributes ||
-                SpellAttr.FireTome in spellAttributes && SpellAttr.FireSpell in spellAttributes
+            SpellAttr.EarthTome in spell && SpellAttr.EarthSpell in spell ||
+                SpellAttr.WaterTome in spell && SpellAttr.WaterSpell in spell ||
+                SpellAttr.FireTome in spell && SpellAttr.FireSpell in spell
 
-        if (applyTomeMod) {
-            modifiedMax = scale(modifiedMax, multiplier = 12, divisor = 10)
+        if (!applyTomeMod) {
+            return state
         }
+        state.max = scale(state.max, multiplier = 12, divisor = 10)
+        return state
+    }
 
-        if (SpellAttr.AhrimPassive in spellAttributes) {
-            modifiedMax = scale(modifiedMax, multiplier = 13, divisor = 10)
+    private fun applyAhrimModifierPvP(
+        state: SpellRangePvPState,
+        spell: EnumSet<SpellAttr>,
+    ): SpellRangePvPState {
+        if (SpellAttr.AhrimPassive !in spell) {
+            return state
         }
-
-        return modifiedMin..modifiedMax
+        state.max = scale(state.max, multiplier = 13, divisor = 10)
+        return state
     }
 
     /**
@@ -246,43 +567,105 @@ public object MagicMaxHitOperations {
         staffAttributes: EnumSet<CombatStaffAttributes>,
         npcAttributes: EnumSet<CombatNpcAttributes>,
     ): Int {
-        var modified = baseDamage
+        val initialState =
+            StaffBaseDamageState(
+                accumulated = baseDamage,
+                base = baseDamage,
+                sourceBaseMagicDmgBonus = sourceBaseMagicDmgBonus,
+                sourceMagicPrayerBonus = sourceMagicPrayerBonus,
+                modifiedMagicDmgBonus = sourceBaseMagicDmgBonus,
+            )
 
-        var modifiedMagicDmgBonus = sourceBaseMagicDmgBonus
+        val modifiers: List<StaffBaseModifier> =
+            listOf(
+                ::applyTumekensShadowModifier,
+                ::applyStaffAmuletDmgModifier,
+                ::applyStaffPrayerDmgBonus,
+                ::applyStaffMagicDmgBonusMultiplier,
+                ::applyStaffBlackMaskDmgModifier,
+                ::applyStaffRevenantWeaponDmgModifier,
+            )
 
-        if (StaffAttr.TumekensShadow in staffAttributes) {
-            val multiplier = if (NpcAttr.Amascut in npcAttributes) 4 else 3
-            modifiedMagicDmgBonus *= multiplier
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, staffAttributes, npcAttributes) }
+            .accumulated
+    }
+
+    private fun applyTumekensShadowModifier(
+        state: StaffBaseDamageState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffBaseDamageState {
+        if (StaffAttr.TumekensShadow !in staff) {
+            return state
         }
+        val multiplier = if (NpcAttr.Amascut in npc) 4 else 3
+        state.modifiedMagicDmgBonus *= multiplier
+        return state
+    }
 
-        var applyBlackMaskMod = false
-
-        if (StaffAttr.AmuletOfAvarice in staffAttributes && NpcAttr.Revenant in npcAttributes) {
-            val additive = if (StaffAttr.ForinthrySurge in staffAttributes) 350 else 200
-            modifiedMagicDmgBonus += additive
-        } else if (StaffAttr.SalveAmuletEi in staffAttributes && NpcAttr.Undead in npcAttributes) {
-            modifiedMagicDmgBonus += 200
-        } else if (StaffAttr.SalveAmuletI in staffAttributes && NpcAttr.Undead in npcAttributes) {
-            modifiedMagicDmgBonus += 150
-        } else if (StaffAttr.BlackMaskI in staffAttributes && NpcAttr.SlayerTask in npcAttributes) {
-            applyBlackMaskMod = true
+    private fun applyStaffAmuletDmgModifier(
+        state: StaffBaseDamageState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffBaseDamageState {
+        when {
+            StaffAttr.AmuletOfAvarice in staff && NpcAttr.Revenant in npc -> {
+                val additive = if (StaffAttr.ForinthrySurge in staff) 350 else 200
+                state.modifiedMagicDmgBonus += additive
+            }
+            StaffAttr.SalveAmuletEi in staff && NpcAttr.Undead in npc -> {
+                state.modifiedMagicDmgBonus += 200
+            }
+            StaffAttr.SalveAmuletI in staff && NpcAttr.Undead in npc -> {
+                state.modifiedMagicDmgBonus += 150
+            }
+            StaffAttr.BlackMaskI in staff && NpcAttr.SlayerTask in npc -> {
+                state.applyBlackMaskMod = true
+            }
         }
+        return state
+    }
 
-        modifiedMagicDmgBonus += sourceMagicPrayerBonus
+    private fun applyStaffPrayerDmgBonus(
+        state: StaffBaseDamageState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffBaseDamageState {
+        state.modifiedMagicDmgBonus += state.sourceMagicPrayerBonus
+        return state
+    }
 
-        val maxAdditive = scale(modified, multiplier = modifiedMagicDmgBonus, divisor = 1000)
+    private fun applyStaffMagicDmgBonusMultiplier(
+        state: StaffBaseDamageState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffBaseDamageState {
+        val maxAdditive =
+            scale(state.accumulated, multiplier = state.modifiedMagicDmgBonus, divisor = 1000)
+        return state.copy(accumulated = state.accumulated + maxAdditive)
+    }
 
-        modified += maxAdditive
-
-        if (applyBlackMaskMod) {
-            modified = scale(modified, multiplier = 23, divisor = 20)
+    private fun applyStaffBlackMaskDmgModifier(
+        state: StaffBaseDamageState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffBaseDamageState {
+        if (!state.applyBlackMaskMod) {
+            return state
         }
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 23, divisor = 20))
+    }
 
-        if (StaffAttr.RevenantWeapon in staffAttributes && NpcAttr.Wilderness in npcAttributes) {
-            modified = scale(modified, multiplier = 3, divisor = 2)
+    private fun applyStaffRevenantWeaponDmgModifier(
+        state: StaffBaseDamageState,
+        staff: EnumSet<StaffAttr>,
+        npc: EnumSet<NpcAttr>,
+    ): StaffBaseDamageState {
+        if (StaffAttr.RevenantWeapon !in staff || NpcAttr.Wilderness !in npc) {
+            return state
         }
-
-        return modified
+        return state.copy(accumulated = scale(state.accumulated, multiplier = 3, divisor = 2))
     }
 
     public fun modifyStaffBaseDamage(
@@ -290,16 +673,38 @@ public object MagicMaxHitOperations {
         sourceBaseMagicDmgBonus: Int,
         sourceMagicPrayerBonus: Int,
     ): Int {
-        var modified = baseDamage
+        val initialState =
+            StaffBaseDamagePvPState(
+                accumulated = baseDamage,
+                base = baseDamage,
+                sourceBaseMagicDmgBonus = sourceBaseMagicDmgBonus,
+                sourceMagicPrayerBonus = sourceMagicPrayerBonus,
+                modifiedMagicDmgBonus = sourceBaseMagicDmgBonus,
+            )
 
-        var modifiedMagicDmgBonus = sourceBaseMagicDmgBonus
-        modifiedMagicDmgBonus += sourceMagicPrayerBonus
+        val modifiers: List<StaffBasePvPModifier> =
+            listOf(::applyStaffPrayerDmgBonusPvP, ::applyStaffMagicDmgBonusMultiplierPvP)
 
-        val maxAdditive = scale(modified, multiplier = modifiedMagicDmgBonus, divisor = 1000)
+        return modifiers
+            .fold(initialState) { state, mod -> mod(state, EnumSet.noneOf(StaffAttr::class.java)) }
+            .accumulated
+    }
 
-        modified += maxAdditive
+    private fun applyStaffPrayerDmgBonusPvP(
+        state: StaffBaseDamagePvPState,
+        staff: EnumSet<StaffAttr>,
+    ): StaffBaseDamagePvPState {
+        state.modifiedMagicDmgBonus += state.sourceMagicPrayerBonus
+        return state
+    }
 
-        return modified
+    private fun applyStaffMagicDmgBonusMultiplierPvP(
+        state: StaffBaseDamagePvPState,
+        staff: EnumSet<StaffAttr>,
+    ): StaffBaseDamagePvPState {
+        val maxAdditive =
+            scale(state.accumulated, multiplier = state.modifiedMagicDmgBonus, divisor = 1000)
+        return state.copy(accumulated = state.accumulated + maxAdditive)
     }
 
     public fun getMagicDamagePrayerBonus(player: Player): Int =

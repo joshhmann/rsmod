@@ -12,4 +12,6 @@ internal object FarmingObjs : ObjReferences() {
     val plant_cure = find("plant_cure")
     val guam_seed = find("guam_seed")
     val marrentill_seed = find("marrentill_seed")
+    val grimy_guam = find("unidentified_guam")
+    val grimy_marrentill = find("unidentified_marentill")
 }

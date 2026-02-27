@@ -29,12 +29,11 @@ class DarkBowSpecialAttack
 constructor(private val objTypes: ObjTypeList, private val ammunition: RangedAmmoManager) :
     SpecialAttackMap {
     override fun SpecialAttackRepository.register(manager: SpecialAttackManager) {
-        registerRanged(objs.dark_bow, DarkBow(manager, ammunition, objTypes))
-        registerRanged(objs.dark_bow_green, DarkBow(manager, ammunition, objTypes))
-        registerRanged(objs.dark_bow_blue, DarkBow(manager, ammunition, objTypes))
-        registerRanged(objs.dark_bow_yellow, DarkBow(manager, ammunition, objTypes))
-        registerRanged(objs.dark_bow_white, DarkBow(manager, ammunition, objTypes))
-        registerRanged(objs.dark_bow_bh, DarkBow(manager, ammunition, objTypes))
+        registerRanged(objs.darkbow, DarkBow(manager, ammunition, objTypes))
+        registerRanged(objs.darkbow_green, DarkBow(manager, ammunition, objTypes))
+        registerRanged(objs.darkbow_blue, DarkBow(manager, ammunition, objTypes))
+        registerRanged(objs.darkbow_yellow, DarkBow(manager, ammunition, objTypes))
+        registerRanged(objs.darkbow_white, DarkBow(manager, ammunition, objTypes))
     }
 
     private class DarkBow(

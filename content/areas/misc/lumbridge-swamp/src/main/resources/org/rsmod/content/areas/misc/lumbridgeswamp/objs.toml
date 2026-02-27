@@ -1,0 +1,90 @@
+# Lumbridge Swamp Object Spawns
+# Coordinates are in format: plane_regionX_regionZ_localX_localZ
+
+# ==================== MINING ROCKS ====================
+# Copper and Tin rocks in the south-east swamp area
+
+# Copper rocks
+[[spawn]]
+obj = 'copperrock1'
+coords = '0_49_50_10_55'
+
+[[spawn]]
+obj = 'copperrock2'
+coords = '0_49_50_11_53'
+
+[[spawn]]
+obj = 'copperrock1'
+coords = '0_49_50_13_52'
+
+[[spawn]]
+obj = 'copperrock2'
+coords = '0_49_50_14_54'
+
+# Tin rocks
+[[spawn]]
+obj = 'tinrock1'
+coords = '0_49_50_12_56'
+
+[[spawn]]
+obj = 'tinrock2'
+coords = '0_49_50_14_57'
+
+[[spawn]]
+obj = 'tinrock1'
+coords = '0_49_50_16_55'
+
+[[spawn]]
+obj = 'tinrock2'
+coords = '0_49_50_15_53'
+
+# ==================== SWAMP ATMOSPHERE ====================
+# Swamp tar spawns (already in main lumbridge objs.toml but adding a few more)
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_15_45'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_18_48'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_20_42'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_22_45'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_25_48'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_30_50'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_32_47'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_40_50'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_48_48'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_50_45'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_52_42'
+
+[[spawn]]
+obj = 'swamp_tar'
+coords = '0_49_49_54_40'

@@ -231,7 +231,7 @@ enum class CookingFood(
 ) {
     SHRIMP(
         rawObj = cooking_objs.raw_shrimp,
-        cookedObj = objs.shrimps,
+        cookedObj = objs.shrimp,
         burntObj = cooking_objs.burntfish1,
         levelReq = 1,
         xp = 30.0,

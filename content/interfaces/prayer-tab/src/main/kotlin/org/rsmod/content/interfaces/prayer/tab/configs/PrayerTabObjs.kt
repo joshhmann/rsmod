@@ -46,61 +46,66 @@ internal object PrayerTabObjs : ObjReferences() {
 @Suppress("SameParameterValue")
 internal object PrayerTabObjEditor : ObjEditor() {
     init {
-        prayer(prayer_objs.thick_skin, varbits.thick_skin, drain = 1)
-        prayer(prayer_objs.burst_of_strength, varbits.burst_of_strength, drain = 1)
-        prayer(prayer_objs.clarity_of_thought, varbits.clarity_of_thought, drain = 1)
-        prayer(prayer_objs.rock_skin, varbits.rock_skin, drain = 6)
-        prayer(prayer_objs.superhuman_strength, varbits.superhuman_strength, drain = 6)
-        prayer(prayer_objs.improved_reflexes, varbits.improved_reflexes, drain = 6)
-        prayer(prayer_objs.rapid_restore, varbits.rapid_restore, drain = 1)
-        prayer(prayer_objs.rapid_heal, varbits.rapid_heal, drain = 2)
-        prayer(prayer_objs.protect_item, varbits.protect_item, drain = 2)
-        prayer(prayer_objs.steel_skin, varbits.steel_skin, drain = 12)
-        prayer(prayer_objs.ultimate_strength, varbits.ultimate_strength, drain = 12)
-        prayer(prayer_objs.incredible_reflexes, varbits.incredible_reflexes, drain = 12)
+        prayer(prayer_objs.thick_skin, varbits.prayer_thickskin, drain = 1)
+        prayer(prayer_objs.burst_of_strength, varbits.prayer_burstofstrength, drain = 1)
+        prayer(prayer_objs.clarity_of_thought, varbits.prayer_clarityofthought, drain = 1)
+        prayer(prayer_objs.rock_skin, varbits.prayer_rockskin, drain = 6)
+        prayer(prayer_objs.superhuman_strength, varbits.prayer_superhumanstrength, drain = 6)
+        prayer(prayer_objs.improved_reflexes, varbits.prayer_improvedreflexes, drain = 6)
+        prayer(prayer_objs.rapid_restore, varbits.prayer_rapidrestore, drain = 1)
+        prayer(prayer_objs.rapid_heal, varbits.prayer_rapidheal, drain = 2)
+        prayer(prayer_objs.protect_item, varbits.prayer_protectitem, drain = 2)
+        prayer(prayer_objs.steel_skin, varbits.prayer_steelskin, drain = 12)
+        prayer(prayer_objs.ultimate_strength, varbits.prayer_ultimatestrength, drain = 12)
+        prayer(prayer_objs.incredible_reflexes, varbits.prayer_incrediblereflexes, drain = 12)
         prayer(
             prayer_objs.protect_from_magic,
-            varbits.protect_from_magic,
+            varbits.prayer_protectfrommagic,
             constants.overhead_protect_from_magic,
             drain = 12,
         )
         prayer(
             prayer_objs.protect_from_missiles,
-            varbits.protect_from_missiles,
+            varbits.prayer_protectfrommissiles,
             constants.overhead_protect_from_missiles,
             drain = 12,
         )
         prayer(
             prayer_objs.protect_from_melee,
-            varbits.protect_from_melee,
+            varbits.prayer_protectfrommelee,
             constants.overhead_protect_from_melee,
             drain = 12,
         )
         prayer(
             prayer_objs.retribution,
-            varbits.retribution,
+            varbits.prayer_retribution,
             constants.overhead_retribution,
             drain = 3,
         )
-        prayer(prayer_objs.redemption, varbits.redemption, constants.overhead_redemption, drain = 6)
-        prayer(prayer_objs.smite, varbits.smite, constants.overhead_smite, drain = 18)
-        prayer(prayer_objs.sharp_eye, varbits.sharp_eye, drain = 1)
-        prayer(prayer_objs.mystic_will, varbits.mystic_will, drain = 1)
-        prayer(prayer_objs.hawk_eye, varbits.hawk_eye, drain = 6)
-        prayer(prayer_objs.mystic_lore, varbits.mystic_lore, drain = 6)
-        prayer(prayer_objs.eagle_eye, varbits.eagle_eye, drain = 12)
-        prayer(prayer_objs.mystic_might, varbits.mystic_might, drain = 12)
+        prayer(
+            prayer_objs.redemption,
+            varbits.prayer_redemption,
+            constants.overhead_redemption,
+            drain = 6,
+        )
+        prayer(prayer_objs.smite, varbits.prayer_smite, constants.overhead_smite, drain = 18)
+        prayer(prayer_objs.sharp_eye, varbits.prayer_sharpeye, drain = 1)
+        prayer(prayer_objs.mystic_will, varbits.prayer_mysticwill, drain = 1)
+        prayer(prayer_objs.hawk_eye, varbits.prayer_hawkeye, drain = 6)
+        prayer(prayer_objs.mystic_lore, varbits.prayer_mysticlore, drain = 6)
+        prayer(prayer_objs.eagle_eye, varbits.prayer_eagleeye, drain = 12)
+        prayer(prayer_objs.mystic_might, varbits.prayer_mysticmight, drain = 12)
         prayer(
             prayer_objs.preserve,
-            varbits.preserve,
+            varbits.prayer_preserve,
             drain = 2,
-            unlock = varbits.preserve_unlocked,
+            unlock = varbits.prayer_preserve_unlocked,
             "You need a <col=000080>Prayer</col> level of 55 and to have " +
                 "learnt the prayer in<br>order to use <col=000080>Preserve</col>.",
         )
         prayer(
             prayer_objs.chivalry,
-            varbits.chivalry,
+            varbits.prayer_chivalry,
             drain = 24,
             unlock = varbits.kr_knightwaves_state,
             unlockState = 8,
@@ -112,7 +117,7 @@ internal object PrayerTabObjEditor : ObjEditor() {
         )
         prayer(
             prayer_objs.piety,
-            varbits.piety,
+            varbits.prayer_piety,
             drain = 24,
             unlock = varbits.kr_knightwaves_state,
             unlockState = 8,
@@ -124,9 +129,9 @@ internal object PrayerTabObjEditor : ObjEditor() {
         )
         prayer(
             prayer_objs.rigour,
-            varbits.rigour,
+            varbits.prayer_rigour,
             drain = 24,
-            unlock = varbits.rigour_unlocked,
+            unlock = varbits.prayer_rigour_unlocked,
             defenceReq = 70,
             "You need a <col=000080>Prayer</col> level of 74, a " +
                 "<col=000080>Defence</col> level of 70, and to have<br>" +
@@ -134,9 +139,9 @@ internal object PrayerTabObjEditor : ObjEditor() {
         )
         prayer(
             prayer_objs.augury,
-            varbits.augury,
+            varbits.prayer_augury,
             drain = 24,
-            unlock = varbits.augury_unlocked,
+            unlock = varbits.prayer_augury_unlocked,
             defenceReq = 70,
             "You need a <col=000080>Prayer</col> level of 77, a " +
                 "<col=000080>Defence</col> level of 70, and to have<br>" +

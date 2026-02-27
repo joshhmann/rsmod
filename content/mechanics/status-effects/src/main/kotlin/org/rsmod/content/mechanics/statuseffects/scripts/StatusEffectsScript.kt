@@ -12,7 +12,7 @@ import org.rsmod.content.mechanics.statuseffects.StatusEffectController
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-private object StatusEffectTimers : TimerReferences() {
+object StatusEffectTimers : TimerReferences() {
     val map_clock = find("map_clock")
 }
 

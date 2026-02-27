@@ -17,26 +17,17 @@ public object AggroTolerance {
     public const val TOLERANCE_ZONE_CLEAR_RADIUS: Int = 2
 
     /**
-     * Returns `true` if [player] has been in the vicinity of [npcCoords] long enough to
-     * have built up tolerance.
+     * Returns `true` if [player] has been in the vicinity of [npcCoords] long enough to have built
+     * up tolerance.
      */
-    public fun isTolerant(
-        player: Player,
-        npcCoords: CoordGrid,
-        currentTick: Int,
-    ): Boolean {
+    public fun isTolerant(player: Player, npcCoords: CoordGrid, currentTick: Int): Boolean {
         val zone = toleranceZoneKey(npcCoords)
         val firstEntry = player.aggroTolerance[zone] ?: return false
         return (currentTick - firstEntry) >= TOLERANCE_TICKS
     }
 
-    /**
-     * Updates the player's tolerance map each tick.
-     */
-    public fun update(
-        player: Player,
-        currentTick: Int,
-    ) {
+    /** Updates the player's tolerance map each tick. */
+    public fun update(player: Player, currentTick: Int) {
         val coords = player.coords
         val currentZone = toleranceZoneKey(coords)
         val playerZoneX = coords.x / TOLERANCE_ZONE_SIZE
@@ -51,9 +42,7 @@ public object AggroTolerance {
         player.aggroTolerance.getOrPut(currentZone) { currentTick }
     }
 
-    /**
-     * Computes a coarse zone key for [coords] using an [TOLERANCE_ZONE_SIZE]-tile grid.
-     */
+    /** Computes a coarse zone key for [coords] using an [TOLERANCE_ZONE_SIZE]-tile grid. */
     public fun toleranceZoneKey(coords: CoordGrid): Long {
         val zoneX = coords.x / TOLERANCE_ZONE_SIZE
         val zoneZ = coords.z / TOLERANCE_ZONE_SIZE

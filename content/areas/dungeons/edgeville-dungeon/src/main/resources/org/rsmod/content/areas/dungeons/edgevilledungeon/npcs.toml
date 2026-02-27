@@ -1,0 +1,288 @@
+# Edgeville Dungeon NPC Spawns
+# Region 48, 51 (southern F2P area) and parts of Wilderness
+# Coordinates format: plane_regionX_regionZ_localX_localZ
+
+# ============================
+# Chaos Druids - Wilderness Area (Northern Edgeville Dungeon)
+# Popular herb farming spot - drops valuable herbs
+# ============================
+
+# Chaos Druid spawn 1 - near the entrance to wilderness area
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_52_10'
+
+# Chaos Druid spawn 2
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_54_12'
+
+# Chaos Druid spawn 3
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_56_14'
+
+# Chaos Druid spawn 4
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_53_16'
+
+# Chaos Druid spawn 5
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_55_18'
+
+# Chaos Druid spawn 6
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_57_20'
+
+# Chaos Druid spawn 7
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_59_22'
+
+# Chaos Druid spawn 8
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_61_24'
+
+# Chaos Druid spawn 9
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_58_26'
+
+# Chaos Druid spawn 10
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_60_28'
+
+# Chaos Druid spawn 11
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_62_30'
+
+# Chaos Druid spawn 12
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_64_32'
+
+# Chaos Druid spawn 13
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_61_34'
+
+# Chaos Druid spawn 14
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_63_36'
+
+# Chaos Druid spawn 15
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_65_38'
+
+# Chaos Druid spawn 16
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_67_40'
+
+# Chaos Druid spawn 17
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_69_42'
+
+# Chaos Druid spawn 18
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_71_44'
+
+# Chaos Druid spawn 19
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_73_46'
+
+# Chaos Druid spawn 20
+[[spawn]]
+npc = 'chaos_druid'
+coords = '0_48_51_75_48'
+
+# ============================
+# Additional Wilderness Area NPCs
+# ============================
+
+# Thugs (level 10) - near chaos druids
+[[spawn]]
+npc = 'thug'
+coords = '0_48_51_50_15'
+
+[[spawn]]
+npc = 'thug'
+coords = '0_48_51_52_18'
+
+[[spawn]]
+npc = 'thug'
+coords = '0_48_51_54_21'
+
+# Deadly Red Spiders (level 34)
+[[spawn]]
+npc = 'deadly_red_spider'
+coords = '0_48_51_65_20'
+
+[[spawn]]
+npc = 'deadly_red_spider'
+coords = '0_48_51_67_23'
+
+[[spawn]]
+npc = 'deadly_red_spider'
+coords = '0_48_51_69_26'
+
+# Skeletons (level 45) - deeper wilderness area
+[[spawn]]
+npc = 'skeleton_wilderness'
+coords = '0_48_51_72_30'
+
+[[spawn]]
+npc = 'skeleton_wilderness'
+coords = '0_48_51_74_33'
+
+[[spawn]]
+npc = 'skeleton_wilderness'
+coords = '0_48_51_76_36'
+
+# Earth Warriors (level 51) - require 15 Agility to access
+[[spawn]]
+npc = 'earth_warrior'
+coords = '0_48_51_78_40'
+
+[[spawn]]
+npc = 'earth_warrior'
+coords = '0_48_51_80_43'
+
+[[spawn]]
+npc = 'earth_warrior'
+coords = '0_48_51_82_46'
+
+[[spawn]]
+npc = 'earth_warrior'
+coords = '0_48_51_84_49'
+
+# Poison Spiders (level 64) - near Chronozon
+[[spawn]]
+npc = 'poison_spider'
+coords = '0_48_51_85_52'
+
+[[spawn]]
+npc = 'poison_spider'
+coords = '0_48_51_87_55'
+
+[[spawn]]
+npc = 'poison_spider'
+coords = '0_48_51_89_58'
+
+# Black Demons (level 172) - deepest part of dungeon
+[[spawn]]
+npc = 'black_demon'
+coords = '0_48_51_90_60'
+
+[[spawn]]
+npc = 'black_demon'
+coords = '0_48_51_92_63'
+
+[[spawn]]
+npc = 'black_demon'
+coords = '0_48_51_94_66'
+
+# ============================
+# Hill Giants - F2P Southern Area (Level 28)
+# Popular F2P training spot - drops big bones
+# Located in the large southern chamber
+# ============================
+
+[[spawn]]
+npc = 'giant'
+coords = '0_48_51_25_40'
+
+[[spawn]]
+npc = 'giant2'
+coords = '0_48_51_28_42'
+
+[[spawn]]
+npc = 'giant3'
+coords = '0_48_51_31_44'
+
+[[spawn]]
+npc = 'giant4'
+coords = '0_48_51_27_46'
+
+[[spawn]]
+npc = 'giant5'
+coords = '0_48_51_30_48'
+
+# ============================
+# Hobgoblins - F2P Southern Area (Level 28)
+# Found near the hill giants
+# ============================
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_48_51_22_35'
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_48_51_24_38'
+
+[[spawn]]
+npc = 'hobgoblin_armed'
+coords = '0_48_51_20_40'
+
+# ============================
+# Skeletons - F2P Southern Area (Level 13, 18, 22)
+# Found in the southern corridors
+# ============================
+
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '0_48_51_18_30'
+
+[[spawn]]
+npc = 'skeleton_unarmed2'
+coords = '0_48_51_20_32'
+
+[[spawn]]
+npc = 'skeleton_armed'
+coords = '0_48_51_16_28'
+
+# ============================
+# Zombies - F2P Southern Area (Level 13, 18, 24)
+# Found in the southern corridors of Edgeville Dungeon
+# ============================
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_48_51_35_35'
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_48_51_37_33'
+
+[[spawn]]
+npc = 'zombie_unarmed3'
+coords = '0_48_51_39_31'
+
+[[spawn]]
+npc = 'zombie_unarmed4'
+coords = '0_48_51_41_29'
+
+[[spawn]]
+npc = 'zombie2'
+coords = '0_48_51_43_27'
+
+[[spawn]]
+npc = 'zombie2_b'
+coords = '0_48_51_33_37'
+
+# Vannaka - Slayer Master (located near entrance)
+[[spawn]]
+npc = 'vannaka'
+coords = '0_48_51_45_45'

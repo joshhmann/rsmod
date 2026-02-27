@@ -1,5 +1,6 @@
 package org.rsmod.server.shared.module
 
+import com.github.michaelbull.logging.InlineLogger
 import com.google.inject.Provider
 import java.nio.file.Files
 import java.nio.file.Path
@@ -21,8 +22,11 @@ object SymbolModule : ExtendedModule() {
 }
 
 private class NameMappingProvider : Provider<NameMapping> {
+    private val logger = InlineLogger()
+
     override fun get(): NameMapping {
         val dirs = shallowSymbolDirectories()
+        logger.info { "Loading symbols from directories: ${dirs.map { it.toString() }}" }
         val areas = dirs.readSymbols("area")
         val bas = dirs.readSymbols("bas")
         val categories = dirs.readSymbols("category")

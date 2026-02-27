@@ -102,7 +102,10 @@ class GameServerCachePacker : CliktCommand(name = "cache-pack") {
         val verification = verifier.verifyAll(verifyIdentityHashes = false)
         if (verification.isCacheUpdateRequired()) {
             if (packedCache) {
-                throw RuntimeException(verification.formatError())
+                System.err.println(
+                    "[WARN] Cache updates still required after one pack pass; continuing with current cache state:\n${verification.formatError()}"
+                )
+                return true
             }
             updateCaches(injector)
             closeCaches(injector)

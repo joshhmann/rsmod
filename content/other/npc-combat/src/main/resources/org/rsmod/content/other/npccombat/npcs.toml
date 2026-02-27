@@ -1,0 +1,313 @@
+# NPC Combat Definitions
+# Chaos Druid and related NPC combat configurations
+
+[[config]]
+npc = 'chaos_druid'
+examine = 'A crazy, evil druid.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'chaos_druid_warrior'
+examine = 'A crazy evil druid.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+[[config]]
+npc = 'wilderness_chaos_druid'
+examine = 'An elder, more dangerous kind of druid.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+# Unicorn - Level 15
+# Found in Barbarian Village pen, non-aggressive
+[[config]]
+npc = 'unicorn'
+examine = 'Horse with a horn.'
+attack_type = 'Crush'
+attack_anim = 289
+attack_sound = 508
+attack_speed = 4
+defend_anim = 290
+defend_sound = 513
+death_anim = 292
+death_sound = 512
+
+# Black Unicorn - Level 27
+# Found in Wilderness, non-aggressive
+[[config]]
+npc = 'black_unicorn'
+examine = 'A unicorn with a blackened heart.'
+attack_type = 'Crush'
+attack_anim = 289
+attack_sound = 508
+attack_speed = 4
+defend_anim = 290
+defend_sound = 513
+death_anim = 292
+death_sound = 512
+
+
+# Mugger - Level 6
+# Aggressive NPC found in Lumbridge, Varrock, Edgeville
+[[config]]
+npc = 'mugger'
+examine = 'He looks a bit shifty.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+# Dwarf - Level 10
+# Found in Dwarven Mine and Ice Mountain, non-aggressive
+[[config]]
+npc = 'dwarf'
+examine = 'A short, angry guy.'
+attack_type = 'Slash'
+attack_anim = 412
+attack_sound = 2566
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+# Bear - Level 21
+# Found in Varrock south, east of Dark Warriors' Fortress
+[[config]]
+npc = 'bear'
+examine = 'A big, scary bear.'
+attack_type = 'Slash'
+attack_anim = 299
+attack_sound = 508
+attack_speed = 4
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+# Zombie - Level 13
+# Found in various locations, aggressive
+[[config]]
+npc = 'zombie'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 5578
+attack_sound = 2566
+attack_speed = 4
+defend_anim = 5579
+defend_sound = 513
+death_anim = 5580
+death_sound = 512
+
+# Barbarian - Level 10
+# Found in Barbarian Village, non-aggressive
+[[config]]
+npc = 'barbarian'
+examine = 'A barbarian warrior.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
+attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+# Roving Moss Giant - Level 42
+# Found in various locations, aggressive
+[[config]]
+npc = 'roving_mossgiant'
+examine = 'A very large and green creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+# Hill Giant - Level 28
+# Popular F2P training monster - drops big bones
+# Found in Edgeville Dungeon, Wilderness, Giants' Plateau
+[[config]]
+npc = 'giant'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'giant2'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'giant3'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'giant4'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'giant5'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'giant6'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+# Wilderness Hill Giant variants
+[[config]]
+npc = 'wilderness_hill_giant'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'wilderness_hill_giant2'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'wilderness_hill_giant3'
+examine = 'A very large creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+# Moss Giant - Level 42
+# Found in Varrock Sewers, Crandor, Wilderness
+[[config]]
+npc = 'mossgiant'
+examine = 'His beard seems to have a life of its own.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'mossgiant2'
+examine = 'His beard seems to have a life of its own.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'mossgiant3'
+examine = 'His beard seems to have a life of its own.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'mossgiant4'
+examine = 'His beard seems to have a life of its own.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+attack_speed = 4
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512

@@ -3,6 +3,7 @@ package org.rsmod.content.travel.canoe.configs
 import org.rsmod.api.config.refs.objs
 import org.rsmod.api.type.builders.enums.EnumBuilder
 import org.rsmod.api.type.refs.enums.EnumReferences
+import org.rsmod.content.travel.canoe.configs.CanoeObjs as canoeObjs
 import org.rsmod.game.type.obj.ObjType
 import org.rsmod.game.type.seq.SeqType
 
@@ -24,12 +25,12 @@ object CanoeEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(80, 250)
             this[objs.adamant_axe] = rate(96, 300)
             this[objs.rune_axe] = rate(112, 350)
-            this[objs.gilded_axe] = rate(112, 350)
+            this[canoeObjs.trail_gilded_axe] = rate(112, 350)
             this[objs.dragon_axe] = rate(112, 350)
-            this[objs.dragon_axe_or] = rate(112, 350)
-            this[objs.third_age_axe] = rate(112, 350)
+            this[canoeObjs.dragon_axe] = rate(112, 350)
+            this[canoeObjs._3a_axe] = rate(112, 350)
             this[objs.infernal_axe] = rate(112, 350)
-            this[objs.infernal_axe_or] = rate(112, 350)
+            this[canoeObjs.infernal_axe] = rate(112, 350)
             this[objs.crystal_axe] = rate(112, 350)
         }
 
@@ -41,12 +42,12 @@ object CanoeEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(80, 250)
             this[objs.adamant_axe] = rate(96, 300)
             this[objs.rune_axe] = rate(112, 350)
-            this[objs.gilded_axe] = rate(112, 350)
+            this[canoeObjs.trail_gilded_axe] = rate(112, 350)
             this[objs.dragon_axe] = rate(112, 350)
-            this[objs.dragon_axe_or] = rate(112, 350)
-            this[objs.third_age_axe] = rate(112, 350)
+            this[canoeObjs.dragon_axe] = rate(112, 350)
+            this[canoeObjs._3a_axe] = rate(112, 350)
             this[objs.infernal_axe] = rate(112, 350)
-            this[objs.infernal_axe_or] = rate(112, 350)
+            this[canoeObjs.infernal_axe] = rate(112, 350)
             this[objs.crystal_axe] = rate(112, 350)
         }
 
@@ -58,12 +59,12 @@ object CanoeEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = canoe_seqs.shape_mithril_axe
             this[objs.adamant_axe] = canoe_seqs.shape_adamant_axe
             this[objs.rune_axe] = canoe_seqs.shape_rune_axe
-            this[objs.gilded_axe] = canoe_seqs.shape_gilded_axe
+            this[canoeObjs.trail_gilded_axe] = canoe_seqs.shape_gilded_axe
             this[objs.dragon_axe] = canoe_seqs.shape_dragon_axe
-            this[objs.dragon_axe_or] = canoe_seqs.shape_dragon_axe_or
-            this[objs.third_age_axe] = canoe_seqs.shape_3a_axe
+            this[canoeObjs.dragon_axe] = canoe_seqs.shape_dragon_axe_or
+            this[canoeObjs._3a_axe] = canoe_seqs.shape_3a_axe
             this[objs.infernal_axe] = canoe_seqs.shape_infernal_axe
-            this[objs.infernal_axe_or] = canoe_seqs.shape_infernal_axe_or
+            this[canoeObjs.infernal_axe] = canoe_seqs.shape_infernal_axe_or
             this[objs.crystal_axe] = canoe_seqs.shape_crystal_axe
         }
     }

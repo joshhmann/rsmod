@@ -2,6 +2,57 @@
 
 **Owner**: Claude (content implementer)
 
+## PROCESS CLEANUP POLICY (REQUIRED)
+
+After any build/test/server run, clean up Java background processes before handoff or task completion.
+
+- Stop Gradle daemons when done with active work:
+  - `cd rsmod && gradlew.bat --stop`
+- If a server was started during the task, stop owned Java server processes before leaving.
+- Do not leave orphaned `java` or Gradle processes between tasks.
+- If cleanup fails, record it in task notes and mark blocked instead of silently continuing.
+
+## SPRINT WORKFLOW (IMPLEMENT -> BUILD -> QA LIST)
+
+Use batch execution per sprint:
+
+1. Implement the full scoped set of code changes first.
+2. Run a single scoped build/verification pass for the sprint.
+3. Produce a concise QA checklist of what must be tested manually/integration.
+4. Only then move to the next sprint.
+
+## QA REFERENCE
+
+- Use `../docs/testing/MASTER_QA_PLAYBOOK.md` for sprint QA sign-off.
+
+## DELEGATION SAFETY RULES (REQUIRED)
+
+Delegate only low-risk skill/content changes to secondary agents (npc dialogue text, shop stock
+lists, spawn placement, and isolated script/config edits).
+
+Do **not** delegate critical work to secondary agents:
+- `content/mechanics/**`
+- `content/interfaces/**` (UI)
+- `api/**` core behavior changes
+- `engine/**`
+- cross-module refactors or protocol-sensitive logic
+
+If a task touches mechanics, UI, networking, death/combat internals, or persistence, keep it with
+the primary maintainer and split out safe subtasks if needed.
+
+## DELEGATED TASK CONTRACT (REQUIRED FOR ALL TASKS)
+
+Any task delegated to another agent/model must include this contract in the assignment:
+
+1. Exact objective (single scoped outcome).
+2. Allowed file list (explicit paths only).
+3. Forbidden paths (`engine/**`, `api/**` core internals, `content/mechanics/**`,
+   `content/interfaces/**`, plus any task-specific exclusions).
+4. Reuse requirement: follow an existing in-repo pattern file.
+5. Validation command (module-scoped Gradle compile/build task).
+6. Output requirement: changed files, key edits, assumptions, unresolved questions.
+7. Uncertainty rule: if uncertain, stop and leave a TODO note instead of guessing.
+
 ## OVERVIEW
 
 Skill plugins for RSMod v2. 10 complete skills (woodcutting, mining, fishing, cooking, firemaking, thieving, prayer, herblore, fletching, smithing).

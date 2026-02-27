@@ -16,6 +16,7 @@ import org.rsmod.content.interfaces.prayer.tab.Prayer
 import org.rsmod.content.interfaces.prayer.tab.PrayerRepository
 import org.rsmod.content.interfaces.prayer.tab.configs.prayer_queues
 import org.rsmod.content.interfaces.prayer.tab.configs.prayer_sounds
+import org.rsmod.content.interfaces.prayer.tab.configs.prayer_varbits
 import org.rsmod.content.interfaces.prayer.tab.util.disablePrayerDrain
 import org.rsmod.content.interfaces.prayer.tab.util.disablePrayerStatRegen
 import org.rsmod.content.interfaces.prayer.tab.util.enablePrayerDrain
@@ -94,7 +95,7 @@ private constructor(
         }
 
         // When all prayers are manually disabled, the quick prayer flag should also be disabled.
-        if (vars[varbits.enabled_prayers] == 0) {
+        if (vars[prayer_varbits.enabled_prayers] == 0) {
             vars[varbits.quickprayer_active] = 0
             disablePrayerDrain()
         }

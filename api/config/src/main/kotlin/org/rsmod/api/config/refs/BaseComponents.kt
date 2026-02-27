@@ -101,4 +101,15 @@ object BaseComponents : ComponentReferences() {
     val quest_scroll_reward5 = find("questscroll:quest_reward5")
     val quest_scroll_reward6 = find("questscroll:quest_reward6")
     val quest_scroll_reward7 = find("questscroll:quest_reward7")
+
+    // Magic Spellbook Teleport Components (interface 218)
+    val spellbook_varrock_teleport = find("magic_spellbook:varrock_teleport")
+    val spellbook_lumbridge_teleport = find("magic_spellbook:lumbridge_teleport")
+    val spellbook_falador_teleport = find("magic_spellbook:falador_teleport")
+    // Magic Spellbook Alchemy Components (interface 218)
+    val spellbook_high_alchemy = find("magic_spellbook:high_alchemy")
+    val spellbook_low_alchemy = find("magic_spellbook:low_alchemy")
+
+    // Magic Spellbook Utility Components (interface 218)
+    val spellbook_superheat = find("magic_spellbook:superheat")
 }

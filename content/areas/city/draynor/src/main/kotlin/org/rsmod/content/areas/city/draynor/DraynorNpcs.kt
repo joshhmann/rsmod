@@ -18,13 +18,21 @@ object DraynorNpcs : NpcReferences() {
     val shop_keeper = find("generalshopkeeper1")
     val shop_assistant = find("generalassistant1")
     val town_crier = find("pmod_town_crier_draynor")
+    val ned = find("ned") // Rope maker
+    val lady_keli = find("lady_keli") // Prince Ali Rescue antagonist
 }
 
 internal object DraynorNpcEditor : NpcEditor() {
     init {
-        edit(draynor_npcs.shop_keeper) { moveRestrict = indoors }
+        edit(draynor_npcs.shop_keeper) {
+            contentGroup = content.shop_keeper
+            moveRestrict = indoors
+        }
 
-        edit(draynor_npcs.shop_assistant) { moveRestrict = indoors }
+        edit(draynor_npcs.shop_assistant) {
+            contentGroup = content.shop_assistant
+            moveRestrict = indoors
+        }
 
         edit(draynor_npcs.banker) { contentGroup = content.banker }
 
@@ -37,5 +45,10 @@ internal object DraynorNpcEditor : NpcEditor() {
         edit(draynor_npcs.count_draynor) { moveRestrict = indoors }
 
         edit(draynor_npcs.town_crier) { wanderRange = 3 }
+
+        edit(draynor_npcs.lady_keli) {
+            moveRestrict = indoors
+            wanderRange = 2
+        }
     }
 }

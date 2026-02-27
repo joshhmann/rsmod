@@ -1,5 +1,10 @@
 package org.rsmod.api.net.rsprot
 
+import com.github.michaelbull.logging.InlineLogger
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicLong
+import java.util.concurrent.atomic.LongAdder
 import net.rsprot.protocol.api.Session
 import net.rsprot.protocol.game.outgoing.info.npcinfo.NpcInfo
 import net.rsprot.protocol.game.outgoing.info.npcinfo.SetNpcUpdateOrigin
@@ -93,15 +98,44 @@ class RspCycle(
     }
 
     override fun flush(player: Player) {
+        if (!RsprotUpdateTelemetry.enabled) {
+            val origin =
+                SetNpcUpdateOrigin(
+                    player.coords.x - player.buildArea.x,
+                    player.coords.z - player.buildArea.z,
+                )
+            session.queue(SetActiveWorldV2(SetActiveWorldV2.RootWorldType(player.level)))
+            session.queue(playerInfo.toPacket())
+            session.queue(origin)
+            session.queue(npcInfo.toPacket(worldId))
+            return
+        }
+
+        val flushStart = System.nanoTime()
         val origin =
             SetNpcUpdateOrigin(
                 player.coords.x - player.buildArea.x,
                 player.coords.z - player.buildArea.z,
             )
+
+        val playerPacketStart = System.nanoTime()
+        val playerPacket = playerInfo.toPacket()
+        val playerPacketNanos = System.nanoTime() - playerPacketStart
+
+        val npcPacketStart = System.nanoTime()
+        val npcPacket = npcInfo.toPacket(worldId)
+        val npcPacketNanos = System.nanoTime() - npcPacketStart
+
         session.queue(SetActiveWorldV2(SetActiveWorldV2.RootWorldType(player.level)))
-        session.queue(playerInfo.toPacket())
+        session.queue(playerPacket)
         session.queue(origin)
-        session.queue(npcInfo.toPacket(worldId))
+        session.queue(npcPacket)
+        RsprotUpdateTelemetry.record(
+            worldId = worldId,
+            flushNanos = System.nanoTime() - flushStart,
+            playerPacketNanos = playerPacketNanos,
+            npcPacketNanos = npcPacketNanos,
+        )
     }
 
     override fun release() {
@@ -406,4 +440,143 @@ class RspCycle(
             info.setWornObj(wearpos.slot, obj.id, objType.wearpos2, objType.wearpos3)
         }
     }
+}
+
+private object RsprotUpdateTelemetry {
+    private val logger = InlineLogger()
+    private const val enabledKey = "rsmod.telemetry.rsprot-updates"
+    private const val intervalKey = "rsmod.telemetry.rsprot-updates.interval-ms"
+
+    val enabled: Boolean = System.getProperty(enabledKey, "false").toBooleanStrictOrNull() == true
+
+    private val logIntervalNanos: Long =
+        TimeUnit.MILLISECONDS.toNanos(
+            System.getProperty(intervalKey, "5000").toLongOrNull()?.coerceAtLeast(1000L) ?: 5000L
+        )
+
+    private val totals = TelemetryBucket()
+    private val perWorld = ConcurrentHashMap<Int, TelemetryBucket>()
+    private val lastLogNanos = AtomicLong(System.nanoTime())
+
+    init {
+        if (enabled) {
+            logger.info {
+                "Enabled rsprot update telemetry " +
+                    "(property `$enabledKey=true`, intervalMs=${TimeUnit.NANOSECONDS.toMillis(logIntervalNanos)})"
+            }
+        }
+    }
+
+    fun record(worldId: Int, flushNanos: Long, playerPacketNanos: Long, npcPacketNanos: Long) {
+        if (!enabled) {
+            return
+        }
+        totals.record(flushNanos, playerPacketNanos, npcPacketNanos)
+        perWorld
+            .computeIfAbsent(worldId) { TelemetryBucket() }
+            .record(flushNanos, playerPacketNanos, npcPacketNanos)
+        maybeLog()
+    }
+
+    private fun maybeLog() {
+        val now = System.nanoTime()
+        val last = lastLogNanos.get()
+        if (now - last < logIntervalNanos) {
+            return
+        }
+        if (!lastLogNanos.compareAndSet(last, now)) {
+            return
+        }
+
+        val snapshot = totals.snapshotAndReset() ?: return
+        val worldBreakdown =
+            perWorld.entries
+                .mapNotNull { (worldId, bucket) ->
+                    val worldSnapshot = bucket.snapshotAndReset() ?: return@mapNotNull null
+                    WorldSnapshot(worldId, worldSnapshot)
+                }
+                .sortedByDescending { it.snapshot.count }
+                .joinToString(separator = ",", limit = 8) {
+                    val world = it.worldId
+                    val worldStats = it.snapshot
+                    "w$world:c=${worldStats.count}|avgP=${formatNanos(worldStats.avgPlayerNanos)}|avgN=${formatNanos(worldStats.avgNpcNanos)}|avgF=${formatNanos(worldStats.avgFlushNanos)}"
+                }
+        val perWorldText = if (worldBreakdown.isBlank()) "none" else worldBreakdown
+
+        logger.info {
+            "rsprot-update-telemetry count=${snapshot.count} " +
+                "avgFlushMs=${formatNanos(snapshot.avgFlushNanos)} maxFlushMs=${formatNanos(snapshot.maxFlushNanos)} " +
+                "avgPlayerToPacketMs=${formatNanos(snapshot.avgPlayerNanos)} maxPlayerToPacketMs=${formatNanos(snapshot.maxPlayerNanos)} " +
+                "avgNpcToPacketMs=${formatNanos(snapshot.avgNpcNanos)} maxNpcToPacketMs=${formatNanos(snapshot.maxNpcNanos)} " +
+                "perWorld=[$perWorldText]"
+        }
+    }
+
+    private data class Snapshot(
+        val count: Long,
+        val avgFlushNanos: Long,
+        val avgPlayerNanos: Long,
+        val avgNpcNanos: Long,
+        val maxFlushNanos: Long,
+        val maxPlayerNanos: Long,
+        val maxNpcNanos: Long,
+    )
+
+    private data class WorldSnapshot(val worldId: Int, val snapshot: Snapshot)
+
+    private class TelemetryBucket {
+        private val flushCount = LongAdder()
+        private val flushNanosTotal = LongAdder()
+        private val playerPacketNanosTotal = LongAdder()
+        private val npcPacketNanosTotal = LongAdder()
+        private val flushNanosMax = AtomicLong(0L)
+        private val playerPacketNanosMax = AtomicLong(0L)
+        private val npcPacketNanosMax = AtomicLong(0L)
+
+        fun record(flushNanos: Long, playerPacketNanos: Long, npcPacketNanos: Long) {
+            flushCount.increment()
+            flushNanosTotal.add(flushNanos)
+            playerPacketNanosTotal.add(playerPacketNanos)
+            npcPacketNanosTotal.add(npcPacketNanos)
+            updateMax(flushNanosMax, flushNanos)
+            updateMax(playerPacketNanosMax, playerPacketNanos)
+            updateMax(npcPacketNanosMax, npcPacketNanos)
+        }
+
+        fun snapshotAndReset(): Snapshot? {
+            val count = flushCount.sumThenReset()
+            if (count <= 0L) {
+                return null
+            }
+            val flushTotal = flushNanosTotal.sumThenReset()
+            val playerTotal = playerPacketNanosTotal.sumThenReset()
+            val npcTotal = npcPacketNanosTotal.sumThenReset()
+            val flushMax = flushNanosMax.getAndSet(0L)
+            val playerMax = playerPacketNanosMax.getAndSet(0L)
+            val npcMax = npcPacketNanosMax.getAndSet(0L)
+            return Snapshot(
+                count = count,
+                avgFlushNanos = flushTotal / count,
+                avgPlayerNanos = playerTotal / count,
+                avgNpcNanos = npcTotal / count,
+                maxFlushNanos = flushMax,
+                maxPlayerNanos = playerMax,
+                maxNpcNanos = npcMax,
+            )
+        }
+    }
+
+    private fun updateMax(target: AtomicLong, value: Long) {
+        while (true) {
+            val current = target.get()
+            if (value <= current) {
+                return
+            }
+            if (target.compareAndSet(current, value)) {
+                return
+            }
+        }
+    }
+
+    private fun formatNanos(nanos: Long): String = "%.3f".format(nanos / 1_000_000.0)
 }

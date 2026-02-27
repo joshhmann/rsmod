@@ -1,5 +1,6 @@
 package org.rsmod.content.other.agentbridge.grounditems
 
+import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import org.rsmod.api.hunt.Hunt
@@ -27,6 +28,8 @@ constructor(
     private val hunt: Hunt,
     private val objTypes: ObjTypeList,
 ) {
+    private val logger = InlineLogger()
+
     companion object {
         private const val DEFAULT_SCAN_RADIUS = 10
         private const val MAX_SCAN_RADIUS = 30
@@ -329,7 +332,7 @@ constructor(
                 pendingActions.getOrPut(playerKey) { java.util.concurrent.ConcurrentLinkedQueue() }
             queue.offer(action)
         } catch (e: Exception) {
-            println("[GroundItemPorcelain] Failed to queue action: ${e.message}")
+            logger.error { "[GroundItemPorcelain] Failed to queue action: ${e.message}" }
         }
     }
 }

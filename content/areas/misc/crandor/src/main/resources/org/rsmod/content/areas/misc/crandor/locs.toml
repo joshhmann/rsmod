@@ -1,0 +1,35 @@
+# Crandor Island Location Definitions
+# Access points and key locations
+
+# ============================
+# KARAMJA VOLCANO SECRET PASSAGE
+# Leads to Elvarg's lair and Crandor
+# Always accessible
+# ============================
+
+[[loc]]
+type = "wall_opening"
+coords = "0_43_50_10_45"
+
+# ============================
+# PORT SARIM BOAT
+# Requires Dragon Slayer I completion
+# ============================
+
+# Boat landing spot on Crandor
+[[loc]]
+type = "boat"
+coords = "0_43_50_5_10"
+
+# ============================
+# FISHING SPOTS
+# Lobster, swordfish, tuna
+# ============================
+
+[[loc]]
+type = "fishing_spot_cage_harpoon"
+coords = "0_43_50_8_8"
+
+[[loc]]
+type = "fishing_spot_cage_harpoon"
+coords = "0_43_50_12_12"

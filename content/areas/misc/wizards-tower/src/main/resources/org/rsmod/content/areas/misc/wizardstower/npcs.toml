@@ -1,0 +1,68 @@
+# Wizards Tower NPC Spawns
+# Located south of Draynor Village, over a bridge
+
+# === GROUND FLOOR ===
+
+# Archmage Sedridor - Head wizard, teleports to Rune Essence Mine
+[[spawn]]
+npc = 'sedridor'
+coords = '0_47_54_35_20'
+direction = 'east'
+
+# Wizard - Level 9, non-aggressive
+[[spawn]]
+npc = 'wizard'
+coords = '0_47_54_30_25'
+direction = 'east'
+
+[[spawn]]
+npc = 'wizard'
+coords = '0_47_54_40_25'
+direction = 'west'
+
+# === FIRST FLOOR ===
+
+# Wizard Mizgog - Imps Cage (Imp Catcher quest)
+[[spawn]]
+npc = 'wizard_mizgog'
+coords = '1_47_54_35_25'
+direction = 'south'
+
+# Traiborn - Freaky Old Wizard (Demon Slayer quest)
+[[spawn]]
+npc = 'traiborn'
+coords = '1_47_54_30_20'
+direction = 'east'
+
+# Wizard - Level 9
+[[spawn]]
+npc = 'wizard'
+coords = '1_47_54_40_30'
+direction = 'west'
+
+# === SECOND FLOOR ===
+
+# Wizard - Level 9
+[[spawn]]
+npc = 'wizard'
+coords = '2_47_54_35_25'
+direction = 'east'
+
+[[spawn]]
+npc = 'wizard'
+coords = '2_47_54_30_30'
+direction = 'south'
+
+# === BASEMENT (Rune Mysteries related) ===
+
+# Lesser Demon - Caged (cannot be attacked, for Rune Mysteries quest)
+# [[spawn]]
+# npc = 'lesser_demon_caged'
+# coords = '0_47_54_35_25'
+# plane = -1
+
+# Rune Guardian - For Rune Mysteries quest
+# [[spawn]]
+# npc = 'rune_guardian'
+# coords = '0_47_54_30_25'
+# plane = -1

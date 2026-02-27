@@ -35,6 +35,15 @@ Before running the server for the first time, you must perform the installation 
 ./gradlew install
 ```
 
+### Sprint Command Policy (Windows)
+Use this exact invocation shape for Gradle during the sprint to keep command approvals stable:
+
+```powershell
+& 'C:\Program Files\PowerShell\7\pwsh.exe' -Command ".\gradlew.bat <args>"
+```
+
+Run commands from the `rsmod/` directory.
+
 ### Running the Server
 To start the game server:
 
@@ -55,6 +64,26 @@ The project includes an extensive test suite. You can run all tests using:
 - `packCache`: Packs the cache files.
 - `generateRsa`: Generates new RSA keys for network security.
 
+### Startup Triage Order (Use This Exactly)
+When server startup fails, follow this sequence before changing unrelated code:
+
+1. Generate missing key if needed:
+   - `.\gradlew.bat generateRsa --console=plain`
+2. Run strict startup once to classify failure:
+   - `.\gradlew.bat :server:app:run --console=plain`
+3. If it fails at cache pack/update (`TypeUpdaterConfigs` / `NpcTypeEncoder`), resolve unresolved `id=-1` type updates first.
+4. If it then fails on identity hash mismatches, rerun with:
+   - `.\gradlew.bat :server:app:run --console=plain --args='--skip-type-verification'`
+5. If it fails on unresolved symbol-name drift, use:
+   - `.\gradlew.bat :server:app:run --console=plain --args='--skip-type-verification --allow-type-verification-failures'`
+6. Record exact blocker output in task notes and create follow-up tasks for hash/symbol cleanup instead of mixing with runtime fixes.
+
+### Current Known Startup Reality (rev233 workspace)
+- Strict startup may fail due to widespread reference hash/name drift not tied to a single module edit.
+- A runnable server path is expected via:
+  - `--skip-type-verification --allow-type-verification-failures`
+- Use strict mode for diagnostics and drift measurement; use flagged mode to unblock integration testing.
+
 ## Development Conventions
 
 ### Mechanical Accuracy
@@ -72,3 +101,66 @@ Avoid using magic numbers (literal IDs) for game objects, NPCs, or items. Use th
 ### Documentation & Resources
 - **`docs/quirks.md`**: Contains a list of known technical quirks, antipatterns, and specific design decisions. Read this before making architectural changes.
 - **`LICENSE.md`**: The project is licensed under the ISC license.
+
+## Multi-Agent Guardrails (Sprint-Critical)
+
+These rules are mandatory when collaborating in the shared sprint workspace.
+
+### Ownership Boundaries
+- Gemini owns: `server/app/`, `api/`, and `engine/`.
+- Do not implement content plugins in `content/` unless explicitly assigned by task coordination.
+
+### Canonical Path Discipline
+- Never create a second module directory that represents the same area/system with a different folder name.
+- Reuse the existing canonical module path from `AGENTS.md` (for example, do not create both `al-kharid/` and `alkharid/` trees).
+- Do not create duplicate Kotlin package roots across different physical module folders.
+
+### Task Focus and Concurrency
+- Keep at most one active `in_progress` task unless a coordinator explicitly requests parallel Gemini work.
+- Before coding: claim task, lock files, then start implementation.
+- If a task prompt does not include an explicit target entity/system and task id, request clarification before editing.
+
+### Task Prompt Contract (Required)
+- Every assignment must include:
+  - exact task id,
+  - exact objective (`Implement <named target>`),
+  - allowed paths,
+  - forbidden paths,
+  - exact insertion point (inside function/class and placement rule),
+  - validation command.
+- Reject vague prompts like `work on skill implementations` with a clarification request.
+
+### Kotlin Edit Pre-Flight (Required)
+- Read target file before editing.
+- Verify refs/handlers/declarations do not already exist.
+- Add only missing entries (no duplicates).
+- Verify file structure after edit:
+  - no orphaned code outside class/object/function blocks,
+  - no duplicate function declarations.
+- Keep path/package canonical:
+  - no duplicate area/module trees,
+  - no duplicate package roots.
+
+### Lock and Blocker Hygiene
+- If blocked or paused for more than 10 minutes, do one of:
+  - post a blocker note in task registry with concrete details, or
+  - release file locks.
+- Blocker notes must include:
+  - exact failing command,
+  - first relevant error line,
+  - impacted file path(s).
+
+### Validation and Cleanup
+- Validation order is mandatory:
+  - `edit -> spotlessApply -> scoped build`.
+- Always run module-scoped Gradle validation for changed scope.
+- After build/test activity, stop daemons:
+  - `./gradlew --stop`
+- If you launched server runtime during testing, stop the Java server process before handoff.
+
+### Reference Hygiene Preflight
+- Run before scoped build when touching refs or content wiring:
+  - `pwsh -File ..\scripts\preflight-ref-hygiene.ps1 -RepoRoot .. -FailOnIssues`
+- Purpose:
+  - catch unresolved `BaseObjs/BaseNpcs/BaseLocs` usages early,
+  - catch known bad symbol-name patterns (`grimy_guam_leaf`, `objs.tuna`, `find(..., -1)`).

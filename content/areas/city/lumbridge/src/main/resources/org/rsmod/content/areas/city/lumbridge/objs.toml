@@ -227,3 +227,15 @@ coords = '0_50_150_11_25'
 [[spawn]]
 obj = 'cabbage'
 coords = '0_50_150_17_22'
+
+# === LUMBRIDGE YEW TREES (Region 50,50) ===
+# Two yew trees behind Lumbridge church (north of cemetery)
+# Approximate OSRS coordinates: (3200, 3210) and (3205, 3210)
+
+[[spawn]]
+obj = 'yewtree'
+coords = '0_50_50_0_10'
+
+[[spawn]]
+obj = 'yewtree'
+coords = '0_50_50_5_10'

@@ -1,6 +1,8 @@
 package org.rsmod.api.registry.zone
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
+import it.unimi.dsi.fastutil.ints.IntArrayList
+import it.unimi.dsi.fastutil.ints.IntList
 import net.rsprot.protocol.message.ZoneProt
 import org.rsmod.game.loc.LocInfo
 import org.rsmod.game.obj.Obj
@@ -10,9 +12,11 @@ import org.rsmod.map.zone.ZoneKey
 
 public class ZoneUpdateMap {
     public val updatedZones: Int2ObjectOpenHashMap<ZoneUpdateList> = Int2ObjectOpenHashMap()
+    private val orderedZones: IntArrayList = IntArrayList()
 
     public fun clear() {
         updatedZones.clear()
+        orderedZones.clear()
     }
 
     public fun locAdd(loc: LocInfo) {
@@ -102,6 +106,11 @@ public class ZoneUpdateMap {
     public operator fun get(zone: ZoneKey): ZoneUpdateList? =
         updatedZones.getOrDefault(zone.packed, null)
 
+    public fun orderedZoneKeys(): IntList = orderedZones
+
     private fun CoordGrid.getOrPutUpdateList(): ZoneUpdateList =
-        updatedZones.computeIfAbsent(ZoneKey.from(this).packed) { ZoneUpdateList() }
+        updatedZones.computeIfAbsent(ZoneKey.from(this).packed) { zone ->
+            orderedZones.add(zone)
+            ZoneUpdateList()
+        }
 }

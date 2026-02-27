@@ -4,9 +4,7 @@ import jakarta.inject.Inject
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class EdgevilleScript
-@Inject
-constructor() : PluginScript() {
+class EdgevilleScript @Inject constructor() : PluginScript() {
     override fun ScriptContext.startup() {
         // NPC interaction handlers can be added here
         // - Banker: default banking behavior

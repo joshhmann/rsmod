@@ -80,6 +80,7 @@ class GameService @Inject constructor(private val process: GameProcess) : Schedu
 
     private companion object {
         private const val GAME_TICK_INTERVAL = 600L
+        // HYGIENE: "game" is a thread name, not an ObjType/NpcType reference
         private const val GAME_THREAD_NAME = "game"
     }
 }

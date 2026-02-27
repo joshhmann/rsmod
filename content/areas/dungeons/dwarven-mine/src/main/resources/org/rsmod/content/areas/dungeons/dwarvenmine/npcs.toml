@@ -1,0 +1,54 @@
+# Dwarven Mine NPC Spawns
+# Located beneath Falador, accessible from north of Falador (Ice Mountain side)
+# Coordinates are in format: plane_regionX_regionZ_localX_localZ
+# Region calculation: regionX = x / 64, regionZ = z / 64
+# Local calculation: localX = x % 64, localZ = z % 64
+# Dwarven Mine spans approximately x=2980-3060, z=9760-9850 (regions 46-47, 152-153)
+
+# ============================
+# Scorpions (Level 14) - F2P
+# Aggressive to players with combat level < 29
+# Found in the southern end of the mine
+# ============================
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_46_152_52_20'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_46_152_55_22'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_46_152_58_24'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_46_152_60_26'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_46_152_50_28'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_46_152_53_30'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_46_152_56_32'
+
+# ============================
+# King Scorpions (Level 32) - F2P
+# Aggressive to players with combat level < 65
+# Two king scorpions in the southernmost area
+# ============================
+
+[[spawn]]
+npc = 'kingscorpion'
+coords = '0_46_152_48_18'
+
+[[spawn]]
+npc = 'kingscorpion'
+coords = '0_46_152_62_20'

@@ -118,7 +118,7 @@ class FoodScript @Inject constructor(private val objTypes: ObjTypeList) : Plugin
 /** Local sequence references for food-related animations. */
 private typealias food_seqs = FoodSeqs
 
-private object FoodSeqs : SeqReferences() {
+object FoodSeqs : SeqReferences() {
     /** Eating animation (seq 829). */
     val human_eat = find("human_eat")
 }

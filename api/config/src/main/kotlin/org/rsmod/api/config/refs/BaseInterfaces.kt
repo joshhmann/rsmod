@@ -11,6 +11,7 @@ object BaseInterfaces : InterfaceReferences() {
 
     val bank_main = find("bankmain", 479914382)
     val bank_side = find("bankside", 1999686874)
+    val bank_depositbox = find("bank_depositbox")
     val bankpin_settings = find("bankpin_settings", 642937557)
 
     val toplevel = find("toplevel", 9223372034726091525)
@@ -45,6 +46,10 @@ object BaseInterfaces : InterfaceReferences() {
     val combat_interface = find("combat_interface", 1846453943)
     val hpbar_hud = find("hpbar_hud", 9223372036744970435)
 
+    val trade_main = find("trademain")
+    val trade_side = find("tradeside")
+    val trade_confirm = find("tradeconfirm")
+
     val account_summary_sidepanel = find("account_summary_sidepanel", 1142196774)
     val area_task = find("area_task", 1628778927)
 
@@ -59,10 +64,13 @@ object BaseInterfaces : InterfaceReferences() {
 
     val popupoverlay = find("popupoverlay", 9223372035707796330)
     val ge_collection_box = find("ge_collect", 9223372036801773648)
+    val ge_exchange_main = find("ge_offers")
+    val ge_exchange_side = find("ge_offers_side")
     val ca_overview = find("ca_overview", 9223372035062537910)
     val collection = find("collection", 1925563159)
     val bond_main = find("bond_main", 9223372036023293853)
     val poh_options = find("poh_options", 9223372035476859568)
     val settings = find("settings", 1605189305)
     val quest_scroll = find("questscroll")
+    val makeover_mage = find("makeover_mage")
 }

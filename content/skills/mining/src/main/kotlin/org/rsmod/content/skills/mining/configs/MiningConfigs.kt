@@ -34,6 +34,7 @@ internal object MiningSeqs : SeqReferences() {
  * Cache sym names are sourced from obj.sym.
  */
 internal object MiningPickaxeObjs : ObjReferences() {
+    val bronze_pickaxe = find("bronze_pickaxe")
     val iron_pickaxe = find("iron_pickaxe")
     val steel_pickaxe = find("steel_pickaxe")
     val black_pickaxe = find("black_pickaxe")
@@ -41,6 +42,10 @@ internal object MiningPickaxeObjs : ObjReferences() {
     val adamant_pickaxe = find("adamant_pickaxe")
     val rune_pickaxe = find("rune_pickaxe")
     val gilded_pickaxe = find("trail_gilded_pickaxe")
+    val _3a_pickaxe = find("3a_pickaxe")
+    val zalcano_pickaxe = find("zalcano_pickaxe")
+    val trailblazer_pickaxe_no_infernal = find("trailblazer_pickaxe_no_infernal")
+    val trailblazer_pickaxe = find("trailblazer_pickaxe")
 }
 
 /**
@@ -54,7 +59,7 @@ internal object MiningPickaxeObjs : ObjReferences() {
  */
 internal object MiningPickaxes : ObjEditor() {
     init {
-        edit(objs.bronze_pickaxe) {
+        edit(MiningPickaxeObjs.bronze_pickaxe) {
             contentGroup = content.mining_pickaxe
             param[params.levelrequire] = 1
             param[params.skill_anim] = MiningSeqs.human_mining_bronze_pickaxe
@@ -102,19 +107,7 @@ internal object MiningPickaxes : ObjEditor() {
             param[params.skill_anim] = MiningSeqs.human_mining_gilded_pickaxe
         }
 
-        edit(objs.dragon_pickaxe) {
-            contentGroup = content.mining_pickaxe
-            param[params.levelrequire] = 61
-            param[params.skill_anim] = MiningSeqs.human_mining_dragon_pickaxe
-        }
-
-        edit(objs.dragon_pickaxe_upgraded) {
-            contentGroup = content.mining_pickaxe
-            param[params.levelrequire] = 61
-            param[params.skill_anim] = MiningSeqs.human_mining_dragon_pickaxe_pretty
-        }
-
-        edit(objs.third_age_pickaxe) {
+        edit(MiningPickaxeObjs._3a_pickaxe) {
             contentGroup = content.mining_pickaxe
             param[params.levelrequire] = 61
             param[params.skill_anim] = MiningSeqs.human_mining_3a_pickaxe
@@ -126,19 +119,19 @@ internal object MiningPickaxes : ObjEditor() {
             param[params.skill_anim] = MiningSeqs.human_mining_infernal_pickaxe
         }
 
-        edit(objs.dragon_pickaxe_or_zalcano) {
+        edit(MiningPickaxeObjs.zalcano_pickaxe) {
             contentGroup = content.mining_pickaxe
             param[params.levelrequire] = 61
             param[params.skill_anim] = MiningSeqs.human_mining_zalcano_pickaxe
         }
 
-        edit(objs.dragon_pickaxe_or_trailblazer) {
+        edit(MiningPickaxeObjs.trailblazer_pickaxe_no_infernal) {
             contentGroup = content.mining_pickaxe
             param[params.levelrequire] = 61
             param[params.skill_anim] = MiningSeqs.human_mining_trailblazer_pickaxe_no_infernal
         }
 
-        edit(objs.infernal_pickaxe_or) {
+        edit(MiningPickaxeObjs.trailblazer_pickaxe) {
             contentGroup = content.mining_pickaxe
             param[params.levelrequire] = 61
             param[params.skill_anim] = MiningSeqs.human_mining_trailblazer_pickaxe

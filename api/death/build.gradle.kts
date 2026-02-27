@@ -10,6 +10,8 @@ dependencies {
     implementation(libs.guice)
     implementation(projects.api.config)
     implementation(projects.api.dropTable)
+    implementation(projects.api.invtx)
+    implementation(projects.api.market)
     implementation(projects.api.npc)
     implementation(projects.api.player)
     implementation(projects.api.playerOutput)
@@ -21,4 +23,5 @@ dependencies {
     implementation(projects.engine.events)
     implementation(projects.engine.game)
     implementation(projects.engine.map)
+    implementation(projects.engine.objtx)
 }

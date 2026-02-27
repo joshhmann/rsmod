@@ -1,0 +1,7 @@
+# Edgeville Loc Spawns
+# Format: plane_regionX_regionY_localX_localY
+
+[[spawn]]
+loc = 'bank_deposit_box'
+coords = '0_47_54_42_29' # Monastery (3050, 3485)
+direction = 'south'

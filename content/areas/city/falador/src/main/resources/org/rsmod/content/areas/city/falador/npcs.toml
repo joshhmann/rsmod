@@ -51,10 +51,30 @@ npc = 'flynn'
 coords = '0_47_52_32_15'
 direction = 'north'
 
+# === CASSIE'S SHIELDS ===
+[[spawn]]
+npc = 'cassie'
+coords = '0_47_52_31_56'
+direction = 'east'
+
 # === SIR AMIK VARZE (White Knights' Castle) ===
 [[spawn]]
 npc = 'sir_amik_varze'
 coords = '0_47_52_42_52'
+direction = 'south'
+
+# === SQUIRE ASROL (White Knights' Castle courtyard) ===
+# The Knight's Sword quest starter
+[[spawn]]
+npc = 'squire'
+coords = '0_47_52_40_54'
+direction = 'south'
+wander = 2
+
+# === SIR VYVIN (White Knights' Castle - 2nd floor) ===
+[[spawn]]
+npc = 'sir_vyvin'
+coords = '2_47_52_42_40'
 direction = 'south'
 
 # === WHITE KNIGHTS (Castle) ===
@@ -138,6 +158,12 @@ npc = 'doric'
 coords = '0_47_52_20_58'
 direction = 'south'
 
+# === FALADOR PARK ===
+[[spawn]]
+npc = 'wyson'
+coords = '0_47_52_48_42'
+direction = 'south'
+
 # === CITIZENS ===
 [[spawn]]
 npc = 'man'
@@ -154,3 +180,14 @@ coords = '0_47_52_30_32'
 [[spawn]]
 npc = 'woman'
 coords = '0_47_52_38_32'
+
+# === GENERAL STORE ===
+[[spawn]]
+npc = 'generalshopkeeper4'
+coords = '0_46_52_13_60'
+direction = 'south'
+
+[[spawn]]
+npc = 'generalassistant4'
+coords = '0_46_52_14_60'
+direction = 'south'

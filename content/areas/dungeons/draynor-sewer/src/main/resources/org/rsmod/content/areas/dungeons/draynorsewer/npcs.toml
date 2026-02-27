@@ -1,0 +1,126 @@
+# Draynor Sewers NPC Spawns
+# Region 48, 51 (Draynor Sewers dungeon)
+# Coordinates format: plane_regionX_regionZ_localX_localZ
+
+# ============================
+# ZOMBIES (Levels 13, 18)
+# Found throughout the sewers
+# ============================
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_48_51_10_15'
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_48_51_15_20'
+
+[[spawn]]
+npc = 'zombie_unarmed3'
+coords = '0_48_51_12_25'
+
+[[spawn]]
+npc = 'zombie2'
+coords = '0_48_51_20_18'
+
+[[spawn]]
+npc = 'zombie2_b'
+coords = '0_48_51_25_22'
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_48_51_30_15'
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_48_51_35_25'
+
+[[spawn]]
+npc = 'zombie2'
+coords = '0_48_51_40_20'
+
+# ============================
+# SKELETONS (Levels 11, 18, 25)
+# Armed skeletons with weapons
+# ============================
+
+[[spawn]]
+npc = 'skeleton_armed'
+coords = '0_48_51_45_15'
+
+[[spawn]]
+npc = 'skeleton_armed2'
+coords = '0_48_51_48_20'
+
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '0_48_51_42_25'
+
+[[spawn]]
+npc = 'skeleton_armed3'
+coords = '0_48_51_50_28'
+
+[[spawn]]
+npc = 'skeleton_unarmed2'
+coords = '0_48_51_45_32'
+
+[[spawn]]
+npc = 'skeleton_armed4'
+coords = '0_48_51_52_25'
+
+[[spawn]]
+npc = 'skeleton_unarmed3'
+coords = '0_48_51_38_30'
+
+[[spawn]]
+npc = 'skeleton_armed5'
+coords = '0_48_51_55_20'
+
+# ============================
+# GIANT RATS (Levels 3, 6)
+# Common low-level monsters
+# ============================
+
+[[spawn]]
+npc = 'giant_rat'
+coords = '0_48_51_5_10'
+
+[[spawn]]
+npc = 'giant_rat_2'
+coords = '0_48_51_8_15'
+
+[[spawn]]
+npc = 'giant_rat_3'
+coords = '0_48_51_10_8'
+
+[[spawn]]
+npc = 'giant_rat'
+coords = '0_48_51_15_12'
+
+[[spawn]]
+npc = 'giant_rat_2'
+coords = '0_48_51_18_18'
+
+# ============================
+# P2P CONTENT - JAIL AREA
+# Poison Spiders (Level 31) and Skeleton Fremennik
+# ============================
+
+# Poison Spiders (P2P only)
+[[spawn]]
+npc = 'poison_spider'
+coords = '0_48_51_55_45'
+
+[[spawn]]
+npc = 'poison_spider'
+coords = '0_48_51_58_48'
+
+[[spawn]]
+npc = 'poison_spider'
+coords = '0_48_51_52_50'
+
+# Skeleton Fremennik (P2P only)
+# TODO: Add skeleton_fremennik variants when available
+# [[spawn]]
+# npc = 'skeleton_fremennik'
+# coords = '0_48_51_56_46'

@@ -1,0 +1,13 @@
+# Demon Slayer Quest NPC Spawns
+
+# Delrith - The demon at the stone circle south of Varrock
+[[spawn]]
+npc = 'delrith'
+coords = '0_50_53_20_56'
+direction = 'south'
+
+# Delrith weakened form (appears after being defeated)
+[[spawn]]
+npc = 'delrith_weakened'
+coords = '0_50_53_20_56'
+direction = 'south'

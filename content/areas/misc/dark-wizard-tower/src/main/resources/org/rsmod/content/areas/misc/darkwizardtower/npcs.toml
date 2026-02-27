@@ -1,0 +1,46 @@
+# Dark Wizards Tower NPC Spawns
+# Located west of Falador, north of Crafting Guild
+# Level 7 and Level 20 Dark Wizards
+
+# === GROUND FLOOR (Level 7 Dark Wizards) ===
+[[spawn]]
+npc = 'young_dark_wizard'
+coords = '0_45_52_25_25'
+direction = 'east'
+
+[[spawn]]
+npc = 'young_dark_wizard'
+coords = '0_45_52_28_28'
+direction = 'west'
+
+[[spawn]]
+npc = 'young_dark_wizard'
+coords = '0_45_52_22_30'
+direction = 'south'
+
+# === FIRST FLOOR (Level 20 Dark Wizards - Bearded) ===
+[[spawn]]
+npc = 'bearded_dark_wizard'
+coords = '1_45_52_25_25'
+direction = 'east'
+
+[[spawn]]
+npc = 'bearded_dark_wizard'
+coords = '1_45_52_28_28'
+direction = 'west'
+
+[[spawn]]
+npc = 'bearded_dark_wizard'
+coords = '1_45_52_22_30'
+direction = 'north'
+
+# === SECOND FLOOR (Mixed levels) ===
+[[spawn]]
+npc = 'bearded_dark_wizard'
+coords = '2_45_52_25_25'
+direction = 'east'
+
+[[spawn]]
+npc = 'young_dark_wizard'
+coords = '2_45_52_28_28'
+direction = 'west'

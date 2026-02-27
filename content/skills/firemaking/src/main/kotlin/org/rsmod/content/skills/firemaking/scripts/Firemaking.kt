@@ -13,7 +13,6 @@ package org.rsmod.content.skills.firemaking.scripts
 
 import jakarta.inject.Inject
 import org.rsmod.api.config.refs.objs
-import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.firemakingLvl
@@ -74,7 +73,7 @@ constructor(
         mes("You attempt to light the logs.")
 
         // Lighting animation — seqs.human_firemaking now in BaseSeqs.kt
-        anim(seqs.human_firemaking)
+        anim(FiremakingSeqs.human_firemaking)
 
         // It takes 3 ticks to light a fire in OSRS vanilla (no fail mechanic post-EOC;
         // the lighting is guaranteed after the animation completes).
@@ -151,7 +150,7 @@ constructor(
                     fireLifespanTicks = 316,
                 ), // TODO: wiki-validate lifespan
                 LogDef(
-                    objs.arctic_pine_logs,
+                    FiremakingObjs.arctic_pine_logs,
                     levelReq = 42,
                     xp = 125.0,
                     fireLifespanTicks = 330,

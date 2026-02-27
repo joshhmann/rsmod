@@ -7511,18 +7511,70 @@ examine = 'It quacks like a duck.'
 [[config]]
 npc = 'lesser_demon'
 examine = 'Lesser, but still pretty big.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 79
+max_damage = 8
+attack_level = 68
+strength_level = 70
+defence_level = 71
 
 [[config]]
 npc = 'lesser_demon2'
 examine = 'Lesser, but still pretty big.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 79
+max_damage = 8
+attack_level = 68
+strength_level = 70
+defence_level = 71
 
 [[config]]
 npc = 'lesser_demon3'
 examine = 'Lesser, but still pretty big.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 79
+max_damage = 8
+attack_level = 68
+strength_level = 70
+defence_level = 71
 
 [[config]]
 npc = 'lesser_demon4'
 examine = 'Lesser, but still pretty big.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 79
+max_damage = 8
+attack_level = 68
+strength_level = 70
+defence_level = 71
 
 [[config]]
 npc = 'soulbane_launa_multi'
@@ -7535,6 +7587,19 @@ examine = 'Where did his boot go?'
 [[config]]
 npc = 'lesser_demon5'
 examine = 'Lesser, but still pretty big.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 79
+max_damage = 8
+attack_level = 68
+strength_level = 70
+defence_level = 71
 
 [[config]]
 npc = 'mdaughter_multi_bear'
@@ -7543,22 +7608,87 @@ examine = 'Is that a bear... or a man?'
 [[config]]
 npc = 'greater_demon'
 examine = 'Big, red, and incredibly evil.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 87
+max_damage = 10
+attack_level = 76
+strength_level = 78
+defence_level = 81
 
 [[config]]
 npc = 'greater_demon2'
 examine = 'Big, purple, and incredibly evil.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 87
+max_damage = 10
+attack_level = 76
+strength_level = 78
+defence_level = 81
 
 [[config]]
 npc = 'greater_demon3'
 examine = 'Big, red, and incredibly evil.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 87
+max_damage = 10
+attack_level = 76
+strength_level = 78
+defence_level = 81
 
 [[config]]
 npc = 'greater_demon4'
 examine = 'Big, red, and incredibly evil.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 87
+max_damage = 10
+attack_level = 76
+strength_level = 78
+defence_level = 81
 
 [[config]]
 npc = 'greater_demon5'
 examine = 'Big, red, and incredibly evil.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 477
+attack_speed = 4
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+hitpoints = 87
+max_damage = 10
+attack_level = 76
+strength_level = 78
+defence_level = 81
 
 [[config]]
 npc = 'greater_demon_strongholdcave_1'
@@ -51617,3 +51747,115 @@ attack_anim = 390
 defend_anim = 388
 death_anim = 836
 aggressive_level = 66
+# ============================================
+# F2P NPC Examine Texts - SYSTEM-LORE
+# ============================================
+
+[[config]]
+npc = 'hundred_aris'
+examine = 'A fortune-teller.'
+
+[[config]]
+npc = 'party_pete'
+examine = 'The life and soul of the party.'
+
+[[config]]
+npc = 'shop_keeper'
+examine = 'The shop keeper.'
+
+[[config]]
+npc = 'shop_assistant'
+examine = 'Helps the shop keeper.'
+
+[[config]]
+npc = 'border_guard'
+examine = 'Guards the border.'
+
+[[config]]
+npc = 'sheep'
+examine = 'White and fluffy.'
+
+[[config]]
+npc = 'giantspider'
+examine = 'I think this spider has been genetically modified.'
+
+[[config]]
+npc = 'hill_giant'
+examine = 'A very large foe.'
+attack_type = 'Crush'
+attack_anim = 4652
+attack_sound = 512
+attack_speed = 6
+defend_anim = 4651
+defend_sound = 513
+death_anim = 4653
+death_sound = 512
+hitpoints = 35
+max_damage = 4
+attack_level = 18
+strength_level = 16
+defence_level = 18
+
+[[config]]
+npc = 'moss_giant'
+examine = 'His beard seems to have a life of its own.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 512
+attack_speed = 6
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+hitpoints = 60
+max_damage = 6
+attack_level = 30
+strength_level = 30
+defence_level = 30
+
+[[config]]
+npc = 'ice_giant'
+examine = "He's got icicles in his beard."
+attack_type = 'Slash'
+attack_anim = 4672
+attack_sound = 512
+attack_speed = 5
+defend_anim = 4671
+defend_sound = 513
+death_anim = 4673
+death_sound = 512
+hitpoints = 70
+max_damage = 7
+attack_level = 40
+strength_level = 40
+defence_level = 40
+
+[[config]]
+npc = 'fire_giant'
+examine = "He's big and he's nasty."
+attack_type = 'Slash'
+attack_anim = 4666
+attack_sound = 512
+attack_speed = 5
+defend_anim = 4665
+defend_sound = 513
+death_anim = 4668
+death_sound = 512
+hitpoints = 111
+max_damage = 11
+attack_level = 65
+strength_level = 65
+defence_level = 65
+
+[[config]]
+npc = 'skeleton'
+examine = 'Could do with gaining a few pounds.'
+
+[[config]]
+npc = 'aggie'
+examine = 'A witch.'
+
+[[config]]
+npc = 'gypsy'
+examine = 'A gypsy fortune-teller.'
+

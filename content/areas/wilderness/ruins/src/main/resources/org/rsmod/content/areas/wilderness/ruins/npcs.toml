@@ -1,0 +1,78 @@
+# Wilderness Ruins NPC Spawns
+# Covers Eastern Ruins (level 25-28), Western Ruins (level 21-24),
+# and Chaos Temple (level 11)
+# Format: plane_regionX_regionY_localX_localZ
+
+# ===============================
+# EASTERN RUINS (level 25-28 Wilderness)
+# Contains: Zombies, Deadly red spiders
+# Features: Furnace, Gold ore spawn, Steel platelegs spawn
+# ===============================
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_49_57_20_20'  # Eastern Ruins - central building
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_49_57_25_25'
+
+[[spawn]]
+npc = 'zombie_unarmed3'
+coords = '0_49_57_30_30'
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_49_57_35_20'
+
+[[spawn]]
+npc = 'deadly_red_spider'
+coords = '0_49_57_22_35'
+
+[[spawn]]
+npc = 'deadly_red_spider'
+coords = '0_49_57_28_38'
+
+[[spawn]]
+npc = 'deadly_red_spider'
+coords = '0_49_57_35_35'
+
+# ===============================
+# WESTERN RUINS / DAREEYAK (level 21-24 Wilderness)
+# Contains: Grizzly bears, Giant rats, Spiders
+# Features: Anvil, scattered planks, Hammer spawn, Cake tin spawn
+# ===============================
+
+[[spawn]]
+npc = 'grizzly_bear'
+coords = '0_46_57_20_25'
+
+[[spawn]]
+npc = 'grizzly_bear'
+coords = '0_46_57_30_30'
+
+[[spawn]]
+npc = 'giant_rat'
+coords = '0_46_57_25_20'
+
+[[spawn]]
+npc = 'giant_rat'
+coords = '0_46_57_35_25'
+
+[[spawn]]
+npc = 'spider'
+coords = '0_46_57_22_35'
+
+[[spawn]]
+npc = 'spider'
+coords = '0_46_57_28_38'
+
+# ===============================
+# CHAOS TEMPLE (level 11 Wilderness)
+# Contains: Elder Chaos druids (members), Zombie pirates (members)
+# Features: Prayer altar, Bone spawns, Team cape seller (Simon)
+# Note: F2P has bones spawns for prayer training
+# ===============================
+
+# Bones spawns are handled as ground items, not NPCs
+# Elder Chaos druids and Zombie pirates are members-only content

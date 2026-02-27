@@ -173,4 +173,123 @@ public object QuestList {
                     extra("2 Quest Points")
                 },
         )
+
+    public val ernest_the_chicken: Quest =
+        Quest(
+            id = 14,
+            name = "Ernest the Chicken",
+            varp = BaseVarps.ernestchicken,
+            maxStage = 3,
+            rewards =
+                questRewards {
+                    item(objs.coins, 300)
+                    extra("4 Quest Points")
+                },
+        )
+
+    public val goblin_diplomacy: Quest =
+        Quest(
+            id = 15,
+            name = "Goblin Diplomacy",
+            varp = BaseVarps.goblinquest,
+            maxStage = 3,
+            rewards =
+                questRewards {
+                    xp(BaseStats.crafting, 200)
+                    item(objs.gold_bar, 1)
+                    extra("5 Quest Points")
+                },
+        )
+
+    public val demon_slayer: Quest =
+        Quest(
+            id = 16,
+            name = "Demon Slayer",
+            varp = BaseVarps.demonstart,
+            maxStage = 4,
+            rewards =
+                questRewards {
+                    extra("3 Quest Points")
+                    extra("Silverlight sword")
+                },
+        )
+
+    public val knights_sword: Quest =
+        Quest(
+            id = 17,
+            name = "The Knight's Sword",
+            varp = BaseVarps.squirequest,
+            maxStage = 7,
+            rewards =
+                questRewards {
+                    xp(BaseStats.smithing, 12725)
+                    extra("1 Quest Point")
+                },
+        )
+
+    public val shield_of_arrav: Quest =
+        Quest(
+            id = 18,
+            name = "Shield of Arrav",
+            varp = BaseVarps.arrav_phoenix, // Needs logic for choosing gang
+            maxStage = 6,
+            rewards =
+                questRewards {
+                    item(objs.coins, 600)
+                    extra("1 Quest Point")
+                },
+        )
+
+    public val misthalin_mystery: Quest =
+        Quest(
+            id = 19,
+            name = "Misthalin Mystery",
+            varp = BaseVarps.misthalin_mystery,
+            maxStage = 10,
+            rewards =
+                questRewards {
+                    extra("1 Quest Point")
+                    extra("Crafting lamp")
+                },
+        )
+
+    public val below_ice_mountain: Quest =
+        Quest(
+            id = 20,
+            name = "Below Ice Mountain",
+            varp = BaseVarps.below_ice_mountain,
+            maxStage = 12,
+            rewards =
+                questRewards {
+                    item(objs.coins, 2000)
+                    extra("1 Quest Point")
+                    extra("Access to the ruins of Camdozaal")
+                },
+        )
+
+    public val x_marks_the_spot: Quest =
+        Quest(
+            id = 21,
+            name = "X Marks the Spot",
+            varp = BaseVarps.x_marks_the_spot,
+            maxStage = 8,
+            rewards =
+                questRewards {
+                    extra("1 Quest Point")
+                    extra("Antique lamp")
+                },
+        )
+
+    public val corsair_curse: Quest =
+        Quest(
+            id = 22,
+            name = "The Corsair Curse",
+            varp = BaseVarps.corsair_curse,
+            maxStage = 15,
+            rewards =
+                questRewards {
+                    extra("2 Quest Points")
+                    extra("Access to Corsair Cove")
+                },
+        )
 }

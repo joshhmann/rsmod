@@ -52,12 +52,14 @@ internal class AgentBridgeTapClient(
     }
 
     private fun readInt(message: Any, property: String): Int? {
+        // HYGIENE: "get" is a JavaBeans reflection prefix, not an ObjType reference
         val getter = "get" + property.replaceFirstChar { it.uppercaseChar() }
         val method = runCatching { message.javaClass.getMethod(getter) }.getOrNull() ?: return null
         return (runCatching { method.invoke(message) }.getOrNull() as? Number)?.toInt()
     }
 
     private fun readString(message: Any, property: String): String? {
+        // HYGIENE: "get" is a JavaBeans reflection prefix, not an ObjType reference
         val getter = "get" + property.replaceFirstChar { it.uppercaseChar() }
         val method = runCatching { message.javaClass.getMethod(getter) }.getOrNull() ?: return null
         return runCatching { method.invoke(message) }.getOrNull() as? String

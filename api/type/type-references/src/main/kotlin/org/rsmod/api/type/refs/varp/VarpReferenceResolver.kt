@@ -47,6 +47,14 @@ constructor(private val nameMapping: NameMapping, private val types: VarpTypeLis
             return ok(FullSuccess)
         }
         if (cacheIdentityHash != supposedHash) {
+            if (supposedHash != null && supposedHash == internalId.toLong()) {
+                TypeResolver[this] = cacheIdentityHash
+                logger.warn {
+                    "  Varplayer($name) legacy hash detected ($supposedHash); " +
+                        "auto-resolved to cache identity hash: $cacheIdentityHash"
+                }
+                return ok(FullSuccess)
+            }
             return issue(CacheTypeHashMismatch(supposedHash, cacheIdentityHash))
         }
         return ok(FullSuccess)

@@ -25,6 +25,16 @@ internal object MiningOreObjs : ObjReferences() {
     val mithril_ore = find("mithril_ore")
     val adamantite_ore = find("adamantite_ore")
     val runite_ore = find("runite_ore")
+    val rune_essence = find("blankrune") // Rune essence (F2P)
+
+    // Gem rock products (uncut gems)
+    val uncut_opal = find("uncut_opal")
+    val uncut_jade = find("uncut_jade")
+    val uncut_red_topaz = find("uncut_red_topaz")
+    val uncut_sapphire = find("uncut_sapphire")
+    val uncut_emerald = find("uncut_emerald")
+    val uncut_ruby = find("uncut_ruby")
+    val uncut_diamond = find("uncut_diamond")
 }
 
 /**
@@ -88,6 +98,13 @@ internal object MiningRockLocs : LocReferences() {
     // Depleted rocks (shared by all ore types — the rock becomes this after depletion)
     val rocks1 = find("rocks1") // depleted variant 1
     val rocks2 = find("rocks2") // depleted variant 2
+
+    // Rune Essence Mine (rocks never deplete)
+    val big_essence_rock = find("big_essence_rock") // loc id 16687
+
+    // Gem rocks (found in Al Kharid, Shilo Village, and Mining Guild)
+    val gemrock1 = find("gemrock1") // loc id 11380
+    val gemrock = find("gemrock") // loc id 11381
 }
 
 /**
@@ -145,6 +162,14 @@ internal object MiningRocks : LocEditor() {
 
         runite(MiningRockLocs.runiterock1, MiningRockLocs.rocks1)
         runite(MiningRockLocs.runiterock2, MiningRockLocs.rocks2)
+
+        // Rune essence rock - never depletes, level 1, 5 XP per essence
+        essenceRock(MiningRockLocs.big_essence_rock)
+
+        // Gem rocks - require 40 Mining, give 65 XP, roll on gem drop table
+        // Found in Al Kharid, Shilo Village, and Mining Guild
+        gemRock(MiningRockLocs.gemrock1, MiningRockLocs.rocks1)
+        gemRock(MiningRockLocs.gemrock, MiningRockLocs.rocks2)
     }
 
     private fun ore(
@@ -199,4 +224,38 @@ internal object MiningRocks : LocEditor() {
 
     private fun runite(type: LocType, depleted: LocType) =
         ore(type, depleted, MiningOreObjs.runite_ore, 85, 125.0, 102, 480, 560)
+
+    private fun essenceRock(type: LocType) {
+        // Essence rocks never deplete (deplete_chance = 0)
+        // No depleted loc since it never depletes
+        edit(type) {
+            contentGroup = content.ore
+            param[params.levelrequire] = 1
+            param[params.skill_xp] = PlayerStatMap.toFineXP(5.0).toInt()
+            param[params.skill_productitem] = MiningOreObjs.rune_essence
+            param[params.next_loc_stage] = type // Points to itself since it never depletes
+            param[params.deplete_chance] = 0 // Never depletes
+            param[params.respawn_time] = 0
+            param[params.respawn_time_low] = 0
+            param[params.respawn_time_high] = 0
+        }
+    }
+
+    private fun gemRock(type: LocType, depleted: LocType) {
+        // Gem rocks use a special marker object to indicate they roll on the gem table
+        // The actual gem is determined at mine-time based on the gem drop table
+        // Level 40 Mining required, 65 XP (same as gold), ~100 tick respawn
+        edit(type) {
+            contentGroup = content.ore
+            param[params.levelrequire] = 40
+            param[params.skill_xp] = PlayerStatMap.toFineXP(65.0).toInt()
+            param[params.skill_productitem] =
+                MiningOreObjs.uncut_sapphire // Placeholder, actual gem from table
+            param[params.next_loc_stage] = depleted
+            param[params.deplete_chance] = 51 // Similar to gold (~1/5 depletion)
+            param[params.respawn_time] = 0
+            param[params.respawn_time_low] = 90 // ~54 seconds
+            param[params.respawn_time_high] = 110 // ~66 seconds
+        }
+    }
 }

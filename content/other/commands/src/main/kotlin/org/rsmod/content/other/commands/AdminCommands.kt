@@ -70,6 +70,7 @@ constructor(
     private val npcRepo: NpcRepository,
     private val names: NameMapping,
     private val update: GameUpdate,
+    private val death: org.rsmod.api.death.PlayerDeath,
 ) : PluginScript() {
     private val logger = InlineLogger()
 
@@ -78,6 +79,7 @@ constructor(
     override fun ScriptContext.startup() {
         onCommand("master", "Max out all stats", ::master)
         onCommand("reset", "Reset all stats", ::reset)
+        onCommand("die", "Trigger death sequence", ::die)
         onCommand("mypos", "Get current coordinates", ::mypos)
         onCommand("tele", "Teleport to coordgrid", ::tele) {
             invalidArgs = "Use as ::tele level mx mz lx lz (ex: 0 50 50 0 0)"
@@ -111,6 +113,9 @@ constructor(
     private fun master(cheat: Cheat) = with(cheat) { player.setStatLevels(level = 99) }
 
     private fun reset(cheat: Cheat) = with(cheat) { player.setStatLevels(level = 1) }
+
+    private fun die(cheat: Cheat) =
+        with(cheat) { protectedAccess.launch(player) { death.death(this) } }
 
     private fun mypos(cheat: Cheat) =
         with(cheat) {
@@ -214,14 +219,14 @@ constructor(
     private fun locDel(cheat: Cheat) =
         with(cheat) {
             val zone = ZoneKey.from(player.coords)
-            val locs = locRepo.findAll(zone).filter { it.coords == player.coords }.toList()
-            if (locs.isEmpty()) {
+            val zoneLocs = locRepo.findAll(zone).filter { it.coords == player.coords }.toList()
+            if (zoneLocs.isEmpty()) {
                 player.mes("No loc found on ${player.coords}")
                 return
             }
             val duration = args[0].toInt()
             val shape = args.getOrNull(1)?.toIntOrNull() ?: LocShape.CentrepieceStraight.id
-            val loc = locs.firstOrNull { it.shapeId == shape }
+            val loc = zoneLocs.firstOrNull { it.shapeId == shape }
             if (loc == null) {
                 player.mes("No loc with shape `${LocShape[shape]}` found on ${player.coords}")
                 return
@@ -275,6 +280,10 @@ constructor(
             val spawned = player.invAdd(player.inv, resolvedType, count, strict = false)
             if (spawned.err is TransactionResult.RestrictedDummyitem) {
                 player.mes("You can't spawn this item!")
+                return
+            }
+            if (!spawned.success) {
+                player.mes("Your inventory is full.")
                 return
             }
             player.mes("Spawned inv obj `$objName` x ${spawned.completed().formatAmount}")

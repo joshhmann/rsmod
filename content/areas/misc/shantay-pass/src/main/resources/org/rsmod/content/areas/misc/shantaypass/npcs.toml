@@ -1,0 +1,38 @@
+# Shantay Pass NPC Spawns
+# Region: 47, 54 (south of Al Kharid)
+
+[[spawn]]
+npc = "shantay"
+coords = "0_47_54_8_47"
+direction = "south"
+
+[[spawn]]
+npc = "shantay_guard"
+coords = "0_47_54_6_46"
+direction = "east"
+
+[[spawn]]
+npc = "shantay_guard"
+coords = "0_47_54_10_46"
+direction = "west"
+
+[[spawn]]
+npc = "shantay_guard_still"
+coords = "0_47_54_7_45"
+direction = "south"
+
+[[spawn]]
+npc = "shantay_guard_still"
+coords = "0_47_54_9_45"
+direction = "south"
+
+# Border guards - preventing F2P access to members desert
+[[spawn]]
+npc = "borderguard1"
+coords = "0_47_54_5_40"
+direction = "south"
+
+[[spawn]]
+npc = "borderguard2"
+coords = "0_47_54_11_40"
+direction = "south"

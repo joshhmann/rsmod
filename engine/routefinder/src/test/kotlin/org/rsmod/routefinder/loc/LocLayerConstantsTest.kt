@@ -11,9 +11,7 @@ class LocLayerConstantsTest {
     fun `ensure all standard shapes are mapped`() {
         val standardShapes = 0..22
         for (shape in standardShapes) {
-            assertDoesNotThrow {
-                LocLayerConstants.of(shape)
-            }
+            assertDoesNotThrow { LocLayerConstants.of(shape) }
         }
     }
 
@@ -26,9 +24,21 @@ class LocLayerConstantsTest {
     @Test
     fun `verify specific mappings`() {
         assertEquals(LocLayerConstants.WALL, LocLayerConstants.of(LocShapeConstants.WALL_STRAIGHT))
-        assertEquals(LocLayerConstants.WALL_DECOR, LocLayerConstants.of(LocShapeConstants.WALLDECOR_STRAIGHT_NOOFFSET))
-        assertEquals(LocLayerConstants.GROUND, LocLayerConstants.of(LocShapeConstants.CENTREPIECE_STRAIGHT))
-        assertEquals(LocLayerConstants.GROUND, LocLayerConstants.of(LocShapeConstants.WALL_DIAGONAL))
-        assertEquals(LocLayerConstants.GROUND_DECOR, LocLayerConstants.of(LocShapeConstants.GROUND_DECOR))
+        assertEquals(
+            LocLayerConstants.WALL_DECOR,
+            LocLayerConstants.of(LocShapeConstants.WALLDECOR_STRAIGHT_NOOFFSET),
+        )
+        assertEquals(
+            LocLayerConstants.GROUND,
+            LocLayerConstants.of(LocShapeConstants.CENTREPIECE_STRAIGHT),
+        )
+        assertEquals(
+            LocLayerConstants.GROUND,
+            LocLayerConstants.of(LocShapeConstants.WALL_DIAGONAL),
+        )
+        assertEquals(
+            LocLayerConstants.GROUND_DECOR,
+            LocLayerConstants.of(LocShapeConstants.GROUND_DECOR),
+        )
     }
 }

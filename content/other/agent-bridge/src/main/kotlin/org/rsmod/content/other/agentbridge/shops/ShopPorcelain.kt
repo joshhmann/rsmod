@@ -1,5 +1,6 @@
 package org.rsmod.content.other.agentbridge.shops
 
+import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import org.rsmod.content.other.agentbridge.AgentBridgeServer
@@ -21,6 +22,8 @@ constructor(
     private val pathfinding: PathfindingService,
     private val objTypes: ObjTypeList,
 ) {
+    private val logger = InlineLogger()
+
     companion object {
         private const val DEFAULT_TIMEOUT_MS = 15000
         private const val SCAN_RADIUS = 16
@@ -305,7 +308,7 @@ constructor(
                 pendingActions.getOrPut(playerKey) { java.util.concurrent.ConcurrentLinkedQueue() }
             queue.offer(action)
         } catch (e: Exception) {
-            println("[ShopPorcelain] Failed to queue action: ${e.message}")
+            logger.error { "[ShopPorcelain] Failed to queue action: ${e.message}" }
         }
     }
 

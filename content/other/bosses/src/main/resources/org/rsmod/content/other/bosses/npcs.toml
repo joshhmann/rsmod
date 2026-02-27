@@ -1,0 +1,42 @@
+# King Black Dragon Boss Combat Configuration
+# Combat Level: 276, HP: 240
+# Located in Wilderness (level 40+)
+
+[[config]]
+npc = 'black_dragon'
+examine = 'One of the biggest, meanest dragons around.'
+attack_type = 'Dragonfire'
+attack_anim = 80
+attack_sound = 408
+attack_speed = 4
+defend_anim = 89
+defend_sound = 410
+death_anim = 92
+death_sound = 412
+
+# KBD has four types of dragonfire attacks:
+# 1. Regular dragonfire - high damage
+# 2. Poison dragonfire - applies poison
+# 3. Ice dragonfire - freezes player
+# 4. Shock dragonfire - drains stats
+
+# Kalphite Queen Boss Combat Configuration
+# Combat Level: 333, HP: 255
+# Located in Kalphite Lair (west of Shantay Pass)
+
+[[config]]
+npc = 'kalphite_queen'
+examine = "I don't think insect repellent will work..."
+attack_type = 'Stab'
+attack_anim = 622
+attack_sound = 395
+attack_speed = 4
+defend_anim = 623
+defend_sound = 397
+death_anim = 625
+death_sound = 400
+
+# Kalphite Queen has two phases:
+# 1. Airborne phase - uses ranged and magic attacks
+# 2. Grounded phase - uses melee and magic attacks
+# Phase transition occurs at 50% HP

@@ -5,6 +5,7 @@ import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.type.editors.loc.LocEditor
 import org.rsmod.api.type.refs.loc.LocReferences
+import org.rsmod.content.skills.woodcutting.configs.WoodcuttingObjs as wcObjs
 import org.rsmod.content.skills.woodcutting.configs.WoodcuttingParams.success_rates
 import org.rsmod.game.stat.PlayerStatMap
 import org.rsmod.game.type.loc.LocType
@@ -114,7 +115,7 @@ internal object WoodcuttingTrees : LocEditor() {
     }
 
     private fun burnt(type: LocType, stump: LocType) {
-        regular(type, stump, objs.charcoal)
+        regular(type, stump, wcObjs.charcoal)
     }
 
     private fun evergreen(type: LocType, stump: LocType) {
@@ -172,7 +173,7 @@ internal object WoodcuttingTrees : LocEditor() {
             param[params.respawn_time] = 15
             param[params.levelrequire] = 42
             param[params.skill_xp] = PlayerStatMap.toFineXP(35.0).toInt()
-            param[params.skill_productitem] = objs.juniper_logs
+            param[params.skill_productitem] = wcObjs.juniper_logs
             param[params.next_loc_stage] = stump
             param[success_rates] = axe_enums.regular_tree_axes
         }
@@ -199,7 +200,7 @@ internal object WoodcuttingTrees : LocEditor() {
             param[params.respawn_time] = 15
             param[params.levelrequire] = 54
             param[params.skill_xp] = PlayerStatMap.toFineXP(40.0).toInt()
-            param[params.skill_productitem] = objs.arctic_pine_logs
+            param[params.skill_productitem] = wcObjs.arctic_pine_log
             param[params.next_loc_stage] = stump
             param[success_rates] = axe_enums.arctic_tree_axes
         }
@@ -265,7 +266,7 @@ internal object WoodcuttingTrees : LocEditor() {
             param[params.respawn_time] = 43
             param[params.levelrequire] = 45
             param[params.skill_xp] = PlayerStatMap.toFineXP(82.5).toInt()
-            param[params.skill_productitem] = objs.bark
+            param[params.skill_productitem] = wcObjs.hollow_bark
             param[params.next_loc_stage] = stump
             param[success_rates] = axe_enums.hollow_tree_axes
         }

@@ -163,13 +163,17 @@ import org.rsmod.game.type.interf.IfEvent
 import org.rsmod.game.type.interf.IfSubType
 import org.rsmod.game.type.interf.InterfaceType
 import org.rsmod.game.type.inv.InvType
+import org.rsmod.game.type.inv.InvTypeList
 import org.rsmod.game.type.jingle.JingleType
 import org.rsmod.game.type.loc.LocType
+import org.rsmod.game.type.loc.LocTypeList
 import org.rsmod.game.type.mesanim.UnpackedMesAnimType
 import org.rsmod.game.type.midi.MidiType
 import org.rsmod.game.type.npc.NpcType
+import org.rsmod.game.type.npc.NpcTypeList
 import org.rsmod.game.type.npc.UnpackedNpcType
 import org.rsmod.game.type.obj.ObjType
+import org.rsmod.game.type.obj.ObjTypeList
 import org.rsmod.game.type.obj.UnpackedObjType
 import org.rsmod.game.type.param.ParamType
 import org.rsmod.game.type.queue.QueueType
@@ -197,6 +201,11 @@ public class ProtectedAccess(
     private val context: ProtectedAccessContext,
 ) {
     public val random: GameRandom by context::random
+
+    public val invTypes: InvTypeList by context::invTypes
+    public val locTypes: LocTypeList by context::locTypes
+    public val npcTypes: NpcTypeList by context::npcTypes
+    public val objTypes: ObjTypeList by context::objTypes
 
     public val coords: CoordGrid by player::coords
     public val mapClock: Int by player::currentMapClock

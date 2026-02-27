@@ -1,0 +1,7 @@
+# Draynor Village Loc Spawns
+# Format: plane_regionX_regionY_localX_localY
+
+[[spawn]]
+loc = 'bank_deposit_box'
+coords = '0_48_50_19_45' # Outside Draynor Bank (3091, 3245)
+direction = 'east'

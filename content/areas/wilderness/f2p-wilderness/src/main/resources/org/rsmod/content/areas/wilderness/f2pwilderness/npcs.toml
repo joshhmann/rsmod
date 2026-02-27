@@ -1,0 +1,171 @@
+# F2P Wilderness NPC Spawns
+# Covers wilderness levels 1-20 (F2P accessible area)
+# Format: plane_regionX_regionY_localX_localZ
+# Coordinates are based on OSRS F2P wilderness spawns
+
+# ===============================
+# HILL GIANTS (Wilderness levels 18-24)
+# Located near the Grand Exchange entrance and Wilderness Ditch
+# ===============================
+
+[[spawn]]
+npc = 'wilderness_hill_giant'
+coords = '0_48_52_30_40'  # Wilderness level ~18, north of GE
+
+[[spawn]]
+npc = 'wilderness_hill_giant2'
+coords = '0_48_52_32_42'  # Wilderness level ~20
+
+[[spawn]]
+npc = 'wilderness_hill_giant3'
+coords = '0_48_52_34_38'  # Wilderness level ~18
+
+[[spawn]]
+npc = 'wilderness_hill_giant'
+coords = '0_48_52_28_44'  # Wilderness level ~22
+
+[[spawn]]
+npc = 'wilderness_hill_giant2'
+coords = '0_48_52_36_46'  # Wilderness level ~24
+
+# ===============================
+# DARK WIZARDS (Wilderness levels 5-12)
+# Located at the Dark Warriors' Fortress and ruins
+# ===============================
+
+[[spawn]]
+npc = 'bearded_dark_wizard'
+coords = '0_47_53_20_25'  # Wilderness level ~5, south ruins
+
+[[spawn]]
+npc = 'young_dark_wizard'
+coords = '0_47_53_22_27'  # Wilderness level ~7
+
+[[spawn]]
+npc = 'bearded_dark_wizard'
+coords = '0_47_53_24_23'  # Wilderness level ~5
+
+[[spawn]]
+npc = 'young_dark_wizard'
+coords = '0_47_53_26_25'  # Wilderness level ~7
+
+[[spawn]]
+npc = 'bearded_dark_wizard'
+coords = '0_47_53_28_28'  # Wilderness level ~10
+
+[[spawn]]
+npc = 'young_dark_wizard'
+coords = '0_47_53_30_30'  # Wilderness level ~12
+
+# ===============================
+# SKELETONS (Wilderness levels 1-15)
+# Scattered throughout the F2P wilderness
+# ===============================
+
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '0_48_52_20_20'  # Wilderness level ~1, near ditch
+
+[[spawn]]
+npc = 'skeleton_unarmed2'
+coords = '0_48_52_22_22'  # Wilderness level ~3
+
+[[spawn]]
+npc = 'skeleton_unarmed3'
+coords = '0_48_52_24_24'  # Wilderness level ~5
+
+[[spawn]]
+npc = 'skeleton_unarmed4'
+coords = '0_48_52_26_26'  # Wilderness level ~7
+
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '0_48_52_28_20'  # Wilderness level ~3
+
+[[spawn]]
+npc = 'skeleton_unarmed2'
+coords = '0_48_52_30_22'  # Wilderness level ~5
+
+[[spawn]]
+npc = 'skeleton_unarmed3'
+coords = '0_49_52_10_30'  # Wilderness level ~8, east side
+
+[[spawn]]
+npc = 'skeleton_unarmed4'
+coords = '0_49_52_12_32'  # Wilderness level ~10
+
+# ===============================
+# ZOMBIES (Wilderness levels 2-18)
+# Found in various ruins and scattered areas
+# ===============================
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_48_52_15_35'  # Wilderness level ~10
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_48_52_17_37'  # Wilderness level ~12
+
+[[spawn]]
+npc = 'zombie_unarmed3'
+coords = '0_48_52_19_39'  # Wilderness level ~14
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_48_52_21_41'  # Wilderness level ~16
+
+[[spawn]]
+npc = 'zombie_unarmed2'
+coords = '0_48_52_23_43'  # Wilderness level ~18
+
+[[spawn]]
+npc = 'zombie_unarmed3'
+coords = '0_49_52_15_25'  # Wilderness level ~6, east side
+
+[[spawn]]
+npc = 'zombie_unarmed'
+coords = '0_49_52_17_27'  # Wilderness level ~8
+
+# ===============================
+# LESSER DEMONS (Wilderness Volcano - levels 40-45)
+# Located at the Wilderness Volcano (F2P P2P boundary)
+# Note: These are at the edge of F2P wilderness
+# ===============================
+
+[[spawn]]
+npc = 'lesser_demon'
+coords = '0_49_53_25_20'  # Wilderness Volcano area
+
+[[spawn]]
+npc = 'lesser_demon2'
+coords = '0_49_53_27_22'  # Wilderness Volcano area
+
+[[spawn]]
+npc = 'lesser_demon3'
+coords = '0_49_53_29_24'  # Wilderness Volcano area
+
+[[spawn]]
+npc = 'lesser_demon'
+coords = '0_49_53_31_20'  # Wilderness Volcano area
+
+# ===============================
+# HOBGOBLINS (Wilderness levels 25-35)
+# Found in hobgoblin areas of wilderness
+# ===============================
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_49_53_10_35'  # Wilderness level ~28
+
+[[spawn]]
+npc = 'hobgoblin_armed'
+coords = '0_49_53_12_37'  # Wilderness level ~30
+
+[[spawn]]
+npc = 'hobgoblin_unarmed'
+coords = '0_49_53_14_39'  # Wilderness level ~32
+
+[[spawn]]
+npc = 'hobgoblin_armed'
+coords = '0_49_53_16_35'  # Wilderness level ~28

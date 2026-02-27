@@ -1,5 +1,6 @@
 package org.rsmod.api.type.builders.map.obj
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap
@@ -48,7 +49,7 @@ constructor(@Toml private val objectMapper: ObjectMapper, private val nameMappin
         }
         return when {
             fileName.endsWith(".toml") -> {
-                decodeTomlSpawn(input)
+                decodeTomlSpawn(input, relativePath)
             }
             fileName.startsWith('o') -> {
                 if (fileName.contains('.')) {
@@ -64,19 +65,22 @@ constructor(@Toml private val objectMapper: ObjectMapper, private val nameMappin
         }
     }
 
-    private fun decodeTomlSpawn(input: InputStream): List<MapSpawnType> {
+    private fun decodeTomlSpawn(input: InputStream, sourcePath: String): List<MapSpawnType> {
         val reference = object : TypeReference<Map<String, List<TomlObjSpawn>>>() {}
         val parsed = input.use { objectMapper.readValue(it, reference) }
-        val spawns = parsed[TOML_SPAWN_KEY]
-        if (spawns == null) {
-            val message = "Could not extract `$TOML_SPAWN_KEY` value from input."
-            throw IOException(message)
-        }
+        val spawns = parsed[TOML_SPAWN_KEY] ?: return emptyList()
         val names = nameMapping.objs
         val grouped = Int2ObjectOpenHashMap<LongArrayList>()
+        val skipped = mutableSetOf<String>()
         for (spawn in spawns) {
-            val obj = names[spawn.obj] ?: error("Invalid obj name '${spawn.obj}' in spawn: $spawn")
-            val grid = MapSquareGrid.from(spawn.coords)
+            val obj =
+                names[spawn.obj]
+                    ?: run {
+                        skipped.add(spawn.obj)
+                        continue
+                    }
+            val coords = parseCoords(spawn.coords)
+            val grid = MapSquareGrid.from(coords)
             val def =
                 MapObjDefinition(
                     id = obj,
@@ -85,9 +89,14 @@ constructor(@Toml private val objectMapper: ObjectMapper, private val nameMappin
                     localZ = grid.z,
                     level = grid.level,
                 )
-            val mapSquare = MapSquareKey.from(spawn.coords)
+            val mapSquare = MapSquareKey.from(coords)
             val spawnList = grouped.computeIfAbsent(mapSquare.id) { LongArrayList() }
             spawnList.add(def.packed)
+        }
+        if (skipped.isNotEmpty()) {
+            System.err.println(
+                "[WARN] Skipped ${skipped.size} unknown obj spawn name(s) in $sourcePath: ${skipped.joinToString()}"
+            )
         }
 
         return grouped.map { MapSpawnType(MapSquareKey(it.key), MapObjListDefinition(it.value)) }
@@ -121,9 +130,28 @@ constructor(@Toml private val objectMapper: ObjectMapper, private val nameMappin
 
     private data class MapSpawnType(val mapSquare: MapSquareKey, val spawns: MapObjListDefinition)
 
-    private data class TomlObjSpawn(val obj: String, val count: Int = 1, val coords: CoordGrid)
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    private data class TomlObjSpawn(val obj: String, val count: Int = 1, val coords: String)
+
+    private fun parseCoords(raw: String): CoordGrid {
+        val parts = raw.split('_')
+        if (parts.size != 5) {
+            throw IllegalArgumentException("Obj spawn coords must be `level_mx_mz_lx_lz`: $raw")
+        }
+        val level = parts[0].toInt()
+        val mx = parts[1].toInt()
+        val mz = parts[2].toInt()
+        val x = parts[3].toInt()
+        val z = parts[4].toInt()
+        return if (x in 0 until MapSquareGrid.LENGTH && z in 0 until MapSquareGrid.LENGTH) {
+            CoordGrid(level, mx, mz, x, z)
+        } else {
+            CoordGrid(x, z, level)
+        }
+    }
 
     private companion object {
+        // HYGIENE: "spawn" is a TOML config key, not an ObjType reference
         const val TOML_SPAWN_KEY = "spawn"
     }
 }

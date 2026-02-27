@@ -1,5 +1,6 @@
 package org.rsmod.content.other.agentbridge.ironman
 
+import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import org.rsmod.content.other.agentbridge.BotAction
@@ -16,6 +17,7 @@ import org.rsmod.content.other.agentbridge.BotAction
  */
 @Singleton
 class IronmanMode @Inject constructor() {
+    private val logger = InlineLogger()
 
     /** Current ironman mode state. */
     @Volatile
@@ -25,7 +27,7 @@ class IronmanMode @Inject constructor() {
     /** Toggle ironman mode on/off. */
     fun toggle(enabled: Boolean) {
         isEnabled = enabled
-        println("[AgentBridge] Ironman mode ${if (enabled) "ENABLED" else "DISABLED"}")
+        logger.info { "[AgentBridge] Ironman mode ${if (enabled) "ENABLED" else "DISABLED"}" }
     }
 
     /**
@@ -52,6 +54,7 @@ class IronmanMode @Inject constructor() {
             // Interactions - all allowed
             is BotAction.InteractLoc -> true
             is BotAction.InteractNpc -> true
+            is BotAction.InteractHeld -> true
 
             // Waiting - all allowed
             is BotAction.WaitTicks -> true

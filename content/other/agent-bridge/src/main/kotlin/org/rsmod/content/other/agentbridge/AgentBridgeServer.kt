@@ -3,9 +3,11 @@ package org.rsmod.content.other.agentbridge
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
+import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import java.net.InetSocketAddress
+import java.net.ServerSocket
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CopyOnWriteArrayList
@@ -33,6 +35,7 @@ private const val PORT = 43595
  * { "player": "TestBot", "type": "teleport", "x": 3222, "z": 3219, "plane": 0 }
  * { "player": "TestBot", "type": "interact_loc", "id": 10820, "x": 3223, "z": 3219, "option": 1 }
  * { "player": "TestBot", "type": "interact_npc", "index": 7, "option": 1 }
+ * { "player": "TestBot", "type": "interact_held", "selected_slot": 0, "target_slot": 1 }
  * { "player": "TestBot", "type": "spawn_item", "item_id": 1511, "count": 1 }
  * { "player": "TestBot", "type": "clear_inventory" }
  * { "player": "TestBot", "type": "ensure_item", "item_id": 1438, "count": 1 }
@@ -45,7 +48,7 @@ private const val PORT = 43595
  */
 @Singleton
 class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
-
+    private val logger = InlineLogger()
     private val mapper: ObjectMapper = ObjectMapper().registerKotlinModule()
     private val clients = CopyOnWriteArrayList<WebSocket>()
     private val started = AtomicBoolean(false)
@@ -59,11 +62,27 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
 
     fun start() {
         if (!started.compareAndSet(false, true)) return
+        if (!isPortAvailable(PORT)) {
+            logger.warn {
+                "[AgentBridge] Port $PORT already in use. Skipping AgentBridge startup for this process."
+            }
+            return
+        }
         val server = buildServer()
         server.isReuseAddr = true
         server.isDaemon = true
         server.start()
     }
+
+    private fun isPortAvailable(port: Int): Boolean =
+        runCatching {
+                ServerSocket().use { socket ->
+                    socket.reuseAddress = true
+                    socket.bind(InetSocketAddress(port))
+                    true
+                }
+            }
+            .getOrDefault(false)
 
     /** Get the current game tick. */
     fun getCurrentTick(): Int = currentTick.get()
@@ -154,7 +173,7 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
             try {
                 mapper.readTree(message)
             } catch (_: Exception) {
-                println("[AgentBridge] Invalid JSON: $message")
+                logger.error { "[AgentBridge] Invalid JSON: $message" }
                 return
             }
 
@@ -182,6 +201,11 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
                         BotAction.InteractNpc(
                             index = node.req("index").asInt(),
                             option = node.get("option")?.asInt() ?: 1,
+                        )
+                    "interact_held" ->
+                        BotAction.InteractHeld(
+                            selectedSlot = node.req("selected_slot").asInt(),
+                            targetSlot = node.req("target_slot").asInt(),
                         )
                     "spawn_item" ->
                         BotAction.SpawnItem(
@@ -278,12 +302,12 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
                         BotAction.SetCombatStyle(style = node.req("style").asText())
                     "get_state" -> BotAction.GetState
                     else -> {
-                        println("[AgentBridge] Unknown action type: $type")
+                        logger.info { "[AgentBridge] Unknown action type: $type" }
                         return
                     }
                 }
             } catch (e: IllegalArgumentException) {
-                println("[AgentBridge] Missing field in $type action: ${e.message}")
+                logger.error { "[AgentBridge] Missing field in $type action: ${e.message}" }
                 return
             }
 
@@ -297,12 +321,12 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
         object : WebSocketServer(InetSocketAddress(PORT)) {
             override fun onOpen(conn: WebSocket, handshake: ClientHandshake) {
                 clients.add(conn)
-                println("[AgentBridge] Agent connected: ${conn.remoteSocketAddress}")
+                logger.info { "[AgentBridge] Agent connected: ${conn.remoteSocketAddress}" }
             }
 
             override fun onClose(conn: WebSocket, code: Int, reason: String, remote: Boolean) {
                 clients.remove(conn)
-                println("[AgentBridge] Agent disconnected: ${conn.remoteSocketAddress}")
+                logger.info { "[AgentBridge] Agent disconnected: ${conn.remoteSocketAddress}" }
             }
 
             override fun onMessage(conn: WebSocket, message: String) {
@@ -311,11 +335,11 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
 
             override fun onError(conn: WebSocket?, ex: Exception) {
                 // Log errors silently — don't crash the game server.
-                println("[AgentBridge] WebSocket error: ${ex.message}")
+                logger.error { "[AgentBridge] WebSocket error: ${ex.message}" }
             }
 
             override fun onStart() {
-                println("[AgentBridge] WebSocket server listening on port $PORT")
+                logger.info { "[AgentBridge] WebSocket server listening on port $PORT" }
             }
         }
 

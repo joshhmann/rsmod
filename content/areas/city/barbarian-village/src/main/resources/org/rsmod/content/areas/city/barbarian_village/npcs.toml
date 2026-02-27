@@ -1,0 +1,124 @@
+# Barbarian Village NPC Spawns
+# Region 48, 53 (Barbarian Village)
+# Format: plane_regionX_regionY_localX_localY
+
+# === UNICORN PEN (East side of village) ===
+# Unicorns for herblore - drop unicorn horns
+[[spawn]]
+npc = 'unicorn'
+coords = '0_48_53_30_54'
+direction = 'south'
+
+[[spawn]]
+npc = 'unicorn'
+coords = '0_48_53_34_56'
+direction = 'west'
+
+# === BARBARIANS (Levels 9, 10, 15, 17) ===
+# Barbarians are aggressive NPCs found throughout the village
+# Using fai_barbarian variants for different levels
+
+# Level 9 Barbarian (barbarian)
+[[spawn]]
+npc = 'barbarian'
+coords = '0_48_53_22_22'
+direction = 'south'
+
+[[spawn]]
+npc = 'barbarian'
+coords = '0_48_53_25_18'
+direction = 'west'
+
+[[spawn]]
+npc = 'barbarian'
+coords = '0_48_53_28_24'
+direction = 'east'
+
+# Level 10 Barbarians (fai_barbarian_1, fai_barbarian_2, fai_barbarian_3)
+[[spawn]]
+npc = 'fai_barbarian_1'
+coords = '0_48_53_20_28'
+direction = 'north'
+
+[[spawn]]
+npc = 'fai_barbarian_2'
+coords = '0_48_53_24_32'
+direction = 'south'
+
+[[spawn]]
+npc = 'fai_barbarian_3'
+coords = '0_48_53_30_20'
+direction = 'west'
+
+[[spawn]]
+npc = 'fai_barbarian_1'
+coords = '0_48_53_35_25'
+direction = 'east'
+
+[[spawn]]
+npc = 'fai_barbarian_2'
+coords = '0_48_53_32_30'
+direction = 'north'
+
+# Level 15 Barbarian (fai_barbarian_5)
+[[spawn]]
+npc = 'fai_barbarian_5'
+coords = '0_48_53_18_35'
+direction = 'south'
+
+[[spawn]]
+npc = 'fai_barbarian_5'
+coords = '0_48_53_22_38'
+direction = 'west'
+
+# Level 17 Barbarian (fai_barbarian_4)
+[[spawn]]
+npc = 'fai_barbarian_4'
+coords = '0_48_53_28_42'
+direction = 'east'
+
+[[spawn]]
+npc = 'fai_barbarian_4'
+coords = '0_48_53_35_38'
+direction = 'north'
+
+# === FISHING SPOTS (East of village, on the river) ===
+# Lure/Bait spots for trout/salmon/pike fishing
+[[spawn]]
+npc = '0_50_50_lurefish'
+coords = '0_48_53_50_24'
+direction = 'south'
+
+[[spawn]]
+npc = '0_50_50_lurefish'
+coords = '0_48_53_52_28'
+direction = 'west'
+
+[[spawn]]
+npc = '0_50_50_lurefish'
+coords = '0_48_53_54_22'
+direction = 'east'
+
+[[spawn]]
+npc = '0_50_50_lurefish'
+coords = '0_48_53_56_26'
+direction = 'north'
+
+# === TASSIE SLIPCAST (Pottery studio) ===
+# Tassie Slipcast - pottery instructor for Crafting
+[[spawn]]
+npc = 'favour_tassie_slipcast'
+coords = '0_48_53_42_42'
+direction = 'south'
+
+# === STRONGHOLD OF SECURITY ENTRANCE ===
+# Entrance located in the center of the village
+# (The hole in the ground - no NPCs, just a loc)
+
+# === FIREMAKING AREA ===
+# The long hall has a fire that never goes out
+# This is handled by static locs, not NPCs
+
+# === SPINNING WHEEL HUT ===
+# Located in the south-east part of the village
+# The spinning wheel is a loc, not an NPC

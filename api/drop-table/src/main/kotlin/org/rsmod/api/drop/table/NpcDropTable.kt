@@ -23,7 +23,7 @@ public open class NpcDropTable(
      * Roll the table and return the list of [DroppedItem] instances. Always-drops are always
      * included. One weighted table roll is performed if [tables] is non-empty.
      */
-    public fun roll(random: GameRandom): List<DroppedItem> {
+    public open fun roll(random: GameRandom): List<DroppedItem> {
         val results = mutableListOf<DroppedItem>()
 
         // Guaranteed drops — always included.

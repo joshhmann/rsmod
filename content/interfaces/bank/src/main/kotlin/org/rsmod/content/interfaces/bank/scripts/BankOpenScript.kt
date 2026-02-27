@@ -41,6 +41,7 @@ constructor(
     private val objTypes: ObjTypeList,
     private val wornBonuses: WornBonuses,
     private val weaponSpeeds: WeaponSpeeds,
+    private val bankPinScript: BankPinScript,
 ) : PluginScript() {
     private val Player.bank
         get() = invMap.getOrPut(invTypes[invs.bank])
@@ -51,9 +52,17 @@ constructor(
         // `onBankOpen` occurs on `bank_side` trigger for emulation purposes.
         onIfOpen(interfaces.bank_side) { player.onBankOpen() }
         onIfClose(interfaces.bank_main) { player.onBankClose() }
+        onIfOpen(interfaces.bank_depositbox) { player.onDepositBoxOpen() }
+        onIfClose(interfaces.bank_depositbox) { player.onDepositBoxClose() }
     }
 
     private fun Player.onBankOpen() {
+        // Check if PIN verification is required before opening bank
+        if (bankPinScript.requiresPinEntry(this)) {
+            bankPinScript.openPinVerification(this)
+            return
+        }
+
         if (!disableIfEvents) {
             val capacityIncrease = bank_constants.purchasable_capacity
             withdrawCert = false
@@ -71,6 +80,14 @@ constructor(
         }
 
         startInvTransmit(bank)
+    }
+
+    private fun Player.onDepositBoxOpen() {
+        setBankIfEvents()
+    }
+
+    private fun Player.onDepositBoxClose() {
+        queue(bank_queues.bank_compress, 1)
     }
 
     private fun Player.onBankClose() {
@@ -177,5 +194,21 @@ constructor(
 
         ifSetEvents(bank_components.incinerator_confirm, 1..bank.size, IfEvent.Op1)
         ifSetEvents(bank_components.bank_tab_display, 0..8, IfEvent.Op1)
+        ifSetEvents(
+            bank_components.deposit_box_inventory,
+            inv.indices,
+            IfEvent.Op1,
+            IfEvent.Op2,
+            IfEvent.Op3,
+            IfEvent.Op4,
+            IfEvent.Op5,
+            IfEvent.Op6,
+            IfEvent.Op7,
+            IfEvent.Op8,
+            IfEvent.Op9,
+            IfEvent.Op10,
+            IfEvent.Depth1,
+            IfEvent.DragTarget,
+        )
     }
 }

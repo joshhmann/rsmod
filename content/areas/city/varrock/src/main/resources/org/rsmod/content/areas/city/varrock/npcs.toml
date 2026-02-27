@@ -91,7 +91,7 @@ npc = 'apothecary'
 coords = '0_50_53_16_20'
 direction = 'east'
 
-# === ROMEO & JULIET (Romeo in square, Juliet in house) ===
+# === ROMEO & JULIET (Romeo in square, Juliet upstairs in house) ===
 [[spawn]]
 npc = 'romeo'
 coords = '0_50_53_32_20'
@@ -99,7 +99,7 @@ direction = 'south'
 
 [[spawn]]
 npc = 'juliet'
-coords = '0_50_53_46_16'
+coords = '1_50_53_46_16'
 direction = 'south'
 
 # === FATHER LAWRENCE (Church north-east) ===
@@ -155,3 +155,28 @@ coords = '0_50_53_22_50'
 [[spawn]]
 npc = 'cat'
 coords = '0_50_53_30_15'
+
+# === BLUE MOON INN (South Varrock) ===
+[[spawn]]
+npc = 'dr_harlow'
+coords = '0_51_53_30_46'
+direction = 'west'
+
+# === DEMON SLAYER QUEST NPCs ===
+# Gypsy Aris - Varrock Square (near the fountain)
+[[spawn]]
+npc = 'hundred_aris'
+coords = '0_50_53_38_22'
+direction = 'south'
+
+# Sir Prysin - Varrock Palace (ground floor)
+[[spawn]]
+npc = 'sir_prysin'
+coords = '0_50_53_46_8'
+direction = 'west'
+
+# Captain Rovin - Varrock Palace (northwest tower, upstairs)
+[[spawn]]
+npc = 'captain_rovin'
+coords = '1_50_53_42_4'
+direction = 'south'

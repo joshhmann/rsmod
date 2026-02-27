@@ -1,0 +1,17 @@
+# Ernest the Chicken Quest Item Spawns
+# Draynor Manor area
+
+# Fish food - 1st floor, room south of main staircase
+[[spawn]]
+obj = 'fish_food'
+coords = '1_48_52_17_38'
+
+# Poison - ground floor, north-west room
+[[spawn]]
+obj = 'poison'
+coords = '0_48_52_16_45'
+
+# Spade - ground floor, south-east room
+[[spawn]]
+obj = 'spade'
+coords = '0_48_52_24_32'

@@ -1,5 +1,6 @@
 package org.rsmod.content.other.agentbridge.banking
 
+import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import org.rsmod.content.other.agentbridge.AgentBridgeServer
@@ -16,6 +17,8 @@ import org.rsmod.game.entity.Player
 class BankPorcelain
 @Inject
 constructor(private val server: AgentBridgeServer, private val pathfinding: PathfindingService) {
+    private val logger = InlineLogger()
+
     companion object {
         private const val DEFAULT_TIMEOUT_MS = 15000
         private const val SCAN_RADIUS = 16
@@ -304,7 +307,7 @@ constructor(private val server: AgentBridgeServer, private val pathfinding: Path
                 pendingActions.getOrPut(playerKey) { java.util.concurrent.ConcurrentLinkedQueue() }
             queue.offer(action)
         } catch (e: Exception) {
-            println("[BankPorcelain] Failed to queue action: ${e.message}")
+            logger.error { "[BankPorcelain] Failed to queue action: ${e.message}" }
         }
     }
 

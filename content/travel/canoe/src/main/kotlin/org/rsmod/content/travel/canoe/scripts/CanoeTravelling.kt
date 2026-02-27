@@ -199,13 +199,13 @@ constructor(
     private val npcTypes: NpcTypeList,
 ) {
     fun startup(ctx: ScriptContext) {
-        ctx.onAiTimer(canoe_npcs.cave_scenery_1) { npc.onSceneryTimer() }
-        ctx.onAiTimer(canoe_npcs.cave_scenery_2) { npc.onSceneryTimer() }
-        ctx.onAiTimer(canoe_npcs.cave_scenery_3) { npc.onSceneryTimer() }
-        ctx.onAiTimer(canoe_npcs.tree_scenery_1) { npc.onSceneryTimer() }
-        ctx.onAiTimer(canoe_npcs.tree_scenery_2) { npc.onSceneryTimer() }
-        ctx.onAiTimer(canoe_npcs.bullrush_scenery_1) { npc.onSceneryTimer() }
-        ctx.onAiTimer(canoe_npcs.bullrush_scenery_2) { npc.onSceneryTimer() }
+        ctx.onAiTimer(canoe_npcs.canoeing_cave_scenery_1) { npc.onSceneryTimer() }
+        ctx.onAiTimer(canoe_npcs.canoeing_cave_scenery_2) { npc.onSceneryTimer() }
+        ctx.onAiTimer(canoe_npcs.canoeing_cave_scenery_3) { npc.onSceneryTimer() }
+        ctx.onAiTimer(canoe_npcs.canoeing_scenery_1) { npc.onSceneryTimer() }
+        ctx.onAiTimer(canoe_npcs.canoeing_scenery_2) { npc.onSceneryTimer() }
+        ctx.onAiTimer(canoe_npcs.canoeing_bullrush) { npc.onSceneryTimer() }
+        ctx.onAiTimer(canoe_npcs.canoeing_bullrush_leaf) { npc.onSceneryTimer() }
     }
 
     suspend fun start(access: ProtectedAccess, dest: CanoeDestination, type: CutsceneType) {
@@ -421,24 +421,24 @@ constructor(
     private fun constructGrassSceneryNpcs(region: Region): List<SceneryNpc> {
         val npcs = canoe_npcs
         return listOf(
-            SceneryNpc(npcs.bullrush_scenery_1, region.normal[0, 28, 70, 28, 36], duration = 7),
-            SceneryNpc(npcs.bullrush_scenery_2, region.normal[0, 28, 70, 27, 36], duration = 7),
-            SceneryNpc(npcs.tree_scenery_1, region.normal[0, 28, 70, 30, 36], duration = 7),
-            SceneryNpc(npcs.tree_scenery_2, region.normal[0, 28, 70, 29, 23], duration = 21),
+            SceneryNpc(npcs.canoeing_bullrush, region.normal[0, 28, 70, 28, 36], duration = 7),
+            SceneryNpc(npcs.canoeing_bullrush_leaf, region.normal[0, 28, 70, 27, 36], duration = 7),
+            SceneryNpc(npcs.canoeing_scenery_1, region.normal[0, 28, 70, 30, 36], duration = 7),
+            SceneryNpc(npcs.canoeing_scenery_2, region.normal[0, 28, 70, 29, 23], duration = 21),
             SceneryNpc(
-                type = npcs.tree_scenery_1,
+                type = npcs.canoeing_scenery_1,
                 coords = region.normal[0, 28, 70, 29, 19],
                 duration = 25,
                 delay = 7,
             ),
             SceneryNpc(
-                type = npcs.bullrush_scenery_2,
+                type = npcs.canoeing_bullrush_leaf,
                 coords = region.normal[0, 28, 70, 27, 24],
                 duration = 25,
                 delay = 10,
             ),
             SceneryNpc(
-                type = npcs.bullrush_scenery_1,
+                type = npcs.canoeing_bullrush,
                 coords = region.normal[0, 28, 70, 28, 20],
                 duration = 25,
                 delay = 10,
@@ -450,30 +450,30 @@ constructor(
         val npcs = canoe_npcs
         return listOf(
             SceneryNpc(
-                type = npcs.cave_scenery_1,
+                type = npcs.canoeing_cave_scenery_1,
                 coords = region.normal[0, 28, 70, 50, 9],
                 duration = 14,
             ),
             SceneryNpc(
-                type = npcs.cave_scenery_2,
+                type = npcs.canoeing_cave_scenery_2,
                 coords = region.normal[0, 28, 70, 54, 8],
                 duration = 14,
                 delay = 1,
             ),
             SceneryNpc(
-                type = npcs.cave_scenery_1,
+                type = npcs.canoeing_cave_scenery_1,
                 coords = region.normal[0, 28, 70, 50, 2],
                 duration = 14,
                 delay = 2,
             ),
             SceneryNpc(
-                type = npcs.cave_scenery_2,
+                type = npcs.canoeing_cave_scenery_2,
                 coords = region.normal[0, 28, 70, 54, 4],
                 duration = 14,
                 delay = 3,
             ),
             SceneryNpc(
-                type = npcs.cave_scenery_3,
+                type = npcs.canoeing_cave_scenery_3,
                 coords = region.normal[0, 28, 70, 54, 0],
                 duration = 14,
                 delay = 5,

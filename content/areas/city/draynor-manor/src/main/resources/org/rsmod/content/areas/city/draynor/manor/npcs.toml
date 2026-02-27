@@ -1,0 +1,117 @@
+# Draynor Manor NPC Spawns
+# Region 50, 48 (Draynor Manor area)
+# Format: plane_regionX_regionY_localX_localZ
+
+# ============================================
+# GROUND FLOOR (plane 0)
+# ============================================
+
+# Skeletons - Ground floor
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '0_50_48_12_28'
+direction = 'south'
+
+[[spawn]]
+npc = 'skeleton_unarmed2'
+coords = '0_50_48_18_32'
+direction = 'east'
+
+[[spawn]]
+npc = 'skeleton_unarmed3'
+coords = '0_50_48_25_25'
+direction = 'north'
+
+[[spawn]]
+npc = 'skeleton_armed'
+coords = '0_50_48_30_30'
+direction = 'west'
+
+# Ghosts - Ground floor
+[[spawn]]
+npc = 'ghost'
+coords = '0_50_48_15_35'
+direction = 'south'
+
+[[spawn]]
+npc = 'ghost2'
+coords = '0_50_48_22_38'
+direction = 'east'
+
+# ============================================
+# FIRST FLOOR (plane 1)
+# ============================================
+
+# Skeletons - First floor
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '1_50_48_14_26'
+direction = 'north'
+
+[[spawn]]
+npc = 'skeleton_armed2'
+coords = '1_50_48_28_34'
+direction = 'west'
+
+# Ghosts - First floor
+[[spawn]]
+npc = 'ghost'
+coords = '1_50_48_20_30'
+direction = 'south'
+
+[[spawn]]
+npc = 'ghost3'
+coords = '1_50_48_32_22'
+direction = 'east'
+
+# ============================================
+# SECOND FLOOR (plane 2)
+# ============================================
+
+# Ghosts - Second floor
+[[spawn]]
+npc = 'ghost2'
+coords = '2_50_48_18_28'
+direction = 'north'
+
+[[spawn]]
+npc = 'ghost3'
+coords = '2_50_48_26_32'
+direction = 'west'
+
+# ============================================
+# BASEMENT (plane 0, different region)
+# ============================================
+
+# Skeletons - Basement
+[[spawn]]
+npc = 'skeleton_unarmed'
+coords = '0_50_47_12_20'
+direction = 'south'
+
+[[spawn]]
+npc = 'skeleton_armed'
+coords = '0_50_47_20_24'
+direction = 'east'
+
+# ============================================
+# OUTSIDE THE MANOR
+# ============================================
+
+# Tree Spirit - aggressive tree outside manor (level 101)
+[[spawn]]
+npc = 'tree_spirit'
+coords = '0_50_48_8_42'
+direction = 'south'
+
+# Witch - near the witch's house (level 25)
+[[spawn]]
+npc = 'witch1'
+coords = '0_50_48_45_48'
+direction = 'west'
+
+# Count Draynor - in his coffin room (Vampyre Slayer boss)
+[[spawn]]
+npc = 'count_draynor'
+coords = '0_50_48_32_44'
+direction = 'south'

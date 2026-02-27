@@ -263,26 +263,28 @@ constructor(
     )
 
     private fun List<*>.toUpdateMap(): UpdateMap {
-        val invs = filterIsInstance<UnpackedInvType>()
-        val locs = filterIsInstance<UnpackedLocType>()
-        val npcs = filterIsInstance<UnpackedNpcType>()
-        val objs = filterIsInstance<UnpackedObjType>()
-        val stats = filterIsInstance<UnpackedStatType>()
-        val areas = filterIsInstance<UnpackedAreaType>()
-        val hunt = filterIsInstance<UnpackedHuntModeType>()
-        val enums = filterIsInstance<UnpackedEnumType<*, *>>()
-        val params = filterIsInstance<UnpackedParamType<*>>()
-        val varps = filterIsInstance<UnpackedVarpType>()
-        val varbits = filterIsInstance<UnpackedVarBitType>()
-        val varns = filterIsInstance<UnpackedVarnType>()
-        val varnbits = filterIsInstance<UnpackedVarnBitType>()
-        val headbars = filterIsInstance<UnpackedHeadbarType>()
-        val hitmarks = filterIsInstance<UnpackedHitmarkType>()
-        val projanims = filterIsInstance<UnpackedProjAnimType>()
-        val walkTrig = filterIsInstance<WalkTriggerType>()
-        val dbRows = filterIsInstance<UnpackedDbRowType>()
-        val dbTables = filterIsInstance<UnpackedDbTableType>()
-        val modLevels = filterIsInstance<UnpackedModLevelType>()
+        // Unresolved references can surface as synthetic updates with id=-1; never forward those
+        // into cache encoders.
+        val invs = filterIsInstance<UnpackedInvType>().filter { it.id >= 0 }
+        val locs = filterIsInstance<UnpackedLocType>().filter { it.id >= 0 }
+        val npcs = filterIsInstance<UnpackedNpcType>().filter { it.id >= 0 }
+        val objs = filterIsInstance<UnpackedObjType>().filter { it.id >= 0 }
+        val stats = filterIsInstance<UnpackedStatType>().filter { it.id >= 0 }
+        val areas = filterIsInstance<UnpackedAreaType>().filter { it.id >= 0 }
+        val hunt = filterIsInstance<UnpackedHuntModeType>().filter { it.id >= 0 }
+        val enums = filterIsInstance<UnpackedEnumType<*, *>>().filter { it.id >= 0 }
+        val params = filterIsInstance<UnpackedParamType<*>>().filter { it.id >= 0 }
+        val varps = filterIsInstance<UnpackedVarpType>().filter { it.id >= 0 }
+        val varbits = filterIsInstance<UnpackedVarBitType>().filter { it.id >= 0 }
+        val varns = filterIsInstance<UnpackedVarnType>().filter { it.id >= 0 }
+        val varnbits = filterIsInstance<UnpackedVarnBitType>().filter { it.id >= 0 }
+        val headbars = filterIsInstance<UnpackedHeadbarType>().filter { it.id >= 0 }
+        val hitmarks = filterIsInstance<UnpackedHitmarkType>().filter { it.id >= 0 }
+        val projanims = filterIsInstance<UnpackedProjAnimType>().filter { it.id >= 0 }
+        val walkTrig = filterIsInstance<WalkTriggerType>().filter { it.id >= 0 }
+        val dbRows = filterIsInstance<UnpackedDbRowType>().filter { it.id >= 0 }
+        val dbTables = filterIsInstance<UnpackedDbTableType>().filter { it.id >= 0 }
+        val modLevels = filterIsInstance<UnpackedModLevelType>().filter { it.id >= 0 }
 
         return UpdateMap(
             invs = invs,

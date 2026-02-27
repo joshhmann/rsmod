@@ -1,0 +1,174 @@
+# Karamja F2P NPC Spawns
+# Musa Point - F2P portion of Karamja
+
+# === BANANA PLANTATION (F2P) ===
+# Luthas - Runs the banana plantation
+[[spawn]]
+npc = 'luthas'
+coords = '0_47_51_2939_3155'
+direction = 'east'
+
+# === GENERAL STORE ===
+# Karamja general store owner
+[[spawn]]
+npc = 'karamja_general_store'
+coords = '0_47_51_2909_3152'
+direction = 'west'
+
+# === FISHING SPOTS (F2P) ===
+# Various fishing spots for lobster and swordfish
+
+# Cage/Harpoon spot - Lobster/Swordfish
+[[spawn]]
+npc = 'fishing_spot_cage_harpoon'
+coords = '0_47_51_2922_3177'
+direction = 'south'
+
+[[spawn]]
+npc = 'fishing_spot_cage_harpoon'
+coords = '0_47_51_2923_3179'
+direction = 'south'
+
+[[spawn]]
+npc = 'fishing_spot_cage_harpoon'
+coords = '0_47_51_2923_3182'
+direction = 'south'
+
+[[spawn]]
+npc = 'fishing_spot_cage_harpoon'
+coords = '0_47_51_2925_3184'
+direction = 'south'
+
+# Net/Bait spot - Shrimp/Anchovies
+[[spawn]]
+npc = 'fishing_spot_net_bait'
+coords = '0_47_51_2922_3176'
+direction = 'south'
+
+[[spawn]]
+npc = 'fishing_spot_net_bait'
+coords = '0_47_51_2924_3178'
+direction = 'south'
+
+# === VOLCANO ENTRANCE (F2P - Leads to Crandor) ===
+# Location: Musa Point volcano
+
+# === MONKEYS (F2P) ===
+# Various monkeys around the island
+[[spawn]]
+npc = 'monkey'
+coords = '0_47_51_2907_3158'
+direction = 'south'
+
+[[spawn]]
+npc = 'monkey'
+coords = '0_47_51_2908_3162'
+direction = 'south'
+
+[[spawn]]
+npc = 'monkey'
+coords = '0_47_51_2910_3165'
+direction = 'south'
+
+[[spawn]]
+npc = 'monkey'
+coords = '0_47_51_2912_3161'
+direction = 'south'
+
+[[spawn]]
+npc = 'monkey'
+coords = '0_47_51_2915_3158'
+direction = 'south'
+
+# === JUNGLE SPIDERS (F2P) ===
+# Level 44 spiders
+[[spawn]]
+npc = 'jungle_spider'
+coords = '0_47_51_2900_3155'
+direction = 'east'
+
+[[spawn]]
+npc = 'jungle_spider'
+coords = '0_47_51_2902_3158'
+direction = 'east'
+
+[[spawn]]
+npc = 'jungle_spider'
+coords = '0_47_51_2904_3162'
+direction = 'east'
+
+# === SCORPIONS (F2P) ===
+# Level 14 scorpions near volcano
+[[spawn]]
+npc = 'scorpion'
+coords = '0_47_51_2878_3148'
+direction = 'west'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_47_51_2882_3152'
+direction = 'west'
+
+[[spawn]]
+npc = 'scorpion'
+coords = '0_47_51_2886_3145'
+direction = 'west'
+
+# === LEVEL 14 SKELETONS ===
+# Near the volcano
+[[spawn]]
+npc = 'skeleton'
+coords = '0_47_51_2880_3145'
+direction = 'west'
+
+[[spawn]]
+npc = 'skeleton'
+coords = '0_47_51_2883_3148'
+direction = 'west'
+
+[[spawn]]
+npc = 'skeleton'
+coords = '0_47_51_2885_3151'
+direction = 'west'
+
+# === PIRATES (F2P) ===
+# Pirates wandering the dock area
+[[spawn]]
+npc = 'pirate1'
+coords = '0_47_51_2942_3148'
+direction = 'west'
+
+[[spawn]]
+npc = 'pirate1'
+coords = '0_47_51_2938_3145'
+direction = 'south'
+
+[[spawn]]
+npc = 'pirate1'
+coords = '0_47_51_2945_3152'
+direction = 'east'
+
+# === CUSTOMS OFFICER (F2P Border) ===
+# Port Sarim to Karamja boat
+[[spawn]]
+npc = 'customs_officer'
+coords = '0_47_51_2950_3146'
+direction = 'north'
+
+# === DOCK WORKER ===
+[[spawn]]
+npc = 'karamja_dock_worker'
+coords = '0_47_51_2951_3144'
+direction = 'east'
+
+# === SEAMAN ===
+[[spawn]]
+npc = 'seaman_lorris'
+coords = '0_47_51_2948_3145'
+direction = 'south'
+
+[[spawn]]
+npc = 'seaman_thresnor'
+coords = '0_47_51_2946_3143'
+direction = 'south'
+

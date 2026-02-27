@@ -1,5 +1,6 @@
 package org.rsmod.content.other.agentbridge.prayer
 
+import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import jakarta.inject.Singleton
 import org.rsmod.annotations.InternalApi
@@ -20,6 +21,8 @@ import org.rsmod.game.type.varp.VarpTypeList
 class PrayerPorcelain
 @Inject
 constructor(private val server: AgentBridgeServer, private val varpTypes: VarpTypeList) {
+    private val logger = InlineLogger()
+
     companion object {
         /** Prayer varp indices in the client. */
         private const val PRAYER_VARP_START = 83 // Standard prayer varp block start
@@ -307,7 +310,7 @@ constructor(private val server: AgentBridgeServer, private val varpTypes: VarpTy
                 pendingActions.getOrPut(playerKey) { java.util.concurrent.ConcurrentLinkedQueue() }
             queue.offer(action)
         } catch (e: Exception) {
-            println("[PrayerPorcelain] Failed to queue action: ${e.message}")
+            logger.error { "[PrayerPorcelain] Failed to queue action: ${e.message}" }
         }
     }
 

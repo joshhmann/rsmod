@@ -6,6 +6,7 @@ import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.thievingLvl
 import org.rsmod.api.random.GameRandom
 import org.rsmod.api.repo.loc.LocRepository
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpLoc2
 import org.rsmod.api.script.onOpLoc3
 import org.rsmod.api.script.onOpLoc4
@@ -28,7 +29,11 @@ import org.rsmod.plugin.scripts.ScriptContext
 // - Black mask / slayer helmet thieving bonus (not standard OSRS but easy to add later)
 class Thieving
 @Inject
-constructor(private val locRepo: LocRepository, private val random: GameRandom) : PluginScript() {
+constructor(
+    private val locRepo: LocRepository,
+    private val random: GameRandom,
+    private val objRepo: ObjRepository,
+) : PluginScript() {
 
     override fun ScriptContext.startup() {
         // --------------- Pickpocket handlers ---------------
@@ -58,11 +63,9 @@ constructor(private val locRepo: LocRepository, private val random: GameRandom) 
         // --------------- Stall handlers ---------------
         // Vegetable stall (level 2) — op 3 is "Steal-from" on most market stalls
         onOpLoc3(ThievingLocs.veg_stall) { stealFromStall(it.loc, Stalls.VEGETABLE) }
-        onOpLoc3(ThievingLocs.veg_stall_4708) { stealFromStall(it.loc, Stalls.VEGETABLE) }
         onOpLoc3(ThievingLocs.veg_stall_54781) { stealFromStall(it.loc, Stalls.VEGETABLE) }
         // Baker's stall (level 5)
         onOpLoc3(ThievingLocs.bakers_stall) { stealFromStall(it.loc, Stalls.BAKERS) }
-        onOpLoc3(ThievingLocs.bakers_stall_11730) { stealFromStall(it.loc, Stalls.BAKERS) }
         onOpLoc3(ThievingLocs.bakers_stall_51559) { stealFromStall(it.loc, Stalls.BAKERS) }
         onOpLoc3(ThievingLocs.bakers_stall_51937) { stealFromStall(it.loc, Stalls.BAKERS) }
         // Tea stall (level 5) — Varrock tea stall has a different op index
@@ -72,48 +75,40 @@ constructor(private val locRepo: LocRepository, private val random: GameRandom) 
         // Silk stall (level 20)
         onOpLoc3(ThievingLocs.silk_stall) { stealFromStall(it.loc, Stalls.SILK) }
         onOpLoc3(ThievingLocs.silk_stall_6568) { stealFromStall(it.loc, Stalls.SILK) }
-        onOpLoc3(ThievingLocs.silk_stall_11729) { stealFromStall(it.loc, Stalls.SILK) }
         onOpLoc3(ThievingLocs.silk_stall_20344) { stealFromStall(it.loc, Stalls.SILK) }
         onOpLoc3(ThievingLocs.silk_stall_36569) { stealFromStall(it.loc, Stalls.SILK) }
         onOpLoc3(ThievingLocs.silk_stall_41755) { stealFromStall(it.loc, Stalls.SILK) }
         onOpLoc3(ThievingLocs.silk_stall_51933) { stealFromStall(it.loc, Stalls.SILK) }
         // Ardougne market stall level 22 (silk variant)
-        onOpLoc3(ThievingLocs.market_stall_14011) { stealFromStall(it.loc, Stalls.ARDOUGNE_SILK) }
+        onOpLoc3(ThievingLocs.market_stall_empty) { stealFromStall(it.loc, Stalls.ARDOUGNE_SILK) }
         // Seed stall (level 27)
         onOpLoc3(ThievingLocs.seed_stall) { stealFromStall(it.loc, Stalls.SEED) }
-        onOpLoc3(ThievingLocs.seed_stall_7053) { stealFromStall(it.loc, Stalls.SEED) }
-        onOpLoc3(ThievingLocs.seed_stall_33639) { stealFromStall(it.loc, Stalls.SEED) }
         // Fur stall (level 35)
         onOpLoc3(ThievingLocs.fur_stall) { stealFromStall(it.loc, Stalls.FUR) }
         onOpLoc3(ThievingLocs.fur_stall_4278) { stealFromStall(it.loc, Stalls.FUR) }
         onOpLoc3(ThievingLocs.fur_stall_6571) { stealFromStall(it.loc, Stalls.FUR) }
-        onOpLoc3(ThievingLocs.fur_stall_11732) { stealFromStall(it.loc, Stalls.FUR) }
         onOpLoc3(ThievingLocs.fur_stall_20347) { stealFromStall(it.loc, Stalls.FUR) }
         onOpLoc3(ThievingLocs.fur_stall_37405) { stealFromStall(it.loc, Stalls.FUR) }
         onOpLoc3(ThievingLocs.fur_stall_51934) { stealFromStall(it.loc, Stalls.FUR) }
         // Fish stall (level 42)
         onOpLoc3(ThievingLocs.fish_stall) { stealFromStall(it.loc, Stalls.FISH) }
         onOpLoc3(ThievingLocs.fish_stall_4705) { stealFromStall(it.loc, Stalls.FISH) }
-        onOpLoc3(ThievingLocs.fish_stall_4707) { stealFromStall(it.loc, Stalls.FISH) }
         onOpLoc3(ThievingLocs.fish_stall_31712) { stealFromStall(it.loc, Stalls.FISH) }
         onOpLoc3(ThievingLocs.fish_stall_37404) { stealFromStall(it.loc, Stalls.FISH) }
         // Silver stall (level 50)
         onOpLoc3(ThievingLocs.silver_stall) { stealFromStall(it.loc, Stalls.SILVER) }
         onOpLoc3(ThievingLocs.silver_stall_6164) { stealFromStall(it.loc, Stalls.SILVER) }
-        onOpLoc3(ThievingLocs.silver_stall_11734) { stealFromStall(it.loc, Stalls.SILVER) }
         onOpLoc3(ThievingLocs.silver_stall_36570) { stealFromStall(it.loc, Stalls.SILVER) }
         onOpLoc3(ThievingLocs.silver_stall_41757) { stealFromStall(it.loc, Stalls.SILVER) }
         // Spice stall (level 65)
         onOpLoc3(ThievingLocs.spice_stall) { stealFromStall(it.loc, Stalls.SPICE) }
         onOpLoc3(ThievingLocs.spice_stall_6572) { stealFromStall(it.loc, Stalls.SPICE) }
-        onOpLoc3(ThievingLocs.spice_stall_11733) { stealFromStall(it.loc, Stalls.SPICE) }
         onOpLoc3(ThievingLocs.spice_stall_36572) { stealFromStall(it.loc, Stalls.SPICE) }
         onOpLoc3(ThievingLocs.spice_stall_51936) { stealFromStall(it.loc, Stalls.SPICE) }
         // Gem stall (level 75)
         onOpLoc3(ThievingLocs.gem_stall) { stealFromStall(it.loc, Stalls.GEM) }
         onOpLoc3(ThievingLocs.gem_stall_6162) { stealFromStall(it.loc, Stalls.GEM) }
         onOpLoc3(ThievingLocs.gem_stall_6570) { stealFromStall(it.loc, Stalls.GEM) }
-        onOpLoc3(ThievingLocs.gem_stall_11731) { stealFromStall(it.loc, Stalls.GEM) }
         onOpLoc3(ThievingLocs.gem_stall_20346) { stealFromStall(it.loc, Stalls.GEM) }
         onOpLoc3(ThievingLocs.gem_stall_36571) { stealFromStall(it.loc, Stalls.GEM) }
         onOpLoc3(ThievingLocs.gem_stall_41756) { stealFromStall(it.loc, Stalls.GEM) }
@@ -122,12 +117,6 @@ constructor(private val locRepo: LocRepository, private val random: GameRandom) 
 
         // --------------- H.A.M. chest handlers ---------------
         onOpLoc4(ThievingLocs.chest_11735) { searchChest(it.loc, HamChests.LEVEL_13) }
-        onOpLoc4(ThievingLocs.chest_11736) { searchChest(it.loc, HamChests.LEVEL_28) }
-        onOpLoc4(ThievingLocs.chest_11737) { searchChest(it.loc, HamChests.LEVEL_43) }
-        onOpLoc4(ThievingLocs.chest_11738) { searchChest(it.loc, HamChests.LEVEL_47) }
-        onOpLoc4(ThievingLocs.chest_11739) { searchChest(it.loc, HamChests.LEVEL_59) }
-        onOpLoc4(ThievingLocs.chest_11740) { searchChest(it.loc, HamChests.LEVEL_72) }
-        onOpLoc4(ThievingLocs.chest_11741) { searchChest(it.loc, HamChests.LEVEL_84) }
     }
 
     // -----------------------------------------------------------------------
@@ -181,7 +170,7 @@ constructor(private val locRepo: LocRepository, private val random: GameRandom) 
 
         val loot = rollLoot(entry.loot)
         val amount = if (loot.min == loot.max) loot.min else random.of(loot.min, loot.max)
-        invAdd(inv, loot.obj, amount)
+        invAddOrDrop(objRepo, loot.obj, amount)
 
         mes("You pick the ${npc.name.lowercase()}'s pocket.")
     }
@@ -244,7 +233,7 @@ constructor(private val locRepo: LocRepository, private val random: GameRandom) 
 
         val loot = rollLoot(stall.loot)
         val amount = if (loot.min == loot.max) loot.min else random.of(loot.min, loot.max)
-        invAdd(inv, loot.obj, amount)
+        invAddOrDrop(objRepo, loot.obj, amount)
 
         mes("You steal from the stall.")
 
@@ -294,7 +283,7 @@ constructor(private val locRepo: LocRepository, private val random: GameRandom) 
 
         for (loot in chest.loot) {
             val amount = if (loot.min == loot.max) loot.min else random.of(loot.min, loot.max)
-            invAdd(inv, loot.obj, amount)
+            invAddOrDrop(objRepo, loot.obj, amount)
         }
 
         mes("You search the chest and find something.")
@@ -848,91 +837,72 @@ internal object ThievingNpcs : NpcReferences() {
 
 internal object ThievingLocs : LocReferences() {
     // Generic empty stall placeholder (shared by most Ardougne/Keldagrim market stalls)
-    val market_stall_empty = find("market_stall")
+    val market_stall_empty = find("rag_market_stall")
 
     // Vegetable stall variants
-    val veg_stall = find("veg_stall")
-    val veg_stall_4708 = find("veg_stall_4708")
-    val veg_stall_54781 = find("veg_stall_54781")
+    val veg_stall = find("etc_veg_market")
+    val veg_stall_54781 = find("aldarin_market_stall_veg")
 
     // Baker's stall variants
-    val bakers_stall = find("bakers_stall")
-    val bakers_stall_11730 = find("bakers_stall_11730")
-    val bakers_stall_51559 = find("bakers_stall_51559")
-    val bakers_stall_51937 = find("bakers_stall_51937")
+    val bakers_stall = find("cakethiefstall")
+    val bakers_stall_51559 = find("cam_torum_market_bakery")
+    val bakers_stall_51937 = find("fortis_market_stall_bakers")
 
     // Tea stall variants (Varrock)
     val tea_stall = find("tea_stall")
-    val tea_stall_6574 = find("tea_stall_6574")
-    val tea_stall_20350 = find("tea_stall_20350")
+    val tea_stall_6574 = find("icthalarins_tea_stall")
+    val tea_stall_20350 = find("contact_tea_stall")
 
     // Silk stall variants
-    val silk_stall = find("silk_stall")
-    val silk_stall_6568 = find("silk_stall_6568")
-    val silk_stall_11729 = find("silk_stall_11729")
-    val silk_stall_20344 = find("silk_stall_20344")
-    val silk_stall_36569 = find("silk_stall_36569")
-    val silk_stall_41755 = find("silk_stall_41755")
-    val silk_stall_51933 = find("silk_stall_51933")
-
-    // Ardougne market stall (level 22 silk variant)
-    val market_stall_14011 = find("market_stall_14011")
+    val silk_stall = find("silkthiefstall")
+    val silk_stall_6568 = find("icthalarins_silkmarket")
+    val silk_stall_20344 = find("contact_silkmarket")
+    val silk_stall_36569 = find("prif_marketstall_silk")
+    val silk_stall_41755 = find("silkthiefstall_noop")
+    val silk_stall_51933 = find("fortis_market_stall_silk")
 
     // Seed stall variants
     val seed_stall = find("seed_stall")
-    val seed_stall_7053 = find("seed_stall_7053")
-    val seed_stall_33639 = find("seed_stall_33639")
 
     // Fur stall variants
-    val fur_stall = find("fur_stall")
-    val fur_stall_4278 = find("fur_stall_4278")
-    val fur_stall_6571 = find("fur_stall_6571")
-    val fur_stall_11732 = find("fur_stall_11732")
-    val fur_stall_20347 = find("fur_stall_20347")
-    val fur_stall_37405 = find("fur_stall_37405")
-    val fur_stall_51934 = find("fur_stall_51934")
+    val fur_stall = find("furthiefstall")
+    val fur_stall_4278 = find("viking_fur_market")
+    val fur_stall_6571 = find("icthalarins_furmarket")
+    val fur_stall_20347 = find("contact_furmarket")
+    val fur_stall_37405 = find("vikingexile_fur_market")
+    val fur_stall_51934 = find("fortis_market_stall_fur")
 
     // Fish stall variants
-    val fish_stall = find("fish_stall")
-    val fish_stall_4705 = find("fish_stall_4705")
-    val fish_stall_4707 = find("fish_stall_4707")
-    val fish_stall_31712 = find("fish_stall_31712")
-    val fish_stall_37404 = find("fish_stall_37404")
+    val fish_stall = find("etc_fish_market")
+    val fish_stall_4705 = find("misc_fish_market")
+    val fish_stall_31712 = find("fish_stall_warrens")
+    val fish_stall_37404 = find("vikingexile_fish_market")
 
     // Silver stall variants
-    val silver_stall = find("silver_stall")
-    val silver_stall_6164 = find("silver_stall_6164")
-    val silver_stall_11734 = find("silver_stall_11734")
-    val silver_stall_36570 = find("silver_stall_36570")
-    val silver_stall_41757 = find("silver_stall_41757")
+    val silver_stall = find("silverthiefstall")
+    val silver_stall_6164 = find("dwarf_market_silver")
+    val silver_stall_36570 = find("prif_marketstall_silver")
+    val silver_stall_41757 = find("silverthiefstall_noop")
 
     // Spice stall variants
-    val spice_stall = find("spice_stall")
-    val spice_stall_6572 = find("spice_stall_6572")
-    val spice_stall_11733 = find("spice_stall_11733")
-    val spice_stall_36572 = find("spice_stall_36572")
-    val spice_stall_51936 = find("spice_stall_51936")
+    val spice_stall = find("spicethiefstall")
+    val spice_stall_6572 = find("icthalarins_spicemarket")
+    val spice_stall_36572 = find("prif_marketstall_spice")
+    val spice_stall_51936 = find("fortis_market_stall_spice")
 
     // Gem stall variants
-    val gem_stall = find("gem_stall")
-    val gem_stall_6162 = find("gem_stall_6162")
-    val gem_stall_6570 = find("gem_stall_6570")
-    val gem_stall_11731 = find("gem_stall_11731")
-    val gem_stall_20346 = find("gem_stall_20346")
-    val gem_stall_36571 = find("gem_stall_36571")
-    val gem_stall_41756 = find("gem_stall_41756")
-    val gem_stall_51935 = find("gem_stall_51935")
-    val gem_stall_54780 = find("gem_stall_54780")
+    val gem_stall = find("gemthiefstall")
+    val gem_stall_6162 = find("dwarf_market_gems")
+    val gem_stall_6570 = find("icthalarins_gemmarket")
+    val gem_stall_20346 = find("contact_gemmarket")
+    val gem_stall_36571 = find("prif_marketstall_gem")
+    val gem_stall_41756 = find("gemthiefstall_noop")
+    val gem_stall_51935 = find("fortis_market_stall_gems")
+    val gem_stall_54780 = find("aldarin_market_stall_gems")
 
     // H.A.M. chests (closed) and shared open variant
-    val chest_11735 = find("chest_11735")
-    val chest_11736 = find("chest_11736")
-    val chest_11737 = find("chest_11737")
-    val chest_11738 = find("chest_11738")
-    val chest_11739 = find("chest_11739")
-    val chest_11740 = find("chest_11740")
-    val chest_11741 = find("chest_11741")
-    val chest_open_11743 = find("null_11743")
+    val chest_11735 = find("hiddenchest_closed")
+    val chest_open_11743 = find("inacopenchest")
 }
 
 // -----------------------------------------------------------------------
@@ -941,7 +911,7 @@ internal object ThievingLocs : LocReferences() {
 
 internal object ThievingSeqs : SeqReferences() {
     // Animation played by the player when pickpocketing an NPC (OSRS anim ID 881)
-    val human_pickpocket = find("human_pickpocket")
+    val human_pickpocket = find("human_thieving_stall")
     // Animation played by the player when stealing from a stall / searching a chest (OSRS anim ID
     // 881)
     val human_thieving_stall = find("human_thieving_stall")
@@ -954,10 +924,10 @@ internal object ThievingSeqs : SeqReferences() {
 internal object ThievingObjs : ObjReferences() {
     // Common
     val coins = find("coins")
-    val bronze_bolts = find("bronze_bolts")
+    val bronze_bolts = find("bolts")
     val potato_seed = find("potato_seed")
-    val buttons = find("buttons")
-    val rusty_sword = find("rusty_sword")
+    val buttons = find("digsitebuttons")
+    val rusty_sword = find("rustysword")
     val iron_knife = find("iron_knife")
     val leather_gloves = find("leather_gloves")
     val bronze_dagger = find("bronze_dagger")
@@ -965,13 +935,13 @@ internal object ThievingObjs : ObjReferences() {
     val iron_ore = find("iron_ore")
     val strawberry_seed = find("strawberry_seed")
     val ranarr_seed = find("ranarr_seed")
-    val law_rune = find("law_rune")
-    val earth_rune = find("earth_rune")
-    val chaos_rune = find("chaos_rune")
-    val blood_rune = find("blood_rune")
+    val law_rune = find("lawrune")
+    val earth_rune = find("earthrune")
+    val chaos_rune = find("chaosrune")
+    val blood_rune = find("bloodrune")
     val ruby = find("ruby")
-    val nature_rune = find("nature_rune")
-    val steel_arrowtips = find("steel_arrowtips")
+    val nature_rune = find("naturerune")
+    val steel_arrowtips = find("steel_arrow_tips")
 
     // Stall loot
     val potato = find("potato")
@@ -997,7 +967,7 @@ internal object ThievingObjs : ObjReferences() {
     val apple_tree_seed = find("apple_tree_seed")
     val banana_tree_seed = find("banana_tree_seed")
     val fur = find("fur")
-    val bear_fur = find("bear_fur")
+    val bear_fur = find("bear_fur") // Correct in main sym
     val grey_wolf_fur = find("grey_wolf_fur")
     val raw_trout = find("raw_trout")
     val raw_salmon = find("raw_salmon")
@@ -1005,7 +975,7 @@ internal object ThievingObjs : ObjReferences() {
     val raw_lobster = find("raw_lobster")
     val silver_ore = find("silver_ore")
     val silver_bar = find("silver_bar")
-    val spice = find("spice")
+    val spice = find("spicespot")
     val uncut_sapphire = find("uncut_sapphire")
     val uncut_emerald = find("uncut_emerald")
     val uncut_ruby = find("uncut_ruby")

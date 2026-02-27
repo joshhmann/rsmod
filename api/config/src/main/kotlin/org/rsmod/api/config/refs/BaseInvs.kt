@@ -12,5 +12,13 @@ object BaseInvs : InvReferences() {
     val worn = find("worn", 847803897)
     val bank = find("bank", 1135478129)
 
-    val generalshop1 = find("generalshop1", 62547837000)
+    val generalshop1 = find("generalshop1", 108596219232)
+    val generalshop2 = find("generalshop2")
+    val generalshop3 = find("generalshop3")
+    val generalshop4 = find("generalshop4")
+    val generalshop5 = find("generalshop5")
+    val generalshop6 = find("generalshop6")
+
+    val memberstaffshop = find("memberstaffshop")
+    val fishingshop = find("fishingshop")
 }

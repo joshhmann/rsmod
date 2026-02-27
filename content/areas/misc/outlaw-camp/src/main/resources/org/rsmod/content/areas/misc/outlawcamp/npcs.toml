@@ -1,0 +1,36 @@
+# Outlaw Camp NPC Spawns
+# Located in Wilderness level 24, southwest of Wilderness Volcano
+# Coordinates are in format: plane_regionX_regionZ_localX_localZ
+# Region calculation: regionX = x / 64, regionZ = z / 64
+# Local calculation: localX = x % 64, localZ = z % 64
+# Outlaw Camp is around x=3026, z=3504 (region 47_54, locals 18_48)
+
+# Wilderness Bandits (level 22) - Primary outlaws at the camp
+[[spawn]]
+npc = 'wilderness_bandit'
+coords = '0_47_54_18_48'
+
+[[spawn]]
+npc = 'wilderness_bandit'
+coords = '0_47_54_20_46'
+
+[[spawn]]
+npc = 'wilderness_bandit'
+coords = '0_47_54_22_50'
+
+[[spawn]]
+npc = 'wilderness_bandit'
+coords = '0_47_54_16_52'
+
+[[spawn]]
+npc = 'wilderness_bandit'
+coords = '0_47_54_24_48'
+
+# Wilderness Rogues (level 38) - Higher level outlaws
+[[spawn]]
+npc = 'wilderness_rogue'
+coords = '0_47_54_19_45'
+
+[[spawn]]
+npc = 'wilderness_rogue'
+coords = '0_47_54_25_51'

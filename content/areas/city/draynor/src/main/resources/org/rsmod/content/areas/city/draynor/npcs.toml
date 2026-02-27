@@ -56,3 +56,29 @@ coords = '0_50_49_48_40'
 [[spawn]]
 npc = 'draynor_skeleton'
 coords = '0_50_49_50_38'
+
+# Wizard's Tower - Wizard Traiborn (Demon Slayer quest)
+[[spawn]]
+npc = 'traiborn'
+coords = '0_50_48_24_58'
+direction = 'north'
+
+# Ned - Rope maker (in house south of bank)
+[[spawn]]
+npc = 'ned'
+coords = '0_50_49_29_54'
+direction = 'south'
+
+# Leela - Spy from Al Kharid (Prince Ali Rescue quest)
+# Located north of the jail in Draynor Village
+[[spawn]]
+npc = 'leela'
+coords = '0_50_49_46_51'
+direction = 'south'
+
+# Lady Keli - Antagonist of Prince Ali Rescue quest
+# Guards Prince Ali in the Draynor prison
+[[spawn]]
+npc = 'lady_keli'
+coords = '0_50_49_48_56'
+direction = 'west'

@@ -10,9 +10,11 @@ import org.rsmod.api.hunt.Hunt
 import org.rsmod.api.invtx.invAdd
 import org.rsmod.api.invtx.invDel
 import org.rsmod.api.npc.isInCombat
+import org.rsmod.api.player.interact.HeldUInteractions
 import org.rsmod.api.player.interact.LocInteractions
 import org.rsmod.api.player.interact.NpcInteractions
 import org.rsmod.api.player.isInCombat
+import org.rsmod.api.player.protect.ProtectedAccessLauncher
 import org.rsmod.api.player.protect.clearPendingAction
 import org.rsmod.api.player.stat.hitpoints
 import org.rsmod.api.registry.loc.LocRegistry
@@ -60,8 +62,10 @@ constructor(
     private val locTypes: LocTypeList,
     private val locInteractions: LocInteractions,
     private val npcInteractions: NpcInteractions,
+    private val heldUInteractions: HeldUInteractions,
     private val npcList: NpcList,
     private val objTypes: ObjTypeList,
+    private val protectedAccess: ProtectedAccessLauncher,
     private val pathfinding: PathfindingService,
     private val botPorcelain: BotPorcelain,
     private val bankPorcelain: BankPorcelain,
@@ -770,6 +774,85 @@ constructor(
                     ActionResult(
                         true,
                         "Interacting with ${npc.name}",
+                        xpBefore,
+                        captureXpSnapshot(player),
+                    )
+                }
+
+                is BotAction.InteractHeld -> {
+                    val selectedSlot = action.selectedSlot
+                    val targetSlot = action.targetSlot
+                    if (selectedSlot !in player.inv.indices || targetSlot !in player.inv.indices) {
+                        return ActionResult(
+                            false,
+                            "Invalid slot(s): selected=$selectedSlot target=$targetSlot",
+                            xpBefore,
+                            xpBefore,
+                        )
+                    }
+                    if (selectedSlot == targetSlot) {
+                        return ActionResult(
+                            false,
+                            "Selected slot and target slot must be different",
+                            xpBefore,
+                            xpBefore,
+                        )
+                    }
+                    val selectedObj =
+                        player.inv[selectedSlot]
+                            ?: return ActionResult(
+                                false,
+                                "No item in selected slot=$selectedSlot",
+                                xpBefore,
+                                xpBefore,
+                            )
+                    val targetObj =
+                        player.inv[targetSlot]
+                            ?: return ActionResult(
+                                false,
+                                "No item in target slot=$targetSlot",
+                                xpBefore,
+                                xpBefore,
+                            )
+                    val selectedType =
+                        objTypes[selectedObj.id]
+                            ?: return ActionResult(
+                                false,
+                                "Unknown item type id=${selectedObj.id} in selected slot",
+                                xpBefore,
+                                xpBefore,
+                            )
+                    val targetType =
+                        objTypes[targetObj.id]
+                            ?: return ActionResult(
+                                false,
+                                "Unknown item type id=${targetObj.id} in target slot",
+                                xpBefore,
+                                xpBefore,
+                            )
+                    player.clearPendingAction(eventBus)
+                    player.resetFaceEntity()
+                    if (player.isAccessProtected) {
+                        return ActionResult(
+                            false,
+                            "Player access is currently protected; try again next tick",
+                            xpBefore,
+                            xpBefore,
+                        )
+                    }
+                    protectedAccess.launch(player) {
+                        heldUInteractions.interact(
+                            access = this,
+                            inventory = inv,
+                            selectedObjType = selectedType,
+                            selectedSlot = selectedSlot,
+                            targetObjType = targetType,
+                            targetSlot = targetSlot,
+                        )
+                    }
+                    ActionResult(
+                        true,
+                        "Using ${selectedType.name} on ${targetType.name}",
                         xpBefore,
                         captureXpSnapshot(player),
                     )

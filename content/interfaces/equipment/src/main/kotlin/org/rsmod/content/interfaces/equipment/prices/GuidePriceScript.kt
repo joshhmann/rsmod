@@ -2,7 +2,6 @@ package org.rsmod.content.interfaces.equipment.prices
 
 import jakarta.inject.Inject
 import org.rsmod.api.config.refs.invs
-import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.synths
 import org.rsmod.api.invtx.invCompress
 import org.rsmod.api.invtx.invMoveAll
@@ -17,6 +16,7 @@ import org.rsmod.api.player.ui.ifSetText
 import org.rsmod.api.script.onIfClose
 import org.rsmod.api.script.onIfModalButton
 import org.rsmod.api.script.onIfOverlayButton
+import org.rsmod.api.type.refs.obj.ObjReferences
 import org.rsmod.api.utils.format.formatAmount
 import org.rsmod.content.interfaces.equipment.configs.equip_components
 import org.rsmod.content.interfaces.equipment.configs.equip_interfaces
@@ -64,7 +64,11 @@ constructor(
             side = equip_interfaces.guide_prices_side,
         )
         player.updateGuidePrices()
-        ifSetObj(equip_components.guide_prices_search_obj, objs.null_item_placeholder, zoom = 1)
+        ifSetObj(
+            equip_components.guide_prices_search_obj,
+            GuidePriceObjs.null_item_placeholder,
+            zoom = 1,
+        )
         ifSetEvents(
             target = equip_components.guide_prices_main_inv,
             range = tempInv.indices,
@@ -233,4 +237,8 @@ constructor(
     }
 
     private data class PriceList(val prices: List<Int>, val totalPrice: Long)
+}
+
+internal object GuidePriceObjs : ObjReferences() {
+    val null_item_placeholder = find("blankobject")
 }

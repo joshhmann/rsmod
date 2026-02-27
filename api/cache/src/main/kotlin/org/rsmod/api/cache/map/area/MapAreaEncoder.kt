@@ -6,7 +6,6 @@ import org.openrs2.cache.Cache
 import org.rsmod.api.cache.Js5Archives
 import org.rsmod.api.cache.util.EncoderContext
 import org.rsmod.api.cache.util.readOrNull
-import org.rsmod.game.area.AreaIndex
 import org.rsmod.map.CoordGrid
 import org.rsmod.map.square.MapSquareGrid
 import org.rsmod.map.square.MapSquareKey
@@ -14,7 +13,7 @@ import org.rsmod.map.util.LocalMapSquareZone
 import org.rsmod.map.zone.ZoneKey
 
 public object MapAreaEncoder {
-    private const val MAX_AREAS_PER_COORD = AreaIndex.MAX_AREAS_PER_KEY
+    private const val MAX_AREAS_PER_COORD = 10
 
     public fun encodeAll(
         cache: Cache,

@@ -33,5 +33,9 @@ internal object VarpBuilds : VarpBuilder() {
         build("generic_temp_coords_65529") { temporary = true }
         build("inv_capacity_65530")
         build("generic_storage_65531")
+
+        // Quest progress varps — not in rev233 cache; sym entries in .local/varp.sym.
+        build("ernestchicken")
+        build("what_lies_below")
     }
 }

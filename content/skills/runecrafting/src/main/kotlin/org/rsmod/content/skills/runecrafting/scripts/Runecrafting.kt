@@ -9,6 +9,7 @@ import org.rsmod.api.player.stat.runecraftingLvl
 import org.rsmod.api.player.stat.statAdvance
 import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.isQuestComplete
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpLoc1
 import org.rsmod.api.script.onOpLocU
 import org.rsmod.content.skills.runecrafting.scripts.configs.runecrafting_locs
@@ -19,7 +20,7 @@ import org.rsmod.map.CoordGrid
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class Runecrafting @Inject constructor() : PluginScript() {
+class Runecrafting @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpLoc1(runecrafting_locs.runetemple_ruined) { enterViaWornTiara(it.loc) }
         onOpLoc1(runecrafting_locs.runetemple) { exitRuins() }
@@ -38,6 +39,19 @@ class Runecrafting @Inject constructor() : PluginScript() {
         }
         onOpLocU(runecrafting_locs.runetemple_altar_old, runecrafting_objs.blankrune) {
             craftRunes(it.loc)
+        }
+
+        // Essence mine exit portals - teleport back to Aubury's shop in Varrock
+        val exitPortals =
+            listOf(
+                runecrafting_locs.essencemine_portal_1,
+                runecrafting_locs.essencemine_portal_2,
+                runecrafting_locs.essencemine_portal_3,
+                runecrafting_locs.essencemine_portal_4,
+                runecrafting_locs.essencemine_portal_5,
+            )
+        for (portal in exitPortals) {
+            onOpLoc1(portal) { exitEssenceMine() }
         }
     }
 
@@ -82,6 +96,13 @@ class Runecrafting @Inject constructor() : PluginScript() {
         teleport(altar.exteriorExit)
     }
 
+    private suspend fun ProtectedAccess.exitEssenceMine() {
+        // Teleport back to Aubury's shop in Varrock
+        // This is the standard return location for the essence mine
+        teleport(ESSENCE_MINE_EXIT)
+        mes("You step through the portal and return to the surface.")
+    }
+
     private suspend fun ProtectedAccess.craftRunes(loc: BoundLocInfo) {
         if (!isQuestComplete(QuestList.rune_mysteries)) {
             mes("You do not know how to craft runes yet.")
@@ -111,7 +132,7 @@ class Runecrafting @Inject constructor() : PluginScript() {
 
         val multiplier = 1 + (player.runecraftingLvl / altar.multiplierStep)
         val produced = essenceCount * multiplier
-        invAdd(inv, altar.rune, count = produced)
+        invAddOrDrop(objRepo, altar.rune, count = produced)
         statAdvance(stats.runecrafting, essenceCount * altar.xpPerEssence)
 
         val runeName = altar.name.lowercase()
@@ -148,6 +169,9 @@ class Runecrafting @Inject constructor() : PluginScript() {
     )
 
     private companion object {
+        // Exit location: Aubury's shop in Varrock (where players return from essence mine)
+        private val ESSENCE_MINE_EXIT = CoordGrid(3253, 3402, 0)
+
         private val F2P_ALTARS =
             listOf(
                 F2pAltar(
@@ -155,7 +179,7 @@ class Runecrafting @Inject constructor() : PluginScript() {
                     levelReq = 1,
                     xpPerEssence = 5.0,
                     multiplierStep = 11,
-                    rune = objs.air_rune,
+                    rune = objs.airrune,
                     talisman = runecrafting_objs.air_talisman,
                     tiara = runecrafting_objs.tiara_air,
                     exteriorRuins = CoordGrid(3127, 3405),
@@ -167,7 +191,7 @@ class Runecrafting @Inject constructor() : PluginScript() {
                     levelReq = 1,
                     xpPerEssence = 5.5,
                     multiplierStep = 14,
-                    rune = objs.mind_rune,
+                    rune = objs.mindrune,
                     talisman = runecrafting_objs.mind_talisman,
                     tiara = runecrafting_objs.tiara_mind,
                     exteriorRuins = CoordGrid(2980, 3514),
@@ -179,7 +203,7 @@ class Runecrafting @Inject constructor() : PluginScript() {
                     levelReq = 5,
                     xpPerEssence = 6.0,
                     multiplierStep = 19,
-                    rune = objs.water_rune,
+                    rune = objs.waterrune,
                     talisman = runecrafting_objs.water_talisman,
                     tiara = runecrafting_objs.tiara_water,
                     exteriorRuins = CoordGrid(3184, 3165),
@@ -191,7 +215,7 @@ class Runecrafting @Inject constructor() : PluginScript() {
                     levelReq = 9,
                     xpPerEssence = 6.5,
                     multiplierStep = 26,
-                    rune = objs.earth_rune,
+                    rune = objs.earthrune,
                     talisman = runecrafting_objs.earth_talisman,
                     tiara = runecrafting_objs.tiara_earth,
                     exteriorRuins = CoordGrid(3305, 3474),
@@ -203,7 +227,7 @@ class Runecrafting @Inject constructor() : PluginScript() {
                     levelReq = 14,
                     xpPerEssence = 7.0,
                     multiplierStep = 35,
-                    rune = objs.fire_rune,
+                    rune = objs.firerune,
                     talisman = runecrafting_objs.fire_talisman,
                     tiara = runecrafting_objs.tiara_fire,
                     exteriorRuins = CoordGrid(3312, 3253),

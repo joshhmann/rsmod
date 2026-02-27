@@ -1,6 +1,8 @@
 package org.rsmod.content.quests.doricsquest
 
+import jakarta.inject.Inject
 import org.rsmod.api.invtx.invAdd
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
@@ -8,6 +10,7 @@ import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.getQuestStage
 import org.rsmod.api.quest.setQuestStage
 import org.rsmod.api.quest.showCompletionScroll
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpNpc1
 import org.rsmod.content.quests.doricsquest.configs.dorics_quest_npcs
 import org.rsmod.content.quests.doricsquest.configs.dorics_quest_objs
@@ -16,7 +19,7 @@ import org.rsmod.game.type.obj.ObjType
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class DoricsQuest : PluginScript() {
+class DoricsQuest @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpNpc1(dorics_quest_npcs.doric) { startDoricDialogue(it.npc) }
     }
@@ -89,18 +92,18 @@ class DoricsQuest : PluginScript() {
 
         if (!removedClay || !removedCopper || !removedIron) {
             chatNpc(sad, "Hmm, you don't seem to have everything I asked for.")
-            if (removedClay) player.invAdd(player.inv, dorics_quest_objs.clay, 6)
-            if (removedCopper) player.invAdd(player.inv, dorics_quest_objs.copper_ore, 4)
-            if (removedIron) player.invAdd(player.inv, dorics_quest_objs.iron_ore, 2)
+            if (removedClay) player.invAddOrDrop(objRepo, dorics_quest_objs.clay, 6)
+            if (removedCopper) player.invAddOrDrop(objRepo, dorics_quest_objs.copper_ore, 4)
+            if (removedIron) player.invAddOrDrop(objRepo, dorics_quest_objs.iron_ore, 2)
             return
         }
 
         val gaveCoins = player.invAdd(player.inv, dorics_quest_objs.coins, 180).success
         if (!gaveCoins) {
             chatNpc(sad, "You need one free inventory slot for your coin reward.")
-            player.invAdd(player.inv, dorics_quest_objs.clay, 6)
-            player.invAdd(player.inv, dorics_quest_objs.copper_ore, 4)
-            player.invAdd(player.inv, dorics_quest_objs.iron_ore, 2)
+            player.invAddOrDrop(objRepo, dorics_quest_objs.clay, 6)
+            player.invAddOrDrop(objRepo, dorics_quest_objs.copper_ore, 4)
+            player.invAddOrDrop(objRepo, dorics_quest_objs.iron_ore, 2)
             return
         }
 

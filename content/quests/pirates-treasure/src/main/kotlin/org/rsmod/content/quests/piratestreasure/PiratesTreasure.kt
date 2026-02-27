@@ -1,7 +1,10 @@
 package org.rsmod.content.quests.piratestreasure
 
+import jakarta.inject.Inject
+import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.invtx.invAdd
+import org.rsmod.api.invtx.invAddOrDrop
 import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
@@ -9,20 +12,20 @@ import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.getQuestStage
 import org.rsmod.api.quest.setQuestStage
 import org.rsmod.api.quest.showCompletionScroll
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpHeld2
 import org.rsmod.api.script.onOpNpc1
 import org.rsmod.content.quests.piratestreasure.configs.pirates_treasure_npcs
-import org.rsmod.content.quests.piratestreasure.configs.pirates_treasure_objs
 import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
-class PiratesTreasure : PluginScript() {
+class PiratesTreasure @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
         onOpNpc1(pirates_treasure_npcs.redbeard_frank) { startFrankDialogue(it.npc) }
         onOpNpc1(pirates_treasure_npcs.luthas) { startLuthasDialogue(it.npc) }
         onOpNpc1(pirates_treasure_npcs.customs_officer) { startCustomsDialogue(it.npc) }
-        onOpHeld2(pirates_treasure_objs.spade) { digForTreasure() }
+        onOpHeld2(objs.spade) { digForTreasure() }
     }
 
     private suspend fun ProtectedAccess.startFrankDialogue(npc: Npc) =
@@ -58,11 +61,11 @@ class PiratesTreasure : PluginScript() {
 
     private suspend fun Dialogue.frankRumDialogue() {
         when {
-            pirates_treasure_objs.karamja_rum in player.inv -> {
+            objs.karamja_rum in player.inv -> {
                 chatPlayer(happy, "I got your Karamja rum.")
                 handInRumAndGiveKey()
             }
-            pirates_treasure_objs.piratemessage in player.inv -> {
+            objs.piratemessage in player.inv -> {
                 chatNpc(
                     quiz,
                     "That rum's still hidden in a crate. Get it past customs and bring it here.",
@@ -75,16 +78,16 @@ class PiratesTreasure : PluginScript() {
     }
 
     private suspend fun Dialogue.handInRumAndGiveKey() {
-        val removedRum = player.invDel(player.inv, pirates_treasure_objs.karamja_rum, 1).success
+        val removedRum = player.invDel(player.inv, objs.karamja_rum, 1).success
         if (!removedRum) {
             chatNpc(sad, "Stop yer tricks. Ye don't have the rum.")
             return
         }
 
-        val addedKey = player.invAdd(player.inv, pirates_treasure_objs.chest_key, 1).success
+        val addedKey = player.invAdd(player.inv, objs.chest_key, 1).success
         if (!addedKey) {
             chatNpc(sad, "Make some room in yer inventory and speak to me again.")
-            player.invAdd(player.inv, pirates_treasure_objs.karamja_rum, 1)
+            player.invAddOrDrop(objRepo, objs.karamja_rum, 1)
             return
         }
 
@@ -97,7 +100,7 @@ class PiratesTreasure : PluginScript() {
     }
 
     private suspend fun Dialogue.frankDigReminderDialogue() {
-        if (pirates_treasure_objs.chest_key in player.inv) {
+        if (objs.chest_key in player.inv) {
             chatNpc(happy, "Ye have the key. Dig in Falador Park and claim yer treasure.")
         } else {
             chatNpc(neutral, "Lost the key, did ye? Keep searching around where ye dug.")
@@ -122,13 +125,13 @@ class PiratesTreasure : PluginScript() {
 
     private suspend fun Dialogue.luthasSmugglingDialogue() {
         when {
-            pirates_treasure_objs.piratemessage in player.inv -> {
+            objs.piratemessage in player.inv -> {
                 chatNpc(
                     neutral,
                     "I've packed your rum in a crate. Go through Port Sarim customs, then open it.",
                 )
             }
-            pirates_treasure_objs.karamja_rum in player.inv -> {
+            objs.karamja_rum in player.inv -> {
                 chatNpc(quiz, "Need that rum hidden in a banana crate?")
                 val option = choice2("Yes, hide it for me.", 1, "No, I'll handle it.", 2)
                 when (option) {
@@ -141,16 +144,16 @@ class PiratesTreasure : PluginScript() {
     }
 
     private suspend fun Dialogue.hideRumInCrate() {
-        val removed = player.invDel(player.inv, pirates_treasure_objs.karamja_rum, 1).success
+        val removed = player.invDel(player.inv, objs.karamja_rum, 1).success
         if (!removed) {
             chatNpc(sad, "Looks like ye don't have any rum for me to hide.")
             return
         }
 
-        val added = player.invAdd(player.inv, pirates_treasure_objs.piratemessage, 1).success
+        val added = player.invAdd(player.inv, objs.piratemessage, 1).success
         if (!added) {
             chatNpc(sad, "Clear an inventory slot and I'll hide it in a crate for ye.")
-            player.invAdd(player.inv, pirates_treasure_objs.karamja_rum, 1)
+            player.invAddOrDrop(objRepo, objs.karamja_rum, 1)
             return
         }
 
@@ -173,22 +176,21 @@ class PiratesTreasure : PluginScript() {
 
     private suspend fun Dialogue.customsSmugglingDialogue() {
         when {
-            pirates_treasure_objs.karamja_rum in player.inv -> {
+            objs.karamja_rum in player.inv -> {
                 chatNpc(angry, "No Karamja rum allowed through customs. Confiscated.")
-                player.invDel(player.inv, pirates_treasure_objs.karamja_rum, 1)
+                player.invDel(player.inv, objs.karamja_rum, 1)
             }
-            pirates_treasure_objs.piratemessage in player.inv -> {
+            objs.piratemessage in player.inv -> {
                 chatNpc(neutral, "All clear. You may pass.")
-                val removed =
-                    player.invDel(player.inv, pirates_treasure_objs.piratemessage, 1).success
+                val removed = player.invDel(player.inv, objs.piratemessage, 1).success
                 if (!removed) {
                     chatNpc(sad, "Hold on... looks like something went wrong there.")
                     return
                 }
-                val added = player.invAdd(player.inv, pirates_treasure_objs.karamja_rum, 1).success
+                val added = player.invAdd(player.inv, objs.karamja_rum, 1).success
                 if (!added) {
                     chatNpc(sad, "Inventory full. I can't hand over your crate contents.")
-                    player.invAdd(player.inv, pirates_treasure_objs.piratemessage, 1)
+                    player.invAddOrDrop(objRepo, objs.piratemessage, 1)
                     return
                 }
                 chatNpc(happy, "You recover your smuggled bottle of Karamja rum.")
@@ -214,16 +216,16 @@ class PiratesTreasure : PluginScript() {
             return
         }
 
-        val removedKey = invDel(player.inv, pirates_treasure_objs.chest_key, 1).success
+        val removedKey = invDel(player.inv, objs.chest_key, 1).success
         if (!removedKey) {
             mes("You need the chest key from Redbeard Frank to claim the treasure.")
             return
         }
 
-        val addedCoins = invAdd(player.inv, pirates_treasure_objs.coins, 450).success
+        val addedCoins = invAdd(player.inv, objs.coins, 450).success
         if (!addedCoins) {
             mes("You need inventory space to take the treasure.")
-            invAdd(player.inv, pirates_treasure_objs.chest_key, 1)
+            invAddOrDrop(objRepo, objs.chest_key, 1)
             return
         }
 
@@ -231,7 +233,7 @@ class PiratesTreasure : PluginScript() {
         showCompletionScroll(
             quest = QuestList.pirates_treasure,
             rewards = listOf("2 Quest Points", "450 Coins"),
-            itemModel = pirates_treasure_objs.coins,
+            itemModel = objs.coins,
             questPoints = 2,
         )
     }

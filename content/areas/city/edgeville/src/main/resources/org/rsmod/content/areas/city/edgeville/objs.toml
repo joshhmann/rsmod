@@ -1,0 +1,15 @@
+# Edgeville Object Spawns
+# Region: 47, 54 (Monastery), 48, 54 (Edgeville south)
+# Format: plane_regionX_regionY_localX_localY
+
+# === EDGEVILLE YEW TREES (Region 48,54) ===
+# Two yew trees south of Edgeville bank
+# Approximate OSRS coordinates: (3085, 3469) and (3091, 3469)
+
+[[spawn]]
+obj = 'yewtree'
+coords = '0_48_54_13_13'
+
+[[spawn]]
+obj = 'yewtree'
+coords = '0_48_54_19_13'

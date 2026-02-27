@@ -9,7 +9,12 @@ import org.rsmod.game.type.stat.StatType
  * @property constant The flat boost amount
  * @property percent The percentage of base level to add (0-100)
  * @property isRestore Whether this restores toward base (true) or boosts above base (false)
- * @property curesPoison Whether this potion cures poison
+ * @property curesPoison Whether this potion cures/downgrades poison or venom-to-poison
+ * @property curesVenom Whether this potion fully cures venom (antivenom variants)
+ * @property poisonImmunityTicks Ticks of poison immunity granted after drinking (0 = none)
+ * @property venomImmunityTicks Ticks of venom immunity granted after drinking (0 = none)
+ * @property isEnergyRestore Whether this potion restores run energy
+ * @property energyRestorePercent Percentage of run energy to restore (0-100)
  */
 data class PotionEffect(
     val stat: StatType,
@@ -17,6 +22,11 @@ data class PotionEffect(
     val percent: Int,
     val isRestore: Boolean = false,
     val curesPoison: Boolean = false,
+    val curesVenom: Boolean = false,
+    val poisonImmunityTicks: Int = 0,
+    val venomImmunityTicks: Int = 0,
+    val isEnergyRestore: Boolean = false,
+    val energyRestorePercent: Int = 0,
 )
 
 /**
@@ -66,6 +76,28 @@ object PotionRegistry {
     /** All registered potions. */
     val ALL_POTIONS: List<PotionType> =
         listOf(
+            // Energy potion: restores 10% run energy per dose (F2P obtainable from GE)
+            PotionType(
+                name = "Energy potion",
+                effect =
+                    PotionEffect(
+                        stat =
+                            org.rsmod.api.config.refs.stats
+                                .hitpoints, // Dummy stat, energy handled separately
+                        constant = 0,
+                        percent = 0,
+                        isEnergyRestore = true,
+                        energyRestorePercent = 10,
+                    ),
+                doseIds =
+                    mapOf(
+                        4 to 3008, // Energy potion(4)
+                        3 to 3010, // Energy potion(3)
+                        2 to 3012, // Energy potion(2)
+                        1 to 3014, // Energy potion(1)
+                    ),
+            ),
+
             // Attack potion: +3 + 10% of base
             PotionType(
                 name = "Attack potion",
@@ -193,7 +225,7 @@ object PotionRegistry {
                     ),
             ),
 
-            // Antipoison: cures poison (no stat boost)
+            // Antipoison: cures poison + 150-tick immunity (~90 seconds)
             PotionType(
                 name = "Antipoison",
                 effect =
@@ -203,6 +235,7 @@ object PotionRegistry {
                         constant = 0,
                         percent = 0,
                         curesPoison = true,
+                        poisonImmunityTicks = 150, // IMMUNITY_ANTIPOISON
                     ),
                 doseIds =
                     mapOf(
@@ -210,6 +243,128 @@ object PotionRegistry {
                         3 to 175, // Antipoison(3)
                         2 to 177, // Antipoison(2)
                         1 to 179, // Antipoison(1)
+                    ),
+            ),
+
+            // Superantipoison: cures poison + 300-tick immunity (~3 min)
+            PotionType(
+                name = "Superantipoison",
+                effect =
+                    PotionEffect(
+                        stat = org.rsmod.api.config.refs.stats.hitpoints,
+                        constant = 0,
+                        percent = 0,
+                        curesPoison = true,
+                        poisonImmunityTicks = 300, // IMMUNITY_SUPERANTIPOISON
+                    ),
+                doseIds =
+                    mapOf(
+                        4 to 2448, // Superantipoison(4)
+                        3 to 181, // Superantipoison(3)
+                        2 to 183, // Superantipoison(2)
+                        1 to 185, // Superantipoison(1)
+                    ),
+            ),
+
+            // Antidote+: cures poison + 600-tick immunity (~6 min)
+            PotionType(
+                name = "Antidote+",
+                effect =
+                    PotionEffect(
+                        stat = org.rsmod.api.config.refs.stats.hitpoints,
+                        constant = 0,
+                        percent = 0,
+                        curesPoison = true,
+                        poisonImmunityTicks = 600, // IMMUNITY_ANTIDOTE_PLUS
+                    ),
+                doseIds =
+                    mapOf(
+                        4 to 5943, // Antidote+(4)
+                        3 to 5944, // Antidote+(3)
+                        2 to 5945, // Antidote+(2)
+                        1 to 5946, // Antidote+(1)
+                    ),
+            ),
+
+            // Antidote++: cures poison + 1200-tick immunity (~12 min)
+            PotionType(
+                name = "Antidote++",
+                effect =
+                    PotionEffect(
+                        stat = org.rsmod.api.config.refs.stats.hitpoints,
+                        constant = 0,
+                        percent = 0,
+                        curesPoison = true,
+                        poisonImmunityTicks = 1200, // IMMUNITY_ANTIDOTE_PLUS_PLUS
+                    ),
+                doseIds =
+                    mapOf(
+                        4 to 5952, // Antidote++(4)
+                        3 to 5953, // Antidote++(3)
+                        2 to 5954, // Antidote++(2)
+                        1 to 5955, // Antidote++(1)
+                    ),
+            ),
+
+            // Antivenom: fully cures venom + 300-tick venom immunity (no poison immunity)
+            PotionType(
+                name = "Antivenom",
+                effect =
+                    PotionEffect(
+                        stat = org.rsmod.api.config.refs.stats.hitpoints,
+                        constant = 0,
+                        percent = 0,
+                        curesVenom = true,
+                        venomImmunityTicks = 300, // IMMUNITY_ANTIVENOM
+                        poisonImmunityTicks = 0,
+                    ),
+                doseIds =
+                    mapOf(
+                        4 to 12905, // Antivenom(4)
+                        3 to 12906, // Antivenom(3)
+                        2 to 12907, // Antivenom(2)
+                        1 to 12908, // Antivenom(1)
+                    ),
+            ),
+
+            // Antivenom+: fully cures venom + 1600-tick venom AND poison immunity (~16 min)
+            PotionType(
+                name = "Antivenom+",
+                effect =
+                    PotionEffect(
+                        stat = org.rsmod.api.config.refs.stats.hitpoints,
+                        constant = 0,
+                        percent = 0,
+                        curesVenom = true,
+                        venomImmunityTicks = 1600, // IMMUNITY_ANTIVENOM_PLUS
+                        poisonImmunityTicks = 1600, // IMMUNITY_ANTIVENOM_PLUS
+                    ),
+                doseIds =
+                    mapOf(
+                        4 to 12913, // Antivenom+(4)
+                        3 to 12914, // Antivenom+(3)
+                        2 to 12915, // Antivenom+(2)
+                        1 to 12916, // Antivenom+(1)
+                    ),
+            ),
+
+            // Energy potion: restores 10% run energy per dose (F2P available)
+            PotionType(
+                name = "Energy potion",
+                effect =
+                    PotionEffect(
+                        stat = org.rsmod.api.config.refs.stats.hitpoints, // Dummy stat
+                        constant = 0,
+                        percent = 0,
+                        isEnergyRestore = true,
+                        energyRestorePercent = 10, // 10% run energy
+                    ),
+                doseIds =
+                    mapOf(
+                        4 to 3008, // Energy potion(4)
+                        3 to 3010, // Energy potion(3)
+                        2 to 3012, // Energy potion(2)
+                        1 to 3014, // Energy potion(1)
                     ),
             ),
         )

@@ -7,26 +7,26 @@ import org.rsmod.game.type.npc.NpcType
 typealias canoe_npcs = CanoeNpcs
 
 object CanoeNpcs : NpcReferences() {
-    val cave_scenery_1 = find("canoeing_cave_scenery_1", 4799663288595192051)
-    val cave_scenery_2 = find("canoeing_cave_scenery_2", 4799663288595192052)
-    val cave_scenery_3 = find("canoeing_cave_scenery_3", 6541502719562466358)
+    val canoeing_cave_scenery_1 = find("canoeing_cave_scenery_1")
+    val canoeing_cave_scenery_2 = find("canoeing_cave_scenery_2")
+    val canoeing_cave_scenery_3 = find("canoeing_cave_scenery_3")
 
-    val tree_scenery_1 = find("canoeing_scenery_1", 3673706769028549969)
-    val tree_scenery_2 = find("canoeing_scenery_2", 3673706769028549970)
-    val bullrush_scenery_1 = find("canoeing_bullrush", 6477528493977644558)
-    val bullrush_scenery_2 = find("canoeing_bullrush_leaf", 6477528493977644559)
+    val canoeing_scenery_1 = find("canoeing_scenery_1")
+    val canoeing_scenery_2 = find("canoeing_scenery_2")
+    val canoeing_bullrush = find("canoeing_bullrush")
+    val canoeing_bullrush_leaf = find("canoeing_bullrush_leaf")
 }
 
 internal object CanoeNpcEditor : NpcEditor() {
     init {
-        scenery(canoe_npcs.cave_scenery_1)
-        scenery(canoe_npcs.cave_scenery_2)
-        scenery(canoe_npcs.cave_scenery_3)
+        scenery(canoe_npcs.canoeing_cave_scenery_1)
+        scenery(canoe_npcs.canoeing_cave_scenery_2)
+        scenery(canoe_npcs.canoeing_cave_scenery_3)
 
-        scenery(canoe_npcs.tree_scenery_1)
-        scenery(canoe_npcs.tree_scenery_2)
-        scenery(canoe_npcs.bullrush_scenery_1)
-        scenery(canoe_npcs.bullrush_scenery_2)
+        scenery(canoe_npcs.canoeing_scenery_1)
+        scenery(canoe_npcs.canoeing_scenery_2)
+        scenery(canoe_npcs.canoeing_bullrush)
+        scenery(canoe_npcs.canoeing_bullrush_leaf)
     }
 
     private fun scenery(npc: NpcType) {

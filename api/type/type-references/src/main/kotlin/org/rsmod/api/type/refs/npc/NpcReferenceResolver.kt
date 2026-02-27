@@ -44,6 +44,14 @@ constructor(private val nameMapping: NameMapping, private val types: NpcTypeList
             return ok(FullSuccess)
         }
         if (cacheIdentityHash != supposedHash) {
+            if (supposedHash != null && supposedHash == internalId.toLong()) {
+                TypeResolver[this] = cacheIdentityHash
+                logger.warn {
+                    "  Npc($name) legacy hash detected ($supposedHash); " +
+                        "auto-resolved to cache identity hash: $cacheIdentityHash"
+                }
+                return ok(FullSuccess)
+            }
             return issue(CacheTypeHashMismatch(supposedHash, cacheIdentityHash))
         }
         return ok(FullSuccess)

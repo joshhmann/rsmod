@@ -4,7 +4,6 @@ import jakarta.inject.Inject
 import org.rsmod.api.combat.commons.CombatAttack
 import org.rsmod.api.combat.manager.MagicRuneManager.Companion.isFailure
 import org.rsmod.api.config.refs.categories
-import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.projanims
 import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.config.refs.spotanims
@@ -23,6 +22,7 @@ import org.rsmod.game.type.obj.UnpackedObjType
 import org.rsmod.game.type.seq.SeqType
 import org.rsmod.game.type.spot.SpotanimType
 import org.rsmod.game.type.synth.SynthType
+import org.rsmod.content.skills.magic.spell.attacks.standard.StandardSpellObjs as spellObjs
 
 class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : SpellAttackMap {
     override fun SpellAttackRepository.register(manager: SpellAttackManager) {
@@ -43,7 +43,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
             }
 
         register(
-            spell = objs.spell_wind_strike,
+            spell = spellObjs.spell_wind_strike,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -60,7 +60,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_water_strike,
+            spell = spellObjs.spell_water_strike,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -77,7 +77,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_earth_strike,
+            spell = spellObjs.spell_earth_strike,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -94,7 +94,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_fire_strike,
+            spell = spellObjs.spell_fire_strike,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -121,7 +121,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
             }
 
         register(
-            spell = objs.spell_wind_bolt,
+            spell = spellObjs.spell_wind_bolt,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -138,7 +138,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_water_bolt,
+            spell = spellObjs.spell_water_bolt,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -155,7 +155,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_earth_bolt,
+            spell = spellObjs.spell_earth_bolt,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -172,7 +172,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_fire_bolt,
+            spell = spellObjs.spell_fire_bolt,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -199,7 +199,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
             }
 
         register(
-            spell = objs.spell_wind_blast,
+            spell = spellObjs.spell_wind_blast,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -216,7 +216,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_water_blast,
+            spell = spellObjs.spell_water_blast,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -233,7 +233,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_earth_blast,
+            spell = spellObjs.spell_earth_blast,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -250,7 +250,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_fire_blast,
+            spell = spellObjs.spell_fire_blast,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -277,7 +277,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
             }
 
         register(
-            spell = objs.spell_wind_wave,
+            spell = spellObjs.spell_wind_wave,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -294,7 +294,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_water_wave,
+            spell = spellObjs.spell_water_wave,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -311,7 +311,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_earth_wave,
+            spell = spellObjs.spell_earth_wave,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -328,7 +328,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_fire_wave,
+            spell = spellObjs.spell_fire_wave,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -355,7 +355,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
             }
 
         register(
-            spell = objs.spell_wind_surge,
+            spell = spellObjs.spell_wind_surge,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -372,7 +372,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_water_surge,
+            spell = spellObjs.spell_water_surge,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -389,7 +389,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_earth_surge,
+            spell = spellObjs.spell_earth_surge,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,
@@ -406,7 +406,7 @@ class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : S
         )
 
         register(
-            spell = objs.spell_fire_surge,
+            spell = spellObjs.spell_fire_surge,
             attack =
                 ElementalSpellAttack(
                     objTypes = objTypes,

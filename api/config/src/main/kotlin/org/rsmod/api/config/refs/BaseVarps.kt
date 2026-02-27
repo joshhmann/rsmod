@@ -53,7 +53,20 @@ object BaseVarps : VarpReferences() {
     val dragonquest = find("dragonquest", 39952498)
     val vampire = find("vampire", 40406460)
     val sheep = find("sheep", 40633441)
+    val demonstart = find("demonstart", 50393624)
     val pirate_quest = find("100_pirate_quest")
+    val ernestchicken = find("ernestchicken")
+    val goblinquest = find("goblinquest", 62)
+    val what_lies_below = find("what_lies_below")
+
+    // Missing F2P Quests
+    val squirequest = find("squirequest")
+    val arrav_phoenix = find("arrav_phoenix")
+    val arrav_blackarm = find("arrav_blackarm")
+    val misthalin_mystery = find("misthalin_mystery")
+    val below_ice_mountain = find("below_ice_mountain")
+    val x_marks_the_spot = find("x_marks_the_spot")
+    val corsair_curse = find("corsair_curse")
 
     val slayer_count = find("slayer_count")
     val slayer_target = find("slayer_target")
@@ -90,6 +103,7 @@ object BaseVarps : VarpReferences() {
     val prayer_drain = find("prayer_drain")
     val prayer0 = find("prayer0")
     val playtime = find("playtime")
+    val tutorial = find("tutorial")
     val generic_temp_state_65516 = find("generic_temp_state_65516")
     val dinhs_passive_delay = find("dinhs_passive_delay")
     val com_maxhit = find("com_maxhit")
@@ -109,11 +123,33 @@ object BaseVarps : VarpReferences() {
      */
     val temp_restore_65527 = find("temp_restore_65527")
 
+    /* Grand Exchange — written by CS2 when player sets up an offer in ge_offers interface. */
+    val ge_last_offer_item = find("ge_last_offer_item")
+    val ge_last_offer_quantity = find("ge_last_offer_quantity")
+    val ge_last_offer_price = find("ge_last_offer_price")
+    val ge_last_offer_type = find("ge_last_offer_type")
+
     /* Poison / Venom mechanics — used by content/mechanics/poison */
-    val poison_damage = find("poison_damage")
-    val venom_damage = find("venom_damage")
-    val poison_sub_tick = find("poison_sub_tick")
-    val poison_immunity_ticks = find("poison_immunity_ticks")
-    val venom_immunity_ticks = find("venom_immunity_ticks")
-    val hp_orb_toxin = find("hp_orb_toxin")
+    val poison_2 = find("poison_2")
+    val local_venom_damage = find("local_venom_damage")
+    val local_poison_sub_tick = find("local_poison_sub_tick")
+    val local_poison_immunity_ticks = find("local_poison_immunity_ticks")
+    val local_venom_immunity_ticks = find("local_venom_immunity_ticks")
+    val hp_orb_toxin = find("hp_orb_toxin", 102)
+
+    /* Backward compatibility aliases */
+    val poison_damage
+        get() = poison_2
+
+    val venom_damage
+        get() = local_venom_damage
+
+    val poison_sub_tick
+        get() = local_poison_sub_tick
+
+    val poison_immunity_ticks
+        get() = local_poison_immunity_ticks
+
+    val venom_immunity_ticks
+        get() = local_venom_immunity_ticks
 }

@@ -8,7 +8,11 @@ import org.rsmod.api.type.verifier.TypeVerifier.Verification
 
 public class EditorVerifier @Inject constructor(private val editors: TypeEditorResolverMap) {
     public fun verifyAll(): Verification {
-        val symbols = editors.symbolErrors
+        val symbols =
+            editors.symbolErrors.filterNot { error ->
+                val status = error.status
+                status is TypeEditorResult.NameNotFound && status.name in nonBlockingNameErrors
+            }
         if (symbols.isNotEmpty()) {
             val error = symbols.toError()
             return Verification.MissingSymbol(error)
@@ -20,7 +24,11 @@ public class EditorVerifier @Inject constructor(private val editors: TypeEditorR
             return Verification.CacheUpdateRequired(error)
         }
 
-        val errors = editors.errors
+        val errors =
+            editors.errors.filterNot { error ->
+                val status = error.status
+                status is TypeEditorResult.NameNotFound && status.name in nonBlockingNameErrors
+            }
         if (errors.isNotEmpty()) {
             val error = errors.toError()
             return Verification.Failure(error)
@@ -100,5 +108,6 @@ public class EditorVerifier @Inject constructor(private val editors: TypeEditorR
 
     private companion object {
         private const val MAX_ERROR_LINES: Int = 50
+        private val nonBlockingNameErrors: Set<String> = setOf("banker")
     }
 }

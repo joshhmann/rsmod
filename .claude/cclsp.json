@@ -1,0 +1,10 @@
+{
+  "servers": [
+    {
+      "extensions": ["kt", "kts"],
+      "command": ["cmd", "/c", "C:\\tools\\kotlin-lsp\\kotlin-lsp.cmd"],
+      "rootDir": ".",
+      "timeout": 600000
+    }
+  ]
+}

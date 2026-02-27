@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
+    implementation(libs.bundles.logging)
     implementation(projects.api.hunt)
     implementation(projects.api.pluginCommons)
     implementation(projects.api.player)

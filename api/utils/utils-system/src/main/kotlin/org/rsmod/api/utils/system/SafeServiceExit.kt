@@ -4,6 +4,7 @@ import kotlin.concurrent.thread
 import kotlin.system.exitProcess
 
 public object SafeServiceExit {
+    // HYGIENE: "SystemReboot" is a thread name, not an ObjType/NpcType reference
     private const val TERMINATION_THREAD_NAME = "SystemReboot"
 
     /**

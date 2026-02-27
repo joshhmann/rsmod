@@ -23,13 +23,14 @@ package org.rsmod.content.skills.smithing.scripts
 //   - Platebody requiring 5 bars
 
 import jakarta.inject.Inject
-import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.smithingLvl
+import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpHeldU
 import org.rsmod.api.stats.xpmod.XpModifiers
+import org.rsmod.content.skills.smithing.configs.SmithingObjs as objs
 import org.rsmod.game.type.obj.ObjType
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
@@ -51,7 +52,9 @@ private data class AnvilDef(
     val productCount: Int = 1,
 )
 
-class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScript() {
+class Smithing
+@Inject
+constructor(private val xpMods: XpModifiers, private val objRepo: ObjRepository) : PluginScript() {
 
     override fun ScriptContext.startup() {
         // ---- Smelting: ore + ore → bar (use-item-on-item) ----
@@ -96,7 +99,7 @@ class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScri
         delay(5)
         val xp = def.xp * xpMods.get(player, stats.smithing)
         statAdvance(stats.smithing, xp)
-        invAdd(inv, def.bar)
+        invAddOrDrop(objRepo, def.bar)
         mes("You smelt the ores into a bar.")
     }
 
@@ -115,7 +118,7 @@ class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScri
         delay(5)
         val xp = def.xp * xpMods.get(player, stats.smithing)
         statAdvance(stats.smithing, xp)
-        invAdd(inv, def.bar)
+        invAddOrDrop(objRepo, def.bar)
         mes("You smelt the ore into a bar.")
     }
 
@@ -148,7 +151,7 @@ class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScri
             delay(5)
             val xp = def.xp * xpMods.get(player, stats.smithing)
             statAdvance(stats.smithing, xp)
-            invAdd(inv, def.product, count = def.productCount)
+            invAddOrDrop(objRepo, def.product, count = def.productCount)
             mes("You hammer the bars into an item.")
         }
     }
@@ -164,9 +167,9 @@ class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScri
         private val SMELT_MITHRIL =
             SmeltDef(objs.mithril_bar, objs.mithril_ore, objs.coal, levelReq = 50, xp = 30.0)
         private val SMELT_ADAMANT =
-            SmeltDef(objs.adamant_bar, objs.adamantite_ore, objs.coal, levelReq = 70, xp = 37.5)
+            SmeltDef(objs.adamantite_bar, objs.adamantite_ore, objs.coal, levelReq = 70, xp = 37.5)
         private val SMELT_RUNE =
-            SmeltDef(objs.rune_bar, objs.runite_ore, objs.coal, levelReq = 85, xp = 50.0)
+            SmeltDef(objs.runite_bar, objs.runite_ore, objs.coal, levelReq = 85, xp = 50.0)
         private val SMELT_GOLD =
             SmeltDef(objs.gold_bar, objs.gold_ore, null, levelReq = 40, xp = 22.5)
         private val SMELT_SILVER =
@@ -576,98 +579,98 @@ class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScri
                 ),
                 // Adamant (level 70)
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 1,
                     levelReq = 70,
                     xp = 62.5,
                     product = objs.adamant_dagger,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 1,
                     levelReq = 70,
                     xp = 62.5,
                     product = objs.adamant_sword,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 1,
                     levelReq = 71,
                     xp = 62.5,
                     product = objs.adamant_mace,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 1,
                     levelReq = 73,
                     xp = 62.5,
                     product = objs.adamant_med_helm,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 2,
                     levelReq = 75,
                     xp = 125.0,
                     product = objs.adamant_scimitar,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 2,
                     levelReq = 76,
                     xp = 125.0,
                     product = objs.adamant_sq_shield,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 2,
                     levelReq = 78,
                     xp = 125.0,
                     product = objs.adamant_longsword,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 2,
                     levelReq = 79,
                     xp = 125.0,
                     product = objs.adamant_full_helm,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 3,
                     levelReq = 81,
                     xp = 187.5,
                     product = objs.adamant_plateskirt,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 3,
                     levelReq = 81,
                     xp = 187.5,
                     product = objs.adamant_platelegs,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 3,
                     levelReq = 82,
                     xp = 187.5,
                     product = objs.adamant_chainbody,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 3,
                     levelReq = 83,
                     xp = 187.5,
                     product = objs.adamant_kiteshield,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 3,
                     levelReq = 84,
                     xp = 187.5,
                     product = objs.adamant_2h_sword,
                 ),
                 AnvilDef(
-                    objs.adamant_bar,
+                    objs.adamantite_bar,
                     barCount = 5,
                     levelReq = 88,
                     xp = 312.5,
@@ -675,98 +678,98 @@ class Smithing @Inject constructor(private val xpMods: XpModifiers) : PluginScri
                 ),
                 // Rune (level 85)
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 1,
                     levelReq = 85,
                     xp = 75.0,
                     product = objs.rune_dagger,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 1,
                     levelReq = 85,
                     xp = 75.0,
                     product = objs.rune_sword,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 1,
                     levelReq = 86,
                     xp = 75.0,
                     product = objs.rune_mace,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 1,
                     levelReq = 88,
                     xp = 75.0,
                     product = objs.rune_med_helm,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 2,
                     levelReq = 90,
                     xp = 150.0,
                     product = objs.rune_scimitar,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 2,
                     levelReq = 91,
                     xp = 150.0,
                     product = objs.rune_sq_shield,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 2,
                     levelReq = 93,
                     xp = 150.0,
                     product = objs.rune_longsword,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 2,
                     levelReq = 94,
                     xp = 150.0,
                     product = objs.rune_full_helm,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 3,
                     levelReq = 96,
                     xp = 225.0,
                     product = objs.rune_plateskirt,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 3,
                     levelReq = 96,
                     xp = 225.0,
                     product = objs.rune_platelegs,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 3,
                     levelReq = 97,
                     xp = 225.0,
                     product = objs.rune_chainbody,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 3,
                     levelReq = 98,
                     xp = 225.0,
                     product = objs.rune_kiteshield,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 3,
                     levelReq = 99,
                     xp = 225.0,
                     product = objs.rune_2h_sword,
                 ),
                 AnvilDef(
-                    objs.rune_bar,
+                    objs.runite_bar,
                     barCount = 5,
                     levelReq = 99,
                     xp = 375.0,

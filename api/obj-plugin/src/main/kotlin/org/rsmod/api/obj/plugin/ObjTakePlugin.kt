@@ -49,7 +49,7 @@ public class ObjTakePlugin @Inject constructor(private val repo: ObjRepository) 
             return
         }
         val take = transaction(obj)
-        if (take.failure) {
+        if (!take.success) {
             mes(Constants.dm_take_invspace)
         } else {
             take.commitAll()
@@ -58,6 +58,8 @@ public class ObjTakePlugin @Inject constructor(private val repo: ObjRepository) 
 
     private fun Player.hasInvSpace(obj: Obj): Boolean = transaction(obj).success
 
-    private fun Player.transaction(obj: Obj): TransactionResultList<InvObj> =
-        invAdd(inv, obj.type, obj.count, autoCommit = false)
+    private fun Player.transaction(obj: Obj): TransactionResultList<InvObj> {
+        val result = invAdd(inv, obj.type, obj.count, autoCommit = false)
+        return result
+    }
 }

@@ -1,0 +1,70 @@
+# Goblin Village Object Spawns
+# Coordinates are in format: plane_regionX_regionZ_localX_localZ
+
+# ==================== GOBLIN MAIL SPAWNS ====================
+# Goblin mail (goblin_armour) spawns for the Goblin Diplomacy quest
+# These are the brown goblin mails that can be found in the village
+
+[[spawn]]
+obj = 'goblin_armour'
+coords = '0_46_54_25_38'
+
+[[spawn]]
+obj = 'goblin_armour'
+coords = '0_46_54_32_40'
+
+[[spawn]]
+obj = 'goblin_armour'
+coords = '0_46_54_38_32'
+
+# ==================== RED GOBLIN MAIL SPAWNS ====================
+# Red goblin mail for Goblin Diplomacy quest
+
+[[spawn]]
+obj = 'goblin_mail_red'
+coords = '0_46_54_28_42'
+
+[[spawn]]
+obj = 'goblin_mail_red'
+coords = '0_46_54_35_38'
+
+[[spawn]]
+obj = 'goblin_mail_red'
+coords = '0_46_54_22_35'
+
+# ==================== GREEN GOBLIN MAIL SPAWNS ====================
+# Green goblin mail for Goblin Diplomacy quest
+
+[[spawn]]
+obj = 'goblin_mail_green'
+coords = '0_46_54_30_45'
+
+[[spawn]]
+obj = 'goblin_mail_green'
+coords = '0_46_54_40_35'
+
+[[spawn]]
+obj = 'goblin_mail_green'
+coords = '0_46_54_18_40'
+
+# ==================== BLUE GOBLIN MAIL SPAWNS ====================
+# Blue goblin mail (requires dye to create)
+
+[[spawn]]
+obj = 'goblin_mail_blue'
+coords = '0_46_54_45_28'
+
+[[spawn]]
+obj = 'goblin_mail_blue'
+coords = '0_46_54_15_32'
+
+# ==================== ORANGE GOBLIN MAIL SPAWNS ====================
+# Orange goblin mail (requires dye to create)
+
+[[spawn]]
+obj = 'goblin_mail_orange'
+coords = '0_46_54_33_28'
+
+[[spawn]]
+obj = 'goblin_mail_orange'
+coords = '0_46_54_20_28'

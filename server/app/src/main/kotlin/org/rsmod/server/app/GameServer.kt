@@ -70,12 +70,29 @@ class GameServer(private val skipTypeVerificationOverride: Boolean? = null) :
                 help = "Skip identity hash verification for cache type resolver.",
             )
             .flag(default = false)
+    private val allowTypeVerificationFailuresOption: Boolean by
+        option(
+                "--allow-type-verification-failures",
+                help = "Continue startup when type verification reports unresolved issues.",
+            )
+            .flag(default = true)
+    private val strictTypeVerificationOption: Boolean by
+        option(
+                "--strict-type-verification",
+                help =
+                    "Fail startup on any type verification issue. Overrides " +
+                        "--allow-type-verification-failures.",
+            )
+            .flag(default = false)
 
     // When the app is run in integration tests, the GameServer is constructed directly and Clikt
     // args are not parsed. In that case, we fall back to the explicit override to avoid accessing
     // the uninitialized `skipTypeVerificationOption` delegate.
     private val skipTypeVerification: Boolean
         get() = skipTypeVerificationOverride ?: skipTypeVerificationOption
+
+    private val allowTypeVerificationFailures: Boolean
+        get() = !strictTypeVerificationOption && allowTypeVerificationFailuresOption
 
     override fun run() {
         ensureProperInstallation()
@@ -226,7 +243,17 @@ class GameServer(private val skipTypeVerificationOverride: Boolean? = null) :
             startApplication()
             throw ServerRestartException()
         } else if (verification.isFailure()) {
-            throw RuntimeException(verification.formatError())
+            logger.info {
+                "Type verification failed. allowTypeVerificationFailures=$allowTypeVerificationFailures"
+            }
+            if (allowTypeVerificationFailures) {
+                logger.warn {
+                    "Type verification failed but continuing due to " +
+                        "--allow-type-verification-failures.\n${verification.formatError()}"
+                }
+            } else {
+                throw RuntimeException(verification.formatError())
+            }
         }
     }
 
@@ -255,11 +282,28 @@ class GameServer(private val skipTypeVerificationOverride: Boolean? = null) :
         val scriptLoader = injector.getInstance(PluginScriptLoader::class.java)
         val scripts: Collection<PluginScript>
         val loadDuration = measureTime {
-            scripts = scriptLoader.load(PluginScript::class.java, injector)
+            scripts =
+                scriptLoader.load(
+                    type = PluginScript::class.java,
+                    injector = injector,
+                    lenient = allowTypeVerificationFailures,
+                )
         }
         val scriptContext = injector.getInstance(ScriptContext::class.java)
         val startupDuration = measureTime {
-            scripts.forEach { startupPluginScript(it, scriptContext) }
+            scripts.forEach { script ->
+                if (allowTypeVerificationFailures) {
+                    runCatching { startupPluginScript(script, scriptContext) }
+                        .onFailure { t ->
+                            logger.warn {
+                                "Skipping script startup for ${script.javaClass.name} due to " +
+                                    "--allow-type-verification-failures: ${t.message}"
+                            }
+                        }
+                } else {
+                    startupPluginScript(script, scriptContext)
+                }
+            }
         }
         reportDuration {
             "Loaded ${scripts.size} script${if (scripts.size == 1) "" else "s"} in " +

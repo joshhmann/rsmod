@@ -32,6 +32,9 @@ sealed class BotAction {
     /** Interact with an NPC at the given server index using the given option (1-5). */
     data class InteractNpc(val index: Int, val option: Int = 1) : BotAction()
 
+    /** Use one inventory item on another inventory item by slot index. */
+    data class InteractHeld(val selectedSlot: Int, val targetSlot: Int) : BotAction()
+
     /** Spawn an item directly into the player's inventory. */
     data class SpawnItem(val itemId: Int, val count: Int = 1) : BotAction()
 

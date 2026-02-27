@@ -1,0 +1,75 @@
+# Wilderness Volcano NPC Spawns
+# Located at wilderness levels 40-45, near Chaos Temple and Wilderness Obelisk
+# Format: plane_regionX_regionY_localX_localZ
+# This area is multi-combat and contains F2P (lesser demons) and P2P (greater demons) content
+
+# ===============================
+# LESSER DEMONS (F2P accessible)
+# Level 82 combat, aggressive
+# Located throughout the volcano area
+# ===============================
+
+[[spawn]]
+npc = 'lesser_demon'
+coords = '0_49_53_25_20'  # Wilderness Volcano - north side
+
+[[spawn]]
+npc = 'lesser_demon2'
+coords = '0_49_53_27_22'  # Wilderness Volcano - center
+
+[[spawn]]
+npc = 'lesser_demon3'
+coords = '0_49_53_29_24'  # Wilderness Volcano - east side
+
+[[spawn]]
+npc = 'lesser_demon4'
+coords = '0_49_53_31_20'  # Wilderness Volcano - southeast
+
+[[spawn]]
+npc = 'lesser_demon5'
+coords = '0_49_53_23_26'  # Wilderness Volcano - west side
+
+# Additional lesser demons for denser F2P content
+[[spawn]]
+npc = 'lesser_demon'
+coords = '0_49_53_33_22'  # Wilderness Volcano - far east
+
+[[spawn]]
+npc = 'lesser_demon2'
+coords = '0_49_53_21_18'  # Wilderness Volcano - northwest
+
+# ===============================
+# GREATER DEMONS (P2P)
+# Level 92 combat, aggressive
+# Located deeper in the volcano area
+# ===============================
+
+[[spawn]]
+npc = 'greater_demon'
+coords = '0_49_53_35_24'  # Wilderness Volcano - deep east (P2P)
+
+[[spawn]]
+npc = 'greater_demon2'
+coords = '0_49_53_37_26'  # Wilderness Volcano - far east (P2P)
+
+[[spawn]]
+npc = 'greater_demon'
+coords = '0_49_53_39_22'  # Wilderness Volcano - eastern edge (P2P)
+
+# ===============================
+# CHAOS DWARVES
+# Level 48 combat
+# Located near the volcano entrance and obelisk area
+# ===============================
+
+[[spawn]]
+npc = 'dwarf_chaos'
+coords = '0_49_53_15_30'  # Near Chaos Temple approach
+
+[[spawn]]
+npc = 'dwarf_chaos'
+coords = '0_49_53_17_32'  # Near Wilderness Obelisk
+
+[[spawn]]
+npc = 'dwarf_chaos'
+coords = '0_49_53_19_28'  # Volcano entrance area

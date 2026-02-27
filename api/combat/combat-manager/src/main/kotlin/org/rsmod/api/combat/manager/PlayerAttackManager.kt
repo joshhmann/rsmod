@@ -388,11 +388,13 @@ constructor(
         damage: Int,
         multiplier: Double,
     ) {
+        // Base cast XP is always awarded, even on a splash (0 damage).
+        val baseXp = attack.spell.castXp
         if (attack.defensive) {
-            statAdvance(player, stats.magic, damage * 1.33, multiplier)
+            statAdvance(player, stats.magic, baseXp + damage * 1.33, multiplier)
             statAdvance(player, stats.defence, damage.toDouble(), multiplier)
         } else {
-            statAdvance(player, stats.magic, damage * 2.0, multiplier)
+            statAdvance(player, stats.magic, baseXp + damage * 2.0, multiplier)
         }
         statAdvance(player, stats.hitpoints, damage * 1.33, multiplier)
     }

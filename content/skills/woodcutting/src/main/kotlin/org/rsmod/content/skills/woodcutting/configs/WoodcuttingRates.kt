@@ -5,6 +5,7 @@ import org.rsmod.api.type.builders.enums.EnumBuilder
 import org.rsmod.api.type.builders.param.ParamBuilder
 import org.rsmod.api.type.refs.enums.EnumReferences
 import org.rsmod.api.type.refs.param.ParamReferences
+import org.rsmod.content.skills.woodcutting.configs.WoodcuttingObjs as wcObjs
 import org.rsmod.game.type.enums.EnumType
 import org.rsmod.game.type.obj.ObjType
 
@@ -42,12 +43,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(160, 500)
             this[objs.adamant_axe] = rate(192, 600)
             this[objs.rune_axe] = rate(224, 700)
-            this[objs.gilded_axe] = rate(224, 700)
+            this[wcObjs.trail_gilded_axe] = rate(224, 700)
             this[objs.dragon_axe] = rate(240, 750)
-            this[objs.dragon_axe_or] = rate(240, 750)
-            this[objs.third_age_axe] = rate(240, 750)
+            this[wcObjs.dragon_axe] = rate(240, 750)
+            this[wcObjs._3a_axe] = rate(240, 750)
             this[objs.infernal_axe] = rate(240, 750)
-            this[objs.infernal_axe_or] = rate(240, 750)
+            this[wcObjs.infernal_axe] = rate(240, 750)
             this[objs.crystal_axe] = rate(250, 800)
         }
 
@@ -59,12 +60,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(80, 250)
             this[objs.adamant_axe] = rate(96, 300)
             this[objs.rune_axe] = rate(112, 350)
-            this[objs.gilded_axe] = rate(112, 350)
+            this[wcObjs.trail_gilded_axe] = rate(112, 350)
             this[objs.dragon_axe] = rate(120, 375)
-            this[objs.dragon_axe_or] = rate(120, 375)
-            this[objs.third_age_axe] = rate(120, 375)
+            this[wcObjs.dragon_axe] = rate(120, 375)
+            this[wcObjs._3a_axe] = rate(120, 375)
             this[objs.infernal_axe] = rate(120, 375)
-            this[objs.infernal_axe_or] = rate(120, 375)
+            this[wcObjs.infernal_axe] = rate(120, 375)
             this[objs.crystal_axe] = rate(120, 375)
         }
 
@@ -76,12 +77,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(40, 125)
             this[objs.adamant_axe] = rate(48, 150)
             this[objs.rune_axe] = rate(56, 175)
-            this[objs.gilded_axe] = rate(56, 175)
+            this[wcObjs.trail_gilded_axe] = rate(56, 175)
             this[objs.dragon_axe] = rate(60, 187)
-            this[objs.dragon_axe_or] = rate(60, 187)
-            this[objs.third_age_axe] = rate(60, 187)
+            this[wcObjs.dragon_axe] = rate(60, 187)
+            this[wcObjs._3a_axe] = rate(60, 187)
             this[objs.infernal_axe] = rate(60, 187)
-            this[objs.infernal_axe_or] = rate(60, 187)
+            this[wcObjs.infernal_axe] = rate(60, 187)
             this[objs.crystal_axe] = rate(60, 187)
         }
 
@@ -93,12 +94,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(39, 117)
             this[objs.adamant_axe] = rate(47, 140)
             this[objs.rune_axe] = rate(55, 164)
-            this[objs.gilded_axe] = rate(55, 164)
+            this[wcObjs.trail_gilded_axe] = rate(55, 164)
             this[objs.dragon_axe] = rate(60, 190)
-            this[objs.dragon_axe_or] = rate(60, 190)
-            this[objs.third_age_axe] = rate(60, 190)
+            this[wcObjs.dragon_axe] = rate(60, 190)
+            this[wcObjs._3a_axe] = rate(60, 190)
             this[objs.infernal_axe] = rate(60, 190)
-            this[objs.infernal_axe_or] = rate(60, 190)
+            this[wcObjs.infernal_axe] = rate(60, 190)
             this[objs.crystal_axe] = rate(60, 200)
         }
 
@@ -110,12 +111,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(20, 62)
             this[objs.adamant_axe] = rate(24, 75)
             this[objs.rune_axe] = rate(28, 87)
-            this[objs.gilded_axe] = rate(28, 87)
+            this[wcObjs.trail_gilded_axe] = rate(28, 87)
             this[objs.dragon_axe] = rate(30, 93)
-            this[objs.dragon_axe_or] = rate(30, 93)
-            this[objs.third_age_axe] = rate(30, 93)
+            this[wcObjs.dragon_axe] = rate(30, 93)
+            this[wcObjs._3a_axe] = rate(30, 93)
             this[objs.infernal_axe] = rate(30, 93)
-            this[objs.infernal_axe_or] = rate(30, 93)
+            this[wcObjs.infernal_axe] = rate(30, 93)
             this[objs.crystal_axe] = rate(30, 93)
         }
 
@@ -127,12 +128,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(14, 74)
             this[objs.adamant_axe] = rate(17, 90)
             this[objs.rune_axe] = rate(20, 104)
-            this[objs.gilded_axe] = rate(20, 104)
+            this[wcObjs.trail_gilded_axe] = rate(20, 104)
             this[objs.dragon_axe] = rate(21, 112)
-            this[objs.dragon_axe_or] = rate(21, 112)
-            this[objs.third_age_axe] = rate(21, 112)
+            this[wcObjs.dragon_axe] = rate(21, 112)
+            this[wcObjs._3a_axe] = rate(21, 112)
             this[objs.infernal_axe] = rate(21, 112)
-            this[objs.infernal_axe_or] = rate(21, 112)
+            this[wcObjs.infernal_axe] = rate(21, 112)
             this[objs.crystal_axe] = rate(21, 112)
         }
 
@@ -144,12 +145,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(20, 63)
             this[objs.adamant_axe] = rate(25, 75)
             this[objs.rune_axe] = rate(29, 88)
-            this[objs.gilded_axe] = rate(29, 88)
+            this[wcObjs.trail_gilded_axe] = rate(29, 88)
             this[objs.dragon_axe] = rate(34, 94)
-            this[objs.dragon_axe_or] = rate(34, 94)
-            this[objs.third_age_axe] = rate(34, 94)
+            this[wcObjs.dragon_axe] = rate(34, 94)
+            this[wcObjs._3a_axe] = rate(34, 94)
             this[objs.infernal_axe] = rate(34, 94)
-            this[objs.infernal_axe_or] = rate(34, 94)
+            this[wcObjs.infernal_axe] = rate(34, 94)
             this[objs.crystal_axe] = rate(36, 97)
         }
 
@@ -161,12 +162,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(10, 31)
             this[objs.adamant_axe] = rate(12, 37)
             this[objs.rune_axe] = rate(14, 44)
-            this[objs.gilded_axe] = rate(14, 44)
+            this[wcObjs.trail_gilded_axe] = rate(14, 44)
             this[objs.dragon_axe] = rate(15, 47)
-            this[objs.dragon_axe_or] = rate(15, 47)
-            this[objs.third_age_axe] = rate(15, 47)
+            this[wcObjs.dragon_axe] = rate(15, 47)
+            this[wcObjs._3a_axe] = rate(15, 47)
             this[objs.infernal_axe] = rate(15, 47)
-            this[objs.infernal_axe_or] = rate(15, 47)
+            this[wcObjs.infernal_axe] = rate(15, 47)
             this[objs.crystal_axe] = rate(15, 47)
         }
 
@@ -178,12 +179,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(5, 15)
             this[objs.adamant_axe] = rate(6, 18)
             this[objs.rune_axe] = rate(7, 21)
-            this[objs.gilded_axe] = rate(7, 21)
+            this[wcObjs.trail_gilded_axe] = rate(7, 21)
             this[objs.dragon_axe] = rate(7, 22)
-            this[objs.dragon_axe_or] = rate(7, 22)
-            this[objs.third_age_axe] = rate(7, 22)
+            this[wcObjs.dragon_axe] = rate(7, 22)
+            this[wcObjs._3a_axe] = rate(7, 22)
             this[objs.infernal_axe] = rate(7, 22)
-            this[objs.infernal_axe_or] = rate(7, 22)
+            this[wcObjs.infernal_axe] = rate(7, 22)
             this[objs.crystal_axe] = rate(7, 22)
         }
 
@@ -195,12 +196,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(5, 15)
             this[objs.adamant_axe] = rate(6, 18)
             this[objs.rune_axe] = rate(7, 21)
-            this[objs.gilded_axe] = rate(7, 21)
+            this[wcObjs.trail_gilded_axe] = rate(7, 21)
             this[objs.dragon_axe] = rate(7, 30)
-            this[objs.dragon_axe_or] = rate(7, 30)
-            this[objs.third_age_axe] = rate(7, 30)
+            this[wcObjs.dragon_axe] = rate(7, 30)
+            this[wcObjs._3a_axe] = rate(7, 30)
             this[objs.infernal_axe] = rate(7, 30)
-            this[objs.infernal_axe_or] = rate(7, 30)
+            this[wcObjs.infernal_axe] = rate(7, 30)
             this[objs.crystal_axe] = rate(8, 35)
         }
 
@@ -212,12 +213,12 @@ internal object WoodcuttingEnumBuilder : EnumBuilder() {
             this[objs.mithril_axe] = rate(46, 68)
             this[objs.adamant_axe] = rate(59, 81)
             this[objs.rune_axe] = rate(64, 94)
-            this[objs.gilded_axe] = rate(64, 94)
+            this[wcObjs.trail_gilded_axe] = rate(64, 94)
             this[objs.dragon_axe] = rate(67, 101)
-            this[objs.dragon_axe_or] = rate(67, 101)
-            this[objs.third_age_axe] = rate(67, 101)
+            this[wcObjs.dragon_axe] = rate(67, 101)
+            this[wcObjs._3a_axe] = rate(67, 101)
             this[objs.infernal_axe] = rate(67, 101)
-            this[objs.infernal_axe_or] = rate(67, 101)
+            this[wcObjs.infernal_axe] = rate(67, 101)
             this[objs.crystal_axe] = rate(67, 101)
         }
     }

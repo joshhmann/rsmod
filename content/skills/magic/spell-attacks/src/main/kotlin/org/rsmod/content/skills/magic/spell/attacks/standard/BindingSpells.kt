@@ -4,7 +4,6 @@ import jakarta.inject.Inject
 import org.rsmod.api.combat.commons.CombatAttack
 import org.rsmod.api.combat.manager.MagicRuneManager.Companion.isFailure
 import org.rsmod.api.config.refs.categories
-import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.projanims
 import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.config.refs.spotanims
@@ -24,6 +23,7 @@ import org.rsmod.game.type.obj.UnpackedObjType
 import org.rsmod.game.type.seq.SeqType
 import org.rsmod.game.type.spot.SpotanimType
 import org.rsmod.game.type.synth.SynthType
+import org.rsmod.content.skills.magic.spell.attacks.standard.StandardSpellObjs as spellObjs
 
 class BindingSpells
 @Inject
@@ -31,7 +31,7 @@ constructor(private val objTypes: ObjTypeList, private val statusEffects: Status
     SpellAttackMap {
     override fun SpellAttackRepository.register(manager: SpellAttackManager) {
         register(
-            spell = objs.spell_bind,
+            spell = spellObjs.spell_bind,
             attack =
                 BindingSpellAttack(
                     manager = manager,
@@ -50,7 +50,7 @@ constructor(private val objTypes: ObjTypeList, private val statusEffects: Status
         )
 
         register(
-            spell = objs.spell_snare,
+            spell = spellObjs.spell_snare,
             attack =
                 BindingSpellAttack(
                     manager = manager,
@@ -69,7 +69,7 @@ constructor(private val objTypes: ObjTypeList, private val statusEffects: Status
         )
 
         register(
-            spell = objs.spell_entangle,
+            spell = spellObjs.spell_entangle,
             attack =
                 BindingSpellAttack(
                     manager = manager,
