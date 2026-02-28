@@ -15,11 +15,11 @@ import org.rsmod.plugin.scripts.ScriptContext
  */
 class Priest @Inject constructor() : PluginScript() {
     override fun ScriptContext.startup() {
-        // Lumbridge Church Priest
-        onOpNpc1(PrayerNpcRefs.lumbridge_priest) { lumbridgePriestDialogue(it.npc) }
+        // Lumbridge Church Priest (Father Aereck) is handled in RestlessGhost.kt
+        // onOpNpc1(PrayerNpcRefs.lumbridge_priest) { lumbridgePriestDialogue(it.npc) }
 
-        // Varrock Church Priest
-        onOpNpc1(PrayerNpcRefs.varrock_priest) { varrockPriestDialogue(it.npc) }
+        // Varrock Church Priest (Father Lawrence) is handled in RomeoJuliet.kt
+        // onOpNpc1(PrayerNpcRefs.varrock_priest) { varrockPriestDialogue(it.npc) }
     }
 
     private suspend fun ProtectedAccess.lumbridgePriestDialogue(npc: Npc) =

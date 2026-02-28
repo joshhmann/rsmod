@@ -161,21 +161,21 @@ internal object FishingSeqs : SeqReferences() {
 // ---------------------------------------------------------------------------
 internal object FishingNpcs : NpcReferences() {
     // NPC 1518: options "small net" (shrimps/anchovies) and "bait" (sardine/herring)
-    val net_bait_spot = find("0_50_50_freshfish") // freshwater: net + bait
+    val net_bait_spot = find("0_44_53_saltfish") // freshwater: net + bait
     // NPC 1506: options "lure" (trout/salmon) and "bait" (pike)
-    val lure_bait_spot = find("0_50_50_freshfish") // lure/bait river spot
+    val lure_bait_spot = find("0_37_53_freshfish") // lure/bait river spot
     // NPC 1519: options "cage" (lobster) and "harpoon" (tuna/swordfish)
-    val cage_harpoon_spot = find("0_50_49_saltfish") // saltfish: cage + harpoon
+    val cage_harpoon_spot = find("0_44_53_rarefish") // saltfish: cage + harpoon
     // NPC 1520: options "big net" (mackerel/cod/bass) and "harpoon" (shark)
-    val big_net_harpoon_spot = find("0_50_49_saltfish") // big net + harpoon
+    val big_net_harpoon_spot = find("0_44_53_memberfish") // big net + harpoon
     // NPC 4316: options "net" (monkfish) and "harpoon" (swordfish)  — Piscatoris only
-    val monkfish_spot = find("0_50_49_saltfish")
+    val monkfish_spot = find("swan_fishingspot")
     // NPC 1542: option "use-rod" (leaping trout/salmon/sturgeon) — Barbarian fishing
-    val barb_rod_spot = find("0_50_50_freshfish")
+    val barb_rod_spot = find("0_39_54_brut_fishing_spot")
     // NPC 1535: option "cage" (dark crab) — Wilderness Resource Area
-    val dark_crab_spot = find("0_50_49_saltfish")
+    val dark_crab_spot = find("52_59_crabs")
     // NPC 6825: option "bait" (anglerfish) — Piscarilius
-    val anglerfish_spot = find("0_50_49_saltfish")
+    val anglerfish_spot = find("piscariliusfish")
 }
 
 // ---------------------------------------------------------------------------

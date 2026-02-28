@@ -90,7 +90,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 npcs.man_indoor,
             )
 
-        registry.register(manWomanNpcs, manWomanTable)
+        registry.register(manWomanNpcs.distinct(), manWomanTable)
     }
 
     // -----------------------------------------------------------------------
@@ -158,7 +158,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 DropTableNpcs.goblin_chef,
                 DropTableNpcs.goblin_guard,
             )
-        registry.register(goblinNpcs, goblinTable)
+        registry.register(goblinNpcs.distinct(), goblinTable)
     }
 
     // -----------------------------------------------------------------------
@@ -181,7 +181,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 DropTableNpcs.cow3,
                 DropTableNpcs.cow_beef,
             )
-        registry.register(cowNpcs, cowTable)
+        registry.register(cowNpcs.distinct(), cowTable)
     }
 
     // -----------------------------------------------------------------------
@@ -202,7 +202,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         }
 
         val chickenNpcs: List<NpcType> = listOf(DropTableNpcs.chicken, DropTableNpcs.chicken_2)
-        registry.register(chickenNpcs, chickenTable)
+        registry.register(chickenNpcs.distinct(), chickenTable)
     }
 
     // -----------------------------------------------------------------------
@@ -219,7 +219,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
         val giantRatNpcs: List<NpcType> =
             listOf(DropTableNpcs.giantrat, DropTableNpcs.giantrat2, DropTableNpcs.giantrat3)
-        registry.register(giantRatNpcs, giantRatTable)
+        registry.register(giantRatNpcs.distinct(), giantRatTable)
     }
 
     // -----------------------------------------------------------------------
@@ -285,7 +285,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
         val guardNpcs: List<NpcType> =
             listOf(DropTableNpcs.guard, DropTableNpcs.guard_2, DropTableNpcs.guard_3)
-        registry.register(guardNpcs, guardTable)
+        registry.register(guardNpcs.distinct(), guardTable)
     }
 
     // -----------------------------------------------------------------------
@@ -349,7 +349,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 DropTableNpcs.bearded_dark_wizard,
                 DropTableNpcs.young_dark_wizard,
             )
-        registry.register(wizardNpcs, wizardTable)
+        registry.register(wizardNpcs.distinct(), wizardTable)
     }
 
     // -----------------------------------------------------------------------
@@ -413,7 +413,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
         val knightNpcs: List<NpcType> =
             listOf(DropTableNpcs.black_knight, DropTableNpcs.aggressive_black_knight)
-        registry.register(knightNpcs, knightTable)
+        registry.register(knightNpcs.distinct(), knightTable)
     }
 
     // -----------------------------------------------------------------------
@@ -508,7 +508,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 DropTableNpcs.wilderness_hill_giant2,
                 DropTableNpcs.wilderness_hill_giant3,
             )
-        registry.register(hillGiantNpcs, hillGiantTable)
+        registry.register(hillGiantNpcs.distinct(), hillGiantTable)
     }
 
     // -----------------------------------------------------------------------
@@ -571,7 +571,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 DropTableNpcs.barbarian_4,
                 DropTableNpcs.barbarian_5,
             )
-        registry.register(barbarianNpcs, barbarianTable)
+        registry.register(barbarianNpcs.distinct(), barbarianTable)
     }
 
     // -----------------------------------------------------------------------

@@ -1,0 +1,25 @@
+# Custom server-side varps for poison/venom tracking (IDs 4056-4063 are unused in main sym).
+4056	local_poison_damage
+4058	local_venom_damage
+4060	local_poison_sub_tick
+4062	local_poison_immunity_ticks
+4063	local_venom_immunity_ticks
+# Quest progress varps — not in rev233 cache; built via VarpBuilds (IDs 4065/4067 unused in main sym).
+4065	ernestchicken
+4067	what_lies_below
+# New F2P Quest progress varps (IDs 4070-4076 unused in main sym)
+4071	arrav_phoenix
+4072	arrav_blackarm
+4073	misthalin_mystery
+# Achievement Diary progress varps (IDs 4080-4083 unused in main sym)
+4080	ardougne_achievement_diary
+4081	ardougne_achievement_diary2
+# Bank PIN system varps — custom server-side; IDs 5000-5007 are unused in main sym.
+5000	bankpin_state
+5001	bankpin_verified
+5002	bankpin_recovery_delay
+5003	bankpin_entry_mode
+5004	bankpin_entry_progress
+5005	bankpin_entry_buffer
+5006	bankpin_value
+5007	bankpin_pending

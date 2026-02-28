@@ -31,7 +31,7 @@ class PrinceAliRescue : PluginScript() {
         onOpNpc1(prince_ali_rescue_npcs.prince_ali) { startPrinceAliDialogue(it.npc) }
 
         // Hassan in Al Kharid palace (completion)
-        onOpNpc1(prince_ali_rescue_npcs.hassan) { startHassanDialogue(it.npc) }
+        // onOpNpc1(prince_ali_rescue_npcs.hassan) { startHassanDialogue(it.npc) }
     }
 
     private suspend fun ProtectedAccess.startLeelaDialogue(npc: Npc) =
