@@ -44,7 +44,7 @@ import org.rsmod.plugin.scripts.ScriptContext
 //
 //      // HP-orb indicator: 0=none, 1=poison (green), 1000000=venom (yellow).
 //      // Uses vanilla transmit-id 102 so the client renders the correct colour.
-//      val hp_orb_toxin          = find("hp_orb_toxin", 102)
+//      val hp_orb_toxin          = find("hp_orb_toxin")
 //
 // ── 2. BaseSpotanims.kt ──────────────────────────────────────────────────────
 //

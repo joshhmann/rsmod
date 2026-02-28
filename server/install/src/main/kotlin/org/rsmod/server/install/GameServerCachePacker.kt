@@ -2,6 +2,8 @@ package org.rsmod.server.install
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.main
+import com.github.ajalt.clikt.parameters.options.flag
+import com.github.ajalt.clikt.parameters.options.option
 import com.google.inject.Guice
 import com.google.inject.Injector
 import com.google.inject.Key
@@ -44,6 +46,14 @@ fun main(args: Array<String>): Unit = GameServerCachePacker().main(args)
 
 @OptIn(ExperimentalPathApi::class)
 class GameServerCachePacker : CliktCommand(name = "cache-pack") {
+    private val allowTypeVerificationFailures by
+        option(
+                "--allow-type-verification-failures",
+                help =
+                    "Continue cache packing even if TypeVerifier reports failures (useful for dev when symbol tables/content are incomplete).",
+            )
+            .flag(default = false)
+
     private var packedCache = false
 
     private val enrichedCacheDir: Path
@@ -113,6 +123,12 @@ class GameServerCachePacker : CliktCommand(name = "cache-pack") {
             packEnrichedTypes()
             return false
         } else if (verification.isFailure()) {
+            if (allowTypeVerificationFailures) {
+                System.err.println(
+                    "[WARN] Type verification failures ignored due to --allow-type-verification-failures:\n${verification.formatError()}"
+                )
+                return true
+            }
             throw RuntimeException(verification.formatError())
         }
         return true

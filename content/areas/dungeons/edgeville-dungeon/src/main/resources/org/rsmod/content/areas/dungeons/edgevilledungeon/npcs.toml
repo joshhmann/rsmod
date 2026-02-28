@@ -139,45 +139,45 @@ coords = '0_48_51_69_26'
 
 # Skeletons (level 45) - deeper wilderness area
 [[spawn]]
-npc = 'skeleton_wilderness'
+npc = 'skeleton_armed'
 coords = '0_48_51_72_30'
 
 [[spawn]]
-npc = 'skeleton_wilderness'
+npc = 'skeleton_armed'
 coords = '0_48_51_74_33'
 
 [[spawn]]
-npc = 'skeleton_wilderness'
+npc = 'skeleton_armed'
 coords = '0_48_51_76_36'
 
 # Earth Warriors (level 51) - require 15 Agility to access
 [[spawn]]
-npc = 'earth_warrior'
+npc = 'earthwarrior'
 coords = '0_48_51_78_40'
 
 [[spawn]]
-npc = 'earth_warrior'
+npc = 'earthwarrior'
 coords = '0_48_51_80_43'
 
 [[spawn]]
-npc = 'earth_warrior'
+npc = 'earthwarrior'
 coords = '0_48_51_82_46'
 
 [[spawn]]
-npc = 'earth_warrior'
+npc = 'earthwarrior'
 coords = '0_48_51_84_49'
 
 # Poison Spiders (level 64) - near Chronozon
 [[spawn]]
-npc = 'poison_spider'
+npc = 'poisonspider'
 coords = '0_48_51_85_52'
 
 [[spawn]]
-npc = 'poison_spider'
+npc = 'poisonspider'
 coords = '0_48_51_87_55'
 
 [[spawn]]
-npc = 'poison_spider'
+npc = 'poisonspider'
 coords = '0_48_51_89_58'
 
 # Black Demons (level 172) - deepest part of dungeon
@@ -282,7 +282,4 @@ coords = '0_48_51_43_27'
 npc = 'zombie2_b'
 coords = '0_48_51_33_37'
 
-# Vannaka - Slayer Master (located near entrance)
-[[spawn]]
-npc = 'vannaka'
-coords = '0_48_51_45_45'
+# Vannaka is members-only (Slayer). Intentionally omitted for F2P stability.

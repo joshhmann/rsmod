@@ -12,7 +12,7 @@ internal object DropTableObjs : ObjReferences() {
     val raw_chicken = find("raw_chicken")
     val raw_rat_meat = find("raw_rat_meat")
     val raw_beef = find("raw_beef")
-    val cowhide = find("cowhide")
+    val cowhide = find("cow_hide")
     val feather = find("feather")
     val cooked_meat = find("cooked_meat")
     val beer = find("beer")
@@ -34,7 +34,7 @@ internal object DropTableObjs : ObjReferences() {
     val bronze_scimitar = find("bronze_scimitar")
     val bronze_spear = find("bronze_spear")
     val bronze_javelin = find("bronze_javelin")
-    val bronze_bolts = find("bronze_bolts")
+    val bronze_bolts = find("bolts")
     val bronze_sq_shield = find("bronze_sq_shield")
     val bronze_kiteshield = find("bronze_kiteshield")
     val bronze_med_helm = find("bronze_med_helm")
@@ -50,7 +50,7 @@ internal object DropTableObjs : ObjReferences() {
 
     // Runes — body rune not in BaseObjs
     val body_rune = find("bodyrune")
-    val cosmic_rune = find("cosmic_rune")
+    val cosmic_rune = find("cosmicrune")
 
     // Clue scrolls (basic drop tables use beginner and easy clues)
     val trail_clue_beginner = find("trail_clue_beginner")
@@ -76,10 +76,10 @@ internal object DropTableObjs : ObjReferences() {
     val chaos_talisman = find("chaos_talisman")
     val nature_talisman = find("nature_talisman")
     val rune_javelin = find("rune_javelin")
-    val loop_half_key = find("loop_half_key")
-    val tooth_half_key = find("tooth_half_key")
-    val giant_key = find("giant_key")
-    val clue_scroll_beginner = find("clue_scroll_beginner")
+    val loop_half_key = find("keyhalf1")
+    val tooth_half_key = find("keyhalf2")
+    val giant_key = find("hillgiant_boss_key")
+    val clue_scroll_beginner = find("trail_clue_beginner")
 
     // Mugger drops
     val rope = find("rope")

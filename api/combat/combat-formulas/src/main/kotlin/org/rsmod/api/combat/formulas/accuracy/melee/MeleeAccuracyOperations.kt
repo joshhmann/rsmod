@@ -264,11 +264,11 @@ public object MeleeAccuracyOperations {
 
     private fun VarPlayerIntMap.offensivePrayerBonus(): Double =
         when {
-            this[varbits.clarity_of_thought] == 1 -> 1.05
-            this[varbits.improved_reflexes] == 1 -> 1.1
-            this[varbits.incredible_reflexes] == 1 -> 1.15
-            this[varbits.chivalry] == 1 -> 1.15
-            this[varbits.piety] == 1 -> 1.20
+            this[varbits.prayer_clarityofthought] == 1 -> 1.05
+            this[varbits.prayer_improvedreflexes] == 1 -> 1.1
+            this[varbits.prayer_incrediblereflexes] == 1 -> 1.15
+            this[varbits.prayer_chivalry] == 1 -> 1.15
+            this[varbits.prayer_piety] == 1 -> 1.20
             else -> 1.0
         }
 

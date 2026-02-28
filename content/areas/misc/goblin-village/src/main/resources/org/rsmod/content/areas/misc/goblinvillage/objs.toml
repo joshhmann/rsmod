@@ -21,50 +21,50 @@ coords = '0_46_54_38_32'
 # Red goblin mail for Goblin Diplomacy quest
 
 [[spawn]]
-obj = 'goblin_mail_red'
+obj = 'goblin_armour_red'
 coords = '0_46_54_28_42'
 
 [[spawn]]
-obj = 'goblin_mail_red'
+obj = 'goblin_armour_red'
 coords = '0_46_54_35_38'
 
 [[spawn]]
-obj = 'goblin_mail_red'
+obj = 'goblin_armour_red'
 coords = '0_46_54_22_35'
 
 # ==================== GREEN GOBLIN MAIL SPAWNS ====================
 # Green goblin mail for Goblin Diplomacy quest
 
 [[spawn]]
-obj = 'goblin_mail_green'
+obj = 'goblin_armour_green'
 coords = '0_46_54_30_45'
 
 [[spawn]]
-obj = 'goblin_mail_green'
+obj = 'goblin_armour_green'
 coords = '0_46_54_40_35'
 
 [[spawn]]
-obj = 'goblin_mail_green'
+obj = 'goblin_armour_green'
 coords = '0_46_54_18_40'
 
 # ==================== BLUE GOBLIN MAIL SPAWNS ====================
 # Blue goblin mail (requires dye to create)
 
 [[spawn]]
-obj = 'goblin_mail_blue'
+obj = 'goblin_armour_darkblue'
 coords = '0_46_54_45_28'
 
 [[spawn]]
-obj = 'goblin_mail_blue'
+obj = 'goblin_armour_darkblue'
 coords = '0_46_54_15_32'
 
 # ==================== ORANGE GOBLIN MAIL SPAWNS ====================
 # Orange goblin mail (requires dye to create)
 
 [[spawn]]
-obj = 'goblin_mail_orange'
+obj = 'goblin_armour_orange'
 coords = '0_46_54_33_28'
 
 [[spawn]]
-obj = 'goblin_mail_orange'
+obj = 'goblin_armour_orange'
 coords = '0_46_54_20_28'

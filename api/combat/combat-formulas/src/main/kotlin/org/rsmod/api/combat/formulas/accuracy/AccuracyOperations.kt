@@ -153,17 +153,18 @@ public object AccuracyOperations {
 
     internal fun defensivePrayerBonus(vars: VarPlayerIntMap): Double =
         when {
-            vars[varbits.piety] == 1 -> 1.25
-            vars[varbits.rigour] == 1 -> 1.25
-            vars[varbits.augury] == 1 -> 1.25
-            vars[varbits.chivalry] == 1 -> 1.20
-            vars[varbits.steel_skin] == 1 -> 1.15
-            vars[varbits.rock_skin] == 1 -> 1.10
-            vars[varbits.thick_skin] == 1 -> 1.05
-            vars[varbits.hawk_eye] == 1 && vars[varbits.prayer_deadeye_unlocked] == 1 -> {
+            vars[varbits.prayer_piety] == 1 -> 1.25
+            vars[varbits.prayer_rigour] == 1 -> 1.25
+            vars[varbits.prayer_augury] == 1 -> 1.25
+            vars[varbits.prayer_chivalry] == 1 -> 1.20
+            vars[varbits.prayer_steelskin] == 1 -> 1.15
+            vars[varbits.prayer_rockskin] == 1 -> 1.10
+            vars[varbits.prayer_thickskin] == 1 -> 1.05
+            vars[varbits.prayer_hawkeye] == 1 && vars[varbits.prayer_deadeye_unlocked] == 1 -> {
                 1.05
             }
-            vars[varbits.mystic_might] == 1 && vars[varbits.prayer_mystic_vigour_unlocked] == 1 -> {
+            vars[varbits.prayer_mysticmight] == 1 &&
+                vars[varbits.prayer_mystic_vigour_unlocked] == 1 -> {
                 1.05
             }
             else -> 1.0

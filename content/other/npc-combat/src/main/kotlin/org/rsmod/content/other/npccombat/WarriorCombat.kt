@@ -73,5 +73,5 @@ internal object WarriorTypes : NpcReferences() {
     // val warrior_woman_variant02 = find("warrior_woman_variant02")
 
     // TODO: Al-Kharid Warrior - level 26, need correct internal name
-    // val alkharid_warrior = find("alkharid_warrior")
+    // val alkharid_warrior = find("al_kharid_warrior")
 }

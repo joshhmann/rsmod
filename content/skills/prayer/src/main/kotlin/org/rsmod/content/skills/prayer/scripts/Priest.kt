@@ -70,6 +70,6 @@ class Priest @Inject constructor() : PluginScript() {
 }
 
 object PrayerNpcRefs : NpcReferences() {
-    val lumbridge_priest = find("lumbridge_priest")
-    val varrock_priest = find("varrock_priest")
+    val lumbridge_priest = find("father_aereck")
+    val varrock_priest = find("father_lawrence")
 }

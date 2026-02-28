@@ -7,12 +7,12 @@ import org.rsmod.api.type.refs.inv.InvReferences
 typealias invs = BaseInvs
 
 object BaseInvs : InvReferences() {
-    val tradeoffer = find("tradeoffer", 850951859)
-    val inv = find("inv", 850981630)
-    val worn = find("worn", 847803897)
-    val bank = find("bank", 1135478129)
+    val tradeoffer = find("tradeoffer")
+    val inv = find("inv")
+    val worn = find("worn")
+    val bank = find("bank")
 
-    val generalshop1 = find("generalshop1", 108596219232)
+    val generalshop1 = find("generalshop1")
     val generalshop2 = find("generalshop2")
     val generalshop3 = find("generalshop3")
     val generalshop4 = find("generalshop4")

@@ -99,23 +99,23 @@ coords = '0_50_54_48_25'
 # ============================
 
 [[spawn]]
-npc = 'giant_rat'
+npc = 'giantrat'
 coords = '0_50_54_5_10'
 
 [[spawn]]
-npc = 'giant_rat_2'
+npc = 'giantrat2'
 coords = '0_50_54_8_12'
 
 [[spawn]]
-npc = 'giant_rat_3'
+npc = 'giantrat3'
 coords = '0_50_54_10_8'
 
 [[spawn]]
-npc = 'giant_rat'
+npc = 'giantrat'
 coords = '0_50_54_15_10'
 
 [[spawn]]
-npc = 'giant_rat_2'
+npc = 'giantrat2'
 coords = '0_50_54_50_40'
 
 # ============================

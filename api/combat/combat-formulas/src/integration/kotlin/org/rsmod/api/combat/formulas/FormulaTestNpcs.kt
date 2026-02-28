@@ -177,7 +177,7 @@ object FormulaTestNpcs {
             }
         }
 
-    val giant_rat =
+    val giantrat =
         npcTypeFactory.create {
             name = "Giant rat (Scurrius)"
             hitpoints = 15

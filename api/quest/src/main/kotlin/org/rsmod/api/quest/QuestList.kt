@@ -253,43 +253,6 @@ public object QuestList {
                 },
         )
 
-    public val below_ice_mountain: Quest =
-        Quest(
-            id = 20,
-            name = "Below Ice Mountain",
-            varp = BaseVarps.below_ice_mountain,
-            maxStage = 12,
-            rewards =
-                questRewards {
-                    item(objs.coins, 2000)
-                    extra("1 Quest Point")
-                    extra("Access to the ruins of Camdozaal")
-                },
-        )
-
-    public val x_marks_the_spot: Quest =
-        Quest(
-            id = 21,
-            name = "X Marks the Spot",
-            varp = BaseVarps.x_marks_the_spot,
-            maxStage = 8,
-            rewards =
-                questRewards {
-                    extra("1 Quest Point")
-                    extra("Antique lamp")
-                },
-        )
-
-    public val corsair_curse: Quest =
-        Quest(
-            id = 22,
-            name = "The Corsair Curse",
-            varp = BaseVarps.corsair_curse,
-            maxStage = 15,
-            rewards =
-                questRewards {
-                    extra("2 Quest Points")
-                    extra("Access to Corsair Cove")
-                },
-        )
+    // Quest IDs 20-22 intentionally omitted until their stage varp/varbit storage is
+    // verified against rev233 symbol tables (no placeholder blankobject mappings allowed).
 }

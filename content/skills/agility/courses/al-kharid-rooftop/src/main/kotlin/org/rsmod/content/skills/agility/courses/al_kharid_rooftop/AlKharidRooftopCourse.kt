@@ -126,9 +126,10 @@ class AlKharidRooftopCourse @Inject constructor() : PluginScript() {
 
 /** Local Seq references for Al Kharid Rooftop animations. */
 internal object AlKharidRooftopSeqs : SeqReferences() {
-    val human_wall_climb = find("human_wall_climb")
-    val human_tightrope_walk = find("human_tightrope_walk")
-    val human_rope_swing = find("human_rope_swing")
-    val human_zip_line = find("human_zip_line")
-    val human_climb_down = find("human_climb_down")
+    // These were previously named after obstacle semantics, but rev233 internal names differ.
+    val human_wall_climb = find("human_climbing")
+    val human_tightrope_walk = find("human_walk_logbalance")
+    val human_rope_swing = find("human_ropeswing")
+    val human_zip_line = find("zipline_slide")
+    val human_climb_down = find("human_climbing_down")
 }

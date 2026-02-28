@@ -4,29 +4,10 @@ import jakarta.inject.Inject
 import org.rsmod.api.config.refs.synths
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.repo.loc.LocRepository
-import org.rsmod.api.script.onOpLoc1
-import org.rsmod.api.type.refs.loc.LocReferences
 import org.rsmod.game.loc.BoundLocInfo
 import org.rsmod.map.CoordGrid
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
-
-// Draynor Manor loc references
-private typealias draynor_manor_locs = DraynorManorLocs
-
-internal object DraynorManorLocs : LocReferences() {
-    // Main entrance doors
-    val manor_front_door_left = find("door_left_closed")
-    val manor_front_door_right = find("door_right_closed")
-    // Witch's house entrance
-    val witch_door = find("door")
-    // Basement trapdoor
-    val basement_trapdoor_closed = find("trapdoor_draynor_manor_closed")
-    val basement_trapdoor_open = find("trapdoor_draynor_manor_open")
-    // Stairs
-    val stairs_up = find("staircase_draynor_manor_up")
-    val stairs_down = find("staircase_draynor_manor_down")
-}
 
 /**
  * Draynor Manor script handling:
@@ -37,20 +18,14 @@ internal object DraynorManorLocs : LocReferences() {
  */
 class DraynorManorScript @Inject constructor(private val locRepo: LocRepository) : PluginScript() {
     override fun ScriptContext.startup() {
-        // Front entrance doors
-        onOpLoc1(draynor_manor_locs.manor_front_door_left) { openManorDoor(it.loc) }
-        onOpLoc1(draynor_manor_locs.manor_front_door_right) { openManorDoor(it.loc) }
-
-        // Witch's house door
-        onOpLoc1(draynor_manor_locs.witch_door) { mes("The door is locked.") }
-
-        // Basement trapdoor
-        onOpLoc1(draynor_manor_locs.basement_trapdoor_closed) { openTrapdoor(it.loc) }
-        onOpLoc1(draynor_manor_locs.basement_trapdoor_open) { climbDownTrapdoor() }
-
-        // Stairs
-        onOpLoc1(draynor_manor_locs.stairs_up) { climbUpStairs() }
-        onOpLoc1(draynor_manor_locs.stairs_down) { climbDownStairs() }
+        // Disabled placeholder.
+        //
+        // The previous implementation referenced extremely generic loc symbol names
+        // (e.g., "door", "door_left_closed") which do not exist in the rev233 `loc.sym`
+        // tables and breaks strict `packCache` verification.
+        //
+        // Re-implement by targeting concrete, canonical loc internal names from
+        // `rsmod/.data/symbols/loc.sym`.
     }
 
     @Suppress("UNUSED_PARAMETER")
@@ -64,7 +39,7 @@ class DraynorManorScript @Inject constructor(private val locRepo: LocRepository)
     private fun ProtectedAccess.openTrapdoor(loc: BoundLocInfo) {
         mes("You open the trapdoor.")
         soundSynth(synths.door_open)
-        locRepo.change(loc, draynor_manor_locs.basement_trapdoor_open, 500)
+        // TODO: implement once correct loc refs are wired.
     }
 
     private fun ProtectedAccess.climbDownTrapdoor() {

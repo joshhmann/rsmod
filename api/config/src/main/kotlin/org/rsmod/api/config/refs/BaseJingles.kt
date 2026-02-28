@@ -7,7 +7,7 @@ import org.rsmod.api.type.refs.jingle.JingleReferences
 typealias jingles = BaseJingles
 
 object BaseJingles : JingleReferences() {
-    val death_jingle = find("death_jingle")
+    // Rev233 canonical symbol name is `death_jingle_2`.
+    val death_jingle = find("death_jingle_2")
     val death_jingle_2 = find("death_jingle_2")
-    val emote_air_guitar = find("emote_air_guitar")
 }

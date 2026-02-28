@@ -212,7 +212,7 @@ class NvPMeleeAccuracyTest {
                     .withWeapon(objs.dinhs_bulwark)
                     .withDefenceLevel(defenceLvl = 75),
                 Matchup(expectedAccuracy = 27.25)
-                    .withNpcSource(test_npcs.giant_rat)
+                    .withNpcSource(test_npcs.giantrat)
                     .withAttackType(MeleeAttackType.Slash)
                     .withHelm(objs.helm_of_neitiznot)
                     .withBody(objs.fighter_torso)

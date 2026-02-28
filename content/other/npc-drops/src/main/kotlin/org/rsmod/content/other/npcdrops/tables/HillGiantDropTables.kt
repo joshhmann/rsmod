@@ -160,10 +160,10 @@ internal object HillGiantObjs : ObjReferences() {
     val chaos_talisman = find("chaos_talisman")
     val nature_talisman = find("nature_talisman")
     val rune_javelin = find("rune_javelin")
-    val loop_half_key = find("loop_half_key")
-    val tooth_half_key = find("tooth_half_key")
+    val loop_half_key = find("keyhalf1")
+    val tooth_half_key = find("keyhalf2")
 
     // Tertiary
-    val giant_key = find("giant_key")
-    val clue_scroll_beginner = find("clue_scroll_beginner")
+    val giant_key = find("hillgiant_boss_key")
+    val clue_scroll_beginner = find("trail_clue_beginner")
 }

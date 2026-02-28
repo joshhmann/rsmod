@@ -243,7 +243,10 @@ constructor(
     }
 
     private fun Player.useFakeRunes(): Boolean {
-        return vars[varbits.in_ba_game] == 1 || vars[varbits.in_lms_game] == 1
+        // NOTE: Historically this checked minigame-state varbits (e.g. BA/LMS) to allow "fake"
+        // runes. Those legacy alias refs were removed during symbol hygiene work; rev233 canonical
+        // equivalents need to be identified before re-enabling.
+        return false
     }
 
     private fun Player.allowBlighted(): Boolean {

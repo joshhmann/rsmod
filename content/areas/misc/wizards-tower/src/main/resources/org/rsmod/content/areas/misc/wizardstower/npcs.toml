@@ -5,7 +5,7 @@
 
 # Archmage Sedridor - Head wizard, teleports to Rune Essence Mine
 [[spawn]]
-npc = 'sedridor'
+npc = 'head_wizard'
 coords = '0_47_54_35_20'
 direction = 'east'
 

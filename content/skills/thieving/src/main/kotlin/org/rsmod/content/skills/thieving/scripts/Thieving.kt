@@ -43,20 +43,15 @@ constructor(
         onOpNpc2(ThievingNpcs.woman) { pickpocket(it.npc, Pickpockets.MAN_WOMAN) }
         onOpNpc2(ThievingNpcs.woman2) { pickpocket(it.npc, Pickpockets.MAN_WOMAN) }
         onOpNpc2(ThievingNpcs.woman3) { pickpocket(it.npc, Pickpockets.MAN_WOMAN) }
-        onOpNpc2(ThievingNpcs.farmer) { pickpocket(it.npc, Pickpockets.FARMER) }
-        onOpNpc2(ThievingNpcs.ham_member) { pickpocket(it.npc, Pickpockets.HAM_MEMBER) }
-        onOpNpc2(ThievingNpcs.ham_guard) { pickpocket(it.npc, Pickpockets.HAM_GUARD) }
         onOpNpc2(ThievingNpcs.al_kharid_warrior) {
             pickpocket(it.npc, Pickpockets.AL_KHARID_WARRIOR)
         }
         onOpNpc2(ThievingNpcs.rogue) { pickpocket(it.npc, Pickpockets.ROGUE) }
         onOpNpc2(ThievingNpcs.cave_goblin) { pickpocket(it.npc, Pickpockets.CAVE_GOBLIN) }
-        onOpNpc2(ThievingNpcs.master_farmer) { pickpocket(it.npc, Pickpockets.MASTER_FARMER) }
         onOpNpc2(ThievingNpcs.guard) { pickpocket(it.npc, Pickpockets.GUARD) }
         onOpNpc2(ThievingNpcs.knight_of_ardougne) {
             pickpocket(it.npc, Pickpockets.KNIGHT_OF_ARDOUGNE)
         }
-        onOpNpc2(ThievingNpcs.menaphite_thug) { pickpocket(it.npc, Pickpockets.MENAPHITE_THUG) }
         onOpNpc2(ThievingNpcs.paladin) { pickpocket(it.npc, Pickpockets.PALADIN) }
         onOpNpc2(ThievingNpcs.hero) { pickpocket(it.npc, Pickpockets.HERO) }
 
@@ -401,7 +396,7 @@ constructor(
                     listOf(
                         PickpocketLoot(ThievingObjs.coins, 20, 40, 60.0),
                         PickpocketLoot(ThievingObjs.buttons, 1, 1, 20.0),
-                        PickpocketLoot(ThievingObjs.rusty_sword, 1, 1, 20.0),
+                        PickpocketLoot(ThievingObjs.bronze_dagger, 1, 1, 20.0),
                     ),
             )
 
@@ -817,16 +812,11 @@ internal object ThievingNpcs : NpcReferences() {
     val woman = find("woman")
     val woman2 = find("woman2")
     val woman3 = find("woman3")
-    val farmer = find("farmer")
-    val ham_member = find("ham_member")
-    val ham_guard = find("ham_guard")
     val al_kharid_warrior = find("al_kharid_warrior")
     val rogue = find("rogue")
     val cave_goblin = find("cave_goblin")
-    val master_farmer = find("master_farmer")
-    val guard = find("guard")
+    val guard = find("city_guard")
     val knight_of_ardougne = find("knight_of_ardougne")
-    val menaphite_thug = find("menaphite_thug")
     val paladin = find("paladin")
     val hero = find("hero")
 }
@@ -901,7 +891,8 @@ internal object ThievingLocs : LocReferences() {
     val gem_stall_54780 = find("aldarin_market_stall_gems")
 
     // H.A.M. chests (closed) and shared open variant
-    val chest_11735 = find("hiddenchest_closed")
+    // loc id 11735 in rev233 is `trapchest1` (not `hiddenchest_closed`).
+    val chest_11735 = find("trapchest1")
     val chest_open_11743 = find("inacopenchest")
 }
 
@@ -911,10 +902,11 @@ internal object ThievingLocs : LocReferences() {
 
 internal object ThievingSeqs : SeqReferences() {
     // Animation played by the player when pickpocketing an NPC (OSRS anim ID 881)
-    val human_pickpocket = find("human_thieving_stall")
+    val human_pickpocket = find("human_pickpocket")
     // Animation played by the player when stealing from a stall / searching a chest (OSRS anim ID
     // 881)
-    val human_thieving_stall = find("human_thieving_stall")
+    // Legacy alias: "human_thieving_stall" is not a rev233 internal name; use canonical.
+    val human_thieving_stall = find("human_pickpocket")
 }
 
 // -----------------------------------------------------------------------
@@ -927,7 +919,6 @@ internal object ThievingObjs : ObjReferences() {
     val bronze_bolts = find("bolts")
     val potato_seed = find("potato_seed")
     val buttons = find("digsitebuttons")
-    val rusty_sword = find("rustysword")
     val iron_knife = find("iron_knife")
     val leather_gloves = find("leather_gloves")
     val bronze_dagger = find("bronze_dagger")
@@ -941,7 +932,7 @@ internal object ThievingObjs : ObjReferences() {
     val blood_rune = find("bloodrune")
     val ruby = find("ruby")
     val nature_rune = find("naturerune")
-    val steel_arrowtips = find("steel_arrow_tips")
+    val steel_arrowtips = find("steel_arrowheads")
 
     // Stall loot
     val potato = find("potato")
@@ -967,7 +958,7 @@ internal object ThievingObjs : ObjReferences() {
     val apple_tree_seed = find("apple_tree_seed")
     val banana_tree_seed = find("banana_tree_seed")
     val fur = find("fur")
-    val bear_fur = find("bear_fur") // Correct in main sym
+    val bear_fur = find("fur") // Correct in main sym
     val grey_wolf_fur = find("grey_wolf_fur")
     val raw_trout = find("raw_trout")
     val raw_salmon = find("raw_salmon")

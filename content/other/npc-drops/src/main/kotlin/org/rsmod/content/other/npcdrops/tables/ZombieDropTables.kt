@@ -55,7 +55,7 @@ internal object ZombieDropTables {
 }
 
 internal object ZombieNpcs : NpcReferences() {
-    val zombie = find("zombie")
+    val zombie = find("zombie_unarmed")
 }
 
 internal object ZombieObjs : ObjReferences() {

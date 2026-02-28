@@ -6,280 +6,265 @@ import org.rsmod.api.type.refs.varbit.VarBitReferences
 
 typealias varbits = BaseVarBits
 
+/**
+ * Auto-generated symbol bindings (Smart Subset). Do not edit manually.
+ */
 object BaseVarBits : VarBitReferences() {
-    val multiway_indicator = find("multiway_indicator", 52603174307098)
-    val singleway_plus_indicator = find("singleway_plus_indicator", 52603174350056)
-
-    val stamina_active = find("stamina_active", 81145461762806)
-    val stamina_duration = find("stamina_duration", 14272015789523)
-    val stamina_duration_extra = find("stamina_duration_extra", 14272015867960)
-    val buff_stamina_duration_disabled = find("buff_stamina_duration_disabled", 158374502904462)
-
-    val side_journal_tab = find("side_journal_tab", 58785619230382)
-
-    val rune_pouch_type_1 = find("rune_pouch_type_1", 58682578458515)
-    val rune_pouch_quantity_1 = find("rune_pouch_quantity_1", 58682578528674)
-    val rune_pouch_type_2 = find("rune_pouch_type_2", 58682578482800)
-    val rune_pouch_quantity_2 = find("rune_pouch_quantity_2", 58734098834960)
-    val rune_pouch_type_3 = find("rune_pouch_type_3", 58682578505493)
-    val rune_pouch_quantity_3 = find("rune_pouch_quantity_3", 58734098887909)
-    val rune_pouch_type_4 = find("rune_pouch_type_4", 184134690041806)
-    val rune_pouch_quantity_4 = find("rune_pouch_quantity_4", 184134690064987)
-
-    val fountain_of_rune_active = find("fountain_of_rune_active", 19321012454304)
-    val in_ba_game = find("barbassault_areaexit_pending", 32870870952627)
-    val in_lms_game = find("br_ingame", 70944427565195)
-    val blighted_items_allowed = find("blighted_items_allowed", 68007766345792)
-
-    val spellbook = find("spellbook", 22618316409612)
-    val buff_charge_spell_disabled = find("buff_charge_spell_disabled", 158374502881764)
-    val buff_mark_of_darkness_disabled = find("buff_mark_of_darkness_disabled", 158426023244829)
-
-    val combatlevel_transmit = find("combatlevel_transmit", 56930885834068)
-    val combatlevel_decimal_transmit = find("combatlevel_decimal_transmit", 116230836668633)
-    val autocast_set = find("autocast_set", 5565072492265)
-    val autocast_spell = find("autocast_spell", 5565072497878)
-    val autocast_defmode = find("autocast_defmode", 22618316438405)
-
-    val cutscene_status = find("cutscene_status", 52603174306817)
-    val fov_clamp = find("fov_clamp", 52603174314724)
-    val minimap_state = find("minimap_state", 52603174339590)
-    val gravestone_tli_hide = find("gravestone_tli_hide", 87430947458308)
-
-    val option_master_volume_saved = find("option_master_volume_saved", 195623733524963)
-    val option_music_saved = find("option_music_saved", 160177715962204)
-    val option_sounds_saved = find("option_sounds_saved", 160177715992400)
-    val option_areasounds_saved = find("option_areasounds_saved", 160177716018875)
-    val music_unlock_text_toggle = find("music_unlock_text_toggle", 979759217977)
-
-    val music_area_mode = find("music_area_mode", 979759223975)
-    val music_enableloop = find("music_enableloop", 979759177998)
-
-    val option_brightness_remember = find("option_brightness_remember", 147143061250651)
-    val camera_zoom_mouse_disabled = find("camera_zoom_mouse_disabled", 54354867127892)
-
-    val chatbox_transparency = find("chatbox_transparency", 54354867050503)
-    val resizable_stone_arrangement = find("resizable_stone_arrangement", 54354867046720)
-    val skull_prevent = find("skull_prevent_enabled", 158426023294720)
-    val option_acceptaid = find("option_acceptaid", 22000071917329)
-    val has_displayname_transmitter = find("has_displayname_transmitter", 89491762451420)
-    val chatmodal_unclamp = find("chatmodal_unclamp", 52603174328291)
-    val option_hide_rooftops = find("option_hide_rooftops", 158374502976336)
-    val settings_hd_beta_enabled = find("settings_hd_beta_enabled", 195520692873859)
-    val settings_hd_beta_full_hd_or_fake_sd =
-        find("settings_hd_beta_full_hd_or_fake_sd", 195520692877642)
-    val setting_hd_beta_flag = find("setting_hd_beta_flag", 195520692881425)
-    val option_dropwarning_on = find("option_dropwarning_on", 14632658384937)
-    val option_dropwarning_value = find("option_dropwarning_value", 14632658390428)
-    val combat_weapon_category = find("combat_weapon_category", 43432547647987)
-    val keybinding_esc_to_close = find("keybinding_esc_to_close", 63061810400789)
-
-    val demonslayer_main = find("demonslayer_main", 11438395171949)
-    val lost_tribe_progress = find("lost_tribe_quest", 23957846140009)
-    val kr_knightwaves_state = find("kr_knightwaves_state", 54097265147926)
-
-    val emote_glassbox = find("emote_glassbox", 16126749241145)
-    val emote_climbrope = find("emote_climbrope", 16126749244928)
-    val emote_lean = find("emote_lean", 16126749248711)
-    val emote_glasswall = find("emote_glasswall", 16126749237362)
-    val sos_emote_idea = find("sos_emote_idea", 41320212308399)
-    val sos_emote_stamp = find("sos_emote_stamp", 41320212312182)
-    val sos_emote_flap = find("sos_emote_flap", 41320212300833)
-    val sos_emote_doh = find("sos_emote_doh", 41320212304616)
-    val emote_zombie_walk = find("emote_zombie_walk", 16126749260608)
-    val emote_zombie_dance = find("emote_zombie_dance", 16126749256825)
-    val emote_terrified = find("emote_terrified", 16126749252494)
-    val emote_bunny_hop = find("emote_bunny_hop", 16126749264524)
-    val emote_drilldemon = find("emote_drilldemon", 16126749282329)
-    val emote_party = find("emote_party", 16126749321967)
-    val emote_zombie_hand = find("emote_zombie_hand", 16126749271033)
-    val emote_ash = find("emote_ash", 16126749289963)
-    val emote_musiccape = find("emote_musiccape", 16126749278488)
-    val emote_uri_transform = find("emote_uri_transform", 16126749294047)
-    val emote_hotline_bling = find("emote_hotline_bling", 16126749298322)
-    val emote_gangnam = find("emote_gangnam", 16126749302105)
-    val emote_premier_club_2018 = find("emote_premier_club_2018", 16126749306330)
-    val emote_flex = find("emote_flex", 16126749323697)
-    val emote_explore = find("emote_explore", 16126749314186)
-    val poh_leaguehall_outfitstand_relichunter_type =
-        find("poh_leaguehall_outfitstand_relichunter_type", 148688672513070)
-    val emote_trick = find("emote_trick", 16126749334521)
-
-    val enabled_prayers = find("prayer_allactive", 4276218542473)
-    val quickprayer_active = find("quickprayer_active", 19321012450480)
-
-    val prayer_thickskin = find("prayer_thickskin", 4276218540768)
-    val prayer_burstofstrength = find("prayer_burstofstrength", 4276218544551)
-    val prayer_clarityofthought = find("prayer_clarityofthought", 4276218548334)
-    val prayer_rockskin = find("prayer_rockskin", 4276218552117)
-    val prayer_superhumanstrength = find("prayer_superhumanstrength", 4276218555900)
-    val prayer_improvedreflexes = find("prayer_improvedreflexes", 4276218559683)
-    val prayer_rapidrestore = find("prayer_rapidrestore", 4276218563466)
-    val prayer_rapidheal = find("prayer_rapidheal", 4276218567249)
-    val prayer_protectitem = find("prayer_protectitem", 4276218571032)
-    val prayer_steelskin = find("prayer_steelskin", 4276218574815)
-    val prayer_ultimatestrength = find("prayer_ultimatestrength", 4276218578598)
-    val prayer_incrediblereflexes = find("prayer_incrediblereflexes", 4276218582381)
-    val prayer_protectfrommagic = find("prayer_protectfrommagic", 4276218586164)
-    val prayer_protectfrommissiles = find("prayer_protectfrommissiles", 4276218589947)
-    val prayer_protectfrommelee = find("prayer_protectfrommelee", 4276218593730)
-    val prayer_retribution = find("prayer_retribution", 4276218597513)
-    val prayer_redemption = find("prayer_redemption", 4276218601296)
-    val prayer_smite = find("prayer_smite", 4276218605079)
-    val prayer_preserve = find("prayer_preserve", 4276218648026)
-    val prayer_sharpeye = find("prayer_sharpeye", 4276218608862)
-    val prayer_mysticwill = find("prayer_mysticwill", 4276218612645)
-    val prayer_hawkeye = find("prayer_hawkeye", 4276218616428)
-    val prayer_mysticlore = find("prayer_mysticlore", 4276218620211)
-    val prayer_eagleeye = find("prayer_eagleeye", 4276218623994)
-    val prayer_mysticmight = find("prayer_mysticmight", 4276218627777)
-    val prayer_chivalry = find("prayer_chivalry", 4276218635342)
-    val prayer_piety = find("prayer_piety", 4276218639125)
-    val prayer_rigour = find("prayer_rigour", 4276218632896)
-    val prayer_augury = find("prayer_augury", 4276218644243)
-    val prayer_preserve_unlocked = find("prayer_preserve_unlocked", 73623487039670)
-    val prayer_rigour_unlocked = find("prayer_rigour_unlocked", 73623487032104)
-    val prayer_augury_unlocked = find("prayer_augury_unlocked", 73623487035887)
-    val prayer_deadeye_unlocked = find("prayer_deadeye_unlocked", 239828214727554)
-    val prayer_mystic_vigour_unlocked = find("prayer_mystic_vigour_unlocked", 239828214731337)
-
-    /* Backward compatibility aliases */
-    val thick_skin
-        get() = prayer_thickskin
-
-    val burst_of_strength
-        get() = prayer_burstofstrength
-
-    val clarity_of_thought
-        get() = prayer_clarityofthought
-
-    val rock_skin
-        get() = prayer_rockskin
-
-    val superhuman_strength
-        get() = prayer_superhumanstrength
-
-    val improved_reflexes = prayer_improvedreflexes
-    val rapid_restore
-        get() = prayer_rapidrestore
-
-    val rapid_heal
-        get() = prayer_rapidheal
-
-    val protect_item
-        get() = prayer_protectitem
-
-    val steel_skin
-        get() = prayer_steelskin
-
-    val ultimate_strength
-        get() = prayer_ultimatestrength
-
-    val incredible_reflexes
-        get() = prayer_incrediblereflexes
-
-    val protect_from_magic
-        get() = prayer_protectfrommagic
-
-    val protect_from_missiles
-        get() = prayer_protectfrommissiles
-
-    val protect_from_melee
-        get() = prayer_protectfrommelee
-
-    val retribution
-        get() = prayer_retribution
-
-    val redemption
-        get() = prayer_redemption
-
-    val smite
-        get() = prayer_smite
-
-    val sharp_eye
-        get() = prayer_sharpeye
-
-    val mystic_will
-        get() = prayer_mysticwill
-
-    val hawk_eye
-        get() = prayer_hawkeye
-
-    val mystic_lore
-        get() = prayer_mysticlore
-
-    val eagle_eye
-        get() = prayer_eagleeye
-
-    val mystic_might
-        get() = prayer_mysticmight
-
-    val chivalry
-        get() = prayer_chivalry
-
-    val piety
-        get() = prayer_piety
-
-    val rigour
-        get() = prayer_rigour
-
-    val augury
-        get() = prayer_augury
-
-    val preserve
-        get() = prayer_preserve
-
-    val preserve_unlocked
-        get() = prayer_preserve_unlocked
-
-    val rigour_unlocked
-        get() = prayer_rigour_unlocked
-
-    val augury_unlocked
-        get() = prayer_augury_unlocked
-
-    val toa_client_raid_level = find("toa_client_raid_level", 185062056826088)
-
-    val settings_hitsplat_threshold = find("settings_hitsplat_threshold", 183001241817303)
-
-    val date_ms_past_minute = find("date_milliseconds_past_minute", 158529050136898)
-    val date_secs_past_minute = find("date_seconds_past_minute", 158529050174475)
-
-    /* Server-side-only types */
-    val music_last_id = find("music_last_id")
+    val accept_aid_restore = find("accept_aid_restore")
+    val account_summary_display_playtime = find("account_summary_display_playtime")
+    val account_summary_display_playtime_remind_disable = find("account_summary_display_playtime_remind_disable")
+    val adventurepath_combat_free_potion_reward = find("adventurepath_combat_free_potion_reward")
+    val adventurepath_combat_reward_claimed = find("adventurepath_combat_reward_claimed")
+    val adventurepath_combat_task_recommended = find("adventurepath_combat_task_recommended")
+    val autocast_defmode = find("autocast_defmode")
+    val autocast_set = find("autocast_set")
+    val autocast_spell = find("autocast_spell")
+    val ballista = find("ballista")
+    val bank_capacity = find("bank_capacity")
+    val bank_currenttab = find("bank_currenttab")
+    val bank_depositpotion = find("bank_depositpotion")
+    val bank_disable_ifevents = find("bank_disable_ifevents")
+    val bank_extra_blocks_purchased = find("bank_extra_blocks_purchased")
+    val bank_fillermode = find("bank_fillermode")
+    val bank_hidebanktut = find("bank_hidebanktut")
+    val bank_hidedepositinv = find("bank_hidedepositinv")
+    val bank_hidedepositworn = find("bank_hidedepositworn")
+    val bank_hidesideops = find("bank_hidesideops")
+    val bank_insertmode = find("bank_insertmode")
+    val bank_leaveplaceholders = find("bank_leaveplaceholders")
+    val bank_quantity_type = find("bank_quantity_type")
+    val bank_requestedquantity = find("bank_requestedquantity")
+    val bank_showincinerator = find("bank_showincinerator")
+    val bank_tab_1 = find("bank_tab_1")
+    val bank_tab_2 = find("bank_tab_2")
+    val bank_tab_3 = find("bank_tab_3")
+    val bank_tab_4 = find("bank_tab_4")
+    val bank_tab_5 = find("bank_tab_5")
+    val bank_tab_6 = find("bank_tab_6")
+    val bank_tab_7 = find("bank_tab_7")
+    val bank_tab_8 = find("bank_tab_8")
+    val bank_tab_9 = find("bank_tab_9")
+    val bank_tab_display = find("bank_tab_display")
+    val bank_tab_main = find("bank_tab_main")
+    val bank_withdrawnotes = find("bank_withdrawnotes")
+    val blighted_items_allowed = find("blighted_items_allowed")
+    val buff_charge_spell_disabled = find("buff_charge_spell_disabled")
+    val buff_mark_of_darkness_disabled = find("buff_mark_of_darkness_disabled")
+    val bunny_ears_unlocked = find("bunny_ears_unlocked")
+    val busy = find("busy")
+    val camera_zoom_mouse_disabled = find("camera_zoom_mouse_disabled")
+    val canoe_avoid_if = find("canoe_avoid_if")
+    val canoe_startfrom = find("canoe_startfrom")
+    val canoe_type = find("canoe_type")
+    val canoestation_state_barbarianvillage = find("canoestation_state_barbarianvillage")
+    val canoestation_state_championsguild = find("canoestation_state_championsguild")
+    val canoestation_state_edgeville = find("canoestation_state_edgeville")
+    val canoestation_state_lumbridge = find("canoestation_state_lumbridge")
+    val canoestation_state_sanctuary = find("canoestation_state_sanctuary")
+    val chatbox_transparency = find("chatbox_transparency")
+    val chatmodal_unclamp = find("chatmodal_unclamp")
+    val clock = find("clock")
+    val coal_bag_storage_count = find("coal_bag_storage_count")
+    val colossal_essence_pouch = find("colossal_essence_pouch")
+    val colossal_pouch_storage_count = find("colossal_pouch_storage_count")
+    val colossal_pouch_storage_type = find("colossal_pouch_storage_type")
+    val combat_weapon_category = find("combat_weapon_category")
+    val combatlevel_decimal_transmit = find("combatlevel_decimal_transmit")
+    val combatlevel_transmit = find("combatlevel_transmit")
+    val contact = find("contact")
+    val cutscene_status = find("cutscene_status")
+    val date_milliseconds_past_minute = find("date_milliseconds_past_minute")
+    val date_seconds_past_minute = find("date_seconds_past_minute")
+    val demonslayer_main = find("demonslayer_main")
+    val emote_ash = find("emote_ash")
+    val emote_bunny_hop = find("emote_bunny_hop")
+    val emote_climbrope = find("emote_climbrope")
+    val emote_counters_crazy_dance = find("emote_counters_crazy_dance")
+    val emote_counters_premier_shield = find("emote_counters_premier_shield")
+    val emote_drilldemon = find("emote_drilldemon")
+    val emote_explore = find("emote_explore")
+    val emote_flex = find("emote_flex")
+    val emote_gangnam = find("emote_gangnam")
+    val emote_glassbox = find("emote_glassbox")
+    val emote_glasswall = find("emote_glasswall")
+    val emote_hotline_bling = find("emote_hotline_bling")
+    val emote_lean = find("emote_lean")
+    val emote_maxcape = find("emote_maxcape")
+    val emote_musiccape = find("emote_musiccape")
+    val emote_party = find("emote_party")
+    val emote_premier_club_2018 = find("emote_premier_club_2018")
+    val emote_terrified = find("emote_terrified")
+    val emote_trick = find("emote_trick")
+    val emote_uri_transform = find("emote_uri_transform")
+    val emote_zombie_dance = find("emote_zombie_dance")
+    val emote_zombie_hand = find("emote_zombie_hand")
+    val emote_zombie_walk = find("emote_zombie_walk")
+    val fountain_of_rune_active = find("fountain_of_rune_active")
+    val fov_clamp = find("fov_clamp")
+    val gameframe_toplevel = find("gameframe_toplevel")
+    val giant_essence_pouch = find("giant_essence_pouch")
+    val giant_pouch_storage_count = find("giant_pouch_storage_count")
+    val giant_pouch_storage_type = find("giant_pouch_storage_type")
+    val gravestone_tli_hide = find("gravestone_tli_hide")
+    val has_displayname_transmitter = find("has_displayname_transmitter")
+    val hnt_hint_max_step = find("hnt_hint_max_step")
+    val hnt_hint_step = find("hnt_hint_step")
+    val humble_chivalry = find("humble_chivalry")
+    val humble_piety = find("humble_piety")
+    val improved_stamina_passive = find("improved_stamina_passive")
+    val ironman = find("ironman")
+    val kr_knightwaves_state = find("kr_knightwaves_state")
+    val large_essence_pouch = find("large_essence_pouch")
+    val large_pouch_storage_count = find("large_pouch_storage_count")
+    val large_pouch_storage_type = find("large_pouch_storage_type")
+    val lost_tribe_quest = find("lost_tribe_quest")
+    val medium_essence_pouch = find("medium_essence_pouch")
+    val medium_pouch_storage_count = find("medium_pouch_storage_count")
+    val medium_pouch_storage_type = find("medium_pouch_storage_type")
+    val mill_flour = find("mill_flour")
+    val minimap_state = find("minimap_state")
+    val minimap_toggle = find("minimap_toggle")
+    val multiway_indicator = find("multiway_indicator")
+    val music_area_mode = find("music_area_mode")
     val music_curr_area = find("music_curr_area")
-    val music_curr_id = find("music_curr_id")
     val music_curr_clocks = find("music_curr_clocks")
     val music_curr_duration = find("music_curr_duration")
-    val gameframe_toplevel = find("gameframe_toplevel")
-    val improved_stamina_passive = find("improved_stamina_passive")
+    val music_curr_id = find("music_curr_id")
+    val music_last_id = find("music_last_id")
+    val music_unlock_text_toggle = find("music_unlock_text_toggle")
+    val new_player_account = find("new_player_account")
+    val option_acceptaid = find("option_acceptaid")
+    val option_areasounds_saved = find("option_areasounds_saved")
+    val option_brightness_remember = find("option_brightness_remember")
+    val option_dropwarning_on = find("option_dropwarning_on")
+    val option_dropwarning_value = find("option_dropwarning_value")
+    val option_hide_rooftops = find("option_hide_rooftops")
+    val option_master_volume_saved = find("option_master_volume_saved")
+    val option_music_saved = find("option_music_saved")
+    val option_skill_guide = find("option_skill_guide")
+    val option_sounds_saved = find("option_sounds_saved")
+    val parasite = find("parasite")
+    val poh_building_mode = find("poh_building_mode")
+    val poh_leaguehall_outfitstand_relichunter_type = find("poh_leaguehall_outfitstand_relichunter_type")
+    val prayer_allactive = find("prayer_allactive")
+    val prayer_augury = find("prayer_augury")
+    val prayer_augury_unlocked = find("prayer_augury_unlocked")
+    val prayer_burstofstrength = find("prayer_burstofstrength")
+    val prayer_chivalry = find("prayer_chivalry")
+    val prayer_clarityofthought = find("prayer_clarityofthought")
+    val prayer_deadeye_unlocked = find("prayer_deadeye_unlocked")
     val prayer_drain_counter = find("prayer_drain_counter")
     val prayer_drain_resistance = find("prayer_drain_resistance")
-    val new_player_account = find("new_player_account")
-    val saved_autocast_spell_staff = find("saved_autocast_spell_staff")
-    val saved_defensive_casting_staff = find("saved_defensive_casting_staff")
+    val prayer_eagleeye = find("prayer_eagleeye")
+    val prayer_filter_allowcombinedtier = find("prayer_filter_allowcombinedtier")
+    val prayer_filter_blockhealing = find("prayer_filter_blockhealing")
+    val prayer_filter_blocklacklevel = find("prayer_filter_blocklacklevel")
+    val prayer_filter_blocklocked = find("prayer_filter_blocklocked")
+    val prayer_filter_blocklowtier = find("prayer_filter_blocklowtier")
+    val prayer_hawkeye = find("prayer_hawkeye")
+    val prayer_improvedreflexes = find("prayer_improvedreflexes")
+    val prayer_incrediblereflexes = find("prayer_incrediblereflexes")
+    val prayer_mystic_vigour_unlocked = find("prayer_mystic_vigour_unlocked")
+    val prayer_mysticlore = find("prayer_mysticlore")
+    val prayer_mysticmight = find("prayer_mysticmight")
+    val prayer_mysticwill = find("prayer_mysticwill")
+    val prayer_piety = find("prayer_piety")
+    val prayer_preserve = find("prayer_preserve")
+    val prayer_preserve_unlocked = find("prayer_preserve_unlocked")
+    val prayer_protectfrommagic = find("prayer_protectfrommagic")
+    val prayer_protectfrommelee = find("prayer_protectfrommelee")
+    val prayer_protectfrommissiles = find("prayer_protectfrommissiles")
+    val prayer_protectitem = find("prayer_protectitem")
+    val prayer_rapidheal = find("prayer_rapidheal")
+    val prayer_rapidrestore = find("prayer_rapidrestore")
+    val prayer_redemption = find("prayer_redemption")
+    val prayer_retribution = find("prayer_retribution")
+    val prayer_rigour = find("prayer_rigour")
+    val prayer_rigour_unlocked = find("prayer_rigour_unlocked")
+    val prayer_rockskin = find("prayer_rockskin")
+    val prayer_sharpeye = find("prayer_sharpeye")
+    val prayer_smite = find("prayer_smite")
+    val prayer_steelskin = find("prayer_steelskin")
+    val prayer_superhumanstrength = find("prayer_superhumanstrength")
+    val prayer_thickskin = find("prayer_thickskin")
+    val prayer_ultimatestrength = find("prayer_ultimatestrength")
+    val prayerbook = find("prayerbook")
+    val quickprayer_active = find("quickprayer_active")
+    val quickprayer_selected = find("quickprayer_selected")
+    val rc_no_tally_required_air = find("rc_no_tally_required_air")
+    val rc_no_tally_required_body = find("rc_no_tally_required_body")
+    val rc_no_tally_required_chaos = find("rc_no_tally_required_chaos")
+    val rc_no_tally_required_cosmic = find("rc_no_tally_required_cosmic")
+    val rc_no_tally_required_death = find("rc_no_tally_required_death")
+    val rc_no_tally_required_earth = find("rc_no_tally_required_earth")
+    val rc_no_tally_required_fire = find("rc_no_tally_required_fire")
+    val rc_no_tally_required_law = find("rc_no_tally_required_law")
+    val rc_no_tally_required_mind = find("rc_no_tally_required_mind")
+    val rc_no_tally_required_nature = find("rc_no_tally_required_nature")
+    val rc_no_tally_required_water = find("rc_no_tally_required_water")
+    val rc_no_tally_required_wrath = find("rc_no_tally_required_wrath")
+    val resizable_stone_arrangement = find("resizable_stone_arrangement")
+    val rune_pouch_quantity_1 = find("rune_pouch_quantity_1")
+    val rune_pouch_quantity_2 = find("rune_pouch_quantity_2")
+    val rune_pouch_quantity_3 = find("rune_pouch_quantity_3")
+    val rune_pouch_quantity_4 = find("rune_pouch_quantity_4")
+    val rune_pouch_type_1 = find("rune_pouch_type_1")
+    val rune_pouch_type_2 = find("rune_pouch_type_2")
+    val rune_pouch_type_3 = find("rune_pouch_type_3")
+    val rune_pouch_type_4 = find("rune_pouch_type_4")
+    val saved_attackstyle_2h_sword = find("saved_attackstyle_2h_sword")
+    val saved_attackstyle_axe = find("saved_attackstyle_axe")
+    val saved_attackstyle_banner = find("saved_attackstyle_banner")
+    val saved_attackstyle_bladed_staff = find("saved_attackstyle_bladed_staff")
+    val saved_attackstyle_bludgeon = find("saved_attackstyle_bludgeon")
+    val saved_attackstyle_blunt = find("saved_attackstyle_blunt")
+    val saved_attackstyle_bow = find("saved_attackstyle_bow")
+    val saved_attackstyle_bulwark = find("saved_attackstyle_bulwark")
+    val saved_attackstyle_chinchompas = find("saved_attackstyle_chinchompas")
+    val saved_attackstyle_claw = find("saved_attackstyle_claw")
+    val saved_attackstyle_crossbow = find("saved_attackstyle_crossbow")
+    val saved_attackstyle_godsword = find("saved_attackstyle_godsword")
+    val saved_attackstyle_gun = find("saved_attackstyle_gun")
+    val saved_attackstyle_pickaxe = find("saved_attackstyle_pickaxe")
+    val saved_attackstyle_polearm = find("saved_attackstyle_polearm")
+    val saved_attackstyle_polestaff = find("saved_attackstyle_polestaff")
+    val saved_attackstyle_powered_staff = find("saved_attackstyle_powered_staff")
+    val saved_attackstyle_salamander = find("saved_attackstyle_salamander")
+    val saved_attackstyle_scythe = find("saved_attackstyle_scythe")
+    val saved_attackstyle_slash_sword = find("saved_attackstyle_slash_sword")
+    val saved_attackstyle_spear = find("saved_attackstyle_spear")
+    val saved_attackstyle_spiked = find("saved_attackstyle_spiked")
+    val saved_attackstyle_stab_sword = find("saved_attackstyle_stab_sword")
+    val saved_attackstyle_staff = find("saved_attackstyle_staff")
+    val saved_attackstyle_thrown = find("saved_attackstyle_thrown")
+    val saved_attackstyle_unarmed = find("saved_attackstyle_unarmed")
+    val saved_attackstyle_whip = find("saved_attackstyle_whip")
     val saved_autocast_spell_bladed_staff = find("saved_autocast_spell_bladed_staff")
+    val saved_autocast_spell_staff = find("saved_autocast_spell_staff")
     val saved_defensive_casting_bladed_staff = find("saved_defensive_casting_bladed_staff")
-    val accept_aid_restore = find("accept_aid_restore")
-    val bank_capacity = find("bank_capacity")
-    val coal_bag_storage_count = find("coal_bag_storage_count")
-    val small_pouch_storage_type = find("small_pouch_storage_type")
-    val small_pouch_storage_count = find("small_pouch_storage_count")
-    val medium_pouch_storage_type = find("medium_pouch_storage_type")
-    val medium_pouch_storage_count = find("medium_pouch_storage_count")
-    val large_pouch_storage_type = find("large_pouch_storage_type")
-    val large_pouch_storage_count = find("large_pouch_storage_count")
-    val giant_pouch_storage_type = find("giant_pouch_storage_type")
-    val giant_pouch_storage_count = find("giant_pouch_storage_count")
-    val colossal_pouch_storage_type = find("colossal_pouch_storage_type")
-    val colossal_pouch_storage_count = find("colossal_pouch_storage_count")
-
-    val bunny_ears_unlocked = find("bunny_ears_unlocked")
+    val saved_defensive_casting_staff = find("saved_defensive_casting_staff")
+    val scrambled = find("scrambled")
     val scythe_unlocked = find("scythe_unlocked")
-
-    val adventurepath_combat_task_recommended = find("adventurepath_combat_task_recommended")
-
-    /* Compatibility aliases */
-    val adventurepath_combat_reward_claimed
-        get() = adventurepath_combat_task_recommended
+    val settings_hitsplat_threshold = find("settings_hitsplat_threshold")
+    val settings_side_panel_tab = find("settings_side_panel_tab")
+    val shieldofarrav = find("shieldofarrav")
+    val side_journal_tab = find("side_journal_tab")
+    val singleway_plus_indicator = find("singleway_plus_indicator")
+    val skill_guide_skill = find("skill_guide_skill")
+    val skill_guide_subsection = find("skill_guide_subsection")
+    val skull_prevent_enabled = find("skull_prevent_enabled")
+    val slayer_points = find("slayer_points")
+    val small_essence_pouch = find("small_essence_pouch")
+    val small_pouch_storage_count = find("small_pouch_storage_count")
+    val small_pouch_storage_type = find("small_pouch_storage_type")
+    val smithing_bar_type = find("smithing_bar_type")
+    val sos_emote_doh = find("sos_emote_doh")
+    val sos_emote_flap = find("sos_emote_flap")
+    val sos_emote_idea = find("sos_emote_idea")
+    val sos_emote_stamp = find("sos_emote_stamp")
+    val spellbook = find("spellbook")
+    val stamina_active = find("stamina_active")
+    val toa_client_raid_level = find("toa_client_raid_level")
+    val vesseled_clues_disabled = find("vesseled_clues_disabled")
+    val wildy_canoe_warning = find("wildy_canoe_warning")
 }

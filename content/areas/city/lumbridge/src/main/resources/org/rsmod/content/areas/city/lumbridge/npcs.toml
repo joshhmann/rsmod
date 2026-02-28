@@ -2377,15 +2377,15 @@ npc = 'goblin'
 coords = '1_50_50_25_20'
 
 [[spawn]]
-npc = 'goblin_2'
+npc = 'goblin_unarmed_melee_2'
 coords = '1_50_50_26_28'
 
 [[spawn]]
-npc = 'giant_rat'
+npc = 'giantrat'
 coords = '1_50_50_17_30'
 
 [[spawn]]
-npc = 'giant_rat_2'
+npc = 'giantrat2'
 coords = '1_50_50_21_18'
 
 # === LUMBRIDGE CASTLE ROOF (Plane 2) ===

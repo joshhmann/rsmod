@@ -10,19 +10,19 @@ import org.rsmod.api.type.refs.npc.NpcReferences
 internal object DropTableNpcs : NpcReferences() {
     // Goblin variants present in the OSRS cache at rev 228
     val goblin = find("goblin")
-    val goblin_2 = find("goblin_2")
-    val goblin_3 = find("goblin_3")
-    val goblin_chef = find("goblin_chef")
+    val goblin_2 = find("goblin_unarmed_melee_2")
+    val goblin_3 = find("goblin_unarmed_melee_3")
+    val goblin_chef = find("goblin_cook")
     val goblin_guard = find("goblin_guard")
 
     // Chicken
     val chicken = find("chicken")
-    val chicken_2 = find("chicken_2") // TODO: verify internal name for rev-228 variant
+    val chicken_2 = find("chicken_brown") // TODO: verify internal name for rev-228 variant
 
     // Giant rat variants
-    val giant_rat = find("giant_rat")
-    val giant_rat_2 = find("giant_rat_2")
-    val giant_rat_3 = find("giant_rat_3")
+    val giantrat = find("giantrat")
+    val giantrat2 = find("giantrat2")
+    val giantrat3 = find("giantrat3")
 
     // Cow — variant names cross-referenced with CowNpcs in generic-npcs.
     // cow_beef is the "ready to milk" variant; cow2/cow3 are graphical variants.
@@ -32,9 +32,9 @@ internal object DropTableNpcs : NpcReferences() {
     val cow_beef = find("cow_beef")
 
     // Guard variants (Lumbridge / Al-Kharid)
-    val guard = find("guard")
-    val guard_2 = find("guard_2")
-    val guard_3 = find("guard_3")
+    val guard = find("city_guard")
+    val guard_2 = find("city_guard")
+    val guard_3 = find("city_guard")
 
     // Scorpion
     val scorpion = find("scorpion")
@@ -66,9 +66,9 @@ internal object DropTableNpcs : NpcReferences() {
     val rooster = find("rooster")
 
     // Hill Giant variants
-    val hill_giant = find("hill_giant")
-    val hill_giant2 = find("hill_giant2")
-    val hill_giant3 = find("hill_giant3")
+    val hill_giant = find("wilderness_hill_giant")
+    val hill_giant2 = find("wilderness_hill_giant2")
+    val hill_giant3 = find("wilderness_hill_giant3")
     val wilderness_hill_giant = find("wilderness_hill_giant")
     val wilderness_hill_giant2 = find("wilderness_hill_giant2")
     val wilderness_hill_giant3 = find("wilderness_hill_giant3")

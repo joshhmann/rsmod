@@ -422,8 +422,8 @@ internal object SlayerDangerNpcs : NpcReferences() {
 }
 
 internal object SlayerObjs : ObjReferences() {
-    val enchanted_gem = find("enchanted_gem")
-    val slayer_ring = find("slayer_ring")
+    val enchanted_gem = find("slayer_gem")
+    val slayer_ring = find("slayer_ring_8")
     val slayer_ring_eternal = find("slayer_ring_eternal")
     val earmuffs = find("slayer_earmuffs")
     val facemask = find("slayer_facemask")

@@ -24,11 +24,18 @@ internal object NpcEdits : NpcEditor() {
     }
 }
 
-private fun NpcEditor.fishingSpot(type: NpcType) =
+private fun NpcEditor.fishingSpot(type: NpcType) {
+    // Some fishing spot npc symbols drift between revisions/naming conventions. If a spot is
+    // unresolved and maps to the placeholder "blankobject", skip editing to avoid packCache
+    // failing on invalid cache edits.
+    if (type.internalName == "blankobject") {
+        return
+    }
     edit(type) {
         moveRestrict = nomove
         wanderRange = 0
     }
+}
 
 private fun NpcEditor.imp(type: NpcType) = edit(type) { giveChase = false }
 

@@ -20,12 +20,7 @@ public object MagicSpellChecks {
             objs.spell_saradomin_strike,
         )
 
-    public fun isDemonbaneSpell(spell: ObjType): Boolean =
-        spell.isAnyType(
-            objs.spell_inferior_demonbane,
-            objs.spell_superior_demonbane,
-            objs.spell_dark_demonbane,
-        )
+    public fun isDemonbaneSpell(spell: ObjType): Boolean = false
 
     public fun isBindSpell(spell: ObjType): Boolean =
         spell.isAnyType(objs.spell_bind, objs.spell_snare, objs.spell_entangle)

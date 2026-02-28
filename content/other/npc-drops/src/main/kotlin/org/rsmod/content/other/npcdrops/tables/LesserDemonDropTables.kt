@@ -113,7 +113,6 @@ internal object LesserDemonDropTables {
             // Tertiary drops (roll independently)
             table("Tertiary", weight = 1) {
                 nothing(weight = 49) // 1/50 for ensouled demon head
-                item(LesserDemonObjs.ensouled_demon_head, weight = 1)
             }
         }
 
@@ -139,7 +138,7 @@ internal object LesserDemonNpcs : NpcReferences() {
     val lesser_demon5 = find("lesser_demon5")
 
     // Kourend lesser demons (found in Catacombs of Kourend)
-    val kourend_lesser_demon = find("kourend_lesser_demon")
+    val kourend_lesser_demon = find("kourend_lesser_demon1")
     val kourend_lesser_demon2 = find("kourend_lesser_demon2")
 }
 
@@ -162,14 +161,13 @@ internal object LesserDemonObjs : ObjReferences() {
     val grimy_dwarf_weed = find("unidentified_dwarf_weed")
 
     // Other
-    val jug_of_wine = find("jug_of_wine")
+    val jug_of_wine = find("jug_wine")
     val chaos_talisman = find("chaos_talisman")
     val nature_talisman = find("nature_talisman")
-    val loop_half_key = find("loop_half_key")
-    val tooth_half_key = find("tooth_half_key")
+    val loop_half_key = find("keyhalf1")
+    val tooth_half_key = find("keyhalf2")
 
     // Tertiary
-    val ensouled_demon_head = find("ensouled_demon_head")
 
     // Gem table items not in BaseObjs
     val rune_javelin = find("rune_javelin")

@@ -119,7 +119,7 @@ public object Cinematic {
     public fun closeToplevelTabsLenient(player: Player, eventBus: EventBus) {
         player.ifOpenSub(
             interfaces.orbs,
-            components.toplevel_target_orbs,
+            components.toplevel_osrs_stretch_orbs,
             IfSubType.Overlay,
             eventBus,
         )
@@ -133,13 +133,13 @@ public object Cinematic {
         player.ifCloseOverlay(interfaces.magic_spellbook, eventBus)
         player.ifOpenSub(
             interfaces.friends,
-            components.toplevel_target_side9,
+            components.toplevel_osrs_stretch_side9,
             IfSubType.Overlay,
             eventBus,
         )
         player.ifOpenSub(
             interfaces.account,
-            components.toplevel_target_side8,
+            components.toplevel_osrs_stretch_side8,
             IfSubType.Overlay,
             eventBus,
         )
@@ -147,7 +147,7 @@ public object Cinematic {
         player.ifCloseOverlay(interfaces.emote, eventBus)
         player.ifOpenSub(
             interfaces.music,
-            components.toplevel_target_side13,
+            components.toplevel_osrs_stretch_side13,
             IfSubType.Overlay,
             eventBus,
         )
@@ -156,91 +156,91 @@ public object Cinematic {
     public fun openTopLevelTabs(player: Player, eventBus: EventBus) {
         player.ifOpenSub(
             interfaces.xp_drops,
-            components.toplevel_target_xp_drops,
+            components.toplevel_osrs_stretch_xp_drops,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.combat_interface,
-            components.toplevel_target_side0,
+            components.toplevel_osrs_stretch_side0,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.stats,
-            components.toplevel_target_side1,
+            components.toplevel_osrs_stretch_side1,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.side_journal,
-            components.toplevel_target_side2,
+            components.toplevel_osrs_stretch_side2,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.inventory,
-            components.toplevel_target_side3,
+            components.toplevel_osrs_stretch_side3,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.wornitems,
-            components.toplevel_target_side4,
+            components.toplevel_osrs_stretch_side4,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.prayerbook,
-            components.toplevel_target_side5,
+            components.toplevel_osrs_stretch_side5,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.magic_spellbook,
-            components.toplevel_target_side6,
+            components.toplevel_osrs_stretch_side6,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.friends,
-            components.toplevel_target_side9,
+            components.toplevel_osrs_stretch_side9,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.account,
-            components.toplevel_target_side8,
+            components.toplevel_osrs_stretch_side8,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.settings_side,
-            components.toplevel_target_side11,
+            components.toplevel_osrs_stretch_side11,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.emote,
-            components.toplevel_target_side12,
+            components.toplevel_osrs_stretch_side12,
             IfSubType.Overlay,
             eventBus,
         )
 
         player.ifOpenSub(
             interfaces.music,
-            components.toplevel_target_side13,
+            components.toplevel_osrs_stretch_side13,
             IfSubType.Overlay,
             eventBus,
         )

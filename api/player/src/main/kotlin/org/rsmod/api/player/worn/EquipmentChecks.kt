@@ -7,7 +7,7 @@ import org.rsmod.game.inv.isType
 
 public object EquipmentChecks {
     public fun isSmokeStaff(obj: InvObj?): Boolean =
-        obj.isAnyType(objs.smoke_battlestaff, objs.mystic_smoke_staff, objs.twinflame_staff)
+        obj.isAnyType(objs.smoke_battlestaff, objs.mystic_smoke_staff)
 
     public fun isSoulreaperAxe(obj: InvObj?): Boolean = obj.isType(objs.soulreaper_axe)
 
@@ -15,12 +15,7 @@ public object EquipmentChecks {
 
     public fun isTwistedBow(obj: InvObj?): Boolean = obj.isType(objs.twisted_bow)
 
-    public fun isDragonHunterCrossbow(obj: InvObj?): Boolean =
-        obj.isAnyType(
-            objs.dragon_hunter_crossbow,
-            objs.dragon_hunter_crossbow_t,
-            objs.dragon_hunter_crossbow_b,
-        )
+    public fun isDragonHunterCrossbow(obj: InvObj?): Boolean = false
 
     public fun isCrystalBow(obj: InvObj?): Boolean = false
 

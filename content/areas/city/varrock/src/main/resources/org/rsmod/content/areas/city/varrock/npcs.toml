@@ -110,19 +110,19 @@ direction = 'south'
 
 # === VARROCK GUARDS ===
 [[spawn]]
-npc = 'guard'
+npc = 'city_guard'
 coords = '0_50_53_25_30'
 
 [[spawn]]
-npc = 'guard'
+npc = 'city_guard'
 coords = '0_50_53_40_30'
 
 [[spawn]]
-npc = 'guard'
+npc = 'city_guard'
 coords = '0_50_53_32_35'
 
 [[spawn]]
-npc = 'guard'
+npc = 'city_guard'
 coords = '0_50_53_32_45'
 
 # === MAN/WOMAN (Citizens around square) ===
@@ -144,17 +144,12 @@ coords = '0_50_53_38_28'
 
 # === DARK WIZARDS (South of stone circle) ===
 [[spawn]]
-npc = 'dark_wizard'
+npc = 'bearded_dark_wizard'
 coords = '0_50_53_18_48'
 
 [[spawn]]
-npc = 'dark_wizard'
+npc = 'bearded_dark_wizard'
 coords = '0_50_53_22_50'
-
-# === CAT (Stray dog/cat) ===
-[[spawn]]
-npc = 'cat'
-coords = '0_50_53_30_15'
 
 # === BLUE MOON INN (South Varrock) ===
 [[spawn]]

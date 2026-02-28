@@ -85,22 +85,22 @@ direction = 'north'
 # === FISHING SPOTS (East of village, on the river) ===
 # Lure/Bait spots for trout/salmon/pike fishing
 [[spawn]]
-npc = '0_50_50_lurefish'
+npc = '0_50_50_freshfish'
 coords = '0_48_53_50_24'
 direction = 'south'
 
 [[spawn]]
-npc = '0_50_50_lurefish'
+npc = '0_50_50_freshfish'
 coords = '0_48_53_52_28'
 direction = 'west'
 
 [[spawn]]
-npc = '0_50_50_lurefish'
+npc = '0_50_50_freshfish'
 coords = '0_48_53_54_22'
 direction = 'east'
 
 [[spawn]]
-npc = '0_50_50_lurefish'
+npc = '0_50_50_freshfish'
 coords = '0_48_53_56_26'
 direction = 'north'
 

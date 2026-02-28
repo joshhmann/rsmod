@@ -404,11 +404,11 @@ public object MeleeMaxHitOperations {
 
     private fun VarPlayerIntMap.prayerBonus(): Double =
         when {
-            this[varbits.burst_of_strength] == 1 -> 1.05
-            this[varbits.superhuman_strength] == 1 -> 1.1
-            this[varbits.ultimate_strength] == 1 -> 1.15
-            this[varbits.chivalry] == 1 -> 1.18
-            this[varbits.piety] == 1 -> 1.23
+            this[varbits.prayer_burstofstrength] == 1 -> 1.05
+            this[varbits.prayer_superhumanstrength] == 1 -> 1.1
+            this[varbits.prayer_ultimatestrength] == 1 -> 1.15
+            this[varbits.prayer_chivalry] == 1 -> 1.18
+            this[varbits.prayer_piety] == 1 -> 1.23
             else -> 1.0
         }
 
@@ -437,7 +437,7 @@ public object MeleeMaxHitOperations {
     }
 
     private fun VarPlayerIntMap.soulStackBonus(): Double {
-        val souls = this[varps.soulreaper_souls]
+        val souls = this[varps.soulreaper_stacks]
         return 1.0 + (souls * 0.06)
     }
 }

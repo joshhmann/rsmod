@@ -62,19 +62,19 @@ constructor(
 
         resetPlayerState(statTypes)
         restoreToplevelTabs(
-            components.toplevel_target_pvp_icons,
-            components.toplevel_target_side1,
-            components.toplevel_target_side2,
-            components.toplevel_target_side4,
-            components.toplevel_target_side5,
-            components.toplevel_target_side6,
-            components.toplevel_target_side9,
-            components.toplevel_target_side8,
-            components.toplevel_target_side7,
-            components.toplevel_target_side10,
-            components.toplevel_target_side11,
-            components.toplevel_target_side12,
-            components.toplevel_target_side13,
+            components.toplevel_osrs_stretch_pvp_icons,
+            components.toplevel_osrs_stretch_side1,
+            components.toplevel_osrs_stretch_side2,
+            components.toplevel_osrs_stretch_side4,
+            components.toplevel_osrs_stretch_side5,
+            components.toplevel_osrs_stretch_side6,
+            components.toplevel_osrs_stretch_side9,
+            components.toplevel_osrs_stretch_side8,
+            components.toplevel_osrs_stretch_side7,
+            components.toplevel_osrs_stretch_side10,
+            components.toplevel_osrs_stretch_side11,
+            components.toplevel_osrs_stretch_side12,
+            components.toplevel_osrs_stretch_side13,
         )
     }
 

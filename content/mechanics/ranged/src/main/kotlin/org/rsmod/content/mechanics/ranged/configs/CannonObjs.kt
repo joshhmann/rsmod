@@ -20,18 +20,6 @@ object CannonObjs : ObjReferences() {
     /** Cannonball item (id 2) */
     val cannonball = find("mcannonball")
 
-    /** Cannon base object */
-    val base = find("mcannonbase_obj")
-
-    /** Cannon stand object */
-    val stand = find("mcannonstand_obj")
-
-    /** Cannon barrels object */
-    val barrels = find("mcannonbarrels_obj")
-
-    /** Cannon furnace object */
-    val furnace = find("mcannonfurnace_obj")
-
     /** Tool kit for repairing cannon (id 1) */
     val tool_kit = find("mcannontoolkit")
 }

@@ -8,7 +8,7 @@ import org.rsmod.game.movement.MoveSpeed
 import org.rsmod.game.type.varbit.VarBitType
 import org.rsmod.game.type.varp.VarpType
 
-internal var Player.enabledPrayers by intVarBit(varbits.enabled_prayers)
+internal var Player.enabledPrayers by intVarBit(varbits.prayer_allactive)
 internal var Player.usingQuickPrayers by boolVarBit(varbits.quickprayer_active)
 internal var Player.prayerDrainCounter by intVarBit(varbits.prayer_drain_counter)
 

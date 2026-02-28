@@ -83,7 +83,7 @@ death_sound = 512
 # Dwarf - Level 10
 # Found in Dwarven Mine and Ice Mountain, non-aggressive
 [[config]]
-npc = 'dwarf'
+npc = 'dwarf_normal'
 examine = 'A short, angry guy.'
 attack_type = 'Slash'
 attack_anim = 412
@@ -97,7 +97,7 @@ death_sound = 512
 # Bear - Level 21
 # Found in Varrock south, east of Dark Warriors' Fortress
 [[config]]
-npc = 'bear'
+npc = 'brownbear'
 examine = 'A big, scary bear.'
 attack_type = 'Slash'
 attack_anim = 299
@@ -111,7 +111,7 @@ death_sound = 512
 # Zombie - Level 13
 # Found in various locations, aggressive
 [[config]]
-npc = 'zombie'
+npc = 'zombie_unarmed'
 examine = 'The walking dead.'
 attack_type = 'Crush'
 attack_anim = 5578

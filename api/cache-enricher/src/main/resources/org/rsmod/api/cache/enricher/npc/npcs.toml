@@ -51363,7 +51363,7 @@ death_anim = 313
 death_sound = 360
 
 [[config]]
-npc = 'goblin_2'
+npc = 'goblin_unarmed_melee_2'
 examine = 'An ugly green creature.'
 attack_type = 'Crush'
 attack_anim = 309
@@ -51375,7 +51375,7 @@ death_anim = 313
 death_sound = 360
 
 [[config]]
-npc = 'goblin_3'
+npc = 'goblin_unarmed_melee_3'
 examine = 'An ugly green creature.'
 attack_type = 'Crush'
 attack_anim = 309
@@ -51387,7 +51387,7 @@ death_anim = 313
 death_sound = 360
 
 [[config]]
-npc = 'goblin_chef'
+npc = 'goblin_cook'
 examine = 'An ugly green creature.'
 attack_type = 'Crush'
 attack_anim = 309
@@ -51411,7 +51411,7 @@ death_anim = 313
 death_sound = 360
 
 [[config]]
-npc = 'giant_rat'
+npc = 'giantrat'
 examine = 'A giant rat.'
 attack_type = 'Crush'
 attack_anim = 138
@@ -51421,7 +51421,7 @@ defend_anim = 139
 death_anim = 141
 
 [[config]]
-npc = 'giant_rat_2'
+npc = 'giantrat2'
 examine = 'A giant rat.'
 attack_type = 'Crush'
 attack_anim = 138
@@ -51431,7 +51431,7 @@ defend_anim = 139
 death_anim = 141
 
 [[config]]
-npc = 'giant_rat_3'
+npc = 'giantrat3'
 examine = 'A giant rat.'
 attack_type = 'Crush'
 attack_anim = 138
@@ -51441,7 +51441,7 @@ defend_anim = 139
 death_anim = 141
 
 [[config]]
-npc = 'guard'
+npc = 'city_guard'
 examine = 'He tries to keep order.'
 attack_type = 'Stab'
 attack_anim = 386
@@ -51453,7 +51453,7 @@ death_anim = 836
 death_sound = 512
 
 [[config]]
-npc = 'guard_2'
+npc = 'city_guard'
 examine = 'He tries to keep order.'
 attack_type = 'Stab'
 attack_anim = 386
@@ -51465,7 +51465,7 @@ death_anim = 836
 death_sound = 512
 
 [[config]]
-npc = 'guard_3'
+npc = 'city_guard'
 examine = 'He tries to keep order.'
 attack_type = 'Stab'
 attack_anim = 386
@@ -51497,7 +51497,7 @@ defend_anim = 170
 death_anim = 172
 
 [[config]]
-npc = 'dark_wizard'
+npc = 'bearded_dark_wizard'
 examine = 'A practicer of dark arts.'
 attack_type = 'Magic'
 attack_anim = 1162
@@ -51623,7 +51623,7 @@ death_anim = 6182
 aggressive_level = 4
 
 [[config]]
-npc = 'giant_rat'
+npc = 'giantrat'
 attack_level = 1
 strength_level = 1
 defence_level = 1
@@ -51641,7 +51641,7 @@ death_anim = 4935
 aggressive_level = 6
 
 [[config]]
-npc = 'guard'
+npc = 'city_guard'
 attack_level = 19
 strength_level = 18
 defence_level = 14
@@ -51695,7 +51695,7 @@ death_anim = 172
 aggressive_level = 4
 
 [[config]]
-npc = 'dark_wizard'
+npc = 'bearded_dark_wizard'
 attack_level = 5
 strength_level = 2
 defence_level = 5
@@ -51713,7 +51713,7 @@ death_anim = 836
 aggressive_level = 14
 
 [[config]]
-npc = 'lesser_demon_f2p'
+npc = 'lesser_demon'
 attack_level = 68
 strength_level = 70
 defence_level = 71
@@ -51731,7 +51731,7 @@ death_anim = 67
 aggressive_level = 164
 
 [[config]]
-npc = 'black_knight_f2p'
+npc = 'black_knight'
 attack_level = 25
 strength_level = 25
 defence_level = 25
@@ -51756,31 +51756,31 @@ npc = 'hundred_aris'
 examine = 'A fortune-teller.'
 
 [[config]]
-npc = 'party_pete'
+npc = 'partyroom_pete'
 examine = 'The life and soul of the party.'
 
 [[config]]
-npc = 'shop_keeper'
+npc = 'generalshopkeeper1'
 examine = 'The shop keeper.'
 
 [[config]]
-npc = 'shop_assistant'
+npc = 'generalassistant1'
 examine = 'Helps the shop keeper.'
 
 [[config]]
-npc = 'border_guard'
+npc = 'borderguard1'
 examine = 'Guards the border.'
 
 [[config]]
-npc = 'sheep'
+npc = 'sheepunsheered'
 examine = 'White and fluffy.'
 
 [[config]]
-npc = 'giantspider'
+npc = 'giantspider1'
 examine = 'I think this spider has been genetically modified.'
 
 [[config]]
-npc = 'hill_giant'
+npc = 'wilderness_hill_giant'
 examine = 'A very large foe.'
 attack_type = 'Crush'
 attack_anim = 4652
@@ -51797,7 +51797,7 @@ strength_level = 16
 defence_level = 18
 
 [[config]]
-npc = 'moss_giant'
+npc = 'mossgiant'
 examine = 'His beard seems to have a life of its own.'
 attack_type = 'Crush'
 attack_anim = 4658
@@ -51814,7 +51814,7 @@ strength_level = 30
 defence_level = 30
 
 [[config]]
-npc = 'ice_giant'
+npc = 'icegiant'
 examine = "He's got icicles in his beard."
 attack_type = 'Slash'
 attack_anim = 4672
@@ -51831,7 +51831,7 @@ strength_level = 40
 defence_level = 40
 
 [[config]]
-npc = 'fire_giant'
+npc = 'firegiant'
 examine = "He's big and he's nasty."
 attack_type = 'Slash'
 attack_anim = 4666
@@ -51848,7 +51848,7 @@ strength_level = 65
 defence_level = 65
 
 [[config]]
-npc = 'skeleton'
+npc = 'skeleton_unarmed'
 examine = 'Could do with gaining a few pounds.'
 
 [[config]]
@@ -51856,6 +51856,6 @@ npc = 'aggie'
 examine = 'A witch.'
 
 [[config]]
-npc = 'gypsy'
+npc = 'aris'
 examine = 'A gypsy fortune-teller.'
 

@@ -140,11 +140,12 @@ class VarrockRooftopCourse @Inject constructor() : PluginScript() {
 
 /** Local Seq references for Varrock Rooftop animations. */
 internal object VarrockRooftopSeqs : SeqReferences() {
-    val human_wall_climb = find("human_wall_climb")
-    val human_tightrope_walk = find("human_tightrope_walk")
-    val human_leap_gap = find("human_leap_gap")
-    val human_wall_swing = find("human_wall_swing")
-    val human_wall_scramble = find("human_wall_scramble")
-    val human_step_up = find("human_step_up")
-    val human_leap_down = find("human_leap_down")
+    // These were previously named after obstacle semantics, but rev233 internal names differ.
+    val human_wall_climb = find("human_climbing")
+    val human_tightrope_walk = find("human_walk_logbalance")
+    val human_leap_gap = find("human_jump_hurdle")
+    val human_wall_swing = find("human_ropeswing")
+    val human_wall_scramble = find("human_climbing")
+    val human_step_up = find("human_climbing")
+    val human_leap_down = find("human_climbing_down")
 }

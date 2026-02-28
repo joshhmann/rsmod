@@ -94,26 +94,26 @@ object ClueRewardTablesImpl {
     private val BeginnerRewards =
         listOf(
             // Common rewards (high weight)
-            RewardEntry("monk_robe_top", 1, 200),
-            RewardEntry("monk_robe_bottom", 1, 200),
+            RewardEntry("monkrobetop", 1, 200),
+            RewardEntry("monkrobebottom", 1, 200),
             RewardEntry("amulet_of_defence", 1, 150),
             RewardEntry("amulet_of_magic", 1, 150),
             RewardEntry("amulet_of_strength", 1, 150),
             RewardEntry("amulet_of_power", 1, 100),
 
             // Medium value rewards
-            RewardEntry("team_cape", 1, 80),
+            RewardEntry("clanwars_teamcape_1", 1, 80),
             RewardEntry("leather_boots", 1, 60),
             RewardEntry("leather_gloves", 1, 60),
-            RewardEntry("cape", 1, 50),
+            RewardEntry("black_cape", 1, 50),
 
             // Low value but useful
-            RewardEntry("air_rune", 100..300, 40),
-            RewardEntry("water_rune", 100..300, 40),
-            RewardEntry("earth_rune", 100..300, 40),
-            RewardEntry("fire_rune", 100..300, 40),
-            RewardEntry("mind_rune", 100..300, 40),
-            RewardEntry("body_rune", 100..300, 40),
+            RewardEntry("airrune", 100..300, 40),
+            RewardEntry("waterrune", 100..300, 40),
+            RewardEntry("earthrune", 100..300, 40),
+            RewardEntry("firerune", 100..300, 40),
+            RewardEntry("mindrune", 100..300, 40),
+            RewardEntry("bodyrune", 100..300, 40),
 
             // Coins
             RewardEntry("coins", 500..2000, 100),
@@ -125,10 +125,10 @@ object ClueRewardTablesImpl {
             RewardEntry("tuna", 3..8, 15),
 
             // Rare rewards (low weight)
-            RewardEntry("rainbow_cape", 1, 5), // Very rare F2P fashion item
+            RewardEntry("rainbow_partyhat", 1, 5), // Very rare F2P fashion item
             RewardEntry("highwayman_mask", 1, 10),
-            RewardEntry("blue_wizard_hat", 1, 20),
-            RewardEntry("black_wizard_hat", 1, 15),
+            RewardEntry("bluewizhat", 1, 20),
+            RewardEntry("blackwizhat", 1, 15),
         )
 
     /** Easy clue reward table. */
@@ -162,45 +162,45 @@ object ClueRewardTablesImpl {
             RewardEntry("mithril_kiteshield", 1, 40),
 
             // Trimmed armor (rare)
-            RewardEntry("black_helm_h1", 1, 15),
-            RewardEntry("black_helm_h2", 1, 15),
-            RewardEntry("black_helm_h3", 1, 15),
-            RewardEntry("black_helm_h4", 1, 15),
-            RewardEntry("black_helm_h5", 1, 15),
-            RewardEntry("black_shield_h1", 1, 15),
-            RewardEntry("black_shield_h2", 1, 15),
-            RewardEntry("black_shield_h3", 1, 15),
-            RewardEntry("black_shield_h4", 1, 15),
-            RewardEntry("black_shield_h5", 1, 15),
+            RewardEntry("trail_heraldic_helm_1_black", 1, 15),
+            RewardEntry("trail_heraldic_helm_2_black", 1, 15),
+            RewardEntry("trail_heraldic_helm_3_black", 1, 15),
+            RewardEntry("trail_heraldic_helm_4_black", 1, 15),
+            RewardEntry("trail_heraldic_helm_5_black", 1, 15),
+            RewardEntry("black_heraldic_kiteshield1", 1, 15),
+            RewardEntry("black_heraldic_kiteshield2", 1, 15),
+            RewardEntry("black_heraldic_kiteshield3", 1, 15),
+            RewardEntry("black_heraldic_kiteshield4", 1, 15),
+            RewardEntry("black_heraldic_kiteshield5", 1, 15),
 
             // God pages (very rare)
-            RewardEntry("saras_page_1", 1, 5),
-            RewardEntry("saras_page_2", 1, 5),
-            RewardEntry("saras_page_3", 1, 5),
-            RewardEntry("saras_page_4", 1, 5),
-            RewardEntry("zammy_page_1", 1, 5),
-            RewardEntry("zammy_page_2", 1, 5),
-            RewardEntry("zammy_page_3", 1, 5),
-            RewardEntry("zammy_page_4", 1, 5),
-            RewardEntry("guthix_page_1", 1, 5),
-            RewardEntry("guthix_page_2", 1, 5),
-            RewardEntry("guthix_page_3", 1, 5),
-            RewardEntry("guthix_page_4", 1, 5),
+            RewardEntry("holy_book_s_page1", 1, 5),
+            RewardEntry("holy_book_s_page2", 1, 5),
+            RewardEntry("holy_book_s_page3", 1, 5),
+            RewardEntry("holy_book_s_page4", 1, 5),
+            RewardEntry("holy_book_z_page1", 1, 5),
+            RewardEntry("holy_book_z_page2", 1, 5),
+            RewardEntry("holy_book_z_page3", 1, 5),
+            RewardEntry("holy_book_z_page4", 1, 5),
+            RewardEntry("holy_book_g_page1", 1, 5),
+            RewardEntry("holy_book_g_page2", 1, 5),
+            RewardEntry("holy_book_g_page3", 1, 5),
+            RewardEntry("holy_book_g_page4", 1, 5),
 
             // Emote items (rare)
-            RewardEntry("blue_beret", 1, 20),
-            RewardEntry("black_beret", 1, 20),
-            RewardEntry("white_beret", 1, 20),
-            RewardEntry("red_beret", 1, 20),
+            RewardEntry("berret_blue", 1, 20),
+            RewardEntry("berret_black", 1, 20),
+            RewardEntry("berret_white", 1, 20),
+            RewardEntry("berret_red", 1, 20),
             RewardEntry("highwayman_mask", 1, 15),
-            RewardEntry("bob_shirt", 1, 25),
+            RewardEntry("trail_bob_shirt_red", 1, 25),
 
             // Runes (common)
-            RewardEntry("chaos_rune", 50..150, 60),
-            RewardEntry("nature_rune", 30..100, 50),
-            RewardEntry("law_rune", 30..100, 50),
-            RewardEntry("cosmic_rune", 30..100, 40),
-            RewardEntry("death_rune", 20..50, 30),
+            RewardEntry("chaosrune", 50..150, 60),
+            RewardEntry("naturerune", 30..100, 50),
+            RewardEntry("lawrune", 30..100, 50),
+            RewardEntry("cosmicrune", 30..100, 40),
+            RewardEntry("deathrune", 20..50, 30),
 
             // Coins
             RewardEntry("coins", 1000..5000, 100),
@@ -224,39 +224,39 @@ object ClueRewardTablesImpl {
 /** Object references for clue reward items not in BaseObjs. */
 internal object ClueRewardItemObjs : ObjReferences() {
     // Beginner clue items
-    val rainbow_cape = find("rainbow_cape")
+    val rainbow_cape = find("rainbow_partyhat")
     val highwayman_mask = find("highwayman_mask")
 
     // Easy clue trimmed armor
-    val black_helm_h1 = find("black_helm_h1")
-    val black_helm_h2 = find("black_helm_h2")
-    val black_helm_h3 = find("black_helm_h3")
-    val black_helm_h4 = find("black_helm_h4")
-    val black_helm_h5 = find("black_helm_h5")
-    val black_shield_h1 = find("black_shield_h1")
-    val black_shield_h2 = find("black_shield_h2")
-    val black_shield_h3 = find("black_shield_h3")
-    val black_shield_h4 = find("black_shield_h4")
-    val black_shield_h5 = find("black_shield_h5")
+    val black_helm_h1 = find("trail_heraldic_helm_1_black")
+    val black_helm_h2 = find("trail_heraldic_helm_2_black")
+    val black_helm_h3 = find("trail_heraldic_helm_3_black")
+    val black_helm_h4 = find("trail_heraldic_helm_4_black")
+    val black_helm_h5 = find("trail_heraldic_helm_5_black")
+    val black_shield_h1 = find("black_heraldic_kiteshield1")
+    val black_shield_h2 = find("black_heraldic_kiteshield2")
+    val black_shield_h3 = find("black_heraldic_kiteshield3")
+    val black_shield_h4 = find("black_heraldic_kiteshield4")
+    val black_shield_h5 = find("black_heraldic_kiteshield5")
 
     // God pages
-    val saras_page_1 = find("saras_page_1")
-    val saras_page_2 = find("saras_page_2")
-    val saras_page_3 = find("saras_page_3")
-    val saras_page_4 = find("saras_page_4")
-    val zammy_page_1 = find("zammy_page_1")
-    val zammy_page_2 = find("zammy_page_2")
-    val zammy_page_3 = find("zammy_page_3")
-    val zammy_page_4 = find("zammy_page_4")
-    val guthix_page_1 = find("guthix_page_1")
-    val guthix_page_2 = find("guthix_page_2")
-    val guthix_page_3 = find("guthix_page_3")
-    val guthix_page_4 = find("guthix_page_4")
+    val saras_page_1 = find("holy_book_s_page1")
+    val saras_page_2 = find("holy_book_s_page2")
+    val saras_page_3 = find("holy_book_s_page3")
+    val saras_page_4 = find("holy_book_s_page4")
+    val zammy_page_1 = find("holy_book_z_page1")
+    val zammy_page_2 = find("holy_book_z_page2")
+    val zammy_page_3 = find("holy_book_z_page3")
+    val zammy_page_4 = find("holy_book_z_page4")
+    val guthix_page_1 = find("holy_book_g_page1")
+    val guthix_page_2 = find("holy_book_g_page2")
+    val guthix_page_3 = find("holy_book_g_page3")
+    val guthix_page_4 = find("holy_book_g_page4")
 
     // Emote items
-    val blue_beret = find("blue_beret")
-    val black_beret = find("black_beret")
-    val white_beret = find("white_beret")
-    val red_beret = find("red_beret")
-    val bob_shirt = find("bob_shirt")
+    val blue_beret = find("berret_blue")
+    val black_beret = find("berret_black")
+    val white_beret = find("berret_white")
+    val red_beret = find("berret_red")
+    val bob_shirt = find("trail_bob_shirt_red")
 }

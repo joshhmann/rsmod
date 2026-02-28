@@ -319,12 +319,12 @@ public object RangedMaxHitOperations {
 
     private fun VarPlayerIntMap.prayerBonus(): Double =
         when {
-            this[varbits.sharp_eye] == 1 -> 1.05
-            this[varbits.hawk_eye] == 1 -> 1.1
-            this[varbits.eagle_eye] == 1 -> {
+            this[varbits.prayer_sharpeye] == 1 -> 1.05
+            this[varbits.prayer_hawkeye] == 1 -> 1.1
+            this[varbits.prayer_eagleeye] == 1 -> {
                 if (this[varbits.prayer_deadeye_unlocked] == 1) 1.18 else 1.15
             }
-            this[varbits.rigour] == 1 -> 1.23
+            this[varbits.prayer_rigour] == 1 -> 1.23
             else -> 1.0
         }
 

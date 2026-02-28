@@ -60,8 +60,8 @@ internal constructor(
         for ((target, event) in moveEvents) {
             onIfMoveSub(target) { player.moveSetEvents(event) }
         }
-        onIfMoveSub(components.toplevel_target_xp_drops) { player.moveXpDrops() }
-        onIfMoveSub(components.toplevel_target_ehc_listener) { player.moveEhcListener() }
+        onIfMoveSub(components.toplevel_osrs_stretch_xp_drops) { player.moveXpDrops() }
+        onIfMoveSub(components.toplevel_osrs_stretch_ehc_listener) { player.moveEhcListener() }
 
         onPlayerSoftQueueWithArgs(gameframe_queues.client_mode) { player.changeGameframe(args) }
     }
@@ -100,7 +100,7 @@ internal constructor(
     }
 
     private fun Player.moveXpDrops() {
-        ifOpenOverlay(interfaces.orbs, components.toplevel_target_orbs, eventBus)
+        ifOpenOverlay(interfaces.orbs, components.toplevel_osrs_stretch_orbs, eventBus)
     }
 
     private fun Player.moveEhcListener() {
@@ -155,7 +155,7 @@ internal constructor(
             //  more information before adding this.
         }
 
-        ifOpenOverlay(interfaces.orbs, components.toplevel_target_orbs, eventBus)
+        ifOpenOverlay(interfaces.orbs, components.toplevel_osrs_stretch_orbs, eventBus)
         Cinematic.syncMinimapState(this)
     }
 

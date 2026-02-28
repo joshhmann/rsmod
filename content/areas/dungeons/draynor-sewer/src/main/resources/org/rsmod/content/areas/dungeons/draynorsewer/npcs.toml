@@ -82,23 +82,23 @@ coords = '0_48_51_55_20'
 # ============================
 
 [[spawn]]
-npc = 'giant_rat'
+npc = 'giantrat'
 coords = '0_48_51_5_10'
 
 [[spawn]]
-npc = 'giant_rat_2'
+npc = 'giantrat2'
 coords = '0_48_51_8_15'
 
 [[spawn]]
-npc = 'giant_rat_3'
+npc = 'giantrat3'
 coords = '0_48_51_10_8'
 
 [[spawn]]
-npc = 'giant_rat'
+npc = 'giantrat'
 coords = '0_48_51_15_12'
 
 [[spawn]]
-npc = 'giant_rat_2'
+npc = 'giantrat2'
 coords = '0_48_51_18_18'
 
 # ============================
@@ -108,15 +108,15 @@ coords = '0_48_51_18_18'
 
 # Poison Spiders (P2P only)
 [[spawn]]
-npc = 'poison_spider'
+npc = 'poisonspider'
 coords = '0_48_51_55_45'
 
 [[spawn]]
-npc = 'poison_spider'
+npc = 'poisonspider'
 coords = '0_48_51_58_48'
 
 [[spawn]]
-npc = 'poison_spider'
+npc = 'poisonspider'
 coords = '0_48_51_52_50'
 
 # Skeleton Fremennik (P2P only)

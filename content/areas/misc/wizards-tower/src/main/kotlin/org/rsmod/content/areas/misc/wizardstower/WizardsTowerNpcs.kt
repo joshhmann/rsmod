@@ -5,7 +5,7 @@ import org.rsmod.api.type.refs.npc.NpcReferences
 /** NPC type references for Wizards Tower. */
 internal object WizardsTowerNpcs : NpcReferences() {
     // Ground floor
-    val sedridor = find("sedridor")
+    val sedridor = find("head_wizard")
     val wizard = find("wizard")
 
     // First floor
@@ -13,6 +13,5 @@ internal object WizardsTowerNpcs : NpcReferences() {
     val traiborn = find("traiborn")
 
     // Basement
-    // val lesser_demon_caged = find("lesser_demon_caged")
-    // val rune_guardian = find("rune_guardian")
+    // val lesser_demon_caged = find("lesser_demon")
 }

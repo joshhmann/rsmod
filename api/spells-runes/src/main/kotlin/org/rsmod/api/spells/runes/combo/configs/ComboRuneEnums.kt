@@ -30,33 +30,33 @@ internal object ComboRuneEnumBuilder : EnumBuilder() {
         }
 
         buildAutoInt<ObjType>("combo_rune_mist") {
-            this += objs.air_rune
-            this += objs.water_rune
+            this += objs.airrune
+            this += objs.waterrune
         }
 
         buildAutoInt<ObjType>("combo_rune_dust") {
-            this += objs.air_rune
-            this += objs.earth_rune
+            this += objs.airrune
+            this += objs.earthrune
         }
 
         buildAutoInt<ObjType>("combo_rune_mud") {
-            this += objs.water_rune
-            this += objs.earth_rune
+            this += objs.waterrune
+            this += objs.earthrune
         }
 
         buildAutoInt<ObjType>("combo_rune_smoke") {
-            this += objs.air_rune
-            this += objs.fire_rune
+            this += objs.airrune
+            this += objs.firerune
         }
 
         buildAutoInt<ObjType>("combo_rune_steam") {
-            this += objs.water_rune
-            this += objs.fire_rune
+            this += objs.waterrune
+            this += objs.firerune
         }
 
         buildAutoInt<ObjType>("combo_rune_lava") {
-            this += objs.earth_rune
-            this += objs.fire_rune
+            this += objs.earthrune
+            this += objs.firerune
         }
     }
 }

@@ -11,7 +11,8 @@ internal typealias al_kharid_npcs = AlKharidNpcs
 internal object AlKharidNpcs : NpcReferences() {
     val al_kharid_man = find("al_kharid_man")
     val al_kharid_warrior = find("al_kharid_warrior")
-    val banker = find("banker") // Using generic banker
+    // No generic `banker` symbol in rev233; use the city-specific bankers.
+    val banker = find("kharidbanker1")
     val kharid_banker_1 = find("kharidbanker1")
     val kharid_banker_2 = find("kharidbanker2")
     val dommik = find("dommik")

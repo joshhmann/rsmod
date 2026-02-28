@@ -15,8 +15,8 @@ object WildernessRuinsNpcs : NpcReferences() {
     val deadly_red_spider = find("deadly_red_spider")
 
     // Western Ruins NPCs (Dareeyak)
-    val grizzly_bear = find("grizzly_bear")
-    val giant_rat = find("giant_rat")
+    val brownbear = find("brownbear")
+    val giantrat = find("giantrat")
     val spider = find("spider")
 }
 
@@ -31,8 +31,8 @@ internal object WildernessRuinsNpcEditor : NpcEditor() {
         edit(wilderness_ruins_npcs.deadly_red_spider) { wanderRange = 2 }
 
         // Western Ruins NPCs
-        edit(wilderness_ruins_npcs.grizzly_bear) { wanderRange = 3 }
-        edit(wilderness_ruins_npcs.giant_rat) { wanderRange = 2 }
+        edit(wilderness_ruins_npcs.brownbear) { wanderRange = 3 }
+        edit(wilderness_ruins_npcs.giantrat) { wanderRange = 2 }
         edit(wilderness_ruins_npcs.spider) { wanderRange = 2 }
     }
 }

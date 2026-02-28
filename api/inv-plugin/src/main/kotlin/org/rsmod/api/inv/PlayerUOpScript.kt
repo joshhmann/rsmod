@@ -16,7 +16,7 @@ public class PlayerUOpScript
 constructor(private val interactions: PlayerUInteractions, private val objTypes: ObjTypeList) :
     PluginScript() {
     override fun ScriptContext.startup() {
-        onOpPlayerT(components.inv_items) { opPlayerU(it) }
+        onOpPlayerT(components.inventory_items) { opPlayerU(it) }
     }
 
     private suspend fun ProtectedAccess.opPlayerU(op: PlayerTEvents.Op) {

@@ -129,10 +129,11 @@ class DraynorRooftopCourse @Inject constructor() : PluginScript() {
 
 /** Local Seq references for Draynor Rooftop animations. */
 internal object DraynorRooftopSeqs : SeqReferences() {
-    val human_wall_climb = find("human_wall_climb")
-    val human_tightrope_walk = find("human_tightrope_walk")
-    val human_wall_balance = find("human_wall_balance")
-    val human_wall_scramble = find("human_wall_scramble")
-    val human_leap_gap = find("human_leap_gap")
-    val human_jump = find("human_jump")
+    // These were previously named after obstacle semantics, but rev233 internal names differ.
+    val human_wall_climb = find("human_climbing")
+    val human_tightrope_walk = find("human_walk_logbalance")
+    val human_wall_balance = find("human_walk_logbalance")
+    val human_wall_scramble = find("human_climbing")
+    val human_leap_gap = find("human_jump_hurdle")
+    val human_jump = find("human_jump_hurdle")
 }

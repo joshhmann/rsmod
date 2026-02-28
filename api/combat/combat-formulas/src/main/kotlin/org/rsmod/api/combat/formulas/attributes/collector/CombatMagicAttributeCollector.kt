@@ -128,14 +128,6 @@ public class CombatMagicAttributeCollector @Inject constructor(private val objTy
 
         val weaponAttribute =
             when {
-                weapon.isType(objs.dragon_hunter_wand) -> {
-                    CombatSpellAttributes.DragonHunterWand
-                }
-
-                weapon.isType(objs.dragon_hunter_lance) -> {
-                    CombatSpellAttributes.DragonHunterLance
-                }
-
                 EquipmentChecks.isDragonHunterCrossbow(weapon) -> {
                     CombatSpellAttributes.DragonHunterCrossbow
                 }

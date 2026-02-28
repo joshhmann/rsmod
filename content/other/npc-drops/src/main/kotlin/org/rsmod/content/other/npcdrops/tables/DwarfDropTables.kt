@@ -51,14 +51,14 @@ internal object DwarfDropTables {
 }
 
 internal object DwarfNpcs : NpcReferences() {
-    val dwarf = find("dwarf")
+    val dwarf = find("dwarf_normal")
 }
 
 internal object DwarfObjs : ObjReferences() {
     val bronze_bar = find("bronze_bar")
     val iron_bar = find("iron_bar")
     val bronze_battleaxe = find("bronze_battleaxe")
-    val bronze_bolts = find("bronze_bolts")
+    val bronze_bolts = find("bolts")
     val chaos_rune = find("chaosrune")
     val nature_rune = find("naturerune")
 }

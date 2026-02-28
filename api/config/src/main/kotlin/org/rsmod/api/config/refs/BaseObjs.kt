@@ -467,6 +467,7 @@ object BaseObjs : ObjReferences() {
     val bronze_axe = find("bronze_axe")
     val bronze_axe_2h = find("bronze_axe_2h")
     val bronze_bar = find("bronze_bar")
+    val karamja_rum = find("karamja_rum")
     val bronze_battleaxe = find("bronze_battleaxe")
     val bronze_bolts_u = find("xbows_crossbow_bolts_bronze_unfeathered")
     val bronze_chainbody = find("bronze_chainbody")

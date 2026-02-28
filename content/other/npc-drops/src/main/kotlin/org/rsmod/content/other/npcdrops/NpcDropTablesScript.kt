@@ -207,7 +207,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
     // -----------------------------------------------------------------------
     // Giant Rat
-    // Drop table source: https://oldschool.runescape.wiki/w/Giant_rat
+    // Drop table source: https://oldschool.runescape.wiki/w/giantrat
     // Always: Bones, Raw rat meat  (no random table at rev 228)
     // -----------------------------------------------------------------------
     private fun registerGiantRat() {
@@ -218,7 +218,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         }
 
         val giantRatNpcs: List<NpcType> =
-            listOf(DropTableNpcs.giant_rat, DropTableNpcs.giant_rat_2, DropTableNpcs.giant_rat_3)
+            listOf(DropTableNpcs.giantrat, DropTableNpcs.giantrat2, DropTableNpcs.giantrat3)
         registry.register(giantRatNpcs, giantRatTable)
     }
 

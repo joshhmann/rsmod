@@ -10,5 +10,5 @@ object PoisonVarps : VarpReferences() {
     val poison_sub_tick = find("pk_prey2")
     val poison_immunity_ticks = find("pk_predator1")
     val venom_immunity_ticks = find("pk_predator2")
-    val hp_orb_toxin = find("hp_orb_toxin", 102)
+    val hp_orb_toxin = find("hp_orb_toxin")
 }

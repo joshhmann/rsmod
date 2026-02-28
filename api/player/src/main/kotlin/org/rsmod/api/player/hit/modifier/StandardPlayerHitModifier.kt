@@ -10,9 +10,9 @@ public object StandardPlayerHitModifier : PlayerHitModifier {
         val protectionPrayer =
             when (type) {
                 HitType.Typeless -> false
-                HitType.Melee -> target.vars[varbits.protect_from_melee] == 1
-                HitType.Ranged -> target.vars[varbits.protect_from_missiles] == 1
-                HitType.Magic -> target.vars[varbits.protect_from_magic] == 1
+                HitType.Melee -> target.vars[varbits.prayer_protectfrommelee] == 1
+                HitType.Ranged -> target.vars[varbits.prayer_protectfrommissiles] == 1
+                HitType.Magic -> target.vars[varbits.prayer_protectfrommagic] == 1
             }
 
         if (protectionPrayer) {

@@ -15,10 +15,15 @@ import org.rsmod.api.quest.showCompletionScroll
 import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onOpHeld2
 import org.rsmod.api.script.onOpNpc1
+import org.rsmod.api.type.refs.obj.ObjReferences
 import org.rsmod.content.quests.piratestreasure.configs.pirates_treasure_npcs
 import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
+
+internal object pirates_treasure_objs : ObjReferences() {
+    val karamja_rum = find("karamja_rum")
+}
 
 class PiratesTreasure @Inject constructor(private val objRepo: ObjRepository) : PluginScript() {
     override fun ScriptContext.startup() {
@@ -61,7 +66,7 @@ class PiratesTreasure @Inject constructor(private val objRepo: ObjRepository) : 
 
     private suspend fun Dialogue.frankRumDialogue() {
         when {
-            objs.karamja_rum in player.inv -> {
+            pirates_treasure_objs.karamja_rum in player.inv -> {
                 chatPlayer(happy, "I got your Karamja rum.")
                 handInRumAndGiveKey()
             }
@@ -78,7 +83,7 @@ class PiratesTreasure @Inject constructor(private val objRepo: ObjRepository) : 
     }
 
     private suspend fun Dialogue.handInRumAndGiveKey() {
-        val removedRum = player.invDel(player.inv, objs.karamja_rum, 1).success
+        val removedRum = player.invDel(player.inv, pirates_treasure_objs.karamja_rum, 1).success
         if (!removedRum) {
             chatNpc(sad, "Stop yer tricks. Ye don't have the rum.")
             return
@@ -87,7 +92,7 @@ class PiratesTreasure @Inject constructor(private val objRepo: ObjRepository) : 
         val addedKey = player.invAdd(player.inv, objs.chest_key, 1).success
         if (!addedKey) {
             chatNpc(sad, "Make some room in yer inventory and speak to me again.")
-            player.invAddOrDrop(objRepo, objs.karamja_rum, 1)
+            player.invAddOrDrop(objRepo, pirates_treasure_objs.karamja_rum, 1)
             return
         }
 

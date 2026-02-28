@@ -44,7 +44,7 @@ internal object MuggerNpcs : NpcReferences() {
 }
 
 internal object MuggerObjs : ObjReferences() {
-    val bronze_bolts = find("bronze_bolts")
+    val bronze_bolts = find("bolts")
     val mind_rune = find("mindrune")
     val earth_rune = find("earthrune")
     val water_rune = find("waterrune")

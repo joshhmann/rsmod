@@ -2062,7 +2062,7 @@ public class ProtectedAccess(
         player.ifMesbox(text, pauseText, lineHeight, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.messagebox_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.messagebox_continue)
     }
 
     /**
@@ -2115,7 +2115,7 @@ public class ProtectedAccess(
         player.ifObjbox(text, obj.id, zoom, pauseText, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_universe)
     }
 
     /**
@@ -2178,7 +2178,7 @@ public class ProtectedAccess(
         player.ifObjbox(text, obj.id, zoom, pauseText, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_universe)
     }
 
     /**
@@ -2257,7 +2257,7 @@ public class ProtectedAccess(
         player.ifDoubleobjbox(text, obj1.id, zoom1, obj2.id, zoom2, pauseText, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_double_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_double_pausebutton)
     }
 
     /**
@@ -2336,7 +2336,7 @@ public class ProtectedAccess(
         player.ifDoubleobjbox(text, obj1.id, zoom1, obj2.id, zoom2, pauseText, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_double_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.objectbox_double_pausebutton)
     }
 
     /**
@@ -2382,7 +2382,7 @@ public class ProtectedAccess(
         player.ifChoice(title, "$choice1|$choice2", choiceCountInclusive = 2, context.eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_options)
         return when (input.subcomponent) {
             1 -> result1
             2 -> result2
@@ -2412,7 +2412,7 @@ public class ProtectedAccess(
         )
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_options)
         return when (input.subcomponent) {
             1 -> result1
             2 -> result2
@@ -2445,7 +2445,7 @@ public class ProtectedAccess(
         )
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_options)
         return when (input.subcomponent) {
             1 -> result1
             2 -> result2
@@ -2481,7 +2481,7 @@ public class ProtectedAccess(
         )
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chatmenu_options)
         return when (input.subcomponent) {
             1 -> result1
             2 -> result2
@@ -2539,7 +2539,7 @@ public class ProtectedAccess(
         player.ifChatPlayer(title, text, chatanim, pauseText, lineHeight, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chat_right_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chat_right_continue)
     }
 
     /**
@@ -2605,7 +2605,7 @@ public class ProtectedAccess(
         player.ifChatNpcSpecific(title, npc.type, text, chatanim, pauseText, lineHeight, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chat_left_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chat_left_continue)
     }
 
     /**
@@ -2650,7 +2650,7 @@ public class ProtectedAccess(
         player.ifChatNpcSpecific(title, npc.type, text, chatanim, pauseText, lineHeight, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chat_left_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chat_left_continue)
     }
 
     /**
@@ -2694,7 +2694,7 @@ public class ProtectedAccess(
         player.ifChatNpcSpecific(title, type, text, chatanim, pauseText, lineHeight, eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.chat_left_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.chat_left_continue)
     }
 
     /**
@@ -2800,7 +2800,7 @@ public class ProtectedAccess(
         player.ifConfirmDestroy(header, text, obj.id, count, context.eventBus)
         val modal = player.ui.getModalOrNull(components.chatbox_chatmodal)
         val input = coroutine.pause(ResumePauseButtonInput::class)
-        resumePauseButtonWithProtectedAccess(input, modal, components.confirmdestroy_pbutton)
+        resumePauseButtonWithProtectedAccess(input, modal, components.confirmdestroy_universe)
         return when (input.subcomponent) {
             0 -> false
             1 -> true

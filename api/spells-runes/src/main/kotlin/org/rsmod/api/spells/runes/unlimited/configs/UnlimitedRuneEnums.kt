@@ -31,17 +31,17 @@ internal object UnlimitedRuneEnums : EnumReferences() {
 internal object UnlimitedRuneEnumBuilder : EnumBuilder() {
     init {
         build<ObjType, EnumType<ObjType, Boolean>>("rune_staves") {
-            this[objs.air_rune] = unlimited_enums.air_staves
-            this[objs.water_rune] = unlimited_enums.water_staves
-            this[objs.earth_rune] = unlimited_enums.earth_staves
-            this[objs.fire_rune] = unlimited_enums.fire_staves
+            this[objs.airrune] = unlimited_enums.air_staves
+            this[objs.waterrune] = unlimited_enums.water_staves
+            this[objs.earthrune] = unlimited_enums.earth_staves
+            this[objs.firerune] = unlimited_enums.fire_staves
         }
 
         build<ObjType, EnumType<Int, ObjType>>("unlimited_runes_hiprio") {
-            this[objs.air_rune] = unlimited_enums.air_high_priority
-            this[objs.water_rune] = unlimited_enums.water_high_priority
-            this[objs.earth_rune] = unlimited_enums.earth_high_priority
-            this[objs.fire_rune] = unlimited_enums.fire_high_priority
+            this[objs.airrune] = unlimited_enums.air_high_priority
+            this[objs.waterrune] = unlimited_enums.water_high_priority
+            this[objs.earthrune] = unlimited_enums.earth_high_priority
+            this[objs.firerune] = unlimited_enums.fire_high_priority
         }
 
         buildAutoInt<ObjType>("air_unlimited_runes_hiprio") { this += objs.devils_element }
@@ -50,15 +50,17 @@ internal object UnlimitedRuneEnumBuilder : EnumBuilder() {
         buildAutoInt<ObjType>("fire_unlimited_runes_hiprio") { this += objs.devils_element }
 
         build<ObjType, EnumType<Int, ObjType>>("unlimited_runes_loprio") {
-            this[objs.water_rune] = unlimited_enums.water_low_priority
-            this[objs.earth_rune] = unlimited_enums.earth_low_priority
-            this[objs.fire_rune] = unlimited_enums.fire_low_priority
-            this[objs.nature_rune] = unlimited_enums.nature_low_priority
+            this[objs.waterrune] = unlimited_enums.water_low_priority
+            this[objs.earthrune] = unlimited_enums.earth_low_priority
+            this[objs.firerune] = unlimited_enums.fire_low_priority
+            this[objs.naturerune] = unlimited_enums.nature_low_priority
         }
 
         buildAutoInt<ObjType>("water_unlimited_runes_loprio") { this += objs.tome_of_water }
         buildAutoInt<ObjType>("earth_unlimited_runes_loprio") { this += objs.tome_of_earth }
         buildAutoInt<ObjType>("fire_unlimited_runes_loprio") { this += objs.tome_of_fire }
-        buildAutoInt<ObjType>("nature_unlimited_runes_loprio") { this += objs.bryophytas_staff }
+        // Exists in the cache symbol table but has no valid entries in rev233 symbols yet.
+        // Keep it empty so `unlimited_enums.nature_low_priority` resolves without packCache warnings.
+        buildAutoInt<ObjType>("nature_unlimited_runes_loprio") {}
     }
 }

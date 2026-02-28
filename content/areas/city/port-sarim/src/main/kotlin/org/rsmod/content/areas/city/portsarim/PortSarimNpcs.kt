@@ -35,7 +35,7 @@ object PortSarimNpcs : NpcReferences() {
     val rimmington_anja = find("rimmington_anja")
 
     // Monks
-    val monk_entrana = find("monk_of_entrana")
+    val monk_entrana = find("entrana_monk")
 
     // Hobgoblins (Rimmington)
     val rimmington_hobgoblin_1 = find("rimmington_hobgoblin_unarmed_1")

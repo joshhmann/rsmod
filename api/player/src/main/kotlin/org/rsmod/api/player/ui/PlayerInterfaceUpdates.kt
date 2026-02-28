@@ -21,9 +21,9 @@ public object PlayerInterfaceUpdates {
         categoryName: String,
     ) {
         player.combatTabWeaponStyle = categoryId
-        player.ifSetText(components.combat_tab_title, weaponName ?: "Unarmed")
+        player.ifSetText(components.combat_interface_2, weaponName ?: "Unarmed")
         ClientScripts.pvpIconsComLevelRange(player, player.combatLevel)
-        player.ifSetText(components.combat_tab_category, "Category: $categoryName")
+        player.ifSetText(components.combat_interface_3, "Category: $categoryName")
         ClientScripts.pvpIconsComLevelRange(player, player.combatLevel)
     }
 
@@ -36,7 +36,7 @@ public object PlayerInterfaceUpdates {
     public fun updateWeaponCategoryText(player: Player, objTypes: ObjTypeList) {
         val righthandType = objTypes.getOrNull(player.righthand)
         val weaponCategory = WeaponCategory.getOrUnarmed(righthandType?.weaponCategory)
-        player.ifSetText(components.combat_tab_category, "Category: ${weaponCategory.text}")
+        player.ifSetText(components.combat_interface_3, "Category: ${weaponCategory.text}")
     }
 
     public fun updateCombatLevel(player: Player) {

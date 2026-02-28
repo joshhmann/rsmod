@@ -29,20 +29,20 @@ object GameframeEnumBuilder : EnumBuilder() {
         }
 
         build<ComponentType, ComponentType>("toplevel_move_events") {
-            this[components.toplevel_target_side0] = gameframe_components.toplevel_stone0
-            this[components.toplevel_target_side1] = gameframe_components.toplevel_stone1
-            this[components.toplevel_target_side2] = gameframe_components.toplevel_stone2
-            this[components.toplevel_target_side3] = gameframe_components.toplevel_stone3
-            this[components.toplevel_target_side4] = gameframe_components.toplevel_stone4
-            this[components.toplevel_target_side5] = gameframe_components.toplevel_stone5
-            this[components.toplevel_target_side6] = gameframe_components.toplevel_stone6
-            this[components.toplevel_target_side7] = gameframe_components.toplevel_stone7
-            this[components.toplevel_target_side8] = gameframe_components.toplevel_stone8
-            this[components.toplevel_target_side9] = gameframe_components.toplevel_stone9
-            this[components.toplevel_target_side10] = gameframe_components.toplevel_stone10
-            this[components.toplevel_target_side11] = gameframe_components.toplevel_stone11
-            this[components.toplevel_target_side12] = gameframe_components.toplevel_stone12
-            this[components.toplevel_target_side13] = gameframe_components.toplevel_stone13
+            this[components.toplevel_osrs_stretch_side0] = gameframe_components.toplevel_stone0
+            this[components.toplevel_osrs_stretch_side1] = gameframe_components.toplevel_stone1
+            this[components.toplevel_osrs_stretch_side2] = gameframe_components.toplevel_stone2
+            this[components.toplevel_osrs_stretch_side3] = gameframe_components.toplevel_stone3
+            this[components.toplevel_osrs_stretch_side4] = gameframe_components.toplevel_stone4
+            this[components.toplevel_osrs_stretch_side5] = gameframe_components.toplevel_stone5
+            this[components.toplevel_osrs_stretch_side6] = gameframe_components.toplevel_stone6
+            this[components.toplevel_osrs_stretch_side7] = gameframe_components.toplevel_stone7
+            this[components.toplevel_osrs_stretch_side8] = gameframe_components.toplevel_stone8
+            this[components.toplevel_osrs_stretch_side9] = gameframe_components.toplevel_stone9
+            this[components.toplevel_osrs_stretch_side10] = gameframe_components.toplevel_stone10
+            this[components.toplevel_osrs_stretch_side11] = gameframe_components.toplevel_stone11
+            this[components.toplevel_osrs_stretch_side12] = gameframe_components.toplevel_stone12
+            this[components.toplevel_osrs_stretch_side13] = gameframe_components.toplevel_stone13
         }
     }
 }

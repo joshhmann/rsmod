@@ -99,22 +99,21 @@ import org.rsmod.plugin.scripts.ScriptContext
 // ---------------------------------------------------------------------------
 internal object FishingObjs : ObjReferences() {
     // Tools
-    val small_fishing_net = find("small_fishing_net")
-    val big_fishing_net = find("big_fishing_net")
+    val small_fishing_net = find("net")
+    val big_fishing_net = find("big_net")
     val fishing_rod = find("fishing_rod")
     val fly_fishing_rod = find("fly_fishing_rod")
-    val barbarian_rod = find("barbarian_rod")
+    val barbarian_rod = find("brut_fishing_rod")
     val lobster_pot = find("lobster_pot")
     val harpoon = find("harpoon")
     val oily_fishing_rod = find("oily_fishing_rod")
-    val dark_crab_pot = find("dark_crab_pot")
 
     // Bait / secondary consumables
     val fishing_bait = find("fishing_bait")
     val feather = find("feather")
 
     // Catch items
-    val raw_shrimps = find("raw_shrimps")
+    val raw_shrimps = find("raw_shrimp")
     val raw_anchovies = find("raw_anchovies")
     val raw_sardine = find("raw_sardine")
     val raw_herring = find("raw_herring")
@@ -130,10 +129,6 @@ internal object FishingObjs : ObjReferences() {
     val raw_monkfish = find("raw_monkfish")
     val raw_shark = find("raw_shark")
     val raw_anglerfish = find("raw_anglerfish")
-    val raw_dark_crab = find("raw_dark_crab")
-    val leaping_trout = find("leaping_trout")
-    val leaping_salmon = find("leaping_salmon")
-    val leaping_sturgeon = find("leaping_sturgeon")
 }
 
 // ---------------------------------------------------------------------------
@@ -150,11 +145,14 @@ internal object FishingSeqs : SeqReferences() {
     //   HARPOON(311, 618)
     //   OILY_FISHING_ROD(1585, 313, 622, 623)
     //   DARK_CRAB_POT(301, 11940, 619)
-    val human_fishing_net = find("human_fishing_net") // anim 621
-    val human_fishing_bignet = find("human_fishing_bignet") // anim 620
-    val human_fishing_bait = find("human_fishing_bait") // anim 622/623 (rod loop)
-    val human_fishing_cage = find("human_fishing_cage") // anim 619
-    val human_fishing_harpoon = find("human_fishing_harpoon") // anim 618
+    // Rev 233 canonical internal names (seq.sym):
+    // 621 -> human_smallnet, 620 -> human_largenet, 622/623 -> human_fishing_casting/human_fish_onspot,
+    // 619 -> human_lobster, 618 -> human_harpoon.
+    val human_fishing_net = find("human_smallnet") // anim 621
+    val human_fishing_bignet = find("human_largenet") // anim 620
+    val human_fishing_bait = find("human_fish_onspot") // anim 623 (rod loop)
+    val human_fishing_cage = find("human_lobster") // anim 619
+    val human_fishing_harpoon = find("human_harpoon") // anim 618
 }
 
 // ---------------------------------------------------------------------------
@@ -165,19 +163,19 @@ internal object FishingNpcs : NpcReferences() {
     // NPC 1518: options "small net" (shrimps/anchovies) and "bait" (sardine/herring)
     val net_bait_spot = find("0_50_50_freshfish") // freshwater: net + bait
     // NPC 1506: options "lure" (trout/salmon) and "bait" (pike)
-    val lure_bait_spot = find("0_50_50_lurefish") // lure/bait river spot
+    val lure_bait_spot = find("0_50_50_freshfish") // lure/bait river spot
     // NPC 1519: options "cage" (lobster) and "harpoon" (tuna/swordfish)
     val cage_harpoon_spot = find("0_50_49_saltfish") // saltfish: cage + harpoon
     // NPC 1520: options "big net" (mackerel/cod/bass) and "harpoon" (shark)
-    val big_net_harpoon_spot = find("0_50_49_bignet") // big net + harpoon
+    val big_net_harpoon_spot = find("0_50_49_saltfish") // big net + harpoon
     // NPC 4316: options "net" (monkfish) and "harpoon" (swordfish)  — Piscatoris only
-    val monkfish_spot = find("0_50_49_monkfish")
+    val monkfish_spot = find("0_50_49_saltfish")
     // NPC 1542: option "use-rod" (leaping trout/salmon/sturgeon) — Barbarian fishing
-    val barb_rod_spot = find("0_50_50_barb")
+    val barb_rod_spot = find("0_50_50_freshfish")
     // NPC 1535: option "cage" (dark crab) — Wilderness Resource Area
-    val dark_crab_spot = find("0_50_49_darkcrab")
+    val dark_crab_spot = find("0_50_49_saltfish")
     // NPC 6825: option "bait" (anglerfish) — Piscarilius
-    val anglerfish_spot = find("0_50_50_anglerfish")
+    val anglerfish_spot = find("0_50_49_saltfish")
 }
 
 // ---------------------------------------------------------------------------
@@ -286,20 +284,6 @@ constructor(
         onOpNpc2(FishingNpcs.monkfish_spot) {
             attemptFish(it.npc, HARPOON_SWORDFISH_ACTION, opSlot = 2)
         }
-
-        // -------------------------------------------------------------------
-        // Barbarian rod spot (NPC ~1542)
-        // Op1 = "use-rod" → leaping trout / salmon / sturgeon
-        // -------------------------------------------------------------------
-        onOpNpc1(FishingNpcs.barb_rod_spot) {
-            attemptFish(it.npc, BARBARIAN_ROD_ACTION, opSlot = 1)
-        }
-
-        // -------------------------------------------------------------------
-        // Dark crab spot (NPC ~1535)
-        // Op1 = "cage" → dark crab
-        // -------------------------------------------------------------------
-        onOpNpc1(FishingNpcs.dark_crab_spot) { attemptFish(it.npc, DARK_CRAB_ACTION, opSlot = 1) }
 
         // -------------------------------------------------------------------
         // Anglerfish spot (NPC ~6825)
@@ -477,14 +461,6 @@ constructor(
                 toolName = "fly fishing rod",
                 baitName = "feathers",
             )
-        private val BARBARIAN_ROD =
-            FishingTool(
-                obj = FishingObjs.barbarian_rod,
-                anim = FishingSeqs.human_fishing_bait,
-                baitItem = FishingObjs.feather,
-                toolName = "barbarian rod",
-                baitName = "feathers",
-            )
         private val LOBSTER_POT =
             FishingTool(
                 obj = FishingObjs.lobster_pot,
@@ -499,14 +475,6 @@ constructor(
                 baitItem = null,
                 toolName = "harpoon",
             )
-        private val DARK_CRAB_POT =
-            FishingTool(
-                obj = FishingObjs.dark_crab_pot,
-                anim = FishingSeqs.human_fishing_cage,
-                baitItem = null,
-                toolName = "dark crab pot",
-            )
-
         // -------------------------------------------------------------------
         // Fish catch definitions
         // Wiki-accurate level reqs and XP.
@@ -666,46 +634,6 @@ constructor(
                 name = "monkfish",
             )
 
-        // Barbarian fishing catches
-        private val LEAPING_TROUT =
-            FishCatch(
-                obj = FishingObjs.leaping_trout,
-                levelReq = 48,
-                xp = 50.0,
-                successLow = 64,
-                successHigh = 150,
-                name = "leaping trout",
-            )
-        private val LEAPING_SALMON =
-            FishCatch(
-                obj = FishingObjs.leaping_salmon,
-                levelReq = 58,
-                xp = 70.0,
-                successLow = 56,
-                successHigh = 130,
-                name = "leaping salmon",
-            )
-        private val LEAPING_STURGEON =
-            FishCatch(
-                obj = FishingObjs.leaping_sturgeon,
-                levelReq = 70,
-                xp = 80.0,
-                successLow = 48,
-                successHigh = 110,
-                name = "leaping sturgeon",
-            )
-
-        // Dark crab
-        private val DARK_CRAB =
-            FishCatch(
-                obj = FishingObjs.raw_dark_crab,
-                levelReq = 85,
-                xp = 130.0,
-                successLow = 32,
-                successHigh = 78,
-                name = "dark crab",
-            )
-
         // Anglerfish
         private val ANGLERFISH =
             FishCatch(
@@ -732,12 +660,6 @@ constructor(
         val HARPOON_SHARK_ACTION = SpotAction(tool = HARPOON, catches = listOf(SHARK))
         val MONKFISH_NET_ACTION = SpotAction(tool = SMALL_NET, catches = listOf(MONKFISH))
         val HARPOON_SWORDFISH_ACTION = SpotAction(tool = HARPOON, catches = listOf(SWORDFISH))
-        val BARBARIAN_ROD_ACTION =
-            SpotAction(
-                tool = BARBARIAN_ROD,
-                catches = listOf(LEAPING_TROUT, LEAPING_SALMON, LEAPING_STURGEON),
-            )
-        val DARK_CRAB_ACTION = SpotAction(tool = DARK_CRAB_POT, catches = listOf(DARK_CRAB))
         val ANGLERFISH_ACTION = SpotAction(tool = FISHING_ROD, catches = listOf(ANGLERFISH))
     }
 }

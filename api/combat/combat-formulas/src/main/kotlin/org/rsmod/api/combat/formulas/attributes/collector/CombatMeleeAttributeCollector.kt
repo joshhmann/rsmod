@@ -77,11 +77,11 @@ public class CombatMeleeAttributeCollector @Inject constructor(private val objTy
                     CombatMeleeAttributes.TzHaarWeapon
                 }
 
-                weapon.isType(objs.dragon_hunter_lance) -> {
+                false -> {
                     CombatMeleeAttributes.DragonHunterLance
                 }
 
-                weapon.isType(objs.dragon_hunter_wand) -> {
+                false -> {
                     CombatMeleeAttributes.DragonHunterWand
                 }
 

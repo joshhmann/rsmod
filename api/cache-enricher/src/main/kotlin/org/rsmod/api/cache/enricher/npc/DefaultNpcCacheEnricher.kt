@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import jakarta.inject.Inject
+import java.util.logging.Logger
 import kotlin.math.round
 import org.rsmod.api.config.aliases.ParamCategory
 import org.rsmod.api.config.aliases.ParamInt
@@ -27,6 +28,7 @@ constructor(
     private val nameMapping: NameMapping,
     private val seqTypes: SeqTypeList,
 ) : NpcCacheEnricher {
+    private val logger: Logger = Logger.getLogger(DefaultNpcCacheEnricher::class.java.name)
     private val names: Map<String, Int>
         get() = nameMapping.npcs
 
@@ -49,9 +51,7 @@ constructor(
             id
                 ?: npc?.let(names::get)
                 ?: run {
-                    System.err.println(
-                        "[WARN] Skipping npc cache enrich config with unresolved npc name: $npc"
-                    )
+                    logger.warning("Skipping npc cache enrich config with unresolved npc name: $npc")
                     return null
                 }
         val builder = NpcPluginBuilder(npc ?: "npc_$resolvedId")

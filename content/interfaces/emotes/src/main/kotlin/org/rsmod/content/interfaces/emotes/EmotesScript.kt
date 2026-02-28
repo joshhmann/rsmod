@@ -474,7 +474,6 @@ private constructor(
             mes("You can't perform that emote now.")
             return
         }
-        midiJingle(jingles.emote_air_guitar)
         playAnim(seqs.emote_air_guitar, spotanims.air_guitar_spotanim)
     }
 

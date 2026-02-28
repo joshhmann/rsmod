@@ -22,13 +22,13 @@ internal object RuneSubstituteEnums : EnumReferences() {
 internal object RuneSubstituteEnumBuilder : EnumBuilder() {
     init {
         build<ObjType, EnumType<Int, ObjType>>("rune_substitutes") {
-            this[objs.air_rune] = runesub_enums.air_runes
-            this[objs.water_rune] = runesub_enums.water_runes
-            this[objs.earth_rune] = runesub_enums.earth_runes
-            this[objs.fire_rune] = runesub_enums.fire_runes
-            this[objs.chaos_rune] = runesub_enums.chaos_runes
-            this[objs.death_rune] = runesub_enums.death_runes
-            this[objs.blood_rune] = runesub_enums.blood_runes
+            this[objs.airrune] = runesub_enums.air_runes
+            this[objs.waterrune] = runesub_enums.water_runes
+            this[objs.earthrune] = runesub_enums.earth_runes
+            this[objs.firerune] = runesub_enums.fire_runes
+            this[objs.chaosrune] = runesub_enums.chaos_runes
+            this[objs.deathrune] = runesub_enums.death_runes
+            this[objs.bloodrune] = runesub_enums.blood_runes
         }
 
         buildAutoInt<ObjType>("air_rune_substitutes") { this += objs.air_rune_nz }

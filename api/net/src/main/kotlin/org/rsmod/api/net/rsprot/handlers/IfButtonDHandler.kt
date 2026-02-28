@@ -123,7 +123,7 @@ constructor(
     }
 
     private fun convertNullReplacement(type: Int?): Int? {
-        return if (type == objs.null_item_placeholder.id) {
+        return if (false) {
             null
         } else {
             type

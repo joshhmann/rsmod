@@ -9,6 +9,7 @@ import jakarta.inject.Inject
 import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.InputStream
+import java.util.logging.Logger
 import org.rsmod.api.cache.map.npc.MapNpcDefinition
 import org.rsmod.api.cache.map.npc.MapNpcListDecoder
 import org.rsmod.api.cache.map.npc.MapNpcListDefinition
@@ -23,6 +24,8 @@ import org.rsmod.map.square.MapSquareKey
 public class MapNpcSpawnCollector
 @Inject
 constructor(@Toml private val objectMapper: ObjectMapper, private val nameMapping: NameMapping) {
+    private val logger: Logger = Logger.getLogger(MapNpcSpawnCollector::class.java.name)
+
     public fun loadAndCollect(
         builders: Iterable<MapNpcSpawnBuilder>
     ): Map<MapSquareKey, MapNpcListDefinition> {
@@ -87,8 +90,8 @@ constructor(@Toml private val objectMapper: ObjectMapper, private val nameMappin
             spawnList.add(def.packed)
         }
         if (skipped.isNotEmpty()) {
-            System.err.println(
-                "[WARN] Skipped ${skipped.size} unknown npc spawn name(s) in $sourcePath: ${skipped.joinToString()}"
+            logger.warning(
+                "Skipped ${skipped.size} unknown npc spawn name(s) in $sourcePath: ${skipped.joinToString()}"
             )
         }
         return grouped.map { MapSpawnType(MapSquareKey(it.key), MapNpcListDefinition(it.value)) }

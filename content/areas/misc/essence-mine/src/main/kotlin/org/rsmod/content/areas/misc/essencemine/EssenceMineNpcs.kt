@@ -13,6 +13,5 @@ import org.rsmod.api.type.refs.npc.NpcReferences
 internal object EssenceMineNpcs : NpcReferences() {
     // NPCs that teleport players to the mine
     val aubury = find("aubury")
-    // val sedridor = find("sedridor")  // TODO: Add when Wizards' Tower is implemented
-    // val carwen_essencebinder = find("carwen_essencebinder")  // Members
+    // TODO: Add Sedridor once Wizards' Tower content is implemented.
 }

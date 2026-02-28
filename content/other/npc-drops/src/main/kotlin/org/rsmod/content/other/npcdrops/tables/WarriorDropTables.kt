@@ -141,7 +141,7 @@ internal object WarriorNpcs : NpcReferences() {
     // val warrior_woman_variant02 = find("warrior_woman_variant02")
 
     // TODO: Al-Kharid Warrior - Level 26, need correct internal name
-    // val alkharid_warrior = find("alkharid_warrior")
+    // val alkharid_warrior = find("al_kharid_warrior")
 }
 
 /** Object type references for Warrior drops not in BaseObjs or DropTableObjs. */
@@ -162,5 +162,5 @@ internal object WarriorObjs : ObjReferences() {
 
     // Herbs (grimy)
     val grimy_guam = find("unidentified_guam")
-    val grimy_marrentill = find("grimy_marrentill")
+    val grimy_marrentill = find("unidentified_marentill")
 }

@@ -44,19 +44,19 @@ coords = '0_49_57_35_35'
 # ===============================
 
 [[spawn]]
-npc = 'grizzly_bear'
+npc = 'brownbear'
 coords = '0_46_57_20_25'
 
 [[spawn]]
-npc = 'grizzly_bear'
+npc = 'brownbear'
 coords = '0_46_57_30_30'
 
 [[spawn]]
-npc = 'giant_rat'
+npc = 'giantrat'
 coords = '0_46_57_25_20'
 
 [[spawn]]
-npc = 'giant_rat'
+npc = 'giantrat'
 coords = '0_46_57_35_25'
 
 [[spawn]]

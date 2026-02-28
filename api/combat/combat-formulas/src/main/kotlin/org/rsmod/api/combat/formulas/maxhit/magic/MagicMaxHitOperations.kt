@@ -709,11 +709,11 @@ public object MagicMaxHitOperations {
 
     public fun getMagicDamagePrayerBonus(player: Player): Int =
         when {
-            player.vars[varbits.mystic_lore] == 1 -> 10
-            player.vars[varbits.mystic_might] == 1 -> {
+            player.vars[varbits.prayer_mysticlore] == 1 -> 10
+            player.vars[varbits.prayer_mysticmight] == 1 -> {
                 if (player.vars[varbits.prayer_mystic_vigour_unlocked] == 1) 30 else 20
             }
-            player.vars[varbits.augury] == 1 -> 40
+            player.vars[varbits.prayer_augury] == 1 -> 40
             else -> 0
         }
 }

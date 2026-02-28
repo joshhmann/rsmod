@@ -74,14 +74,9 @@ npc = 'master_crafter'
 coords = '0_46_50_12_14'
 direction = 'south'
 
-# Rimmington - Cowboy (near mine)
-[[spawn]]
-npc = 'cowboy'
-coords = '0_46_50_20_43'
-
 # Rimmington - Dwarves (at the mine entrance)
 [[spawn]]
-npc = 'dwarf_rimmington'
+npc = 'dwarf_normal'
 coords = '0_46_50_22_45'
 
 # Rimmington - Rat (near general store)

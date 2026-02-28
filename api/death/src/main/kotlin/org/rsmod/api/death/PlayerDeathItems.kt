@@ -36,7 +36,7 @@ constructor(private val objTypes: ObjTypeList, private val marketPrices: MarketP
 
     private fun calculateKeepCount(player: Player): Int {
         val skullActive = player.skullIcon != null
-        val protectItemPrayer = player.vars[varbits.protect_item] != 0
+        val protectItemPrayer = player.vars[varbits.prayer_protectitem] != 0
         var keep = if (skullActive) 0 else 3
         if (protectItemPrayer) {
             keep++

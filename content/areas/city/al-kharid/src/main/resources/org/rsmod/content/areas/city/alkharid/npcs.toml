@@ -3,12 +3,12 @@
 
 # Bankers (south-west of city)
 [[spawn]]
-npc = 'banker'
+npc = 'kharidbanker1'
 coords = '0_51_49_8_8'
 direction = 'east'
 
 [[spawn]]
-npc = 'banker'
+npc = 'kharidbanker2'
 coords = '0_51_49_10_8'
 direction = 'east'
 

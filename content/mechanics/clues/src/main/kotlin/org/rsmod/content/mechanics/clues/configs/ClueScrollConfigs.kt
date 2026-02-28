@@ -14,14 +14,14 @@ object ClueScrollVarps : VarpReferences() {
 /** Clue Scroll item references. */
 object ClueScrollObjs : ObjReferences() {
     // Beginner clue scrolls (F2P)
-    val beginner_clue_scroll = find("clue_scroll_beginner")
+    val beginner_clue_scroll = find("trail_clue_beginner")
 
     // Easy clue scrolls
-    val easy_clue_scroll = find("clue_scroll_easy")
+    val easy_clue_scroll = find("trail_clue_easy_simple001")
 
     // Caskets
-    val beginner_casket = find("reward_casket_beginner")
-    val easy_casket = find("reward_casket_easy")
+    val beginner_casket = find("trail_reward_casket_beginner")
+    val easy_casket = find("trail_reward_casket_easy")
     val casket = find("casket")
 }
 

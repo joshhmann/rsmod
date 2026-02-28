@@ -14,7 +14,6 @@ object VarrockObjs : ObjReferences() {
     // Quest/Minigame items
     val beacon_ring = find("beacon_ring")
     val gb_moss_essence = find("gb_moss_essence")
-    val bryophyta_staff = find("bryophyta_staff")
     val battlestaff = find("battlestaff")
     val adventurepath_combat_voucher = find("adventurepath_combat_voucher")
     val energy_potion_3 = find("br_energy3")

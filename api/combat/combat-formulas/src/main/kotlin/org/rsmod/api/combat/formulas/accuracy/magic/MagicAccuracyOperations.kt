@@ -352,12 +352,12 @@ public object MagicAccuracyOperations {
 
     private fun VarPlayerIntMap.offensivePrayerBonus(): Double =
         when {
-            this[varbits.mystic_will] == 1 -> 1.05
-            this[varbits.mystic_lore] == 1 -> 1.1
-            this[varbits.mystic_might] == 1 -> {
+            this[varbits.prayer_mysticwill] == 1 -> 1.05
+            this[varbits.prayer_mysticlore] == 1 -> 1.1
+            this[varbits.prayer_mysticmight] == 1 -> {
                 if (this[varbits.prayer_mystic_vigour_unlocked] == 1) 1.18 else 1.15
             }
-            this[varbits.augury] == 1 -> 1.25
+            this[varbits.prayer_augury] == 1 -> 1.25
             else -> 1.0
         }
 

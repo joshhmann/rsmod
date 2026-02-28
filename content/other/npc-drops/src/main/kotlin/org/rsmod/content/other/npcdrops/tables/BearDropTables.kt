@@ -46,6 +46,6 @@ internal object BearNpcs : NpcReferences() {
 
 /** Object type references for Bear drops. */
 internal object BearObjs : ObjReferences() {
-    val bear_fur = find("bear_fur")
+    val bear_fur = find("fur")
     val raw_bear_meat = find("raw_bear_meat")
 }

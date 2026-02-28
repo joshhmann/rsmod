@@ -9,6 +9,7 @@ import jakarta.inject.Inject
 import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.InputStream
+import java.util.logging.Logger
 import org.rsmod.api.cache.map.obj.MapObjDefinition
 import org.rsmod.api.cache.map.obj.MapObjListDecoder
 import org.rsmod.api.cache.map.obj.MapObjListDefinition
@@ -23,6 +24,8 @@ import org.rsmod.map.square.MapSquareKey
 public class MapObjSpawnCollector
 @Inject
 constructor(@Toml private val objectMapper: ObjectMapper, private val nameMapping: NameMapping) {
+    private val logger: Logger = Logger.getLogger(MapObjSpawnCollector::class.java.name)
+
     public fun loadAndCollect(
         builders: Iterable<MapObjSpawnBuilder>
     ): Map<MapSquareKey, MapObjListDefinition> {
@@ -94,8 +97,8 @@ constructor(@Toml private val objectMapper: ObjectMapper, private val nameMappin
             spawnList.add(def.packed)
         }
         if (skipped.isNotEmpty()) {
-            System.err.println(
-                "[WARN] Skipped ${skipped.size} unknown obj spawn name(s) in $sourcePath: ${skipped.joinToString()}"
+            logger.warning(
+                "Skipped ${skipped.size} unknown obj spawn name(s) in $sourcePath: ${skipped.joinToString()}"
             )
         }
 

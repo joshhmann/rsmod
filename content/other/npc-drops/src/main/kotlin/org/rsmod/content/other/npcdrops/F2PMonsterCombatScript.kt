@@ -44,7 +44,7 @@ class F2PMonsterCombatScript @Inject constructor() : PluginScript() {
 
     private fun ScriptContext.registerGiantRat() {
         val npcs =
-            listOf(DropTableNpcs.giant_rat, DropTableNpcs.giant_rat_2, DropTableNpcs.giant_rat_3)
+            listOf(DropTableNpcs.giantrat, DropTableNpcs.giantrat2, DropTableNpcs.giantrat3)
         npcs.forEach { npcType -> onNpcHit(npcType) { /* Retaliation handled by engine */ } }
     }
 

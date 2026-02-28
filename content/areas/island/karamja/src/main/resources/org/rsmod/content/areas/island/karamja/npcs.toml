@@ -11,7 +11,7 @@ direction = 'east'
 # === GENERAL STORE ===
 # Karamja general store owner
 [[spawn]]
-npc = 'karamja_general_store'
+npc = 'generalshopkeeper4'
 coords = '0_47_51_2909_3152'
 direction = 'west'
 
@@ -20,33 +20,33 @@ direction = 'west'
 
 # Cage/Harpoon spot - Lobster/Swordfish
 [[spawn]]
-npc = 'fishing_spot_cage_harpoon'
+npc = '0_50_49_saltfish'
 coords = '0_47_51_2922_3177'
 direction = 'south'
 
 [[spawn]]
-npc = 'fishing_spot_cage_harpoon'
+npc = '0_50_49_saltfish'
 coords = '0_47_51_2923_3179'
 direction = 'south'
 
 [[spawn]]
-npc = 'fishing_spot_cage_harpoon'
+npc = '0_50_49_saltfish'
 coords = '0_47_51_2923_3182'
 direction = 'south'
 
 [[spawn]]
-npc = 'fishing_spot_cage_harpoon'
+npc = '0_50_49_saltfish'
 coords = '0_47_51_2925_3184'
 direction = 'south'
 
 # Net/Bait spot - Shrimp/Anchovies
 [[spawn]]
-npc = 'fishing_spot_net_bait'
+npc = '0_50_50_freshfish'
 coords = '0_47_51_2922_3176'
 direction = 'south'
 
 [[spawn]]
-npc = 'fishing_spot_net_bait'
+npc = '0_50_50_freshfish'
 coords = '0_47_51_2924_3178'
 direction = 'south'
 
@@ -117,17 +117,17 @@ direction = 'west'
 # === LEVEL 14 SKELETONS ===
 # Near the volcano
 [[spawn]]
-npc = 'skeleton'
+npc = 'skeleton_unarmed'
 coords = '0_47_51_2880_3145'
 direction = 'west'
 
 [[spawn]]
-npc = 'skeleton'
+npc = 'skeleton_unarmed'
 coords = '0_47_51_2883_3148'
 direction = 'west'
 
 [[spawn]]
-npc = 'skeleton'
+npc = 'skeleton_unarmed'
 coords = '0_47_51_2885_3151'
 direction = 'west'
 
@@ -157,7 +157,7 @@ direction = 'north'
 
 # === DOCK WORKER ===
 [[spawn]]
-npc = 'karamja_dock_worker'
+npc = 'karamja_man'
 coords = '0_47_51_2951_3144'
 direction = 'east'
 
