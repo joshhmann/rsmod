@@ -240,5 +240,6 @@ constructor(
 }
 
 internal object GuidePriceObjs : ObjReferences() {
-    val null_item_placeholder = find("blankobject")
+    // UI placeholder only (not a gameplay item reward).
+    val null_item_placeholder = find("coins")
 }
