@@ -589,6 +589,33 @@ A task is only `✅ Complete` when all of the following are true:
 7. **Docs updated**: reflect completion accurately in `docs/CONTENT_AUDIT.md` and module ownership in this file.
 8. **Dependency gate passed**: task is not blocked by unresolved core systems/parity dependencies.
 
+### Completion evidence requirements (mandatory)
+
+Attach completion evidence by task type:
+
+- **Content task**
+  - Changed file list.
+  - Build command output.
+  - Bot/integration artifact reference.
+- **API/plugin task**
+  - Changed file list.
+  - Compile/build output.
+  - Impacted module list.
+  - Compatibility note for content callers.
+
+When blocked, include:
+
+- The **exact command string** executed.
+- The **first failure line** from compile/runtime output.
+
+### Strict status mapping
+
+| Status        | Required meaning |
+| ------------- | ---------------- |
+| `in_progress` | Implementation exists but is not yet validated. |
+| `partial`     | Validated, but blocked by an external dependency. |
+| `complete`    | All DoD checks pass and required evidence is attached. |
+
 If any item above is missing, status must remain `🔄 in_progress` or `🟡 partial`, not `✅ complete`.
 
 ---
@@ -863,7 +890,6 @@ Uses `GameTestExtension` in `rsmod/api/testing/`. No server needed.
 
 See `docs/LLM_TESTING_GUIDE.md` for state snapshot schema and full methodology.
 See `bots/woodcutting.ts` as the reference test script template.
-
 
 
 
