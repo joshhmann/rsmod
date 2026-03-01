@@ -1,0 +1,15 @@
+[submodule "OSRSWikiScraper"]
+	path = OSRSWikiScraper
+	url = https://github.com/joshhmann/OSRSWikiScraper.git
+[submodule "mcp"]
+	path = mcp
+	url = https://github.com/joshhmann/rsmod-mcp.git
+[submodule "mcp-osrs"]
+	path = mcp-osrs
+	url = https://github.com/joshhmann/mcp-osrs.git
+[submodule "mcp-osrs-rev233"]
+	path = mcp-osrs-rev233
+	url = https://github.com/joshhmann/mcp-osrs-rev233.git
+[submodule "mcp-tasks"]
+	path = mcp-tasks
+	url = https://github.com/joshhmann/mcp-tasks.git
