@@ -32,6 +32,9 @@ Do these first. If these are not green, new content work tends to cause rework a
 
 Rule:
 - Prefer claiming stability/cleanup tasks over new content tasks until Tier 0 + 0.5 are complete.
+- Sprint allocation while Tier 0/Tier 0.5 are open:
+  - minimum 40% capacity on cleanup/stability tasks.
+  - maximum 60% on new content/API expansion tasks.
 
 ---
 
@@ -92,4 +95,6 @@ Mechanical perfection and PvP safety.
    - full boot gate when symbols/global config are touched
 3. **Never** use hardcoded IDs if a `.sym` exists.
 4. **Never** use global mutable state in `object` blocks.
-
+5. **Always** use the coordinator SOP and assignment template for delegated work:
+   - `docs/COORDINATOR_SOP.md`
+   - `docs/AGENTS.md` -> *Coordinator Task Assignment Template (Copy/Paste)*
