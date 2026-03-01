@@ -4,6 +4,26 @@ Multi-agent RSMod v2 workspace targeting OSRS parity at **revision 233**.
 
 If you are an agent, this file is your single bootstrap entrypoint.
 
+## Start Here (Hard Gate)
+
+Complete this checklist **before any edits**:
+
+1. Read `docs/README.md`.
+2. Open `docs/AGENTS.md`.
+3. Claim task.
+4. Lock files.
+5. Confirm assignment template fields are all present.
+
+### Do Not Proceed
+
+If any required assignment field is missing — `task id`, `allowed/forbidden paths`, `insertion point`, or `validation command` — stop immediately.
+
+The agent must return a clarification request and perform **zero edits** until all required fields are provided.
+
+Cross-reference this startup contract from:
+- `docs/AGENTS.md`
+- `docs/NEXT_STEPS.md`
+
 ## Definitive Playbook Contract
 
 Treat this README as the operational playbook for startup, tooling, validation, and cleanup.
@@ -229,7 +249,6 @@ Every agent completion message must include:
 3. `commands run`: exact commands in order
 4. `results`: pass/fail + first error line when failing
 5. `cleanup`: `gradlew --stop` + kotlin-lsp process cleanup result
-
 
 
 

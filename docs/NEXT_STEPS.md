@@ -83,6 +83,19 @@ Mechanical perfection and PvP safety.
 
 ---
 
+## Startup Contract (Hard Gate)
+
+Before any edits, complete the startup checklist in `docs/README.md#start-here-hard-gate`:
+1. Read `docs/README.md`.
+2. Open `docs/AGENTS.md`.
+3. Claim task.
+4. Lock files.
+5. Confirm assignment template fields are all present.
+
+**Do Not Proceed:** If any required field is missing (`task id`, `allowed/forbidden paths`, `insertion point`, `validation command`), return a clarification request and perform zero edits.
+
+---
+
 ## 📝 Coordination Rules
 1. **Always** claim a task in the registry before starting.
 2. **Always** run the Mandatory Build Gate defined in `README.md` (definitive playbook):
