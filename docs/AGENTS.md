@@ -349,6 +349,21 @@ python tools/drop_rate_converter.py "1/128"
 | --------------------------------- | ------------------------------------- | ------------------------- | -------------------------------------------------- |
 | NPC combat defs missing           | Combat gameplay                       | Claude (after server fix) | Port from `Kronos-184-Fixed/.../data/npcs/combat/` |
 
+### Escalation Matrix
+
+Use this matrix whenever work crosses module boundaries or cannot proceed without upstream support.
+
+| Boundary crossed | Owner team/agent | Evidence to include | Expected response format |
+| --- | --- | --- | --- |
+| Content implementation blocked by missing API hook | API owner (Gemini) + content assignee | feature/task ID, target content file + location, missing API surface needed (function/signature), minimal repro path, exact compile/runtime error text | `Status: acknowledged\nOwner: <name>\nAction: <hook to add/change>\nETA: <date or unknown>\nUnblock condition: <what content can resume with>` |
+| API implementation blocked by engine behavior | Engine owner (Gemini) + API assignee | API module + callsite, engine contract currently observed vs expected, failing test or startup log excerpt, impacted downstream modules | `Status: triaged\nOwner: <name>\nDecision: <engine fix / API workaround / deferred>\nRisk: <parity/startup/runtime impact>\nNext checkpoint: <date>` |
+| Startup/type verification blockers (build fails, unresolved types, boot errors) | Server/app owner (Gemini) + current implementer | exact command run, first failing file/symbol, full first error block, whether failure reproduces on clean build, modules currently blocked | `Status: investigating\nOwner: <name>\nRoot cause: <confirmed or suspected>\nMitigation: <short-term action>\nResolution criteria: <command/output that must pass>` |
+
+Escalation note requirements:
+- Link the blocker entry in `Current Blockers` when opening escalation.
+- Keep evidence copy-pastable from terminal/build logs.
+- Update both the blocker row and task note when status changes (acknowledged → triaged → resolved/deferred).
+
 ### Resolved (Archived)
 - ~~`game.key` missing~~ ✅ Resolved (generated via `generateRsa`, located in `.data/game.key`)
 - ~~`api:invtx` compile errors~~ ✅ Resolved (Transaction refs fixed)
@@ -863,7 +878,6 @@ Uses `GameTestExtension` in `rsmod/api/testing/`. No server needed.
 
 See `docs/LLM_TESTING_GUIDE.md` for state snapshot schema and full methodology.
 See `bots/woodcutting.ts` as the reference test script template.
-
 
 
 
