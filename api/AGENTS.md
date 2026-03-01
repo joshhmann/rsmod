@@ -142,7 +142,62 @@ val UnpackedLocType.treeLevelReq: Int by locParam(params.tree_level_req)
 | `rsmod/engine/` | Gemini | Core engine |
 | `rsmod/.data/symbols/` | Generated | Rev 228 symbol tables |
 
-**When adding/changing API:**
-1. Update `docs/TRANSLATION_CHEATSHEET.md`
-2. Notify Claude (content depends on it)
-3. Add tests in `api/testing/`
+## API Change Contract
+
+For any PR that adds, removes, or modifies public API behavior, include an explicit API contract summary.
+
+Required contract items:
+1. **Affected public methods/types**
+   - List each public method/type changed.
+   - Mark compatibility as additive, behavior change, deprecation, or breaking change.
+2. **Caller impact summary (`content/**` modules)**
+   - Name impacted content modules/files under `content/**`.
+   - State whether changes are required now or can be deferred.
+3. **Migration guidance**
+   - Provide before/after usage patterns.
+   - Include required follow-up steps and expected rollout order.
+4. **Test additions in `api/testing`**
+   - Identify coverage added in `api/testing` (new or updated tests).
+   - If no tests were added, explain why and record a follow-up TODO.
+5. **Docs update reference**
+   - Reference docs updated for the API change.
+   - If translation/API mapping changed, include `docs/TRANSLATION_CHEATSHEET.md` update status.
+
+### API PR Release-Note Template (for content-agent handoff)
+
+Use this in PR descriptions so content agents can adapt without guesswork:
+
+```md
+## API Change Contract
+
+### 1) Affected public methods/types
+- `<module/path>::<PublicTypeOrFunction>` — `<additive | behavior change | deprecation | breaking>`
+
+### 2) Caller impact (`content/**`)
+- `content/<area>/<file>.kt` — `<impact summary>`
+- Required now? `<yes/no>`
+
+### 3) Migration guidance
+- Before:
+  - `<old usage>`
+- After:
+  - `<new usage>`
+- Rollout steps:
+  1. `<step 1>`
+  2. `<step 2>`
+
+### 4) Tests (`api/testing`)
+- Added/Updated: `<test file or class>`
+- Coverage notes: `<what behavior is now verified>`
+
+### 5) Docs
+- `docs/TRANSLATION_CHEATSHEET.md` — `<updated | not relevant>`
+- Other docs: `<paths>`
+
+## Release Notes (Content Agents)
+- **What changed:** `<one-paragraph summary>`
+- **Who must act:** `<content modules/owners>`
+- **Action required:** `<exact update content agents should make>`
+- **Safe default if unchanged:** `<runtime fallback/behavior>`
+- **Deadline/version target:** `<milestone or release window>`
+```
