@@ -7,6 +7,11 @@ Operational note:
 - `README.md` is the definitive startup/workflow playbook.
 - This file is authoritative for module ownership, blockers, role scopes, and DoD details.
 
+Startup contract:
+- Complete the **Start Here (Hard Gate)** checklist in `docs/README.md` before any edits.
+- If assignment fields are missing (`task id`, `allowed/forbidden paths`, `insertion point`, `validation command`), return a clarification request and perform zero edits.
+- See: `docs/README.md#start-here-hard-gate`.
+
 ---
 
 ## Key Docs — Read These First
