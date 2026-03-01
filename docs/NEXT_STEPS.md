@@ -1,6 +1,6 @@
 # Next Steps — OSRS-PS-DEV F2P Readiness Roadmap
 
-Last updated: 2026-02-26.
+Last updated: 2026-03-01.
 
 This document serves as the master checklist for achieving 1:1 F2P parity with OSRS Revision 233.
 
@@ -29,6 +29,11 @@ Do these first. If these are not green, new content work tends to cause rework a
 - [ ] **STAB-P0-STRICT-BOOT**: strict boot + type/hash integrity gate.
   - Goal: strict `:server:app:run` converges without “cache type edits need to be packed” loops.
   - Use: `scripts\strict-boot-probe.ps1 -TimeoutSeconds 120`
+
+Fixed allocation policy (mandatory until green):
+- Reserve a **minimum 40% of total sprint effort** for Tier 0 + Tier 0.5 blockers until all Tier 0 and Tier 0.5 items are green.
+- If either strict boot gate (`STAB-P0-STRICT-BOOT`) or login gate (`STAB-P0-LOGIN`) is red, cap parallel new-feature work to **max 1 active Tier 1+ feature task per agent** (remaining capacity stays on Tier 0/0.5 blockers).
+- Do not increase Tier 1+ in-flight task count while any Tier 0/Tier 0.5 blocker remains unowned.
 
 Rule:
 - Prefer claiming stability/cleanup tasks over new content tasks until Tier 0 + 0.5 are complete.
@@ -147,6 +152,30 @@ Before any edits, complete the startup checklist in `docs/README.md#start-here-h
    - full boot gate when symbols/global config are touched
 3. **Never** use hardcoded IDs if a `.sym` exists.
 4. **Never** use global mutable state in `object` blocks.
+
+## 📉 Weekly Blocker Burndown Check (Required)
+
+Run once per week in planning/review and post results in the active sprint tracker.
+
+### Required owner assignment
+- Each open Tier 0/Tier 0.5 blocker must have exactly one **Directly Responsible Individual (DRI)**.
+- Unowned blockers must be assigned before new Tier 1+ work is pulled.
+
+### Required status fields (per blocker)
+- **Blocker ID** (e.g., `STAB-P0-STRICT-BOOT`)
+- **Tier** (`0` or `0.5`)
+- **Status** (`red`, `amber`, or `green`)
+- **DRI (owner)**
+- **Age (days open)**
+- **Current impact** (what it blocks)
+- **Next concrete action** (next executable step)
+- **ETA to green**
+- **Dependencies / escalation needed**
+
+### Weekly exit checks
+- Verify the sprint still meets the minimum 40% Tier 0/0.5 allocation while any blocker is non-green.
+- Verify strict boot and login gate status; if either is red, enforce the 1-task parallel feature cap.
+- Reassign or escalate any blocker with no forward movement for 7+ days.
 5. **Always** use the coordinator SOP and assignment template for delegated work:
    - `docs/COORDINATOR_SOP.md`
    - `docs/AGENTS.md` -> *Coordinator Task Assignment Template (Copy/Paste)*
