@@ -396,6 +396,52 @@ Every task assignment must include:
 
 If the target NPC/feature is not named explicitly, the assignee must ask for clarification before editing.
 
+### Task Prompt Schema (Required)
+
+All assignments must include a machine-checkable schema block with **all fields present**:
+
+```yaml
+task_id: <TASK-ID>
+objective: <single concrete target outcome>
+allowed_paths:
+  - <repo/path/**>
+forbidden_paths:
+  - <repo/path/**>
+insertion_point: <file + exact placement rule>
+validation_commands:
+  - <exact command 1>
+  - <exact command 2>
+done_evidence_required:
+  - changed files list
+  - key edits summary
+  - exact command outputs
+```
+
+Field requirements:
+- `task_id`: exact registry task id; no aliases.
+- `objective`: one concrete deliverable with named target (NPC/feature/system).
+- `allowed_paths`: explicit edit scope.
+- `forbidden_paths`: explicit deny list (must include protected paths).
+- `insertion_point`: exact file and where to insert/modify.
+- `validation_commands`: runnable, ordered commands.
+- `done_evidence_required`: mandatory completion artifacts.
+
+### Rejection Rules (Mandatory)
+
+Reject assignments that do not include the schema above or that use vague objectives.
+
+Explicit rejection examples:
+- "work on skill"
+- "implement quest fixes"
+
+Required rejection response format:
+
+```text
+REJECTED_TASK_PROMPT
+Reason: Missing required Task Prompt Schema fields: <comma-separated missing/invalid fields>
+Required: Provide a complete `Task Prompt Schema (Required)` block from docs/AGENTS.md.
+```
+
 ---
 
 ## Coordinator Task Assignment Template (Copy/Paste)
@@ -863,7 +909,6 @@ Uses `GameTestExtension` in `rsmod/api/testing/`. No server needed.
 
 See `docs/LLM_TESTING_GUIDE.md` for state snapshot schema and full methodology.
 See `bots/woodcutting.ts` as the reference test script template.
-
 
 
 

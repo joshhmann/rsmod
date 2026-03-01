@@ -16,6 +16,10 @@ If docs conflict, use this precedence:
 5. `docs/CONTENT_AUDIT.md` (feature status)
 6. `docs/MASTER_ROADMAP.md` (long-horizon scope)
 
+## Assignment Acceptance Rule
+
+Only accept assignments that include the complete `Task Prompt Schema (Required)` from `docs/AGENTS.md`; no schema = no work.
+
 Important current policy:
 - Use `osrs-cache` as the primary MCP for content ID/data lookups.
 - Do not block tasks on `osrs-wiki-rev233` wrapper availability.
@@ -229,7 +233,6 @@ Every agent completion message must include:
 3. `commands run`: exact commands in order
 4. `results`: pass/fail + first error line when failing
 5. `cleanup`: `gradlew --stop` + kotlin-lsp process cleanup result
-
 
 
 
