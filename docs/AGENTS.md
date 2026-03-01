@@ -369,6 +369,53 @@ python tools/drop_rate_converter.py "1/128"
 
 ## How to Start a Task (Checklist)
 
+## Delivery Phase Gates (Hard Stop Workflow)
+
+Use this mandatory sequence for all implementation tasks. **Hard stop rule:** you cannot enter a phase until the previous phase exit criteria are fully met and recorded in your task notes.
+
+### Phase 0 — Discovery (existing patterns + refs)
+- Scope: identify existing implementation patterns, canonical refs/symbols, and module boundaries before coding.
+- Exit criteria:
+  - Relevant source patterns identified and linked in notes.
+  - Required refs/symbols/API touchpoints confirmed for rev 233.
+  - File/module scope for the change declared.
+- Hard stop: do not draft behavior/spec or write code until all discovery evidence is captured.
+
+### Phase 1 — Spec (behavior/state transitions)
+- Scope: define intended behavior, state transitions, edge cases, and success/failure paths.
+- Exit criteria:
+  - Behavior contract documented (inputs, outputs, invariants).
+  - State transition sequence is explicit (including failure/rollback states where applicable).
+  - Test intent listed (what will be validated and at what scope).
+- Hard stop: do not implement until spec/state transitions are explicit and reviewable.
+
+### Phase 2 — Implementation (single module scope)
+- Scope: implement only within the declared module boundary from Phase 0/1.
+- Exit criteria:
+  - Change is contained to intended module scope (or scope change explicitly re-approved in notes).
+  - Code compiles locally for touched module path after formatting.
+  - No hidden TODO stubs introduced for required behavior.
+- Hard stop: do not begin validation until implementation is complete within scope.
+
+### Phase 3 — Validation (`preflight -> spotlessApply -> scoped build -> bot test`)
+- Scope: execute the mandatory validation chain in this exact order.
+- Exit criteria:
+  - `preflight` passes (or documented environment limitation with evidence).
+  - `spotlessApply` completed.
+  - Scoped module build is green.
+  - Bot/integration test run (or explicitly documented as pending with blocker + owner).
+- Hard stop: do not hand off or mark task complete without running this sequence and recording results.
+
+### Phase 4 — Handoff (notes, blockers, audit updates)
+- Scope: close loop for team coordination and project traceability.
+- Exit criteria:
+  - Session notes written (what changed, why, commands run, outcomes).
+  - Blockers table updated (resolved/added with ownership).
+  - Audit/status docs updated to reflect real completion state.
+- Hard stop: task is not complete until all handoff artifacts are updated.
+
+---
+
 ```
 □ 1. Read docs/CONTENT_AUDIT.md — confirm the task isn't already done
 □ 2. Check AGENTS.md Module Ownership — confirm no one else owns it

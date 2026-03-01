@@ -86,6 +86,45 @@ Mechanical perfection and PvP safety.
 
 ---
 
+## 🚦 Delivery Phase Gates (Mandatory)
+
+All task execution must follow the same hard-stop phase model. **You may not enter the next phase until the current phase exit criteria are met.**
+
+### Phase 0 — Discovery (existing patterns + refs)
+- Exit criteria:
+  - Existing implementation patterns identified.
+  - Required refs/symbols verified.
+  - Intended module/file scope declared.
+- Hard stop rule: no spec or code changes until discovery artifacts are captured.
+
+### Phase 1 — Spec (behavior/state transitions)
+- Exit criteria:
+  - Behavior contract documented.
+  - State transitions (including failure paths) documented.
+  - Validation intent listed.
+- Hard stop rule: no implementation until spec is explicit and reviewable.
+
+### Phase 2 — Implementation (single module scope)
+- Exit criteria:
+  - Implementation stays within declared single-module scope.
+  - Required behavior implemented (no placeholder TODO path for core logic).
+  - Code ready for validation chain.
+- Hard stop rule: do not start validation until implementation is complete in scope.
+
+### Phase 3 — Validation (`preflight -> spotlessApply -> scoped build -> bot test`)
+- Exit criteria:
+  - Preflight hygiene executed.
+  - `spotlessApply` executed.
+  - Scoped build passes.
+  - Bot test executed (or blocker+owner documented).
+- Hard stop rule: no handoff/closure without recorded validation results.
+
+### Phase 4 — Handoff (notes, blockers, audit updates)
+- Exit criteria:
+  - Session notes updated.
+  - Blockers table/status updated.
+  - Audit/progress docs updated with final state.
+- Hard stop rule: task remains open until handoff updates are complete.
 ## Startup Contract (Hard Gate)
 
 Before any edits, complete the startup checklist in `docs/README.md#start-here-hard-gate`:
