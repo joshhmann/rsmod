@@ -60,7 +60,7 @@
     "command": "npx",
     "args": ["-y", "@modelcontextprotocol/server-brave-search@latest"],
     "env": {
-      "BRAVE_API_KEY": "BSABujJVbKHoFN0KrlBB4gaHew46aTs"
+      "BRAVE_API_KEY": "${BRAVE_API_KEY}"
     }
   }
 }

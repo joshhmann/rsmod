@@ -70,3 +70,14 @@ tmp_*.log
 **/*.pyo
 **/*.pyd
 **/*.py
+
+### Local Secrets ###
+.env
+.env.*
+!.env.example
+!.env.template
+*.secret
+*.secrets
+secrets/
+secrets.*
+.mcp.local.json
