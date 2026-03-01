@@ -7,6 +7,11 @@ Operational note:
 - `README.md` is the definitive startup/workflow playbook.
 - This file is authoritative for module ownership, blockers, role scopes, and DoD details.
 
+Startup contract:
+- Complete the **Start Here (Hard Gate)** checklist in `docs/README.md` before any edits.
+- If assignment fields are missing (`task id`, `allowed/forbidden paths`, `insertion point`, `validation command`), return a clarification request and perform zero edits.
+- See: `docs/README.md#start-here-hard-gate`.
+
 ---
 
 ## Key Docs — Read These First
@@ -349,6 +354,21 @@ python tools/drop_rate_converter.py "1/128"
 | --------------------------------- | ------------------------------------- | ------------------------- | -------------------------------------------------- |
 | NPC combat defs missing           | Combat gameplay                       | Claude (after server fix) | Port from `Kronos-184-Fixed/.../data/npcs/combat/` |
 
+### Escalation Matrix
+
+Use this matrix whenever work crosses module boundaries or cannot proceed without upstream support.
+
+| Boundary crossed | Owner team/agent | Evidence to include | Expected response format |
+| --- | --- | --- | --- |
+| Content implementation blocked by missing API hook | API owner (Gemini) + content assignee | feature/task ID, target content file + location, missing API surface needed (function/signature), minimal repro path, exact compile/runtime error text | `Status: acknowledged\nOwner: <name>\nAction: <hook to add/change>\nETA: <date or unknown>\nUnblock condition: <what content can resume with>` |
+| API implementation blocked by engine behavior | Engine owner (Gemini) + API assignee | API module + callsite, engine contract currently observed vs expected, failing test or startup log excerpt, impacted downstream modules | `Status: triaged\nOwner: <name>\nDecision: <engine fix / API workaround / deferred>\nRisk: <parity/startup/runtime impact>\nNext checkpoint: <date>` |
+| Startup/type verification blockers (build fails, unresolved types, boot errors) | Server/app owner (Gemini) + current implementer | exact command run, first failing file/symbol, full first error block, whether failure reproduces on clean build, modules currently blocked | `Status: investigating\nOwner: <name>\nRoot cause: <confirmed or suspected>\nMitigation: <short-term action>\nResolution criteria: <command/output that must pass>` |
+
+Escalation note requirements:
+- Link the blocker entry in `Current Blockers` when opening escalation.
+- Keep evidence copy-pastable from terminal/build logs.
+- Update both the blocker row and task note when status changes (acknowledged → triaged → resolved/deferred).
+
 ### Resolved (Archived)
 - ~~`game.key` missing~~ ✅ Resolved (generated via `generateRsa`, located in `.data/game.key`)
 - ~~`api:invtx` compile errors~~ ✅ Resolved (Transaction refs fixed)
@@ -363,6 +383,53 @@ python tools/drop_rate_converter.py "1/128"
 ---
 
 ## How to Start a Task (Checklist)
+
+## Delivery Phase Gates (Hard Stop Workflow)
+
+Use this mandatory sequence for all implementation tasks. **Hard stop rule:** you cannot enter a phase until the previous phase exit criteria are fully met and recorded in your task notes.
+
+### Phase 0 — Discovery (existing patterns + refs)
+- Scope: identify existing implementation patterns, canonical refs/symbols, and module boundaries before coding.
+- Exit criteria:
+  - Relevant source patterns identified and linked in notes.
+  - Required refs/symbols/API touchpoints confirmed for rev 233.
+  - File/module scope for the change declared.
+- Hard stop: do not draft behavior/spec or write code until all discovery evidence is captured.
+
+### Phase 1 — Spec (behavior/state transitions)
+- Scope: define intended behavior, state transitions, edge cases, and success/failure paths.
+- Exit criteria:
+  - Behavior contract documented (inputs, outputs, invariants).
+  - State transition sequence is explicit (including failure/rollback states where applicable).
+  - Test intent listed (what will be validated and at what scope).
+- Hard stop: do not implement until spec/state transitions are explicit and reviewable.
+
+### Phase 2 — Implementation (single module scope)
+- Scope: implement only within the declared module boundary from Phase 0/1.
+- Exit criteria:
+  - Change is contained to intended module scope (or scope change explicitly re-approved in notes).
+  - Code compiles locally for touched module path after formatting.
+  - No hidden TODO stubs introduced for required behavior.
+- Hard stop: do not begin validation until implementation is complete within scope.
+
+### Phase 3 — Validation (`preflight -> spotlessApply -> scoped build -> bot test`)
+- Scope: execute the mandatory validation chain in this exact order.
+- Exit criteria:
+  - `preflight` passes (or documented environment limitation with evidence).
+  - `spotlessApply` completed.
+  - Scoped module build is green.
+  - Bot/integration test run (or explicitly documented as pending with blocker + owner).
+- Hard stop: do not hand off or mark task complete without running this sequence and recording results.
+
+### Phase 4 — Handoff (notes, blockers, audit updates)
+- Scope: close loop for team coordination and project traceability.
+- Exit criteria:
+  - Session notes written (what changed, why, commands run, outcomes).
+  - Blockers table updated (resolved/added with ownership).
+  - Audit/status docs updated to reflect real completion state.
+- Hard stop: task is not complete until all handoff artifacts are updated.
+
+---
 
 ```
 □ 1. Read docs/CONTENT_AUDIT.md — confirm the task isn't already done
@@ -383,6 +450,23 @@ python tools/drop_rate_converter.py "1/128"
 
 ---
 
+## Common Failure Patterns (And Required Countermeasures)
+
+These are recurring causes of agent rework loops. Treat countermeasures as mandatory controls:
+
+1. **Scope drift** (editing outside assignment bounds)
+   - Countermeasure: explicit allowed/forbidden path lists in every assignment + file locks before edit.
+2. **Stub-complete false positives** (handlers/messages without state/inventory/reward wiring)
+   - Countermeasure: enforce DoD checklist and keep status `🔄`/`🟡` until full gameplay loop is implemented.
+3. **Prompt ambiguity** (missing target entity, insertion point, or validation command)
+   - Countermeasure: reject task prompt until it matches the assignment template exactly.
+4. **Skipped validation order** (build before preflight/format)
+   - Countermeasure: run validation in mandatory order and paste exact commands in completion notes.
+5. **Silent blocker handling** (guessing through uncertainty)
+   - Countermeasure: if blocked >10 minutes, record exact command + first error line + impacted paths, then release locks if pausing.
+
+---
+
 ## Task Prompt Quality (Required)
 
 Do not assign vague commands like "work on skill implementations."
@@ -395,6 +479,52 @@ Every task assignment must include:
 5. Validation command.
 
 If the target NPC/feature is not named explicitly, the assignee must ask for clarification before editing.
+
+### Task Prompt Schema (Required)
+
+All assignments must include a machine-checkable schema block with **all fields present**:
+
+```yaml
+task_id: <TASK-ID>
+objective: <single concrete target outcome>
+allowed_paths:
+  - <repo/path/**>
+forbidden_paths:
+  - <repo/path/**>
+insertion_point: <file + exact placement rule>
+validation_commands:
+  - <exact command 1>
+  - <exact command 2>
+done_evidence_required:
+  - changed files list
+  - key edits summary
+  - exact command outputs
+```
+
+Field requirements:
+- `task_id`: exact registry task id; no aliases.
+- `objective`: one concrete deliverable with named target (NPC/feature/system).
+- `allowed_paths`: explicit edit scope.
+- `forbidden_paths`: explicit deny list (must include protected paths).
+- `insertion_point`: exact file and where to insert/modify.
+- `validation_commands`: runnable, ordered commands.
+- `done_evidence_required`: mandatory completion artifacts.
+
+### Rejection Rules (Mandatory)
+
+Reject assignments that do not include the schema above or that use vague objectives.
+
+Explicit rejection examples:
+- "work on skill"
+- "implement quest fixes"
+
+Required rejection response format:
+
+```text
+REJECTED_TASK_PROMPT
+Reason: Missing required Task Prompt Schema fields: <comma-separated missing/invalid fields>
+Required: Provide a complete `Task Prompt Schema (Required)` block from docs/AGENTS.md.
+```
 
 ---
 
@@ -448,6 +578,9 @@ Blocker Rule:
 - if blocked >10 min: add blocker note with exact command, first error line, affected file paths; unlock files.
 ```
 
+Task acceptance rule:
+- If any required field is missing, assignee must not edit files and must request a corrected prompt.
+
 Quick example:
 
 ```text
@@ -464,6 +597,34 @@ Exact Insertion Point:
 Validation Command:
 - & 'C:\Program Files\PowerShell\7\pwsh.exe' -Command ".\gradlew.bat :content:other:npc-drops:build --console=plain"
 ```
+
+---
+
+## API and Plugin Change Contract (Required)
+
+Any task that changes behavior in `api/**` or shared plugin wiring must include:
+
+1. Impacted public APIs (function/type names).
+2. Expected downstream content impact (`content/**` modules affected).
+3. Migration notes for callers (if signatures or semantics changed).
+4. Validation command(s) for changed API/plugin modules.
+5. Test evidence (new or updated tests, or explicit blocker reason).
+
+Do not merge API/plugin behavior changes without caller impact notes.
+
+---
+
+## Escalation Matrix (Required)
+
+When blocked by boundary ownership or missing primitives, escalate with this format:
+
+1. Boundary crossed (content -> api, api -> engine, content -> engine).
+2. Exact failing command.
+3. First relevant error line.
+4. Impacted file path(s).
+5. Requested owner action.
+
+Blockers without this data are considered incomplete.
 
 ---
 
@@ -588,6 +749,33 @@ A task is only `✅ Complete` when all of the following are true:
 7. **Test artifact exists**: add or update a bot script (`bots/<feature>.ts`) for integration verification when applicable.
 7. **Docs updated**: reflect completion accurately in `docs/CONTENT_AUDIT.md` and module ownership in this file.
 8. **Dependency gate passed**: task is not blocked by unresolved core systems/parity dependencies.
+
+### Completion evidence requirements (mandatory)
+
+Attach completion evidence by task type:
+
+- **Content task**
+  - Changed file list.
+  - Build command output.
+  - Bot/integration artifact reference.
+- **API/plugin task**
+  - Changed file list.
+  - Compile/build output.
+  - Impacted module list.
+  - Compatibility note for content callers.
+
+When blocked, include:
+
+- The **exact command string** executed.
+- The **first failure line** from compile/runtime output.
+
+### Strict status mapping
+
+| Status        | Required meaning |
+| ------------- | ---------------- |
+| `in_progress` | Implementation exists but is not yet validated. |
+| `partial`     | Validated, but blocked by an external dependency. |
+| `complete`    | All DoD checks pass and required evidence is attached. |
 
 If any item above is missing, status must remain `🔄 in_progress` or `🟡 partial`, not `✅ complete`.
 
@@ -863,7 +1051,6 @@ Uses `GameTestExtension` in `rsmod/api/testing/`. No server needed.
 
 See `docs/LLM_TESTING_GUIDE.md` for state snapshot schema and full methodology.
 See `bots/woodcutting.ts` as the reference test script template.
-
 
 
 
