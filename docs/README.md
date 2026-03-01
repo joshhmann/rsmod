@@ -36,8 +36,42 @@ Important current policy:
    - Prefer RSMod v2 examples over external RSPS repos (API + revision match).
 5. Read `docs/quirks.md` for RSMod-specific gotchas (symbols `.local` override behavior, delay semantics, transaction notes).
 6. Run Kotlin tooling warmup (below) before Kotlin-heavy work.
-5. Implement, run validation gate, then complete task and release locks.
-6. Open `AGENTS.md` only if you need ownership/blocker/DoD deep details.
+7. Implement, run validation gate, then complete task and release locks.
+8. Open `docs/AGENTS.md` only if you need ownership/blocker/DoD deep details.
+
+
+## Loop-Prevention Controls (Mandatory)
+
+These controls exist to stop the most common rework loops (wrong scope edits, stub-only delivery, and skipped validation):
+
+1. **Use the assignment template exactly** from `docs/AGENTS.md` (Task ID, objective, allowed/forbidden paths, insertion point, validation command).
+2. **Reject vague task prompts** immediately. If target or insertion point is missing, do not edit until clarified.
+3. **Enforce uncertainty stop rule**: when unsure, leave a TODO + blocker note instead of guessing.
+4. **Gate completion on evidence**: include exact commands and first failure line when blocked.
+5. **Do not mark complete on scaffold/stub work**: status remains in-progress/partial until DoD is fully met.
+
+Reference sections:
+- `docs/AGENTS.md` → *Task Prompt Quality (Required)*
+- `docs/AGENTS.md` → *Coordinator Task Assignment Template (Copy/Paste)*
+- `docs/AGENTS.md` → *Definition of Done (DoD)*
+- `docs/COORDINATOR_SOP.md` → strict assignment, monitoring, and closeout workflow
+
+## Start Gate (Hard Stop)
+
+Do not edit any files until all checks below are true:
+
+1. Task is claimed in `agent-tasks`.
+2. Target files are locked.
+3. Assignment includes all required fields:
+   - Task ID
+   - objective
+   - allowed paths
+   - forbidden paths
+   - exact insertion point
+   - validation command(s)
+4. A matching in-repo implementation pattern is identified.
+
+If any field is missing, the assignee must stop and request a corrected task prompt.
 
 ## Task Flow (Mandatory)
 
@@ -229,7 +263,6 @@ Every agent completion message must include:
 3. `commands run`: exact commands in order
 4. `results`: pass/fail + first error line when failing
 5. `cleanup`: `gradlew --stop` + kotlin-lsp process cleanup result
-
 
 
 
