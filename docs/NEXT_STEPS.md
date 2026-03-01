@@ -32,6 +32,9 @@ Do these first. If these are not green, new content work tends to cause rework a
 
 Rule:
 - Prefer claiming stability/cleanup tasks over new content tasks until Tier 0 + 0.5 are complete.
+- Sprint allocation while Tier 0/Tier 0.5 are open:
+  - minimum 40% capacity on cleanup/stability tasks.
+  - maximum 60% on new content/API expansion tasks.
 
 ---
 
@@ -122,6 +125,16 @@ All task execution must follow the same hard-stop phase model. **You may not ent
   - Blockers table/status updated.
   - Audit/progress docs updated with final state.
 - Hard stop rule: task remains open until handoff updates are complete.
+## Startup Contract (Hard Gate)
+
+Before any edits, complete the startup checklist in `docs/README.md#start-here-hard-gate`:
+1. Read `docs/README.md`.
+2. Open `docs/AGENTS.md`.
+3. Claim task.
+4. Lock files.
+5. Confirm assignment template fields are all present.
+
+**Do Not Proceed:** If any required field is missing (`task id`, `allowed/forbidden paths`, `insertion point`, `validation command`), return a clarification request and perform zero edits.
 
 ---
 
@@ -134,4 +147,6 @@ All task execution must follow the same hard-stop phase model. **You may not ent
    - full boot gate when symbols/global config are touched
 3. **Never** use hardcoded IDs if a `.sym` exists.
 4. **Never** use global mutable state in `object` blocks.
-
+5. **Always** use the coordinator SOP and assignment template for delegated work:
+   - `docs/COORDINATOR_SOP.md`
+   - `docs/AGENTS.md` -> *Coordinator Task Assignment Template (Copy/Paste)*
