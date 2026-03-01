@@ -1,0 +1,204 @@
+{
+    "mechanic": "hitsplat_system",
+    "source": "OSRS Wiki (oldschool.runescape.wiki/w/Hitsplat)",
+    "extraction_date": "2026-02-22",
+    "rsmod_api_status": "partial - no hitsplat enum or type system documented in api/hit-plugin",
+    "overview": {
+        "description": "A hitsplat is the damage/status icon appearing above a player, NPC, or monster during combat. It displays the numerical effect on hitpoints or skill levels.",
+        "display_duration_ticks": "1-2 ticks (0.6s - 1.2s)",
+        "max_hit_visuals": "Hits dealing max damage have a unique 'trimmed' appearance. Default threshold: 10+ damage. Setting configurable.",
+        "tinted_hitsplats": "Other players' hitsplats are tinted a different color to distinguish from your own. Configurable in Settings > Activities.",
+        "pvp_overkill": "Critical PvP hitsplats show actual damage number even if it exceeds target's remaining HP (overkill), but only the remaining HP amount is actually dealt."
+    },
+    "hitsplat_types": {
+        "damage_types": [
+            {
+                "id": "damage",
+                "color": "red",
+                "description": "Regular damage from melee, magic, ranged, agility obstacles, thieving traps, etc.",
+                "has_tinted": true,
+                "has_max": true
+            },
+            {
+                "id": "zero_damage",
+                "color": "blue",
+                "description": "A hit of zero; inflicts no damage. Indicates a missed or blocked attack.",
+                "has_tinted": true,
+                "has_max": false
+            },
+            {
+                "id": "shield",
+                "color": "special",
+                "description": "Shown when damaging shields of bosses (Hueycoatl, Kephri, Verzik Vitur, The Nightmare, Tempoross). Also indicates protected attacks (Moons of Peril, Yama).",
+                "has_tinted": true,
+                "has_max": true
+            },
+            {
+                "id": "armour",
+                "color": "grey",
+                "description": "Shown when damaging Zalcano's stone armour.",
+                "has_tinted": true,
+                "has_max": true
+            },
+            {
+                "id": "prayer_drain",
+                "color": "purple",
+                "description": "Shown when draining a target's prayer (Phantom Muspah shield, Frost Nagua).",
+                "has_tinted": true,
+                "has_max": true,
+                "notes": "Max hit variant currently unused"
+            },
+            {
+                "id": "charge",
+                "color": "special",
+                "description": "Shown when The Nightmare's totems are charged/healed.",
+                "has_tinted": true,
+                "has_max": true
+            },
+            {
+                "id": "uncharge",
+                "color": "special",
+                "description": "Shown when The Nightmare's totems are uncharged/damaged by parasites.",
+                "has_tinted": true,
+                "has_max": true
+            },
+            {
+                "id": "poise",
+                "color": "yellow",
+                "description": "Poise damage dealt to Tumeken's Warden or Elidinis' Warden during phase 2.",
+                "has_tinted": true,
+                "has_max": true
+            },
+            {
+                "id": "warmth",
+                "color": "white",
+                "description": "Wintertodt's drain on the player's warmth meter.",
+                "has_tinted": true,
+                "has_max": false
+            },
+            {
+                "id": "dodge",
+                "color": "special",
+                "description": "Dodged damage from a negated non-typeless attack. Currently unused in live game.",
+                "has_tinted": true,
+                "has_max": false
+            },
+            {
+                "id": "ship",
+                "color": "brown",
+                "description": "Damage to a sailing ship. Max hitsplat variant currently unused.",
+                "has_tinted": true,
+                "has_max": true
+            }
+        ],
+        "status_types": [
+            {
+                "id": "poison",
+                "color": "green",
+                "description": "Poison damage at set intervals. Decreases over time. Can appear from poison karambwan or Shilo mist.",
+                "interval_ticks": 30,
+                "interval_seconds": 18,
+                "behavior": "decreasing"
+            },
+            {
+                "id": "venom",
+                "color": "dark_green",
+                "description": "Venom damage at set intervals. Increases over time, capped at 20.",
+                "interval_ticks": 30,
+                "interval_seconds": 18,
+                "behavior": "increasing",
+                "cap": 20
+            },
+            {
+                "id": "disease",
+                "color": "brown_yellow",
+                "description": "Disease drains player stats at set intervals, excluding Hitpoints and Prayer.",
+                "behavior": "stat_drain"
+            },
+            {
+                "id": "corruption",
+                "color": "dark_purple",
+                "description": "Corruption drains prayer points over a short period.",
+                "behavior": "prayer_drain"
+            },
+            {
+                "id": "bleed",
+                "color": "dark_red",
+                "description": "Bleed DoT damage from Vardorvis Swinging Axes or Custodia stalkers' special attack.",
+                "behavior": "damage_over_time"
+            },
+            {
+                "id": "burn",
+                "color": "orange",
+                "description": "Burn inflicted by Eclipse moon armour set, burning claws special, or scorching bow special. Also Yama.",
+                "behavior": "damage_over_time"
+            },
+            {
+                "id": "corrosion",
+                "color": "acid_green",
+                "description": "Corrosion from Shellbane Gryphon spit. Deals small repeated damage until expiry or equipment unequipped.",
+                "behavior": "damage_over_time"
+            }
+        ],
+        "other_types": [
+            {
+                "id": "heal",
+                "color": "green_bright",
+                "description": "HP healing. Mostly reserved for boss encounters. Shows on players with Soulreaper axe or Sailing boat repair.",
+                "behavior": "hp_restore"
+            },
+            {
+                "id": "sanity",
+                "color": "grey_dark",
+                "description": "Sanity drain from Lost Souls and The Whisperer inside the Shadow Realm.",
+                "behavior": "sanity_drain"
+            },
+            {
+                "id": "heal_sanity",
+                "color": "grey_light",
+                "description": "Sanity restoration.",
+                "behavior": "sanity_restore"
+            },
+            {
+                "id": "doom_stack",
+                "color": "dark",
+                "description": "Doom handicap in Fortis Colosseum. Certain doom stacks instantly kill the player.",
+                "behavior": "special"
+            },
+            {
+                "id": "alt_charge",
+                "color": "light_blue",
+                "description": "HP/Defence restoration from Vasa Nistirio glowing crystals, Kephri scarab shield restoration, Palm of Resourcefulness growth.",
+                "behavior": "special_restore"
+            },
+            {
+                "id": "alt_uncharge",
+                "color": "dark_blue",
+                "description": "Crocodile damage towards Palm of Resourcefulness.",
+                "behavior": "special_drain"
+            }
+        ]
+    },
+    "implementation_notes": {
+        "rsmod_api_gaps": [
+            "No HitsplatType enum found for all types above",
+            "hit-plugin may need extension to support all hitsplat color variations",
+            "Tinted hitsplat system for other-player visibility needs implementation",
+            "Max hitsplat visual threshold (default 10+) needs player setting hook",
+            "pvp_overkill display logic needs separate client-display flag",
+            "Status effect hitsplats (poison, venom, disease) need separate periodic tick scheduling"
+        ],
+        "priority": "HIGH",
+        "implemented_in_rsmod": [
+            "Basic damage hitsplat",
+            "Zero damage/miss hitsplat",
+            "Poison/venom hitsplats (via content/mechanics/poison)"
+        ],
+        "needed_for_rsmod": [
+            "Full HitsplatType enum with all types",
+            "Heal hitsplat for food / prayer restore",
+            "Prayer drain hitsplat for smite/special attacks",
+            "Disease hitsplat render hook"
+        ]
+    }
+}

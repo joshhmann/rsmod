@@ -1,0 +1,138 @@
+{
+  "skill": "agility",
+  "source": "OSRS Wiki (rev 228/233, accessed 2026-02)",
+  "actions": {
+    "gnome_stronghold_log_balance": {
+      "level_req": 1,
+      "xp": 10.0,
+      "animation": 762,
+      "object_ids": [23145],
+      "loc_pattern": "log_balance",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold"
+    },
+    "gnome_stronghold_obstacle_net": {
+      "level_req": 1,
+      "xp": 10.0,
+      "animation": 828,
+      "object_ids": [23134],
+      "loc_pattern": "obstacle_net",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold"
+    },
+    "gnome_stronghold_tree_branch_up": {
+      "level_req": 1,
+      "xp": 6.5,
+      "animation": 828,
+      "object_ids": [23559],
+      "loc_pattern": "tree_branch",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold"
+    },
+    "gnome_stronghold_balancing_rope": {
+      "level_req": 1,
+      "xp": 10.0,
+      "animation": 762,
+      "object_ids": [23135],
+      "loc_pattern": "balancing_rope",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold"
+    },
+    "gnome_stronghold_tree_branch_down": {
+      "level_req": 1,
+      "xp": 6.5,
+      "animation": 828,
+      "object_ids": [23560],
+      "loc_pattern": "tree_branch",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold"
+    },
+    "gnome_stronghold_obstacle_net_2": {
+      "level_req": 1,
+      "xp": 10.0,
+      "animation": 828,
+      "object_ids": [23136],
+      "loc_pattern": "obstacle_net",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold"
+    },
+    "gnome_stronghold_obstacle_pipe": {
+      "level_req": 1,
+      "xp": 7.5,
+      "animation": 844,
+      "object_ids": [23137, 23138],
+      "loc_pattern": "obstacle_pipe",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold"
+    },
+    "gnome_stronghold_bonus": {
+      "level_req": 1,
+      "xp": 50.0,
+      "animation": -1,
+      "object_ids": [],
+      "loc_pattern": "course_completion",
+      "members": true,
+      "failure_chance": 0,
+      "course": "gnome_stronghold",
+      "is_completion_bonus": true
+    }
+  },
+  "courses": {
+    "gnome_stronghold": {
+      "name": "Gnome Stronghold Agility Course",
+      "level_req": 1,
+      "total_xp_per_lap": 110.5,
+      "min_lap_time_ticks": 57,
+      "failure_possible": false,
+      "marks_of_grace": true,
+      "location": {
+        "desc": "Tree Gnome Stronghold, south of Grand Tree",
+        "x": 2474,
+        "z": 3436
+      },
+      "obstacles": [
+        { "name": "Log Balance", "xp": 10.0, "object_id": 23145, "order": 1 },
+        { "name": "Obstacle Net", "xp": 10.0, "object_id": 23134, "order": 2 },
+        { "name": "Tree Branch Up", "xp": 6.5, "object_id": 23559, "order": 3 },
+        { "name": "Balancing Rope", "xp": 10.0, "object_id": 23135, "order": 4 },
+        { "name": "Tree Branch Down", "xp": 6.5, "object_id": 23560, "order": 5 },
+        { "name": "Obstacle Net", "xp": 10.0, "object_id": 23136, "order": 6 },
+        { "name": "Obstacle Pipe", "xp": 7.5, "object_id": 23137, "order": 7 },
+        { "name": "Completion Bonus", "xp": 50.0, "object_id": null, "order": 8 }
+      ]
+    }
+  },
+  "shortcuts": {
+    "grand_exchange_to_north": {
+      "level_req": 21,
+      "xp": 0.0,
+      "object_ids": [],
+      "members": true
+    },
+    "falador_wall": {
+      "level_req": 26,
+      "xp": 0.0,
+      "object_ids": [16518, 16519],
+      "members": true
+    },
+    "draynor_manor_stile": {
+      "level_req": 31,
+      "xp": 0.0,
+      "object_ids": [12982],
+      "members": true
+    }
+  },
+  "test_locations": [
+    { "desc": "Gnome Stronghold Course start (Log Balance)", "x": 2474, "z": 3436 },
+    { "desc": "Gnome Stronghold Course finish", "x": 2485, "z": 3430 },
+    { "desc": "Tree Gnome Stronghold bank (Grand Tree)", "x": 2442, "z": 3485 }
+  ],
+  "notes": "Gnome Stronghold is the lowest level agility course with no failure chance. Lap takes minimum 34 seconds (57 ticks). Total XP per lap: 110.5 (including 50 XP completion bonus)."
+}

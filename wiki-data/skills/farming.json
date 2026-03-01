@@ -1,0 +1,63 @@
+{
+  "skill": "farming",
+  "baseline": "herb-patch-minimal",
+  "notes": [
+    "Rev 233 baseline implementation currently targets herb patches only.",
+    "Supported seeds: guam, marrentill.",
+    "Includes minimal disease/death/cure flow for integration testing."
+  ],
+  "tiers": [
+    {
+      "name": "Guam",
+      "level_req": 9,
+      "plant_xp": 11.0,
+      "harvest_xp_per_herb": 12.5,
+      "seed_obj": "guam_seed",
+      "produce_obj": "grimy_guam",
+      "loc_path": [
+        "herb_guam_leaf_seed",
+        "herb_guam_leaf_1",
+        "herb_guam_leaf_2",
+        "herb_guam_leaf_3",
+        "herb_guam_leaf_fullygrown"
+      ]
+    },
+    {
+      "name": "Marrentill",
+      "level_req": 14,
+      "plant_xp": 13.5,
+      "harvest_xp_per_herb": 15.0,
+      "seed_obj": "marrentill_seed",
+      "produce_obj": "grimy_marrentill",
+      "loc_path": [
+        "herb_marrentill_seed",
+        "herb_marrentill_1",
+        "herb_marrentill_2",
+        "herb_marrentill_3",
+        "herb_marrentill_fullygrown"
+      ]
+    }
+  ],
+  "disease": {
+    "loc_diseased": "herb_1_diseased",
+    "loc_dead": "herb_1_dead",
+    "cure_item": "plant_cure"
+  },
+  "tools": {
+    "weed": "rake",
+    "plant": "seed_dibber",
+    "clear_dead": "spade"
+  },
+  "test_locations": [
+    {
+      "desc": "Catherby herb patch",
+      "x": 2813,
+      "z": 3462
+    },
+    {
+      "desc": "Falador herb patch",
+      "x": 3058,
+      "z": 3311
+    }
+  ]
+}

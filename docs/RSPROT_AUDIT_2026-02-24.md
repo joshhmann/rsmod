@@ -61,3 +61,4 @@
   - `rsmod.telemetry.rsprot-updates=true` (already added in `RspCycle`).
   - `rsmod.telemetry.zone-updates=true` (added in `PlayerZoneUpdateProcessor`).
 - Profile with telemetry enabled under realistic bot population before any protocol rewrite decision.
+

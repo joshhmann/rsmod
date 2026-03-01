@@ -16,8 +16,7 @@ public object ShopInterfaces : InterfaceReferences() {
 }
 
 public object ShopComponents : ComponentReferences() {
-    public val shop_subtext: ComponentType =
-        find("shopmain:desktop_instructions")
+    public val shop_subtext: ComponentType = find("shopmain:desktop_instructions")
     public val shop_side_inv: ComponentType = find("shopside:items")
     public val shop_inv: ComponentType = find("shopmain:items")
 }

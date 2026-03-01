@@ -49,16 +49,14 @@ object BaseSpotanims : SpotanimReferences() {
     val premier_club_emote_spotanim_silver = find("premier_club_emote_spotanim_silver")
     val premier_club_emote_spotanim_gold = find("premier_club_emote_spotanim_gold")
     val league_twisted_relic_unlock_spot = find("league_twisted_relic_unlock_spot")
-    val league_trailblazer_relic_unlock_spot =
-        find("league_trailblazer_relic_unlock_spot")
+    val league_trailblazer_relic_unlock_spot = find("league_trailblazer_relic_unlock_spot")
     val fx_emote_party01_active = find("fx_emote_party01_active")
     val hw23_emote_bat_spotanim = find("hw23_emote_bat_spotanim")
 
     val ballista_special = find("ballista_special")
 
     val darkbow_dragon_head_flying_projanim = find("darkbow_dragon_head_flying_projanim")
-    val darkbow_dragon_head_flying_impact_anim =
-        find("darkbow_dragon_head_flying_impact_anim")
+    val darkbow_dragon_head_flying_impact_anim = find("darkbow_dragon_head_flying_impact_anim")
     val darkbow_generic_smoke_arrow_flight = find("darkbow_generic_smoke_arrow_flight")
     val darkbow_smoke_arrow_impact = find("darkbow_smoke_arrow_impact")
 

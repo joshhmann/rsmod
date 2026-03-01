@@ -1,0 +1,255 @@
+{
+  "skill": "smithing",
+  "description": "OSRS Rev 233 Smithing Skill Data - Bars, Ores, Smithable Items, and Locations",
+  "revision": 233,
+  "bars": {
+    "bronze": {
+      "id": 2349,
+      "name": "bronze_bar",
+      "level_req": 1,
+      "xp": 6.2,
+      "ores_required": [
+        { "id": 436, "name": "copper_ore", "qty": 1 },
+        { "id": 438, "name": "tin_ore", "qty": 1 }
+      ],
+      "coal_required": 0,
+      "members": false
+    },
+    "iron": {
+      "id": 2351,
+      "name": "iron_bar",
+      "level_req": 15,
+      "xp": 12.5,
+      "ores_required": [
+        { "id": 440, "name": "iron_ore", "qty": 1 }
+      ],
+      "coal_required": 0,
+      "success_rate": 0.5,
+      "members": false,
+      "notes": "50% success rate without ring of forging"
+    },
+    "silver": {
+      "id": 2355,
+      "name": "silver_bar",
+      "level_req": 20,
+      "xp": 13.7,
+      "ores_required": [
+        { "id": 442, "name": "silver_ore", "qty": 1 }
+      ],
+      "coal_required": 0,
+      "members": false,
+      "notes": "Used for crafting silver items"
+    },
+    "steel": {
+      "id": 2353,
+      "name": "steel_bar",
+      "level_req": 30,
+      "xp": 17.5,
+      "ores_required": [
+        { "id": 440, "name": "iron_ore", "qty": 1 }
+      ],
+      "coal_required": 2,
+      "members": false
+    },
+    "gold": {
+      "id": 2357,
+      "name": "gold_bar",
+      "level_req": 40,
+      "xp": 22.5,
+      "xp_gauntlets": 56.2,
+      "ores_required": [
+        { "id": 444, "name": "gold_ore", "qty": 1 }
+      ],
+      "coal_required": 0,
+      "members": false,
+      "notes": "Goldsmith gauntlets increase XP to 56.2"
+    },
+    "mithril": {
+      "id": 2359,
+      "name": "mithril_bar",
+      "level_req": 50,
+      "xp": 30.0,
+      "ores_required": [
+        { "id": 447, "name": "mithril_ore", "qty": 1 }
+      ],
+      "coal_required": 4,
+      "members": false
+    },
+    "adamantite": {
+      "id": 2361,
+      "name": "adamantite_bar",
+      "level_req": 70,
+      "xp": 37.5,
+      "ores_required": [
+        { "id": 449, "name": "adamantite_ore", "qty": 1 }
+      ],
+      "coal_required": 6,
+      "members": false
+    },
+    "runite": {
+      "id": 2363,
+      "name": "runite_bar",
+      "level_req": 85,
+      "xp": 50.0,
+      "ores_required": [
+        { "id": 451, "name": "runite_ore", "qty": 1 }
+      ],
+      "coal_required": 8,
+      "members": false
+    }
+  },
+  "ores": {
+    "copper": { "id": 436, "name": "copper_ore", "level_req": 1 },
+    "tin": { "id": 438, "name": "tin_ore", "level_req": 1 },
+    "iron": { "id": 440, "name": "iron_ore", "level_req": 15 },
+    "silver": { "id": 442, "name": "silver_ore", "level_req": 20 },
+    "coal": { "id": 453, "name": "coal", "level_req": 30 },
+    "gold": { "id": 444, "name": "gold_ore", "level_req": 40 },
+    "mithril": { "id": 447, "name": "mithril_ore", "level_req": 55 },
+    "adamantite": { "id": 449, "name": "adamantite_ore", "level_req": 70 },
+    "runite": { "id": 451, "name": "runite_ore", "level_req": 85 }
+  },
+  "smithables": {
+    "bronze": {
+      "bar_xp": 12.5,
+      "items": [
+        { "name": "bronze_dagger", "id": 1205, "level_req": 1, "bars": 1, "xp": 12.5 },
+        { "name": "bronze_sword", "id": 1277, "level_req": 4, "bars": 1, "xp": 12.5 },
+        { "name": "bronze_longsword", "id": 1291, "level_req": 6, "bars": 2, "xp": 25.0 },
+        { "name": "bronze_scimitar", "id": 1321, "level_req": 7, "bars": 2, "xp": 25.0 },
+        { "name": "bronze_battleaxe", "id": 1375, "level_req": 10, "bars": 3, "xp": 37.5 },
+        { "name": "bronze_platelegs", "id": 1075, "level_req": 16, "bars": 3, "xp": 37.5 },
+        { "name": "bronze_platebody", "id": 1117, "level_req": 18, "bars": 5, "xp": 62.5 },
+        { "name": "bronze_arrowheads", "id": 39, "level_req": 5, "bars": 1, "xp": 12.5, "qty": 15 },
+        { "name": "bronze_dart_tip", "id": 819, "level_req": 4, "bars": 1, "xp": 12.5, "qty": 10 },
+        { "name": "nails_bronze", "id": 4819, "level_req": 4, "bars": 1, "xp": 12.5, "qty": 15 }
+      ]
+    },
+    "iron": {
+      "bar_xp": 25.0,
+      "items": [
+        { "name": "iron_dagger", "id": 1203, "level_req": 15, "bars": 1, "xp": 25.0 },
+        { "name": "iron_sword", "id": 1279, "level_req": 19, "bars": 1, "xp": 25.0 },
+        { "name": "iron_longsword", "id": 1293, "level_req": 21, "bars": 2, "xp": 50.0 },
+        { "name": "iron_scimitar", "id": 1323, "level_req": 23, "bars": 2, "xp": 50.0 },
+        { "name": "iron_battleaxe", "id": 1363, "level_req": 25, "bars": 3, "xp": 75.0 },
+        { "name": "iron_platelegs", "id": 1067, "level_req": 31, "bars": 3, "xp": 75.0 },
+        { "name": "iron_platebody", "id": 1115, "level_req": 33, "bars": 5, "xp": 125.0 },
+        { "name": "iron_arrowheads", "id": 40, "level_req": 20, "bars": 1, "xp": 25.0, "qty": 15 },
+        { "name": "iron_dart_tip", "id": 820, "level_req": 19, "bars": 1, "xp": 25.0, "qty": 10 },
+        { "name": "nails_iron", "id": 4820, "level_req": 19, "bars": 1, "xp": 25.0, "qty": 15 }
+      ]
+    },
+    "steel": {
+      "bar_xp": 37.5,
+      "items": [
+        { "name": "steel_dagger", "id": 1207, "level_req": 30, "bars": 1, "xp": 37.5 },
+        { "name": "steel_sword", "id": 1281, "level_req": 34, "bars": 1, "xp": 37.5 },
+        { "name": "steel_longsword", "id": 1295, "level_req": 36, "bars": 2, "xp": 75.0 },
+        { "name": "steel_scimitar", "id": 1325, "level_req": 38, "bars": 2, "xp": 75.0 },
+        { "name": "steel_battleaxe", "id": 1365, "level_req": 40, "bars": 3, "xp": 112.5 },
+        { "name": "steel_platelegs", "id": 1069, "level_req": 46, "bars": 3, "xp": 112.5 },
+        { "name": "steel_platebody", "id": 1119, "level_req": 48, "bars": 5, "xp": 187.5 },
+        { "name": "steel_arrowheads", "id": 41, "level_req": 35, "bars": 1, "xp": 37.5, "qty": 15 },
+        { "name": "steel_dart_tip", "id": 821, "level_req": 34, "bars": 1, "xp": 37.5, "qty": 10 },
+        { "name": "nails_steel", "id": 4821, "level_req": 34, "bars": 1, "xp": 37.5, "qty": 15 }
+      ]
+    },
+    "mithril": {
+      "bar_xp": 50.0,
+      "items": [
+        { "name": "mithril_dagger", "id": 1209, "level_req": 50, "bars": 1, "xp": 50.0 },
+        { "name": "mithril_sword", "id": 1285, "level_req": 54, "bars": 1, "xp": 50.0 },
+        { "name": "mithril_longsword", "id": 1299, "level_req": 56, "bars": 2, "xp": 100.0 },
+        { "name": "mithril_scimitar", "id": 1329, "level_req": 58, "bars": 2, "xp": 100.0 },
+        { "name": "mithril_battleaxe", "id": 1369, "level_req": 60, "bars": 3, "xp": 150.0 },
+        { "name": "mithril_platelegs", "id": 1071, "level_req": 66, "bars": 3, "xp": 150.0 },
+        { "name": "mithril_platebody", "id": 1121, "level_req": 68, "bars": 5, "xp": 250.0 },
+        { "name": "mithril_arrowheads", "id": 42, "level_req": 55, "bars": 1, "xp": 50.0, "qty": 15 },
+        { "name": "mithril_dart_tip", "id": 822, "level_req": 54, "bars": 1, "xp": 50.0, "qty": 10 },
+        { "name": "nails_mithril", "id": 4822, "level_req": 54, "bars": 1, "xp": 50.0, "qty": 15 }
+      ]
+    },
+    "adamant": {
+      "bar_xp": 62.5,
+      "items": [
+        { "name": "adamant_dagger", "id": 1211, "level_req": 70, "bars": 1, "xp": 62.5 },
+        { "name": "adamant_sword", "id": 1287, "level_req": 74, "bars": 1, "xp": 62.5 },
+        { "name": "adamant_longsword", "id": 1301, "level_req": 76, "bars": 2, "xp": 125.0 },
+        { "name": "adamant_scimitar", "id": 1331, "level_req": 78, "bars": 2, "xp": 125.0 },
+        { "name": "adamant_battleaxe", "id": 1371, "level_req": 80, "bars": 3, "xp": 187.5 },
+        { "name": "adamant_platelegs", "id": 1073, "level_req": 86, "bars": 3, "xp": 187.5 },
+        { "name": "adamant_platebody", "id": 1123, "level_req": 88, "bars": 5, "xp": 312.5 },
+        { "name": "adamant_arrowheads", "id": 43, "level_req": 75, "bars": 1, "xp": 62.5, "qty": 15 },
+        { "name": "adamant_dart_tip", "id": 823, "level_req": 74, "bars": 1, "xp": 62.5, "qty": 10 },
+        { "name": "nails_adamant", "id": 4823, "level_req": 74, "bars": 1, "xp": 62.5, "qty": 15 }
+      ]
+    },
+    "rune": {
+      "bar_xp": 75.0,
+      "items": [
+        { "name": "rune_dagger", "id": 1213, "level_req": 85, "bars": 1, "xp": 75.0 },
+        { "name": "rune_sword", "id": 1289, "level_req": 89, "bars": 1, "xp": 75.0 },
+        { "name": "rune_longsword", "id": 1303, "level_req": 91, "bars": 2, "xp": 150.0 },
+        { "name": "rune_scimitar", "id": 1333, "level_req": 93, "bars": 2, "xp": 150.0 },
+        { "name": "rune_battleaxe", "id": 1373, "level_req": 95, "bars": 3, "xp": 225.0 },
+        { "name": "rune_platelegs", "id": 1079, "level_req": 99, "bars": 3, "xp": 225.0 },
+        { "name": "rune_platebody", "id": 1127, "level_req": 99, "bars": 5, "xp": 375.0 },
+        { "name": "rune_arrowheads", "id": 44, "level_req": 90, "bars": 1, "xp": 75.0, "qty": 15 },
+        { "name": "rune_dart_tip", "id": 824, "level_req": 89, "bars": 1, "xp": 75.0, "qty": 10 },
+        { "name": "nails_rune", "id": 4824, "level_req": 89, "bars": 1, "xp": 75.0, "qty": 15 }
+      ]
+    }
+  },
+  "tools": {
+    "hammer": { "id": 2347, "name": "hammer" }
+  },
+  "locations": {
+    "anvils": {
+      "lumbridge": { "id": 39620, "name": "lumbridge_anvil", "x": 3228, "z": 3253, "plane": 0 },
+      "varrock_west": { "id": 2097, "name": "anvil", "x": 3187, "z": 3426, "plane": 0 },
+      "varrock_east": { "id": 2097, "name": "anvil", "x": 3248, "z": 3404, "plane": 0 },
+      "falador": { "id": 2097, "name": "anvil", "x": 2972, "z": 3383, "plane": 0 },
+      "doric": { "id": 2031, "name": "dorics_anvil", "x": 2951, "z": 3452, "plane": 0 },
+      "barbarian_village": { "id": 2097, "name": "anvil", "x": 3080, "z": 3423, "plane": 0 },
+      "al_kharid": { "id": 2097, "name": "anvil", "x": 3291, "z": 3187, "plane": 0 },
+      "keldagrim": { "id": 6150, "name": "dwarf_keldagrim_anvil", "x": 2889, "z": 10210, "plane": 0 },
+      "port_sarim": { "id": 2097, "name": "anvil", "x": 3045, "z": 3255, "plane": 0 },
+      "seers_village": { "id": 2097, "name": "anvil", "x": 2714, "z": 3496, "plane": 0 },
+      "yanille": { "id": 2097, "name": "anvil", "x": 2617, "z": 3074, "plane": 0 },
+      "catherby": { "id": 2097, "name": "anvil", "x": 2801, "z": 3449, "plane": 0 }
+    },
+    "furnaces": {
+      "lumbridge": { "id": 2030, "name": "furnace", "x": 3228, "z": 3255, "plane": 0 },
+      "falador": { "id": 2030, "name": "furnace", "x": 2974, "z": 3369, "plane": 0 },
+      "edgeville": { "id": 2030, "name": "furnace", "x": 3109, "z": 3499, "plane": 0 },
+      "al_kharid": { "id": 2030, "name": "furnace", "x": 3277, "z": 3185, "plane": 0 },
+      "port_sarim": { "id": 2030, "name": "furnace", "x": 3044, "z": 3256, "plane": 0 },
+      "varrock": { "id": 2030, "name": "furnace", "x": 3250, "z": 3408, "plane": 0 },
+      "keldagrim": { "id": 6189, "name": "dwarf_keldagrim_furnace", "x": 2870, "z": 10208, "plane": 0 },
+      "rimmington": { "id": 2030, "name": "furnace", "x": 2975, "z": 3238, "plane": 0 },
+      "burthorpe": { "id": 2099, "name": "furnace2", "x": 2911, "z": 3564, "plane": 0 }
+    }
+  },
+  "test_locations": [
+    { "desc": "Lumbridge furnace + anvil", "x": 3228, "z": 3255, "type": "furnace" },
+    { "desc": "Al Kharid furnace + anvil", "x": 3277, "z": 3185, "type": "furnace" },
+    { "desc": "Varrock West anvil", "x": 3187, "z": 3426, "type": "anvil" },
+    { "desc": "Falador furnace + anvil", "x": 2974, "z": 3369, "type": "furnace" },
+    { "desc": "Edgeville furnace", "x": 3109, "z": 3499, "type": "furnace" }
+  ],
+  "notes": {
+    "smithing_tips": [
+      "Each bar provides XP equal to (bar_xp * number_of_bars_used)",
+      "Iron bars have 50% success rate when smelting - use ring of forging for 100%",
+      "Goldsmith gauntlets increase gold bar XP from 22.5 to 56.2",
+      "Arrowheads, dart tips, and nails produce multiple items per bar",
+      "Smithing takes 5 ticks (3 seconds) per item at an anvil"
+    ],
+    "blast_furnace": {
+      "description": "Members-only minigame in Keldagrim that halves coal requirements",
+      "location": "Keldagrim",
+      "benefits": ["50% less coal required", "100% iron smelting success", "Faster smelting"]
+    }
+  }
+}

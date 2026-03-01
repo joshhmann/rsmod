@@ -1,0 +1,991 @@
+{
+  "name": "Ice giant",
+  "combat_level": 53,
+  "hitpoints": 70,
+  "attack": 40,
+  "strength": 40,
+  "defence": 40,
+  "attack_speed": 5,
+  "slayer_level": null,
+  "slayer_xp": 70.0,
+  "drops": [
+    {
+      "name": "Big bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron 2h sword",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Black kiteshield",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Steel axe",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Steel sword",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron platelegs",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril mace",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril sq shield",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant arrow",
+      "rate": "1/21",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/32",
+      "qty_min": 6,
+      "qty_max": 6
+    },
+    {
+      "name": "Mind rune",
+      "rate": "1/42",
+      "qty_min": 24,
+      "qty_max": 24
+    },
+    {
+      "name": "Body rune",
+      "rate": "1/42",
+      "qty_min": 37,
+      "qty_max": 37
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/64",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Water rune",
+      "rate": "1/128",
+      "qty_min": 12,
+      "qty_max": 12
+    },
+    {
+      "name": "Cosmic rune",
+      "rate": "1/128",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/128",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Blood rune",
+      "rate": "1/128",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Limpwurt seed",
+      "rate": "1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Strawberry seed",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Marrentill seed",
+      "rate": "1/134",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Jangerberry seed",
+      "rate": "1/182",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tarromin seed",
+      "rate": "1/197",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wildblood seed",
+      "rate": "1/202",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Watermelon seed",
+      "rate": "1/266",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Harralander seed",
+      "rate": "1/299",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snape grass seed",
+      "rate": "1/419",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ranarr seed",
+      "rate": "1/429",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Whiteberry seed",
+      "rate": "1/493",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mushroom spore",
+      "rate": "1/578",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Toadflax seed",
+      "rate": "1/621",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Belladonna seed",
+      "rate": "1/931",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Irit seed",
+      "rate": "1/931",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Poison ivy seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Avantoe seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cactus seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Kwuarm seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Potato cactus seed",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snapdragon seed",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cadantine seed",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lantadyme seed",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dwarf weed seed",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Torstol seed",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/4",
+      "qty_min": 117,
+      "qty_max": 117
+    },
+    {
+      "name": "Coins",
+      "rate": "1/10",
+      "qty_min": 53,
+      "qty_max": 53
+    },
+    {
+      "name": "Coins",
+      "rate": "1/12",
+      "qty_min": 196,
+      "qty_max": 196
+    },
+    {
+      "name": "Coins",
+      "rate": "1/16",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Coins",
+      "rate": "1/18",
+      "qty_min": 8,
+      "qty_max": 8
+    },
+    {
+      "name": "Coins",
+      "rate": "1/21",
+      "qty_min": 22,
+      "qty_max": 22
+    },
+    {
+      "name": "Coins",
+      "rate": "1/64",
+      "qty_min": 400,
+      "qty_max": 400
+    },
+    {
+      "name": "Jug of wine",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril ore",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Banana",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/256",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/512",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature talisman",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/4",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/65",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/131",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/174",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ice giant ribs",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled giant head",
+      "rate": "1/21",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/40",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Long bone",
+      "rate": "1/400",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Giant champion scroll",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Curved bone",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Frozen tear",
+      "rate": "unknown[d 4]",
+      "qty_min": 6,
+      "qty_max": 6
+    },
+    {
+      "name": "Tooth half of key (moon key)",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/318",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/264",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Big bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril axe",
+      "rate": "1/15",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant sword",
+      "rate": "1/15",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril platelegs",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant dagger",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant mace",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant sq shield",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant kiteshield",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune dagger",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant arrow",
+      "rate": "1/10",
+      "qty_min": 5,
+      "qty_max": 14
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/15",
+      "qty_min": 6,
+      "qty_max": 6
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/20",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/31",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Blood rune",
+      "rate": "1/31",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Cosmic rune",
+      "rate": "1/62",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/62",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/62",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Limpwurt seed",
+      "rate": "1/36",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Strawberry seed",
+      "rate": "1/38",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Marrentill seed",
+      "rate": "1/40",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Jangerberry seed",
+      "rate": "1/54",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tarromin seed",
+      "rate": "1/58",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wildblood seed",
+      "rate": "1/60",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Watermelon seed",
+      "rate": "1/79",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Harralander seed",
+      "rate": "1/89",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snape grass seed",
+      "rate": "1/125",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ranarr seed",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Whiteberry seed",
+      "rate": "1/147",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mushroom spore",
+      "rate": "1/172",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Toadflax seed",
+      "rate": "1/185",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Belladonna seed",
+      "rate": "1/277",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Irit seed",
+      "rate": "1/277",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Poison ivy seed",
+      "rate": "1/384",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Avantoe seed",
+      "rate": "1/416",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cactus seed",
+      "rate": "1/416",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Kwuarm seed",
+      "rate": "1/555",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Potato cactus seed",
+      "rate": "1/624",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snapdragon seed",
+      "rate": "1/999",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cadantine seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lantadyme seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dwarf weed seed",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Torstol seed",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/10",
+      "qty_min": 100,
+      "qty_max": 100
+    },
+    {
+      "name": "Jug of wine",
+      "rate": "1/20",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril ore",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/31",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/62",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/124",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/248",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/661",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/992",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/1",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/31",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/63",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/84",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled giant head",
+      "rate": "1/21",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Long bone",
+      "rate": "1/400",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Giant champion scroll",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Curved bone",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/130",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/240",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Blighted anglerfish",
+      "rate": "~1/10.1",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted manta ray",
+      "rate": "~1/10.1",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted karambwan",
+      "rate": "~1/15.2",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted teleport spell sack",
+      "rate": "~1/15.2",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted ancient ice sack",
+      "rate": "~1/15.2",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted vengeance sack",
+      "rate": "~1/15.2",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted entangle sack",
+      "rate": "~1/7.6",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted super restore(4)",
+      "rate": "~1/30.4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Revenant cave teleport",
+      "rate": "~1/30.4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dareeyak teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wilderness crabs teleport",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Carrallanger teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Paddewwa teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Annakarl teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lassar teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Kharyrll teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Senntisten teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ghorrock teleport (tablet)",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Target teleport",
+      "rate": "~1/152.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Magic shortbow scroll",
+      "rate": "~1/380.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ring of wealth scroll",
+      "rate": "~1/380.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Trouver parchment",
+      "rate": "~1/1,520.5",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Looting bag note",
+      "rate": "~1/1,520.5",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

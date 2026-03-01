@@ -1,0 +1,652 @@
+{
+  "version": "1.0",
+  "revision": 233,
+  "description": "P2P monster drop tables for RSMod v2 - Comprehensive drop data from OSRS Wiki",
+  "monsters": [
+    {
+      "name": "Moss giant",
+      "npc_ids": [2090, 2091, 2092, 2093, 7262],
+      "combat_level": 42,
+      "hitpoints": 60,
+      "slayer_xp": 60.0,
+      "drops": {
+        "always": [
+          {"id": "big_bones", "name": "Big bones", "quantity": 1}
+        ],
+        "main": [
+          {"id": "black_sq_shield", "name": "Black sq shield", "rate": "5/128", "quantity": 1},
+          {"id": "magic_staff", "name": "Magic staff", "rate": "2/128", "quantity": 1},
+          {"id": "steel_med_helm", "name": "Steel med helm", "rate": "2/128", "quantity": 1},
+          {"id": "mithril_sword", "name": "Mithril sword", "rate": "2/128", "quantity": 1},
+          {"id": "mithril_spear", "name": "Mithril spear", "rate": "2/128", "quantity": 1},
+          {"id": "steel_kiteshield", "name": "Steel kiteshield", "rate": "1/128", "quantity": 1},
+          {"id": "law_rune", "name": "Law rune", "rate": "4/128", "quantity": 3},
+          {"id": "air_rune", "name": "Air rune", "rate": "3/128", "quantity": 18},
+          {"id": "earth_rune", "name": "Earth rune", "rate": "3/128", "quantity": 27},
+          {"id": "chaos_rune", "name": "Chaos rune", "rate": "3/128", "quantity": 7},
+          {"id": "nature_rune", "name": "Nature rune", "rate": "3/128", "quantity": 6},
+          {"id": "cosmic_rune", "name": "Cosmic rune", "rate": "2/128", "quantity": 3},
+          {"id": "iron_arrow", "name": "Iron arrow", "rate": "2/128", "quantity": 15},
+          {"id": "steel_arrow", "name": "Steel arrow", "rate": "1/128", "quantity": 30},
+          {"id": "death_rune", "name": "Death rune", "rate": "1/128", "quantity": 3},
+          {"id": "blood_rune", "name": "Blood rune", "rate": "1/128", "quantity": 1},
+          {"id": "coins", "name": "Coins", "rate": "35/128", "quantity": 5},
+          {"id": "coins", "name": "Coins", "rate": "19/128", "quantity": 37},
+          {"id": "coins", "name": "Coins", "rate": "11/128", "quantity": 2},
+          {"id": "coins", "name": "Coins", "rate": "10/128", "quantity": 119},
+          {"id": "coins", "name": "Coins", "rate": "5/128", "quantity": 10},
+          {"id": "coins", "name": "Coins", "rate": "2/128", "quantity": 300},
+          {"id": "steel_bar", "name": "Steel bar", "rate": "6/128", "quantity": 1},
+          {"id": "coal", "name": "Coal", "rate": "1/128", "quantity": 1},
+          {"id": "spinach_roll", "name": "Spinach roll", "rate": "1/128", "quantity": 1}
+        ],
+        "herb_table": {
+          "rate": "5/128",
+          "drops": [
+            {"id": "grimy_guam", "name": "Grimy guam leaf", "weight": 1},
+            {"id": "grimy_marrentill", "name": "Grimy marrentill", "weight": 1},
+            {"id": "grimy_tarromin", "name": "Grimy tarromin", "weight": 1},
+            {"id": "grimy_harralander", "name": "Grimy harralander", "weight": 1},
+            {"id": "grimy_ranarr", "name": "Grimy ranarr weed", "weight": 1},
+            {"id": "grimy_irit", "name": "Grimy irit leaf", "weight": 1},
+            {"id": "grimy_avantoe", "name": "Grimy avantoe", "weight": 1},
+            {"id": "grimy_kwuarm", "name": "Grimy kwuarm", "weight": 1},
+            {"id": "grimy_cadantine", "name": "Grimy cadantine", "weight": 1},
+            {"id": "grimy_lantadyme", "name": "Grimy lantadyme", "weight": 1},
+            {"id": "grimy_dwarf_weed", "name": "Grimy dwarf weed", "weight": 1}
+          ]
+        },
+        "seed_table": {
+          "rate": "35/128",
+          "drops": [
+            {"id": "limpwurt_seed", "name": "Limpwurt seed", "weight": 1},
+            {"id": "strawberry_seed", "name": "Strawberry seed", "weight": 1},
+            {"id": "marrentill_seed", "name": "Marrentill seed", "weight": 1},
+            {"id": "jangerberry_seed", "name": "Jangerberry seed", "weight": 1},
+            {"id": "tarromin_seed", "name": "Tarromin seed", "weight": 1},
+            {"id": "wildblood_seed", "name": "Wildblood seed", "weight": 1},
+            {"id": "watermelon_seed", "name": "Watermelon seed", "weight": 1},
+            {"id": "harralander_seed", "name": "Harralander seed", "weight": 1},
+            {"id": "snape_grass_seed", "name": "Snape grass seed", "weight": 1},
+            {"id": "ranarr_seed", "name": "Ranarr seed", "weight": 1},
+            {"id": "whiteberry_seed", "name": "Whiteberry seed", "weight": 1},
+            {"id": "mushroom_spore", "name": "Mushroom spore", "weight": 1},
+            {"id": "toadflax_seed", "name": "Toadflax seed", "weight": 1},
+            {"id": "belladonna_seed", "name": "Belladonna seed", "weight": 1},
+            {"id": "irit_seed", "name": "Irit seed", "weight": 1},
+            {"id": "poison_ivy_seed", "name": "Poison ivy seed", "weight": 1},
+            {"id": "avantoe_seed", "name": "Avantoe seed", "weight": 1},
+            {"id": "cactus_seed", "name": "Cactus seed", "weight": 1},
+            {"id": "kwuarm_seed", "name": "Kwuarm seed", "weight": 1},
+            {"id": "potato_cactus_seed", "name": "Potato cactus seed", "weight": 1},
+            {"id": "snapdragon_seed", "name": "Snapdragon seed", "weight": 1},
+            {"id": "cadantine_seed", "name": "Cadantine seed", "weight": 1},
+            {"id": "lantadyme_seed", "name": "Lantadyme seed", "weight": 1},
+            {"id": "dwarf_weed_seed", "name": "Dwarf weed seed", "weight": 1},
+            {"id": "torstol_seed", "name": "Torstol seed", "weight": 1}
+          ]
+        },
+        "gem_table": {
+          "rate": "4/128",
+          "drops": [
+            {"id": "uncut_sapphire", "name": "Uncut sapphire", "weight": 1},
+            {"id": "uncut_emerald", "name": "Uncut emerald", "weight": 1},
+            {"id": "uncut_ruby", "name": "Uncut ruby", "weight": 1},
+            {"id": "chaos_talisman", "name": "Chaos talisman", "weight": 1},
+            {"id": "nature_talisman", "name": "Nature talisman", "weight": 1},
+            {"id": "uncut_diamond", "name": "Uncut diamond", "weight": 1},
+            {"id": "rune_javelin", "name": "Rune javelin", "weight": 1},
+            {"id": "loop_half_key", "name": "Loop half of key", "weight": 1},
+            {"id": "tooth_half_key", "name": "Tooth half of key", "weight": 1},
+            {"id": "rune_spear", "name": "Rune spear", "weight": 1},
+            {"id": "shield_left_half", "name": "Shield left half", "weight": 1},
+            {"id": "dragon_spear", "name": "Dragon spear", "weight": 1}
+          ]
+        },
+        "tertiary": [
+          {"id": "looting_bag", "name": "Looting bag", "rate": "1/3", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "moss_giant_bone", "name": "Moss giant bone", "rate": "1/4", "quantity": 1, "condition": "Rag and Bone Man II only"},
+          {"id": "ensouled_giant_head", "name": "Ensouled giant head", "rate": "1/24", "quantity": 1},
+          {"id": "clue_scroll_beginner", "name": "Clue scroll (beginner)", "rate": "1/45", "quantity": 1},
+          {"id": "mossy_key", "name": "Mossy key", "rate": "1/150", "quantity": 1},
+          {"id": "long_bone", "name": "Long bone", "rate": "1/400", "quantity": 1},
+          {"id": "giant_champion_scroll", "name": "Giant champion scroll", "rate": "1/5000", "quantity": 1},
+          {"id": "curved_bone", "name": "Curved bone", "rate": "1/5012", "quantity": 1},
+          {"id": "ancient_shard", "name": "Ancient shard", "rate": "1/293", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_base", "name": "Dark totem base", "rate": "1/440", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_middle", "name": "Dark totem middle", "rate": "1/440", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_top", "name": "Dark totem top", "rate": "1/440", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "larrans_key", "name": "Larran's key", "rate": "1/533", "quantity": 1, "condition": "Wilderness Slayer only"},
+          {"id": "slayers_enchantment", "name": "Slayer's enchantment", "rate": "1/272", "quantity": 1, "condition": "Wilderness Slayer only"}
+        ]
+      },
+      "locations": [
+        {"name": "Crandor", "x": 3246, "z": 2830, "members": false, "spawns": 3},
+        {"name": "Varrock Sewers", "x": 3161, "z": 9893, "members": false, "spawns": 10},
+        {"name": "Wilderness", "x": 3143, "z": 3817, "members": false, "spawns": 6},
+        {"name": "Brimhaven Dungeon", "x": 2659, "z": 9544, "members": true, "spawns": 20},
+        {"name": "Catacombs of Kourend", "x": 1665, "z": 10033, "members": true, "spawns": 13},
+        {"name": "Giants' Den", "x": 1439, "z": 9868, "members": true, "spawns": 10}
+      ]
+    },
+    {
+      "name": "Lesser demon",
+      "npc_ids": [2005, 2006, 2007, 2008, 2018, 7656, 7657, 7664],
+      "combat_level": 82,
+      "hitpoints": 79,
+      "slayer_xp": 79.0,
+      "drops": {
+        "always": [
+          {"id": "vile_ashes", "name": "Vile ashes", "quantity": 1}
+        ],
+        "main": [
+          {"id": "steel_full_helm", "name": "Steel full helm", "rate": "4/128", "quantity": 1},
+          {"id": "steel_axe", "name": "Steel axe", "rate": "4/128", "quantity": 1},
+          {"id": "steel_scimitar", "name": "Steel scimitar", "rate": "3/128", "quantity": 1},
+          {"id": "mithril_sq_shield", "name": "Mithril sq shield", "rate": "1/128", "quantity": 1},
+          {"id": "mithril_chainbody", "name": "Mithril chainbody", "rate": "1/128", "quantity": 1},
+          {"id": "rune_med_helm", "name": "Rune med helm", "rate": "1/128", "quantity": 1},
+          {"id": "fire_rune", "name": "Fire rune", "rate": "8/128", "quantity": 60},
+          {"id": "chaos_rune", "name": "Chaos rune", "rate": "5/128", "quantity": 12},
+          {"id": "death_rune", "name": "Death rune", "rate": "3/128", "quantity": 3},
+          {"id": "fire_rune", "name": "Fire rune", "rate": "1/128", "quantity": 30},
+          {"id": "coins", "name": "Coins", "rate": "40/128", "quantity": 120},
+          {"id": "coins", "name": "Coins", "rate": "29/128", "quantity": 40},
+          {"id": "coins", "name": "Coins", "rate": "10/128", "quantity": 200},
+          {"id": "coins", "name": "Coins", "rate": "7/128", "quantity": 10},
+          {"id": "coins", "name": "Coins", "rate": "1/128", "quantity": 450},
+          {"id": "jug_of_wine", "name": "Jug of wine", "rate": "3/128", "quantity": 1},
+          {"id": "gold_ore", "name": "Gold ore", "rate": "2/128", "quantity": 1}
+        ],
+        "herb_table": {
+          "rate": "1/128",
+          "drops": [
+            {"id": "grimy_guam", "name": "Grimy guam leaf", "weight": 1},
+            {"id": "grimy_marrentill", "name": "Grimy marrentill", "weight": 1},
+            {"id": "grimy_tarromin", "name": "Grimy tarromin", "weight": 1},
+            {"id": "grimy_harralander", "name": "Grimy harralander", "weight": 1},
+            {"id": "grimy_ranarr", "name": "Grimy ranarr weed", "weight": 1},
+            {"id": "grimy_irit", "name": "Grimy irit leaf", "weight": 1},
+            {"id": "grimy_avantoe", "name": "Grimy avantoe", "weight": 1},
+            {"id": "grimy_kwuarm", "name": "Grimy kwuarm", "weight": 1},
+            {"id": "grimy_cadantine", "name": "Grimy cadantine", "weight": 1},
+            {"id": "grimy_lantadyme", "name": "Grimy lantadyme", "weight": 1},
+            {"id": "grimy_dwarf_weed", "name": "Grimy dwarf weed", "weight": 1}
+          ]
+        },
+        "gem_table": {
+          "rate": "4/128",
+          "drops": [
+            {"id": "uncut_sapphire", "name": "Uncut sapphire", "weight": 1},
+            {"id": "uncut_emerald", "name": "Uncut emerald", "weight": 1},
+            {"id": "uncut_ruby", "name": "Uncut ruby", "weight": 1},
+            {"id": "chaos_talisman", "name": "Chaos talisman", "weight": 1},
+            {"id": "nature_talisman", "name": "Nature talisman", "weight": 1},
+            {"id": "uncut_diamond", "name": "Uncut diamond", "weight": 1},
+            {"id": "rune_javelin", "name": "Rune javelin", "weight": 1},
+            {"id": "loop_half_key", "name": "Loop half of key", "weight": 1},
+            {"id": "tooth_half_key", "name": "Tooth half of key", "weight": 1},
+            {"id": "rune_spear", "name": "Rune spear", "weight": 1},
+            {"id": "shield_left_half", "name": "Shield left half", "weight": 1},
+            {"id": "dragon_spear", "name": "Dragon spear", "weight": 1}
+          ]
+        },
+        "tertiary": [
+          {"id": "looting_bag", "name": "Looting bag", "rate": "1/3", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "ensouled_demon_head", "name": "Ensouled demon head", "rate": "1/50", "quantity": 1},
+          {"id": "lesser_demon_champion_scroll", "name": "Lesser demon champion scroll", "rate": "1/5000", "quantity": 1},
+          {"id": "ancient_shard", "name": "Ancient shard", "rate": "1/275", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_base", "name": "Dark totem base", "rate": "1/413", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_middle", "name": "Dark totem middle", "rate": "1/413", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_top", "name": "Dark totem top", "rate": "1/413", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "larrans_key", "name": "Larran's key", "rate": "1/98", "quantity": 1, "condition": "Wilderness Slayer only"},
+          {"id": "slayers_enchantment", "name": "Slayer's enchantment", "rate": "1/256", "quantity": 1, "condition": "Wilderness Slayer only"}
+        ]
+      },
+      "locations": [
+        {"name": "Crandor", "x": 3281, "z": 2834, "members": false, "spawns": 2},
+        {"name": "Crandor and Karamja Dungeon", "x": 2838, "z": 9592, "members": false, "spawns": 11},
+        {"name": "Wizards' Tower", "x": 3110, "z": 3159, "members": false, "spawns": 1},
+        {"name": "Wilderness - Lava Maze", "x": 3092, "z": 3867, "members": false, "spawns": 2},
+        {"name": "Taverley Dungeon", "x": 2931, "z": 9803, "members": true, "spawns": 5},
+        {"name": "Chasm of Fire", "x": 1376, "z": 10081, "members": true, "spawns": 9},
+        {"name": "Catacombs of Kourend", "x": 1714, "z": 10069, "members": true, "spawns": 8}
+      ]
+    },
+    {
+      "name": "Hill giant",
+      "npc_ids": [2098, 2099, 2100, 2101, 2102, 2103, 7261, 13502, 13503, 13504],
+      "combat_level": 28,
+      "hitpoints": 35,
+      "slayer_xp": 35.0,
+      "drops": {
+        "always": [
+          {"id": "big_bones", "name": "Big bones", "quantity": 1}
+        ],
+        "main": [
+          {"id": "iron_full_helm", "name": "Iron full helm", "rate": "3/128", "quantity": 1},
+          {"id": "iron_kiteshield", "name": "Iron kiteshield", "rate": "3/128", "quantity": 1},
+          {"id": "steel_axe", "name": "Steel axe", "rate": "3/128", "quantity": 1},
+          {"id": "steel_arrow", "name": "Steel arrow", "rate": "3/128", "quantity": 15},
+          {"id": "law_rune", "name": "Law rune", "rate": "3/128", "quantity": 2},
+          {"id": "water_rune", "name": "Water rune", "rate": "3/128", "quantity": 7},
+          {"id": "fire_rune", "name": "Fire rune", "rate": "3/128", "quantity": 15},
+          {"id": "mind_rune", "name": "Mind rune", "rate": "2/128", "quantity": 3},
+          {"id": "nature_rune", "name": "Nature rune", "rate": "2/128", "quantity": 6},
+          {"id": "chaos_rune", "name": "Chaos rune", "rate": "2/128", "quantity": 2},
+          {"id": "death_rune", "name": "Death rune", "rate": "1/128", "quantity": 2},
+          {"id": "cosmic_rune", "name": "Cosmic rune", "rate": "1/128", "quantity": 2},
+          {"id": "blood_rune", "name": "Blood rune", "rate": "1/128", "quantity": 2},
+          {"id": "coins", "name": "Coins", "rate": "32/128", "quantity": 38},
+          {"id": "coins", "name": "Coins", "rate": "12/128", "quantity": 52},
+          {"id": "coins", "name": "Coins", "rate": "10/128", "quantity": 15},
+          {"id": "coins", "name": "Coins", "rate": "6/128", "quantity": 8},
+          {"id": "coins", "name": "Coins", "rate": "5/128", "quantity": 88},
+          {"id": "limpwurt_root", "name": "Limpwurt root", "rate": "22/128", "quantity": 1},
+          {"id": "beer", "name": "Beer", "rate": "3/128", "quantity": 1},
+          {"id": "body_talisman", "name": "Body talisman", "rate": "2/128", "quantity": 1},
+          {"id": "giant_key", "name": "Giant key", "rate": "1/128", "quantity": 1}
+        ],
+        "herb_table": {
+          "rate": "3/128",
+          "drops": [
+            {"id": "grimy_guam", "name": "Grimy guam leaf", "weight": 1},
+            {"id": "grimy_marrentill", "name": "Grimy marrentill", "weight": 1},
+            {"id": "grimy_tarromin", "name": "Grimy tarromin", "weight": 1},
+            {"id": "grimy_harralander", "name": "Grimy harralander", "weight": 1},
+            {"id": "grimy_ranarr", "name": "Grimy ranarr weed", "weight": 1},
+            {"id": "grimy_irit", "name": "Grimy irit leaf", "weight": 1},
+            {"id": "grimy_avantoe", "name": "Grimy avantoe", "weight": 1},
+            {"id": "grimy_kwuarm", "name": "Grimy kwuarm", "weight": 1},
+            {"id": "grimy_cadantine", "name": "Grimy cadantine", "weight": 1},
+            {"id": "grimy_lantadyme", "name": "Grimy lantadyme", "weight": 1},
+            {"id": "grimy_dwarf_weed", "name": "Grimy dwarf weed", "weight": 1}
+          ]
+        },
+        "gem_table": {
+          "rate": "5/128",
+          "drops": [
+            {"id": "uncut_sapphire", "name": "Uncut sapphire", "weight": 1},
+            {"id": "uncut_emerald", "name": "Uncut emerald", "weight": 1},
+            {"id": "uncut_ruby", "name": "Uncut ruby", "weight": 1},
+            {"id": "chaos_talisman", "name": "Chaos talisman", "weight": 1},
+            {"id": "nature_talisman", "name": "Nature talisman", "weight": 1},
+            {"id": "uncut_diamond", "name": "Uncut diamond", "weight": 1},
+            {"id": "rune_javelin", "name": "Rune javelin", "weight": 1},
+            {"id": "loop_half_key", "name": "Loop half of key", "weight": 1},
+            {"id": "tooth_half_key", "name": "Tooth half of key", "weight": 1},
+            {"id": "rune_spear", "name": "Rune spear", "weight": 1},
+            {"id": "shield_left_half", "name": "Shield left half", "weight": 1},
+            {"id": "dragon_spear", "name": "Dragon spear", "weight": 1}
+          ]
+        },
+        "tertiary": [
+          {"id": "looting_bag", "name": "Looting bag", "rate": "1/3", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "hill_giant_bone", "name": "Hill giant bone", "rate": "1/4", "quantity": 1, "condition": "Rag and Bone Man II only"},
+          {"id": "ensouled_giant_head", "name": "Ensouled giant head", "rate": "1/21", "quantity": 1},
+          {"id": "clue_scroll_beginner", "name": "Clue scroll (beginner)", "rate": "1/40", "quantity": 1},
+          {"id": "long_bone", "name": "Long bone", "rate": "1/400", "quantity": 1},
+          {"id": "giant_champion_scroll", "name": "Giant champion scroll", "rate": "1/5000", "quantity": 1},
+          {"id": "curved_bone", "name": "Curved bone", "rate": "1/5012", "quantity": 1},
+          {"id": "ancient_shard", "name": "Ancient shard", "rate": "1/293", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_base", "name": "Dark totem base", "rate": "1/440", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_middle", "name": "Dark totem middle", "rate": "1/440", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_top", "name": "Dark totem top", "rate": "1/440", "quantity": 1, "condition": "Catacombs of Kourend only"}
+        ]
+      },
+      "locations": [
+        {"name": "Edgeville Dungeon", "x": 3118, "z": 9850, "members": false, "spawns": 5},
+        {"name": "Wilderness - Deep", "x": 3045, "z": 10314, "members": false, "spawns": 6},
+        {"name": "Gnome Stronghold", "x": 2401, "z": 3504, "members": true, "spawns": 2},
+        {"name": "Lava Maze Dungeon", "x": 3030, "z": 10240, "members": true, "spawns": 4},
+        {"name": "Catacombs of Kourend", "x": 1665, "z": 10033, "members": true, "spawns": 8}
+      ]
+    },
+    {
+      "name": "Ice giant",
+      "npc_ids": [2085, 2086, 2087, 2088, 2089, 7878, 7879, 7880, 13796, 13797],
+      "combat_level": 53,
+      "hitpoints": 70,
+      "slayer_xp": 70.0,
+      "drops": {
+        "always": [
+          {"id": "big_bones", "name": "Big bones", "quantity": 1}
+        ],
+        "main": [
+          {"id": "iron_2h_sword", "name": "Iron 2h sword", "rate": "4/128", "quantity": 1},
+          {"id": "black_kiteshield", "name": "Black kiteshield", "rate": "3/128", "quantity": 1},
+          {"id": "steel_axe", "name": "Steel axe", "rate": "3/128", "quantity": 1},
+          {"id": "steel_scimitar", "name": "Steel scimitar", "rate": "3/128", "quantity": 1},
+          {"id": "adamant_arrow", "name": "Adamant arrow", "rate": "3/128", "quantity": 5},
+          {"id": "nature_rune", "name": "Nature rune", "rate": "3/128", "quantity": 4},
+          {"id": "law_rune", "name": "Law rune", "rate": "3/128", "quantity": 3},
+          {"id": "chaos_rune", "name": "Chaos rune", "rate": "3/128", "quantity": 4},
+          {"id": "water_rune", "name": "Water rune", "rate": "3/128", "quantity": 6},
+          {"id": "mind_rune", "name": "Mind rune", "rate": "3/128", "quantity": 24},
+          {"id": "death_rune", "name": "Death rune", "rate": "2/128", "quantity": 3},
+          {"id": "cosmic_rune", "name": "Cosmic rune", "rate": "2/128", "quantity": 4},
+          {"id": "blood_rune", "name": "Blood rune", "rate": "1/128", "quantity": 2},
+          {"id": "coins", "name": "Coins", "rate": "40/128", "quantity": 117},
+          {"id": "coins", "name": "Coins", "rate": "10/128", "quantity": 53},
+          {"id": "coins", "name": "Coins", "rate": "7/128", "quantity": 196},
+          {"id": "coins", "name": "Coins", "rate": "2/128", "quantity": 8},
+          {"id": "jug_of_wine", "name": "Jug of wine", "rate": "2/128", "quantity": 1},
+          {"id": "mithril_sq_shield", "name": "Mithril sq shield", "rate": "1/128", "quantity": 1},
+          {"id": "adamant_axe", "name": "Adamant axe", "rate": "1/128", "quantity": 1}
+        ],
+        "herb_table": {
+          "rate": "3/128",
+          "drops": [
+            {"id": "grimy_guam", "name": "Grimy guam leaf", "weight": 1},
+            {"id": "grimy_marrentill", "name": "Grimy marrentill", "weight": 1},
+            {"id": "grimy_tarromin", "name": "Grimy tarromin", "weight": 1},
+            {"id": "grimy_harralander", "name": "Grimy harralander", "weight": 1},
+            {"id": "grimy_ranarr", "name": "Grimy ranarr weed", "weight": 1},
+            {"id": "grimy_irit", "name": "Grimy irit leaf", "weight": 1},
+            {"id": "grimy_avantoe", "name": "Grimy avantoe", "weight": 1},
+            {"id": "grimy_kwuarm", "name": "Grimy kwuarm", "weight": 1},
+            {"id": "grimy_cadantine", "name": "Grimy cadantine", "weight": 1},
+            {"id": "grimy_lantadyme", "name": "Grimy lantadyme", "weight": 1},
+            {"id": "grimy_dwarf_weed", "name": "Grimy dwarf weed", "weight": 1}
+          ]
+        },
+        "gem_table": {
+          "rate": "4/128",
+          "drops": [
+            {"id": "uncut_sapphire", "name": "Uncut sapphire", "weight": 1},
+            {"id": "uncut_emerald", "name": "Uncut emerald", "weight": 1},
+            {"id": "uncut_ruby", "name": "Uncut ruby", "weight": 1},
+            {"id": "chaos_talisman", "name": "Chaos talisman", "weight": 1},
+            {"id": "nature_talisman", "name": "Nature talisman", "weight": 1},
+            {"id": "uncut_diamond", "name": "Uncut diamond", "weight": 1},
+            {"id": "rune_javelin", "name": "Rune javelin", "weight": 1},
+            {"id": "loop_half_key", "name": "Loop half of key", "weight": 1},
+            {"id": "tooth_half_key", "name": "Tooth half of key", "weight": 1},
+            {"id": "rune_spear", "name": "Rune spear", "weight": 1},
+            {"id": "shield_left_half", "name": "Shield left half", "weight": 1},
+            {"id": "dragon_spear", "name": "Dragon spear", "weight": 1}
+          ]
+        },
+        "tertiary": [
+          {"id": "looting_bag", "name": "Looting bag", "rate": "1/3", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "ice_giant_ribs", "name": "Ice giant ribs", "rate": "1/4", "quantity": 1, "condition": "Rag and Bone Man II only"},
+          {"id": "clue_scroll_easy", "name": "Clue scroll (easy)", "rate": "1/128", "quantity": 1},
+          {"id": "long_bone", "name": "Long bone", "rate": "1/400", "quantity": 1},
+          {"id": "giant_champion_scroll", "name": "Giant champion scroll", "rate": "1/5000", "quantity": 1},
+          {"id": "curved_bone", "name": "Curved bone", "rate": "1/5012", "quantity": 1}
+        ]
+      },
+      "locations": [
+        {"name": "Wilderness - Ice Plateau", "x": 2960, "z": 3900, "members": false, "spawns": 6},
+        {"name": "Asgarnian Ice Dungeon", "x": 3020, "z": 9573, "members": false, "spawns": 11},
+        {"name": "White Wolf Mountain", "x": 2846, "z": 3508, "members": true, "spawns": 4},
+        {"name": "Frozen Waste Plateau", "x": 2960, "z": 3900, "members": true, "spawns": 6}
+      ]
+    },
+    {
+      "name": "Fire giant",
+      "npc_ids": [2075, 2076, 2077, 2078, 2079, 2080, 2081, 2082, 2083, 2084, 7251, 7252],
+      "combat_level": 86,
+      "hitpoints": 111,
+      "slayer_xp": 111.0,
+      "drops": {
+        "always": [
+          {"id": "big_bones", "name": "Big bones", "quantity": 1}
+        ],
+        "main": [
+          {"id": "steel_axe", "name": "Steel axe", "rate": "4/128", "quantity": 1},
+          {"id": "steel_scimitar", "name": "Steel scimitar", "rate": "4/128", "quantity": 1},
+          {"id": "steel_arrow", "name": "Steel arrow", "rate": "4/128", "quantity": 150},
+          {"id": "rune_scimitar", "name": "Rune scimitar", "rate": "3/128", "quantity": 1},
+          {"id": "fire_battlestaff", "name": "Fire battlestaff", "rate": "2/128", "quantity": 1},
+          {"id": "rune_2h_sword", "name": "Rune 2h sword", "rate": "1/128", "quantity": 1},
+          {"id": "adamant_sq_shield", "name": "Adamant sq shield", "rate": "1/128", "quantity": 1},
+          {"id": "brimstone_key", "name": "Brimstone key", "rate": "1/95", "quantity": 1, "condition": "Konar Slayer only"},
+          {"id": "fire_rune", "name": "Fire rune", "rate": "5/128", "quantity": 100},
+          {"id": "fire_rune", "name": "Fire rune", "rate": "5/128", "quantity": 300},
+          {"id": "chaos_rune", "name": "Chaos rune", "rate": "5/128", "quantity": 15},
+          {"id": "law_rune", "name": "Law rune", "rate": "3/128", "quantity": 5},
+          {"id": "blood_rune", "name": "Blood rune", "rate": "2/128", "quantity": 10},
+          {"id": "coins", "name": "Coins", "rate": "40/128", "quantity": 60},
+          {"id": "coins", "name": "Coins", "rate": "20/128", "quantity": 15},
+          {"id": "coins", "name": "Coins", "rate": "19/128", "quantity": 25},
+          {"id": "coins", "name": "Coins", "rate": "10/128", "quantity": 300},
+          {"id": "coins", "name": "Coins", "rate": "7/128", "quantity": 50},
+          {"id": "lobster", "name": "Lobster", "rate": "3/128", "quantity": 1},
+          {"id": "steel_bar", "name": "Steel bar", "rate": "2/128", "quantity": 1}
+        ],
+        "herb_table": {
+          "rate": "4/128",
+          "drops": [
+            {"id": "grimy_guam", "name": "Grimy guam leaf", "weight": 1},
+            {"id": "grimy_marrentill", "name": "Grimy marrentill", "weight": 1},
+            {"id": "grimy_tarromin", "name": "Grimy tarromin", "weight": 1},
+            {"id": "grimy_harralander", "name": "Grimy harralander", "weight": 1},
+            {"id": "grimy_ranarr", "name": "Grimy ranarr weed", "weight": 1},
+            {"id": "grimy_irit", "name": "Grimy irit leaf", "weight": 1},
+            {"id": "grimy_avantoe", "name": "Grimy avantoe", "weight": 1},
+            {"id": "grimy_kwuarm", "name": "Grimy kwuarm", "weight": 1},
+            {"id": "grimy_cadantine", "name": "Grimy cadantine", "weight": 1},
+            {"id": "grimy_lantadyme", "name": "Grimy lantadyme", "weight": 1},
+            {"id": "grimy_dwarf_weed", "name": "Grimy dwarf weed", "weight": 1}
+          ]
+        },
+        "gem_table": {
+          "rate": "4/128",
+          "drops": [
+            {"id": "uncut_sapphire", "name": "Uncut sapphire", "weight": 1},
+            {"id": "uncut_emerald", "name": "Uncut emerald", "weight": 1},
+            {"id": "uncut_ruby", "name": "Uncut ruby", "weight": 1},
+            {"id": "chaos_talisman", "name": "Chaos talisman", "weight": 1},
+            {"id": "nature_talisman", "name": "Nature talisman", "weight": 1},
+            {"id": "uncut_diamond", "name": "Uncut diamond", "weight": 1},
+            {"id": "rune_javelin", "name": "Rune javelin", "weight": 1},
+            {"id": "loop_half_key", "name": "Loop half of key", "weight": 1},
+            {"id": "tooth_half_key", "name": "Tooth half of key", "weight": 1},
+            {"id": "rune_spear", "name": "Rune spear", "weight": 1},
+            {"id": "shield_left_half", "name": "Shield left half", "weight": 1},
+            {"id": "dragon_spear", "name": "Dragon spear", "weight": 1}
+          ]
+        },
+        "tertiary": [
+          {"id": "looting_bag", "name": "Looting bag", "rate": "1/3", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "clue_scroll_hard", "name": "Clue scroll (hard)", "rate": "1/128", "quantity": 1},
+          {"id": "mysterious_emblem", "name": "Mysterious emblem", "rate": "1/90", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "slayers_enchantment", "name": "Slayer's enchantment", "rate": "1/304", "quantity": 1, "condition": "Wilderness Slayer only"}
+        ]
+      },
+      "locations": [
+        {"name": "Waterfall Dungeon", "x": 2574, "z": 9863, "members": true, "spawns": 11},
+        {"name": "Stronghold Slayer Cave", "x": 2433, "z": 9782, "members": true, "spawns": 12},
+        {"name": "Brimhaven Dungeon", "x": 2660, "z": 9484, "members": true, "spawns": 13},
+        {"name": "Catacombs of Kourend", "x": 1645, "z": 10056, "members": true, "spawns": 8},
+        {"name": "Karluum Slayer Dungeon", "x": 1320, "z": 10192, "members": true, "spawns": 6},
+        {"name": "Giants' Den", "x": 1425, "z": 9870, "members": true, "spawns": 5},
+        {"name": "Wilderness Slayer Cave", "x": 3365, "z": 10156, "members": true, "spawns": 5}
+      ]
+    },
+    {
+      "name": "Greater demon",
+      "npc_ids": [2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 7244, 7245, 7246, 7874, 7875, 7876],
+      "combat_level": 92,
+      "hitpoints": 87,
+      "slayer_xp": 87.0,
+      "drops": {
+        "always": [
+          {"id": "vile_ashes", "name": "Vile ashes", "quantity": 1}
+        ],
+        "main": [
+          {"id": "rune_full_helm", "name": "Rune full helm", "rate": "4/128", "quantity": 1},
+          {"id": "steel_axe", "name": "Steel axe", "rate": "4/128", "quantity": 1},
+          {"id": "steel_scimitar", "name": "Steel scimitar", "rate": "3/128", "quantity": 1},
+          {"id": "adamant_platelegs", "name": "Adamant platelegs", "rate": "2/128", "quantity": 1},
+          {"id": "adamant_sq_shield", "name": "Adamant sq shield", "rate": "1/128", "quantity": 1},
+          {"id": "rune_chainbody", "name": "Rune chainbody", "rate": "1/128", "quantity": 1},
+          {"id": "mithril_kiteshield", "name": "Mithril kiteshield", "rate": "1/128", "quantity": 1},
+          {"id": "fire_rune", "name": "Fire rune", "rate": "10/128", "quantity": 75},
+          {"id": "chaos_rune", "name": "Chaos rune", "rate": "10/128", "quantity": 15},
+          {"id": "death_rune", "name": "Death rune", "rate": "5/128", "quantity": 5},
+          {"id": "law_rune", "name": "Law rune", "rate": "3/128", "quantity": 3},
+          {"id": "blood_rune", "name": "Blood rune", "rate": "3/128", "quantity": 10},
+          {"id": "coins", "name": "Coins", "rate": "40/128", "quantity": 132},
+          {"id": "coins", "name": "Coins", "rate": "19/128", "quantity": 44},
+          {"id": "coins", "name": "Coins", "rate": "10/128", "quantity": 220},
+          {"id": "coins", "name": "Coins", "rate": "7/128", "quantity": 11},
+          {"id": "jug_of_wine", "name": "Jug of wine", "rate": "3/128", "quantity": 1},
+          {"id": "lobster", "name": "Lobster", "rate": "2/128", "quantity": 1},
+          {"id": "gold_ore", "name": "Gold ore", "rate": "2/128", "quantity": 1}
+        ],
+        "herb_table": {
+          "rate": "2/128",
+          "drops": [
+            {"id": "grimy_guam", "name": "Grimy guam leaf", "weight": 1},
+            {"id": "grimy_marrentill", "name": "Grimy marrentill", "weight": 1},
+            {"id": "grimy_tarromin", "name": "Grimy tarromin", "weight": 1},
+            {"id": "grimy_harralander", "name": "Grimy harralander", "weight": 1},
+            {"id": "grimy_ranarr", "name": "Grimy ranarr weed", "weight": 1},
+            {"id": "grimy_irit", "name": "Grimy irit leaf", "weight": 1},
+            {"id": "grimy_avantoe", "name": "Grimy avantoe", "weight": 1},
+            {"id": "grimy_kwuarm", "name": "Grimy kwuarm", "weight": 1},
+            {"id": "grimy_cadantine", "name": "Grimy cadantine", "weight": 1},
+            {"id": "grimy_lantadyme", "name": "Grimy lantadyme", "weight": 1},
+            {"id": "grimy_dwarf_weed", "name": "Grimy dwarf weed", "weight": 1}
+          ]
+        },
+        "gem_table": {
+          "rate": "4/128",
+          "drops": [
+            {"id": "uncut_sapphire", "name": "Uncut sapphire", "weight": 1},
+            {"id": "uncut_emerald", "name": "Uncut emerald", "weight": 1},
+            {"id": "uncut_ruby", "name": "Uncut ruby", "weight": 1},
+            {"id": "chaos_talisman", "name": "Chaos talisman", "weight": 1},
+            {"id": "nature_talisman", "name": "Nature talisman", "weight": 1},
+            {"id": "uncut_diamond", "name": "Uncut diamond", "weight": 1},
+            {"id": "rune_javelin", "name": "Rune javelin", "weight": 1},
+            {"id": "loop_half_key", "name": "Loop half of key", "weight": 1},
+            {"id": "tooth_half_key", "name": "Tooth half of key", "weight": 1},
+            {"id": "rune_spear", "name": "Rune spear", "weight": 1},
+            {"id": "shield_left_half", "name": "Shield left half", "weight": 1},
+            {"id": "dragon_spear", "name": "Dragon spear", "weight": 1}
+          ]
+        },
+        "tertiary": [
+          {"id": "looting_bag", "name": "Looting bag", "rate": "1/3", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "ensouled_demon_head", "name": "Ensouled demon head", "rate": "1/40", "quantity": 1},
+          {"id": "clue_scroll_hard", "name": "Clue scroll (hard)", "rate": "1/128", "quantity": 1},
+          {"id": "ancient_shard", "name": "Ancient shard", "rate": "1/233", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_base", "name": "Dark totem base", "rate": "1/350", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_middle", "name": "Dark totem middle", "rate": "1/350", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_top", "name": "Dark totem top", "rate": "1/350", "quantity": 1, "condition": "Catacombs of Kourend only"}
+        ]
+      },
+      "locations": [
+        {"name": "Wilderness - Lava Maze", "x": 3024, "z": 3832, "members": false, "spawns": 3},
+        {"name": "Demonic Ruins", "x": 3284, "z": 3884, "members": false, "spawns": 5},
+        {"name": "Entrana Dungeon", "x": 2829, "z": 9755, "members": true, "spawns": 6},
+        {"name": "Ogre Enclave", "x": 2504, "z": 9445, "members": true, "spawns": 5},
+        {"name": "Catacombs of Kourend", "x": 1715, "z": 10078, "members": true, "spawns": 9},
+        {"name": "Chasm of Fire", "x": 1450, "z": 10089, "members": true, "spawns": 12},
+        {"name": "Karuulm Slayer Dungeon", "x": 1320, "z": 10208, "members": true, "spawns": 8},
+        {"name": "Wilderness Slayer Cave", "x": 3355, "z": 10180, "members": true, "spawns": 4}
+      ]
+    },
+    {
+      "name": "Black demon",
+      "npc_ids": [2048, 2049, 2050, 2051, 2052, 240, 5874, 5875, 5876, 5877, 5878, 5879, 5880, 5881, 5882, 7242, 7243, 7872, 7873],
+      "combat_level": 172,
+      "hitpoints": 157,
+      "slayer_xp": 157.0,
+      "drops": {
+        "always": [
+          {"id": "infernal_ashes", "name": "Infernal ashes", "quantity": 1}
+        ],
+        "main": [
+          {"id": "black_sword", "name": "Black sword", "rate": "4/128", "quantity": 1},
+          {"id": "steel_scimitar", "name": "Steel scimitar", "rate": "4/128", "quantity": 1},
+          {"id": "black_axe", "name": "Black axe", "rate": "3/128", "quantity": 1},
+          {"id": "mithril_sq_shield", "name": "Mithril sq shield", "rate": "3/128", "quantity": 1},
+          {"id": "rune_med_helm", "name": "Rune med helm", "rate": "3/128", "quantity": 1},
+          {"id": "rune_chainbody", "name": "Rune chainbody", "rate": "2/128", "quantity": 1},
+          {"id": "adamant_scimitar", "name": "Adamant scimitar", "rate": "2/128", "quantity": 1},
+          {"id": "rune_scimitar", "name": "Rune scimitar", "rate": "1/128", "quantity": 1},
+          {"id": "rune_sq_shield", "name": "Rune sq shield", "rate": "1/128", "quantity": 1},
+          {"id": "chaos_rune", "name": "Chaos rune", "rate": "10/128", "quantity": 10},
+          {"id": "death_rune", "name": "Death rune", "rate": "10/128", "quantity": 10},
+          {"id": "law_rune", "name": "Law rune", "rate": "7/128", "quantity": 10},
+          {"id": "blood_rune", "name": "Blood rune", "rate": "5/128", "quantity": 10},
+          {"id": "soul_rune", "name": "Soul rune", "rate": "2/128", "quantity": 10},
+          {"id": "coins", "name": "Coins", "rate": "40/128", "quantity": 196},
+          {"id": "coins", "name": "Coins", "rate": "20/128", "quantity": 66},
+          {"id": "coins", "name": "Coins", "rate": "10/128", "quantity": 330},
+          {"id": "coins", "name": "Coins", "rate": "4/128", "quantity": 16},
+          {"id": "lobster", "name": "Lobster", "rate": "3/128", "quantity": 1},
+          {"id": "adamantite_bar", "name": "Adamantite bar", "rate": "2/128", "quantity": 1}
+        ],
+        "herb_table": {
+          "rate": "2/128",
+          "drops": [
+            {"id": "grimy_guam", "name": "Grimy guam leaf", "weight": 1},
+            {"id": "grimy_marrentill", "name": "Grimy marrentill", "weight": 1},
+            {"id": "grimy_tarromin", "name": "Grimy tarromin", "weight": 1},
+            {"id": "grimy_harralander", "name": "Grimy harralander", "weight": 1},
+            {"id": "grimy_ranarr", "name": "Grimy ranarr weed", "weight": 1},
+            {"id": "grimy_irit", "name": "Grimy irit leaf", "weight": 1},
+            {"id": "grimy_avantoe", "name": "Grimy avantoe", "weight": 1},
+            {"id": "grimy_kwuarm", "name": "Grimy kwuarm", "weight": 1},
+            {"id": "grimy_cadantine", "name": "Grimy cadantine", "weight": 1},
+            {"id": "grimy_lantadyme", "name": "Grimy lantadyme", "weight": 1},
+            {"id": "grimy_dwarf_weed", "name": "Grimy dwarf weed", "weight": 1}
+          ]
+        },
+        "gem_table": {
+          "rate": "4/128",
+          "drops": [
+            {"id": "uncut_sapphire", "name": "Uncut sapphire", "weight": 1},
+            {"id": "uncut_emerald", "name": "Uncut emerald", "weight": 1},
+            {"id": "uncut_ruby", "name": "Uncut ruby", "weight": 1},
+            {"id": "chaos_talisman", "name": "Chaos talisman", "weight": 1},
+            {"id": "nature_talisman", "name": "Nature talisman", "weight": 1},
+            {"id": "uncut_diamond", "name": "Uncut diamond", "weight": 1},
+            {"id": "rune_javelin", "name": "Rune javelin", "weight": 1},
+            {"id": "loop_half_key", "name": "Loop half of key", "weight": 1},
+            {"id": "tooth_half_key", "name": "Tooth half of key", "weight": 1},
+            {"id": "rune_spear", "name": "Rune spear", "weight": 1},
+            {"id": "shield_left_half", "name": "Shield left half", "weight": 1},
+            {"id": "dragon_spear", "name": "Dragon spear", "weight": 1}
+          ]
+        },
+        "tertiary": [
+          {"id": "looting_bag", "name": "Looting bag", "rate": "1/3", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "ensouled_demon_head", "name": "Ensouled demon head", "rate": "1/20", "quantity": 1},
+          {"id": "clue_scroll_hard", "name": "Clue scroll (hard)", "rate": "1/128", "quantity": 1},
+          {"id": "ancient_shard", "name": "Ancient shard", "rate": "1/143", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_base", "name": "Dark totem base", "rate": "1/215", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_middle", "name": "Dark totem middle", "rate": "1/215", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "dark_totem_top", "name": "Dark totem top", "rate": "1/215", "quantity": 1, "condition": "Catacombs of Kourend only"},
+          {"id": "mysterious_emblem", "name": "Mysterious emblem", "rate": "1/51", "quantity": 1, "condition": "Wilderness only"},
+          {"id": "slayers_enchantment", "name": "Slayer's enchantment", "rate": "1/232", "quantity": 1, "condition": "Wilderness Slayer only"}
+        ]
+      },
+      "locations": [
+        {"name": "Taverley Dungeon", "x": 2843, "z": 9818, "members": true, "spawns": 10},
+        {"name": "Edgeville Dungeon", "x": 3089, "z": 9971, "members": true, "spawns": 4},
+        {"name": "Brimhaven Dungeon", "x": 2639, "z": 9515, "members": true, "spawns": 7},
+        {"name": "Catacombs of Kourend", "x": 1635, "z": 10066, "members": true, "spawns": 11},
+        {"name": "Chasm of Fire", "x": 1435, "z": 10094, "members": true, "spawns": 14},
+        {"name": "Wilderness Slayer Cave", "x": 3350, "z": 10205, "members": true, "spawns": 6}
+      ]
+    }
+  ],
+  "metadata": {
+    "source": "OSRS Wiki",
+    "last_updated": "2026-02-25",
+    "drop_rate_verification": "Jagex-provided rates from OSRS Wiki",
+    "notes": [
+      "Drop rates are provided as fractions (e.g., 5/128) where the denominator is typically 128 for main drops",
+      "Herb and seed tables use weighted systems within their own sub-tables",
+      "Gem drop table is a nested table with 1/64 base chance for sapphire, scaling up for rarer gems",
+      "Tertiary drops roll independently of main drop table",
+      "Some drops are location-conditional (Wilderness, Catacombs, etc.)"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "project": "RSMod v2 OSRS Rev 233 Data Extraction",
+  "generated_at": "2026-02-22T15:22:46-08:00",
+  "root": "wiki-data/",
+  "summary": {
+    "total_files": 88,
+    "total_json": 75,
+    "total_md": 12,
+    "total_size_bytes": 948986.0,
+    "total_size_mb": 0.905
+  },
+  "quality": {
+    "malformed_json_count": 0,
+    "malformed_json_files": []
+  },
+  "directories": [
+    {
+      "name": "_archive",
+      "files": 1,
+      "json": 1,
+      "md": 0,
+      "size_bytes": 9501.0
+    },
+    {
+      "name": "_quarantine",
+      "files": 1,
+      "json": 0,
+      "md": 0,
+      "size_bytes": 8133.0
+    },
+    {
+      "name": "achievements",
+      "files": 0,
+      "json": 0,
+      "md": 0,
+      "size_bytes": null
+    },
+    {
+      "name": "audio",
+      "files": 1,
+      "json": 1,
+      "md": 0,
+      "size_bytes": 16831.0
+    },
+    {
+      "name": "items",
+      "files": 1,
+      "json": 1,
+      "md": 0,
+      "size_bytes": 13075.0
+    },
+    {
+      "name": "locations",
+      "files": 1,
+      "json": 1,
+      "md": 0,
+      "size_bytes": 7266.0
+    },
+    {
+      "name": "mechanics",
+      "files": 6,
+      "json": 6,
+      "md": 0,
+      "size_bytes": 78333.0
+    },
+    {
+      "name": "monsters",
+      "files": 41,
+      "json": 41,
+      "md": 0,
+      "size_bytes": 322569.0
+    },
+    {
+      "name": "objects",
+      "files": 0,
+      "json": 0,
+      "md": 0,
+      "size_bytes": null
+    },
+    {
+      "name": "quests",
+      "files": 1,
+      "json": 1,
+      "md": 0,
+      "size_bytes": 16690.0
+    },
+    {
+      "name": "references",
+      "files": 6,
+      "json": 0,
+      "md": 6,
+      "size_bytes": 126978.0
+    },
+    {
+      "name": "shops",
+      "files": 1,
+      "json": 1,
+      "md": 0,
+      "size_bytes": 27836.0
+    },
+    {
+      "name": "skills",
+      "files": 21,
+      "json": 21,
+      "md": 0,
+      "size_bytes": 285010.0
+    }
+  ],
+  "notes": [
+    "Canonical mining dataset is wiki-data/skills/mining-complete.json; legacy root copy moved to wiki-data/_archive/legacy_root_files/mining-complete.legacy.json.",
+    "Malformed key-objects payload moved to wiki-data/_quarantine/key-objects.json.malformed.",
+    "Duplicate nested monster copies removed from wiki-data/monsters/monsters/.",
+    "Run scripts/wiki-data-lint.ps1 after new scrapes."
+  ]
+}

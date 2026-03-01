@@ -1,0 +1,445 @@
+{
+  "skill": "herblore",
+  "revision": 233,
+  "description": "Comprehensive Herblore skill data for OSRS Rev 233",
+  
+  "herbs": {
+    "guam": {
+      "name": "Guam leaf",
+      "cleaned_id": 249,
+      "unidentified_id": 199,
+      "level_req": 3,
+      "xp_clean": 2.5
+    },
+    "marrentill": {
+      "name": "Marrentill",
+      "cleaned_id": 251,
+      "unidentified_id": 201,
+      "level_req": 5,
+      "xp_clean": 3.8
+    },
+    "tarromin": {
+      "name": "Tarromin",
+      "cleaned_id": 253,
+      "unidentified_id": 203,
+      "level_req": 11,
+      "xp_clean": 5.0
+    },
+    "harralander": {
+      "name": "Harralander",
+      "cleaned_id": 255,
+      "unidentified_id": 205,
+      "level_req": 20,
+      "xp_clean": 6.3
+    },
+    "ranarr": {
+      "name": "Ranarr weed",
+      "cleaned_id": 257,
+      "unidentified_id": 207,
+      "level_req": 25,
+      "xp_clean": 7.5
+    },
+    "toadflax": {
+      "name": "Toadflax",
+      "cleaned_id": 2998,
+      "unidentified_id": 3049,
+      "level_req": 30,
+      "xp_clean": 8.0
+    },
+    "irit": {
+      "name": "Irit leaf",
+      "cleaned_id": 259,
+      "unidentified_id": 209,
+      "level_req": 40,
+      "xp_clean": 8.8
+    },
+    "avantoe": {
+      "name": "Avantoe",
+      "cleaned_id": 261,
+      "unidentified_id": 211,
+      "level_req": 48,
+      "xp_clean": 10.0
+    },
+    "kwuarm": {
+      "name": "Kwuarm",
+      "cleaned_id": 263,
+      "unidentified_id": 213,
+      "level_req": 54,
+      "xp_clean": 11.3
+    },
+    "snapdragon": {
+      "name": "Snapdragon",
+      "cleaned_id": 3000,
+      "unidentified_id": 3051,
+      "level_req": 59,
+      "xp_clean": 11.8
+    },
+    "cadantine": {
+      "name": "Cadantine",
+      "cleaned_id": 265,
+      "unidentified_id": 215,
+      "level_req": 65,
+      "xp_clean": 12.5
+    },
+    "lantadyme": {
+      "name": "Lantadyme",
+      "cleaned_id": 2481,
+      "unidentified_id": 2485,
+      "level_req": 67,
+      "xp_clean": 13.1
+    },
+    "dwarf_weed": {
+      "name": "Dwarf weed",
+      "cleaned_id": 267,
+      "unidentified_id": 217,
+      "level_req": 70,
+      "xp_clean": 13.8
+    },
+    "torstol": {
+      "name": "Torstol",
+      "cleaned_id": 269,
+      "unidentified_id": 219,
+      "level_req": 75,
+      "xp_clean": 15.0
+    }
+  },
+
+  "secondary_ingredients": {
+    "eye_of_newt": {
+      "name": "Eye of newt",
+      "id": 221,
+      "obtain_method": "Purchase from Herblore shops or monster drops"
+    },
+    "limpwurt_root": {
+      "name": "Limpwurt root",
+      "id": 225,
+      "obtain_method": "Hobgoblin drops, farming"
+    },
+    "vial_of_water": {
+      "name": "Vial of water",
+      "id": 227,
+      "obtain_method": "Fill vials at water sources"
+    },
+    "snape_grass": {
+      "name": "Snape grass",
+      "id": 231,
+      "obtain_method": "Spawn on Waterbirth Island, farming"
+    },
+    "unicorn_horn_dust": {
+      "name": "Unicorn horn dust",
+      "id": 235,
+      "obtain_method": "Grind unicorn horns with pestle and mortar"
+    },
+    "unicorn_horn": {
+      "name": "Unicorn horn",
+      "id": 237,
+      "obtain_method": "Unicorn drops"
+    },
+    "white_berries": {
+      "name": "White berries",
+      "id": 239,
+      "obtain_method": "Red dragon isle, farming"
+    },
+    "dragon_scale_dust": {
+      "name": "Dragon scale dust",
+      "id": 241,
+      "obtain_method": "Grind blue dragon scales with pestle and mortar"
+    },
+    "blue_dragon_scale": {
+      "name": "Blue dragon scale",
+      "id": 243,
+      "obtain_method": "Blue dragon drops, Taverley Dungeon"
+    },
+    "jangerberries": {
+      "name": "Jangerberries",
+      "id": 247,
+      "obtain_method": "Ogre area west of Yanille, farming"
+    },
+    "toads_legs": {
+      "name": "Toad's legs",
+      "id": 2152,
+      "obtain_method": "Remove from swamp toads in Tree Gnome Stronghold"
+    },
+    "chocolate_dust": {
+      "name": "Chocolate dust",
+      "id": 1975,
+      "obtain_method": "Grind chocolate bar with pestle and mortar"
+    },
+    "yew_roots": {
+      "name": "Yew roots",
+      "id": 6049,
+      "obtain_method": "Yew tree farming, root digging"
+    },
+    "crushed_nest": {
+      "name": "Crushed nest",
+      "id": 6693,
+      "obtain_method": "Grind bird nests with pestle and mortar"
+    },
+    "desert_goat_horn": {
+      "name": "Desert goat horn",
+      "id": 9735,
+      "obtain_method": "Desert goat drops"
+    },
+    "ground_desert_goat_horn": {
+      "name": "Goat horn dust",
+      "id": 9736,
+      "obtain_method": "Grind desert goat horns with pestle and mortar"
+    },
+    "amylase": {
+      "name": "Amylase crystal",
+      "id": 12640,
+      "obtain_method": "Barbarian Assault reward"
+    },
+    "silver_dust": {
+      "name": "Silver dust",
+      "id": 7650,
+      "obtain_method": "Grind silver ore with pestle and mortar (after quest)"
+    },
+    "vial_coconut_milk": {
+      "name": "Coconut milk",
+      "id": 5935,
+      "obtain_method": "Crack open coconuts from palm trees"
+    }
+  },
+
+  "potions": {
+    "attack_potion": {
+      "name": "Attack potion",
+      "level_req": 3,
+      "xp": 25.0,
+      "primary_ingredient": "guam",
+      "secondary_ingredient": "eye_of_newt",
+      "effect": "Temporarily boosts Attack by 10% + 3"
+    },
+    "antipoison": {
+      "name": "Antipoison",
+      "level_req": 5,
+      "xp": 37.5,
+      "primary_ingredient": "marrentill",
+      "secondary_ingredient": "unicorn_horn_dust",
+      "effect": "Cures poison and grants temporary immunity"
+    },
+    "strength_potion": {
+      "name": "Strength potion",
+      "level_req": 12,
+      "xp": 50.0,
+      "primary_ingredient": "tarromin",
+      "secondary_ingredient": "limpwurt_root",
+      "effect": "Temporarily boosts Strength by 10% + 3"
+    },
+    "restore_potion": {
+      "name": "Restore potion",
+      "level_req": 22,
+      "xp": 62.5,
+      "primary_ingredient": "harralander",
+      "secondary_ingredient": "red_spiders_eggs",
+      "effect": "Restores 10-39 points on all stats except Hitpoints and Prayer"
+    },
+    "energy_potion": {
+      "name": "Energy potion",
+      "level_req": 26,
+      "xp": 67.5,
+      "primary_ingredient": "harralander",
+      "secondary_ingredient": "chocolate_dust",
+      "effect": "Restores 10% run energy per dose"
+    },
+    "defence_potion": {
+      "name": "Defence potion",
+      "level_req": 30,
+      "xp": 75.0,
+      "primary_ingredient": "ranarr",
+      "secondary_ingredient": "white_berries",
+      "effect": "Temporarily boosts Defence by 10% + 3"
+    },
+    "agility_potion": {
+      "name": "Agility potion",
+      "level_req": 34,
+      "xp": 80.0,
+      "primary_ingredient": "toadflax",
+      "secondary_ingredient": "toads_legs",
+      "effect": "Temporarily boosts Agility by 3"
+    },
+    "prayer_potion": {
+      "name": "Prayer potion",
+      "level_req": 38,
+      "xp": 87.5,
+      "primary_ingredient": "ranarr",
+      "secondary_ingredient": "snape_grass",
+      "effect": "Restores 25% + 7 of Prayer points"
+    },
+    "combat_potion": {
+      "name": "Combat potion",
+      "level_req": 36,
+      "xp": 84.0,
+      "primary_ingredient": "harralander",
+      "secondary_ingredient": "goat_horn_dust",
+      "effect": "Boosts Attack and Strength by 10% + 3"
+    },
+    "super_attack": {
+      "name": "Super attack potion",
+      "level_req": 45,
+      "xp": 100.0,
+      "primary_ingredient": "irit",
+      "secondary_ingredient": "eye_of_newt",
+      "effect": "Temporarily boosts Attack by 15% + 5"
+    },
+    "super_antipoison": {
+      "name": "Super antipoison",
+      "level_req": 48,
+      "xp": 106.3,
+      "primary_ingredient": "irit",
+      "secondary_ingredient": "unicorn_horn_dust",
+      "effect": "Cures poison and grants longer immunity"
+    },
+    "fishing_potion": {
+      "name": "Fishing potion",
+      "level_req": 50,
+      "xp": 112.5,
+      "primary_ingredient": "avantoe",
+      "secondary_ingredient": "snape_grass",
+      "effect": "Temporarily boosts Fishing by 3"
+    },
+    "super_energy": {
+      "name": "Super energy potion",
+      "level_req": 52,
+      "xp": 117.5,
+      "primary_ingredient": "avantoe",
+      "secondary_ingredient": "mort_myre_fungus",
+      "effect": "Restores 20% run energy per dose"
+    },
+    "super_strength": {
+      "name": "Super strength potion",
+      "level_req": 55,
+      "xp": 125.0,
+      "primary_ingredient": "kwuarm",
+      "secondary_ingredient": "limpwurt_root",
+      "effect": "Temporarily boosts Strength by 15% + 5"
+    },
+    "super_restore": {
+      "name": "Super restore potion",
+      "level_req": 63,
+      "xp": 142.5,
+      "primary_ingredient": "snapdragon",
+      "secondary_ingredient": "red_spiders_eggs",
+      "effect": "Restores 25% + 11 of all stats except Hitpoints"
+    },
+    "super_defence": {
+      "name": "Super defence potion",
+      "level_req": 66,
+      "xp": 150.0,
+      "primary_ingredient": "cadantine",
+      "secondary_ingredient": "white_berries",
+      "effect": "Temporarily boosts Defence by 15% + 5"
+    },
+    "ranging_potion": {
+      "name": "Ranging potion",
+      "level_req": 72,
+      "xp": 162.5,
+      "primary_ingredient": "dwarf_weed",
+      "secondary_ingredient": "wine_of_zamorak",
+      "effect": "Temporarily boosts Ranged by 10% + 4"
+    },
+    "magic_potion": {
+      "name": "Magic potion",
+      "level_req": 76,
+      "xp": 172.5,
+      "primary_ingredient": "lantadyme",
+      "secondary_ingredient": "potato_cactus",
+      "effect": "Temporarily boosts Magic by 4"
+    },
+    "zamorak_brew": {
+      "name": "Zamorak brew",
+      "level_req": 78,
+      "xp": 175.0,
+      "primary_ingredient": "torstol",
+      "secondary_ingredient": "jangerberries",
+      "effect": "Boosts Attack and Strength, lowers Hitpoints and Defence"
+    },
+    "saradomin_brew": {
+      "name": "Saradomin brew",
+      "level_req": 81,
+      "xp": 180.0,
+      "primary_ingredient": "toadflax",
+      "secondary_ingredient": "crushed_nest",
+      "effect": "Heals 15% + 2 of Hitpoints, boosts Defence"
+    },
+    "extended_antifire": {
+      "name": "Extended antifire",
+      "level_req": 84,
+      "xp": 82.5,
+      "primary_ingredient": "lantadyme",
+      "secondary_ingredient": "dragon_scale_dust",
+      "effect": "Grants immunity to dragonfire for extended time"
+    }
+  },
+
+  "weapon_poison": {
+    "weapon_poison": {
+      "name": "Weapon poison",
+      "level_req": 60,
+      "xp": 137.5,
+      "primary_ingredient": "kwuarm",
+      "secondary_ingredient": "dragon_scale_dust",
+      "effect": "Poisons weapons, stronger poison damage"
+    },
+    "weapon_poison_plus": {
+      "name": "Weapon poison+",
+      "level_req": 73,
+      "xp": 165.0,
+      "primary_ingredient": "coconut_milk_base",
+      "ingredients": ["cactus_spine", "red_spiders_eggs", "cave_nightshade"],
+      "effect": "Poisons weapons, extra strong poison"
+    }
+  },
+
+  "barbarian_mixes": {
+    "description": "Barbarian Herblore - mixes created with roe or caviar",
+    "base_level_req": 5,
+    "xp_multiplier": 0.5,
+    "note": "Requires partial completion of Barbarian Training"
+  },
+
+  "potions_with_oil": {
+    "antifire_potion": {
+      "name": "Antifire potion",
+      "level_req": 69,
+      "xp": 157.5,
+      "base_potion": "lantadyme_potion_unf",
+      "secondary_ingredient": "dragon_scale_dust",
+      "effect": "Grants partial immunity to dragonfire"
+    }
+  },
+
+  "test_locations": [
+    {
+      "desc": "Herblore shop in Taverley",
+      "x": 2916,
+      "z": 3443
+    },
+    {
+      "desc": "Druidic Ritual quest start (Kaqemeex)",
+      "x": 2925,
+      "z": 3483
+    },
+    {
+      "desc": "Herblore training area - Lumbridge",
+      "x": 3234,
+      "z": 3225
+    },
+    {
+      "desc": "Bank chest near Herblore shop",
+      "x": 2443,
+      "z": 3083
+    }
+  ],
+
+  "notes": [
+    "All potions require a vial of water as the base (id: 227)",
+    "Unidentified herbs require Herblore level to clean",
+    "Grimy herbs are obtained from monster drops and farming",
+    "Secondary ingredients must be ground with pestle and mortar (id: 233) when applicable",
+    "Barbarian mixes provide reduced XP but additional effects",
+    "Weapon poison requires weapon to be poisoned via item use",
+    "Some potions require quest completion (Druidic Ritual for base Herblore)"
+  ]
+}

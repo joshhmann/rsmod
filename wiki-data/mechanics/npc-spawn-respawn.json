@@ -1,0 +1,263 @@
+{
+    "mechanic": "npc_spawn_respawn",
+    "source": "OSRS Wiki (oldschool.runescape.wiki/w/Spawning)",
+    "extraction_date": "2026-02-22",
+    "rsmod_api_status": "partial - NPC spawning exists but precise respawn timer logic needs review",
+    "overview": {
+        "description": "Spawning is the in-game creation of entities (player, NPC, item). Respawning is the recreation after death/destruction/use. Despawning is instantaneous removal of resources (fishing spots, special NPCs).",
+        "spawn_rates_fixed_since": "2014-07-17 update - spawn rates are now consistent across all worlds (no longer scaling with player count)",
+        "spawn_camping": "Players may wait at spawn points to kill or collect items. PID determines who gets pickup priority."
+    },
+    "player_respawn_points": {
+        "default": {
+            "location": "Lumbridge",
+            "coords": {
+                "x": 3221,
+                "z": 3219
+            },
+            "members": false,
+            "notes": "Default spawn for new players and after death"
+        },
+        "unlockable": [
+            {
+                "location": "Falador",
+                "coords": {
+                    "x": 2970,
+                    "z": 3342
+                },
+                "members": true,
+                "requirement": "Recruited Drive quest completion",
+                "npc_to_change": "Sir Tiffy Cashien"
+            },
+            {
+                "location": "Camelot",
+                "coords": {
+                    "x": 2757,
+                    "z": 3478
+                },
+                "members": true,
+                "requirement": "King's Ransom + Knight Waves Training Grounds",
+                "npc_to_change": "Merlin"
+            },
+            {
+                "location": "Edgeville",
+                "coords": {
+                    "x": 3094,
+                    "z": 3469
+                },
+                "members": false,
+                "requirement": "One-time fee of 5,000,000 coins",
+                "npc_to_change": "Krystilia"
+            },
+            {
+                "location": "Ferox Enclave",
+                "coords": {
+                    "x": 3151,
+                    "z": 3635
+                },
+                "members": false,
+                "requirement": "One-time fee of 5,000,000 coins",
+                "npc_to_change": "Ferox"
+            },
+            {
+                "location": "Prifddinas",
+                "coords": {
+                    "x": 3263,
+                    "z": 6066
+                },
+                "members": true,
+                "requirement": "Song of the Elves quest",
+                "npc_to_change": "Crefydd"
+            },
+            {
+                "location": "Kourend Castle",
+                "coords": {
+                    "x": 1640,
+                    "z": 3673
+                },
+                "members": true,
+                "requirement": "A Kingdom Divided quest",
+                "npc_to_change": "Asteros Arceuus"
+            },
+            {
+                "location": "Civitas illa Fortis",
+                "coords": {
+                    "x": 1681,
+                    "z": 3133
+                },
+                "members": true,
+                "requirement": "Challenger rank at Fortis Colosseum (5000 glory)",
+                "npc_to_change": "Gloria"
+            }
+        ]
+    },
+    "npc_respawn_mechanics": {
+        "description": "NPCs have a defined respawn delay in game ticks after being killed",
+        "tick_duration_ms": 600,
+        "default_respawn_rules": {
+            "respawn_at_original_tile": true,
+            "wander_radius_on_respawn": "NPCs may wander within their defined wander radius after respawn",
+            "notes": "More aggressive NPCs may re-aggro players after respawning"
+        },
+        "common_respawn_times": {
+            "basic_monsters": {
+                "goblins": {
+                    "ticks": 25,
+                    "seconds": 15
+                },
+                "cows": {
+                    "ticks": 25,
+                    "seconds": 15
+                },
+                "chickens": {
+                    "ticks": 25,
+                    "seconds": 15
+                },
+                "guards": {
+                    "ticks": 25,
+                    "seconds": 15
+                }
+            },
+            "medium_monsters": {
+                "hill_giants": {
+                    "ticks": 30,
+                    "seconds": 18
+                },
+                "moss_giants": {
+                    "ticks": 30,
+                    "seconds": 18
+                }
+            },
+            "strong_monsters": {
+                "lesser_demon": {
+                    "ticks": 30,
+                    "seconds": 18
+                },
+                "greater_demon": {
+                    "ticks": 30,
+                    "seconds": 18
+                }
+            },
+            "bosses": {
+                "note": "Bosses have much longer respawn times and often require instance reset",
+                "king_black_dragon": {
+                    "ticks": 100,
+                    "seconds": 60
+                },
+                "general_rule": "Boss respawn 60-180 seconds depending on boss"
+            }
+        }
+    },
+    "item_spawn_mechanics": {
+        "description": "Items have set spawn points where they reappear after being picked up",
+        "behavior": "Items respawn at their original spawn point on a consistent timer",
+        "example_examples": [
+            {
+                "item": "Chaos runes",
+                "location": "Wilderness (Moss Giants area)",
+                "notes": "Fixed spawn location"
+            },
+            {
+                "item": "Mithril ore",
+                "location": "Mining locations",
+                "notes": "Ore rocks have variable respawn by rock type"
+            }
+        ]
+    },
+    "resource_node_respawn": {
+        "ores": {
+            "mechanism": "Rock changes to 'depleted' state, then respawns after delay",
+            "tin_copper": {
+                "ticks": 4,
+                "seconds": 2.4
+            },
+            "iron": {
+                "ticks": 5,
+                "seconds": 3
+            },
+            "coal": {
+                "ticks": 25,
+                "seconds": 15
+            },
+            "gold": {
+                "ticks": 100,
+                "seconds": 60
+            },
+            "mithril": {
+                "ticks": 200,
+                "seconds": 120
+            },
+            "adamantite": {
+                "ticks": 400,
+                "seconds": 240
+            },
+            "runite": {
+                "ticks": 800,
+                "seconds": 480
+            },
+            "notes": "Respawn may vary slightly per rock/location"
+        },
+        "trees": {
+            "mechanism": "Tree changes to stump, respawns after delay",
+            "normal_tree": {
+                "ticks": 7,
+                "seconds": 4.2,
+                "notes": "Very fast respawn"
+            },
+            "oak": {
+                "ticks": 14,
+                "seconds": 8.4
+            },
+            "willow": {
+                "ticks": 14,
+                "seconds": 8.4
+            },
+            "maple": {
+                "ticks": 58,
+                "seconds": 34.8
+            },
+            "yew": {
+                "ticks": 130,
+                "seconds": 78
+            },
+            "magic_tree": {
+                "ticks": 450,
+                "seconds": 270
+            },
+            "notes": "Multiple trees of same type in an area usually share respawn pool"
+        },
+        "fishing_spots": {
+            "mechanism": "Fishing spots move or despawn instantaneously, then respawn at nearby location",
+            "respawn_type": "despawn_and_respawn_elsewhere",
+            "interval_ticks": "Random 300-1500 ticks (3-15 minutes)",
+            "notes": "Spots usually have alternating positions (e.g., Lumbridge bank fishing spots)"
+        }
+    },
+    "despawning": {
+        "description": "Instantaneous removal of resources or special NPCs",
+        "examples": [
+            "Fishing spots when depeleted or shifting position",
+            "Gangster NPCs in special events",
+            "Impling NPCs when captured (respawn immediately and roam for 2 minutes)"
+        ]
+    },
+    "implementation_notes": {
+        "rsmod_api_gaps": [
+            "NpcRespawn timer needs to be configurable per NPC type",
+            "Resource node respawn (rock/tree depletion + timer) needs standard API",
+            "Fishing spot despawn/move behavior needs dedicated implementation",
+            "Player respawn point tracking via varbit/varp needs verification",
+            "Item spawn tracking for world-spawned items may be incomplete"
+        ],
+        "rsmod_implemented": [
+            "Basic NPC death and removal",
+            "Player respawn to Lumbridge (default)"
+        ],
+        "rsmod_needed": [
+            "Configurable per-NPC respawn delay in ticks",
+            "Resource node depletion state transitions",
+            "Player respawn point varbit tracking",
+            "Item ground spawn timer system"
+        ]
+    }
+}

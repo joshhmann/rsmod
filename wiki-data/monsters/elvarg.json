@@ -1,0 +1,101 @@
+{
+  "name": "Elvarg",
+  "combat_level": 83,
+  "hitpoints": 80,
+  "npc_ids": [816, 817, 6349],
+  "aggressive_level": 166,
+  "max_damage": 8,
+  "attack_style": "CRUSH",
+  "attack_speed": 4,
+  "respawn_time": 30,
+  "combat_stats": {
+    "attack": 70,
+    "strength": 70,
+    "defence": 70,
+    "ranged": 1,
+    "magic": 70
+  },
+  "attack_bonus": {
+    "stab": 0,
+    "slash": 0,
+    "crush": 0,
+    "magic": 0,
+    "ranged": 0
+  },
+  "defence_bonus": {
+    "stab": 20,
+    "slash": 40,
+    "crush": 40,
+    "magic": 30,
+    "ranged": 20
+  },
+  "immunities": {
+    "poison": false,
+    "venom": false
+  },
+  "animations": {
+    "attack": -1,
+    "defend": -1,
+    "death": -1
+  },
+  "slayer": {
+    "level": 1,
+    "xp": 80,
+    "tasks": ["Green Dragons"]
+  },
+  "drops": [
+    {
+      "name": "Dragon bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Green dragonhide",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ],
+  "variants": [
+    {
+      "name": "Elvarg (hard)",
+      "combat_level": 214,
+      "hitpoints": 300,
+      "npc_ids": [6118],
+      "aggressive_level": 428,
+      "max_damage": 22,
+      "combat_stats": {
+        "attack": 210,
+        "strength": 210,
+        "defence": 140,
+        "ranged": 210,
+        "magic": 210
+      },
+      "attack_bonus": {
+        "stab": 0,
+        "slash": 0,
+        "crush": 0,
+        "magic": 0,
+        "ranged": 0
+      },
+      "defence_bonus": {
+        "stab": 160,
+        "slash": 500,
+        "crush": 500,
+        "magic": 150,
+        "ranged": 80
+      },
+      "animations": {
+        "attack": 80,
+        "defend": 89,
+        "death": 92
+      },
+      "slayer": {
+        "level": 1,
+        "xp": 450,
+        "tasks": ["Green Dragons"]
+      }
+    }
+  ]
+}

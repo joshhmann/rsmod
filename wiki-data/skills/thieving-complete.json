@@ -1,0 +1,594 @@
+{
+  "skill": "thieving",
+  "revision": 233,
+  "extracted_from": "osrs-cache",
+  "last_updated": "2026-02-22",
+
+  "pickpocket_npcs": {
+    "man": {
+      "npc_ids": [3106, 3107, 3108, 3109],
+      "level_req": 1,
+      "xp": 8.0,
+      "coins": 3,
+      "locations": ["Lumbridge", "Varrock", "Falador", "Edgeville"],
+      "notes": "Common civilian NPC found throughout Gielinor"
+    },
+    "woman": {
+      "npc_ids": [3111, 3112, 3113],
+      "level_req": 1,
+      "xp": 8.0,
+      "coins": 3,
+      "locations": ["Lumbridge", "Varrock", "Falador", "Edgeville"],
+      "notes": "Common civilian NPC found throughout Gielinor"
+    },
+    "farmer": {
+      "npc_ids": [3114, 3243, 3244, 3245],
+      "level_req": 10,
+      "xp": 14.5,
+      "coins": 9,
+      "locations": ["Draynor Village", "Falador farm", "Lumbridge farm"],
+      "notes": "Found near farming areas and fields"
+    },
+    "female_ham": {
+      "npc_ids": [3815],
+      "level_req": 15,
+      "xp": 18.5,
+      "locations": ["H.A.M. Hideout"],
+      "notes": "Members-only. H.A.M. cultist wearing pink/purple robes"
+    },
+    "male_ham": {
+      "npc_ids": [3816],
+      "level_req": 20,
+      "xp": 22.5,
+      "locations": ["H.A.M. Hideout"],
+      "notes": "Members-only. H.A.M. cultist wearing brown robes"
+    },
+    "warrior_woman": {
+      "npc_ids": [3297, 3300],
+      "level_req": 25,
+      "xp": 26.0,
+      "coins": 18,
+      "locations": ["Ardougne", "Al Kharid"],
+      "notes": "Female warrior NPCs, often confused with Knights of Ardougne"
+    },
+    "rogue": {
+      "npc_ids": [1305, 1306, 1307],
+      "level_req": 32,
+      "xp": 35.5,
+      "locations": ["Rogues' Castle (Wilderness)"],
+      "notes": "Members-only. Found in Wilderness Rogues' Castle"
+    },
+    "cave_goblin": {
+      "npc_ids": [2327, 2328, 2329, 2330, 2331, 2332, 2333, 2334, 2335, 2336],
+      "level_req": 36,
+      "xp": 40.0,
+      "locations": ["Dorgesh-Kaan", "Lumbridge Swamp Caves"],
+      "notes": "Members-only. Requires completion of Lost Tribe quest"
+    },
+    "master_farmer": {
+      "npc_ids": [5730, 5731, 5832],
+      "level_req": 38,
+      "xp": 43.0,
+      "locations": ["Draynor Village", "Farming Guild"],
+      "notes": "Members-only. Good source of farming seeds"
+    },
+    "guard": {
+      "npc_ids": [773, 774, 5418],
+      "level_req": 40,
+      "xp": 46.8,
+      "coins": 30,
+      "locations": ["Varrock", "Falador", "Ardougne"],
+      "notes": "City guards. Common training target for mid-level thieving"
+    },
+    "fremennik_citizen": {
+      "npc_ids": [3675, 3676, 3677, 3678, 3679, 3680, 3681, 3682, 3683, 3684],
+      "level_req": 45,
+      "xp": 65.0,
+      "locations": ["Rellekka"],
+      "notes": "Members-only. Requires completion of The Fremennik Trials"
+    },
+    "ardougne_knight": {
+      "npc_ids": [3297, 3300, 4267, 6256],
+      "level_req": 55,
+      "xp": 84.3,
+      "coins": 50,
+      "locations": ["Ardougne Market", "Ardougne Castle"],
+      "notes": "Members-only. Popular training target, can be trapped in house"
+    },
+    "paladin": {
+      "npc_ids": [3293, 3294, 1144, 4262, 5082],
+      "level_req": 70,
+      "xp": 151.75,
+      "coins": 80,
+      "locations": ["Ardougne", "East Ardougne"],
+      "notes": "Members-only. Can hit 20 damage on failure"
+    },
+    "hero": {
+      "npc_ids": [3295, 11934, 11935],
+      "level_req": 80,
+      "xp": 273.3,
+      "coins": 100,
+      "locations": ["East Ardougne"],
+      "notes": "Members-only. High-level target, can hit 40 damage on failure"
+    },
+    "elf": {
+      "npc_ids": [3414, 3415, 3416, 3428, 3429, 3432, 5297, 5298, 5299, 5300],
+      "level_req": 85,
+      "xp": 353.3,
+      "coins": 280,
+      "locations": ["Prifddinas", "Lletya"],
+      "notes": "Members-only. Requires Song of the Elves quest completion"
+    }
+  },
+
+  "stalls": {
+    "vegetable_stall": {
+      "loc_ids": [4706, 4708, 7409],
+      "market_loc_ids": [4706, 4708],
+      "thief_stall_loc_ids": [],
+      "level_req": 2,
+      "xp": 10.0,
+      "respawn_ticks": 5,
+      "locations": ["Miscellania", "Etceteria", "Hosidius"],
+      "loot": ["onion", "cabbage", "potato", "garlic", "tomato"],
+      "notes": "Members-only. Basic low-level stall"
+    },
+    "baker_stall": {
+      "loc_ids": [630, 6163, 6569, 20345, 44031, 51559, 51937],
+      "market_loc_ids": [630],
+      "thief_stall_loc_ids": [11730],
+      "level_req": 5,
+      "xp": 16.0,
+      "respawn_ticks": 5,
+      "locations": ["Ardougne Market", "Catherby", "Taverley", "Al Kharid", "Hosidius"],
+      "loot": ["cake", "bread", "chocolate slice"],
+      "notes": "Common training stall in Ardougne"
+    },
+    "silk_stall": {
+      "loc_ids": [629, 6568, 20344, 10801, 36569, 51933],
+      "market_loc_ids": [629],
+      "thief_stall_loc_ids": [11729],
+      "level_req": 20,
+      "xp": 24.0,
+      "respawn_ticks": 5,
+      "locations": ["Ardougne Market", "Prifddinas", "Hosidius", "Kourend"],
+      "loot": ["silk"],
+      "notes": "Members-only. Silk can be sold to silk merchant"
+    },
+    "fur_stall": {
+      "loc_ids": [632, 4278, 4707],
+      "market_loc_ids": [632],
+      "thief_stall_loc_ids": [11732],
+      "level_req": 35,
+      "xp": 36.0,
+      "respawn_ticks": 10,
+      "locations": ["Ardougne Market", "Rellekka"],
+      "loot": ["grey wolf fur", "bear fur"],
+      "notes": "Members-only. Requires 35 Thieving"
+    },
+    "silver_stall": {
+      "loc_ids": [628, 6164],
+      "market_loc_ids": [628],
+      "thief_stall_loc_ids": [11734],
+      "level_req": 50,
+      "xp": 54.0,
+      "respawn_ticks": 15,
+      "locations": ["Ardougne Market", "Keldagrim"],
+      "loot": ["silver ore", "silver bar"],
+      "notes": "Members-only. Requires 50 Thieving"
+    },
+    "spice_stall": {
+      "loc_ids": [633, 6572, 20348, 36572],
+      "market_loc_ids": [633],
+      "thief_stall_loc_ids": [11733],
+      "level_req": 65,
+      "xp": 81.0,
+      "respawn_ticks": 20,
+      "locations": ["Ardougne Market", "Hosidius", "Prifddinas"],
+      "loot": ["spice", "garlic", "onion"],
+      "notes": "Members-only. Requires 65 Thieving"
+    },
+    "gem_stall": {
+      "loc_ids": [631, 6162, 6570],
+      "market_loc_ids": [631],
+      "thief_stall_loc_ids": [11731],
+      "level_req": 75,
+      "xp": 160.0,
+      "respawn_ticks": 180,
+      "locations": ["Ardougne Market", "Keldagrim"],
+      "loot": ["uncut sapphire", "uncut emerald", "uncut ruby", "uncut diamond"],
+      "notes": "Members-only. Requires 75 Thieving. High-value loot"
+    },
+    "tea_stall": {
+      "loc_ids": [635, 6574],
+      "market_loc_ids": [],
+      "thief_stall_loc_ids": [],
+      "level_req": 5,
+      "xp": 16.0,
+      "respawn_ticks": 5,
+      "locations": ["Varrock", "Uzer", "Ardougne"],
+      "loot": ["cup of tea"],
+      "notes": "F2P accessible. Located near Varrock East gate"
+    },
+    "wine_stall": {
+      "loc_ids": [],
+      "market_loc_ids": [],
+      "thief_stall_loc_ids": [],
+      "level_req": 22,
+      "xp": 27.0,
+      "respawn_ticks": 10,
+      "locations": ["Fremennik Province"],
+      "loot": ["jug of water", "jug of wine", "grapes", "bottle of wine"],
+      "notes": "Members-only. Fremennik area content"
+    },
+    "seed_stall": {
+      "loc_ids": [7053],
+      "market_loc_ids": [],
+      "thief_stall_loc_ids": [],
+      "level_req": 27,
+      "xp": 34.0,
+      "respawn_ticks": 10,
+      "locations": ["Draynor Village"],
+      "loot": ["asgarnian seed", "potato seed", "sweetcorn seed", "watermelon seed"],
+      "notes": "Members-only. Good for ironmen seeking farming seeds"
+    },
+    "scimitar_stall": {
+      "loc_ids": [4878],
+      "market_loc_ids": [],
+      "thief_stall_loc_ids": [],
+      "level_req": 65,
+      "xp": 100.0,
+      "respawn_ticks": 60,
+      "locations": ["Ape Atoll", "Monkey Colony"],
+      "loot": ["iron scimitar", "steel scimitar", "mithril scimitar"],
+      "notes": "Members-only. Monkey Madness content"
+    },
+    "magic_stall": {
+      "loc_ids": [4877],
+      "market_loc_ids": [],
+      "thief_stall_loc_ids": [],
+      "level_req": 65,
+      "xp": 100.0,
+      "respawn_ticks": 60,
+      "locations": ["Ape Atoll"],
+      "loot": ["air rune", "water rune", "fire rune", "law rune", "nature rune"],
+      "notes": "Members-only. Monkey Madness content"
+    }
+  },
+
+  "chests": {
+    "ten_coins_chest": {
+      "loc_ids": [375],
+      "level_req": 1,
+      "xp": 7.5,
+      "loot": ["10 coins"],
+      "locations": ["Lumbridge", "Varrock"],
+      "respawn_ticks": 15,
+      "notes": "Basic chest found in many buildings"
+    },
+    "nature_rune_chest": {
+      "loc_ids": [378],
+      "level_req": 28,
+      "xp": 25.0,
+      "loot": ["nature rune (x1-3)", "1 coin", "gold bar", "emerald"],
+      "locations": ["Ardougne", "Hemenster"],
+      "respawn_ticks": 15,
+      "notes": "Members-only. Ardougne house chest"
+    },
+    "fifty_coins_chest": {
+      "loc_ids": [379],
+      "level_req": 43,
+      "xp": 50.0,
+      "loot": ["50 coins", "bones", "raw tuna"],
+      "locations": ["Ardougne", "Hemenster"],
+      "respawn_ticks": 60,
+      "notes": "Members-only. Ardougne marketplace building"
+    },
+    "blood_rune_chest": {
+      "loc_ids": [],
+      "level_req": 59,
+      "xp": 125.0,
+      "loot": ["blood rune (x2)", "500 coins", "gold ore", "uncut ruby"],
+      "locations": ["Chaos Druid Tower", "Yanille"],
+      "respawn_ticks": 135,
+      "notes": "Members-only. Chaos Druid Tower chest"
+    },
+    "ardougne_castle_chest": {
+      "loc_ids": [2183],
+      "level_req": 72,
+      "xp": 500.0,
+      "loot": ["raw shark", "adamantite ore", "blood rune (x5)", "uncut sapphire", "uncut emerald", "uncut ruby", "uncut diamond", "gold bar (x3)"],
+      "locations": ["Ardougne Castle"],
+      "respawn_ticks": 400,
+      "notes": "Members-only. High-level chest in Ardougne Castle"
+    },
+    "pickchest3": {
+      "loc_ids": [11742],
+      "level_req": 25,
+      "xp": 30.0,
+      "loot": ["various"],
+      "locations": ["Hemenster", "Ardougne"],
+      "respawn_ticks": 60,
+      "notes": "Members-only. Mid-level pickpocket chest"
+    },
+    "emptypickchest": {
+      "loc_ids": [11741],
+      "level_req": 1,
+      "xp": 0.0,
+      "loot": [],
+      "locations": ["Ardougne"],
+      "respawn_ticks": 5,
+      "notes": "Empty chest, likely already looted"
+    },
+    "muddy_chest": {
+      "loc_ids": [170],
+      "level_req": 1,
+      "xp": 0.0,
+      "loot": ["requires muddy key"],
+      "locations": ["Wilderness"],
+      "respawn_ticks": 0,
+      "notes": "Requires Muddy Key, not a thieving chest"
+    },
+    "crystal_chest": {
+      "loc_ids": [172],
+      "level_req": 1,
+      "xp": 0.0,
+      "loot": ["requires crystal key"],
+      "locations": ["Taverley"],
+      "respawn_ticks": 0,
+      "notes": "Requires Crystal Key, not a thieving chest"
+    }
+  },
+
+  "doors": {
+    "picklock1": {
+      "loc_ids": [11719],
+      "level_req": 1,
+      "xp": 3.0,
+      "locations": ["Ardougne"],
+      "notes": "Basic locked door"
+    },
+    "picklock2": {
+      "loc_ids": [11720],
+      "level_req": 14,
+      "xp": 10.0,
+      "locations": ["Ardougne"],
+      "notes": "Low-level locked door"
+    },
+    "picklock3": {
+      "loc_ids": [11721, 11722],
+      "level_req": 25,
+      "xp": 18.0,
+      "locations": ["Ardougne"],
+      "notes": "Mid-level locked door"
+    },
+    "picklock4": {
+      "loc_ids": [11723],
+      "level_req": 37,
+      "xp": 25.0,
+      "locations": ["Ardougne"],
+      "notes": "Members-only. Higher-level locked door"
+    },
+    "picklock5": {
+      "loc_ids": [11724],
+      "level_req": 46,
+      "xp": 37.5,
+      "locations": ["Ardougne", "Hemenster"],
+      "notes": "Members-only. High-level locked door"
+    },
+    "picklock6": {
+      "loc_ids": [11725],
+      "level_req": 61,
+      "xp": 50.0,
+      "locations": ["Yanille"],
+      "notes": "Members-only. Very high-level locked door"
+    }
+  },
+
+  "blackjacking": {
+    "description": "Members-only thieving method using maple blackjack or better",
+    "mechanics": "Lure, knock-out, then pickpocket while unconscious",
+    "targets": {
+      "villager": {
+        "level_req": 30,
+        "xp": 45.0,
+        "locations": ["Pollnivneach"]
+      },
+      "bandit": {
+        "level_req": 45,
+        "xp": 65.0,
+        "locations": ["Pollnivneach"]
+      },
+      "menaphite_thug": {
+        "level_req": 65,
+        "xp": 137.5,
+        "locations": ["Pollnivneach"]
+      }
+    },
+    "notes": "Requires completion of The Feud quest. Maple blackjack or better required."
+  },
+
+  "pyramid_plunder": {
+    "description": "Members-only minigame in Sophanem",
+    "level_req": 21,
+    "rooms": [
+      {"room": 1, "level_req": 21, "xp_obelisk": 20, "xp_chest": 60, "xp_sarcophagus": 20, "xp_urn": 40},
+      {"room": 2, "level_req": 31, "xp_obelisk": 30, "xp_chest": 90, "xp_sarcophagus": 30, "xp_urn": 60},
+      {"room": 3, "level_req": 41, "xp_obelisk": 50, "xp_chest": 150, "xp_sarcophagus": 50, "xp_urn": 100},
+      {"room": 4, "level_req": 51, "xp_obelisk": 100, "xp_chest": 300, "xp_sarcophagus": 100, "xp_urn": 200},
+      {"room": 5, "level_req": 61, "xp_obelisk": 150, "xp_chest": 450, "xp_sarcophagus": 150, "xp_urn": 300},
+      {"room": 6, "level_req": 71, "xp_obelisk": 200, "xp_chest": 600, "xp_sarcophagus": 200, "xp_urn": 400},
+      {"room": 7, "level_req": 81, "xp_obelisk": 250, "xp_chest": 750, "xp_sarcophagus": 250, "xp_urn": 500},
+      {"room": 8, "level_req": 91, "xp_obelisk": 300, "xp_chest": 900, "xp_sarcophagus": 300, "xp_urn": 600}
+    ],
+    "notes": "Members-only. Requires Icthlarin's Little Helper quest. Sceptres can be obtained from golden chests."
+  },
+
+  "test_locations": [
+    {
+      "desc": "Ardougne Market - All stalls",
+      "x": 2662,
+      "z": 3305,
+      "activities": ["baker_stall", "silk_stall", "fur_stall", "silver_stall", "spice_stall", "gem_stall"],
+      "members_only": true
+    },
+    {
+      "desc": "Ardougne - Knights and Paladins",
+      "x": 2656,
+      "z": 3288,
+      "activities": ["ardougne_knight", "paladin", "hero"],
+      "members_only": true
+    },
+    {
+      "desc": "Lumbridge - Man/Woman pickpocketing",
+      "x": 3222,
+      "z": 3218,
+      "activities": ["man", "woman"],
+      "members_only": false
+    },
+    {
+      "desc": "Varrock - Guards",
+      "x": 3209,
+      "z": 3376,
+      "activities": ["guard"],
+      "members_only": false
+    },
+    {
+      "desc": "Falador - Farmers and Guards",
+      "x": 3038,
+      "z": 3298,
+      "activities": ["farmer", "guard"],
+      "members_only": false
+    },
+    {
+      "desc": "Draynor - Master Farmer",
+      "x": 3080,
+      "z": 3250,
+      "activities": ["master_farmer"],
+      "members_only": true
+    },
+    {
+      "desc": "H.A.M. Hideout",
+      "x": 3165,
+      "z": 3251,
+      "plane": 0,
+      "activities": ["female_ham", "male_ham"],
+      "members_only": true
+    },
+    {
+      "desc": "Varrock Tea Stall",
+      "x": 3269,
+      "z": 3385,
+      "activities": ["tea_stall"],
+      "members_only": false
+    },
+    {
+      "desc": "Ardougne Castle Chest",
+      "x": 2574,
+      "z": 3289,
+      "activities": ["ardougne_castle_chest"],
+      "members_only": true
+    },
+    {
+      "desc": "Pyramid Plunder (Sophanem)",
+      "x": 3288,
+      "z": 2801,
+      "activities": ["pyramid_plunder"],
+      "members_only": true
+    },
+    {
+      "desc": "Pollnivneach (Blackjacking)",
+      "x": 3363,
+      "z": 2977,
+      "activities": ["blackjacking"],
+      "members_only": true
+    },
+    {
+      "desc": "Prifddinas - Elves",
+      "x": 3272,
+      "z": 6088,
+      "activities": ["elf"],
+      "members_only": true
+    }
+  ],
+
+  "items": {
+    "gloves_of_silence": {
+      "item_id": 10075,
+      "level_req": 54,
+      "effect": "5% increased pickpocket success rate",
+      "degrades": true,
+      "charges": 62,
+      "notes": "Members-only. Crafted from dark kebbit fur"
+    },
+    "maple_blackjack": {
+      "item_id": 6417,
+      "level_req": 45,
+      "effect": "Required for blackjacking",
+      "notes": "Members-only. Purchased from Pollnivneach"
+    },
+    "willow_blackjack": {
+      "item_id": 6419,
+      "level_req": 30,
+      "effect": "Required for low-level blackjacking",
+      "notes": "Members-only"
+    },
+    "rubber_chicken": {
+      "item_id": 4566,
+      "effect": "Worn to reduce guard aggression in certain areas",
+      "notes": "Cosmetic/easter egg item"
+    },
+    "thieving_cape": {
+      "item_id": 9777,
+      "level_req": 99,
+      "effect": "10% increased pickpocket success rate",
+      "notes": "Members-only. Purchased from Martin the Master Farmer"
+    },
+    "thieving_hood": {
+      "item_id": 9778,
+      "level_req": 99,
+      "notes": "Members-only. Part of thieving skillcape outfit"
+    },
+    "lockpick": {
+      "item_id": 1523,
+      "effect": "Required for picking doors and some chests",
+      "buy_price": 20,
+      "locations": ["Gerrant's Fishy Business (Port Sarim)", "King Lathas' Weaponry Shop (Combat Training Camp)"],
+      "notes": "Essential tool for thieving"
+    }
+  },
+
+  "animations": {
+    "pickpocket": 881,
+    "pickpocket_ardougne_knight": 881,
+    "steal_from_stall": 881,
+    "pick_lock": 2248,
+    "search_chest": 2247,
+    "blackjack_hit": 401,
+    "blackjack_knockout": 401
+  },
+
+  "meta": {
+    "total_pickpocket_npcs": 15,
+    "total_stalls": 11,
+    "total_chests": 9,
+    "total_doors": 6,
+    "max_level_content": {
+      "level": 99,
+      "content": "Thieving skill cape, optimal Ardougne knights, elves"
+    },
+    "best_xp_methods": [
+      {"method": "Elves (pickpocket)", "level": 85, "xp_per_hour": 250000, "notes": "With dodgy necklaces and full outfit"},
+      {"method": "Ardougne Knights", "level": 55, "xp_per_hour": 200000, "notes": "With Shadow Veil and dodgy necklaces"},
+      {"method": "Pyramid Plunder", "level": 91, "xp_per_hour": 270000, "notes": "Rooms 7-8 at high levels"},
+      {"method": "Blackjacking", "level": 65, "xp_per_hour": 220000, "notes": "Menaphite Thugs with good technique"}
+    ],
+    "data_sources": [
+      "npctypes.txt (NPC IDs for pickpocket targets)",
+      "loctypes.txt (Loc IDs for stalls, chests, doors)",
+      "seqtypes.txt (animation IDs)",
+      "objtypes.txt (item IDs for thieving tools)"
+    ],
+    "osrs_wiki_reference": "https://oldschool.runescape.wiki/w/Thieving"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "skill": "woodcutting",
+  "source": "OSRS wiki (rev 228/233, accessed 2026-02)",
+  "actions": {
+    "normal_tree": {
+      "level_req": 1,
+      "xp": 25.0,
+      "animation": 879,
+      "object_ids": [1276, 1278, 1279, 1280],
+      "log_item_id": 1511,
+      "respawn_ticks": 60
+    },
+    "oak_tree": {
+      "level_req": 15,
+      "xp": 37.5,
+      "animation": 879,
+      "object_ids": [1281],
+      "log_item_id": 1521,
+      "respawn_ticks": 14
+    },
+    "willow_tree": {
+      "level_req": 30,
+      "xp": 67.5,
+      "animation": 879,
+      "object_ids": [10819, 10820, 10829],
+      "log_item_id": 1519,
+      "respawn_ticks": 14
+    },
+    "teak_tree": {
+      "level_req": 35,
+      "xp": 85.0,
+      "animation": 879,
+      "object_ids": [9036],
+      "log_item_id": 6333,
+      "respawn_ticks": 14
+    },
+    "maple_tree": {
+      "level_req": 45,
+      "xp": 100.0,
+      "animation": 879,
+      "object_ids": [1307],
+      "log_item_id": 1517,
+      "respawn_ticks": 29
+    },
+    "mahogany_tree": {
+      "level_req": 50,
+      "xp": 125.0,
+      "animation": 879,
+      "object_ids": [9034],
+      "log_item_id": 6332,
+      "respawn_ticks": 14
+    },
+    "yew_tree": {
+      "level_req": 60,
+      "xp": 175.0,
+      "animation": 879,
+      "object_ids": [1309],
+      "log_item_id": 1515,
+      "respawn_ticks": 99
+    },
+    "magic_tree": {
+      "level_req": 75,
+      "xp": 250.0,
+      "animation": 879,
+      "object_ids": [1306],
+      "log_item_id": 1513,
+      "respawn_ticks": 399
+    },
+    "redwood_tree": {
+      "level_req": 90,
+      "xp": 380.0,
+      "animation": 2846,
+      "object_ids": [29668, 29670],
+      "log_item_id": 19669,
+      "respawn_ticks": 99
+    }
+  },
+  "tools": {
+    "bronze_axe":   { "item_id": 1351, "level_req": 1 },
+    "iron_axe":     { "item_id": 1349, "level_req": 1 },
+    "steel_axe":    { "item_id": 1353, "level_req": 5 },
+    "black_axe":    { "item_id": 1361, "level_req": 6 },
+    "mithril_axe":  { "item_id": 1355, "level_req": 21 },
+    "adamant_axe":  { "item_id": 1357, "level_req": 31 },
+    "rune_axe":     { "item_id": 1359, "level_req": 41 },
+    "dragon_axe":   { "item_id": 6739, "level_req": 61 },
+    "infernal_axe": { "item_id": 13241, "level_req": 61 },
+    "crystal_axe":  { "item_id": 23673, "level_req": 71 }
+  },
+  "notes": "Infernal axe has 1/3 chance to burn log (grants Firemaking XP). Woodcutting Guild gives invisible +7 boost."
+}

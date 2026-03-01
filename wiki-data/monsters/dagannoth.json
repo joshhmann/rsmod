@@ -1,0 +1,367 @@
+{
+  "name": "Dagannoth",
+  "combat_level": 74,
+  "hitpoints": 70,
+  "attack": 68,
+  "strength": 70,
+  "defence": 50,
+  "attack_speed": 4,
+  "slayer_level": null,
+  "slayer_xp": 70.0,
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron spear",
+      "rate": "1/21",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bronze spear",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril spear",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Water rune",
+      "rate": "1/32",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Steel arrow",
+      "rate": "1/64",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Mithril javelin",
+      "rate": "1/128",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Toadflax seed",
+      "rate": "1/35",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Irit seed",
+      "rate": "1/52",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Belladonna seed",
+      "rate": "1/54",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Poison ivy seed",
+      "rate": "1/75",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Avantoe seed",
+      "rate": "1/76",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cactus seed",
+      "rate": "1/80",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Potato cactus seed",
+      "rate": "1/110",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Kwuarm seed",
+      "rate": "1/112",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snapdragon seed",
+      "rate": "1/168",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cadantine seed",
+      "rate": "1/242",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lantadyme seed",
+      "rate": "1/337",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snape grass seed",
+      "rate": "1/387",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Dwarf weed seed",
+      "rate": "1/553",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Torstol seed",
+      "rate": "1/861",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lobster pot",
+      "rate": "1/10",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Raw herring",
+      "rate": "1/32",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Raw sardine",
+      "rate": "1/32",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Harpoon",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Feather",
+      "rate": "1/64",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Fishing bait",
+      "rate": "1/64",
+      "qty_min": 50,
+      "qty_max": 50
+    },
+    {
+      "name": "Raw lobster",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Raw tuna",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Seaweed",
+      "rate": "1/64",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Oyster pearls",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Oyster pearl",
+      "rate": "1/128",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Coins",
+      "rate": "1/4",
+      "qty_min": 56,
+      "qty_max": 56
+    },
+    {
+      "name": "Coins",
+      "rate": "1/14",
+      "qty_min": 25,
+      "qty_max": 25
+    },
+    {
+      "name": "Coins",
+      "rate": "1/16",
+      "qty_min": 44,
+      "qty_max": 44
+    },
+    {
+      "name": "Coins",
+      "rate": "1/21",
+      "qty_min": 41,
+      "qty_max": 41
+    },
+    {
+      "name": "Casket",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Opal bolt tips",
+      "rate": "1/64",
+      "qty_min": 12,
+      "qty_max": 12
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/256",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/512",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature talisman",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/16",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/262",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/524",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/699",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dagannoth ribs",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled dagannoth head",
+      "rate": "1/40",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (medium)",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Brimstone key",
+      "rate": "1/235",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ancient shard",
+      "rate": "1/286",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dark totem base",
+      "rate": "1/430",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dark totem middle",
+      "rate": "1/430",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dark totem top",
+      "rate": "1/430",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

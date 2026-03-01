@@ -33,39 +33,25 @@ class AlKharidRooftopCourse @Inject constructor() : PluginScript() {
 
     override fun ScriptContext.startup() {
         // Obstacle 1: Rough Wall (start)
-        onOpLoc1(AgilityLocs.kharid_wallclimb) {
-            attemptObstacle(ObstacleType.ROUGH_WALL_1)
-        }
+        onOpLoc1(AgilityLocs.kharid_wallclimb) { attemptObstacle(ObstacleType.ROUGH_WALL_1) }
 
         // Obstacle 2: Tightrope
-        onOpLoc1(AgilityLocs.kharid_tightrope_1) {
-            attemptObstacle(ObstacleType.TIGHTROPE)
-        }
+        onOpLoc1(AgilityLocs.kharid_tightrope_1) { attemptObstacle(ObstacleType.TIGHTROPE) }
 
         // Obstacle 3: Cable Swing
-        onOpLoc1(AgilityLocs.kharid_rope_swing) {
-            attemptObstacle(ObstacleType.CABLE_SWING)
-        }
+        onOpLoc1(AgilityLocs.kharid_rope_swing) { attemptObstacle(ObstacleType.CABLE_SWING) }
 
         // Obstacle 4: Zip Line Slide
-        onOpLoc1(AgilityLocs.kharid_slide_side) {
-            attemptObstacle(ObstacleType.ZIP_LINE)
-        }
+        onOpLoc1(AgilityLocs.kharid_slide_side) { attemptObstacle(ObstacleType.ZIP_LINE) }
 
         // Obstacle 5: Second Tightrope
-        onOpLoc1(AgilityLocs.kharid_tightrope_4) {
-            attemptObstacle(ObstacleType.TIGHTROPE_2)
-        }
+        onOpLoc1(AgilityLocs.kharid_tightrope_4) { attemptObstacle(ObstacleType.TIGHTROPE_2) }
 
         // Obstacle 6: Tree (climb down)
-        onOpLoc1(AgilityLocs.kharid_leapdown) {
-            attemptObstacle(ObstacleType.TREE_DOWN)
-        }
+        onOpLoc1(AgilityLocs.kharid_leapdown) { attemptObstacle(ObstacleType.TREE_DOWN) }
 
         // Obstacle 7: Second Rough Wall (end)
-        onOpLoc1(AgilityLocs.kharid_wallclimb_2) {
-            attemptObstacle(ObstacleType.ROUGH_WALL_2)
-        }
+        onOpLoc1(AgilityLocs.kharid_wallclimb_2) { attemptObstacle(ObstacleType.ROUGH_WALL_2) }
     }
 
     private suspend fun ProtectedAccess.attemptObstacle(type: ObstacleType) {

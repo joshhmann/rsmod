@@ -1,0 +1,340 @@
+{
+  "skill": "firemaking",
+  "source": "OSRS Rev 233 cache + Firemaking.kt implementation",
+  "revision": 233,
+  "actions": {
+    "normal_logs": {
+      "level_req": 1,
+      "xp": 40.0,
+      "log_item_id": 1511,
+      "log_sym": "logs",
+      "fire_lifespan_ticks": 200,
+      "output": "ashes"
+    },
+    "achey_logs": {
+      "level_req": 1,
+      "xp": 40.0,
+      "log_item_id": 2862,
+      "log_sym": "achey_tree_logs",
+      "fire_lifespan_ticks": 200,
+      "output": "ashes"
+    },
+    "oak_logs": {
+      "level_req": 15,
+      "xp": 60.0,
+      "log_item_id": 1521,
+      "log_sym": "oak_logs",
+      "fire_lifespan_ticks": 233,
+      "output": "ashes"
+    },
+    "willow_logs": {
+      "level_req": 30,
+      "xp": 90.0,
+      "log_item_id": 1519,
+      "log_sym": "willow_logs",
+      "fire_lifespan_ticks": 284,
+      "output": "ashes"
+    },
+    "teak_logs": {
+      "level_req": 35,
+      "xp": 105.0,
+      "log_item_id": 6333,
+      "log_sym": "teak_logs",
+      "fire_lifespan_ticks": 316,
+      "output": "ashes"
+    },
+    "arctic_pine_logs": {
+      "level_req": 42,
+      "xp": 125.0,
+      "log_item_id": 10810,
+      "log_sym": "arctic_pine_log",
+      "fire_lifespan_ticks": 330,
+      "output": "ashes"
+    },
+    "maple_logs": {
+      "level_req": 45,
+      "xp": 135.0,
+      "log_item_id": 1517,
+      "log_sym": "maple_logs",
+      "fire_lifespan_ticks": 350,
+      "output": "ashes"
+    },
+    "mahogany_logs": {
+      "level_req": 50,
+      "xp": 157.5,
+      "log_item_id": 6332,
+      "log_sym": "mahogany_logs",
+      "fire_lifespan_ticks": 400,
+      "output": "ashes"
+    },
+    "yew_logs": {
+      "level_req": 60,
+      "xp": 202.5,
+      "log_item_id": 1515,
+      "log_sym": "yew_logs",
+      "fire_lifespan_ticks": 500,
+      "output": "ashes"
+    },
+    "magic_logs": {
+      "level_req": 75,
+      "xp": 303.8,
+      "log_item_id": 1513,
+      "log_sym": "magic_logs",
+      "fire_lifespan_ticks": 550,
+      "output": "ashes"
+    },
+    "blisterwood_logs": {
+      "level_req": 76,
+      "xp": 96.0,
+      "log_item_id": 24620,
+      "log_sym": "blisterwood_logs",
+      "fire_lifespan_ticks": 300,
+      "output": "ashes",
+      "note": "Darkmeyer reward tree"
+    },
+    "redwood_logs": {
+      "level_req": 90,
+      "xp": 350.0,
+      "log_item_id": 19669,
+      "log_sym": "redwood_logs",
+      "fire_lifespan_ticks": 600,
+      "output": "ashes"
+    }
+  },
+  "pyre_logs": {
+    "normal_pyre": {
+      "level_req": 5,
+      "xp": 50.0,
+      "log_item_id": 3438,
+      "log_sym": "logs_pyre",
+      "base_log_id": 1511,
+      "note": "Barbarian Firemaking - used for shades"
+    },
+    "oak_pyre": {
+      "level_req": 20,
+      "xp": 70.0,
+      "log_item_id": 3440,
+      "log_sym": "oak_logs_pyre",
+      "base_log_id": 1521
+    },
+    "willow_pyre": {
+      "level_req": 35,
+      "xp": 100.0,
+      "log_item_id": 3442,
+      "log_sym": "willow_logs_pyre",
+      "base_log_id": 1519
+    },
+    "teak_pyre": {
+      "level_req": 40,
+      "xp": 120.0,
+      "log_item_id": 6211,
+      "log_sym": "teak_logs_pyre",
+      "base_log_id": 6333
+    },
+    "maple_pyre": {
+      "level_req": 55,
+      "xp": 175.0,
+      "log_item_id": 3444,
+      "log_sym": "maple_logs_pyre",
+      "base_log_id": 1517
+    },
+    "mahogany_pyre": {
+      "level_req": 60,
+      "xp": 210.0,
+      "log_item_id": 6213,
+      "log_sym": "mahogany_logs_pyre",
+      "base_log_id": 6332
+    },
+    "yew_pyre": {
+      "level_req": 65,
+      "xp": 225.0,
+      "log_item_id": 3446,
+      "log_sym": "yew_logs_pyre",
+      "base_log_id": 1515
+    },
+    "magic_pyre": {
+      "level_req": 80,
+      "xp": 404.5,
+      "log_item_id": 3448,
+      "log_sym": "magic_logs_pyre",
+      "base_log_id": 1513
+    },
+    "redwood_pyre": {
+      "level_req": 95,
+      "xp": 500.0,
+      "log_item_id": 19672,
+      "log_sym": "redwood_logs_pyre",
+      "base_log_id": 19669
+    },
+    "arctic_pine_pyre": {
+      "level_req": 47,
+      "xp": 158.0,
+      "log_item_id": 10808,
+      "log_sym": "arctic_pine_logs_pyre",
+      "base_log_id": 10810
+    }
+  },
+  "tools": {
+    "tinderbox": {
+      "item_id": 590,
+      "sym": "tinderbox",
+      "level_req": 1,
+      "obtainable": true,
+      "note": "Required for all firemaking"
+    },
+    "damp_tinderbox": {
+      "item_id": 4073,
+      "sym": "damp_tinderbox",
+      "note": "Non-functional, from quest"
+    },
+    "candle": {
+      "lit_item_id": 33,
+      "unlit_item_id": 36,
+      "lit_sym": "lit_candle",
+      "unlit_sym": "unlit_candle",
+      "level_req": 1,
+      "note": "Used for Treasure Trails"
+    },
+    "black_candle": {
+      "lit_item_id": 32,
+      "unlit_item_id": 38,
+      "lit_sym": "lit_black_candle",
+      "unlit_sym": "unlit_black_candle",
+      "note": "For Merlin's Crystal quest"
+    },
+    "candle_lantern_empty": {
+      "item_id": 4527,
+      "sym": "candle_lantern_empty"
+    },
+    "candle_lantern_unlit": {
+      "item_id": 4529,
+      "sym": "candle_lantern_unlit"
+    },
+    "candle_lantern_lit": {
+      "item_id": 4531,
+      "sym": "candle_lantern_lit"
+    },
+    "candle_lantern_black_unlit": {
+      "item_id": 4532,
+      "sym": "candle_lantern_black_unlit"
+    },
+    "candle_lantern_black_lit": {
+      "item_id": 4534,
+      "sym": "candle_lantern_black_lit"
+    },
+    "oil_lantern_empty": {
+      "item_id": 4535,
+      "sym": "oil_lantern_empty"
+    },
+    "oil_lantern_unlit": {
+      "item_id": 4537,
+      "sym": "oil_lantern_unlit"
+    },
+    "oil_lantern_lit": {
+      "item_id": 4539,
+      "sym": "oil_lantern_lit"
+    }
+  },
+  "mechanics": {
+    "animation": {
+      "lighting_animation": {
+        "id": 733,
+        "sym": "human_createfire",
+        "duration_ticks": 3,
+        "note": "Player animation when lighting logs"
+      }
+    },
+    "fire_loc": {
+      "id": 26185,
+      "sym": "fire",
+      "output_item": {
+        "id": 592,
+        "sym": "ashes",
+        "spawn_delay_ticks": 100,
+        "note": "Ashes appear after fire burns out"
+      }
+    },
+    "fire_remains": {
+      "id": 714,
+      "sym": "fire_remains",
+      "note": "Depleted fire loc after ashes collected"
+    },
+    "fire_lifespan_scaling": {
+      "description": "Fire duration increases with log tier",
+      "range_ticks": "200-600",
+      "range_seconds": "120-360"
+    },
+    "chain_lighting": {
+      "enabled": true,
+      "description": "Auto-continue lighting same log type if available",
+      "movement": "Player steps 1 tile west when fire lights"
+    }
+  },
+  "test_locations": [
+    {
+      "desc": "Lumbridge castle bank - north of furnace",
+      "x": 3208,
+      "z": 3213,
+      "plane": 2
+    },
+    {
+      "desc": "Grand Exchange NW corner",
+      "x": 3163,
+      "z": 3491,
+      "plane": 0
+    },
+    {
+      "desc": "Edgeville bank - east side",
+      "x": 3094,
+      "z": 3491,
+      "plane": 0
+    },
+    {
+      "desc": "Seers' Village bank",
+      "x": 2725,
+      "z": 3491,
+      "plane": 0
+    },
+    {
+      "desc": "Varrock West bank",
+      "x": 3185,
+      "z": 3437,
+      "plane": 0
+    }
+  ],
+  "burn_rates": {
+    "note": "Firemaking has no failure mechanic post-EOC. Lighting is guaranteed after animation completes.",
+    "success_rate": "100%",
+    "boosts": [
+      {
+        "name": "Pyromancer outfit",
+        "effect": "2.5% XP bonus",
+        "pieces": ["hood", "robe", "leggings", "boots"]
+      },
+      {
+        "name": "Ring of fire",
+        "effect": "2% XP bonus",
+        "req": "All Barbarian Firemaking achievements"
+      },
+      {
+        "name": "Flame gloves",
+        "effect": "2% XP bonus",
+        "req": "All Barbarian Firemaking achievements"
+      }
+    ]
+  },
+  "clue_scroll_burning": {
+    "note": "Hard clue scrolls can be burned at certain locations for Uri clue steps",
+    "mechanic": "Use lit candle on clue scroll at specified location",
+    "candle_type": "lit_candle"
+  },
+  "barbarian_firemaking": {
+    "note": "Requires Barbarian Training miniquest",
+    "features": [
+      "Light fires without tinderbox (using bow)",
+      "Create pyre logs from chewed bones",
+      "Pyre ships for Prayer XP bonus"
+    ],
+    "chewed_bones_source": "Mithril dragons, Barbarian spirits"
+  }
+}

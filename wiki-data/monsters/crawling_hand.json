@@ -1,0 +1,163 @@
+{
+  "name": "Crawling Hand",
+  "combat_level": 7,
+  "hitpoints": 15,
+  "attack": 7,
+  "strength": 3,
+  "defence": 3,
+  "attack_speed": 4,
+  "slayer_level": 5,
+  "slayer_xp": 12.0,
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Leather gloves",
+      "rate": "1/6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Purple gloves",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Yellow gloves",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Red gloves",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Teal gloves",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Gold ring",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Sapphire ring",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Emerald ring",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/6",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Coins",
+      "rate": "1/5",
+      "qty_min": 8,
+      "qty_max": 8
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/256",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/512",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature talisman",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/8",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/131",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/262",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/349",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Crawling hand (item)",
+      "rate": "1/500",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

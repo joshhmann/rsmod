@@ -1,9 +1,9 @@
 package org.rsmod.content.equipment
 
 /**
- * F2P Equipment tiers: Bronze → Iron → Steel → Black → Mithril → Adamant → Rune
- * Weapon and armor stats are configured via ObjEditors in their respective modules
- * This provides documentation for F2P equipment tiers
+ * F2P Equipment tiers: Bronze → Iron → Steel → Black → Mithril → Adamant → Rune Weapon and armor
+ * stats are configured via ObjEditors in their respective modules This provides documentation for
+ * F2P equipment tiers
  *
  * F2P Melee Weapons by Tier:
  * - Bronze (Level 1): dagger, sword, longsword, scimitar, mace, axe, 2h sword

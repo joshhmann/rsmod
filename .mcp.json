@@ -1,0 +1,99 @@
+{
+  "mcpServers": {
+    "cclsp": {
+      "type": "stdio",
+      "command": "cclsp",
+      "cwd": ".",
+      "env": {
+        "CCLSP_CONFIG_PATH": "C:\\Users\\CRIMS\\.config\\cclsp\\cclsp.json"
+      },
+      "description": "🧠 Code Intelligence LSP Bridge - symbol lookup, references, diagnostics"
+    },
+    "agent-tasks": {
+      "type": "stdio",
+      "command": "bun",
+      "args": [
+        "mcp-tasks/server.ts"
+      ],
+      "cwd": ".",
+      "description": "📋 Agent Task Coordination - Claim tasks, lock files, coordinate multi-agent work. START HERE before implementing anything. IMPORTANT: Call agent_heartbeat every 1-2 minutes so other agents know what you're doing!"
+    },
+    "rsmod-game": {
+      "type": "stdio",
+      "command": "bun",
+      "args": [
+        "mcp/server-enhanced.ts"
+      ],
+      "cwd": ".",
+      "env": {
+        "BRIDGE_URL": "ws://localhost:43595"
+      },
+      "description": "🎮 RSMod Game Server Control - Execute bot scripts, get player state, control RSMod v2 server"
+    },
+    "osrs-cache": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "mcp-osrs/dist/index.js"
+      ],
+      "cwd": ".",
+      "description": "📦 OSRS Cache Lookup - Find item/NPC/animation IDs from OSRS cache files"
+    },
+    "osrs-wiki-rev233": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "-u",
+        "mcp-osrs-rev233/server.py"
+      ],
+      "cwd": ".",
+      "description": "📜 OSRS Wiki Historical (Rev 233) - Historical data aligned to OpenRS2 runescape/2293 (build 233, 2025-09-10)"
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "cwd": ".",
+      "description": "📚 Context7 Documentation Search - Search indexed documentation and codebases"
+    },
+    "web-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search@latest"
+      ],
+      "cwd": ".",
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      },
+      "description": "🔍 Web Search - Search the web using Brave Search API"
+    },
+    "linear": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@linear/mcp@latest"
+      ],
+      "cwd": ".",
+      "env": {
+        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
+      },
+      "description": "📊 Linear - Manage issues, projects, and workflows from Linear"
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "Z:\\Projects\\OSRS-PS-DEV\\rsmod\\mcp-memory\\.venv\\Scripts\\memory.exe",
+      "args": [
+        "server"
+      ],
+      "cwd": "Z:\\Projects\\OSRS-PS-DEV\\rsmod",
+      "description": "🧠 Persistent Memory Service - semantic search, knowledge graph, and autonomous consolidation"
+    }
+  }
+}
+

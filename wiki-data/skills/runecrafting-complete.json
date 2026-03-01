@@ -1,0 +1,807 @@
+{
+  "skill": "runecrafting",
+  "revision": 233,
+  "description": "Complete Runecrafting skill data for OSRS Rev 233",
+  
+  "runes": {
+    "air": {
+      "id": 556,
+      "name": "airrune",
+      "display_name": "Air rune",
+      "level_req": 1,
+      "xp": 5.0,
+      "members": false
+    },
+    "mind": {
+      "id": 558,
+      "name": "mindrune",
+      "display_name": "Mind rune",
+      "level_req": 2,
+      "xp": 5.5,
+      "members": false
+    },
+    "water": {
+      "id": 555,
+      "name": "waterrune",
+      "display_name": "Water rune",
+      "level_req": 5,
+      "xp": 6.0,
+      "members": false
+    },
+    "earth": {
+      "id": 557,
+      "name": "earthrune",
+      "display_name": "Earth rune",
+      "level_req": 9,
+      "xp": 6.5,
+      "members": false
+    },
+    "fire": {
+      "id": 554,
+      "name": "firerune",
+      "display_name": "Fire rune",
+      "level_req": 14,
+      "xp": 7.0,
+      "members": false
+    },
+    "body": {
+      "id": 559,
+      "name": "bodyrune",
+      "display_name": "Body rune",
+      "level_req": 20,
+      "xp": 7.5,
+      "members": false
+    },
+    "cosmic": {
+      "id": 564,
+      "name": "cosmicrune",
+      "display_name": "Cosmic rune",
+      "level_req": 27,
+      "xp": 8.0,
+      "members": true
+    },
+    "chaos": {
+      "id": 562,
+      "name": "chaosrune",
+      "display_name": "Chaos rune",
+      "level_req": 35,
+      "xp": 8.5,
+      "members": true
+    },
+    "astral": {
+      "id": 9075,
+      "name": "astralrune",
+      "display_name": "Astral rune",
+      "level_req": 40,
+      "xp": 8.7,
+      "members": true,
+      "requires_lunar_diplomacy": true
+    },
+    "nature": {
+      "id": 561,
+      "name": "naturerune",
+      "display_name": "Nature rune",
+      "level_req": 44,
+      "xp": 9.0,
+      "members": true
+    },
+    "law": {
+      "id": 563,
+      "name": "lawrune",
+      "display_name": "Law rune",
+      "level_req": 54,
+      "xp": 9.5,
+      "members": true
+    },
+    "death": {
+      "id": 560,
+      "name": "deathrune",
+      "display_name": "Death rune",
+      "level_req": 65,
+      "xp": 10.0,
+      "members": true
+    },
+    "blood": {
+      "id": 565,
+      "name": "bloodrune",
+      "display_name": "Blood rune",
+      "level_req": 77,
+      "xp": 10.5,
+      "members": true
+    },
+    "soul": {
+      "id": 566,
+      "name": "soulrune",
+      "display_name": "Soul rune",
+      "level_req": 90,
+      "xp": 11.0,
+      "members": true
+    },
+    "wrath": {
+      "id": 21880,
+      "name": "wrathrune",
+      "display_name": "Wrath rune",
+      "level_req": 95,
+      "xp": 11.5,
+      "members": true,
+      "requires_dragon_slayer_2": true
+    }
+  },
+  
+  "essence": {
+    "rune_essence": {
+      "id": 1436,
+      "name": "blankrune",
+      "display_name": "Rune essence",
+      "description": "Used for crafting elemental runes (Air, Mind, Water, Earth, Fire, Body)",
+      "notes": "Can be mined after completing Rune Mysteries quest"
+    },
+    "pure_essence": {
+      "id": 7936,
+      "name": "blankrune_high",
+      "display_name": "Pure essence",
+      "description": "Required for crafting all runes (including members-only runes)",
+      "notes": "Can be mined after completing Rune Mysteries quest; required for runes level 27+"
+    }
+  },
+  
+  "talismans": {
+    "air": {
+      "id": 1438,
+      "name": "air_talisman",
+      "display_name": "Air talisman",
+      "rune_type": "air"
+    },
+    "mind": {
+      "id": 1448,
+      "name": "mind_talisman",
+      "display_name": "Mind talisman",
+      "rune_type": "mind"
+    },
+    "water": {
+      "id": 1444,
+      "name": "water_talisman",
+      "display_name": "Water talisman",
+      "rune_type": "water"
+    },
+    "earth": {
+      "id": 1440,
+      "name": "earth_talisman",
+      "display_name": "Earth talisman",
+      "rune_type": "earth"
+    },
+    "fire": {
+      "id": 1442,
+      "name": "fire_talisman",
+      "display_name": "Fire talisman",
+      "rune_type": "fire"
+    },
+    "body": {
+      "id": 1446,
+      "name": "body_talisman",
+      "display_name": "Body talisman",
+      "rune_type": "body"
+    },
+    "cosmic": {
+      "id": 1454,
+      "name": "cosmic_talisman",
+      "display_name": "Cosmic talisman",
+      "rune_type": "cosmic",
+      "members": true
+    },
+    "chaos": {
+      "id": 1452,
+      "name": "chaos_talisman",
+      "display_name": "Chaos talisman",
+      "rune_type": "chaos",
+      "members": true
+    },
+    "nature": {
+      "id": 1462,
+      "name": "nature_talisman",
+      "display_name": "Nature talisman",
+      "rune_type": "nature",
+      "members": true
+    },
+    "law": {
+      "id": 1458,
+      "name": "law_talisman",
+      "display_name": "Law talisman",
+      "rune_type": "law",
+      "members": true
+    },
+    "death": {
+      "id": 1456,
+      "name": "death_talisman",
+      "display_name": "Death talisman",
+      "rune_type": "death",
+      "members": true
+    },
+    "blood": {
+      "id": 1450,
+      "name": "blood_talisman",
+      "display_name": "Blood talisman",
+      "rune_type": "blood",
+      "members": true
+    },
+    "soul": {
+      "id": 1460,
+      "name": "soul_talisman",
+      "display_name": "Soul talisman",
+      "rune_type": "soul",
+      "members": true
+    },
+    "wrath": {
+      "id": 22118,
+      "name": "wrath_talisman",
+      "display_name": "Wrath talisman",
+      "rune_type": "wrath",
+      "members": true
+    }
+  },
+  
+  "tiaras": {
+    "blank": {
+      "id": 5525,
+      "name": "tiara",
+      "display_name": "Tiara",
+      "description": "Unenchanted tiara base"
+    },
+    "mould": {
+      "id": 5523,
+      "name": "tiara_mould",
+      "display_name": "Tiara mould",
+      "description": "Used to craft tiaras at a furnace"
+    },
+    "air": {
+      "id": 5527,
+      "name": "tiara_air",
+      "display_name": "Air tiara",
+      "rune_type": "air",
+      "left_click_teleport": false
+    },
+    "mind": {
+      "id": 5529,
+      "name": "tiara_mind",
+      "display_name": "Mind tiara",
+      "rune_type": "mind",
+      "left_click_teleport": false
+    },
+    "water": {
+      "id": 5531,
+      "name": "tiara_water",
+      "display_name": "Water tiara",
+      "rune_type": "water",
+      "left_click_teleport": false
+    },
+    "body": {
+      "id": 5533,
+      "name": "tiara_body",
+      "display_name": "Body tiara",
+      "rune_type": "body",
+      "left_click_teleport": false
+    },
+    "earth": {
+      "id": 5535,
+      "name": "tiara_earth",
+      "display_name": "Earth tiara",
+      "rune_type": "earth",
+      "left_click_teleport": false
+    },
+    "fire": {
+      "id": 5537,
+      "name": "tiara_fire",
+      "display_name": "Fire tiara",
+      "rune_type": "fire",
+      "left_click_teleport": false
+    },
+    "cosmic": {
+      "id": 5539,
+      "name": "tiara_cosmic",
+      "display_name": "Cosmic tiara",
+      "rune_type": "cosmic",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "nature": {
+      "id": 5541,
+      "name": "tiara_nature",
+      "display_name": "Nature tiara",
+      "rune_type": "nature",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "chaos": {
+      "id": 5543,
+      "name": "tiara_chaos",
+      "display_name": "Chaos tiara",
+      "rune_type": "chaos",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "law": {
+      "id": 5545,
+      "name": "tiara_law",
+      "display_name": "Law tiara",
+      "rune_type": "law",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "death": {
+      "id": 5547,
+      "name": "tiara_death",
+      "display_name": "Death tiara",
+      "rune_type": "death",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "blood": {
+      "id": 5549,
+      "name": "tiara_blood",
+      "display_name": "Blood tiara",
+      "rune_type": "blood",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "soul": {
+      "id": 5551,
+      "name": "tiara_soul",
+      "display_name": "Soul tiara",
+      "rune_type": "soul",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "astral": {
+      "id": 9106,
+      "name": "tiara_astral",
+      "display_name": "Astral tiara",
+      "rune_type": "astral",
+      "left_click_teleport": false,
+      "members": true
+    },
+    "wrath": {
+      "id": 22121,
+      "name": "tiara_wrath",
+      "display_name": "Wrath tiara",
+      "rune_type": "wrath",
+      "left_click_teleport": false,
+      "members": true
+    }
+  },
+  
+  "pouches": {
+    "small": {
+      "id": 5509,
+      "name": "rcu_pouch_small",
+      "display_name": "Small pouch",
+      "level_req": 1,
+      "capacity": 3,
+      "degradable": false,
+      "notes": "Obtained from the Abyss; holds 3 essence"
+    },
+    "medium": {
+      "id": 5510,
+      "name": "rcu_pouch_medium",
+      "display_name": "Medium pouch",
+      "level_req": 25,
+      "capacity": 6,
+      "degradable": true,
+      "degraded_id": 5511,
+      "notes": "Obtained from the Abyss; holds 6 essence, degrades over time"
+    },
+    "medium_degraded": {
+      "id": 5511,
+      "name": "rcu_pouch_medium_degrade",
+      "display_name": "Medium pouch (degraded)",
+      "notes": "Degraded version that must be repaired"
+    },
+    "large": {
+      "id": 5512,
+      "name": "rcu_pouch_large",
+      "display_name": "Large pouch",
+      "level_req": 50,
+      "capacity": 9,
+      "degradable": true,
+      "degraded_id": 5513,
+      "notes": "Obtained from the Abyss; holds 9 essence, degrades over time"
+    },
+    "large_degraded": {
+      "id": 5513,
+      "name": "rcu_pouch_large_degrade",
+      "display_name": "Large pouch (degraded)",
+      "notes": "Degraded version that must be repaired"
+    },
+    "giant": {
+      "id": 5514,
+      "name": "rcu_pouch_giant",
+      "display_name": "Giant pouch",
+      "level_req": 75,
+      "capacity": 12,
+      "degradable": true,
+      "degraded_id": 5515,
+      "notes": "Obtained from the Abyss; holds 12 essence, degrades over time"
+    },
+    "giant_degraded": {
+      "id": 5515,
+      "name": "rcu_pouch_giant_degrade",
+      "display_name": "Giant pouch (degraded)",
+      "notes": "Degraded version that must be repaired"
+    }
+  },
+  
+  "altars": {
+    "air": {
+      "rune_type": "air",
+      "ruins_name": "Mysterious ruins (Air)",
+      "ruins_location": {
+        "desc": "South of Falador, near the agility shortcut",
+        "x": 2984,
+        "z": 3291
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"]
+    },
+    "mind": {
+      "rune_type": "mind",
+      "ruins_name": "Mysterious ruins (Mind)",
+      "ruins_location": {
+        "desc": "Between Ice Mountain and Goblin Village",
+        "x": 2980,
+        "z": 3511
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"]
+    },
+    "water": {
+      "rune_type": "water",
+      "ruins_name": "Mysterious ruins (Water)",
+      "ruins_location": {
+        "desc": "South of Lumbridge Swamp, near the Draynor",
+        "x": 3184,
+        "z": 3161
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"]
+    },
+    "earth": {
+      "rune_type": "earth",
+      "ruins_name": "Mysterious ruins (Earth)",
+      "ruins_location": {
+        "desc": "North-east of Varrock, near the Lumber Yard",
+        "x": 3305,
+        "z": 3473
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"]
+    },
+    "fire": {
+      "rune_type": "fire",
+      "ruins_name": "Mysterious ruins (Fire)",
+      "ruins_location": {
+        "desc": "North of Al Kharid, near the Duel Arena",
+        "x": 3312,
+        "z": 3254
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"]
+    },
+    "body": {
+      "rune_type": "body",
+      "ruins_name": "Mysterious ruins (Body)",
+      "ruins_location": {
+        "desc": "South of Edgeville Monastery, in the Wilderness",
+        "x": 3052,
+        "z": 3442
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"]
+    },
+    "cosmic": {
+      "rune_type": "cosmic",
+      "ruins_name": "Mysterious ruins (Cosmic)",
+      "ruins_location": {
+        "desc": "South of Ice Mountain, in the Wilderness (Zanaris access)",
+        "x": 2407,
+        "z": 4376
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true
+    },
+    "chaos": {
+      "rune_type": "chaos",
+      "ruins_name": "Mysterious ruins (Chaos)",
+      "ruins_location": {
+        "desc": "North-west of Edgeville, in level 9 Wilderness",
+        "x": 3037,
+        "z": 3628
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true
+    },
+    "astral": {
+      "rune_type": "astral",
+      "ruins_name": "Astral Altar",
+      "ruins_location": {
+        "desc": "Lunar Isle - no ruins, altar is surface-accessible",
+        "x": 2156,
+        "z": 3862
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true,
+      "requires_lunar_diplomacy": true,
+      "notes": "No talisman or tiara required; direct access on Lunar Isle"
+    },
+    "nature": {
+      "rune_type": "nature",
+      "ruins_name": "Mysterious ruins (Nature)",
+      "ruins_location": {
+        "desc": "North of Shilo Village, in Karamja",
+        "x": 2868,
+        "z": 3020
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true
+    },
+    "law": {
+      "rune_type": "law",
+      "ruins_name": "Mysterious ruins (Law)",
+      "ruins_location": {
+        "desc": "North of Entrana, requires no weapons/armor to enter",
+        "x": 2456,
+        "z": 4788
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true
+    },
+    "death": {
+      "rune_type": "death",
+      "ruins_name": "Mysterious ruins (Death)",
+      "ruins_location": {
+        "desc": "Temple of Light, West Ardougne ( Mourning's End Part II)",
+        "x": 2205,
+        "z": 4840
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true
+    },
+    "blood": {
+      "rune_type": "blood",
+      "ruins_name": "Blood Altar",
+      "ruins_location": {
+        "desc": "Arceuus, Great Kourend - no ruins, direct access",
+        "x": 1713,
+        "z": 3820
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true,
+      "notes": "Arceuus blood altar; different mechanics than standard"
+    },
+    "soul": {
+      "rune_type": "soul",
+      "ruins_name": "Soul Altar",
+      "ruins_location": {
+        "desc": "Arceuus, Great Kourend - no ruins, direct access",
+        "x": 1812,
+        "z": 3855
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true,
+      "notes": "Arceuus soul altar; different mechanics than standard"
+    },
+    "wrath": {
+      "rune_type": "wrath",
+      "ruins_name": "Mysterious ruins (Wrath)",
+      "ruins_location": {
+        "desc": "South of Myths' Guild, on the edge of the map",
+        "x": 2448,
+        "z": 2825
+      },
+      "inside_altar_loc_ids": [1887, 1888],
+      "loc_names": ["runetemple_altar_new", "runetemple_altar_old"],
+      "members": true,
+      "requires_dragon_slayer_2": true
+    }
+  },
+  
+  "abyss": {
+    "description": "The Abyss provides access to all Runecrafting altars without needing a talisman",
+    "entrance": {
+      "desc": "Talk to the Zamorak Mage in the Wilderness north of Edgeville (level 5-6)",
+      "x": 3028,
+      "z": 3625
+    },
+    "exit_portals": {
+      "to_air": { "id": 25378, "name": "abyss_exit_to_air" },
+      "to_mind": { "id": 25379, "name": "abyss_exit_to_mind" },
+      "to_water": { "id": 25376, "name": "abyss_exit_to_water" },
+      "to_earth": { "id": 24972, "name": "abyss_exit_to_earth" },
+      "to_fire": { "id": 24971, "name": "abyss_exit_to_fire" },
+      "to_body": { "id": 24973, "name": "abyss_exit_to_body" },
+      "to_cosmic": { "id": 24974, "name": "abyss_exit_to_cosmic" },
+      "to_chaos": { "id": 24976, "name": "abyss_exit_to_chaos" },
+      "to_nature": { "id": 24975, "name": "abyss_exit_to_nature" },
+      "to_law": { "id": 25034, "name": "abyss_exit_to_law" },
+      "to_death": { "id": 25035, "name": "abyss_exit_to_death" },
+      "to_soul": { "id": 25377, "name": "abyss_exit_to_soul" }
+    },
+    "barriers": {
+      "agility": { "id": 25428, "name": "rcu_abyssal_barrier_agility" },
+      "tendrils": [
+        { "id": 25425, "name": "rcu_abyssal_barrier_tendrils1" },
+        { "id": 25426, "name": "rcu_abyssal_barrier_tendrils2" },
+        { "id": 25427, "name": "rcu_abyssal_barrier_tendrils3" }
+      ],
+      "eyes": [
+        { "id": 26146, "name": "rcu_abyssal_barrier_eyes1" },
+        { "id": 26147, "name": "rcu_abyssal_barrier_eyes2" },
+        { "id": 26148, "name": "rcu_abyssal_barrier_eyes3" }
+      ],
+      "boil": [
+        { "id": 25590, "name": "rcu_abyssal_barrier_boil1" },
+        { "id": 26144, "name": "rcu_abyssal_barrier_boil2" },
+        { "id": 26145, "name": "rcu_abyssal_barrier_boil3" }
+      ],
+      "teeth": [
+        { "id": 25422, "name": "rcu_abyssal_barrier_teeth1" },
+        { "id": 25423, "name": "rcu_abyssal_barrier_teeth2" },
+        { "id": 25424, "name": "rcu_abyssal_barrier_teeth3" }
+      ]
+    },
+    "pouch_drop_source": "Abyssal leeches, Abyssal walkers, Abyssal guardians"
+  },
+  
+  "animations": {
+    "runecrafting": {
+      "id": 790,
+      "name": "runecrafting",
+      "description": "Standard runecrafting animation"
+    },
+    "human_runecraft": {
+      "id": 791,
+      "name": "human_runecraft",
+      "description": "Alternative runecrafting animation"
+    }
+  },
+  
+  "test_locations": [
+    {
+      "desc": "Air Altar - South of Falador",
+      "x": 2984,
+      "z": 3291
+    },
+    {
+      "desc": "Mind Altar - Between Ice Mountain and Goblin Village",
+      "x": 2980,
+      "z": 3511
+    },
+    {
+      "desc": "Water Altar - Lumbridge Swamp",
+      "x": 3184,
+      "z": 3161
+    },
+    {
+      "desc": "Earth Altar - North-east of Varrock",
+      "x": 3305,
+      "z": 3473
+    },
+    {
+      "desc": "Fire Altar - North of Al Kharid",
+      "x": 3312,
+      "z": 3254
+    },
+    {
+      "desc": "Body Altar - South of Edgeville Monastery",
+      "x": 3052,
+      "z": 3442
+    },
+    {
+      "desc": "Cosmic Altar - South of Ice Mountain (Zanaris)",
+      "x": 2407,
+      "z": 4376
+    },
+    {
+      "desc": "Chaos Altar - Wilderness north-west of Edgeville",
+      "x": 3037,
+      "z": 3628
+    },
+    {
+      "desc": "Abyss entrance - Zamorak Mage",
+      "x": 3028,
+      "z": 3625
+    }
+  ],
+  
+  "mechanics": {
+    "essence_usage": {
+      "rune_essence": ["air", "mind", "water", "earth", "fire", "body"],
+      "pure_essence": ["cosmic", "chaos", "astral", "nature", "law", "death", "blood", "soul", "wrath"]
+    },
+    "rune_multiplier": {
+      "description": "Chance to craft multiple runes from one essence based on level",
+      "air": [
+        { "level": 11, "multiplier": 2 },
+        { "level": 22, "multiplier": 3 },
+        { "level": 33, "multiplier": 4 },
+        { "level": 44, "multiplier": 5 },
+        { "level": 55, "multiplier": 6 },
+        { "level": 66, "multiplier": 7 },
+        { "level": 77, "multiplier": 8 },
+        { "level": 88, "multiplier": 9 },
+        { "level": 99, "multiplier": 10 }
+      ],
+      "mind": [
+        { "level": 14, "multiplier": 2 },
+        { "level": 28, "multiplier": 3 },
+        { "level": 42, "multiplier": 4 },
+        { "level": 56, "multiplier": 5 },
+        { "level": 70, "multiplier": 6 },
+        { "level": 84, "multiplier": 7 },
+        { "level": 98, "multiplier": 8 }
+      ],
+      "water": [
+        { "level": 19, "multiplier": 2 },
+        { "level": 38, "multiplier": 3 },
+        { "level": 57, "multiplier": 4 },
+        { "level": 76, "multiplier": 5 },
+        { "level": 95, "multiplier": 6 }
+      ],
+      "earth": [
+        { "level": 26, "multiplier": 2 },
+        { "level": 52, "multiplier": 3 },
+        { "level": 78, "multiplier": 4 }
+      ],
+      "fire": [
+        { "level": 35, "multiplier": 2 },
+        { "level": 70, "multiplier": 3 }
+      ],
+      "body": [
+        { "level": 46, "multiplier": 2 },
+        { "level": 92, "multiplier": 3 }
+      ],
+      "cosmic": [
+        { "level": 59, "multiplier": 2 }
+      ],
+      "chaos": [
+        { "level": 74, "multiplier": 2 }
+      ],
+      "astral": [
+        { "level": 82, "multiplier": 2 }
+      ],
+      "nature": [
+        { "level": 91, "multiplier": 2 }
+      ],
+      "law": [
+        { "level": 95, "multiplier": 2 }
+      ],
+      "death": [
+        { "level": 99, "multiplier": 2 }
+      ],
+      "blood": [],
+      "soul": [],
+      "wrath": []
+    },
+    "pouch_degradation": {
+      "description": "Pouches degrade after a number of uses and must be repaired by the Dark Mage in the Abyss",
+      "medium_pouch_uses": 44,
+      "large_pouch_uses": 31,
+      "giant_pouch_uses": 11
+    },
+    "completionist_requirements": {
+      "cape_req": 99,
+      "trimmed_cape_quests": ["Rune Mysteries"],
+      "master_quest_cape_tasks": [
+        "Craft at least one of each rune type",
+        "Enter the Abyss",
+        "Obtain all essence pouches"
+      ]
+    }
+  }
+}

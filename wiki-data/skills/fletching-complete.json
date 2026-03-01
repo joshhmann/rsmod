@@ -1,0 +1,1106 @@
+{
+  "skill": "fletching",
+  "source": "OSRS Wiki (rev 233, Feb 2026)",
+  "actions": {
+    "arrow_shaft_logs": {
+      "level_req": 1,
+      "xp": 5.0,
+      "animation": 1248,
+      "input_ids": [1511],
+      "output_id": 52,
+      "output_qty": 15,
+      "notes": "15 arrow shafts from normal logs",
+      "members": false
+    },
+    "arrow_shaft_oak": {
+      "level_req": 15,
+      "xp": 10.0,
+      "animation": 1248,
+      "input_ids": [1521],
+      "output_id": 52,
+      "output_qty": 30,
+      "notes": "30 arrow shafts from oak logs",
+      "members": false
+    },
+    "arrow_shaft_willow": {
+      "level_req": 30,
+      "xp": 15.0,
+      "animation": 1248,
+      "input_ids": [1519],
+      "output_id": 52,
+      "output_qty": 45,
+      "notes": "45 arrow shafts from willow logs",
+      "members": false
+    },
+    "arrow_shaft_maple": {
+      "level_req": 45,
+      "xp": 20.0,
+      "animation": 1248,
+      "input_ids": [1517],
+      "output_id": 52,
+      "output_qty": 60,
+      "notes": "60 arrow shafts from maple logs",
+      "members": false
+    },
+    "arrow_shaft_yew": {
+      "level_req": 60,
+      "xp": 25.0,
+      "animation": 1248,
+      "input_ids": [1515],
+      "output_id": 52,
+      "output_qty": 75,
+      "notes": "75 arrow shafts from yew logs",
+      "members": false
+    },
+    "arrow_shaft_magic": {
+      "level_req": 75,
+      "xp": 30.0,
+      "animation": 1248,
+      "input_ids": [1513],
+      "output_id": 52,
+      "output_qty": 90,
+      "notes": "90 arrow shafts from magic logs",
+      "members": false
+    },
+    "headless_arrow": {
+      "level_req": 1,
+      "xp": 1.0,
+      "animation": 1248,
+      "input_ids": [52, 314],
+      "input_qty": [1, 1],
+      "output_id": 53,
+      "output_qty": 15,
+      "notes": "Attach feathers to arrow shafts (15 per action)",
+      "members": false
+    },
+    "bronze_arrow": {
+      "level_req": 1,
+      "xp": 1.7,
+      "animation": 1248,
+      "input_ids": [53, 39],
+      "input_qty": [15, 15],
+      "output_id": 882,
+      "output_qty": 15,
+      "notes": "Attach bronze arrowheads to headless arrows",
+      "members": false
+    },
+    "iron_arrow": {
+      "level_req": 15,
+      "xp": 2.5,
+      "animation": 1248,
+      "input_ids": [53, 40],
+      "input_qty": [15, 15],
+      "output_id": 884,
+      "output_qty": 15,
+      "notes": "Attach iron arrowheads to headless arrows",
+      "members": false
+    },
+    "steel_arrow": {
+      "level_req": 30,
+      "xp": 5.0,
+      "animation": 1248,
+      "input_ids": [53, 41],
+      "input_qty": [15, 15],
+      "output_id": 886,
+      "output_qty": 15,
+      "notes": "Attach steel arrowheads to headless arrows",
+      "members": false
+    },
+    "mithril_arrow": {
+      "level_req": 45,
+      "xp": 7.5,
+      "animation": 1248,
+      "input_ids": [53, 42],
+      "input_qty": [15, 15],
+      "output_id": 888,
+      "output_qty": 15,
+      "notes": "Attach mithril arrowheads to headless arrows",
+      "members": false
+    },
+    "adamant_arrow": {
+      "level_req": 60,
+      "xp": 10.0,
+      "animation": 1248,
+      "input_ids": [53, 43],
+      "input_qty": [15, 15],
+      "output_id": 890,
+      "output_qty": 15,
+      "notes": "Attach adamant arrowheads to headless arrows",
+      "members": false
+    },
+    "rune_arrow": {
+      "level_req": 75,
+      "xp": 12.5,
+      "animation": 1248,
+      "input_ids": [53, 44],
+      "input_qty": [15, 15],
+      "output_id": 892,
+      "output_qty": 15,
+      "notes": "Attach rune arrowheads to headless arrows",
+      "members": false
+    },
+    "amethyst_arrow": {
+      "level_req": 82,
+      "xp": 13.5,
+      "animation": 1248,
+      "input_ids": [53, 21332],
+      "input_qty": [15, 15],
+      "output_id": 21326,
+      "output_qty": 15,
+      "notes": "Attach amethyst arrowheads to headless arrows",
+      "members": true
+    },
+    "dragon_arrow": {
+      "level_req": 90,
+      "xp": 15.0,
+      "animation": 1248,
+      "input_ids": [53, 11237],
+      "input_qty": [15, 15],
+      "output_id": 11212,
+      "output_qty": 15,
+      "notes": "Attach dragon arrowheads to headless arrows",
+      "members": true
+    },
+    "shortbow_unstrung": {
+      "level_req": 5,
+      "xp": 5.0,
+      "animation": 1248,
+      "input_ids": [1511],
+      "output_id": 50,
+      "notes": "Cut logs into unstrung shortbow",
+      "members": false
+    },
+    "longbow_unstrung": {
+      "level_req": 10,
+      "xp": 10.0,
+      "animation": 1248,
+      "input_ids": [1511],
+      "output_id": 48,
+      "notes": "Cut logs into unstrung longbow",
+      "members": false
+    },
+    "oak_shortbow_unstrung": {
+      "level_req": 20,
+      "xp": 16.5,
+      "animation": 1248,
+      "input_ids": [1521],
+      "output_id": 54,
+      "notes": "Cut oak logs into unstrung oak shortbow",
+      "members": false
+    },
+    "oak_longbow_unstrung": {
+      "level_req": 25,
+      "xp": 25.0,
+      "animation": 1248,
+      "input_ids": [1521],
+      "output_id": 56,
+      "notes": "Cut oak logs into unstrung oak longbow",
+      "members": false
+    },
+    "willow_shortbow_unstrung": {
+      "level_req": 35,
+      "xp": 33.3,
+      "animation": 1248,
+      "input_ids": [1519],
+      "output_id": 60,
+      "notes": "Cut willow logs into unstrung willow shortbow",
+      "members": false
+    },
+    "willow_longbow_unstrung": {
+      "level_req": 40,
+      "xp": 41.5,
+      "animation": 1248,
+      "input_ids": [1519],
+      "output_id": 58,
+      "notes": "Cut willow logs into unstrung willow longbow",
+      "members": false
+    },
+    "maple_shortbow_unstrung": {
+      "level_req": 50,
+      "xp": 50.0,
+      "animation": 1248,
+      "input_ids": [1517],
+      "output_id": 64,
+      "notes": "Cut maple logs into unstrung maple shortbow",
+      "members": false
+    },
+    "maple_longbow_unstrung": {
+      "level_req": 55,
+      "xp": 58.3,
+      "animation": 1248,
+      "input_ids": [1517],
+      "output_id": 62,
+      "notes": "Cut maple logs into unstrung maple longbow",
+      "members": false
+    },
+    "yew_shortbow_unstrung": {
+      "level_req": 65,
+      "xp": 67.5,
+      "animation": 1248,
+      "input_ids": [1515],
+      "output_id": 68,
+      "notes": "Cut yew logs into unstrung yew shortbow",
+      "members": false
+    },
+    "yew_longbow_unstrung": {
+      "level_req": 70,
+      "xp": 75.0,
+      "animation": 1248,
+      "input_ids": [1515],
+      "output_id": 66,
+      "notes": "Cut yew logs into unstrung yew longbow",
+      "members": false
+    },
+    "magic_shortbow_unstrung": {
+      "level_req": 80,
+      "xp": 83.3,
+      "animation": 1248,
+      "input_ids": [1513],
+      "output_id": 72,
+      "notes": "Cut magic logs into unstrung magic shortbow",
+      "members": false
+    },
+    "magic_longbow_unstrung": {
+      "level_req": 85,
+      "xp": 91.5,
+      "animation": 1248,
+      "input_ids": [1513],
+      "output_id": 70,
+      "notes": "Cut magic logs into unstrung magic longbow",
+      "members": false
+    },
+    "shortbow_strung": {
+      "level_req": 5,
+      "xp": 5.0,
+      "animation": 1248,
+      "input_ids": [50, 1777],
+      "output_id": 841,
+      "notes": "String unstrung shortbow",
+      "members": false
+    },
+    "longbow_strung": {
+      "level_req": 10,
+      "xp": 10.0,
+      "animation": 1248,
+      "input_ids": [48, 1777],
+      "output_id": 839,
+      "notes": "String unstrung longbow",
+      "members": false
+    },
+    "oak_shortbow_strung": {
+      "level_req": 20,
+      "xp": 16.5,
+      "animation": 1248,
+      "input_ids": [54, 1777],
+      "output_id": 843,
+      "notes": "String unstrung oak shortbow",
+      "members": false
+    },
+    "oak_longbow_strung": {
+      "level_req": 25,
+      "xp": 25.0,
+      "animation": 1248,
+      "input_ids": [56, 1777],
+      "output_id": 845,
+      "notes": "String unstrung oak longbow",
+      "members": false
+    },
+    "willow_shortbow_strung": {
+      "level_req": 35,
+      "xp": 33.3,
+      "animation": 1248,
+      "input_ids": [60, 1777],
+      "output_id": 849,
+      "notes": "String unstrung willow shortbow",
+      "members": false
+    },
+    "willow_longbow_strung": {
+      "level_req": 40,
+      "xp": 41.5,
+      "animation": 1248,
+      "input_ids": [58, 1777],
+      "output_id": 847,
+      "notes": "String unstrung willow longbow",
+      "members": false
+    },
+    "maple_shortbow_strung": {
+      "level_req": 50,
+      "xp": 50.0,
+      "animation": 1248,
+      "input_ids": [64, 1777],
+      "output_id": 853,
+      "notes": "String unstrung maple shortbow",
+      "members": false
+    },
+    "maple_longbow_strung": {
+      "level_req": 55,
+      "xp": 58.3,
+      "animation": 1248,
+      "input_ids": [62, 1777],
+      "output_id": 851,
+      "notes": "String unstrung maple longbow",
+      "members": false
+    },
+    "yew_shortbow_strung": {
+      "level_req": 65,
+      "xp": 67.5,
+      "animation": 1248,
+      "input_ids": [68, 1777],
+      "output_id": 857,
+      "notes": "String unstrung yew shortbow",
+      "members": false
+    },
+    "yew_longbow_strung": {
+      "level_req": 70,
+      "xp": 75.0,
+      "animation": 1248,
+      "input_ids": [66, 1777],
+      "output_id": 855,
+      "notes": "String unstrung yew longbow",
+      "members": false
+    },
+    "magic_shortbow_strung": {
+      "level_req": 80,
+      "xp": 83.3,
+      "animation": 1248,
+      "input_ids": [72, 1777],
+      "output_id": 861,
+      "notes": "String unstrung magic shortbow",
+      "members": false
+    },
+    "magic_longbow_strung": {
+      "level_req": 85,
+      "xp": 91.5,
+      "animation": 1248,
+      "input_ids": [70, 1777],
+      "output_id": 859,
+      "notes": "String unstrung magic longbow",
+      "members": false
+    },
+    "bronze_bolts_unfinished": {
+      "level_req": 9,
+      "xp": 1.0,
+      "animation": 8463,
+      "input_ids": [9375, 314],
+      "input_qty": [10, 10],
+      "output_id": 877,
+      "output_qty": 10,
+      "notes": "Attach feathers to bronze unfinished bolts",
+      "members": true
+    },
+    "blurite_bolts_unfinished": {
+      "level_req": 24,
+      "xp": 2.0,
+      "animation": 8463,
+      "input_ids": [9376, 314],
+      "input_qty": [10, 10],
+      "output_id": 9139,
+      "output_qty": 10,
+      "notes": "Attach feathers to blurite unfinished bolts",
+      "members": true
+    },
+    "iron_bolts_unfinished": {
+      "level_req": 39,
+      "xp": 3.0,
+      "animation": 8463,
+      "input_ids": [9377, 314],
+      "input_qty": [10, 10],
+      "output_id": 9140,
+      "output_qty": 10,
+      "notes": "Attach feathers to iron unfinished bolts",
+      "members": true
+    },
+    "steel_bolts_unfinished": {
+      "level_req": 46,
+      "xp": 3.5,
+      "animation": 8463,
+      "input_ids": [9378, 314],
+      "input_qty": [10, 10],
+      "output_id": 9141,
+      "output_qty": 10,
+      "notes": "Attach feathers to steel unfinished bolts",
+      "members": true
+    },
+    "mithril_bolts_unfinished": {
+      "level_req": 54,
+      "xp": 4.0,
+      "animation": 8463,
+      "input_ids": [9379, 314],
+      "input_qty": [10, 10],
+      "output_id": 9142,
+      "output_qty": 10,
+      "notes": "Attach feathers to mithril unfinished bolts",
+      "members": true
+    },
+    "adamant_bolts_unfinished": {
+      "level_req": 61,
+      "xp": 5.0,
+      "animation": 8463,
+      "input_ids": [9380, 314],
+      "input_qty": [10, 10],
+      "output_id": 9143,
+      "output_qty": 10,
+      "notes": "Attach feathers to adamant unfinished bolts",
+      "members": true
+    },
+    "rune_bolts_unfinished": {
+      "level_req": 69,
+      "xp": 6.0,
+      "animation": 8463,
+      "input_ids": [9381, 314],
+      "input_qty": [10, 10],
+      "output_id": 9144,
+      "output_qty": 10,
+      "notes": "Attach feathers to rune unfinished bolts",
+      "members": true
+    },
+    "opal_bolts": {
+      "level_req": 11,
+      "xp": 1.6,
+      "animation": 1248,
+      "input_ids": [877, 45],
+      "input_qty": [10, 10],
+      "output_id": 879,
+      "output_qty": 10,
+      "notes": "Attach opal bolt tips to bronze bolts",
+      "members": true
+    },
+    "pearl_bolts": {
+      "level_req": 41,
+      "xp": 3.2,
+      "animation": 4470,
+      "input_ids": [9140, 46],
+      "input_qty": [10, 10],
+      "output_id": 880,
+      "output_qty": 10,
+      "notes": "Attach pearl bolt tips to iron bolts",
+      "members": true
+    },
+    "jade_bolts": {
+      "level_req": 26,
+      "xp": 2.4,
+      "animation": 1248,
+      "input_ids": [877, 9187],
+      "input_qty": [10, 10],
+      "output_id": 9335,
+      "output_qty": 10,
+      "notes": "Attach jade bolt tips to bronze bolts",
+      "members": true
+    },
+    "red_topaz_bolts": {
+      "level_req": 48,
+      "xp": 3.9,
+      "animation": 1248,
+      "input_ids": [9140, 9188],
+      "input_qty": [10, 10],
+      "output_id": 9336,
+      "output_qty": 10,
+      "notes": "Attach red topaz bolt tips to iron bolts",
+      "members": true
+    },
+    "sapphire_bolts": {
+      "level_req": 56,
+      "xp": 4.7,
+      "animation": 1248,
+      "input_ids": [9141, 9189],
+      "input_qty": [10, 10],
+      "output_id": 9337,
+      "output_qty": 10,
+      "notes": "Attach sapphire bolt tips to steel bolts",
+      "members": true
+    },
+    "emerald_bolts": {
+      "level_req": 58,
+      "xp": 5.5,
+      "animation": 1248,
+      "input_ids": [9141, 9190],
+      "input_qty": [10, 10],
+      "output_id": 9338,
+      "output_qty": 10,
+      "notes": "Attach emerald bolt tips to steel bolts",
+      "members": true
+    },
+    "ruby_bolts": {
+      "level_req": 63,
+      "xp": 6.3,
+      "animation": 1248,
+      "input_ids": [9142, 9191],
+      "input_qty": [10, 10],
+      "output_id": 9339,
+      "output_qty": 10,
+      "notes": "Attach ruby bolt tips to mithril bolts",
+      "members": true
+    },
+    "diamond_bolts": {
+      "level_req": 65,
+      "xp": 7.0,
+      "animation": 1248,
+      "input_ids": [9142, 9192],
+      "input_qty": [10, 10],
+      "output_id": 9340,
+      "output_qty": 10,
+      "notes": "Attach diamond bolt tips to mithril bolts",
+      "members": true
+    },
+    "dragonstone_bolts": {
+      "level_req": 71,
+      "xp": 8.2,
+      "animation": 1248,
+      "input_ids": [9143, 9193],
+      "input_qty": [10, 10],
+      "output_id": 9341,
+      "output_qty": 10,
+      "notes": "Attach dragonstone bolt tips to adamant bolts",
+      "members": true
+    },
+    "onyx_bolts": {
+      "level_req": 73,
+      "xp": 9.4,
+      "animation": 1248,
+      "input_ids": [9143, 9194],
+      "input_qty": [10, 10],
+      "output_id": 9342,
+      "output_qty": 10,
+      "notes": "Attach onyx bolt tips to adamant bolts",
+      "members": true
+    },
+    "bronze_crossbow_stock": {
+      "level_req": 9,
+      "xp": 6.0,
+      "animation": 4436,
+      "input_ids": [9440],
+      "output_id": 9440,
+      "notes": "Fletch wooden stock from logs",
+      "members": true
+    },
+    "oak_crossbow_stock": {
+      "level_req": 24,
+      "xp": 16.0,
+      "animation": 4437,
+      "input_ids": [9442],
+      "output_id": 9442,
+      "notes": "Fletch oak stock from oak logs",
+      "members": true
+    },
+    "willow_crossbow_stock": {
+      "level_req": 39,
+      "xp": 22.0,
+      "animation": 4438,
+      "input_ids": [9444],
+      "output_id": 9444,
+      "notes": "Fletch willow stock from willow logs",
+      "members": true
+    },
+    "teak_crossbow_stock": {
+      "level_req": 46,
+      "xp": 27.0,
+      "animation": 4439,
+      "input_ids": [9446],
+      "output_id": 9446,
+      "notes": "Fletch teak stock from teak logs",
+      "members": true
+    },
+    "maple_crossbow_stock": {
+      "level_req": 54,
+      "xp": 32.0,
+      "animation": 4440,
+      "input_ids": [9448],
+      "output_id": 9448,
+      "notes": "Fletch maple stock from maple logs",
+      "members": true
+    },
+    "mahogany_crossbow_stock": {
+      "level_req": 61,
+      "xp": 41.0,
+      "animation": 4441,
+      "input_ids": [9450],
+      "output_id": 9450,
+      "notes": "Fletch mahogany stock from mahogany logs",
+      "members": true
+    },
+    "yew_crossbow_stock": {
+      "level_req": 69,
+      "xp": 50.0,
+      "animation": 4442,
+      "input_ids": [9452],
+      "output_id": 9452,
+      "notes": "Fletch yew stock from yew logs",
+      "members": true
+    },
+    "bronze_crossbow_unstrung": {
+      "level_req": 9,
+      "xp": 12.0,
+      "animation": 4436,
+      "input_ids": [9440, 9420],
+      "output_id": 9454,
+      "notes": "Attach bronze limbs to wooden stock",
+      "members": true
+    },
+    "blurite_crossbow_unstrung": {
+      "level_req": 24,
+      "xp": 32.0,
+      "animation": 4437,
+      "input_ids": [9442, 9422],
+      "output_id": 9456,
+      "notes": "Attach blurite limbs to oak stock",
+      "members": true
+    },
+    "iron_crossbow_unstrung": {
+      "level_req": 39,
+      "xp": 44.0,
+      "animation": 4438,
+      "input_ids": [9444, 9423],
+      "output_id": 9457,
+      "notes": "Attach iron limbs to willow stock",
+      "members": true
+    },
+    "steel_crossbow_unstrung": {
+      "level_req": 46,
+      "xp": 54.0,
+      "animation": 4439,
+      "input_ids": [9446, 9425],
+      "output_id": 9459,
+      "notes": "Attach steel limbs to teak stock",
+      "members": true
+    },
+    "mithril_crossbow_unstrung": {
+      "level_req": 54,
+      "xp": 64.0,
+      "animation": 4440,
+      "input_ids": [9448, 9427],
+      "output_id": 9461,
+      "notes": "Attach mithril limbs to maple stock",
+      "members": true
+    },
+    "adamant_crossbow_unstrung": {
+      "level_req": 61,
+      "xp": 82.0,
+      "animation": 4441,
+      "input_ids": [9450, 9429],
+      "output_id": 9463,
+      "notes": "Attach adamant limbs to mahogany stock",
+      "members": true
+    },
+    "rune_crossbow_unstrung": {
+      "level_req": 69,
+      "xp": 100.0,
+      "animation": 4442,
+      "input_ids": [9452, 9431],
+      "output_id": 9465,
+      "notes": "Attach rune limbs to yew stock",
+      "members": true
+    },
+    "bronze_crossbow": {
+      "level_req": 9,
+      "xp": 6.0,
+      "animation": 4436,
+      "input_ids": [9454, 9438],
+      "output_id": 9174,
+      "notes": "String bronze crossbow",
+      "members": true
+    },
+    "blurite_crossbow": {
+      "level_req": 24,
+      "xp": 16.0,
+      "animation": 4437,
+      "input_ids": [9456, 9438],
+      "output_id": 9176,
+      "notes": "String blurite crossbow",
+      "members": true
+    },
+    "iron_crossbow": {
+      "level_req": 39,
+      "xp": 22.0,
+      "animation": 4438,
+      "input_ids": [9457, 9438],
+      "output_id": 9177,
+      "notes": "String iron crossbow",
+      "members": true
+    },
+    "steel_crossbow": {
+      "level_req": 46,
+      "xp": 27.0,
+      "animation": 4439,
+      "input_ids": [9459, 9438],
+      "output_id": 9179,
+      "notes": "String steel crossbow",
+      "members": true
+    },
+    "mithril_crossbow": {
+      "level_req": 54,
+      "xp": 32.0,
+      "animation": 4440,
+      "input_ids": [9461, 9438],
+      "output_id": 9181,
+      "notes": "String mithril crossbow",
+      "members": true
+    },
+    "adamant_crossbow": {
+      "level_req": 61,
+      "xp": 41.0,
+      "animation": 4441,
+      "input_ids": [9463, 9438],
+      "output_id": 9183,
+      "notes": "String adamant crossbow",
+      "members": true
+    },
+    "rune_crossbow": {
+      "level_req": 69,
+      "xp": 50.0,
+      "animation": 4442,
+      "input_ids": [9465, 9438],
+      "output_id": 9185,
+      "notes": "String rune crossbow",
+      "members": true
+    },
+    "bronze_dart": {
+      "level_req": 10,
+      "xp": 1.8,
+      "animation": 1248,
+      "input_ids": [819, 314],
+      "input_qty": [10, 10],
+      "output_id": 806,
+      "output_qty": 10,
+      "notes": "Attach feathers to bronze dart tips (requires The Tourist Trap quest)",
+      "members": true
+    },
+    "iron_dart": {
+      "level_req": 22,
+      "xp": 3.8,
+      "animation": 1248,
+      "input_ids": [820, 314],
+      "input_qty": [10, 10],
+      "output_id": 807,
+      "output_qty": 10,
+      "notes": "Attach feathers to iron dart tips",
+      "members": true
+    },
+    "steel_dart": {
+      "level_req": 37,
+      "xp": 7.5,
+      "animation": 1248,
+      "input_ids": [821, 314],
+      "input_qty": [10, 10],
+      "output_id": 808,
+      "output_qty": 10,
+      "notes": "Attach feathers to steel dart tips",
+      "members": true
+    },
+    "mithril_dart": {
+      "level_req": 52,
+      "xp": 11.2,
+      "animation": 1248,
+      "input_ids": [822, 314],
+      "input_qty": [10, 10],
+      "output_id": 809,
+      "output_qty": 10,
+      "notes": "Attach feathers to mithril dart tips",
+      "members": true
+    },
+    "adamant_dart": {
+      "level_req": 67,
+      "xp": 15.0,
+      "animation": 1248,
+      "input_ids": [823, 314],
+      "input_qty": [10, 10],
+      "output_id": 810,
+      "output_qty": 10,
+      "notes": "Attach feathers to adamant dart tips",
+      "members": true
+    },
+    "rune_dart": {
+      "level_req": 81,
+      "xp": 18.8,
+      "animation": 1248,
+      "input_ids": [824, 314],
+      "input_qty": [10, 10],
+      "output_id": 811,
+      "output_qty": 10,
+      "notes": "Attach feathers to rune dart tips",
+      "members": true
+    },
+    "dragon_dart": {
+      "level_req": 95,
+      "xp": 25.0,
+      "animation": 1248,
+      "input_ids": [11232, 314],
+      "input_qty": [10, 10],
+      "output_id": 11230,
+      "output_qty": 10,
+      "notes": "Attach feathers to dragon dart tips",
+      "members": true
+    },
+    "bronze_javelin": {
+      "level_req": 3,
+      "xp": 1.5,
+      "animation": 1248,
+      "input_ids": [19570, 314],
+      "input_qty": [15, 15],
+      "output_id": 825,
+      "output_qty": 15,
+      "notes": "Attach feathers to bronze javelin heads",
+      "members": true
+    },
+    "iron_javelin": {
+      "level_req": 17,
+      "xp": 3.0,
+      "animation": 1248,
+      "input_ids": [19571, 314],
+      "input_qty": [15, 15],
+      "output_id": 826,
+      "output_qty": 15,
+      "notes": "Attach feathers to iron javelin heads",
+      "members": true
+    },
+    "steel_javelin": {
+      "level_req": 32,
+      "xp": 6.0,
+      "animation": 1248,
+      "input_ids": [19572, 314],
+      "input_qty": [15, 15],
+      "output_id": 827,
+      "output_qty": 15,
+      "notes": "Attach feathers to steel javelin heads",
+      "members": true
+    },
+    "mithril_javelin": {
+      "level_req": 47,
+      "xp": 8.7,
+      "animation": 1248,
+      "input_ids": [19573, 314],
+      "input_qty": [15, 15],
+      "output_id": 828,
+      "output_qty": 15,
+      "notes": "Attach feathers to mithril javelin heads",
+      "members": true
+    },
+    "adamant_javelin": {
+      "level_req": 62,
+      "xp": 10.0,
+      "animation": 1248,
+      "input_ids": [19574, 314],
+      "input_qty": [15, 15],
+      "output_id": 829,
+      "output_qty": 15,
+      "notes": "Attach feathers to adamant javelin heads",
+      "members": true
+    },
+    "rune_javelin": {
+      "level_req": 77,
+      "xp": 12.0,
+      "animation": 1248,
+      "input_ids": [19575, 314],
+      "input_qty": [15, 15],
+      "output_id": 830,
+      "output_qty": 15,
+      "notes": "Attach feathers to rune javelin heads",
+      "members": true
+    },
+    "amethyst_javelin": {
+      "level_req": 84,
+      "xp": 13.5,
+      "animation": 1248,
+      "input_ids": [21335, 314],
+      "input_qty": [15, 15],
+      "output_id": 21318,
+      "output_qty": 15,
+      "notes": "Attach feathers to amethyst javelin heads",
+      "members": true
+    },
+    "dragon_javelin": {
+      "level_req": 92,
+      "xp": 15.0,
+      "animation": 1248,
+      "input_ids": [19576, 314],
+      "input_qty": [15, 15],
+      "output_id": 19484,
+      "output_qty": 15,
+      "notes": "Attach feathers to dragon javelin heads",
+      "members": true
+    },
+    "light_ballista": {
+      "level_req": 78,
+      "xp": 150.0,
+      "animation": 1248,
+      "input_ids": [19596, 19592, 19598],
+      "output_id": 19478,
+      "notes": "Assemble light ballista from incomplete frame, limbs, and spring",
+      "members": true
+    },
+    "heavy_ballista": {
+      "level_req": 78,
+      "xp": 150.0,
+      "animation": 1248,
+      "input_ids": [19599, 19592, 19598],
+      "output_id": 19481,
+      "notes": "Assemble heavy ballista from incomplete frame, limbs, and spring",
+      "members": true
+    }
+  },
+  "materials": {
+    "logs": { "item_id": 1511, "level_req": 1, "shafts_per_log": 15 },
+    "oak_logs": { "item_id": 1521, "level_req": 15, "shafts_per_log": 30 },
+    "willow_logs": { "item_id": 1519, "level_req": 30, "shafts_per_log": 45 },
+    "maple_logs": { "item_id": 1517, "level_req": 45, "shafts_per_log": 60 },
+    "yew_logs": { "item_id": 1515, "level_req": 60, "shafts_per_log": 75 },
+    "magic_logs": { "item_id": 1513, "level_req": 75, "shafts_per_log": 90 },
+    "knife": { "item_id": 946, "level_req": 1 },
+    "feather": { "item_id": 314, "level_req": 1 },
+    "bow_string": { "item_id": 1777, "level_req": 5 },
+    "crossbow_string": { "item_id": 9438, "level_req": 9 },
+    "chisel": { "item_id": 1755, "level_req": 1 },
+    "arrow_shaft": { "item_id": 52, "level_req": 1 },
+    "headless_arrow": { "item_id": 53, "level_req": 1 },
+    "bronze_arrowheads": { "item_id": 39, "level_req": 1 },
+    "iron_arrowheads": { "item_id": 40, "level_req": 15 },
+    "steel_arrowheads": { "item_id": 41, "level_req": 30 },
+    "mithril_arrowheads": { "item_id": 42, "level_req": 45 },
+    "adamant_arrowheads": { "item_id": 43, "level_req": 60 },
+    "rune_arrowheads": { "item_id": 44, "level_req": 75 },
+    "amethyst_arrowheads": { "item_id": 21332, "level_req": 82 },
+    "dragon_arrowheads": { "item_id": 11237, "level_req": 90 }
+  },
+  "bows": {
+    "unstrung": {
+      "shortbow": { "level_req": 5, "xp": 5.0, "item_id": 50, "log_id": 1511 },
+      "longbow": { "level_req": 10, "xp": 10.0, "item_id": 48, "log_id": 1511 },
+      "oak_shortbow": { "level_req": 20, "xp": 16.5, "item_id": 54, "log_id": 1521 },
+      "oak_longbow": { "level_req": 25, "xp": 25.0, "item_id": 56, "log_id": 1521 },
+      "willow_shortbow": { "level_req": 35, "xp": 33.3, "item_id": 60, "log_id": 1519 },
+      "willow_longbow": { "level_req": 40, "xp": 41.5, "item_id": 58, "log_id": 1519 },
+      "maple_shortbow": { "level_req": 50, "xp": 50.0, "item_id": 64, "log_id": 1517 },
+      "maple_longbow": { "level_req": 55, "xp": 58.3, "item_id": 62, "log_id": 1517 },
+      "yew_shortbow": { "level_req": 65, "xp": 67.5, "item_id": 68, "log_id": 1515 },
+      "yew_longbow": { "level_req": 70, "xp": 75.0, "item_id": 66, "log_id": 1515 },
+      "magic_shortbow": { "level_req": 80, "xp": 83.3, "item_id": 72, "log_id": 1513 },
+      "magic_longbow": { "level_req": 85, "xp": 91.5, "item_id": 70, "log_id": 1513 }
+    },
+    "strung": {
+      "shortbow": { "level_req": 5, "xp": 5.0, "item_id": 841, "unstrung_id": 50 },
+      "longbow": { "level_req": 10, "xp": 10.0, "item_id": 839, "unstrung_id": 48 },
+      "oak_shortbow": { "level_req": 20, "xp": 16.5, "item_id": 843, "unstrung_id": 54 },
+      "oak_longbow": { "level_req": 25, "xp": 25.0, "item_id": 845, "unstrung_id": 56 },
+      "willow_shortbow": { "level_req": 35, "xp": 33.3, "item_id": 849, "unstrung_id": 60 },
+      "willow_longbow": { "level_req": 40, "xp": 41.5, "item_id": 847, "unstrung_id": 58 },
+      "maple_shortbow": { "level_req": 50, "xp": 50.0, "item_id": 853, "unstrung_id": 64 },
+      "maple_longbow": { "level_req": 55, "xp": 58.3, "item_id": 851, "unstrung_id": 62 },
+      "yew_shortbow": { "level_req": 65, "xp": 67.5, "item_id": 857, "unstrung_id": 68 },
+      "yew_longbow": { "level_req": 70, "xp": 75.0, "item_id": 855, "unstrung_id": 66 },
+      "magic_shortbow": { "level_req": 80, "xp": 83.3, "item_id": 861, "unstrung_id": 72 },
+      "magic_longbow": { "level_req": 85, "xp": 91.5, "item_id": 859, "unstrung_id": 70 }
+    }
+  },
+  "arrows": {
+    "shafts": {
+      "logs": { "item_id": 52, "shafts_per_log": 15, "log_id": 1511, "level_req": 1, "xp": 5.0 },
+      "oak_logs": { "item_id": 52, "shafts_per_log": 30, "log_id": 1521, "level_req": 15, "xp": 10.0 },
+      "willow_logs": { "item_id": 52, "shafts_per_log": 45, "log_id": 1519, "level_req": 30, "xp": 15.0 },
+      "maple_logs": { "item_id": 52, "shafts_per_log": 60, "log_id": 1517, "level_req": 45, "xp": 20.0 },
+      "yew_logs": { "item_id": 52, "shafts_per_log": 75, "log_id": 1515, "level_req": 60, "xp": 25.0 },
+      "magic_logs": { "item_id": 52, "shafts_per_log": 90, "log_id": 1513, "level_req": 75, "xp": 30.0 }
+    },
+    "bronze": { "level_req": 1, "xp": 1.7, "item_id": 882, "arrowhead_id": 39 },
+    "iron": { "level_req": 15, "xp": 2.5, "item_id": 884, "arrowhead_id": 40 },
+    "steel": { "level_req": 30, "xp": 5.0, "item_id": 886, "arrowhead_id": 41 },
+    "mithril": { "level_req": 45, "xp": 7.5, "item_id": 888, "arrowhead_id": 42 },
+    "adamant": { "level_req": 60, "xp": 10.0, "item_id": 890, "arrowhead_id": 43 },
+    "rune": { "level_req": 75, "xp": 12.5, "item_id": 892, "arrowhead_id": 44 },
+    "amethyst": { "level_req": 82, "xp": 13.5, "item_id": 21326, "arrowhead_id": 21332, "members": true },
+    "dragon": { "level_req": 90, "xp": 15.0, "item_id": 11212, "arrowhead_id": 11237, "members": true }
+  },
+  "bolts": {
+    "bronze": { "level_req": 9, "xp": 1.0, "item_id": 877, "unfinished_id": 9375, "members": true },
+    "blurite": { "level_req": 24, "xp": 2.0, "item_id": 9139, "unfinished_id": 9376, "members": true },
+    "iron": { "level_req": 39, "xp": 3.0, "item_id": 9140, "unfinished_id": 9377, "members": true },
+    "steel": { "level_req": 46, "xp": 3.5, "item_id": 9141, "unfinished_id": 9378, "members": true },
+    "mithril": { "level_req": 54, "xp": 4.0, "item_id": 9142, "unfinished_id": 9379, "members": true },
+    "adamant": { "level_req": 61, "xp": 5.0, "item_id": 9143, "unfinished_id": 9380, "members": true },
+    "rune": { "level_req": 69, "xp": 6.0, "item_id": 9144, "unfinished_id": 9381, "members": true },
+    "dragon": { "level_req": 84, "xp": 12.0, "item_id": 21905, "unfinished_id": 21930, "members": true }
+  },
+  "gem_bolt_tips": {
+    "opal": { "level_req": 11, "xp": 1.6, "tip_id": 45, "members": true },
+    "pearl": { "level_req": 41, "xp": 3.2, "tip_id": 46, "members": true },
+    "jade": { "level_req": 26, "xp": 2.4, "tip_id": 9187, "members": true },
+    "red_topaz": { "level_req": 48, "xp": 3.9, "tip_id": 9188, "members": true },
+    "sapphire": { "level_req": 56, "xp": 4.7, "tip_id": 9189, "members": true },
+    "emerald": { "level_req": 58, "xp": 5.5, "tip_id": 9190, "members": true },
+    "ruby": { "level_req": 63, "xp": 6.3, "tip_id": 9191, "members": true },
+    "diamond": { "level_req": 65, "xp": 7.0, "tip_id": 9192, "members": true },
+    "dragonstone": { "level_req": 71, "xp": 8.2, "tip_id": 9193, "members": true },
+    "onyx": { "level_req": 73, "xp": 9.4, "tip_id": 9194, "members": true }
+  },
+  "crossbows": {
+    "stocks": {
+      "wood": { "level_req": 9, "xp": 6.0, "item_id": 9440, "log_id": 1511 },
+      "oak": { "level_req": 24, "xp": 16.0, "item_id": 9442, "log_id": 1521 },
+      "willow": { "level_req": 39, "xp": 22.0, "item_id": 9444, "log_id": 1519 },
+      "teak": { "level_req": 46, "xp": 27.0, "item_id": 9446, "log_id": 6333 },
+      "maple": { "level_req": 54, "xp": 32.0, "item_id": 9448, "log_id": 1517 },
+      "mahogany": { "level_req": 61, "xp": 41.0, "item_id": 9450, "log_id": 6332 },
+      "yew": { "level_req": 69, "xp": 50.0, "item_id": 9452, "log_id": 1515 }
+    },
+    "limbs": {
+      "bronze": { "item_id": 9420, "level_req": 9 },
+      "blurite": { "item_id": 9422, "level_req": 24 },
+      "iron": { "item_id": 9423, "level_req": 39 },
+      "steel": { "item_id": 9425, "level_req": 46 },
+      "mithril": { "item_id": 9427, "level_req": 54 },
+      "adamant": { "item_id": 9429, "level_req": 61 },
+      "runite": { "item_id": 9431, "level_req": 69 }
+    },
+    "bronze": { "level_req": 9, "xp_total": 24.0, "stock_xp": 6.0, "limbs_xp": 12.0, "string_xp": 6.0, "item_id": 9174, "members": true },
+    "blurite": { "level_req": 24, "xp_total": 64.0, "stock_xp": 16.0, "limbs_xp": 32.0, "string_xp": 16.0, "item_id": 9176, "members": true },
+    "iron": { "level_req": 39, "xp_total": 88.0, "stock_xp": 22.0, "limbs_xp": 44.0, "string_xp": 22.0, "item_id": 9177, "members": true },
+    "steel": { "level_req": 46, "xp_total": 108.0, "stock_xp": 27.0, "limbs_xp": 54.0, "string_xp": 27.0, "item_id": 9179, "members": true },
+    "mithril": { "level_req": 54, "xp_total": 128.0, "stock_xp": 32.0, "limbs_xp": 64.0, "string_xp": 32.0, "item_id": 9181, "members": true },
+    "adamant": { "level_req": 61, "xp_total": 164.0, "stock_xp": 41.0, "limbs_xp": 82.0, "string_xp": 41.0, "item_id": 9183, "members": true },
+    "rune": { "level_req": 69, "xp_total": 200.0, "stock_xp": 50.0, "limbs_xp": 100.0, "string_xp": 50.0, "item_id": 9185, "members": true }
+  },
+  "darts": {
+    "bronze": { "level_req": 10, "xp": 1.8, "item_id": 806, "tip_id": 819, "members": true },
+    "iron": { "level_req": 22, "xp": 3.8, "item_id": 807, "tip_id": 820, "members": true },
+    "steel": { "level_req": 37, "xp": 7.5, "item_id": 808, "tip_id": 821, "members": true },
+    "mithril": { "level_req": 52, "xp": 11.2, "item_id": 809, "tip_id": 822, "members": true },
+    "adamant": { "level_req": 67, "xp": 15.0, "item_id": 810, "tip_id": 823, "members": true },
+    "rune": { "level_req": 81, "xp": 18.8, "item_id": 811, "tip_id": 824, "members": true },
+    "dragon": { "level_req": 95, "xp": 25.0, "item_id": 11230, "tip_id": 11232, "members": true }
+  },
+  "javelins": {
+    "bronze": { "level_req": 3, "xp": 1.5, "item_id": 825, "head_id": 19570, "members": true },
+    "iron": { "level_req": 17, "xp": 3.0, "item_id": 826, "head_id": 19571, "members": true },
+    "steel": { "level_req": 32, "xp": 6.0, "item_id": 827, "head_id": 19572, "members": true },
+    "mithril": { "level_req": 47, "xp": 8.7, "item_id": 828, "head_id": 19573, "members": true },
+    "adamant": { "level_req": 62, "xp": 10.0, "item_id": 829, "head_id": 19574, "members": true },
+    "rune": { "level_req": 77, "xp": 12.0, "item_id": 830, "head_id": 19575, "members": true },
+    "amethyst": { "level_req": 84, "xp": 13.5, "item_id": 21318, "head_id": 21335, "members": true },
+    "dragon": { "level_req": 92, "xp": 15.0, "item_id": 19484, "head_id": 19576, "members": true }
+  },
+  "ballistae": {
+    "light": { "level_req": 78, "xp": 150.0, "item_id": 19478, "members": true },
+    "heavy": { "level_req": 78, "xp": 150.0, "item_id": 19481, "members": true }
+  },
+  "animations": {
+    "fletching_bow": 1248,
+    "crossbow_bronze": 4436,
+    "crossbow_blurite": 4437,
+    "crossbow_iron": 4438,
+    "crossbow_steel": 4439,
+    "crossbow_mithril": 4440,
+    "crossbow_adamant": 4441,
+    "crossbow_rune": 4442,
+    "crossbow_yew_dragon": 7860,
+    "add_bolt_feathers_bronze": 8463,
+    "add_bolt_feathers_iron": 8464,
+    "add_bolt_feathers_silver": 8465,
+    "fletching_pearl": 4470
+  },
+  "test_locations": [
+    { "desc": "Lumbridge Castle bank", "x": 3208, "z": 3221 },
+    { "desc": "Seers' Village bank", "x": 2725, "z": 3492 },
+    { "desc": "Grand Exchange", "x": 3165, "z": 3485 },
+    { "desc": "Edgeville bank", "x": 3094, "z": 3491 },
+    { "desc": "Varrock east bank", "x": 3253, "z": 3421 }
+  ],
+  "notes": "Fletching requires a knife for cutting logs into bows and arrow shafts. Arrow shafts can be made from logs - higher tier logs produce more shafts per log (15 for normal, 30 for oak, 45 for willow, 60 for maple, 75 for yew, 90 for magic). Feathers are attached to shafts to make headless arrows, then arrowheads are added to create complete arrows. Bows must be strung with bow strings after being cut. Crossbows require stocks (fletched from logs), limbs (smithed from metal bars), and crossbow strings. Darts, javelins, and bolts are members-only. Some items require quest completion (bronze darts require The Tourist Trap)."
+}

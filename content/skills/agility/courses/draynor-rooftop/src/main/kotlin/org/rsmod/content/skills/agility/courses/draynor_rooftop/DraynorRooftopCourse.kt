@@ -33,39 +33,25 @@ class DraynorRooftopCourse @Inject constructor() : PluginScript() {
 
     override fun ScriptContext.startup() {
         // Obstacle 1: Rough Wall (start)
-        onOpLoc1(AgilityLocs.draynor_wallclimb) {
-            attemptObstacle(ObstacleType.ROUGH_WALL)
-        }
+        onOpLoc1(AgilityLocs.draynor_wallclimb) { attemptObstacle(ObstacleType.ROUGH_WALL) }
 
         // Obstacle 2: First Tightrope
-        onOpLoc1(AgilityLocs.draynor_tightrope_1) {
-            attemptObstacle(ObstacleType.TIGHTROPE_1)
-        }
+        onOpLoc1(AgilityLocs.draynor_tightrope_1) { attemptObstacle(ObstacleType.TIGHTROPE_1) }
 
         // Obstacle 3: Second Tightrope
-        onOpLoc1(AgilityLocs.draynor_tightrope_2) {
-            attemptObstacle(ObstacleType.TIGHTROPE_2)
-        }
+        onOpLoc1(AgilityLocs.draynor_tightrope_2) { attemptObstacle(ObstacleType.TIGHTROPE_2) }
 
         // Obstacle 4: Narrow Wall Crossing
-        onOpLoc1(AgilityLocs.draynor_wallcrossing) {
-            attemptObstacle(ObstacleType.NARROW_WALL)
-        }
+        onOpLoc1(AgilityLocs.draynor_wallcrossing) { attemptObstacle(ObstacleType.NARROW_WALL) }
 
         // Obstacle 5: Wall Scramble
-        onOpLoc1(AgilityLocs.draynor_wallscramble) {
-            attemptObstacle(ObstacleType.WALL_SCRAMBLE)
-        }
+        onOpLoc1(AgilityLocs.draynor_wallscramble) { attemptObstacle(ObstacleType.WALL_SCRAMBLE) }
 
         // Obstacle 6: Gap (leap down)
-        onOpLoc1(AgilityLocs.draynor_leapdown) {
-            attemptObstacle(ObstacleType.GAP_LEAP)
-        }
+        onOpLoc1(AgilityLocs.draynor_leapdown) { attemptObstacle(ObstacleType.GAP_LEAP) }
 
         // Obstacle 7: Crate (finish)
-        onOpLoc1(AgilityLocs.draynor_crate) {
-            attemptObstacle(ObstacleType.CRATE)
-        }
+        onOpLoc1(AgilityLocs.draynor_crate) { attemptObstacle(ObstacleType.CRATE) }
     }
 
     private suspend fun ProtectedAccess.attemptObstacle(type: ObstacleType) {

@@ -6,9 +6,7 @@ import org.rsmod.api.type.refs.synth.SynthReferences
 
 typealias synths = BaseSynths
 
-/**
- * Auto-generated symbol bindings (Smart Subset). Do not edit manually.
- */
+/** Auto-generated symbol bindings (Smart Subset). Do not edit manually. */
 object BaseSynths : SynthReferences() {
     val aide_teleport_book = find("aide_teleport_book")
     val aide_teleport_chalk = find("aide_teleport_chalk")

@@ -1,0 +1,1019 @@
+{
+  "mechanic": "combat",
+  "source": "OSRS Rev 233 Cache Extraction",
+  "extraction_date": "2026-02-22",
+  "metadata": {
+    "revision": 233,
+    "cache_version": "Rev 233 (Varlamore Part 2, Sept 25, 2024)",
+    "tick_duration_ms": 600,
+    "tick_duration_seconds": 0.6
+  },
+
+  "formulas": {
+    "description": "OSRS uses a two-roll combat system: accuracy roll first, then damage roll",
+    "tick_system": {
+      "duration_ms": 600,
+      "duration_seconds": 0.6,
+      "notes": "All actions synchronized to 600ms tick cycle. Client-side actions processed at 20ms."
+    },
+
+    "max_hit_melee": {
+      "description": "Calculate maximum melee damage",
+      "step_1_effective_strength": "floor((visible_strength_level * prayer_bonus) + style_bonus + 8)",
+      "step_2_max_hit": "floor(0.5 + (effective_strength * (equipment_strength_bonus + 64) / 640))",
+      "style_bonuses": {
+        "accurate": 0,
+        "aggressive": 3,
+        "defensive": 0,
+        "controlled": 1
+      }
+    },
+
+    "accuracy_melee": {
+      "description": "Calculate melee hit chance",
+      "step_1_effective_attack": "floor((visible_attack_level * prayer_bonus) + style_bonus + 8)",
+      "step_2_attack_roll": "floor(effective_attack * (equipment_attack_bonus + 64) / 64)",
+      "step_3_defence_roll": "floor(effective_defence * (equipment_defence_bonus + 64) / 64)",
+      "step_4_hit_chance": {
+        "if_attack_greater": "1 - ((defence_roll + 1) / (2 * attack_roll))",
+        "if_defence_greater_or_equal": "attack_roll / (2 * (defence_roll + 1))"
+      }
+    },
+
+    "max_hit_ranged": {
+      "description": "Calculate maximum ranged damage",
+      "step_1_effective_ranged": "floor((visible_ranged_level * prayer_bonus) + style_bonus + 8)",
+      "step_2_max_hit": "floor(0.5 + (effective_ranged * (equipment_ranged_bonus + 64) / 640))"
+    },
+
+    "accuracy_ranged": {
+      "description": "Calculate ranged hit chance",
+      "step_1_effective_ranged": "floor((visible_ranged_level * prayer_bonus) + style_bonus + 8)",
+      "step_2_attack_roll": "floor(effective_ranged * (equipment_ranged_bonus + 64) / 64)",
+      "step_3_defence_roll": "floor(effective_defence * (equipment_defence_bonus + 64) / 64)",
+      "step_4_hit_chance": "Same as melee accuracy formula"
+    },
+
+    "max_hit_magic": {
+      "description": "Calculate maximum magic damage (spell-based)",
+      "base_spell_damage": "Defined per spell",
+      "equipment_bonus_multiplier": "(magic_damage_bonus / 100) + 1",
+      "step_1_max_hit": "floor(spell_max_hit * equipment_multiplier)"
+    },
+
+    "magic_accuracy": {
+      "description": "Calculate magic attack accuracy",
+      "step_1_effective_magic": "floor(magic_level * 0.7 + defence_level * 0.3)",
+      "step_2_attack_roll": "floor(effective_magic * (magic_attack_bonus + 64) / 64)",
+      "step_3_defence_roll": "floor(effective_magic_defence * (magic_defence_bonus + 64) / 64)"
+    },
+
+    "magic_defence": {
+      "description": "Magic defence uses unique calculation",
+      "effective_defence": "floor(magic_level * 0.7 + defence_level * 0.3)",
+      "defence_roll": "floor(effective_defence * (magic_defence_bonus + 64) / 64)"
+    },
+
+    "combat_level": {
+      "description": "Calculate overall combat level",
+      "base_level": "0.25 * (defence_level + hitpoints_level + prayer_level / 2)",
+      "melee_component": "0.325 * (attack_level + strength_level)",
+      "ranged_component": "0.325 * (ranged_level * 1.5)",
+      "magic_component": "0.325 * (magic_level * 1.5)",
+      "formula": "floor(base_level + max(melee_component, ranged_component, magic_component))",
+      "notes": "Ranged and magic are multiplied by 1.5 for their component calculation"
+    },
+
+    "damage_reduction": {
+      "description": "Defence damage mitigation",
+      "damage_reduction_bonus": "Sum of all damage reduction bonuses (e.g., Justiciar)",
+      "reduced_damage": "damage * (1 - damage_reduction_percentage)",
+      "notes": "Applied after hit is calculated but before damage dealt"
+    },
+
+    "special_attack_accuracy_modifiers": {
+      "abyssal_whip": 1.10,
+      "dragon_dagger": 1.10,
+      "magic_longbow": "100% (always hits)",
+      "salve_amulet_e": 1.20,
+      "black_mask_i": "7/6 (~1.167)",
+      "void_melee": 1.10,
+      "void_ranged": 1.10,
+      "void_mage": 1.30
+    },
+
+    "slayer_bonus_modifiers": {
+      "black_mask": {
+        "melee_accuracy": "7/6",
+        "melee_damage": "7/6",
+        "notes": "Slayer task only, 16.67% boost"
+      },
+      "black_mask_improved": {
+        "melee_accuracy": "7/6",
+        "melee_damage": "7/6",
+        "ranged_accuracy": "1.15",
+        "ranged_damage": "1.15",
+        "magic_accuracy": "1.15",
+        "magic_damage": "1.15",
+        "notes": "Slayer task only, improved version"
+      },
+      "salve_amulet": {
+        "melee_accuracy": "7/6",
+        "melee_damage": "7/6",
+        "notes": "Undead only, 16.67% boost"
+      },
+      "salve_amulet_e": {
+        "melee_accuracy": "1.20",
+        "melee_damage": "1.20",
+        "ranged_accuracy": "1.20",
+        "ranged_damage": "1.20",
+        "magic_accuracy": "1.20",
+        "magic_damage": "1.20",
+        "notes": "Undead only, 20% boost, improved version"
+      }
+    }
+  },
+
+  "attack_styles": {
+    "description": "Weapon attack styles determine XP distribution and bonuses",
+    
+    "melee_styles": {
+      "accurate": {
+        "attack_bonus": 3,
+        "strength_bonus": 0,
+        "defence_bonus": 0,
+        "xp_distribution": "Attack XP only",
+        "notes": "Best for training Attack, +3 invisible accuracy boost"
+      },
+      "aggressive": {
+        "attack_bonus": 0,
+        "strength_bonus": 3,
+        "defence_bonus": 0,
+        "xp_distribution": "Strength XP only",
+        "notes": "Best for training Strength, +3 invisible strength boost"
+      },
+      "defensive": {
+        "attack_bonus": 0,
+        "strength_bonus": 0,
+        "defence_bonus": 3,
+        "xp_distribution": "Defence XP only",
+        "notes": "Best for training Defence, +3 invisible defence boost"
+      },
+      "controlled": {
+        "attack_bonus": 1,
+        "strength_bonus": 1,
+        "defence_bonus": 1,
+        "xp_distribution": "Equal XP split across Attack, Strength, Defence, and Hitpoints",
+        "notes": "For balanced training, +1 to all combat stats"
+      }
+    },
+
+    "ranged_styles": {
+      "accurate": {
+        "ranged_bonus": 3,
+        "xp_distribution": "Ranged XP only",
+        "notes": "+3 invisible ranged boost"
+      },
+      "rapid": {
+        "ranged_bonus": 0,
+        "attack_speed_modifier": -1,
+        "xp_distribution": "Ranged XP only",
+        "notes": "Faster attack speed by 1 tick"
+      },
+      "long_range": {
+        "ranged_bonus": 0,
+        "xp_distribution": "Ranged XP and Defence XP split",
+        "notes": "Increased attack range, trains Defence"
+      }
+    },
+
+    "magic_styles": {
+      "accurate": {
+        "magic_bonus": 0,
+        "xp_distribution": "Magic XP only",
+        "notes": "Standard magic casting"
+      },
+      "long_range": {
+        "magic_bonus": 0,
+        "xp_distribution": "Magic XP and Defence XP split",
+        "notes": "Increased spell range, trains Defence"
+      },
+      "defensive_casting": {
+        "magic_bonus": 0,
+        "xp_distribution": "Magic XP and Defence XP split",
+        "notes": "Same XP split as long range"
+      }
+    }
+  },
+
+  "attack_speeds": {
+    "description": "Weapon attack speeds in ticks (600ms per tick)",
+    "tick_reference": {
+      "1_tick": "0.6 seconds",
+      "2_ticks": "1.2 seconds",
+      "3_ticks": "1.8 seconds",
+      "4_ticks": "2.4 seconds",
+      "5_ticks": "3.0 seconds",
+      "6_ticks": "3.6 seconds",
+      "7_ticks": "4.2 seconds",
+      "8_ticks": "4.8 seconds"
+    },
+    "weapons": {
+      "fastest_3_tick": {
+        "weapons": ["Dart", "Throwing knife"],
+        "speed_accurate": 4,
+        "speed_rapid": 3,
+        "item_ids": {
+          "bronze_dart": 806,
+          "iron_dart": 807,
+          "steel_dart": 808,
+          "mithril_dart": 809,
+          "adamant_dart": 810,
+          "rune_dart": 811,
+          "dragon_dart": 11230,
+          "bronze_knife": 864,
+          "iron_knife": 863,
+          "steel_knife": 865,
+          "mithril_knife": 866,
+          "adamant_knife": 867,
+          "rune_knife": 868
+        }
+      },
+      "fast_4_tick": {
+        "weapons": ["Abyssal whip", "Scimitar", "Dagger", "Rapier", "Shortbow"],
+        "speed_accurate": 4,
+        "speed_rapid": 3,
+        "item_ids": {
+          "abyssal_whip": 4151,
+          "dragon_scimitar": 4587,
+          "rune_scimitar": 1333,
+          "dragon_dagger": 1215,
+          "abyssal_dagger": 13265,
+          "ghrazi_rapier": 22325,
+          "shortbow": 841,
+          "maple_shortbow": 853,
+          "yew_shortbow": 857,
+          "magic_shortbow": 861,
+          "toxic_blowpipe": 12924
+        }
+      },
+      "medium_5_tick": {
+        "weapons": ["Longsword", "Longbow (rapid)"],
+        "speed": 5,
+        "item_ids": {
+          "rune_longsword": 1303,
+          "dragon_longsword": 1305,
+          "longbow": 839,
+          "maple_longbow": 851,
+          "yew_longbow": 855,
+          "magic_longbow": 859
+        }
+      },
+      "slow_6_tick": {
+        "weapons": ["Godsword", "Battleaxe", "Crossbow", "Longbow"],
+        "speed": 6,
+        "item_ids": {
+          "dragon_battleaxe": 1377,
+          "rune_battleaxe": 1373,
+          "crossbow": 837,
+          "rune_crossbow": 9185,
+          "armadyl_crossbow": 11785,
+          "dragon_crossbow": 21902,
+          "dragon_hunter_crossbow": 21012
+        }
+      },
+      "very_slow_7_tick": {
+        "weapons": ["Obsidian sword", "Some maces"],
+        "speed": 7
+      },
+      "slowest_8_tick": {
+        "weapons": ["2H Sword", "Dharoks greataxe", "Dark bow (accurate)"],
+        "speed_accurate": 8,
+        "speed_rapid": 7,
+        "item_ids": {
+          "rune_2h_sword": 1319,
+          "dragon_2h_sword": 7158,
+          "dharoks_greataxe": 4718,
+          "dark_bow": 11235
+        }
+      },
+      "extremely_slow_9_tick": {
+        "weapons": ["Dark bow (long range)"],
+        "speed": 9
+      }
+    }
+  },
+
+  "prayers": {
+    "description": "Prayer data with levels, drain rates, and bonuses",
+    "drain_mechanics": {
+      "formula": "Drain per tick = drain_resistance / (1 + prayer_bonus)",
+      "drain_resistance": 60,
+      "drain_tick_interval": "Every 30 ticks (18 seconds)",
+      "notes": "Prayer points drain based on active prayers combined drain rate"
+    },
+
+    "thickness_skin": {
+      "varbit_id": 4104,
+      "name": "Thick Skin",
+      "level_required": 1,
+      "drain_rate": 1,
+      "effect": {
+        "defence_level_boost": "5%",
+        "description": "+5% Defence level (invisible)"
+      }
+    },
+    "burst_of_strength": {
+      "varbit_id": 4105,
+      "name": "Burst of Strength",
+      "level_required": 4,
+      "drain_rate": 1,
+      "effect": {
+        "strength_level_boost": "5%",
+        "description": "+5% Strength level"
+      }
+    },
+    "clarity_of_thought": {
+      "varbit_id": 4106,
+      "name": "Clarity of Thought",
+      "level_required": 7,
+      "drain_rate": 1,
+      "effect": {
+        "attack_level_boost": "5%",
+        "description": "+5% Attack level"
+      }
+    },
+    "rock_skin": {
+      "varbit_id": 4107,
+      "name": "Rock Skin",
+      "level_required": 10,
+      "drain_rate": 1,
+      "effect": {
+        "defence_level_boost": "10%",
+        "description": "+10% Defence level"
+      }
+    },
+    "superhuman_strength": {
+      "varbit_id": 4108,
+      "name": "Superhuman Strength",
+      "level_required": 13,
+      "drain_rate": 1,
+      "effect": {
+        "strength_level_boost": "10%",
+        "description": "+10% Strength level"
+      }
+    },
+    "improved_reflexes": {
+      "varbit_id": 4109,
+      "name": "Improved Reflexes",
+      "level_required": 16,
+      "drain_rate": 1,
+      "effect": {
+        "attack_level_boost": "10%",
+        "description": "+10% Attack level"
+      }
+    },
+    "rapid_restore": {
+      "varbit_id": 4110,
+      "name": "Rapid Restore",
+      "level_required": 19,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Stats restore 2x faster, except Hitpoints and Prayer"
+      }
+    },
+    "rapid_heal": {
+      "varbit_id": 4111,
+      "name": "Rapid Heal",
+      "level_required": 22,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Hitpoints restore 2x faster"
+      }
+    },
+    "protect_item": {
+      "varbit_id": 4112,
+      "name": "Protect Item",
+      "level_required": 25,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Keep one extra item on death"
+      }
+    },
+    "steel_skin": {
+      "varbit_id": 4113,
+      "name": "Steel Skin",
+      "level_required": 28,
+      "drain_rate": 1,
+      "effect": {
+        "defence_level_boost": "15%",
+        "description": "+15% Defence level"
+      }
+    },
+    "ultimate_strength": {
+      "varbit_id": 4114,
+      "name": "Ultimate Strength",
+      "level_required": 31,
+      "drain_rate": 1,
+      "effect": {
+        "strength_level_boost": "15%",
+        "description": "+15% Strength level"
+      }
+    },
+    "incredible_reflexes": {
+      "varbit_id": 4115,
+      "name": "Incredible Reflexes",
+      "level_required": 34,
+      "drain_rate": 1,
+      "effect": {
+        "attack_level_boost": "15%",
+        "description": "+15% Attack level"
+      }
+    },
+    "protect_from_magic": {
+      "varbit_id": 4116,
+      "name": "Protect from Magic",
+      "level_required": 37,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Protection from magical attacks"
+      }
+    },
+    "protect_from_missiles": {
+      "varbit_id": 4117,
+      "name": "Protect from Missiles",
+      "level_required": 40,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Protection from ranged attacks"
+      }
+    },
+    "protect_from_melee": {
+      "varbit_id": 4118,
+      "name": "Protect from Melee",
+      "level_required": 43,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Protection from melee attacks"
+      }
+    },
+    "retribution": {
+      "varbit_id": 4119,
+      "name": "Retribution",
+      "level_required": 46,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Damages attacker when you die, up to 3x Prayer level"
+      }
+    },
+    "redemption": {
+      "varbit_id": 4120,
+      "name": "Redemption",
+      "level_required": 49,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Heal 25% of max HP when HP falls below 10%, consumes remaining Prayer"
+      }
+    },
+    "smite": {
+      "varbit_id": 4121,
+      "name": "Smite",
+      "level_required": 52,
+      "drain_rate": 1,
+      "effect": {
+        "description": "Drain 1/4 of damage dealt from opponents Prayer"
+      }
+    },
+    "sharpshooter": {
+      "varbit_id": 4122,
+      "name": "Sharp Eye",
+      "level_required": 8,
+      "drain_rate": 1,
+      "effect": {
+        "ranged_level_boost": "5%",
+        "description": "+5% Ranged level"
+      }
+    },
+    "mystic_will": {
+      "varbit_id": 4123,
+      "name": "Mystic Will",
+      "level_required": 9,
+      "drain_rate": 1,
+      "effect": {
+        "magic_level_boost": "5%",
+        "description": "+5% Magic level"
+      }
+    },
+    "hawkeye": {
+      "varbit_id": 4124,
+      "name": "Hawk Eye",
+      "level_required": 26,
+      "drain_rate": 1,
+      "effect": {
+        "ranged_level_boost": "10%",
+        "description": "+10% Ranged level"
+      }
+    },
+    "mystic_lore": {
+      "varbit_id": 4125,
+      "name": "Mystic Lore",
+      "level_required": 27,
+      "drain_rate": 1,
+      "effect": {
+        "magic_level_boost": "10%",
+        "description": "+10% Magic level"
+      }
+    },
+    "eagle_eye": {
+      "varbit_id": 4126,
+      "name": "Eagle Eye",
+      "level_required": 44,
+      "drain_rate": 1,
+      "effect": {
+        "ranged_level_boost": "15%",
+        "description": "+15% Ranged level"
+      }
+    },
+    "mystic_might": {
+      "varbit_id": 4127,
+      "name": "Mystic Might",
+      "level_required": 45,
+      "drain_rate": 1,
+      "effect": {
+        "magic_level_boost": "15%",
+        "description": "+15% Magic level"
+      }
+    },
+    "chivalry": {
+      "varbit_id": 4128,
+      "name": "Chivalry",
+      "level_required": 60,
+      "drain_rate": 2,
+      "effect": {
+        "attack_level_boost": "15%",
+        "strength_level_boost": "18%",
+        "defence_level_boost": "20%",
+        "description": "Requires Completion of the Camelot training room"
+      }
+    },
+    "piety": {
+      "varbit_id": 4129,
+      "name": "Piety",
+      "level_required": 70,
+      "drain_rate": 2,
+      "effect": {
+        "attack_level_boost": "20%",
+        "strength_level_boost": "23%",
+        "defence_level_boost": "25%",
+        "description": "Requires Completion of the Camelot training room, best melee prayer"
+      }
+    },
+    "rigour": {
+      "varbit_id": 5464,
+      "name": "Rigour",
+      "level_required": 74,
+      "drain_rate": 2,
+      "unlock_varbit": 5451,
+      "effect": {
+        "ranged_level_boost": "20%",
+        "ranged_defence_boost": "25%",
+        "description": "Requires dexterous prayer scroll to unlock"
+      }
+    },
+    "augury": {
+      "varbit_id": 5465,
+      "name": "Augury",
+      "level_required": 77,
+      "drain_rate": 2,
+      "unlock_varbit": 5452,
+      "effect": {
+        "magic_level_boost": "25%",
+        "magic_defence_boost": "25%",
+        "description": "Requires arcane prayer scroll to unlock"
+      }
+    },
+    "preserve": {
+      "varbit_id": 5466,
+      "name": "Preserve",
+      "level_required": 55,
+      "drain_rate": 1,
+      "unlock_varbit": 5453,
+      "effect": {
+        "description": "Boosted stats last 50% longer"
+      }
+    },
+    "deadeye": {
+      "varbit_id": null,
+      "name": "Deadeye",
+      "level_required": 80,
+      "drain_rate": 2,
+      "unlock_item_id": 30626,
+      "unlock_item_name": "deadeye_prayer_scroll",
+      "effect": {
+        "ranged_level_boost": "25%",
+        "ranged_defence_boost": "25%",
+        "description": "Requires Deadeye prayer scroll from Raids"
+      }
+    },
+    "mystic_vigour": {
+      "varbit_id": null,
+      "name": "Mystic Vigour",
+      "level_required": 80,
+      "drain_rate": 2,
+      "unlock_item_id": 30627,
+      "unlock_item_name": "mystic_vigour_prayer_scroll",
+      "effect": {
+        "magic_level_boost": "30%",
+        "magic_defence_boost": "25%",
+        "description": "Requires Mystic vigour prayer scroll from Raids"
+      }
+    }
+  },
+
+  "prayer_scrolls": {
+    "deadeye_scroll": {
+      "item_id": 30626,
+      "name": "Deadeye prayer scroll",
+      "sym_name": "deadeye_prayer_scroll",
+      "unlocks": "Deadeye prayer",
+      "level_required": 80,
+      "unlock_animation_male": 12019,
+      "unlock_animation_female": 12022
+    },
+    "mystic_vigour_scroll": {
+      "item_id": 30627,
+      "name": "Mystic vigour prayer scroll",
+      "sym_name": "mystic_vigour_prayer_scroll",
+      "unlocks": "Mystic Vigour prayer",
+      "level_required": 80,
+      "unlock_animation_male": 12020,
+      "unlock_animation_female": 12023
+    },
+    "dexterous_scroll": {
+      "item_id": null,
+      "name": "Dexterous prayer scroll",
+      "unlocks": "Rigour prayer",
+      "level_required": 74,
+      "varbit_unlock": 5451
+    },
+    "arcane_scroll": {
+      "item_id": null,
+      "name": "Arcane prayer scroll",
+      "unlocks": "Augury prayer",
+      "level_required": 77,
+      "varbit_unlock": 5452
+    },
+    "torn_scroll": {
+      "item_id": null,
+      "name": "Torn prayer scroll",
+      "unlocks": "Preserve prayer",
+      "level_required": 55,
+      "varbit_unlock": 5453
+    }
+  },
+
+  "prayer_bonus_equipment": {
+    "description": "Items that reduce Prayer drain rate",
+    "robie_set": {
+      "full_set_bonus": 7,
+      "pieces": ["robie hat", "robie top", "robie skirt", "robie boots"],
+      "notes": "Each piece provides Prayer bonus"
+    },
+    "proselyte_set": {
+      "full_set_bonus": 13,
+      "pieces": ["proselyte sallet", "proselyte hauberk", "proselyte cuisse/tasset"],
+      "notes": "High Prayer bonus armor"
+    },
+    "god_capes": {
+      "prayer_bonus": 2,
+      "varieties": ["saradomin", "zamorak", "guthix", "armadyl", "bandos", "ancient"]
+    },
+    "god_stoles": {
+      "prayer_bonus": 3,
+      "varieties": ["saradomin", "zamorak", "guthix"]
+    },
+    "rings": {
+      "ring_of_the_gods": 4,
+      "ring_of_the_gods_i": 8,
+      "notes": "Highest Prayer bonus ring"
+    },
+    "amulets": {
+      "amulet_of_glory": 2,
+      "amulet_of_fury": 2,
+      "amulet_of_torture": 2,
+      "anguish_amulet": 2,
+      "occult_amulet": 2
+    }
+  },
+
+  "special_attacks": {
+    "description": "Special attacks consume special attack energy (max 100%)",
+    "energy_regeneration": {
+      "rate": "10% per 5 ticks (3 seconds)",
+      "formula": "1% per 0.6 seconds (passive regen)"
+    },
+
+    "weapons": {
+      "dragon_dagger": {
+        "item_id": 1215,
+        "name": "Dragon dagger",
+        "energy_cost": 25,
+        "hits": 2,
+        "damage_modifier": 1.15,
+        "accuracy_modifier": 1.10,
+        "notes": "Two quick slashes, 15% damage boost, 10% accuracy boost"
+      },
+      "dragon_longsword": {
+        "item_id": 1305,
+        "name": "Dragon longsword",
+        "energy_cost": 25,
+        "hits": 1,
+        "damage_modifier": 1.25,
+        "notes": "Single powerful strike, 25% damage boost"
+      },
+      "dragon_mace": {
+        "item_id": 1434,
+        "name": "Dragon mace",
+        "energy_cost": 25,
+        "hits": 1,
+        "damage_modifier": 1.50,
+        "prayer_bonus": 1.25,
+        "notes": "50% damage boost, 25% Prayer boost to damage"
+      },
+      "dragon_warhammer": {
+        "item_id": 13576,
+        "name": "Dragon warhammer",
+        "energy_cost": 50,
+        "hits": 1,
+        "defence_reduction": 30,
+        "notes": "Reduces target Defence by 30% on hit, very high accuracy"
+      },
+      "abyssal_whip": {
+        "item_id": 4151,
+        "name": "Abyssal whip",
+        "energy_cost": 50,
+        "hits": 1,
+        "damage_modifier": 0.85,
+        "accuracy_modifier": 1.10,
+        "notes": "Transfers 10% of damage to Prayer points"
+      },
+      "granite_maul": {
+        "item_id": 4153,
+        "name": "Granite maul",
+        "energy_cost": 50,
+        "hits": 1,
+        "notes": "Instant attack, ignores attack cooldown"
+      },
+      "granite_maul_improved": {
+        "item_id": 24225,
+        "name": "Granite maul (improved)",
+        "energy_cost": 60,
+        "hits": 1,
+        "notes": "Instant attack, improved version"
+      },
+      "dragon_claws": {
+        "item_id": 13652,
+        "name": "Dragon claws",
+        "energy_cost": 50,
+        "hits": 4,
+        "damage_distribution": ["first_hit", "second_hit_50%", "third_hit_25%", "fourth_hit_100%"],
+        "notes": "Four hits in quick succession, final hit deals remaining potential damage"
+      },
+      "armadyl_godsword": {
+        "item_id": 11802,
+        "name": "Armadyl godsword",
+        "energy_cost": 50,
+        "hits": 1,
+        "heal_percent": 37.5,
+        "notes": "Heals for 37.5% of damage dealt (rounded up), damage capped"
+      },
+      "bandos_godsword": {
+        "item_id": 11804,
+        "name": "Bandos godsword",
+        "energy_cost": 50,
+        "hits": 1,
+        "drain_type": "random",
+        "drain_amount": "equal_to_damage",
+        "notes": "Drains one random combat stat (Attack/Strength/Defence/Ranged/Magic) equal to damage"
+      },
+      "saradomin_godsword": {
+        "item_id": 11806,
+        "name": "Saradomin godsword",
+        "energy_cost": 50,
+        "hits": 1,
+        "heal_percent": 50,
+        "prayer_restore": 25,
+        "notes": "Heals 50% of damage, restores 25% of damage to Prayer"
+      },
+      "zamorak_godsword": {
+        "item_id": 11808,
+        "name": "Zamorak godsword",
+        "energy_cost": 60,
+        "hits": 1,
+        "freeze_duration": 20,
+        "notes": "Freezes target for 20 ticks (12 seconds)"
+      },
+      "zamorakian_hasta": {
+        "item_id": 11889,
+        "name": "Zamorakian hasta",
+        "energy_cost": 25,
+        "hits": 1,
+        "notes": "Increases attack range temporarily, stab-focused"
+      },
+      "zamorakian_spear": {
+        "item_id": 11891,
+        "name": "Zamorakian spear",
+        "energy_cost": 25,
+        "hits": 1,
+        "notes": "Increases attack range temporarily, powerful stab weapon"
+      },
+      "toxic_blowpipe": {
+        "item_id": 12924,
+        "name": "Toxic blowpipe",
+        "energy_cost": 50,
+        "hits": 1,
+        "damage_modifier": 1.10,
+        "notes": "10% damage boost, heals for 50% of damage dealt (rounded up)"
+      },
+      "magic_longbow": {
+        "item_id": 859,
+        "name": "Magic longbow",
+        "energy_cost": 35,
+        "hits": 1,
+        "accuracy_modifier": "100% (always hits)",
+        "notes": "Guaranteed hit, but damage can still be 0"
+      },
+      "dark_bow": {
+        "item_id": 11235,
+        "name": "Dark bow",
+        "energy_cost": 55,
+        "hits": 2,
+        "damage_modifier": 1.30,
+        "notes": "Two arrows shot simultaneously, 30% damage boost"
+      },
+      "dragon_scimitar": {
+        "item_id": 4587,
+        "name": "Dragon scimitar",
+        "energy_cost": 55,
+        "hits": 1,
+        "notes": "Prevents target from using Protect prayers temporarily"
+      }
+    }
+  },
+
+  "status_effects": {
+    "poison": {
+      "description": "Gradual damage over time",
+      "mechanics": {
+        "damage_start": 1,
+        "damage_progression": "Increases by 1 every 5 hits, max 10",
+        "tick_interval": 18,
+        "duration": "Until cured or death"
+      },
+      "cures": {
+        "antipoison": {
+          "item_ids": [175, 177, 179, 2446],
+          "effect": "Cures poison and grants temporary immunity"
+        },
+        "antipoison_plus": {
+          "item_ids": [181, 183, 185, 2448],
+          "effect": "Cures poison, longer immunity"
+        },
+        "antipoison_plus_plus": {
+          "item_ids": [5954, 5956, 5958, 5960],
+          "effect": "Cures poison, longest immunity"
+        },
+        "antidote_plus": {
+          "item_ids": [183, 185, 187, 2448],
+          "effect": "Cures poison, 9 minute immunity"
+        },
+        "antidote_plus_plus": {
+          "item_ids": [5954, 5956, 5958, 5960],
+          "effect": "Cures poison, 12 minute immunity"
+        }
+      },
+      "sources": {
+        "weapon_poison": {
+          "item_id": 187,
+          "name": "weapon_poison",
+          "duration": "Lasts 3-4 minutes or until hit",
+          "proc_chance": "25%"
+        },
+        "weapon_poison_plus": {
+          "item_id": 5937,
+          "name": "weapon_poison+",
+          "duration": "Lasts longer",
+          "proc_chance": "25%",
+          "min_damage": 4
+        },
+        "weapon_poison_plus_plus": {
+          "item_id": 5940,
+          "name": "weapon_poison++",
+          "duration": "Longest duration",
+          "proc_chance": "25%",
+          "min_damage": 6
+        }
+      }
+    },
+
+    "venom": {
+      "description": "Superior poison that increases damage faster",
+      "mechanics": {
+        "damage_start": 6,
+        "damage_progression": "Increases by 2 every hit, max 20",
+        "tick_interval": 18,
+        "duration": "Until cured or death",
+        "damage_multiplier": "Doubles damage compared to poison"
+      },
+      "cures": {
+        "antivenom": {
+          "item_ids": [12905, 12907, 12909, 12911],
+          "effect": "Cures venom and converts to poison immunity"
+        },
+        "antivenom_plus": {
+          "item_ids": [12913, 12915, 12917, 12919],
+          "effect": "Cures venom and grants longer immunity"
+        },
+        "extended_antivenom": {
+          "item_ids": [29824, 29825, 29826, 29827],
+          "effect": "Extended duration antivenom"
+        }
+      },
+      "sources": {
+        "serpentine_helm": {
+          "item_ids": [12929, 12931, 13196, 13198],
+          "name": "Serpentine helm",
+          "effect": "Chance to inflict venom on enemies",
+          "requires_charges": true
+        },
+        "toxic_staff_of_the_dead": {
+          "item_id": 12902,
+          "name": "Toxic staff of the dead",
+          "effect": "25% chance to inflict venom",
+          "requires_charges": true
+        },
+        "toxic_blowpipe": {
+          "item_id": 12926,
+          "name": "Toxic blowpipe",
+          "effect": "25% chance to inflict venom",
+          "requires_charges": true
+        },
+        "trident_of_the_swamp": {
+          "item_id": 12904,
+          "name": "Trident of the swamp",
+          "effect": "25% chance to inflict venom",
+          "requires_charges": true
+        }
+      }
+    },
+
+    "disease": {
+      "description": "Reduces skills over time",
+      "mechanics": {
+        "affected_skills": ["Strength", "Attack", "Defence", "Ranged", "Magic"],
+        "reduction_rate": "Random skills reduced by 1-3 levels every tick",
+        "tick_interval": 30,
+        "duration": "Until cured or death"
+      },
+      "cures": {
+        "relicym_balm": {
+          "effect": "Cures disease and grants temporary immunity"
+        },
+        "nurses_cure": {
+          "location": "Various (e.g., Hosidius)",
+          "effect": "Instant cure for a fee"
+        }
+      },
+      "sources": {
+        "zogres": {
+          "description": "Diseased zogres in Jiggig"
+        },
+        "shades": {
+          "description": "Shades in Mort'ton"
+        },
+        "jungle_horror": {
+          "description": "Jungle horrors in Mos Le'Harmless"
+        }
+      }
+    },
+
+    "ring_of_recoil": {
+      "description": "Reflects damage back to attacker",
+      "item_id": 2550,
+      "mechanics": {
+        "reflect_percentage": 10,
+        "charge_limit": 40,
+        "notes": "Reflects 10% of damage taken (rounded up), breaks at 40+ reflected damage"
+      }
+    }
+  },
+
+  "references": {
+    "tick_timing": "Rune-Server: OSRS runs on 600ms tick cycle per Andrew Gower",
+    "combat_formulas": "Rune-Server: Two-roll system (accuracy then damage)",
+    "drop_tables": "Rune-Server: Weighted probability system",
+    "animation_timing": "Rune-Server: Attack animations sync with hit timing",
+    "xp_calculation": "Rune-Server: XP formula and experience calculation",
+    "notes": "All data compiled from OSRS Rev 233 cache and RuneServer research"
+  }
+}

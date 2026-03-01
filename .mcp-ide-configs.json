@@ -1,0 +1,319 @@
+{
+  "_comment": "IDE-Specific MCP Configurations - Copy the appropriate section to your IDE's config",
+  "claude_code": {
+    "_comment": "Claude Code uses .mcp.json in project root - already configured",
+    "config_file": ".mcp.json",
+    "auto_detect": true,
+    "note": "Claude Code automatically loads .mcp.json from the project root"
+  },
+  "kimi_cli": {
+    "_comment": "Kimi CLI uses .mcp.json in project root - same as Claude Code",
+    "config_file": ".mcp.json",
+    "auto_detect": true,
+    "note": "Kimi Code CLI automatically loads .mcp.json from project root"
+  },
+  "opencode": {
+    "_comment": "OpenCode - add to %APPDATA%\opencode\opencode.json",
+    "config_file": "%APPDATA%\\opencode\\opencode.json",
+    "format": "json",
+    "mcp": {
+      "agent-tasks": {
+        "type": "local",
+        "command": [
+          "bun",
+          "Z:/Projects/OSRS-PS-DEV/rsmod/mcp-tasks/server.ts"
+        ],
+        "enabled": true
+      },
+      "rsmod-game": {
+        "type": "local",
+        "command": [
+          "bun",
+          "Z:/Projects/OSRS-PS-DEV/rsmod/mcp/server-enhanced.ts"
+        ],
+        "enabled": true
+      },
+      "osrs-cache": {
+        "type": "local",
+        "command": [
+          "node",
+          "Z:/Projects/OSRS-PS-DEV/rsmod/mcp-osrs/dist/index.js"
+        ],
+        "enabled": true
+      },
+      "osrs-wiki-rev233": {
+        "type": "local",
+        "command": [
+          "python",
+          "-u",
+          "Z:/Projects/OSRS-PS-DEV/rsmod/mcp-osrs-rev233/server.py"
+        ],
+        "enabled": true
+      }
+    },
+    "note": "IMPORTANT: Call agent_heartbeat(agent, status, current_task, current_file, message) every 1-2 minutes so other agents know what you're doing!"
+  },
+  "codex": {
+    "_comment": "Codex (OpenAI) CLI - add to ~/.codex/config.yaml or use --mcp-servers flag",
+    "mcpServers": {
+      "agent-tasks": {
+        "type": "stdio",
+        "command": "bun",
+        "args": [
+          "mcp-tasks/server.ts"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod",
+        "description": "📋 Agent Task Coordination - claim tasks, lock files, check agent heartbeats"
+      },
+      "rsmod-game": {
+        "type": "stdio",
+        "command": "bun",
+        "args": [
+          "mcp/server-enhanced.ts"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod",
+        "env": {
+          "BRIDGE_URL": "ws://localhost:43595"
+        }
+      },
+      "osrs-cache": {
+        "type": "stdio",
+        "command": "node",
+        "args": [
+          "mcp-osrs/dist/index.js"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod"
+      },
+      "osrs-wiki-rev233": {
+        "type": "stdio",
+        "command": "python",
+        "args": [
+          "mcp-osrs-rev233/server.py"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod"
+      },
+      "context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp@latest"
+        ]
+      },
+      "web-search": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-brave-search@latest"
+        ],
+        "env": {
+          "BRAVE_API_KEY": "BSABujJVbKHoFN0KrlBB4gaHew46aTs"
+        }
+      }
+    },
+    "note": "IMPORTANT: Call agent_heartbeat(agent, status, current_task, current_file, message) every 1-2 minutes so other agents know what you're doing!"
+  },
+  "antigravity": {
+    "_comment": "AntiGravity IDE configuration - copy this to your AntiGravity MCP config",
+    "mcpServers": {
+      "agent-tasks": {
+        "type": "stdio",
+        "command": "bun",
+        "args": [
+          "mcp-tasks/server.ts"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod"
+      },
+      "rsmod-game": {
+        "type": "stdio",
+        "command": "bun",
+        "args": [
+          "mcp/server-enhanced.ts"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod",
+        "env": {
+          "BRIDGE_URL": "ws://localhost:43595"
+        }
+      },
+      "osrs-cache": {
+        "type": "stdio",
+        "command": "node",
+        "args": [
+          "mcp-osrs/dist/index.js"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod"
+      },
+      "osrs-wiki-rev233": {
+        "type": "stdio",
+        "command": "python",
+        "args": [
+          "mcp-osrs-rev233/server.py"
+        ],
+        "cwd": "Z:/Projects/OSRS-PS-DEV/rsmod"
+      },
+      "context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp@latest"
+        ]
+      },
+      "web-search": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-brave-search@latest"
+        ],
+        "env": {
+          "BRAVE_API_KEY": "BSABujJVbKHoFN0KrlBB4gaHew46aTs"
+        }
+      }
+    }
+  },
+  "cursor": {
+    "_comment": "Cursor IDE - add to Settings > MCP",
+    "mcpServers": {
+      "agent-tasks": {
+        "command": "bun",
+        "args": [
+          "mcp-tasks/server.ts"
+        ]
+      },
+      "rsmod-game": {
+        "command": "bun",
+        "args": [
+          "mcp/server-enhanced.ts"
+        ],
+        "env": {
+          "BRIDGE_URL": "ws://localhost:43595"
+        }
+      },
+      "osrs-cache": {
+        "command": "node",
+        "args": [
+          "mcp-osrs/dist/index.js"
+        ]
+      },
+      "osrs-wiki-rev233": {
+        "command": "python",
+        "args": [
+          "mcp-osrs-rev233/server.py"
+        ]
+      },
+      "context7": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp@latest"
+        ]
+      },
+      "web-search": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-brave-search@latest"
+        ],
+        "env": {
+          "BRAVE_API_KEY": "BSABujJVbKHoFN0KrlBB4gaHew46aTs"
+        }
+      }
+    }
+  },
+  "vscode": {
+    "_comment": "VS Code with Claude/Copilot - add to settings.json",
+    "settings": {
+      "mcp.servers": {
+        "agent-tasks": {
+          "type": "stdio",
+          "command": "bun",
+          "args": [
+            "${workspaceFolder}/mcp-tasks/server.ts"
+          ]
+        },
+        "rsmod-game": {
+          "type": "stdio",
+          "command": "bun",
+          "args": [
+            "${workspaceFolder}/mcp/server-enhanced.ts"
+          ],
+          "env": {
+            "BRIDGE_URL": "ws://localhost:43595"
+          }
+        },
+        "osrs-cache": {
+          "type": "stdio",
+          "command": "node",
+          "args": [
+            "${workspaceFolder}/mcp-osrs/dist/index.js"
+          ]
+        },
+        "osrs-wiki-rev233": {
+          "type": "stdio",
+          "command": "python",
+          "args": [
+            "${workspaceFolder}/mcp-osrs-rev233/server.py"
+          ]
+        },
+        "context7": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp@latest"
+          ]
+        },
+        "web-search": {
+          "type": "stdio",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@modelcontextprotocol/server-brave-search@latest"
+          ],
+          "env": {
+            "BRAVE_API_KEY": "BSABujJVbKHoFN0KrlBB4gaHew46aTs"
+          }
+        }
+      }
+    }
+  },
+  "windsurf": {
+    "_comment": "Windsurf IDE - add to config.yaml",
+    "config": {
+      "mcpServers": {
+        "agent-tasks": {
+          "type": "stdio",
+          "command": "bun mcp-tasks/server.ts"
+        },
+        "rsmod-game": {
+          "type": "stdio",
+          "command": "bun mcp/server-enhanced.ts",
+          "env": {
+            "BRIDGE_URL": "ws://localhost:43595"
+          }
+        },
+        "osrs-cache": {
+          "type": "stdio",
+          "command": "node mcp-osrs/dist/index.js"
+        },
+        "osrs-wiki-rev233": {
+          "type": "stdio",
+          "command": "python mcp-osrs-rev233/server.py"
+        },
+        "context7": {
+          "type": "stdio",
+          "command": "npx -y @upstash/context7-mcp@latest"
+        },
+        "web-search": {
+          "type": "stdio",
+          "command": "npx -y @modelcontextprotocol/server-brave-search@latest",
+          "env": {
+            "BRAVE_API_KEY": "BSABujJVbKHoFN0KrlBB4gaHew46aTs"
+          }
+        }
+      }
+    }
+  }
+}

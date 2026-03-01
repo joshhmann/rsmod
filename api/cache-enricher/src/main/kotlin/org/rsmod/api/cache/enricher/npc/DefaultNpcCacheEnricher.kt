@@ -51,7 +51,9 @@ constructor(
             id
                 ?: npc?.let(names::get)
                 ?: run {
-                    logger.warning("Skipping npc cache enrich config with unresolved npc name: $npc")
+                    logger.warning(
+                        "Skipping npc cache enrich config with unresolved npc name: $npc"
+                    )
                     return null
                 }
         val builder = NpcPluginBuilder(npc ?: "npc_$resolvedId")

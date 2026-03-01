@@ -1,0 +1,505 @@
+{
+  "skill": "mining",
+  "revision": 233,
+  "extracted_from": "osrs-cache",
+  "last_updated": "2026-02-22",
+
+  "pickaxes": {
+    "bronze_pickaxe": {
+      "item_id": 1265,
+      "cert_id": 1266,
+      "level_req": 1,
+      "attack_level_req": 1,
+      "animation": 625,
+      "animation_wall": null,
+      "pickaxe_head_id": 480,
+      "broken_id": 468,
+      "attack_bonus": 4,
+      "strength_bonus": 2,
+      "weight": 2.267
+    },
+    "iron_pickaxe": {
+      "item_id": 1267,
+      "cert_id": 1268,
+      "level_req": 1,
+      "attack_level_req": 1,
+      "animation": 626,
+      "animation_wall": null,
+      "pickaxe_head_id": 482,
+      "broken_id": 470,
+      "attack_bonus": 5,
+      "strength_bonus": 3,
+      "weight": 2.267
+    },
+    "steel_pickaxe": {
+      "item_id": 1269,
+      "cert_id": 1270,
+      "level_req": 6,
+      "attack_level_req": 5,
+      "animation": 627,
+      "animation_wall": null,
+      "pickaxe_head_id": 484,
+      "broken_id": 472,
+      "attack_bonus": 8,
+      "strength_bonus": 5,
+      "weight": 2.267
+    },
+    "mithril_pickaxe": {
+      "item_id": 1273,
+      "cert_id": 1274,
+      "level_req": 21,
+      "attack_level_req": 20,
+      "animation": 629,
+      "animation_wall": null,
+      "pickaxe_head_id": 486,
+      "broken_id": 474,
+      "attack_bonus": 12,
+      "strength_bonus": 7,
+      "weight": 1.8
+    },
+    "adamant_pickaxe": {
+      "item_id": 1271,
+      "cert_id": 1272,
+      "level_req": 31,
+      "attack_level_req": 30,
+      "animation": 628,
+      "animation_wall": null,
+      "pickaxe_head_id": 488,
+      "broken_id": 476,
+      "attack_bonus": 17,
+      "strength_bonus": 13,
+      "weight": 2.721
+    },
+    "rune_pickaxe": {
+      "item_id": 1275,
+      "cert_id": 1276,
+      "level_req": 41,
+      "attack_level_req": 40,
+      "animation": 624,
+      "animation_wall": null,
+      "pickaxe_head_id": 490,
+      "broken_id": 478,
+      "attack_bonus": 26,
+      "strength_bonus": 24,
+      "weight": 2.267
+    },
+    "dragon_pickaxe": {
+      "item_id": 11920,
+      "cert_id": 11921,
+      "level_req": 61,
+      "attack_level_req": 60,
+      "animation": 642,
+      "animation_wall": 335,
+      "special_animation": 642,
+      "broken_id": 11923,
+      "attack_bonus": 38,
+      "strength_bonus": 33,
+      "weight": 2.267
+    },
+    "black_pickaxe": {
+      "item_id": 12297,
+      "cert_id": 12298,
+      "level_req": 11,
+      "attack_level_req": 10,
+      "animation": 3873,
+      "animation_wall": 3866,
+      "pickaxe_head_id": 12592,
+      "broken_id": null,
+      "attack_bonus": 10,
+      "strength_bonus": 8,
+      "weight": 0.01
+    }
+  },
+
+  "ores": {
+    "clay": {
+      "item_id": 434,
+      "cert_id": 435,
+      "level_req": 1,
+      "xp": 5.0,
+      "respawn_ticks": 1,
+      "rock_loc_ids": [11362, 11363],
+      "weight": 1.0,
+      "alch_value": 1,
+      "note": "Used in Crafting. Can be mined at Rimmington, Draynor, and Lumbridge Swamp."
+    },
+    "copper_ore": {
+      "item_id": 436,
+      "cert_id": 437,
+      "level_req": 1,
+      "xp": 17.5,
+      "respawn_ticks": 4,
+      "rock_loc_ids": [10079, 10943, 11161, 37944],
+      "weight": 2.267,
+      "alch_value": 6,
+      "note": "Used to smelt Bronze bars (with Tin ore)."
+    },
+    "tin_ore": {
+      "item_id": 438,
+      "cert_id": 439,
+      "level_req": 1,
+      "xp": 17.5,
+      "respawn_ticks": 4,
+      "rock_loc_ids": [10080, 11360, 11361, 37945],
+      "weight": 2.267,
+      "alch_value": 4,
+      "note": "Used to smelt Bronze bars (with Copper ore)."
+    },
+    "blurite_ore": {
+      "item_id": 668,
+      "cert_id": null,
+      "level_req": 10,
+      "xp": 17.5,
+      "respawn_ticks": 25,
+      "rock_loc_ids": [11378, 11379],
+      "weight": 2.267,
+      "alch_value": 18,
+      "note": "Members-only. Used in The Knight's Sword quest. Can only be mined at the Asgarnia Ice Dungeon."
+    },
+    "iron_ore": {
+      "item_id": 440,
+      "cert_id": 441,
+      "level_req": 15,
+      "xp": 35.0,
+      "respawn_ticks": 9,
+      "rock_loc_ids": [11364, 11365, 36203, 42833],
+      "weight": 2.267,
+      "alch_value": 14,
+      "note": "Used to smelt Iron and Steel bars."
+    },
+    "silver_ore": {
+      "item_id": 442,
+      "cert_id": 443,
+      "level_req": 20,
+      "xp": 40.0,
+      "respawn_ticks": 100,
+      "rock_loc_ids": [11368, 11369, 36205],
+      "weight": 2.267,
+      "alch_value": 30,
+      "note": "Used to smelt Silver bars. Used in Crafting for holy symbols and tiaras."
+    },
+    "coal": {
+      "item_id": 453,
+      "cert_id": 454,
+      "level_req": 30,
+      "xp": 50.0,
+      "respawn_ticks": 50,
+      "rock_loc_ids": [4676, 11366, 11367, 36204],
+      "weight": 2.267,
+      "alch_value": 27,
+      "note": "Required for smelting Steel, Mithril, Adamantite, and Runite bars."
+    },
+    "gold_ore": {
+      "item_id": 444,
+      "cert_id": 445,
+      "level_req": 40,
+      "xp": 65.0,
+      "respawn_ticks": 100,
+      "rock_loc_ids": [11370, 11371, 36206],
+      "weight": 2.267,
+      "alch_value": 90,
+      "note": "Used to smelt Gold bars. Can be used with Smithing to make jewelry."
+    },
+    "mithril_ore": {
+      "item_id": 447,
+      "cert_id": 448,
+      "level_req": 55,
+      "xp": 80.0,
+      "respawn_ticks": 200,
+      "rock_loc_ids": [11372, 11373, 36207],
+      "weight": 2.267,
+      "alch_value": 128,
+      "note": "Members-only. Used to smelt Mithril bars."
+    },
+    "adamantite_ore": {
+      "item_id": 449,
+      "cert_id": 450,
+      "level_req": 70,
+      "xp": 95.0,
+      "respawn_ticks": 400,
+      "rock_loc_ids": [11374, 11375, 36208],
+      "weight": 2.267,
+      "alch_value": 160,
+      "note": "Members-only. Used to smelt Adamant bars."
+    },
+    "runite_ore": {
+      "item_id": 451,
+      "cert_id": 452,
+      "level_req": 85,
+      "xp": 125.0,
+      "respawn_ticks": 1200,
+      "rock_loc_ids": [11376, 11377, 36209],
+      "weight": 2.267,
+      "alch_value": 320,
+      "note": "Members-only. Used to smelt Runite bars. Very rare and valuable."
+    }
+  },
+
+  "gems": {
+    "uncut_opal": {
+      "item_id": 1625,
+      "cert_id": 1626,
+      "crafting_level_req": 1,
+      "mining_gem_chance": true,
+      "shilo_gem": true,
+      "xp_when_cut": 15
+    },
+    "uncut_jade": {
+      "item_id": 1627,
+      "cert_id": 1628,
+      "crafting_level_req": 13,
+      "mining_gem_chance": true,
+      "shilo_gem": true,
+      "xp_when_cut": 20
+    },
+    "uncut_red_topaz": {
+      "item_id": 1629,
+      "cert_id": 1630,
+      "crafting_level_req": 16,
+      "mining_gem_chance": true,
+      "shilo_gem": true,
+      "xp_when_cut": 25
+    },
+    "uncut_sapphire": {
+      "item_id": 1623,
+      "cert_id": 1624,
+      "crafting_level_req": 20,
+      "mining_gem_chance": true,
+      "shilo_gem": false,
+      "xp_when_cut": 50
+    },
+    "uncut_emerald": {
+      "item_id": 1621,
+      "cert_id": 1622,
+      "crafting_level_req": 27,
+      "mining_gem_chance": true,
+      "shilo_gem": false,
+      "xp_when_cut": 67.5
+    },
+    "uncut_ruby": {
+      "item_id": 1619,
+      "cert_id": 1620,
+      "crafting_level_req": 34,
+      "mining_gem_chance": true,
+      "shilo_gem": false,
+      "xp_when_cut": 85
+    },
+    "uncut_diamond": {
+      "item_id": 1617,
+      "cert_id": 1618,
+      "crafting_level_req": 43,
+      "mining_gem_chance": true,
+      "shilo_gem": false,
+      "xp_when_cut": 107.5
+    },
+    "uncut_dragonstone": {
+      "item_id": 1631,
+      "cert_id": 1632,
+      "crafting_level_req": 55,
+      "mining_gem_chance": false,
+      "shilo_gem": false,
+      "xp_when_cut": 137.5,
+      "source": "Gem rocks at Shilo Village or from minigames"
+    },
+    "uncut_onyx": {
+      "item_id": 6571,
+      "cert_id": 6572,
+      "crafting_level_req": 67,
+      "mining_gem_chance": false,
+      "shilo_gem": false,
+      "xp_when_cut": 167.5,
+      "source": "Zenyte jewelry crafting, very rare drop"
+    },
+    "uncut_zenyte": {
+      "item_id": 19496,
+      "cert_id": 19497,
+      "crafting_level_req": 89,
+      "mining_gem_chance": false,
+      "shilo_gem": false,
+      "xp_when_cut": 200,
+      "source": "Zulrah and other high-level content"
+    }
+  },
+
+  "animations": {
+    "bronze_pickaxe": 625,
+    "iron_pickaxe": 626,
+    "steel_pickaxe": 627,
+    "mithril_pickaxe": 629,
+    "adamant_pickaxe": 628,
+    "rune_pickaxe": 624,
+    "dragon_pickaxe": 642,
+    "dragon_pickaxe_wall": 335,
+    "black_pickaxe": 3873,
+    "black_pickaxe_wall": 3866
+  },
+
+  "mining_accessories": {
+    "coal_bag": {
+      "item_id": 12019,
+      "placeholder_id": 16249,
+      "description": "Holds 27 pieces of coal (members-only reward from Motherlode Mine)",
+      "members_only": true
+    },
+    "gem_bag": {
+      "item_id": 12020,
+      "open_id": 24481,
+      "placeholder_id": 16250,
+      "reward_gem_bag": 19473,
+      "reward_gem_bag_guild": 24853,
+      "description": "Holds uncut gems (members-only reward from Motherlode Mine)",
+      "members_only": true
+    },
+    "cave_goblin_mining_helmet_lit": {
+      "item_id": 5013,
+      "placeholder_id": 18011,
+      "description": "Provides light in dark caves",
+      "members_only": true
+    },
+    "cave_goblin_mining_helmet_unlit": {
+      "item_id": 5014,
+      "cert_id": 5015,
+      "placeholder_id": 18012,
+      "description": "Requires lighting before use",
+      "members_only": true
+    }
+  },
+
+  "pickaxe_heads": {
+    "bronze_pickaxehead": { "item_id": 480, "cert_id": 481 },
+    "iron_pickaxehead": { "item_id": 482, "cert_id": 483 },
+    "steel_pickaxehead": { "item_id": 484, "cert_id": 485 },
+    "mithril_pickaxehead": { "item_id": 486, "cert_id": 487 },
+    "adamant_pickaxehead": { "item_id": 488, "cert_id": 489 },
+    "rune_pickaxehead": { "item_id": 490, "cert_id": 491 },
+    "black_pickaxehead": { "item_id": 12592, "cert_id": 12593 }
+  },
+
+  "test_locations": [
+    {
+      "desc": "Rimmington clay rocks",
+      "x": 2983,
+      "z": 3235,
+      "ores": ["clay"]
+    },
+    {
+      "desc": "Rimmington copper/tin rocks",
+      "x": 2987,
+      "z": 3239,
+      "ores": ["copper_ore", "tin_ore"]
+    },
+    {
+      "desc": "Lumbridge Swamp iron rocks",
+      "x": 3180,
+      "z": 3370,
+      "ores": ["iron_ore"]
+    },
+    {
+      "desc": "Varrock West bank iron rocks",
+      "x": 3181,
+      "z": 3373,
+      "ores": ["iron_ore"]
+    },
+    {
+      "desc": "Dwarven Mine coal/gold",
+      "x": 3020,
+      "z": 9739,
+      "plane": 0,
+      "ores": ["coal", "gold_ore", "copper_ore", "tin_ore", "iron_ore", "mithril_ore", "adamantite_ore"]
+    },
+    {
+      "desc": "Al Kharid mine iron/gold/silver",
+      "x": 3297,
+      "z": 3283,
+      "ores": ["iron_ore", "gold_ore", "silver_ore", "coal"]
+    },
+    {
+      "desc": "South-east Varrock mine",
+      "x": 3287,
+      "z": 3363,
+      "ores": ["copper_ore", "tin_ore", "iron_ore"]
+    },
+    {
+      "desc": "Barbarian Village coal mine",
+      "x": 3085,
+      "z": 3423,
+      "ores": ["coal"]
+    },
+    {
+      "desc": "Crafting Guild clay rocks",
+      "x": 2939,
+      "z": 3281,
+      "members_only": false,
+      "ores": ["clay", "silver_ore", "gold_ore"]
+    },
+    {
+      "desc": "Motherlode Mine entrance (F2P accessible area)",
+      "x": 3058,
+      "z": 9762,
+      "plane": 0,
+      "members_only": true,
+      "ores": ["paydirt"]
+    },
+    {
+      "desc": "Wilderness hobgoblin mine (coal/mithril)",
+      "x": 3088,
+      "z": 3969,
+      "members_only": true,
+      "ores": ["coal", "mithril_ore", "adamantite_ore"]
+    },
+    {
+      "desc": "Mining Guild entrance (Falador)",
+      "x": 3046,
+      "z": 9756,
+      "plane": 0,
+      "members_only": true,
+      "ores": ["coal", "mithril_ore"]
+    },
+    {
+      "desc": "Heroes' Guild mine (runite)",
+      "x": 2937,
+      "z": 9900,
+      "plane": 0,
+      "members_only": true,
+      "ores": ["runite_ore"]
+    }
+  ],
+
+  "mining_mechanics": {
+    "gem_mining_chance": {
+      "sapphire": 1.0,
+      "emerald": 0.6,
+      "ruby": 0.3,
+      "diamond": 0.1,
+      "note": "Chance per ore mined. Shilo Village gem rocks have different rates for opal/jade/red topaz."
+    },
+    "essence_mining": {
+      "pure_essence": {
+        "level_req": 30,
+        "requires": "Members or Rune Mysteries quest complete"
+      },
+      "rune_essence": {
+        "level_req": 1,
+        "requires": "Rune Mysteries quest"
+      }
+    },
+    "motherlode_mine": {
+      "description": "Members-only mining activity in Dwarven Mine",
+      "level_req": 30,
+      "rewards": ["prospector outfit", "coal_bag", "gem_bag"]
+    }
+  },
+
+  "meta": {
+    "total_pickaxes": 8,
+    "total_ores": 11,
+    "total_gems": 10,
+    "total_rock_loc_variants": 35,
+    "pickaxe_animations": 8,
+    "data_sources": [
+      "objtypes.txt (item IDs)",
+      "loctypes.txt (rock loc IDs)",
+      "seqtypes.txt (animation IDs)"
+    ]
+  }
+}

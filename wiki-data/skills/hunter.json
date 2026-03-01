@@ -1,0 +1,395 @@
+{
+  "skill": "hunter",
+  "source": "OSRS Wiki (rev 233, accessed 2026-02)",
+  "traps": {
+    "bird_snare": {
+      "name": "Bird snare",
+      "level_req": 1,
+      "item_id": 10006,
+      "members": true
+    },
+    "box_trap": {
+      "name": "Box trap",
+      "level_req": 1,
+      "item_id": 10008,
+      "members": true
+    },
+    "deadfall_trap": {
+      "name": "Deadfall trap",
+      "level_req": 1,
+      "item_id": 10010,
+      "members": true
+    },
+    "net_trap": {
+      "name": "Net trap",
+      "level_req": 1,
+      "item_id": 10012,
+      "members": true
+    },
+    "pitfall_trap": {
+      "name": "Pitfall trap",
+      "level_req": 1,
+      "item_id": 10014,
+      "members": true
+    },
+    "magic_box_trap": {
+      "name": "Magic box trap",
+      "level_req": 1,
+      "item_id": 10016,
+      "members": true
+    },
+    "butterfly_jar": {
+      "name": "Butterfly jar",
+      "level_req": 1,
+      "item_id": 10018,
+      "members": true
+    },
+    "impling_jar": {
+      "name": "Impling jar",
+      "level_req": 1,
+      "item_id": 10020,
+      "members": true
+    }
+  },
+  "creatures": {
+    "birds": {
+      "crimson_swift": {
+        "level_req": 1,
+        "xp": 34,
+        "trap_type": "bird_snare",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_bird_meat": { "item_id": 9978, "quantity": 1 },
+          "feathers": { "item_id": 314, "quantity_range": [1, 15] }
+        },
+        "locations": [
+          { "area": "Feldip Hills", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "golden_warbler": {
+        "level_req": 5,
+        "xp": 47,
+        "trap_type": "bird_snare",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_bird_meat": { "item_id": 9978, "quantity": 1 },
+          "feathers": { "item_id": 314, "quantity_range": [1, 15] }
+        },
+        "locations": [
+          { "area": "Feldip Hills", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "copper_longtail": {
+        "level_req": 9,
+        "xp": 61,
+        "trap_type": "bird_snare",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_bird_meat": { "item_id": 9978, "quantity": 1 },
+          "feathers": { "item_id": 314, "quantity_range": [1, 15] }
+        },
+        "locations": [
+          { "area": "Feldip Hills", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "cerulean_twitch": {
+        "level_req": 11,
+        "xp": 64.5,
+        "trap_type": "bird_snare",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_bird_meat": { "item_id": 9978, "quantity": 1 },
+          "feathers": { "item_id": 314, "quantity_range": [1, 15] }
+        },
+        "locations": [
+          { "area": "Feldip Hills", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "tropical_wagtail": {
+        "level_req": 19,
+        "xp": 95.2,
+        "trap_type": "bird_snare",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_bird_meat": { "item_id": 9978, "quantity": 1 },
+          "feathers": { "item_id": 314, "quantity_range": [1, 15] }
+        },
+        "locations": [
+          { "area": "Feldip Hills", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "ferret": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "box_trap",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_beast_meat": { "item_id": 9986, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Piscatoris Hunter area", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "rabbit": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "box_trap",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_beast_meat": { "item_id": 9986, "quantity": 1 },
+          "rabbit_foot": { "item_id": 3123, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Piscatoris Hunter area", "x": 0, "z": 0 }
+        ],
+        "members": true
+      }
+    },
+    "flying": {
+      "snowy_knight": {
+        "level_req": 1,
+        "xp": 28,
+        "trap_type": "butterfly_jar",
+        "loot": {
+          "butterfly": { "item_id": 10018, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Snowy area", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "ruby_harvest": {
+        "level_req": 15,
+        "xp": 24,
+        "trap_type": "butterfly_jar",
+        "loot": {
+          "butterfly": { "item_id": 10018, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Woodland", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "sapphire_glacial": {
+        "level_req": 25,
+        "xp": 35,
+        "trap_type": "butterfly_jar",
+        "loot": {
+          "butterfly": { "item_id": 10018, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Snowy area", "x": 0, "z": 0 }
+        ],
+        "members": true
+      }
+    },
+    "mammals": {
+      "polar_kebbit": {
+        "level_req": 1,
+        "xp": 30,
+        "trap_type": "deadfall_trap",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_beast_meat": { "item_id": 9986, "quantity": 1 },
+          "polar_kebbit_fur": { "item_id": 10115, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Rellekka Hunter area", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "common_kebbit": {
+        "level_req": 3,
+        "xp": 36,
+        "trap_type": "deadfall_trap",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_beast_meat": { "item_id": 9986, "quantity": 1 },
+          "kebbit_fur": { "item_id": 10119, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Piscatoris Hunter area", "x": 0, "z": 0 },
+          { "area": "Feldip Hills", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "feldip_weasel": {
+        "level_req": 7,
+        "xp": 48,
+        "trap_type": "deadfall_trap",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_beast_meat": { "item_id": 9986, "quantity": 1 },
+          "feldip_weasel_fur": { "item_id": 10121, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Feldip Hills", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "desert_wolf": {
+        "level_req": 13,
+        "xp": 64,
+        "trap_type": "deadfall_trap",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_beast_meat": { "item_id": 9986, "quantity": 1 },
+          "wolf_fur": { "item_id": 10125, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Kharidian Desert", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "saradomin_owl": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "box_trap",
+        "loot": {
+          "bones": { "item_id": 526, "quantity": 1 },
+          "raw_beast_meat": { "item_id": 9986, "quantity": 1 }
+        },
+        "locations": [
+          { "area": "Piscatoris Hunter area", "x": 0, "z": 0 }
+        ],
+        "members": true
+      }
+    },
+    "implings": {
+      "baby_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "young_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "gourmet_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "earth_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "essence_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "eclectic_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "nature_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "magpie_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "ninja_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "dragon_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      },
+      "lucky_impling": {
+        "level_req": 1,
+        "xp": 0,
+        "trap_type": "impling_jar",
+        "loot": {},
+        "locations": [
+          { "area": "Various", "x": 0, "z": 0 }
+        ],
+        "members": true
+      }
+    }
+  },
+  "hunter_equipment": {
+    "hunter_kit": {
+      "item_id": 11159,
+      "members": true
+    },
+    "noose_wand": {
+      "item_id": 10150,
+      "members": true
+    },
+    "butterfly_net": {
+      "item_id": 10010,
+      "members": true
+    },
+    "magic_box": {
+      "item_id": 10016,
+      "members": true
+    }
+  }
+}

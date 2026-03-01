@@ -1,0 +1,714 @@
+{
+  "skill": "cooking",
+  "source": "OSRS Rev 233 Cache Extraction",
+  "extraction_date": "2026-02-22",
+  "metadata": {
+    "revision": 233,
+    "cache_version": "Rev 233 (Varlamore Part 2, Sept 25, 2024)"
+  },
+
+  "fish": {
+    "shrimp": {
+      "name": "Shrimp",
+      "level_req": 1,
+      "xp": 30.0,
+      "raw_id": 317,
+      "raw_name": "raw_shrimp",
+      "cooked_id": 315,
+      "cooked_name": "shrimp",
+      "burnt_id": 323,
+      "burnt_name": "burntfish1",
+      "heal": 3,
+      "notes": "Lowest tier fish, no cooking level required"
+    },
+    "sardine": {
+      "name": "Sardine",
+      "level_req": 1,
+      "xp": 40.0,
+      "raw_id": 327,
+      "raw_name": "raw_sardine",
+      "cooked_id": 325,
+      "cooked_name": "sardine",
+      "burnt_id": 343,
+      "burnt_name": "burntfish2",
+      "heal": 4,
+      "notes": "Basic fish from sea fishing"
+    },
+    "herring": {
+      "name": "Herring",
+      "level_req": 5,
+      "xp": 50.0,
+      "raw_id": 345,
+      "raw_name": "raw_herring",
+      "cooked_id": 347,
+      "cooked_name": "herring",
+      "burnt_id": 357,
+      "burnt_name": "burntfish3",
+      "heal": 5,
+      "notes": "Slightly better than sardine"
+    },
+    "mackerel": {
+      "name": "Mackerel",
+      "level_req": 10,
+      "xp": 60.0,
+      "raw_id": 353,
+      "raw_name": "raw_mackerel",
+      "cooked_id": 355,
+      "cooked_name": "mackerel",
+      "burnt_id": 357,
+      "burnt_name": "burntfish3",
+      "heal": 6,
+      "notes": "Members-only, big net fishing"
+    },
+    "trout": {
+      "name": "Trout",
+      "level_req": 15,
+      "xp": 70.0,
+      "raw_id": 335,
+      "raw_name": "raw_trout",
+      "cooked_id": 333,
+      "cooked_name": "trout",
+      "burnt_id": 343,
+      "burnt_name": "burntfish2",
+      "heal": 7,
+      "notes": "Common fly-fishing catch"
+    },
+    "cod": {
+      "name": "Cod",
+      "level_req": 18,
+      "xp": 75.0,
+      "raw_id": 341,
+      "raw_name": "raw_cod",
+      "cooked_id": 339,
+      "cooked_name": "cod",
+      "burnt_id": 343,
+      "burnt_name": "burntfish2",
+      "heal": 7,
+      "notes": "Members-only, big net fishing"
+    },
+    "pike": {
+      "name": "Pike",
+      "level_req": 20,
+      "xp": 80.0,
+      "raw_id": 349,
+      "raw_name": "raw_pike",
+      "cooked_id": 351,
+      "cooked_name": "pike",
+      "burnt_id": 343,
+      "burnt_name": "burntfish2",
+      "heal": 8,
+      "notes": "Bait fishing"
+    },
+    "salmon": {
+      "name": "Salmon",
+      "level_req": 25,
+      "xp": 90.0,
+      "raw_id": 331,
+      "raw_name": "raw_salmon",
+      "cooked_id": 329,
+      "cooked_name": "salmon",
+      "burnt_id": 343,
+      "burnt_name": "burntfish2",
+      "heal": 9,
+      "notes": "Popular training fish"
+    },
+    "tuna": {
+      "name": "Tuna",
+      "level_req": 30,
+      "xp": 100.0,
+      "raw_id": 359,
+      "raw_name": "raw_tuna",
+      "cooked_id": 361,
+      "cooked_name": "tuna",
+      "burnt_id": 367,
+      "burnt_name": "burntfish4",
+      "heal": 10,
+      "notes": "Harpoon fishing"
+    },
+    "anchovies": {
+      "name": "Anchovies",
+      "level_req": 1,
+      "xp": 30.0,
+      "raw_id": 321,
+      "raw_name": "raw_anchovies",
+      "cooked_id": 319,
+      "cooked_name": "anchovies",
+      "burnt_id": 323,
+      "burnt_name": "burntfish1",
+      "heal": 1,
+      "notes": "Used on pizzas"
+    },
+    "lobster": {
+      "name": "Lobster",
+      "level_req": 40,
+      "xp": 120.0,
+      "raw_id": 377,
+      "raw_name": "raw_lobster",
+      "cooked_id": 379,
+      "cooked_name": "lobster",
+      "burnt_id": 381,
+      "burnt_name": "burnt_lobster",
+      "heal": 12,
+      "notes": "Popular F2P healing food"
+    },
+    "swordfish": {
+      "name": "Swordfish",
+      "level_req": 45,
+      "xp": 140.0,
+      "raw_id": 371,
+      "raw_name": "raw_swordfish",
+      "cooked_id": 373,
+      "cooked_name": "swordfish",
+      "burnt_id": 375,
+      "burnt_name": "burnt_swordfish",
+      "heal": 14,
+      "notes": "Best F2P healing fish"
+    },
+    "monkfish": {
+      "name": "Monkfish",
+      "level_req": 62,
+      "xp": 150.0,
+      "raw_id": 7944,
+      "raw_name": "raw_monkfish",
+      "cooked_id": 7946,
+      "cooked_name": "monkfish",
+      "burnt_id": 7948,
+      "burnt_name": "burnt_monkfish",
+      "heal": 16,
+      "notes": "Members-only, caught at Piscatoris"
+    },
+    "karambwan": {
+      "name": "Karambwan",
+      "level_req": 30,
+      "xp": 190.0,
+      "raw_id": 3142,
+      "raw_name": "tbwt_raw_karambwan",
+      "cooked_id": 3144,
+      "cooked_name": "tbwt_cooked_karambwan",
+      "burnt_id": 3146,
+      "burnt_name": "tbwt_poorly_cooked_karambwan",
+      "heal": 18,
+      "notes": "Members-only, must use karambwan paste to cook properly"
+    },
+    "shark": {
+      "name": "Shark",
+      "level_req": 80,
+      "xp": 210.0,
+      "raw_id": 383,
+      "raw_name": "raw_shark",
+      "cooked_id": 385,
+      "cooked_name": "shark",
+      "burnt_id": 387,
+      "burnt_name": "burnt_shark",
+      "heal": 20,
+      "notes": "High-level healing fish"
+    },
+    "manta_ray": {
+      "name": "Manta Ray",
+      "level_req": 91,
+      "xp": 216.0,
+      "raw_id": null,
+      "raw_name": null,
+      "cooked_id": null,
+      "cooked_name": null,
+      "burnt_id": 393,
+      "burnt_name": "burnt_mantaray",
+      "heal": 22,
+      "notes": "Members-only, deep sea fishing"
+    },
+    "sea_turtle": {
+      "name": "Sea Turtle",
+      "level_req": 82,
+      "xp": 211.0,
+      "raw_id": null,
+      "raw_name": null,
+      "cooked_id": null,
+      "cooked_name": null,
+      "burnt_id": 399,
+      "burnt_name": "burnt_seaturtle",
+      "heal": 21,
+      "notes": "Members-only, deep sea fishing"
+    },
+    "karambwanji": {
+      "name": "Karambwanji",
+      "level_req": 1,
+      "xp": 10.0,
+      "raw_id": 3150,
+      "raw_name": "tbwt_raw_karambwanji",
+      "cooked_id": 3151,
+      "cooked_name": "tbwt_cooked_karambwanji",
+      "burnt_id": null,
+      "burnt_name": null,
+      "heal": 3,
+      "notes": "Used as bait for karambwan"
+    }
+  },
+
+  "meats": {
+    "raw_beef": {
+      "name": "Cooked Meat",
+      "level_req": 1,
+      "xp": 30.0,
+      "raw_id": 2132,
+      "raw_name": "raw_beef",
+      "cooked_id": 2142,
+      "cooked_name": "cooked_meat",
+      "burnt_id": 2146,
+      "burnt_name": "burnt_meat",
+      "heal": 3,
+      "notes": "From cows"
+    },
+    "raw_rat_meat": {
+      "name": "Cooked Meat",
+      "level_req": 1,
+      "xp": 30.0,
+      "raw_id": 2134,
+      "raw_name": "raw_rat_meat",
+      "cooked_id": 2142,
+      "cooked_name": "cooked_meat",
+      "burnt_id": 2146,
+      "burnt_name": "burnt_meat",
+      "heal": 3,
+      "notes": "From rats"
+    },
+    "raw_bear_meat": {
+      "name": "Cooked Meat",
+      "level_req": 1,
+      "xp": 30.0,
+      "raw_id": 2136,
+      "raw_name": "raw_bear_meat",
+      "cooked_id": 2142,
+      "cooked_name": "cooked_meat",
+      "burnt_id": 2146,
+      "burnt_name": "burnt_meat",
+      "heal": 3,
+      "notes": "From bears"
+    },
+    "raw_chicken": {
+      "name": "Cooked Chicken",
+      "level_req": 1,
+      "xp": 30.0,
+      "raw_id": 2138,
+      "raw_name": "raw_chicken",
+      "cooked_id": 2140,
+      "cooked_name": "cooked_chicken",
+      "burnt_id": 2144,
+      "burnt_name": "burnt_chicken",
+      "heal": 3,
+      "notes": "From chickens"
+    },
+    "raw_rabbit": {
+      "name": "Cooked Rabbit",
+      "level_req": 1,
+      "xp": 30.0,
+      "raw_id": 3226,
+      "raw_name": "raw_rabbit",
+      "cooked_id": 3228,
+      "cooked_name": "cooked_rabbit",
+      "burnt_id": null,
+      "burnt_name": null,
+      "heal": 5,
+      "notes": "Members-only, from hunter"
+    },
+    "raw_ugthanki_meat": {
+      "name": "Ugthanki Meat",
+      "level_req": 1,
+      "xp": 40.0,
+      "raw_id": 1859,
+      "raw_name": "raw_ugthanki_meat",
+      "cooked_id": 1861,
+      "cooked_name": "cooked_ugthanki_meat",
+      "burnt_id": null,
+      "burnt_name": null,
+      "heal": 7,
+      "notes": "Used for kebabs"
+    }
+  },
+
+  "pies": {
+    "redberry_pie": {
+      "name": "Redberry Pie",
+      "level_req": 10,
+      "xp": 78.0,
+      "uncooked_id": 2321,
+      "uncooked_name": "uncooked_redberry_pie",
+      "cooked_id": 2325,
+      "cooked_name": "redberry_pie",
+      "half_id": 2333,
+      "half_name": "half_a_redberry_pie",
+      "burnt_id": 2329,
+      "burnt_name": "burnt_pie",
+      "heal": 10,
+      "ingredients": ["pie_shell", "redberries"],
+      "notes": "Basic pie, heals in 2 bites"
+    },
+    "meat_pie": {
+      "name": "Meat Pie",
+      "level_req": 20,
+      "xp": 110.0,
+      "uncooked_id": 2319,
+      "uncooked_name": "uncooked_meat_pie",
+      "cooked_id": 2327,
+      "cooked_name": "meat_pie",
+      "half_id": 2331,
+      "half_name": "half_a_meat_pie",
+      "burnt_id": 2329,
+      "burnt_name": "burnt_pie",
+      "heal": 12,
+      "ingredients": ["pie_shell", "cooked_meat"],
+      "notes": "Uses cooked meat"
+    },
+    "apple_pie": {
+      "name": "Apple Pie",
+      "level_req": 30,
+      "xp": 130.0,
+      "uncooked_id": 2317,
+      "uncooked_name": "uncooked_apple_pie",
+      "cooked_id": 2323,
+      "cooked_name": "apple_pie",
+      "half_id": 2335,
+      "half_name": "half_an_apple_pie",
+      "burnt_id": 2329,
+      "burnt_name": "burnt_pie",
+      "heal": 14,
+      "ingredients": ["pie_shell", "cooking_apple"],
+      "notes": "Standard apple pie"
+    },
+    "garden_pie": {
+      "name": "Garden Pie",
+      "level_req": 34,
+      "xp": 138.0,
+      "uncooked_id": 7176,
+      "uncooked_name": "uncooked_garden_pie",
+      "cooked_id": 7178,
+      "cooked_name": "garden_pie",
+      "half_id": 7180,
+      "half_name": "half_garden_pie",
+      "burnt_id": 2329,
+      "burnt_name": "burnt_pie",
+      "heal": 12,
+      "ingredients": ["tomato", "onion", "cabbage", "potato"],
+      "notes": "Members-only, boosts Farming by 3"
+    },
+    "fish_pie": {
+      "name": "Fish Pie",
+      "level_req": 47,
+      "xp": 164.0,
+      "uncooked_id": 7186,
+      "uncooked_name": "uncooked_fish_pie",
+      "cooked_id": 7188,
+      "cooked_name": "fish_pie",
+      "half_id": 7190,
+      "half_name": "half_fish_pie",
+      "burnt_id": 2329,
+      "burnt_name": "burnt_pie",
+      "heal": 12,
+      "ingredients": ["trout", "cod", "potato"],
+      "notes": "Members-only, boosts Fishing by 3"
+    },
+    "mud_pie": {
+      "name": "Mud Pie",
+      "level_req": 29,
+      "xp": 128.0,
+      "uncooked_id": 7168,
+      "uncooked_name": "uncooked_mud_pie",
+      "cooked_id": 7170,
+      "cooked_name": "mud_pie",
+      "burnt_id": 2329,
+      "burnt_name": "burnt_pie",
+      "heal": 0,
+      "ingredients": ["compost", "water", "clay"],
+      "notes": "Members-only, thrown at players"
+    }
+  },
+
+  "pizzas": {
+    "plain_pizza": {
+      "name": "Plain Pizza",
+      "level_req": 35,
+      "xp": 143.0,
+      "uncooked_id": 2287,
+      "uncooked_name": "uncooked_pizza",
+      "cooked_id": 2289,
+      "cooked_name": "plain_pizza",
+      "half_id": 2291,
+      "half_name": "half_plain_pizza",
+      "burnt_id": 2305,
+      "burnt_name": "burnt_pizza",
+      "heal": 14,
+      "ingredients": ["pizza_base", "tomato", "cheese"],
+      "notes": "Base pizza"
+    },
+    "meat_pizza": {
+      "name": "Meat Pizza",
+      "level_req": 45,
+      "xp": 169.0,
+      "uncooked_id": null,
+      "uncooked_name": null,
+      "cooked_id": 2293,
+      "cooked_name": "meat_pizza",
+      "half_id": 2295,
+      "half_name": "half_meat_pizza",
+      "burnt_id": 2305,
+      "burnt_name": "burnt_pizza",
+      "heal": 16,
+      "ingredients": ["plain_pizza", "cooked_meat"],
+      "notes": "Add cooked meat to plain pizza"
+    },
+    "anchovy_pizza": {
+      "name": "Anchovy Pizza",
+      "level_req": 55,
+      "xp": 182.0,
+      "uncooked_id": null,
+      "uncooked_name": null,
+      "cooked_id": 2297,
+      "cooked_name": "anchovie_pizza",
+      "half_id": 2299,
+      "half_name": "half_anchovie_pizza",
+      "burnt_id": 2305,
+      "burnt_name": "burnt_pizza",
+      "heal": 18,
+      "ingredients": ["plain_pizza", "anchovies"],
+      "notes": "Add anchovies to plain pizza"
+    },
+    "pineapple_pizza": {
+      "name": "Pineapple Pizza",
+      "level_req": 65,
+      "xp": 195.0,
+      "uncooked_id": null,
+      "uncooked_name": null,
+      "cooked_id": 2301,
+      "cooked_name": "pineapple_pizza",
+      "half_id": 2303,
+      "half_name": "half_pineapple_pizza",
+      "burnt_id": 2305,
+      "burnt_name": "burnt_pizza",
+      "heal": 22,
+      "ingredients": ["plain_pizza", "pineapple_chunks"],
+      "notes": "Members-only"
+    }
+  },
+
+  "stews": {
+    "stew": {
+      "name": "Stew",
+      "level_req": 25,
+      "xp": 117.0,
+      "uncooked_id": 2001,
+      "uncooked_name": "uncooked_stew",
+      "cooked_id": 2003,
+      "cooked_name": "stew",
+      "burnt_id": 2005,
+      "burnt_name": "burnt_stew",
+      "heal": 11,
+      "ingredients": ["bowl", "potato", "cooked_meat"],
+      "notes": "Basic stew"
+    },
+    "curry": {
+      "name": "Curry",
+      "level_req": 60,
+      "xp": 280.0,
+      "uncooked_id": 2009,
+      "uncooked_name": "uncooked_curry",
+      "cooked_id": 2011,
+      "cooked_name": "curry",
+      "burnt_id": 2013,
+      "burnt_name": "burnt_curry",
+      "heal": 19,
+      "ingredients": ["stew", "spice"],
+      "notes": "Members-only, spicy stew"
+    }
+  },
+
+  "breads_cakes": {
+    "bread": {
+      "name": "Bread",
+      "level_req": 1,
+      "xp": 40.0,
+      "dough_id": 2307,
+      "dough_name": "bread_dough",
+      "cooked_id": 2309,
+      "cooked_name": "bread",
+      "burnt_id": 2311,
+      "burnt_name": "burnt_bread",
+      "heal": 5,
+      "ingredients": ["pot_of_flour", "water"],
+      "notes": "Basic cooking"
+    },
+    "pitta_bread": {
+      "name": "Pitta Bread",
+      "level_req": 58,
+      "xp": 40.0,
+      "dough_id": 1863,
+      "dough_name": "uncooked_pitta_bread",
+      "cooked_id": 1865,
+      "cooked_name": "pitta_bread",
+      "burnt_id": 1867,
+      "burnt_name": "burnt_pitta_bread",
+      "heal": 5,
+      "ingredients": ["pot_of_flour", "water"],
+      "notes": "Members-only, used for kebabs"
+    },
+    "cake": {
+      "name": "Cake",
+      "level_req": 40,
+      "xp": 180.0,
+      "uncooked_id": 1889,
+      "uncooked_name": "uncooked_cake",
+      "cooked_id": 1891,
+      "cooked_name": "cake",
+      "partial_id": 1893,
+      "partial_name": "partial_cake",
+      "slice_id": 1895,
+      "slice_name": "cake_slice",
+      "burnt_id": 1903,
+      "burnt_name": "burnt_cake",
+      "heal": 12,
+      "ingredients": ["egg", "pot_of_flour", "milk"],
+      "notes": "Heals in 3 bites"
+    },
+    "chocolate_cake": {
+      "name": "Chocolate Cake",
+      "level_req": 40,
+      "xp": 180.0,
+      "cooked_id": 1897,
+      "cooked_name": "chocolate_cake",
+      "partial_id": 1899,
+      "partial_name": "partial_chocolate_cake",
+      "burnt_id": 1903,
+      "burnt_name": "burnt_cake",
+      "heal": 15,
+      "ingredients": ["cake", "chocolate_bar"],
+      "notes": "Add chocolate to cake"
+    }
+  },
+
+  "cooking_methods": {
+    "range": {
+      "name": "Cooking Range",
+      "burn_reduction": true,
+      "notes": "Lower burn chance than fire",
+      "loc_ids": [114, 7183, 7184, 2859, 4172, 7421, 12611, 13528, 13529, 13531, 13533, 13536],
+      "loc_names": ["cooksquestrange", "fai_varrock_range", "fai_varrock_range_with_pipe", "carnilleanrange", "viking_seer_range", "fai_varrock_posh_stove", "swan_stove", "poh_stove_1", "poh_stove_2", "poh_stove_3", "poh_stove_4", "poh_stove_5"]
+    },
+    "fire": {
+      "name": "Fire",
+      "burn_reduction": false,
+      "notes": "Higher burn chance, can be made anywhere",
+      "loc_ids": [714, 2027, 3769, 4090, 4192, 4265, 4266, 4618, 4650, 5165, 5178, 5179],
+      "loc_names": ["fire_remains", "brut_campfire", "troll_stronghold_camp_fire", "templefire_altar", "viking_torch_fire", "viking_longhall_fire", "viking_house_fire", "boardgames_fireplace_small", "boardgames_fireplace", "fenk_fireplace", "fenk_fireplace_right", "fenk_fireplace_left"]
+    }
+  },
+
+  "cooking_gauntlets": {
+    "name": "Cooking Gauntlets",
+    "item_id": 775,
+    "item_name": "cooking_gauntlets",
+    "effect": "Prevents burning at specific levels",
+    "notes": "Reward from Family Crest quest, must be in inventory",
+    "no_burn_levels": {
+      "shrimp": 1,
+      "sardine": 1,
+      "herring": 1,
+      "mackerel": 1,
+      "trout": 1,
+      "cod": 1,
+      "pike": 1,
+      "salmon": 1,
+      "tuna": 1,
+      "lobster": 68,
+      "swordfish": 80,
+      "monkfish": 87,
+      "shark": 94,
+      "manta_ray": 99,
+      "sea_turtle": 99
+    }
+  },
+
+  "hosidius_kitchen": {
+    "name": "Hosidius Kitchen",
+    "location": { "x": 1767, "z": 3598 },
+    "requirement": "100% Hosidius favour",
+    "bonuses": {
+      "burn_reduction": "5% lower burn chance",
+      "range_bonus": "Works like cooking gauntlets at lower levels"
+    }
+  },
+
+  "cooks_guild": {
+    "name": "Cooks' Guild",
+    "location": { "x": 3143, "z": 3442 },
+    "requirement": "32 Cooking level, chefs hat",
+    "features": [
+      "Range with reduced burn chance",
+      "Bank (members-only)",
+      "Mill",
+      "Spawns: pot_of_flour, pie_dish"
+    ]
+  },
+
+  "burnt_food_ids": {
+    "burntfish1": 323,
+    "burntfish2": 343,
+    "burntfish3": 357,
+    "burntfish4": 367,
+    "burntfish5": 369,
+    "burnt_swordfish": 375,
+    "burnt_lobster": 381,
+    "burnt_shark": 387,
+    "burnt_mantaray": 393,
+    "burnt_seaturtle": 399,
+    "burnt_meat": 2146,
+    "burnt_chicken": 2144,
+    "burnt_pie": 2329,
+    "burnt_pizza": 2305,
+    "burnt_bread": 2311,
+    "burnt_cake": 1903,
+    "burnt_stew": 2005,
+    "burnt_curry": 2013,
+    "burnt_pitta_bread": 1867
+  },
+
+  "test_locations": [
+    {
+      "name": "Cooks' Guild Range",
+      "x": 3143,
+      "z": 3442,
+      "method": "range",
+      "notes": "Best F2P range, 32 Cooking required"
+    },
+    {
+      "name": "Lumbridge Castle Range",
+      "x": 3211,
+      "z": 3215,
+      "method": "range",
+      "notes": "Good for low-level cooking"
+    },
+    {
+      "name": "Al Kharid Range",
+      "x": 3273,
+      "z": 3181,
+      "method": "range",
+      "notes": "Near bank"
+    },
+    {
+      "name": "Hosidius Kitchen",
+      "x": 1767,
+      "z": 3598,
+      "method": "range",
+      "notes": "Members-only, 5% less burns"
+    },
+    {
+      "name": "Rogue's Den Fire",
+      "x": 3044,
+      "z": 4969,
+      "method": "fire",
+      "notes": "Everlasting fire near bank (members)"
+    }
+  ],
+
+  "animation": {
+    "cooking": 883,
+    "name": "human_cooking"
+  }
+}

@@ -6,9 +6,7 @@ import org.rsmod.api.type.refs.varp.VarpReferences
 
 typealias varps = BaseVarps
 
-/**
- * Auto-generated symbol bindings (Smart Subset). Do not edit manually.
- */
+/** Auto-generated symbol bindings (Smart Subset). Do not edit manually. */
 object BaseVarps : VarpReferences() {
     val _100_pirate_quest = find("100_pirate_quest")
     val achievement_diary = find("achievement_diary")

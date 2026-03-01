@@ -6,13 +6,12 @@ import org.rsmod.api.type.refs.varbit.VarBitReferences
 
 typealias varbits = BaseVarBits
 
-/**
- * Auto-generated symbol bindings (Smart Subset). Do not edit manually.
- */
+/** Auto-generated symbol bindings (Smart Subset). Do not edit manually. */
 object BaseVarBits : VarBitReferences() {
     val accept_aid_restore = find("accept_aid_restore")
     val account_summary_display_playtime = find("account_summary_display_playtime")
-    val account_summary_display_playtime_remind_disable = find("account_summary_display_playtime_remind_disable")
+    val account_summary_display_playtime_remind_disable =
+        find("account_summary_display_playtime_remind_disable")
     val adventurepath_combat_free_potion_reward = find("adventurepath_combat_free_potion_reward")
     val adventurepath_combat_reward_claimed = find("adventurepath_combat_reward_claimed")
     val adventurepath_combat_task_recommended = find("adventurepath_combat_task_recommended")
@@ -145,7 +144,8 @@ object BaseVarBits : VarBitReferences() {
     val option_sounds_saved = find("option_sounds_saved")
     val parasite = find("parasite")
     val poh_building_mode = find("poh_building_mode")
-    val poh_leaguehall_outfitstand_relichunter_type = find("poh_leaguehall_outfitstand_relichunter_type")
+    val poh_leaguehall_outfitstand_relichunter_type =
+        find("poh_leaguehall_outfitstand_relichunter_type")
     val prayer_allactive = find("prayer_allactive")
     val prayer_augury = find("prayer_augury")
     val prayer_augury_unlocked = find("prayer_augury_unlocked")

@@ -1,0 +1,42 @@
+{
+  "skill": "mining",
+  "source": "OSRS wiki (rev 228/233, accessed 2026-02)",
+  "actions": {
+    "copper_ore": {
+      "level_req": 1, "xp": 17.5,
+      "item_id": 436, "respawn_ticks": 4
+    },
+    "tin_ore": {
+      "level_req": 1, "xp": 17.5,
+      "item_id": 438, "respawn_ticks": 4
+    },
+    "iron_ore": {
+      "level_req": 15, "xp": 35.0,
+      "item_id": 440, "respawn_ticks": 9
+    },
+    "silver_ore": {
+      "level_req": 20, "xp": 40.0,
+      "item_id": 442, "respawn_ticks": 100
+    },
+    "coal": {
+      "level_req": 30, "xp": 50.0,
+      "item_id": 453, "respawn_ticks": 50
+    },
+    "gold_ore": {
+      "level_req": 40, "xp": 65.0,
+      "item_id": 444, "respawn_ticks": 100
+    },
+    "mithril_ore": {
+      "level_req": 55, "xp": 80.0,
+      "item_id": 447, "respawn_ticks": 200
+    },
+    "adamantite_ore": {
+      "level_req": 70, "xp": 95.0,
+      "item_id": 449, "respawn_ticks": 400
+    },
+    "runite_ore": {
+      "level_req": 85, "xp": 125.0,
+      "item_id": 451, "respawn_ticks": 1200
+    }
+  }
+}

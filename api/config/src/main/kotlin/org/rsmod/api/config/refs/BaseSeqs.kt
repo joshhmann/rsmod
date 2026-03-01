@@ -6,9 +6,7 @@ import org.rsmod.api.type.refs.seq.SeqReferences
 
 typealias seqs = BaseSeqs
 
-/**
- * Auto-generated symbol bindings (Smart Subset). Do not edit manually.
- */
+/** Auto-generated symbol bindings (Smart Subset). Do not edit manually. */
 object BaseSeqs : SeqReferences() {
     val abyssal_bludgeon_special_attack = find("abyssal_bludgeon_special_attack")
     val abyssal_dagger_special = find("abyssal_dagger_special")
@@ -94,7 +92,8 @@ object BaseSeqs : SeqReferences() {
     val dh_sword_update_armadyl_special_spotanim = find("dh_sword_update_armadyl_special_spotanim")
     val dh_sword_update_bandos_special_spotanim = find("dh_sword_update_bandos_special_spotanim")
     val dh_sword_update_defend = find("dh_sword_update_defend")
-    val dh_sword_update_saradomin_special_spotanim = find("dh_sword_update_saradomin_special_spotanim")
+    val dh_sword_update_saradomin_special_spotanim =
+        find("dh_sword_update_saradomin_special_spotanim")
     val dh_sword_update_slash = find("dh_sword_update_slash")
     val dh_sword_update_zamorak_special_spotanim = find("dh_sword_update_zamorak_special_spotanim")
     val diary_emote_playeranim = find("diary_emote_playeranim")
@@ -205,9 +204,12 @@ object BaseSeqs : SeqReferences() {
     val fishstabber_infernal = find("fishstabber_infernal")
     val fishstabber_trailblazer = find("fishstabber_trailblazer")
     val flip = find("flip")
-    val forestry_campfire_burning_achey_tree_logs = find("forestry_campfire_burning_achey_tree_logs")
-    val forestry_campfire_burning_arctic_pine_log = find("forestry_campfire_burning_arctic_pine_log")
-    val forestry_campfire_burning_blisterwood_logs = find("forestry_campfire_burning_blisterwood_logs")
+    val forestry_campfire_burning_achey_tree_logs =
+        find("forestry_campfire_burning_achey_tree_logs")
+    val forestry_campfire_burning_arctic_pine_log =
+        find("forestry_campfire_burning_arctic_pine_log")
+    val forestry_campfire_burning_blisterwood_logs =
+        find("forestry_campfire_burning_blisterwood_logs")
     val forestry_campfire_burning_logs = find("forestry_campfire_burning_logs")
     val forestry_campfire_burning_magic_logs = find("forestry_campfire_burning_magic_logs")
     val forestry_campfire_burning_mahogany_logs = find("forestry_campfire_burning_mahogany_logs")
@@ -238,11 +240,13 @@ object BaseSeqs : SeqReferences() {
     val human_canoeing_carve_gilded_axe = find("human_canoeing_carve_gilded_axe")
     val human_canoeing_carve_infernal_axe = find("human_canoeing_carve_infernal_axe")
     val human_canoeing_carve_iron_axe = find("human_canoeing_carve_iron_axe")
-    val human_canoeing_carve_league_trailblazer_axe = find("human_canoeing_carve_league_trailblazer_axe")
+    val human_canoeing_carve_league_trailblazer_axe =
+        find("human_canoeing_carve_league_trailblazer_axe")
     val human_canoeing_carve_mithril_axe = find("human_canoeing_carve_mithril_axe")
     val human_canoeing_carve_rune_axe = find("human_canoeing_carve_rune_axe")
     val human_canoeing_carve_steel_axe = find("human_canoeing_carve_steel_axe")
-    val human_canoeing_carve_trailblazer_axe_no_infernal = find("human_canoeing_carve_trailblazer_axe_no_infernal")
+    val human_canoeing_carve_trailblazer_axe_no_infernal =
+        find("human_canoeing_carve_trailblazer_axe_no_infernal")
     val human_cast_surge = find("human_cast_surge")
     val human_caststrike = find("human_caststrike")
     val human_caststrike_staff = find("human_caststrike_staff")
@@ -309,7 +313,8 @@ object BaseSeqs : SeqReferences() {
     val human_mining_steel_pickaxe = find("human_mining_steel_pickaxe")
     val human_mining_steel_pickaxe_wall = find("human_mining_steel_pickaxe_wall")
     val human_mining_trailblazer_pickaxe = find("human_mining_trailblazer_pickaxe")
-    val human_mining_trailblazer_pickaxe_no_infernal = find("human_mining_trailblazer_pickaxe_no_infernal")
+    val human_mining_trailblazer_pickaxe_no_infernal =
+        find("human_mining_trailblazer_pickaxe_no_infernal")
     val human_mining_zalcano_pickaxe = find("human_mining_zalcano_pickaxe")
     val human_openchest = find("human_openchest")
     val human_pickpocket = find("human_pickpocket")

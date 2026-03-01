@@ -1,0 +1,362 @@
+{
+  "diary": "Varrock",
+  "tier": "Easy",
+  "task_count": 14,
+  "region": "Misthalin",
+  "is_f2p": true,
+  "tasks": [
+    {
+      "number": 1,
+      "name": "Browse Thessalia's store",
+      "description": "Browse Thessalia's Fine Clothes shop in Varrock",
+      "requirements": [],
+      "location": {
+        "name": "Thessalia's Fine Clothes",
+        "x": 3205,
+        "z": 3417
+      },
+      "npc": "thessalia",
+      "trigger": "npc_interact",
+      "varp_bit": 0
+    },
+    {
+      "number": 2,
+      "name": "Aubury teleport to Essence mine",
+      "description": "Have Aubury teleport you to the Rune Essence mine",
+      "requirements": [
+        {
+          "type": "quest",
+          "quest": "Rune Mysteries",
+          "status": "completed"
+        }
+      ],
+      "location": {
+        "name": "Aubury's Rune Shop",
+        "x": 3253,
+        "z": 3401
+      },
+      "npc": "aubury",
+      "trigger": "npc_teleport",
+      "varp_bit": 1
+    },
+    {
+      "number": 3,
+      "name": "Mine iron in south-east Varrock",
+      "description": "Mine some iron ore in the south-east mining patch near Varrock",
+      "requirements": [
+        {
+          "type": "skill",
+          "skill": "Mining",
+          "level": 15
+        },
+        {
+          "type": "item",
+          "item": "pickaxe",
+          "any": true
+        }
+      ],
+      "location": {
+        "name": "South-east Varrock mine",
+        "x": 3285,
+        "z": 3365,
+        "bounds": {
+          "x_min": 3280,
+          "x_max": 3295,
+          "z_min": 3360,
+          "z_max": 3375
+        }
+      },
+      "trigger": "mine_rock",
+      "rock_type": "iron_rocks",
+      "varp_bit": 2
+    },
+    {
+      "number": 4,
+      "name": "Make a normal plank at the Sawmill",
+      "description": "Make a normal plank at the Sawmill",
+      "requirements": [
+        {
+          "type": "item",
+          "item": "logs",
+          "count": 1
+        },
+        {
+          "type": "currency",
+          "item": "coins",
+          "amount": 100
+        }
+      ],
+      "location": {
+        "name": "Sawmill",
+        "x": 3302,
+        "z": 3492
+      },
+      "trigger": "sawmill_craft",
+      "output": "plank",
+      "varp_bit": 3
+    },
+    {
+      "number": 5,
+      "name": "Enter Stronghold of Security level 2",
+      "description": "Enter the second level of the Stronghold of Security",
+      "requirements": [],
+      "location": {
+        "name": "Stronghold of Security",
+        "x": 3080,
+        "z": 3423
+      },
+      "trigger": "enter_dungeon_level",
+      "level": 2,
+      "varp_bit": 4
+    },
+    {
+      "number": 6,
+      "name": "Jump fence south of Varrock",
+      "description": "Jump over the fence south of Varrock",
+      "requirements": [
+        {
+          "type": "skill",
+          "skill": "Agility",
+          "level": 13
+        }
+      ],
+      "location": {
+        "name": "Varrock south fence",
+        "x": 3240,
+        "z": 3335
+      },
+      "trigger": "agility_shortcut",
+      "varp_bit": 5
+    },
+    {
+      "number": 7,
+      "name": "Chop dying tree in Lumber Yard",
+      "description": "Chop down a dying tree in the Lumber Yard",
+      "requirements": [
+        {
+          "type": "item",
+          "item": "axe",
+          "any": true
+        }
+      ],
+      "location": {
+        "name": "Lumber Yard",
+        "x": 3302,
+        "z": 3500,
+        "bounds": {
+          "x_min": 3295,
+          "x_max": 3310,
+          "z_min": 3490,
+          "z_max": 3510
+        }
+      },
+      "trigger": "chop_tree",
+      "tree_type": "dying_tree",
+      "varp_bit": 6
+    },
+    {
+      "number": 8,
+      "name": "Buy a newspaper",
+      "description": "Buy a newspaper from Benny in Varrock Square",
+      "requirements": [
+        {
+          "type": "currency",
+          "item": "coins",
+          "amount": 50
+        }
+      ],
+      "location": {
+        "name": "Varrock Square",
+        "x": 3217,
+        "z": 3435
+      },
+      "npc": "benny",
+      "trigger": "npc_shop",
+      "varp_bit": 7
+    },
+    {
+      "number": 9,
+      "name": "Give a dog a bone",
+      "description": "Give a bone to a stray dog",
+      "requirements": [
+        {
+          "type": "item",
+          "item": "bones",
+          "count": 1
+        }
+      ],
+      "location": {
+        "name": "Varrock",
+        "x": 3215,
+        "z": 3435
+      },
+      "npc": "stray_dog",
+      "trigger": "npc_use_item",
+      "item": "bones",
+      "varp_bit": 8
+    },
+    {
+      "number": 10,
+      "name": "Spin and fire a bowl in Barbarian Village",
+      "description": "Spin a bowl on the pottery wheel and fire it in the oven in Barbarian Village",
+      "requirements": [
+        {
+          "type": "skill",
+          "skill": "Crafting",
+          "level": 8
+        },
+        {
+          "type": "item",
+          "item": "soft_clay",
+          "count": 1
+        }
+      ],
+      "location": {
+        "name": "Barbarian Village pottery house",
+        "x": 3077,
+        "z": 3410,
+        "bounds": {
+          "x_min": 3070,
+          "x_max": 3085,
+          "z_min": 3400,
+          "z_max": 3415
+        }
+      },
+      "trigger": "craft_pottery",
+      "product": "bowl",
+      "steps": ["spin", "fire"],
+      "varp_bit": 9
+    },
+    {
+      "number": 11,
+      "name": "Speak to Haig Halen with 50 Kudos",
+      "description": "Speak to Curator Haig Halen after obtaining at least 50 Kudos",
+      "requirements": [
+        {
+          "type": "kudos",
+          "amount": 50
+        }
+      ],
+      "location": {
+        "name": "Varrock Museum",
+        "x": 3255,
+        "z": 3448
+      },
+      "npc": "haig_halen",
+      "trigger": "npc_interact",
+      "varp_bit": 10
+    },
+    {
+      "number": 12,
+      "name": "Craft Earth runes from Essence",
+      "description": "Craft some Earth runes from essence",
+      "requirements": [
+        {
+          "type": "skill",
+          "skill": "Runecraft",
+          "level": 9
+        },
+        {
+          "type": "item",
+          "item": "rune_essence_or_pure_essence",
+          "count": 1
+        },
+        {
+          "type": "access",
+          "altar": "earth_altar"
+        }
+      ],
+      "location": {
+        "name": "Earth Altar",
+        "x": 3305,
+        "z": 3475
+      },
+      "trigger": "craft_runes",
+      "rune_type": "earth_rune",
+      "varp_bit": 11
+    },
+    {
+      "number": 13,
+      "name": "Catch trout at Barbarian Village",
+      "description": "Catch some trout in the River Lum at Barbarian Village",
+      "requirements": [
+        {
+          "type": "skill",
+          "skill": "Fishing",
+          "level": 20
+        },
+        {
+          "type": "item",
+          "item": "fly_fishing_rod",
+          "count": 1
+        },
+        {
+          "type": "item",
+          "item": "feathers",
+          "count": 1
+        }
+      ],
+      "location": {
+        "name": "River Lum at Barbarian Village",
+        "x": 3107,
+        "z": 3427,
+        "bounds": {
+          "x_min": 3100,
+          "x_max": 3115,
+          "z_min": 3420,
+          "z_max": 3435
+        }
+      },
+      "trigger": "fish",
+      "fish_type": "trout",
+      "varp_bit": 12
+    },
+    {
+      "number": 14,
+      "name": "Steal from the Tea stall",
+      "description": "Steal from the Tea stall in Varrock",
+      "requirements": [
+        {
+          "type": "skill",
+          "skill": "Thieving",
+          "level": 5
+        }
+      ],
+      "location": {
+        "name": "Varrock (south-east of the square)",
+        "x": 3268,
+        "z": 3412
+      },
+      "trigger": "steal_from_stall",
+      "stall_type": "tea_stall",
+      "varp_bit": 13
+    }
+  ],
+  "rewards": {
+    "item": "Varrock armour 1",
+    "lamp_xp": 2500,
+    "lamp_min_level": 30,
+    "passive_benefits": [
+      "10% chance of mining 2 ores up to gold (grants XP for both)",
+      "10% chance of smelting 2 bars at once up to steel at Edgeville furnace",
+      "Skull sceptre holds 14 charges (up from 10)"
+    ],
+    "daily_rewards": [
+      {
+        "npc": "Zaff",
+        "item": "battlestaff",
+        "quantity": 15,
+        "noted": true,
+        "cost": 105000
+      }
+    ]
+  },
+  "taskmaster": {
+    "name": "Toby",
+    "location": {
+      "name": "Behind Varrock General Store",
+      "x": 3225,
+      "z": 3415
+    }
+  }
+}

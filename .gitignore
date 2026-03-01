@@ -61,3 +61,12 @@ kotlin-lsp-err.txt
 packcache.log
 gradle_build.log
 tmp_*.log
+
+### Python Artifacts ###
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.py

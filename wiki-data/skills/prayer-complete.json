@@ -1,0 +1,1013 @@
+{
+  "skill": "prayer",
+  "source": "OSRS Rev 233 Cache Extraction",
+  "extraction_date": "2026-02-22",
+  "metadata": {
+    "revision": 233,
+    "cache_version": "Rev 233 (Varlamore Part 2, Sept 25, 2024)"
+  },
+
+  "bones": {
+    "bones": {
+      "item_id": 526,
+      "name": "Bones",
+      "sym_name": "bones",
+      "xp_bury": 4.5,
+      "xp_gilded_altar": 15.75,
+      "xp_ectofuntus": 18.0,
+      "xp_ectofuntus_gilded": 63.0,
+      "notes": "Standard bones dropped by most low-level monsters"
+    },
+    "burnt_bones": {
+      "item_id": 528,
+      "name": "Burnt bones",
+      "sym_name": "bones_burnt",
+      "xp_bury": 4.5,
+      "xp_gilded_altar": 15.75,
+      "xp_ectofuntus": 18.0,
+      "notes": "From burnt corpses in the wilderness"
+    },
+    "bat_bones": {
+      "item_id": 530,
+      "name": "Bat bones",
+      "sym_name": "bat_bones",
+      "xp_bury": 5.3,
+      "xp_gilded_altar": 18.55,
+      "xp_ectofuntus": 21.2,
+      "notes": "Dropped by bats"
+    },
+    "big_bones": {
+      "item_id": 532,
+      "name": "Big bones",
+      "sym_name": "big_bones",
+      "xp_bury": 15.0,
+      "xp_gilded_altar": 52.5,
+      "xp_ectofuntus": 60.0,
+      "notes": "Dropped by ogres, giants, trolls, cyclops"
+    },
+    "babydragon_bones": {
+      "item_id": 534,
+      "name": "Babydragon bones",
+      "sym_name": "babydragon_bones",
+      "xp_bury": 30.0,
+      "xp_gilded_altar": 105.0,
+      "xp_ectofuntus": 120.0,
+      "notes": "Dropped by baby dragons"
+    },
+    "dragon_bones": {
+      "item_id": 536,
+      "name": "Dragon bones",
+      "sym_name": "dragon_bones",
+      "xp_bury": 72.0,
+      "xp_gilded_altar": 252.0,
+      "xp_ectofuntus": 288.0,
+      "notes": "Dropped by adult dragons (green, blue, red, black)"
+    },
+    "wolf_bones": {
+      "item_id": 2859,
+      "name": "Wolf bones",
+      "sym_name": "wolf_bones",
+      "xp_bury": 4.5,
+      "xp_gilded_altar": 15.75,
+      "xp_ectofuntus": 18.0,
+      "notes": "Dropped by wolves"
+    },
+    "wyvern_bones": {
+      "item_id": 6812,
+      "name": "Wyvern bones",
+      "sym_name": "wyvern_bones",
+      "xp_bury": 72.0,
+      "xp_gilded_altar": 252.0,
+      "xp_ectofuntus": 288.0,
+      "notes": "Dropped by skeletal wyverns"
+    },
+    "lava_dragon_bones": {
+      "item_id": 11943,
+      "name": "Lava dragon bones",
+      "sym_name": "lava_dragon_bones",
+      "xp_bury": 85.0,
+      "xp_gilded_altar": 297.5,
+      "xp_ectofuntus": 340.0,
+      "notes": "Dropped by lava dragons in the wilderness"
+    },
+    "superior_dragon_bones": {
+      "item_id": 22124,
+      "name": "Superior dragon bones",
+      "sym_name": "dragon_bones_superior",
+      "xp_bury": 150.0,
+      "xp_gilded_altar": 525.0,
+      "xp_ectofuntus": 600.0,
+      "notes": "Dropped by bosses like Vorkath, KBD, brutal black dragons"
+    },
+    "dagannoth_bones": {
+      "item_id": 6729,
+      "name": "Dagannoth bones",
+      "sym_name": "dagannoth_king_bones",
+      "xp_bury": 125.0,
+      "xp_gilded_altar": 437.5,
+      "xp_ectofuntus": 500.0,
+      "notes": "Dropped by Dagannoth Kings"
+    },
+    "jogre_bones": {
+      "item_id": 3125,
+      "name": "Jogre bones",
+      "sym_name": "tbwt_jogre_bones",
+      "xp_bury": 15.0,
+      "xp_gilded_altar": 52.5,
+      "xp_ectofuntus": 60.0,
+      "notes": "Dropped by jogres"
+    },
+    "burnt_jogre_bones": {
+      "item_id": 3127,
+      "name": "Burnt jogre bones",
+      "sym_name": "tbwt_burnt_jogre_bones",
+      "xp_bury": 0.0,
+      "notes": "Burnt jogre bones - must be used with karambwanji paste"
+    },
+    "zogre_bones": {
+      "item_id": 4812,
+      "name": "Zogre bones",
+      "sym_name": "zogre_bones",
+      "xp_bury": 22.5,
+      "xp_gilded_altar": 78.75,
+      "xp_ectofuntus": 90.0,
+      "notes": "Dropped by zogres in Jiggig"
+    },
+    "fayrg_bones": {
+      "item_id": 4830,
+      "name": "Fayrg bones",
+      "sym_name": "zogre_ancestral_bones_fayg",
+      "xp_bury": 84.0,
+      "xp_gilded_altar": 294.0,
+      "xp_ectofuntus": 336.0,
+      "notes": "Rare drop from zogres"
+    },
+    "raurg_bones": {
+      "item_id": 4832,
+      "name": "Raurg bones",
+      "sym_name": "zogre_ancestral_bones_raurg",
+      "xp_bury": 96.0,
+      "xp_gilded_altar": 336.0,
+      "xp_ectofuntus": 384.0,
+      "notes": "Rare drop from zogres"
+    },
+    "ourg_bones": {
+      "item_id": 4834,
+      "name": "Ourg bones",
+      "sym_name": "zogre_ancestral_bones_ourg",
+      "xp_bury": 140.0,
+      "xp_gilded_altar": 490.0,
+      "xp_ectofuntus": 560.0,
+      "notes": "Very rare drop from zogres"
+    },
+    "wyrm_bones": {
+      "item_id": 22780,
+      "name": "Wyrm bones",
+      "sym_name": "wyrm_bones",
+      "xp_bury": 50.0,
+      "xp_gilded_altar": 175.0,
+      "xp_ectofuntus": 200.0,
+      "notes": "Dropped by wyrms in the Karuulm Slayer Dungeon"
+    },
+    "drake_bones": {
+      "item_id": 22783,
+      "name": "Drake bones",
+      "sym_name": "drake_bones",
+      "xp_bury": 80.0,
+      "xp_gilded_altar": 280.0,
+      "xp_ectofuntus": 320.0,
+      "notes": "Dropped by drakes in the Karuulm Slayer Dungeon"
+    },
+    "hydra_bones": {
+      "item_id": 22786,
+      "name": "Hydra bones",
+      "sym_name": "hydra_bones",
+      "xp_bury": 110.0,
+      "xp_gilded_altar": 385.0,
+      "xp_ectofuntus": 440.0,
+      "notes": "Dropped by hydras in the Karuulm Slayer Dungeon"
+    },
+    "monkey_bones_normal": {
+      "item_id": 3183,
+      "name": "Monkey bones",
+      "sym_name": "mm_normal_monkey_bones",
+      "xp_bury": 5.0,
+      "xp_gilded_altar": 17.5,
+      "notes": "From monkeys on Ape Atoll"
+    },
+    "monkey_bones_small_ninja": {
+      "item_id": 3179,
+      "name": "Small ninja monkey bones",
+      "sym_name": "mm_small_ninja_monkey_bones",
+      "xp_bury": 5.0,
+      "xp_gilded_altar": 17.5,
+      "notes": "From small ninja monkeys"
+    },
+    "monkey_bones_medium_ninja": {
+      "item_id": 3180,
+      "name": "Medium ninja monkey bones",
+      "sym_name": "mm_medium_ninja_monkey_bones",
+      "xp_bury": 5.0,
+      "xp_gilded_altar": 17.5,
+      "notes": "From medium ninja monkeys"
+    },
+    "monkey_bones_gorilla": {
+      "item_id": 3181,
+      "name": "Gorilla bones",
+      "sym_name": "mm_normal_gorilla_monkey_bones",
+      "xp_bury": 5.0,
+      "xp_gilded_altar": 17.5,
+      "notes": "From gorillas"
+    },
+    "monkey_bones_bearded_gorilla": {
+      "item_id": 3182,
+      "name": "Bearded gorilla bones",
+      "sym_name": "mm_bearded_gorilla_monkey_bones",
+      "xp_bury": 5.0,
+      "xp_gilded_altar": 17.5,
+      "notes": "From bearded gorillas"
+    },
+    "shade_bones": {
+      "item_id": 3396,
+      "name": "Shade remains",
+      "sym_name": "shade_bones1",
+      "xp_bury": 0.0,
+      "notes": "Must be burned in the Mort'ton furnace first"
+    },
+    "babywyrm_bones": {
+      "item_id": 28899,
+      "name": "Baby wyrm bones",
+      "sym_name": "babywyrm_bones",
+      "xp_bury": 25.0,
+      "xp_gilded_altar": 87.5,
+      "xp_ectofuntus": 100.0,
+      "notes": "Dropped by baby wyrms"
+    }
+  },
+
+  "ashes": {
+    "ashes": {
+      "item_id": 592,
+      "name": "Ashes",
+      "sym_name": "ashes",
+      "xp_scatter": 0.0,
+      "xp_ectofuntus": 0.0,
+      "notes": "From burning logs, no prayer XP"
+    },
+    "fiendish_ashes": {
+      "item_id": 25766,
+      "name": "Fiendish ashes",
+      "sym_name": "fiendish_ashes",
+      "xp_scatter": 10.0,
+      "xp_ectofuntus": 40.0,
+      "notes": "From demonic creatures, requires 30 Prayer"
+    },
+    "vile_ashes": {
+      "item_id": 25769,
+      "name": "Vile ashes",
+      "sym_name": "vile_ashes",
+      "xp_scatter": 25.0,
+      "xp_ectofuntus": 100.0,
+      "notes": "From demonic creatures, requires 50 Prayer"
+    },
+    "malicious_ashes": {
+      "item_id": 25772,
+      "name": "Malicious ashes",
+      "sym_name": "malicious_ashes",
+      "xp_scatter": 65.0,
+      "xp_ectofuntus": 260.0,
+      "notes": "From demonic creatures, requires 65 Prayer"
+    },
+    "abyssal_ashes": {
+      "item_id": 25775,
+      "name": "Abyssal ashes",
+      "sym_name": "abyssal_ashes",
+      "xp_scatter": 85.0,
+      "xp_ectofuntus": 340.0,
+      "notes": "From abyssal demons, requires 85 Prayer"
+    },
+    "infernal_ashes": {
+      "item_id": 25778,
+      "name": "Infernal ashes",
+      "sym_name": "infernal_ashes",
+      "xp_scatter": 110.0,
+      "xp_ectofuntus": 440.0,
+      "notes": "From high-level demons, requires 90 Prayer"
+    }
+  },
+
+  "blessed_bones": {
+    "blessed_bones": {
+      "item_id": 29344,
+      "name": "Blessed bones",
+      "sym_name": "blessed_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl for increased XP"
+    },
+    "blessed_bat_bones": {
+      "item_id": 29346,
+      "name": "Blessed bat bones",
+      "sym_name": "blessed_bat_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_big_bones": {
+      "item_id": 29348,
+      "name": "Blessed big bones",
+      "sym_name": "blessed_big_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_zogre_bones": {
+      "item_id": 29350,
+      "name": "Blessed zogre bones",
+      "sym_name": "blessed_zogre_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_babydragon_bones": {
+      "item_id": 29352,
+      "name": "Blessed babydragon bones",
+      "sym_name": "blessed_babydragon_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_babywyrm_bones": {
+      "item_id": 29354,
+      "name": "Blessed babywyrm bones",
+      "sym_name": "blessed_babywyrm_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_dragon_bones": {
+      "item_id": 29356,
+      "name": "Blessed dragon bones",
+      "sym_name": "blessed_dragon_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_lava_dragon_bones": {
+      "item_id": 29358,
+      "name": "Blessed lava dragon bones",
+      "sym_name": "blessed_lava_dragon_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_wyvern_bones": {
+      "item_id": 29360,
+      "name": "Blessed wyvern bones",
+      "sym_name": "blessed_wyvern_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_superior_dragon_bones": {
+      "item_id": 29362,
+      "name": "Blessed superior dragon bones",
+      "sym_name": "blessed_dragon_bones_superior",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_wyrm_bones": {
+      "item_id": 29364,
+      "name": "Blessed wyrm bones",
+      "sym_name": "blessed_wyrm_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_drake_bones": {
+      "item_id": 29366,
+      "name": "Blessed drake bones",
+      "sym_name": "blessed_drake_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_hydra_bones": {
+      "item_id": 29368,
+      "name": "Blessed hydra bones",
+      "sym_name": "blessed_hydra_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_fayrg_bones": {
+      "item_id": 29370,
+      "name": "Blessed fayrg bones",
+      "sym_name": "blessed_fayrg_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_raurg_bones": {
+      "item_id": 29372,
+      "name": "Blessed raurg bones",
+      "sym_name": "blessed_raurg_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_ourg_bones": {
+      "item_id": 29374,
+      "name": "Blessed ourg bones",
+      "sym_name": "blessed_ourg_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    },
+    "blessed_dagannoth_bones": {
+      "item_id": 29376,
+      "name": "Blessed dagannoth bones",
+      "sym_name": "blessed_dagannoth_bones",
+      "xp": 5.0,
+      "notes": "Blessed at the Libation bowl"
+    }
+  },
+
+  "bonemeal": {
+    "bonemeal": {
+      "item_id": 4255,
+      "name": "Bonemeal",
+      "sym_name": "pot_bonemeal",
+      "source_bone": "bones",
+      "notes": "Normal bones ground at the Ectofuntus"
+    },
+    "bat_bonemeal": {
+      "item_id": 4256,
+      "name": "Bat bonemeal",
+      "sym_name": "pot_bonemeal_bat",
+      "source_bone": "bat_bones",
+      "notes": "Bat bones ground at the Ectofuntus"
+    },
+    "big_bonemeal": {
+      "item_id": 4257,
+      "name": "Big bonemeal",
+      "sym_name": "pot_bonemeal_big",
+      "source_bone": "big_bones",
+      "notes": "Big bones ground at the Ectofuntus"
+    },
+    "burnt_bonemeal": {
+      "item_id": 4258,
+      "name": "Burnt bonemeal",
+      "sym_name": "pot_bonemeal_burnt",
+      "source_bone": "burnt_bones",
+      "notes": "Burnt bones ground at the Ectofuntus"
+    },
+    "burnt_jogre_bonemeal": {
+      "item_id": 4259,
+      "name": "Burnt jogre bonemeal",
+      "sym_name": "pot_bonemeal_burnt_jogre",
+      "source_bone": "burnt_jogre_bones",
+      "notes": "Burnt jogre bones ground at the Ectofuntus"
+    },
+    "babydragon_bonemeal": {
+      "item_id": 4260,
+      "name": "Babydragon bonemeal",
+      "sym_name": "pot_bonemeal_babydragon",
+      "source_bone": "babydragon_bones",
+      "notes": "Babydragon bones ground at the Ectofuntus"
+    },
+    "dragon_bonemeal": {
+      "item_id": 4261,
+      "name": "Dragon bonemeal",
+      "sym_name": "pot_bonemeal_dragon",
+      "source_bone": "dragon_bones",
+      "notes": "Dragon bones ground at the Ectofuntus"
+    },
+    "wolf_bonemeal": {
+      "item_id": 4262,
+      "name": "Wolf bonemeal",
+      "sym_name": "pot_bonemeal_wolf",
+      "source_bone": "wolf_bones",
+      "notes": "Wolf bones ground at the Ectofuntus"
+    },
+    "monkey_bonemeal_small_ninja": {
+      "item_id": 4263,
+      "name": "Small ninja monkey bonemeal",
+      "sym_name": "pot_bonemeal_small_ninja_monkey",
+      "source_bone": "mm_small_ninja_monkey_bones",
+      "notes": "Small ninja monkey bones ground at the Ectofuntus"
+    },
+    "monkey_bonemeal_medium_ninja": {
+      "item_id": 4264,
+      "name": "Medium ninja monkey bonemeal",
+      "sym_name": "pot_bonemeal_medium_ninja_monkey",
+      "source_bone": "mm_medium_ninja_monkey_bones",
+      "notes": "Medium ninja monkey bones ground at the Ectofuntus"
+    },
+    "monkey_bonemeal_gorilla": {
+      "item_id": 4265,
+      "name": "Gorilla bonemeal",
+      "sym_name": "pot_bonemeal_normal_gorilla_monkey",
+      "source_bone": "mm_normal_gorilla_monkey_bones",
+      "notes": "Gorilla bones ground at the Ectofuntus"
+    },
+    "monkey_bonemeal_bearded_gorilla": {
+      "item_id": 4266,
+      "name": "Bearded gorilla bonemeal",
+      "sym_name": "pot_bonemeal_bearded_gorilla_monkey",
+      "source_bone": "mm_bearded_gorilla_monkey_bones",
+      "notes": "Bearded gorilla bones ground at the Ectofuntus"
+    },
+    "monkey_bonemeal_normal": {
+      "item_id": 4267,
+      "name": "Monkey bonemeal",
+      "sym_name": "pot_bonemeal_normal_monkey",
+      "source_bone": "mm_normal_monkey_bones",
+      "notes": "Monkey bones ground at the Ectofuntus"
+    },
+    "monkey_bonemeal_small_zombie": {
+      "item_id": 4268,
+      "name": "Small zombie monkey bonemeal",
+      "sym_name": "pot_bonemeal_small_zombie_monkey",
+      "source_bone": "mm_small_zombie_monkey_bones",
+      "notes": "Small zombie monkey bones ground at the Ectofuntus"
+    },
+    "monkey_bonemeal_large_zombie": {
+      "item_id": 4269,
+      "name": "Large zombie monkey bonemeal",
+      "sym_name": "pot_bonemeal_large_zombie_monkey",
+      "source_bone": "mm_large_zombie_monkey_bones",
+      "notes": "Large zombie monkey bones ground at the Ectofuntus"
+    },
+    "skeleton_bonemeal": {
+      "item_id": 4270,
+      "name": "Skeleton bonemeal",
+      "sym_name": "pot_bonemeal_skeleton",
+      "source_bone": "mm_skeleton_bones",
+      "notes": "Skeleton bones ground at the Ectofuntus"
+    },
+    "jogre_bonemeal": {
+      "item_id": 4271,
+      "name": "Jogre bonemeal",
+      "sym_name": "pot_bonemeal_jogre",
+      "source_bone": "tbwt_jogre_bones",
+      "notes": "Jogre bones ground at the Ectofuntus"
+    },
+    "zogre_bonemeal": {
+      "item_id": 4852,
+      "name": "Zogre bonemeal",
+      "sym_name": "pot_bonemeal_zogre",
+      "source_bone": "zogre_bones",
+      "notes": "Zogre bones ground at the Ectofuntus"
+    },
+    "fayrg_bonemeal": {
+      "item_id": 4853,
+      "name": "Fayrg bonemeal",
+      "sym_name": "pot_bonemeal_ancestral_fayg",
+      "source_bone": "zogre_ancestral_bones_fayg",
+      "notes": "Fayrg bones ground at the Ectofuntus"
+    },
+    "raurg_bonemeal": {
+      "item_id": 4854,
+      "name": "Raurg bonemeal",
+      "sym_name": "pot_bonemeal_ancestral_raurg",
+      "source_bone": "zogre_ancestral_bones_raurg",
+      "notes": "Raurg bones ground at the Ectofuntus"
+    },
+    "ourg_bonemeal": {
+      "item_id": 4855,
+      "name": "Ourg bonemeal",
+      "sym_name": "pot_bonemeal_ancestral_ourg",
+      "source_bone": "zogre_ancestral_bones_ourg",
+      "notes": "Ourg bones ground at the Ectofuntus"
+    },
+    "beast_bonemeal": {
+      "item_id": 5615,
+      "name": "Beast bonemeal",
+      "sym_name": "pot_bonemeal_beast",
+      "source_bone": "tbwt_beast_bones",
+      "notes": "Beast bones ground at the Ectofuntus"
+    },
+    "dagannoth_bonemeal": {
+      "item_id": 6728,
+      "name": "Dagannoth bonemeal",
+      "sym_name": "pot_bonemeal_dagannoth",
+      "source_bone": "dagannoth_king_bones",
+      "notes": "Dagannoth bones ground at the Ectofuntus"
+    },
+    "wyvern_bonemeal": {
+      "item_id": 6810,
+      "name": "Wyvern bonemeal",
+      "sym_name": "pot_bonemeal_wyvern",
+      "source_bone": "wyvern_bones",
+      "notes": "Wyvern bones ground at the Ectofuntus"
+    },
+    "lava_dragon_bonemeal": {
+      "item_id": 11922,
+      "name": "Lava dragon bonemeal",
+      "sym_name": "pot_bonemeal_lavadragon",
+      "source_bone": "lava_dragon_bones",
+      "notes": "Lava dragon bones ground at the Ectofuntus"
+    }
+  },
+
+  "ectofuntus_items": {
+    "ectophial": {
+      "item_id": 4251,
+      "name": "Ectophial",
+      "sym_name": "ectophial",
+      "empty_id": 4252,
+      "empty_name": "ectophial_empty",
+      "notes": "Teleport to the Ectofuntus, must be filled with slime after each teleport"
+    },
+    "bucket_of_slime": {
+      "item_id": 4286,
+      "name": "Bucket of slime",
+      "sym_name": "bucket_ectoplasm",
+      "notes": "Filled at the slime pool below the Ectofuntus"
+    },
+    "ectotoken": {
+      "item_id": 4278,
+      "name": "Ecto-token",
+      "sym_name": "ectotoken",
+      "token_2_id": 4279,
+      "token_3_id": 4281,
+      "notes": "Currency for Port Phasmatys services"
+    },
+    "ectoplasm_puddle": {
+      "item_id": 4238,
+      "name": "Ectoplasm",
+      "sym_name": "ectoplasm_puddle",
+      "notes": "Visual item for the ectoplasm pool"
+    }
+  },
+
+  "player_owned_house_altars": {
+    "oak_altar": {
+      "item_id": 8062,
+      "name": "Oak altar",
+      "sym_name": "poh_altar_oak",
+      "xp_multiplier": 1.0,
+      "construction_level": 45,
+      "materials": { "oak_plank": 4 },
+      "notes": "Basic altar for POH chapel, 100% XP bonus"
+    },
+    "teak_altar": {
+      "item_id": 8063,
+      "name": "Teak altar",
+      "sym_name": "poh_altar_teak",
+      "xp_multiplier": 1.1,
+      "construction_level": 50,
+      "materials": { "teak_plank": 4 },
+      "notes": "110% XP bonus"
+    },
+    "cloth_altar": {
+      "item_id": 8064,
+      "name": "Cloth altar",
+      "sym_name": "poh_altar_teak_cloth",
+      "xp_multiplier": 1.25,
+      "construction_level": 56,
+      "materials": { "teak_plank": 4, "bolts_of_cloth": 2 },
+      "notes": "125% XP bonus"
+    },
+    "mahogany_altar": {
+      "item_id": 8065,
+      "name": "Mahogany altar",
+      "sym_name": "poh_altar_mahogany",
+      "xp_multiplier": 1.5,
+      "construction_level": 60,
+      "materials": { "mahogany_plank": 4 },
+      "notes": "150% XP bonus"
+    },
+    "limestone_altar": {
+      "item_id": 8066,
+      "name": "Limestone altar",
+      "sym_name": "poh_altar_limestone",
+      "xp_multiplier": 1.75,
+      "construction_level": 64,
+      "materials": { "mahogany_plank": 6, "limestone_brick": 2 },
+      "notes": "175% XP bonus"
+    },
+    "marble_altar": {
+      "item_id": 8067,
+      "name": "Marble altar",
+      "sym_name": "poh_altar_marble",
+      "xp_multiplier": 2.0,
+      "construction_level": 70,
+      "materials": { "mahogany_plank": 4, "marble_block": 2 },
+      "notes": "200% XP bonus, requires 70 Construction"
+    },
+    "gilded_altar": {
+      "item_id": 8068,
+      "name": "Gilded altar",
+      "sym_name": "poh_altar_marble+gilt",
+      "xp_multiplier": 2.5,
+      "construction_level": 75,
+      "materials": { "mahogany_plank": 4, "marble_block": 2, "gold_leaf": 2 },
+      "notes": "250% XP bonus (350% with both burners lit), best altar for training"
+    }
+  },
+
+  "altar_burners": {
+    "incense_burner": {
+      "lit_multiplier": 1.5,
+      "notes": "Must be lit with a tinderbox and clean marrentill for 50% extra XP"
+    },
+    "double_burner_bonus": {
+      "multiplier": 3.5,
+      "notes": "With both burners lit and gilded altar: 250% * 1.4 = 350% XP (3.5x base)"
+    }
+  },
+
+  "prayer_restore_items": {
+    "prayer_potion_4": {
+      "item_id": 2434,
+      "name": "Prayer potion(4)",
+      "sym_name": "4doseprayerrestore",
+      "restore_min": 7,
+      "restore_max": 24,
+      "restore_formula": "7 + (Prayer level / 4)",
+      "notes": "Restores 7 + 25% of Prayer level (rounded down)"
+    },
+    "prayer_potion_3": {
+      "item_id": 139,
+      "name": "Prayer potion(3)",
+      "sym_name": "3doseprayerrestore",
+      "restore_min": 7,
+      "restore_max": 24,
+      "notes": "3 doses"
+    },
+    "prayer_potion_2": {
+      "item_id": 141,
+      "name": "Prayer potion(2)",
+      "sym_name": "2doseprayerrestore",
+      "restore_min": 7,
+      "restore_max": 24,
+      "notes": "2 doses"
+    },
+    "prayer_potion_1": {
+      "item_id": 143,
+      "name": "Prayer potion(1)",
+      "sym_name": "1doseprayerrestore",
+      "restore_min": 7,
+      "restore_max": 24,
+      "notes": "1 dose"
+    },
+    "super_restore_4": {
+      "item_id": 3024,
+      "name": "Super restore(4)",
+      "sym_name": "4dose2restore",
+      "restore_min": 8,
+      "restore_max": 32,
+      "restore_formula": "8 + (Prayer level / 4)",
+      "notes": "Restores 8 + 25% of Prayer level, also restores all drained stats"
+    },
+    "super_restore_3": {
+      "item_id": 3026,
+      "name": "Super restore(3)",
+      "sym_name": "3dose2restore",
+      "restore_min": 8,
+      "restore_max": 32,
+      "notes": "3 doses"
+    },
+    "super_restore_2": {
+      "item_id": 3028,
+      "name": "Super restore(2)",
+      "sym_name": "2dose2restore",
+      "restore_min": 8,
+      "restore_max": 32,
+      "notes": "2 doses"
+    },
+    "super_restore_1": {
+      "item_id": 3030,
+      "name": "Super restore(1)",
+      "sym_name": "1dose2restore",
+      "restore_min": 8,
+      "restore_max": 32,
+      "notes": "1 dose"
+    },
+    "restore_potion_4": {
+      "item_id": 2430,
+      "name": "Restore potion(4)",
+      "sym_name": "4dosestatrestore",
+      "notes": "Restores drained stats, minimal Prayer restore"
+    },
+    "restore_potion_3": {
+      "item_id": 127,
+      "name": "Restore potion(3)",
+      "sym_name": "3dosestatrestore",
+      "notes": "3 doses"
+    },
+    "restore_potion_2": {
+      "item_id": 129,
+      "name": "Restore potion(2)",
+      "sym_name": "2dosestatrestore",
+      "notes": "2 doses"
+    },
+    "restore_potion_1": {
+      "item_id": 131,
+      "name": "Restore potion(1)",
+      "sym_name": "1dosestatrestore",
+      "notes": "1 dose"
+    }
+  },
+
+  "animations": {
+    "bury_bones": {
+      "animation_id": 1651,
+      "name": "ahoy_prayer",
+      "sym_name": "ahoy_prayer",
+      "duration_ticks": 2,
+      "notes": "Animation when burying bones"
+    },
+    "prepare_offering": {
+      "animation_id": 8976,
+      "name": "human_prepare_offering",
+      "sym_name": "human_prepare_offering",
+      "notes": "Preparing to use bones on altar"
+    },
+    "cast_offering": {
+      "animation_id": 8975,
+      "name": "human_cast_offering",
+      "sym_name": "human_cast_offering",
+      "notes": "Using bones on altar"
+    },
+    "prepare_offering_loop": {
+      "animation_id": 9415,
+      "name": "human_prepare_offering_loop",
+      "sym_name": "human_prepare_offering_loop",
+      "notes": "Looping prayer offering animation"
+    },
+    "sinister_offering": {
+      "animation_id": 8991,
+      "name": "fx_spellcast_offeringsinister",
+      "sym_name": "fx_spellcast_offeringsinister",
+      "notes": "Sinister offering spell animation"
+    },
+    "demonic_offering": {
+      "animation_id": 8992,
+      "name": "fx_spellcast_offeringdemonic",
+      "sym_name": "fx_spellcast_offeringdemonic",
+      "notes": "Demonic offering spell animation"
+    },
+    "skillcape_prayer": {
+      "animation_id": 4979,
+      "name": "skillcapes_human_prayer",
+      "sym_name": "skillcapes_human_prayer",
+      "spotanim_id": 4980,
+      "spotanim_name": "skillcapes_spot_prayer",
+      "notes": "Prayer skillcape emote"
+    },
+    "sun_prayer": {
+      "animation_id": 8321,
+      "name": "human_sun_prayer",
+      "sym_name": "human_sun_prayer",
+      "notes": "Sun prayer animation"
+    }
+  },
+
+  "prayer_scrolls": {
+    "deadeye_scroll": {
+      "item_id": 30626,
+      "name": "Deadeye prayer scroll",
+      "sym_name": "deadeye_prayer_scroll",
+      "unlock_animation_male": 12019,
+      "unlock_animation_female": 12022,
+      "prayer_unlocked": "Deadeye",
+      "notes": "Unlocks Deadeye prayer ( ranged )"
+    },
+    "mystic_vigour_scroll": {
+      "item_id": 30627,
+      "name": "Mystic vigour prayer scroll",
+      "sym_name": "mystic_vigour_prayer_scroll",
+      "unlock_animation_male": 12020,
+      "unlock_animation_female": 12023,
+      "prayer_unlocked": "Mystic Vigour",
+      "notes": "Unlocks Mystic Vigour prayer ( magic )"
+    }
+  },
+
+  "prayer_drain": {
+    "drain_rate_formula": "Drain per tick = (drain_resistance / (1 + prayer_bonus))",
+    "drain_resistance": 60,
+    "drain_tick_interval": "Every 18 seconds (30 ticks on a 100ms tick system)",
+    "bone_bury_time": "2 ticks per bone",
+    "altar_offering_time": "3 ticks per bone (2 ticks with rapid healing)"
+  },
+
+  "experience_multipliers": {
+    "burying": {
+      "base": 1.0,
+      "notes": "Base XP from burying"
+    },
+    "gilded_altar": {
+      "no_burner": 2.5,
+      "one_burner": 3.0,
+      "two_burners": 3.5,
+      "notes": "250% base with gilded, 350% with both burners lit"
+    },
+    "ectofuntus": {
+      "base": 4.0,
+      "notes": "400% XP compared to burying"
+    },
+    "chaos_altar": {
+      "base": 3.5,
+      "notes": "350% XP, 50% chance to not consume bones"
+    },
+    "wilderness_altar": {
+      "base": 3.5,
+      "notes": "Same as chaos altar in Wilderness"
+    }
+  },
+
+  "test_locations": [
+    {
+      "name": "Lumbridge Church",
+      "x": 3243,
+      "z": 3205,
+      "feature": "altar",
+      "notes": "Standard altar for regular prayers, recharge prayer points"
+    },
+    {
+      "name": "Edgeville Monastery",
+      "x": 3051,
+      "z": 3491,
+      "feature": "altar",
+      "notes": "Altar upstairs, requires 31 Prayer to enter"
+    },
+    {
+      "name": "Ectofuntus",
+      "x": 3660,
+      "z": 3518,
+      "feature": "ectofuntus",
+      "notes": "Best XP for bones, requires Ghosts Ahoy quest"
+    },
+    {
+      "name": "Chaos Temple (Wilderness)",
+      "x": 3239,
+      "z": 3606,
+      "feature": "gilded_altar",
+      "notes": "Chaos altar with 350% XP, 50% bone save chance"
+    },
+    {
+      "name": "Port Phasmatys",
+      "x": 3686,
+      "z": 3463,
+      "feature": "ecto_tokens",
+      "notes": "General store for ecto-token exchange"
+    }
+  ],
+
+  "bone_burying_mechanics": {
+    "bury_time": "2 ticks (1.2 seconds)",
+    "inventory_limit": 28,
+    "xp_per_inventory": "Varies by bone type",
+    "recommended_training": {
+      "level_1_30": "Bury regular bones or big bones",
+      "level_30_43": "Babydragon bones at gilded altar",
+      "level_43_70": "Dragon bones at gilded altar or ectofuntus",
+      "level_70_99": "Superior dragon bones or dagannoth bones at gilded altar"
+    }
+  },
+
+  "altar_training_method": {
+    "optimal_setup": {
+      "altar": "Gilded altar (POH)",
+      "burners": "Both lit with marrentill",
+      "multiplier": 3.5,
+      "xp_per_dragon_bone": 252,
+      "xp_per_superior_dragon_bone": 525,
+      "xp_per_inventory_dragon": "252 * 27 = 6,804 XP",
+      "xp_per_inventory_superior": "525 * 27 = 14,175 XP"
+    },
+    "hosting_worlds": {
+      "notes": "World 330 is official gilded altar hosting world"
+    }
+  },
+
+  "quest_requirements": {
+    "Ghosts_Ahoy": {
+      "required": true,
+      "for": "Ectofuntus access and ecto-tokens",
+      "unlock": "Free passage through Port Phasmatys and ectophial"
+    },
+    "Restless_Ghost": {
+      "required": true,
+      "for": "Prayer skill unlock and ability to bury bones",
+      "unlock": "1-9 Prayer levels access"
+    },
+    "Priest_In_Peril": {
+      "required": true,
+      "for": "Access to Morytania (Ectofuntus)",
+      "unlock": "Morytania region"
+    }
+  },
+
+  "cost_analysis": {
+    "gp_per_xp_gilded_altar": {
+      "bones": "~5 gp/xp",
+      "big_bones": "~3 gp/xp",
+      "dragon_bones": "~4 gp/xp",
+      "superior_dragon_bones": "~6 gp/xp",
+      "notes": "Prices fluctuate based on Grand Exchange"
+    },
+    "marrentill_cost": {
+      "per_dose": "~50 gp",
+      "per_inventory": "~100 gp (2 burners)",
+      "notes": "Required to light incense burners"
+    }
+  },
+
+  "efficiency_notes": {
+    "afk_method": "Using bones on altar with auto-clicker (against ToS)",
+    "legitimate_method": "Click each bone on altar manually",
+    "world": "330 for hosted altars",
+    "rags_to_riches": "Pick up big bones at giant locations for free XP",
+    " Wilderness_risk": "Chaos altar gives 50% chance to save bones but is PvP zone"
+  }
+}

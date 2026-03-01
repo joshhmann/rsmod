@@ -1,0 +1,623 @@
+{
+  "_metadata": {
+    "description": "P2P Combat NPCs data for OSRS Rev 233",
+    "extracted_from": "osrs-cache npctypes + osrs-wiki-rev233",
+    "extraction_date": "2025-02-22",
+    "revision": 233
+  },
+  "categories": {
+    "trolls": {
+      "description": "Trolls are members-only creatures found in mountainous areas",
+      "slayer_category": "trolls",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Mountain troll",
+          "npc_ids": [640, 641, 642, 643],
+          "sym_names": ["trollromance_ug", "trollromance_aga", "trollromance_arrg", "trollromance_arrg_attackable"],
+          "combat_level": 69,
+          "hitpoints": 90,
+          "attack_speed": 6,
+          "attack_style": "Crush",
+          "attributes": ["troll"],
+          "locations": ["Troll Stronghold", "Trollheim"],
+          "slayer_xp": 90.0
+        },
+        {
+          "name": "River troll",
+          "npc_ids": [],
+          "sym_names": [],
+          "combat_level": 14,
+          "hitpoints": 18,
+          "attack_speed": 4,
+          "attack_style": "Crush",
+          "attributes": ["troll"],
+          "locations": ["River Lum", "Fishing spots (random event)"],
+          "slayer_xp": 18.0
+        },
+        {
+          "name": "Ice troll",
+          "npc_ids": [648, 649, 650, 651, 652, 653, 654],
+          "sym_names": ["trollromance_icetroll_melee1", "trollromance_icetroll_melee2", "trollromance_icetroll_melee3", "trollromance_icetroll_melee4", "trollromance_icetroll_melee5", "trollromance_icetroll_melee6", "trollromance_icetroll_melee7"],
+          "combat_level": 120,
+          "hitpoints": 160,
+          "attack_speed": 4,
+          "attack_style": "Crush",
+          "attributes": ["troll"],
+          "locations": ["Ice Troll Caves", "Jatizso"],
+          "slayer_xp": 160.0
+        },
+        {
+          "name": "Troll general",
+          "npc_ids": [4120, 4121, 4122],
+          "sym_names": ["troll_general", "troll_general2", "troll_general3"],
+          "combat_level": 91,
+          "hitpoints": 120,
+          "attack_speed": 4,
+          "attack_style": "Crush",
+          "attributes": ["troll"],
+          "locations": ["Troll Stronghold"],
+          "slayer_xp": 120.0
+        }
+      ]
+    },
+    "ogres": {
+      "description": "Ogres are large humanoid creatures found in various locations",
+      "slayer_category": "ogres",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Ogre",
+          "npc_ids": [],
+          "sym_names": ["poh_ogre"],
+          "combat_level": 53,
+          "hitpoints": 60,
+          "attack_speed": 6,
+          "attack_style": "Crush",
+          "attributes": ["ogre"],
+          "locations": ["Feldip Hills", "Gu'Tanoth", "Ogre Enclave"],
+          "slayer_xp": 60.0
+        },
+        {
+          "name": "Jogre",
+          "npc_ids": [2094, 2234, 3356],
+          "sym_names": ["jogre", "godwars_ancient_jogre", "champions_jogre"],
+          "combat_level": 53,
+          "hitpoints": 60,
+          "attack_speed": 6,
+          "attack_style": "Crush",
+          "attributes": ["ogre"],
+          "locations": ["Ardougne Zoo", "Karamja", "God Wars Dungeon"],
+          "slayer_xp": 60.0
+        },
+        {
+          "name": "Zogre",
+          "npc_ids": [866, 867, 868, 869, 870, 871],
+          "sym_names": ["zogre_1", "zogre_2", "zogre_3", "zogre_4", "zogre_5", "zogre_6"],
+          "combat_level": 44,
+          "hitpoints": 65,
+          "attack_speed": 6,
+          "attack_style": "Ranged, Crush",
+          "attributes": ["undead", "ogre"],
+          "locations": ["Jiggig"],
+          "slayer_xp": 65.0
+        },
+        {
+          "name": "Mogre",
+          "npc_ids": [],
+          "sym_names": [],
+          "combat_level": 60,
+          "hitpoints": 48,
+          "attack_speed": 6,
+          "attack_style": "Crush",
+          "attributes": ["ogre"],
+          "locations": ["Mudskipper Point"],
+          "slayer_xp": 48.0
+        }
+      ]
+    },
+    "vampyres": {
+      "description": "Vampyres are members-only creatures found in Morytania",
+      "slayer_category": "vampyres",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Vampyre",
+          "npc_ids": [1569, 1570, 1571, 1572, 3735, 3736, 4435, 4472, 4473, 4474, 4475, 8239, 8240, 8242, 8243, 8244, 8245, 8246, 8247, 8248],
+          "sym_names": ["trek_turned_vampyre_male_ben", "trek_turned_vampyre_male_liam", "trek_turned_vampyre_male_miala", "trek_turned_vampyre_male_verak", "myq3_vanstrom_klause_vampyre_attack", "myq3_vanstrom_klause_vampyre_cutscene", "burgh_juvinate_vampyre_misty", "burgh_turned_vampyre_male_ben", "burgh_turned_vampyre_male_liam", "burgh_turned_vampyre_male_miala", "burgh_turned_vampyre_male_verak", "myq4_vanstrom_vampyre", "myq4_vanstrom_vampyre_flying", "myq4_ranis_vampyre", "myq4_ranis_vampyre_flying", "myq4_ranis_vampyre_combat", "myq4_ranis_vampyre_transition", "myq4_ranis_vampyre_flying_combat", "myq4_ranis_vampyre_flying_transition", "myq4_ranis_vampyre_combat_enrage"],
+          "combat_level": 61,
+          "hitpoints": 70,
+          "attack_speed": 4,
+          "attack_style": "Melee",
+          "attributes": ["vampyre"],
+          "locations": ["Morytania", "Burgh de Rott", "Meiyerditch"],
+          "slayer_xp": 70.0
+        }
+      ]
+    },
+    "werewolves": {
+      "description": "Werewolves are members-only creatures found in Canifis",
+      "slayer_category": "werewolves",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Werewolf",
+          "npc_ids": [2593, 2594, 2595, 2596, 2597, 2598, 2599, 2600, 2601, 2602, 2603, 2604, 2605, 2606, 2607, 2608, 2609, 2610, 2611, 2612],
+          "sym_names": ["canafis_werewolf_man1", "canafis_werewolf_man2", "canafis_werewolf_man3", "canafis_werewolf_man4", "canafis_werewolf_man5", "canafis_werewolf_man6", "canafis_werewolf_man7", "canafis_werewolf_man8", "canafis_werewolf_woman1", "canafis_werewolf_woman2", "canafis_werewolf_woman3", "canafis_werewolf_woman4", "canafis_werewolf_woman5", "canafis_werewolf_woman6", "canafis_werewolf_woman7", "canafis_werewolf_woman8", "canafis_werewolf_woman9", "canafis_werewolf_woman10", "canafis_werewolf_woman11", "canafis_werewolf_woman12"],
+          "combat_level": 88,
+          "hitpoints": 100,
+          "attack_speed": 4,
+          "attack_style": "Slash",
+          "attributes": ["werewolf"],
+          "locations": ["Canifis", "Haunted Woods"],
+          "slayer_xp": 100.0
+        }
+      ]
+    },
+    "elves": {
+      "description": "Elves are members-only creatures found in Tirannwn",
+      "slayer_category": "elves",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Elf warrior",
+          "npc_ids": [],
+          "sym_names": [],
+          "combat_level": 90,
+          "hitpoints": 105,
+          "attack_speed": 4,
+          "attack_style": "Slash, Ranged",
+          "attributes": ["elf"],
+          "locations": ["Lletya", "Elf Camp"],
+          "slayer_xp": 105.0
+        }
+      ]
+    },
+    "dwarves": {
+      "description": "Dwarves are found in various locations",
+      "slayer_category": "dwarves",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Dwarf",
+          "npc_ids": [954],
+          "sym_names": ["kalphite_oldman"],
+          "combat_level": 10,
+          "hitpoints": 16,
+          "attack_speed": 4,
+          "attack_style": "Crush",
+          "attributes": ["dwarf"],
+          "locations": ["Ice Mountain", "Mining Guild", "Keldagrim"],
+          "slayer_xp": 16.0
+        },
+        {
+          "name": "Dwarf gang member",
+          "npc_ids": [],
+          "sym_names": [],
+          "combat_level": 48,
+          "hitpoints": 55,
+          "attack_speed": 5,
+          "attack_style": "Crush",
+          "attributes": ["dwarf"],
+          "locations": ["Keldagrim"],
+          "slayer_xp": 55.0
+        }
+      ]
+    },
+    "dragons": {
+      "description": "Dragons are powerful members-only creatures",
+      "slayer_category": "dragons",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Green dragon",
+          "npc_ids": [260, 261, 262, 263, 264],
+          "sym_names": ["green_dragon", "green_dragon2", "green_dragon3", "green_dragon4", "green_dragon5"],
+          "combat_level": 79,
+          "hitpoints": 75,
+          "attack_speed": 4,
+          "attack_style": "Slash, Dragonfire",
+          "attributes": ["dragon", "fiery"],
+          "locations": ["Wilderness (various)", "Corsair Cove Dungeon"],
+          "slayer_xp": 75.0
+        },
+        {
+          "name": "Blue dragon",
+          "npc_ids": [265, 266, 267, 241, 242, 243],
+          "sym_names": ["blue_dragon", "blue_dragon2", "blue_dragon3", "babybluedragon", "babybluedragon2", "babybluedragon3"],
+          "combat_level": 111,
+          "hitpoints": 105,
+          "attack_speed": 4,
+          "attack_style": "Slash, Dragonfire",
+          "attributes": ["dragon", "fiery"],
+          "locations": ["Taverley Dungeon", "Ogre Enclave", "Heroes' Guild"],
+          "slayer_xp": 105.0
+        },
+        {
+          "name": "Red dragon",
+          "npc_ids": [247, 248, 249, 250, 251, 244, 245, 246],
+          "sym_names": ["red_dragon", "red_dragon2", "red_dragon3", "red_dragon4", "red_dragon5", "babyreddragon", "babyreddragon2", "babyreddragon3"],
+          "combat_level": 152,
+          "hitpoints": 140,
+          "attack_speed": 4,
+          "attack_style": "Slash, Dragonfire",
+          "attributes": ["dragon", "fiery"],
+          "locations": ["Brimhaven Dungeon", "Corsair Cove Dungeon"],
+          "slayer_xp": 140.0
+        },
+        {
+          "name": "Black dragon",
+          "npc_ids": [252, 253, 254, 255, 256, 257, 258, 259, 239],
+          "sym_names": ["black_dragon", "black_dragon2", "black_dragon3", "black_dragon4", "black_dragon5", "black_dragon_strongholdcave_1", "black_dragon_strongholdcave_2", "black_dragon_strongholdcave_3", "king_dragon"],
+          "combat_level": 227,
+          "hitpoints": 190,
+          "attack_speed": 4,
+          "attack_style": "Slash, Dragonfire",
+          "attributes": ["dragon", "fiery"],
+          "locations": ["Taverley Dungeon", "Wilderness", "Lava Maze", "Corsair Cove Dungeon", "King Black Dragon Lair"],
+          "slayer_xp": 190.0
+        },
+        {
+          "name": "Bronze dragon",
+          "npc_ids": [270, 271, 7253],
+          "sym_names": ["bronze_dragon", "bronze_dragon_strongholdcave", "kourend_bronze_dragon"],
+          "combat_level": 131,
+          "hitpoints": 122,
+          "attack_speed": 4,
+          "attack_style": "Slash, Dragonfire",
+          "attributes": ["dragon", "fiery"],
+          "locations": ["Catacombs of Kourend", "Stronghold Slayer Cave"],
+          "slayer_xp": 122.0
+        },
+        {
+          "name": "Iron dragon",
+          "npc_ids": [272, 273, 7254, 8080],
+          "sym_names": ["iron_dragon", "iron_dragon_strongholdcave", "kourend_iron_dragon", "ds2_iron_dragon"],
+          "combat_level": 189,
+          "hitpoints": 165,
+          "attack_speed": 4,
+          "attack_style": "Slash, Dragonfire",
+          "attributes": ["dragon", "fiery"],
+          "locations": ["Brimhaven Dungeon", "Stronghold Slayer Cave", "Catacombs of Kourend"],
+          "slayer_xp": 165.0
+        },
+        {
+          "name": "Steel dragon",
+          "npc_ids": [274, 275, 7255, 8086, 139],
+          "sym_names": ["steel_dragon", "steel_dragon_strongholdcave", "kourend_steel_dragon", "ds2_steel_dragon", "poh_steel_dragon"],
+          "combat_level": 246,
+          "hitpoints": 210,
+          "attack_speed": 4,
+          "attack_style": "Slash, Dragonfire",
+          "attributes": ["dragon", "fiery"],
+          "locations": ["Brimhaven Dungeon", "Stronghold Slayer Cave", "Catacombs of Kourend"],
+          "slayer_xp": 210.0
+        }
+      ]
+    },
+    "dagannoth": {
+      "description": "Dagannoth are aquatic creatures found in the Waterbirth Island Dungeon",
+      "slayer_category": "dagannoth",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Dagannoth",
+          "npc_ids": [973, 974, 975, 976, 977, 978, 979, 5944, 5945, 5946, 5947],
+          "sym_names": ["horror_dagannoth_medium", "horror_dagannoth_medium_darker", "horror_dagannoth_medium_lighter", "horror_dagannoth_jr1", "horror_dagannoth_jr2", "horror_dagannoth_jr3", "horror_dagannoth_jr4", "dagannoth_rock_lobster_2x2", "dagannoth_rock_lobster_2x2_loc", "dagannoth_water_creature_1x1_invisible", "dagannoth_water_creature_1x1"],
+          "combat_level": 90,
+          "hitpoints": 70,
+          "attack_speed": 4,
+          "attack_style": "Melee, Ranged",
+          "attributes": ["dagannoth"],
+          "locations": ["Waterbirth Island", "Lighthouse Dungeon"],
+          "slayer_xp": 70.0
+        }
+      ]
+    },
+    "kalphite": {
+      "description": "Kalphite are insectoid creatures found in the Kalphite Hive",
+      "slayer_category": "kalphite",
+      "slayer_level_required": 1,
+      "monsters": [
+        {
+          "name": "Kalphite worker",
+          "npc_ids": [955, 956, 961],
+          "sym_names": ["kalphite_worker", "kalphite_worker_strongholdcave", "kalphite_worker_chamber"],
+          "combat_level": 28,
+          "hitpoints": 40,
+          "attack_speed": 4,
+          "attack_style": "Melee",
+          "attributes": ["kalphite"],
+          "locations": ["Kalphite Hive"],
+          "slayer_xp": 40.0
+        },
+        {
+          "name": "Kalphite soldier",
+          "npc_ids": [957, 958],
+          "sym_names": ["kalphite_soldier", "kalphite_soldier_strongholdcave"],
+          "combat_level": 85,
+          "hitpoints": 90,
+          "attack_speed": 4,
+          "attack_style": "Melee",
+          "attributes": ["kalphite"],
+          "locations": ["Kalphite Hive"],
+          "slayer_xp": 90.0
+        },
+        {
+          "name": "Kalphite guardian",
+          "npc_ids": [959, 960, 962],
+          "sym_names": ["kalphite_lord", "kalphite_lord_strongholdcave", "kalphite_lord_chamber"],
+          "combat_level": 141,
+          "hitpoints": 170,
+          "attack_speed": 4,
+          "attack_style": "Melee",
+          "attributes": ["kalphite"],
+          "locations": ["Kalphite Hive"],
+          "slayer_xp": 170.0
+        },
+        {
+          "name": "Kalphite queen",
+          "npc_ids": [963, 965, 6500, 6501],
+          "sym_names": ["kalphite_queen", "kalphite_flyingqueen", "clancup_kalphite_queen", "clancup_kalphite_flyingqueen"],
+          "combat_level": 333,
+          "hitpoints": 255,
+          "attack_speed": 4,
+          "attack_style": "Melee, Ranged, Magic",
+          "attributes": ["kalphite"],
+          "locations": ["Kalphite Hive"],
+          "slayer_xp": 255.0
+        }
+      ]
+    },
+    "slayer_monsters": {
+      "description": "Slayer monsters requiring specific Slayer levels",
+      "monsters": [
+        {
+          "name": "Aberrant spectre",
+          "npc_ids": [2, 3, 4, 5, 6, 7],
+          "sym_names": ["slayer_abberant_spectre_1", "slayer_abberant_spectre_2", "slayer_abberant_spectre_3", "slayer_abberant_spectre_4", "slayer_aberrantspectre_1_strongholdcave", "slayer_aberrantspectre_2_strongholdcave"],
+          "combat_level": 96,
+          "hitpoints": 90,
+          "attack_speed": 4,
+          "attack_style": "Magic",
+          "attributes": ["undead", "spectre"],
+          "locations": ["Slayer Tower", "Stronghold Slayer Cave"],
+          "slayer_level_required": 60,
+          "slayer_xp": 90.0
+        },
+        {
+          "name": "Nechryael",
+          "npc_ids": [8, 10, 11, 6716, 6723, 7278, 7411, 7649, 11240, 12582],
+          "sym_names": ["slayer_nechryael", "slayer_nechryael_spawn", "slayer_nechryael_strongholdcave", "superior_nechryael_melee_spawn", "superior_nechryael_ranged_spawn", "kourend_nechryael", "superior_nechryael", "superior_nechryael_magic_spawn", "wild_cave_nechryael", "league_superior_nechryael"],
+          "combat_level": 115,
+          "hitpoints": 105,
+          "attack_speed": 4,
+          "attack_style": "Crush",
+          "attributes": ["demon"],
+          "locations": ["Slayer Tower", "Stronghold Slayer Cave", "Catacombs of Kourend"],
+          "slayer_level_required": 80,
+          "slayer_xp": 105.0
+        },
+        {
+          "name": "Gargoyle",
+          "npc_ids": [412, 413, 1543, 7407, 7408, 12578, 12579],
+          "sym_names": ["slayer_gargoyle_1", "slayer_gargoyle_dead", "slayer_cave_gargoyle", "superior_gargoyle", "superior_gargoyle_dead", "league_superior_gargoyle", "league_superior_gargoyle_dead"],
+          "combat_level": 111,
+          "hitpoints": 105,
+          "attack_speed": 4,
+          "attack_style": "Slash",
+          "attributes": ["gargoyle"],
+          "locations": ["Slayer Tower", "Stronghold Slayer Cave"],
+          "slayer_level_required": 75,
+          "slayer_xp": 105.0
+        },
+        {
+          "name": "Abyssal demon",
+          "npc_ids": [415, 416, 7410, 12451, 12581],
+          "sym_names": ["slayer_abyssal", "slayer_abyssal_strongholdcave", "superior_abyssal_demon", "deadman_breach_superior_abyssal_demon", "league_superior_abyssal_demon"],
+          "combat_level": 124,
+          "hitpoints": 150,
+          "attack_speed": 4,
+          "attack_style": "Stab",
+          "attributes": ["demon"],
+          "locations": ["Slayer Tower", "Stronghold Slayer Cave", "Catacombs of Kourend", "Abyssal Area"],
+          "slayer_level_required": 85,
+          "slayer_xp": 150.0
+        },
+        {
+          "name": "Hellhound",
+          "npc_ids": [104, 105, 135, 3133, 5054, 6326, 6387, 6613, 6614, 7256],
+          "sym_names": ["hellhound", "hellhound_strongholdcave", "poh_hellhound", "godwars_ancient_hellhound", "skeleton_hellhound", "nzone_skeleton_hellhound_hard", "nzone_skeleton_hellhound_normal", "vetion_hellhound_jnr", "vetion_hellhound_snr", "kourend_hellhound"],
+          "combat_level": 122,
+          "hitpoints": 116,
+          "attack_speed": 4,
+          "attack_style": "Stab",
+          "attributes": ["demon"],
+          "locations": ["Stronghold Slayer Cave", "Taverley Dungeon", "God Wars Dungeon", "Catacombs of Kourend", "Wilderness"],
+          "slayer_level_required": 1,
+          "slayer_xp": 116.0
+        },
+        {
+          "name": "Bloodveld",
+          "npc_ids": [484, 485, 486, 487, 3138, 7034, 7276, 7397, 7398, 9573],
+          "sym_names": ["slayer_bloodveld", "slayer_bloodveld_baby", "slayer_bloodveld_strongholdcave", "slayer_bloodveld_baby_strongholdcave", "godwars_bloodveld", "arceuus_reanimated_bloodveld", "kourend_bloodveld", "superior_bloodveld", "superior_kourend_bloodveld", "myq5_vanstrom_bloodveld"],
+          "combat_level": 76,
+          "hitpoints": 134,
+          "attack_speed": 4,
+          "attack_style": "Magical melee",
+          "attributes": ["demon"],
+          "locations": ["Slayer Tower", "Stronghold Slayer Cave", "God Wars Dungeon", "Catacombs of Kourend"],
+          "slayer_level_required": 50,
+          "slayer_xp": 134.0
+        }
+      ]
+    }
+  },
+  "drop_tables": {
+    "trolls": {
+      "100%": [
+        {"item": "Big bones", "quantity": 1}
+      ],
+      "common": [
+        {"item": "Bronze med helm", "rate": "1/8"},
+        {"item": "Bronze kiteshield", "rate": "1/8"},
+        {"item": "Bronze full helm", "rate": "1/8"}
+      ],
+      "uncommon": [
+        {"item": "Iron warhammer", "rate": "1/16"},
+        {"item": "Iron med helm", "rate": "1/16"}
+      ],
+      "rare": [
+        {"item": "Steel warhammer", "rate": "1/64"},
+        {"item": "Grimy guam leaf", "rate": "1/32"}
+      ]
+    },
+    "ogres": {
+      "100%": [
+        {"item": "Big bones", "quantity": 1}
+      ],
+      "common": [
+        {"item": "Ogre coffin key", "quantity": 1, "rate": "1/4"},
+        {"item": "Clue scroll (easy)", "rate": "1/64"}
+      ],
+      "uncommon": [
+        {"item": "Iron spear", "rate": "1/16"},
+        {"item": "Steel spear", "rate": "1/32"}
+      ],
+      "rare": [
+        {"item": "Mithril spear", "rate": "1/128"},
+        {"item": "Limpwort root", "rate": "1/64"}
+      ]
+    },
+    "vampyres": {
+      "100%": [
+        {"item": "Vampyre dust", "quantity": 1}
+      ],
+      "common": [
+        {"item": "Bark", "quantity": 1, "rate": "1/4"},
+        {"item": "Black boots", "rate": "1/8"}
+      ],
+      "uncommon": [
+        {"item": "Juvinate hide", "rate": "1/16"}
+      ],
+      "rare": [
+        {"item": "Vampire book", "rate": "1/128"}
+      ]
+    },
+    "werewolves": {
+      "100%": [
+        {"item": "Wolf bones", "quantity": 1}
+      ],
+      "common": [
+        {"item": "Raw chicken", "quantity": 1, "rate": "1/4"},
+        {"item": "Grey wolf fur", "quantity": 1, "rate": "1/8"}
+      ],
+      "uncommon": [
+        {"item": "Steel axe", "rate": "1/16"},
+        {"item": "Steel scimitar", "rate": "1/32"}
+      ],
+      "rare": [
+        {"item": "Clue scroll (medium)", "rate": "1/128"}
+      ]
+    },
+    "dragons": {
+      "100%": [
+        {"item": "Dragon bones", "quantity": 1},
+        {"item": "Green d'hide", "quantity": 1, "variants": ["green_dragon"]}
+      ],
+      "common": [
+        {"item": "Dragon bones", "quantity": 1, "rate": "1/1"},
+        {"item": "Green dragonhide", "quantity": 1, "rate": "1/1", "variants": ["green_dragon"]}
+      ],
+      "uncommon": [
+        {"item": "Steel platelegs", "rate": "1/16"},
+        {"item": "Steel battleaxe", "rate": "1/16"}
+      ],
+      "rare": [
+        {"item": "Clue scroll (hard)", "rate": "1/128"},
+        {"item": "Draconic visage", "rate": "1/10000", "variants": ["black_dragon", "iron_dragon", "steel_dragon"]}
+      ]
+    },
+    "slayer_monsters": {
+      "aberrant_spectre": {
+        "100%": [{"item": "Noted items", "quantity": "varies"}],
+        "common": [
+          {"item": "Battlestaff", "quantity": 1, "rate": "1/8"},
+          {"item": "Lava battlestaff", "rate": "1/128"}
+        ],
+        "uncommon": [
+          {"item": "Mystic hat", "rate": "1/64"},
+          {"item": "Mystic robe top", "rate": "1/128"}
+        ]
+      },
+      "nechryael": {
+        "100%": [{"item": "Ashes", "quantity": 1}],
+        "common": [
+          {"item": "Rune boots", "rate": "1/16"},
+          {"item": "Adamant platelegs", "rate": "1/16"}
+        ],
+        "rare": [
+          {"item": "Rune chainbody", "rate": "1/128"},
+          {"item": "Rune med helm", "rate": "1/128"}
+        ]
+      },
+      "gargoyle": {
+        "100%": [{"item": "Granite", "quantity": 1}],
+        "common": [
+          {"item": "Runite bar", "rate": "1/16"},
+          {"item": "Mithril bar", "rate": "1/8"}
+        ],
+        "rare": [
+          {"item": "Rock hammer", "rate": "1/1", "note": "Required to finish off gargoyles"},
+          {"item": "Clue scroll (hard)", "rate": "1/128"}
+        ]
+      },
+      "abyssal_demon": {
+        "100%": [{"item": "Ashes", "quantity": 1}],
+        "common": [
+          {"item": "Abyssal whip", "rate": "1/512"},
+          {"item": "Abyssal dagger", "rate": "1/256"}
+        ],
+        "rare": [
+          {"item": "Abyssal head", "rate": "1/6000"},
+          {"item": "Clue scroll (elite)", "rate": "1/256"}
+        ]
+      },
+      "hellhound": {
+        "100%": [{"item": "Bones", "quantity": 1}],
+        "common": [
+          {"item": "Clue scroll (hard)", "rate": "1/64"},
+          {"item": "Clue scroll (elite)", "rate": "1/256"}
+        ],
+        "rare": [
+          {"item": "Smouldering stone", "rate": "1/512"},
+          {"item": "Key (elite)", "rate": "1/200"}
+        ]
+      },
+      "bloodveld": {
+        "100%": [{"item": "Bones", "quantity": 1}],
+        "common": [
+          {"item": "Blood rune", "quantity": 10, "rate": "1/8"},
+          {"item": "Steel arrow", "quantity": 30, "rate": "1/8"}
+        ],
+        "uncommon": [
+          {"item": "Mithril arrow", "quantity": 20, "rate": "1/16"},
+          {"item": "Clue scroll (medium)", "rate": "1/128"}
+        ]
+      }
+    }
+  },
+  "test_locations": [
+    {"desc": "Troll Stronghold", "x": 2838, "z": 10088},
+    {"desc": "Kalphite Hive", "x": 3308, "z": 9500},
+    {"desc": "Slayer Tower", "x": 3429, "z": 3538},
+    {"desc": "Stronghold Slayer Cave", "x": 2440, "z": 9813},
+    {"desc": "Brimhaven Dungeon", "x": 2644, "z": 9448},
+    {"desc": "Taverley Dungeon", "x": 2884, "z": 9798},
+    {"desc": "Catacombs of Kourend", "x": 1600, "z": 10000},
+    {"desc": "Waterbirth Island", "x": 2546, "z": 3758},
+    {"desc": "God Wars Dungeon", "x": 2880, "z": 5310},
+    {"desc": "Morytania (Vampyres)", "x": 3500, "z": 3200},
+    {"desc": "Canifis (Werewolves)", "x": 3500, "z": 3490}
+  ]
+}

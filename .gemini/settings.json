@@ -1,0 +1,83 @@
+{
+  "general": {
+    "defaultApprovalMode": "auto_edit"
+  },
+  "mcpServers": {
+    "cclsp": {
+      "command": "cclsp",
+      "cwd": ".",
+      "env": {
+        "CCLSP_CONFIG_PATH": "C:\\Users\\CRIMS\\.config\\cclsp\\cclsp.json"
+      }
+    },
+    "agent-tasks": {
+      "command": "bun",
+      "args": [
+        "mcp-tasks/server.ts"
+      ],
+      "cwd": "."
+    },
+    "rsmod-game": {
+      "command": "bun",
+      "args": [
+        "mcp/server-enhanced.ts"
+      ],
+      "cwd": ".",
+      "env": {
+        "BRIDGE_URL": "ws://localhost:43595"
+      }
+    },
+    "osrs-cache": {
+      "command": "node",
+      "args": [
+        "mcp-osrs/dist/index.js"
+      ],
+      "cwd": "."
+    },
+    "osrs-wiki-rev233": {
+      "command": "python",
+      "args": [
+        "-u",
+        "mcp-osrs-rev233/server.py"
+      ],
+      "cwd": "."
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "cwd": "."
+    },
+    "web-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search@latest"
+      ],
+      "cwd": ".",
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      }
+    },
+    "linear": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@linear/mcp@latest"
+      ],
+      "cwd": ".",
+      "env": {
+        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
+      }
+    },
+    "memory": {
+      "command": "Z:\\Projects\\OSRS-PS-DEV\\mcp-memory\\.venv\\Scripts\\memory.exe",
+      "args": [
+        "server"
+      ],
+      "cwd": "Z:\\Projects\\OSRS-PS-DEV"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "category": "equipment",
+  "description": "OSRS Rev 233 F2P Equipment Database - Weapons, Armor, and Ammo",
+  "revision": 233,
+  "source": "OSRS Wiki Rev 233 (Varlamore Part 2)",
+  "weapons": {
+    "dagger": {
+      "tier": "dagger",
+      "items": [
+        { "name": "bronze_dagger", "id": 1205, "astab": 4, "aslash": 2, "acrush": -4, "amagic": 1, "arange": 0, "str": 3, "prayer": 0, "speed": 4 },
+        { "name": "iron_dagger", "id": 1203, "astab": 5, "aslash": 3, "acrush": -4, "amagic": 1, "arange": 0, "str": 4, "prayer": 0, "speed": 4 },
+        { "name": "steel_dagger", "id": 1207, "astab": 8, "aslash": 4, "acrush": -4, "amagic": 1, "arange": 0, "str": 7, "prayer": 0, "speed": 4 },
+        { "name": "mithril_dagger", "id": 1209, "astab": 11, "aslash": 5, "acrush": -4, "amagic": 1, "arange": 0, "str": 10, "prayer": 0, "speed": 4 },
+        { "name": "adamant_dagger", "id": 1211, "astab": 15, "aslash": 8, "acrush": -4, "amagic": 1, "arange": 0, "str": 14, "prayer": 0, "speed": 4 },
+        { "name": "rune_dagger", "id": 1213, "astab": 25, "aslash": 12, "acrush": -4, "amagic": 1, "arange": 0, "str": 24, "prayer": 0, "speed": 4 }
+      ]
+    },
+    "sword": {
+      "tier": "sword",
+      "items": [
+        { "name": "bronze_sword", "id": 1277, "astab": 4, "aslash": 3, "acrush": -2, "amagic": 0, "arange": 0, "str": 5, "prayer": 0, "speed": 5 },
+        { "name": "iron_sword", "id": 1279, "astab": 6, "aslash": 4, "acrush": -2, "amagic": 0, "arange": 0, "str": 7, "prayer": 0, "speed": 5 },
+        { "name": "steel_sword", "id": 1281, "astab": 11, "aslash": 8, "acrush": -2, "amagic": 0, "arange": 0, "str": 12, "prayer": 0, "speed": 5 },
+        { "name": "mithril_sword", "id": 1283, "astab": 16, "aslash": 11, "acrush": -2, "amagic": 0, "arange": 0, "str": 17, "prayer": 0, "speed": 5 },
+        { "name": "adamant_sword", "id": 1285, "astab": 23, "aslash": 18, "acrush": -2, "amagic": 0, "arange": 0, "str": 24, "prayer": 0, "speed": 5 },
+        { "name": "rune_sword", "id": 1287, "astab": 38, "aslash": 26, "acrush": -2, "amagic": 0, "arange": 0, "str": 39, "prayer": 0, "speed": 5 }
+      ]
+    },
+    "longsword": {
+      "tier": "longsword",
+      "items": [
+        { "name": "bronze_longsword", "id": 1291, "astab": 4, "aslash": 5, "acrush": -2, "amagic": 0, "arange": 0, "str": 7, "prayer": 0, "speed": 5 },
+        { "name": "iron_longsword", "id": 1293, "astab": 6, "aslash": 8, "acrush": -2, "amagic": 0, "arange": 0, "str": 10, "prayer": 0, "speed": 5 },
+        { "name": "steel_longsword", "id": 1295, "astab": 9, "aslash": 14, "acrush": -2, "amagic": 0, "arange": 0, "str": 16, "prayer": 0, "speed": 5 },
+        { "name": "mithril_longsword", "id": 1299, "astab": 15, "aslash": 20, "acrush": -2, "amagic": 0, "arange": 0, "str": 22, "prayer": 0, "speed": 5 },
+        { "name": "adamant_longsword", "id": 1303, "astab": 20, "aslash": 29, "acrush": -2, "amagic": 0, "arange": 0, "str": 31, "prayer": 0, "speed": 5 },
+        { "name": "rune_longsword", "id": 1307, "astab": 38, "aslash": 47, "acrush": -2, "amagic": 0, "arange": 0, "str": 49, "prayer": 0, "speed": 5 }
+      ]
+    },
+    "scimitar": {
+      "tier": "scimitar",
+      "items": [
+        { "name": "bronze_scimitar", "id": 1321, "astab": 1, "aslash": 7, "acrush": -2, "amagic": 0, "arange": 0, "str": 6, "prayer": 0, "speed": 4 },
+        { "name": "iron_scimitar", "id": 1323, "astab": 2, "aslash": 10, "acrush": -2, "amagic": 0, "arange": 0, "str": 9, "prayer": 0, "speed": 4 },
+        { "name": "steel_scimitar", "id": 1325, "astab": 3, "aslash": 15, "acrush": -2, "amagic": 0, "arange": 0, "str": 14, "prayer": 0, "speed": 4 },
+        { "name": "mithril_scimitar", "id": 1327, "astab": 5, "aslash": 21, "acrush": -2, "amagic": 0, "arange": 0, "str": 20, "prayer": 0, "speed": 4 },
+        { "name": "adamant_scimitar", "id": 1329, "astab": 6, "aslash": 29, "acrush": -2, "amagic": 0, "arange": 0, "str": 28, "prayer": 0, "speed": 4 },
+        { "name": "rune_scimitar", "id": 1331, "astab": 7, "aslash": 45, "acrush": -2, "amagic": 0, "arange": 0, "str": 44, "prayer": 0, "speed": 4 }
+      ]
+    },
+    "battleaxe": {
+      "tier": "battleaxe",
+      "items": [
+        { "name": "bronze_battleaxe", "id": 1375, "astab": -2, "aslash": 6, "acrush": 3, "amagic": 0, "arange": 0, "str": 9, "prayer": 0, "speed": 6 },
+        { "name": "iron_battleaxe", "id": 1377, "astab": -2, "aslash": 8, "acrush": 5, "amagic": 0, "arange": 0, "str": 13, "prayer": 0, "speed": 6 },
+        { "name": "steel_battleaxe", "id": 1379, "astab": -2, "aslash": 16, "acrush": 11, "amagic": 0, "arange": 0, "str": 20, "prayer": 0, "speed": 6 },
+        { "name": "mithril_battleaxe", "id": 1381, "astab": -2, "aslash": 22, "acrush": 17, "amagic": 0, "arange": 0, "str": 29, "prayer": 0, "speed": 6 },
+        { "name": "adamant_battleaxe", "id": 1383, "astab": -2, "aslash": 31, "acrush": 26, "amagic": 0, "arange": 0, "str": 41, "prayer": 0, "speed": 6 },
+        { "name": "rune_battleaxe", "id": 1385, "astab": -2, "aslash": 48, "acrush": 43, "amagic": 0, "arange": 0, "str": 64, "prayer": 0, "speed": 6 }
+      ]
+    },
+    "warhammer": {
+      "tier": "warhammer",
+      "items": [
+        { "name": "bronze_warhammer", "id": 1337, "astab": -4, "aslash": -4, "acrush": 10, "amagic": -4, "arange": 0, "str": 8, "prayer": 0, "speed": 7 },
+        { "name": "iron_warhammer", "id": 1335, "astab": -4, "aslash": -4, "acrush": 11, "amagic": -4, "arange": 0, "str": 11, "prayer": 0, "speed": 7 },
+        { "name": "steel_warhammer", "id": 1339, "astab": -4, "aslash": -4, "acrush": 18, "amagic": -4, "arange": 0, "str": 16, "prayer": 0, "speed": 7 },
+        { "name": "mithril_warhammer", "id": 1343, "astab": -4, "aslash": -4, "acrush": 25, "amagic": -4, "arange": 0, "str": 27, "prayer": 0, "speed": 7 },
+        { "name": "adamant_warhammer", "id": 1345, "astab": -4, "aslash": -4, "acrush": 35, "amagic": -4, "arange": 0, "str": 39, "prayer": 0, "speed": 7 },
+        { "name": "rune_warhammer", "id": 1347, "astab": -4, "aslash": -4, "acrush": 53, "amagic": -4, "arange": 0, "str": 62, "prayer": 0, "speed": 7 }
+      ]
+    },
+    "mace": {
+      "tier": "mace",
+      "items": [
+        { "name": "bronze_mace", "id": 1422, "astab": 1, "aslash": -2, "acrush": 6, "amagic": 0, "arange": 0, "str": 5, "prayer": 1, "speed": 5 },
+        { "name": "iron_mace", "id": 1424, "astab": 4, "aslash": -2, "acrush": 9, "amagic": 0, "arange": 0, "str": 7, "prayer": 1, "speed": 5 },
+        { "name": "steel_mace", "id": 1426, "astab": 7, "aslash": -2, "acrush": 13, "amagic": 0, "arange": 0, "str": 11, "prayer": 2, "speed": 5 },
+        { "name": "mithril_mace", "id": 1428, "astab": 11, "aslash": -2, "acrush": 18, "amagic": 0, "arange": 0, "str": 16, "prayer": 3, "speed": 5 },
+        { "name": "adamant_mace", "id": 1430, "astab": 13, "aslash": -2, "acrush": 25, "amagic": 0, "arange": 0, "str": 23, "prayer": 3, "speed": 5 },
+        { "name": "rune_mace", "id": 1432, "astab": 20, "aslash": -2, "acrush": 39, "amagic": 0, "arange": 0, "str": 36, "prayer": 4, "speed": 5 }
+      ]
+    }
+  },
+  "armor": {
+    "platebody": {
+      "tier": "platebody",
+      "slot": "body",
+      "items": [
+        { "name": "bronze_platebody", "id": 1117, "dstab": 15, "dslash": 14, "dcrush": 9, "dmagic": -6, "drange": 14, "amagic": -30, "arange": -15 },
+        { "name": "iron_platebody", "id": 1119, "dstab": 21, "dslash": 20, "dcrush": 12, "dmagic": -6, "drange": 20, "amagic": -30, "arange": -15 },
+        { "name": "steel_platebody", "id": 1121, "dstab": 32, "dslash": 31, "dcrush": 24, "dmagic": -6, "drange": 31, "amagic": -30, "arange": -15 },
+        { "name": "mithril_platebody", "id": 1125, "dstab": 46, "dslash": 44, "dcrush": 38, "dmagic": -6, "drange": 44, "amagic": -30, "arange": -15 },
+        { "name": "adamant_platebody", "id": 1127, "dstab": 65, "dslash": 63, "dcrush": 55, "dmagic": -6, "drange": 63, "amagic": -30, "arange": -15 },
+        { "name": "rune_platebody", "id": 1129, "dstab": 82, "dslash": 80, "dcrush": 72, "dmagic": -6, "drange": 80, "amagic": -30, "arange": -15 }
+      ]
+    },
+    "chainbody": {
+      "tier": "chainbody",
+      "slot": "body",
+      "items": [
+        { "name": "bronze_chainbody", "id": 1103, "dstab": 7, "dslash": 11, "dcrush": 13, "dmagic": -3, "drange": 9, "amagic": -15, "arange": 0 },
+        { "name": "iron_chainbody", "id": 1105, "dstab": 10, "dslash": 15, "dcrush": 19, "dmagic": -3, "drange": 12, "amagic": -15, "arange": 0 },
+        { "name": "steel_chainbody", "id": 1107, "dstab": 17, "dslash": 25, "dcrush": 30, "dmagic": -3, "drange": 19, "amagic": -15, "arange": 0 },
+        { "name": "mithril_chainbody", "id": 1109, "dstab": 25, "dslash": 35, "dcrush": 42, "dmagic": -3, "drange": 27, "amagic": -15, "arange": 0 },
+        { "name": "adamant_chainbody", "id": 1111, "dstab": 36, "dslash": 50, "dcrush": 61, "dmagic": -3, "drange": 38, "amagic": -15, "arange": 0 },
+        { "name": "rune_chainbody", "id": 1113, "dstab": 63, "dslash": 72, "dcrush": 78, "dmagic": -3, "drange": 65, "amagic": -15, "arange": 0 }
+      ]
+    },
+    "platelegs": {
+      "tier": "platelegs",
+      "slot": "legs",
+      "items": [
+        { "name": "bronze_platelegs", "id": 1075, "dstab": 8, "dslash": 7, "dcrush": 6, "dmagic": -4, "drange": 7, "amagic": -21, "arange": -11 },
+        { "name": "iron_platelegs", "id": 1067, "dstab": 11, "dslash": 10, "dcrush": 10, "dmagic": -4, "drange": 10, "amagic": -21, "arange": -11 },
+        { "name": "steel_platelegs", "id": 1069, "dstab": 17, "dslash": 16, "dcrush": 15, "dmagic": -4, "drange": 16, "amagic": -21, "arange": -11 },
+        { "name": "mithril_platelegs", "id": 1071, "dstab": 24, "dslash": 22, "dcrush": 20, "dmagic": -4, "drange": 22, "amagic": -21, "arange": -11 },
+        { "name": "adamant_platelegs", "id": 1073, "dstab": 33, "dslash": 31, "dcrush": 29, "dmagic": -4, "drange": 31, "amagic": -21, "arange": -11 },
+        { "name": "rune_platelegs", "id": 1077, "dstab": 51, "dslash": 49, "dcrush": 47, "dmagic": -4, "drange": 49, "amagic": -21, "arange": -11 }
+      ]
+    },
+    "med_helm": {
+      "tier": "med_helm",
+      "slot": "head",
+      "items": [
+        { "name": "bronze_med_helm", "id": 1139, "dstab": 3, "dslash": 4, "dcrush": 2, "dmagic": -1, "drange": 3, "amagic": -3, "arange": 0 },
+        { "name": "iron_med_helm", "id": 1137, "dstab": 4, "dslash": 5, "dcrush": 3, "dmagic": -1, "drange": 4, "amagic": -3, "arange": 0 },
+        { "name": "steel_med_helm", "id": 1141, "dstab": 7, "dslash": 8, "dcrush": 6, "dmagic": -1, "drange": 7, "amagic": -3, "arange": 0 },
+        { "name": "mithril_med_helm", "id": 1143, "dstab": 10, "dslash": 11, "dcrush": 9, "dmagic": -1, "drange": 10, "amagic": -3, "arange": 0 },
+        { "name": "adamant_med_helm", "id": 1145, "dstab": 14, "dslash": 15, "dcrush": 13, "dmagic": -1, "drange": 14, "amagic": -3, "arange": 0 },
+        { "name": "rune_med_helm", "id": 1147, "dstab": 22, "dslash": 23, "dcrush": 21, "dmagic": -1, "drange": 22, "amagic": -3, "arange": 0 }
+      ]
+    },
+    "sq_shield": {
+      "tier": "sq_shield",
+      "slot": "shield",
+      "items": [
+        { "name": "bronze_sq_shield", "id": 1173, "dstab": 5, "dslash": 6, "dcrush": 4, "dmagic": 0, "drange": 5, "amagic": -6, "arange": 0 },
+        { "name": "iron_sq_shield", "id": 1175, "dstab": 8, "dslash": 9, "dcrush": 7, "dmagic": 0, "drange": 8, "amagic": -6, "arange": 0 },
+        { "name": "steel_sq_shield", "id": 1177, "dstab": 12, "dslash": 13, "dcrush": 11, "dmagic": 0, "drange": 12, "amagic": -6, "arange": 0 },
+        { "name": "mithril_sq_shield", "id": 1181, "dstab": 17, "dslash": 19, "dcrush": 15, "dmagic": 0, "drange": 17, "amagic": -6, "arange": 0 },
+        { "name": "adamant_sq_shield", "id": 1183, "dstab": 24, "dslash": 26, "dcrush": 22, "dmagic": 0, "drange": 24, "amagic": -6, "arange": 0 },
+        { "name": "rune_sq_shield", "id": 1185, "dstab": 38, "dslash": 40, "dcrush": 36, "dmagic": 0, "drange": 38, "amagic": -6, "arange": 0 }
+      ]
+    }
+  },
+  "ammo": {
+    "arrows": {
+      "tier": "arrows",
+      "slot": "ammo",
+      "items": [
+        { "name": "bronze_arrow", "id": 882, "rstr": 7 },
+        { "name": "iron_arrow", "id": 884, "rstr": 10 },
+        { "name": "steel_arrow", "id": 886, "rstr": 16 },
+        { "name": "mithril_arrow", "id": 890, "rstr": 22 },
+        { "name": "adamant_arrow", "id": 892, "rstr": 31 },
+        { "name": "rune_arrow", "id": 896, "rstr": 49 }
+      ]
+    }
+  },
+  "notes": {
+    "attack_speed": "Lower = faster. Dagger=4, Scimitar=4, Sword/Longsword/Mace=5, Battleaxe=6, Warhammer=7",
+    "bonuses": "astab=Stab attack, aslash=Slash attack, acrush=Crush attack, amagic=Magic attack, arange=Ranged attack, str=Strength, rstr=Ranged strength, prayer=Prayer bonus",
+    "defence": "dstab=Stab def, dslash=Slash def, dcrush=Crush def, dmagic=Magic def, drange=Ranged def",
+    "negative_bonuses": "Plate armor has negative magic/ranged to represent weakness to magic/ranged attacks",
+    "members": "All items listed are F2P (Free-to-Play) equipable"
+  }
+}

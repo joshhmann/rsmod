@@ -60,7 +60,8 @@ internal object UnlimitedRuneEnumBuilder : EnumBuilder() {
         buildAutoInt<ObjType>("earth_unlimited_runes_loprio") { this += objs.tome_of_earth }
         buildAutoInt<ObjType>("fire_unlimited_runes_loprio") { this += objs.tome_of_fire }
         // Exists in the cache symbol table but has no valid entries in rev233 symbols yet.
-        // Keep it empty so `unlimited_enums.nature_low_priority` resolves without packCache warnings.
+        // Keep it empty so `unlimited_enums.nature_low_priority` resolves without packCache
+        // warnings.
         buildAutoInt<ObjType>("nature_unlimited_runes_loprio") {}
     }
 }

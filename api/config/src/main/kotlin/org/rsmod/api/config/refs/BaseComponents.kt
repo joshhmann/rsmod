@@ -6,12 +6,12 @@ import org.rsmod.api.type.refs.comp.ComponentReferences
 
 typealias components = BaseComponents
 
-/**
- * Auto-generated symbol bindings (Smart Subset). Do not edit manually.
- */
+/** Auto-generated symbol bindings (Smart Subset). Do not edit manually. */
 object BaseComponents : ComponentReferences() {
-    val account_summary_sidepanel_summary_click_layer = find("account_summary_sidepanel:summary_click_layer")
-    val account_summary_sidepanel_summary_contents = find("account_summary_sidepanel:summary_contents")
+    val account_summary_sidepanel_summary_click_layer =
+        find("account_summary_sidepanel:summary_click_layer")
+    val account_summary_sidepanel_summary_contents =
+        find("account_summary_sidepanel:summary_contents")
     val aide_compass_aide_east_text_2 = find("aide_compass:aide_east_text_2")
     val aide_compass_aide_north_text_2 = find("aide_compass:aide_north_text_2")
     val aide_compass_aide_south_text_2 = find("aide_compass:aide_south_text_2")
@@ -240,13 +240,18 @@ object BaseComponents : ComponentReferences() {
     val screenhighlight_previous = find("screenhighlight:previous")
     val settings_side_acceptaid = find("settings_side:acceptaid")
     val settings_side_areasound_icon = find("settings_side:areasound_icon")
-    val settings_side_areasounds_bobble_container = find("settings_side:areasounds_bobble_container")
-    val settings_side_attack_priority_npc_buttons = find("settings_side:attack_priority_npc_buttons")
-    val settings_side_attack_priority_player_buttons = find("settings_side:attack_priority_player_buttons")
+    val settings_side_areasounds_bobble_container =
+        find("settings_side:areasounds_bobble_container")
+    val settings_side_attack_priority_npc_buttons =
+        find("settings_side:attack_priority_npc_buttons")
+    val settings_side_attack_priority_player_buttons =
+        find("settings_side:attack_priority_player_buttons")
     val settings_side_audio_tab = find("settings_side:audio_tab")
     val settings_side_bondoptions = find("settings_side:bondoptions")
-    val settings_side_brightness_bobble_container = find("settings_side:brightness_bobble_container")
-    val settings_side_display_dynamic_setting_1_buttons = find("settings_side:display_dynamic_setting_1_buttons")
+    val settings_side_brightness_bobble_container =
+        find("settings_side:brightness_bobble_container")
+    val settings_side_display_dynamic_setting_1_buttons =
+        find("settings_side:display_dynamic_setting_1_buttons")
     val settings_side_display_tab = find("settings_side:display_tab")
     val settings_side_houseoptions = find("settings_side:houseoptions")
     val settings_side_master_bobble_container = find("settings_side:master_bobble_container")

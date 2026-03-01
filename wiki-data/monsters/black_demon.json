@@ -1,0 +1,183 @@
+{
+  "name": "Black demon",
+  "combat_level": 172,
+  "hitpoints": 157,
+  "attack": 145,
+  "strength": 148,
+  "defence": 152,
+  "attack_speed": 4,
+  "slayer_level": null,
+  "slayer_xp": 157.0,
+  "drops": [
+    {
+      "name": "Infernal ashes",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Black sword",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Steel scimitar",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Black axe",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril sq shield",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune med helm",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune chainbody",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant scimitar",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune scimitar",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune sq shield",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/12",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/12",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/18",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Blood rune",
+      "rate": "1/25",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Soul rune",
+      "rate": "1/64",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Coins",
+      "rate": "1/3",
+      "qty_min": 196,
+      "qty_max": 196
+    },
+    {
+      "name": "Coins",
+      "rate": "1/6",
+      "qty_min": 66,
+      "qty_max": 66
+    },
+    {
+      "name": "Coins",
+      "rate": "1/12",
+      "qty_min": 220,
+      "qty_max": 220
+    },
+    {
+      "name": "Coins",
+      "rate": "1/32",
+      "qty_min": 16,
+      "qty_max": 16
+    },
+    {
+      "name": "Lobster",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamantite bar",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled demon head",
+      "rate": "1/20",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (hard)",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ],
+  "locations": [
+    {
+      "location": "Taverley Dungeon",
+      "members": true,
+      "quantity": 10
+    },
+    {
+      "location": "Edgeville Dungeon",
+      "members": true,
+      "quantity": 4
+    },
+    {
+      "location": "Brimhaven Dungeon",
+      "members": true,
+      "quantity": 7
+    },
+    {
+      "location": "Catacombs of Kourend",
+      "members": true,
+      "quantity": 11
+    },
+    {
+      "location": "Chasm of Fire",
+      "members": true,
+      "quantity": 14
+    },
+    {
+      "location": "Wilderness Slayer Cave",
+      "members": true,
+      "quantity": 6
+    }
+  ]
+}

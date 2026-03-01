@@ -1,0 +1,162 @@
+{
+    "mechanic": "npc_aggressiveness",
+    "source": "OSRS Wiki (oldschool.runescape.wiki/w/Aggressiveness)",
+    "extraction_date": "2026-02-22",
+    "rsmod_api_status": "needs implementation - api/hunt handles NPC hunting but aggressiveness tolerance timer not confirmed",
+    "overview": {
+        "description": "Aggressive NPCs will automatically attack players within their aggro range without being provoked. This is a fundamental combat mechanic affecting NPC behavior.",
+        "aggro_range": "NPCs will auto-attack players within a certain number of tiles (usually 8 tiles for most monsters)",
+        "tolerance_mechanic": "After spending ~10 minutes (approx 1000 ticks) in the area of aggressive NPCs, they become tolerant and stop auto-attacking the player"
+    },
+    "tolerance_system": {
+        "description": "Players can 'reset' NPC tolerance by leaving the area and returning",
+        "tolerance_duration_ticks": 1000,
+        "tolerance_duration_seconds": 600,
+        "tolerance_duration_minutes": 10,
+        "area_definition": "Typically defined per-region or per-NPC group",
+        "reset_method": "Leave the area (varies - usually 1-2 map regions away) and return",
+        "exceptions": [
+            "Some NPCs (like Skeletal Wyverns, Maniacal monkeys) never become tolerant",
+            "Wilderness NPCs may have different tolerance rules"
+        ]
+    },
+    "aggression_range": {
+        "default_tiles": 8,
+        "description": "Most aggressive NPCs will attack players within 8 tiles of them",
+        "special_cases": {
+            "boss_npcs": "Usually 5-6 tiles or triggered by entering their room",
+            "stationary_guards": "May have wider or narrower ranges per design",
+            "undead_npcs": "Standard 8 tiles"
+        }
+    },
+    "attack_conditions": {
+        "required": [
+            "Player must be within aggro range",
+            "NPC must not be in combat with another player",
+            "Player must not have tolerance immunity active for this NPC group",
+            "NPC must have line of sight to player"
+        ],
+        "optional_conditions": [
+            "Some NPCs only aggro in multi-combat zones",
+            "Wilderness NPCs may only aggro above specific Wilderness levels",
+            "Some NPCs only aggro players below a combat level threshold"
+        ]
+    },
+    "combat_level_threshold": {
+        "description": "Some NPCs only attack players whose combat level is lower than a threshold",
+        "formula": "NPC will only attack if player_combat_level < npc_combat_level * 2",
+        "examples": [
+            {
+                "npc": "Goblin (combat 2)",
+                "threshold": "Attacks players combat level < 4"
+            },
+            {
+                "npc": "Cockroach soldier (combat 83)",
+                "threshold": "Attacks players combat level < 166"
+            }
+        ],
+        "exceptions": [
+            "Wilderness NPCs (no level threshold)",
+            "Slayer monsters (you're assigned to them)",
+            "Cave and dungeon specific NPCs (often no threshold)"
+        ]
+    },
+    "aggressive_npc_list": {
+        "f2p_common": [
+            {
+                "name": "Goblin",
+                "combat": 2,
+                "aggro_tiles": 6,
+                "wilderness": false
+            },
+            {
+                "name": "Skeleton",
+                "combat": 21,
+                "aggro_tiles": 8,
+                "wilderness": false
+            },
+            {
+                "name": "Zombie",
+                "combat": 13,
+                "aggro_tiles": 8,
+                "wilderness": false
+            },
+            {
+                "name": "Dark Wizard",
+                "combat": 7,
+                "aggro_tiles": 8,
+                "wilderness": false
+            },
+            {
+                "name": "Greater Demon",
+                "combat": 92,
+                "aggro_tiles": 8,
+                "wilderness": false
+            },
+            {
+                "name": "Lesser Demon",
+                "combat": 82,
+                "aggro_tiles": 8,
+                "wilderness": false
+            },
+            {
+                "name": "Hellhound",
+                "combat": 122,
+                "aggro_tiles": 8,
+                "wilderness": false
+            }
+        ],
+        "wilderness": [
+            {
+                "name": "Black Knight",
+                "combat": 33,
+                "aggro_tiles": 8,
+                "wilderness": true
+            },
+            {
+                "name": "Greater Demon (Wilderness)",
+                "combat": 92,
+                "aggro_tiles": 8,
+                "wilderness": true
+            }
+        ]
+    },
+    "wander_radius": {
+        "description": "NPCs have a defined wander radius from their spawn point. They will not move beyond this radius.",
+        "default_tiles": 5,
+        "notes": [
+            "Aggressive NPCs will chase players to the edge of their wander radius",
+            "NPCs reset to spawn point if player leaves wander radius while in combat",
+            "Some NPCs have wander radius of 0 (stationary)",
+            "Maximum wander radius is typically 64 tiles"
+        ]
+    },
+    "multi_combat_aggression": {
+        "description": "Multiple NPCs can engage the same player in multi-combat areas",
+        "single_combat": "Only one NPC may attack a single player at a time",
+        "multi_combat": "Multiple NPCs can attack simultaneously"
+    },
+    "implementation_notes": {
+        "rsmod_api_status": "api/hunt contains NPC target finding logic, but tolerance system needs full implementation",
+        "rsmod_gaps": [
+            "Tolerance timer per NPC group (10-minute immunity system) needs implementing",
+            "Combat level threshold check for aggression (player_cb < npc_cb * 2) needs verification",
+            "NPC wander radius enforcement during chase needs testing",
+            "Multi vs single combat zone awareness for aggression needs review"
+        ],
+        "rsmod_implemented": [
+            "Basic NPC hunt/aggro targeting (api/hunt)",
+            "NPC follows player during combat",
+            "Line of sight check for attack"
+        ],
+        "rsmod_needed": [
+            "10-minute tolerance timer system keyed per area/region",
+            "Reset tolerance when player leaves defined area",
+            "Combat level threshold: only aggro if player_cb < npc_cb * 2",
+            "Some NPCs marked 'always aggressive' (no tolerance)"
+        ],
+        "varbit_references": {
+            "notes": "No specific varbit for tolerance found - likely tracking server-side per player in area data"
+        }
+    }
+}

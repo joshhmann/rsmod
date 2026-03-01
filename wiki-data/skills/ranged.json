@@ -1,0 +1,522 @@
+{
+  "skill": "ranged",
+  "source": "OSRS Wiki (rev 233, accessed 2026-02)",
+  "weapons": {
+    "bows": {
+      "shortbow": {
+        "level_req": 1,
+        "item_id": 841,
+        "attack_speed": 4,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false
+      },
+      "oak_shortbow": {
+        "level_req": 5,
+        "item_id": 843,
+        "attack_speed": 4,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false
+      },
+      "willow_shortbow": {
+        "level_req": 20,
+        "item_id": 849,
+        "attack_speed": 4,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false
+      },
+      "maple_shortbow": {
+        "level_req": 30,
+        "item_id": 853,
+        "attack_speed": 4,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false
+      },
+      "yew_shortbow": {
+        "level_req": 40,
+        "item_id": 857,
+        "attack_speed": 4,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false
+      },
+      "longbow": {
+        "level_req": 1,
+        "item_id": 839,
+        "attack_speed": 5,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false,
+        "attack_range": 10
+      },
+      "oak_longbow": {
+        "level_req": 5,
+        "item_id": 845,
+        "attack_speed": 5,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false,
+        "attack_range": 10
+      },
+      "willow_longbow": {
+        "level_req": 20,
+        "item_id": 847,
+        "attack_speed": 5,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false,
+        "attack_range": 10
+      },
+      "maple_longbow": {
+        "level_req": 30,
+        "item_id": 851,
+        "attack_speed": 5,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false,
+        "attack_range": 10
+      },
+      "yew_longbow": {
+        "level_req": 40,
+        "item_id": 855,
+        "attack_speed": 5,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false,
+        "attack_range": 10
+      },
+      "magic_shortbow": {
+        "level_req": 50,
+        "item_id": 861,
+        "attack_speed": 4,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false
+      },
+      "magic_longbow": {
+        "level_req": 50,
+        "item_id": 859,
+        "attack_speed": 6,
+        "weapon_type": "standard",
+        "ammo_type": "arrow",
+        "members": false,
+        "attack_range": 10
+      },
+      "crossbow": {
+        "level_req": 1,
+        "item_id": 837,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": false
+      },
+      "bronze_crossbow": {
+        "level_req": 1,
+        "item_id": 9174,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": false
+      },
+      "blurite_crossbow": {
+        "level_req": 1,
+        "item_id": 9176,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": true
+      },
+      "iron_crossbow": {
+        "level_req": 1,
+        "item_id": 9177,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": false
+      },
+      "steel_crossbow": {
+        "level_req": 1,
+        "item_id": 9179,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": false
+      },
+      "mithril_crossbow": {
+        "level_req": 1,
+        "item_id": 9181,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": false
+      },
+      "adamant_crossbow": {
+        "level_req": 1,
+        "item_id": 9183,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": false
+      },
+      "rune_crossbow": {
+        "level_req": 1,
+        "item_id": 9185,
+        "attack_speed": 5,
+        "weapon_type": "heavy",
+        "ammo_type": "bolt",
+        "members": false
+      }
+    },
+    "thrown": {
+      "bronze_dart": {
+        "level_req": 1,
+        "item_id": 806,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "iron_dart": {
+        "level_req": 1,
+        "item_id": 807,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "steel_dart": {
+        "level_req": 1,
+        "item_id": 808,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "mithril_dart": {
+        "level_req": 1,
+        "item_id": 809,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "adamant_dart": {
+        "level_req": 1,
+        "item_id": 810,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "rune_dart": {
+        "level_req": 1,
+        "item_id": 811,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "bronze_knife": {
+        "level_req": 1,
+        "item_id": 864,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "iron_knife": {
+        "level_req": 1,
+        "item_id": 865,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "steel_knife": {
+        "level_req": 1,
+        "item_id": 866,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "mithril_knife": {
+        "level_req": 1,
+        "item_id": 867,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "adamant_knife": {
+        "level_req": 1,
+        "item_id": 868,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      },
+      "rune_knife": {
+        "level_req": 1,
+        "item_id": 869,
+        "attack_speed": 3,
+        "weapon_type": "light",
+        "members": false
+      }
+    }
+  },
+  "ammunition": {
+    "arrows": {
+      "bronze_arrow": {
+        "level_req": 1,
+        "item_id": 882,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "iron_arrow": {
+        "level_req": 1,
+        "item_id": 884,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "steel_arrow": {
+        "level_req": 1,
+        "item_id": 886,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "mithril_arrow": {
+        "level_req": 1,
+        "item_id": 888,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "adamant_arrow": {
+        "level_req": 1,
+        "item_id": 890,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "rune_arrow": {
+        "level_req": 1,
+        "item_id": 892,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "bronze_arrow_p": {
+        "level_req": 1,
+        "item_id": 883,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "iron_arrow_p": {
+        "level_req": 1,
+        "item_id": 885,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "steel_arrow_p": {
+        "level_req": 1,
+        "item_id": 887,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "mithril_arrow_p": {
+        "level_req": 1,
+        "item_id": 889,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "adamant_arrow_p": {
+        "level_req": 1,
+        "item_id": 891,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "rune_arrow_p": {
+        "level_req": 1,
+        "item_id": 893,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      }
+    },
+    "bolts": {
+      "bronze_bolt": {
+        "level_req": 1,
+        "item_id": 877,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "iron_bolt": {
+        "level_req": 1,
+        "item_id": 9140,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "steel_bolt": {
+        "level_req": 1,
+        "item_id": 9141,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "mithril_bolt": {
+        "level_req": 1,
+        "item_id": 9142,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "adamant_bolt": {
+        "level_req": 1,
+        "item_id": 9143,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "rune_bolt": {
+        "level_req": 1,
+        "item_id": 9144,
+        "damage_bonus": 0,
+        "members": false
+      },
+      "bronze_bolt_p": {
+        "level_req": 1,
+        "item_id": 878,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "iron_bolt_p": {
+        "level_req": 1,
+        "item_id": 9145,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "steel_bolt_p": {
+        "level_req": 1,
+        "item_id": 9146,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "mithril_bolt_p": {
+        "level_req": 1,
+        "item_id": 9147,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "adamant_bolt_p": {
+        "level_req": 1,
+        "item_id": 9148,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      },
+      "rune_bolt_p": {
+        "level_req": 1,
+        "item_id": 9149,
+        "damage_bonus": 0,
+        "poison": "regular",
+        "members": false
+      }
+    }
+  },
+  "equipment_bonuses": {
+    "coifs": {
+      "bronze_coif": {
+        "item_id": 1169,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "iron_coif": {
+        "item_id": 1171,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "steel_coif": {
+        "item_id": 1173,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "mithril_coif": {
+        "item_id": 1169,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "adamant_coif": {
+        "item_id": 1175,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "rune_coif": {
+        "item_id": 1169,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      }
+    },
+    "bodies": {
+      "leather_body": {
+        "item_id": 1129,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "hardleather_body": {
+        "item_id": 1131,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "studded_body": {
+        "item_id": 1133,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "green_dragonhide_body": {
+        "item_id": 1135,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": true
+      }
+    },
+    "chaps": {
+      "leather_chaps": {
+        "item_id": 1095,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "studded_chaps": {
+        "item_id": 1097,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "green_dragonhide_chaps": {
+        "item_id": 1099,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": true
+      }
+    },
+    "vambraces": {
+      "leather_vambraces": {
+        "item_id": 1065,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": false
+      },
+      "green_dragonhide_vambraces": {
+        "item_id": 1065,
+        "ranged_attack": 0,
+        "ranged_strength": 0,
+        "members": true
+      }
+    }
+  }
+}

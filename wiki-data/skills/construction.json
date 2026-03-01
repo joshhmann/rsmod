@@ -1,0 +1,367 @@
+{
+  "skill": "construction",
+  "source": "OSRS Wiki (rev 233, accessed 2026-02)",
+  "rooms": {
+    "garden": {
+      "name": "Garden",
+      "level_req": 1,
+      "cost": 1000,
+      "materials": [
+        { "item_id": 8778, "quantity": 2, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "kitchen": {
+      "name": "Kitchen",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "dining_room": {
+      "name": "Dining Room",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "workshop": {
+      "name": "Workshop",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "bedroom": {
+      "name": "Bedroom",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "storage_room": {
+      "name": "Storage Room",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "study": {
+      "name": "Study",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "throne_room": {
+      "name": "Throne Room",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "quest_hall": {
+      "name": "Quest Hall",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "chapel": {
+      "name": "Chapel",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "combat_room": {
+      "name": "Combat Room",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "fancy_room": {
+      "name": "Fancy Room",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "skill_hall": {
+      "name": "Skill Hall",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "games_room": {
+      "name": "Games Room",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "dungeon": {
+      "name": "Dungeon",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    },
+    "portal_chamber": {
+      "name": "Portal Chamber",
+      "level_req": 1,
+      "cost": 2500,
+      "materials": [
+        { "item_id": 8778, "quantity": 3, "name": "Plank" },
+        { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+      ],
+      "members": true
+    }
+  },
+  "furniture": {
+    "chairs": {
+      "crude_chair": {
+        "level_req": 1,
+        "xp": 58,
+        "room_types": ["dining_room", "throne_room", "study", "bedroom"],
+        "materials": [
+          { "item_id": 960, "quantity": 2, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "wooden_chair": {
+        "level_req": 2,
+        "xp": 87,
+        "room_types": ["dining_room", "throne_room", "study", "bedroom"],
+        "materials": [
+          { "item_id": 8778, "quantity": 2, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "rocking_chair": {
+        "level_req": 2,
+        "xp": 87,
+        "room_types": ["dining_room", "bedroom"],
+        "materials": [
+          { "item_id": 8778, "quantity": 2, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "oak_chair": {
+        "level_req": 26,
+        "xp": 120,
+        "room_types": ["dining_room", "throne_room", "study", "bedroom"],
+        "materials": [
+          { "item_id": 8780, "quantity": 2, "name": "Oak plank" }
+        ],
+        "members": true
+      }
+    },
+    "tables": {
+      "crude_table": {
+        "level_req": 1,
+        "xp": 58,
+        "room_types": ["dining_room", "kitchen"],
+        "materials": [
+          { "item_id": 960, "quantity": 2, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "wooden_table": {
+        "level_req": 2,
+        "xp": 87,
+        "room_types": ["dining_room", "kitchen"],
+        "materials": [
+          { "item_id": 8778, "quantity": 2, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "oak_table": {
+        "level_req": 33,
+        "xp": 240,
+        "room_types": ["dining_room", "kitchen"],
+        "materials": [
+          { "item_id": 8780, "quantity": 4, "name": "Oak plank" }
+        ],
+        "members": true
+      }
+    },
+    "storage": {
+      "wooden_shelf": {
+        "level_req": 1,
+        "xp": 29,
+        "room_types": ["kitchen", "storage_room", "study"],
+        "materials": [
+          { "item_id": 960, "quantity": 1, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "oak_shelf": {
+        "level_req": 29,
+        "xp": 240,
+        "room_types": ["storage_room", "study"],
+        "materials": [
+          { "item_id": 8780, "quantity": 2, "name": "Oak plank" }
+        ],
+        "members": true
+      }
+    },
+    "decorations": {
+      "plant": {
+        "level_req": 1,
+        "xp": 58,
+        "room_types": ["garden", "throne_room", "quest_hall", "skill_hall", "fancy_room"],
+        "materials": [
+          { "item_id": 960, "quantity": 1, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "fern": {
+        "level_req": 1,
+        "xp": 70,
+        "room_types": ["garden", "throne_room", "quest_hall"],
+        "materials": [
+          { "item_id": 960, "quantity": 1, "name": "Plank" }
+        ],
+        "members": true
+      }
+    },
+    "fireplace": {
+      "firepit": {
+        "level_req": 1,
+        "xp": 40,
+        "room_types": ["kitchen", "dining_room", "skill_hall"],
+        "materials": [
+          { "item_id": 960, "quantity": 1, "name": "Plank" },
+          { "item_id": 8794, "quantity": 2, "name": "Steel bar" }
+        ],
+        "members": true
+      },
+      "fireplace": {
+        "level_req": 3,
+        "xp": 81,
+        "room_types": ["kitchen", "dining_room", "skill_hall"],
+        "materials": [
+          { "item_id": 960, "quantity": 2, "name": "Plank" },
+          { "item_id": 8794, "quantity": 3, "name": "Steel bar" }
+        ],
+        "members": true
+      }
+    },
+    "beds": {
+      "wooden_bed": {
+        "level_req": 1,
+        "xp": 117,
+        "room_types": ["bedroom"],
+        "materials": [
+          { "item_id": 960, "quantity": 3, "name": "Plank" }
+        ],
+        "members": true
+      },
+      "oak_bed": {
+        "level_req": 36,
+        "xp": 360,
+        "room_types": ["bedroom"],
+        "materials": [
+          { "item_id": 8780, "quantity": 3, "name": "Oak plank" }
+        ],
+        "members": true
+      }
+    }
+  },
+  "materials": {
+    "plank": {
+      "item_id": 960,
+      "name": "Plank",
+      "cost": 1,
+      "members": false
+    },
+    "oak_plank": {
+      "item_id": 8780,
+      "name": "Oak plank",
+      "cost": 250,
+      "members": true
+    },
+    "teak_plank": {
+      "item_id": 8782,
+      "name": "Teak plank",
+      "cost": 500,
+      "members": true
+    },
+    "mahogany_plank": {
+      "item_id": 8784,
+      "name": "Mahogany plank",
+      "cost": 1000,
+      "members": true
+    },
+    "steel_bar": {
+      "item_id": 2353,
+      "name": "Steel bar",
+      "cost": 200,
+      "members": false
+    },
+    "gold_leaf": {
+      "item_id": 8786,
+      "name": "Gold leaf",
+      "cost": 50000,
+      "members": true
+    },
+    "marble_block": {
+      "item_id": 8788,
+      "name": "Marble block",
+      "cost": 325000,
+      "members": true
+    },
+    "magic_stone": {
+      "item_id": 8790,
+      "name": "Magic stone",
+      "cost": 975000,
+      "members": true
+    }
+  }
+}

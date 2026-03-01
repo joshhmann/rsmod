@@ -3,7 +3,6 @@ package org.rsmod.content.interfaces.emotes
 import jakarta.inject.Inject
 import org.rsmod.api.config.refs.content
 import org.rsmod.api.config.refs.interfaces
-import org.rsmod.api.config.refs.jingles
 import org.rsmod.api.config.refs.npcs
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.config.refs.seqs

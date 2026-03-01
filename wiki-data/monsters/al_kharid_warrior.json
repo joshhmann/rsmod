@@ -1,0 +1,251 @@
+{
+  "name": "Al Kharid warrior",
+  "combat_level": 9,
+  "hitpoints": 19,
+  "npc_ids": [3292],
+  "aggressive_level": 18,
+  "max_damage": 2,
+  "attack_style": "CRUSH",
+  "attack_speed": 4,
+  "respawn_time": 30,
+  "combat_stats": {
+    "attack": 7,
+    "strength": 5,
+    "defence": 4,
+    "ranged": 1,
+    "magic": 1
+  },
+  "attack_bonus": {
+    "stab": 10,
+    "slash": 10,
+    "crush": 10,
+    "magic": 10,
+    "ranged": 10
+  },
+  "defence_bonus": {
+    "stab": 12,
+    "slash": 15,
+    "crush": 10,
+    "magic": -1,
+    "ranged": 12
+  },
+  "immunities": {
+    "poison": false,
+    "venom": true
+  },
+  "animations": {
+    "attack": 422,
+    "defend": 424,
+    "death": 836
+  },
+  "slayer": {
+    "level": 1,
+    "xp": 0
+  },
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bronze med helm",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron dagger",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bronze bolts",
+      "rate": "1/5",
+      "qty_min": 2,
+      "qty_max": 12
+    },
+    {
+      "name": "Bronze arrow",
+      "rate": "1/42",
+      "qty_min": 7,
+      "qty_max": 7
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/64",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Fire rune",
+      "rate": "1/64",
+      "qty_min": 6,
+      "qty_max": 6
+    },
+    {
+      "name": "Mind rune",
+      "rate": "1/64",
+      "qty_min": 9,
+      "qty_max": 9
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/128",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Grimy guam leaf",
+      "rate": "1/22",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy marrentill",
+      "rate": "1/29",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy tarromin",
+      "rate": "1/39",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy harralander",
+      "rate": "1/50",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy ranarr weed",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy irit leaf",
+      "rate": "1/89",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy avantoe",
+      "rate": "1/118",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy kwuarm",
+      "rate": "1/142",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy cadantine",
+      "rate": "1/178",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy lantadyme",
+      "rate": "1/237",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy dwarf weed",
+      "rate": "1/237",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/3",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Coins",
+      "rate": "1/5",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Coins",
+      "rate": "1/14",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Coins",
+      "rate": "1/32",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Coins",
+      "rate": "1/128",
+      "qty_min": 25,
+      "qty_max": 25
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Fishing bait",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Copper ore",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Earth talisman",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cabbage",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/90",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (easy)",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/1",
+      "qty_min": 18,
+      "qty_max": 18
+    }
+  ]
+}

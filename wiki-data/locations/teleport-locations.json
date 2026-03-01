@@ -1,0 +1,302 @@
+{
+  "revision": 233,
+  "description": "Teleport locations database for OSRS Rev 233 (Varlamore Part 2)",
+  "source": "OSRS Wiki",
+  "spell_teleports": {
+    "varrock": {
+      "name": "Varrock Teleport",
+      "magic_level": 25,
+      "x": 3213,
+      "z": 3424,
+      "description": "Varrock town square (near fountain)",
+      "alternate": {
+        "grand_exchange": {
+          "name": "Grand Exchange",
+          "x": 3165,
+          "z": 3479,
+          "requirement": "Complete Medium Varrock Diary"
+        }
+      }
+    },
+    "lumbridge": {
+      "name": "Lumbridge Teleport",
+      "magic_level": 31,
+      "x": 3221,
+      "z": 3218,
+      "description": "Lumbridge town center"
+    },
+    "falador": {
+      "name": "Falador Teleport",
+      "magic_level": 37,
+      "x": 2964,
+      "z": 3378,
+      "description": "Falador near the white knights castle"
+    },
+    "camelot": {
+      "name": "Camelot Teleport",
+      "magic_level": 45,
+      "x": 2757,
+      "z": 3479,
+      "description": "Camelot front gate",
+      "alternate": {
+        "seers_village": {
+          "name": "Seers' Village",
+          "x": 2726,
+          "z": 3484,
+          "requirement": "Complete Hard Kandarin Diary"
+        }
+      }
+    },
+    "ardougne": {
+      "name": "Ardougne Teleport",
+      "magic_level": 51,
+      "x": 3305,
+      "z": 2662,
+      "description": "East Ardougne market",
+      "requirement": "Read Ardougne teleport scroll (Plague City quest reward)"
+    }
+  },
+  "item_teleports": {
+    "games_necklace": {
+      "name": "Games Necklace",
+      "item_id": 3853,
+      "charges": 8,
+      "enchant_spell": "Lvl-1 Enchant",
+      "locations": {
+        "burthorpe": {
+          "name": "Burthorpe",
+          "x": 2937,
+          "z": 3535
+        },
+        "barbarian_outpost": {
+          "name": "Barbarian Outpost",
+          "x": 2517,
+          "z": 3576
+        },
+        "corporeal_beast": {
+          "name": "Corporeal Beast",
+          "x": 3187,
+          "z": 4285
+        },
+        "tears_of_guthix": {
+          "name": "Tears of Guthix",
+          "x": 3606,
+          "z": 3408
+        },
+        "wintertodt": {
+          "name": "Wintertodt Camp",
+          "x": 3804,
+          "z": 3528
+        }
+      }
+    },
+    "ring_of_dueling": {
+      "name": "Ring of Dueling",
+      "item_id": 2552,
+      "charges": 8,
+      "enchant_spell": "Lvl-2 Enchant",
+      "locations": {
+        "duel_arena": {
+          "name": "Duel Arena",
+          "x": 3310,
+          "z": 3238
+        },
+        "castle_wars": {
+          "name": "Castle Wars",
+          "x": 2440,
+          "z": 3090
+        },
+        "ferox": {
+          "name": "Ferox Enclave",
+          "x": 3149,
+          "z": 3633
+        },
+        "fist_of_guthix": {
+          "name": "Fist of Guthix",
+          "x": 3299,
+          "z": 8199
+        },
+        "south_feldip_hills": {
+          "name": "South Feldip Hills",
+          "x": 2397,
+          "z": 3027,
+          "note": "Replaced Mobilising Armies after it was removed in 2018"
+        }
+      }
+    },
+    "amulet_of_glory": {
+      "name": "Amulet of Glory",
+      "item_id": 1704,
+      "charges": 4,
+      "enchant_spell": "Lvl-4 Enchant",
+      "locations": {
+        "edgeville": {
+          "name": "Edgeville",
+          "x": 3077,
+          "z": 3504,
+          "description": "In front of bank"
+        },
+        "karamja": {
+          "name": "Karamja",
+          "x": 2919,
+          "z": 3146,
+          "description": "Musa Point banana plantation"
+        },
+        "draynor": {
+          "name": "Draynor Village",
+          "x": 3086,
+          "z": 3252
+        },
+        "al_kharid": {
+          "name": "Al Kharid",
+          "x": 3293,
+          "z": 3174,
+          "description": "Inside the palace"
+        }
+      }
+    },
+    "combat_bracelet": {
+      "name": "Combat Bracelet",
+      "item_id": 1113,
+      "charges": 4,
+      "enchant_spell": "Lvl-4 Enchant",
+      "locations": {
+        "warriors_guild": {
+          "name": "Warriors' Guild",
+          "x": 2843,
+          "z": 3543
+        },
+        "champions_guild": {
+          "name": "Champions' Guild",
+          "x": 3209,
+          "z": 3456
+        },
+        "edgeville_monastery": {
+          "name": "Edgeville Monastery",
+          "x": 3054,
+          "z": 3513
+        },
+        "fishing_guild": {
+          "name": "Fishing Guild",
+          "x": 2615,
+          "z": 3390
+        }
+      }
+    },
+    "ring_of_forging": {
+      "name": "Ring of Forging",
+      "item_id": 2568,
+      "charges": 140,
+      "enchant_spell": "Lvl-3 Enchant",
+      "locations": {
+        "edgeville_furnace": {
+          "name": "Edgeville Furnace",
+          "x": 3109,
+          "z": 3502
+        }
+      }
+    },
+    "skills_necklace": {
+      "name": "Skills Necklace",
+      "item_id": 1114,
+      "charges": 4,
+      "enchant_spell": "Lvl-4 Enchant",
+      "locations": {
+        "farming_guild": {
+          "name": "Farming Guild",
+          "x": 3047,
+          "z": 3379
+        },
+        "mining_guild": {
+          "name": "Mining Guild",
+          "x": 3059,
+          "z": 3376
+        },
+        "fishing_guild": {
+          "name": "Fishing Guild",
+          "x": 2615,
+          "z": 3390
+        },
+        "cooking_guild": {
+          "name": "Cooking Guild",
+          "x": 3144,
+          "z": 3440
+        }
+      }
+    }
+  },
+  "house_portals": {
+    "description": "Player-owned house portal locations (Relocate via Estate Agent)",
+    "default_location": "Rimmington",
+    "locations": {
+      "rimmington": {
+        "name": "Rimmington",
+        "x": 2954,
+        "z": 3222,
+        "cost": 5000,
+        "construction_level": 1
+      },
+      "taverley": {
+        "name": "Taverley",
+        "x": 2894,
+        "z": 3465,
+        "cost": 5000,
+        "construction_level": 10
+      },
+      "pollnivneach": {
+        "name": "Pollnivneach",
+        "x": 3349,
+        "z": 3002,
+        "cost": 5000,
+        "construction_level": 20
+      },
+      "hosidius": {
+        "name": "Hosidius",
+        "x": 3769,
+        "z": 3900,
+        "cost": 5000,
+        "construction_level": 25
+      },
+      "rellekka": {
+        "name": "Rellekka",
+        "x": 2622,
+        "z": 3671,
+        "cost": 5000,
+        "construction_level": 30
+      },
+      "brimhaven": {
+        "name": "Brimhaven",
+        "x": 2760,
+        "z": 3238,
+        "cost": 5000,
+        "construction_level": 40
+      },
+      "yanille": {
+        "name": "Yanille",
+        "x": 2544,
+        "z": 3094,
+        "cost": 5000,
+        "construction_level": 50
+      },
+      "prifddinas": {
+        "name": "Prifddinas",
+        "x": 2207,
+        "z": 3306,
+        "cost": 5000,
+        "construction_level": 60
+      }
+    }
+  },
+  "home_teleport": {
+    "name": "Lumbridge Home Teleport",
+    "description": "Free teleport to Lumbridge, available on standard spellbook",
+    "x": 3222,
+    "z": 3218,
+    "note": "Same location as Lumbridge Teleport spell"
+  },
+  "notes": {
+    "coordinate_system": "OSRS uses x (horizontal) and z (vertical) coordinates",
+    "rev_233": "All data aligned to Rev 233 (Varlamore Part 2, Sept 25, 2024)",
+    "item_ids": "Item IDs verified against OSRS cache"
+  }
+}

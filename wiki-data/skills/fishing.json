@@ -1,0 +1,62 @@
+{
+  "skill": "fishing",
+  "source": "OSRS wiki (rev 228/233, accessed 2026-02)",
+  "actions": {
+    "shrimps": {
+      "level_req": 1, "xp": 10.0,
+      "tool": "small_fishing_net", "bait": null
+    },
+    "sardine": {
+      "level_req": 5, "xp": 20.0,
+      "tool": "fishing_rod", "bait": "fishing_bait"
+    },
+    "herring": {
+      "level_req": 10, "xp": 30.0,
+      "tool": "fishing_rod", "bait": "fishing_bait"
+    },
+    "anchovies": {
+      "level_req": 15, "xp": 40.0,
+      "tool": "small_fishing_net", "bait": null
+    },
+    "trout": {
+      "level_req": 20, "xp": 50.0,
+      "tool": "fly_fishing_rod", "bait": "feather"
+    },
+    "pike": {
+      "level_req": 25, "xp": 60.0,
+      "tool": "fishing_rod", "bait": "fishing_bait"
+    },
+    "salmon": {
+      "level_req": 30, "xp": 70.0,
+      "tool": "fly_fishing_rod", "bait": "feather"
+    },
+    "tuna": {
+      "level_req": 35, "xp": 80.0,
+      "tool": "harpoon", "bait": null
+    },
+    "lobster": {
+      "level_req": 40, "xp": 90.0,
+      "tool": "lobster_pot", "bait": null
+    },
+    "swordfish": {
+      "level_req": 50, "xp": 100.0,
+      "tool": "harpoon", "bait": null
+    },
+    "monkfish": {
+      "level_req": 62, "xp": 120.0,
+      "tool": "small_fishing_net", "bait": null
+    },
+    "shark": {
+      "level_req": 76, "xp": 110.0,
+      "tool": "harpoon", "bait": null
+    },
+    "anglerfish": {
+      "level_req": 82, "xp": 120.0,
+      "tool": "fishing_rod", "bait": "fishing_bait"
+    },
+    "dark_crab": {
+      "level_req": 85, "xp": 130.0,
+      "tool": "dark_crab_pot", "bait": "fishing_bait"
+    }
+  }
+}

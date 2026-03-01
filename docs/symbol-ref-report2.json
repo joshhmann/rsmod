@@ -1,0 +1,1810 @@
+[
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51366,
+    "domain": "npc",
+    "name": "goblin_2",
+    "kind": "toml",
+    "snippet": "npc = 'goblin_2'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51378,
+    "domain": "npc",
+    "name": "goblin_3",
+    "kind": "toml",
+    "snippet": "npc = 'goblin_3'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51390,
+    "domain": "npc",
+    "name": "goblin_chef",
+    "kind": "toml",
+    "snippet": "npc = 'goblin_chef'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51716,
+    "domain": "npc",
+    "name": "lesser_demon_f2p",
+    "kind": "toml",
+    "snippet": "npc = 'lesser_demon_f2p'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51734,
+    "domain": "npc",
+    "name": "black_knight_f2p",
+    "kind": "toml",
+    "snippet": "npc = 'black_knight_f2p'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51759,
+    "domain": "npc",
+    "name": "party_pete",
+    "kind": "toml",
+    "snippet": "npc = 'party_pete'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51763,
+    "domain": "npc",
+    "name": "shop_keeper",
+    "kind": "toml",
+    "snippet": "npc = 'shop_keeper'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51767,
+    "domain": "npc",
+    "name": "shop_assistant",
+    "kind": "toml",
+    "snippet": "npc = 'shop_assistant'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51771,
+    "domain": "npc",
+    "name": "border_guard",
+    "kind": "toml",
+    "snippet": "npc = 'border_guard'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51775,
+    "domain": "npc",
+    "name": "sheep",
+    "kind": "toml",
+    "snippet": "npc = 'sheep'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51779,
+    "domain": "npc",
+    "name": "giantspider",
+    "kind": "toml",
+    "snippet": "npc = 'giantspider'"
+  },
+  {
+    "file": "rsmod\\api\\cache-enricher\\src\\main\\resources\\org\\rsmod\\api\\cache\\enricher\\npc\\npcs.toml",
+    "line": 51859,
+    "domain": "npc",
+    "name": "gypsy",
+    "kind": "toml",
+    "snippet": "npc = 'gypsy'"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseJingles.kt",
+    "line": 13,
+    "domain": "jingle",
+    "name": "emote_air_guitar",
+    "kind": "kotlin-find",
+    "snippet": "val emote_air_guitar = find(\"emote_air_guitar\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 32,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val blankobject = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 273,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_firemaking = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 274,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_bait = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 275,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_bignet = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 276,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_cage = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 277,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_harpoon = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 278,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_net = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 279,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_fletching_knife = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 284,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_herblore = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseSeqs.kt",
+    "line": 342,
+    "domain": "seq",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val human_thieving_stall = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseVarps.kt",
+    "line": 35,
+    "domain": "varp",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val below_ice_mountain = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseVarps.kt",
+    "line": 36,
+    "domain": "varp",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val blankobject = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseVarps.kt",
+    "line": 65,
+    "domain": "varp",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val corsair_curse = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseVarps.kt",
+    "line": 192,
+    "domain": "varp",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val squirequest = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseVarps.kt",
+    "line": 205,
+    "domain": "varp",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "val x_marks_the_spot = find(\"blankobject\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\draynor-manor\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\draynor\\manor\\DraynorManorScript.kt",
+    "line": 19,
+    "domain": "loc",
+    "name": "door_left_closed",
+    "kind": "kotlin-find",
+    "snippet": "val manor_front_door_left = find(\"door_left_closed\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\draynor-manor\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\draynor\\manor\\DraynorManorScript.kt",
+    "line": 20,
+    "domain": "loc",
+    "name": "door_right_closed",
+    "kind": "kotlin-find",
+    "snippet": "val manor_front_door_right = find(\"door_right_closed\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\draynor-manor\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\draynor\\manor\\DraynorManorScript.kt",
+    "line": 22,
+    "domain": "loc",
+    "name": "door",
+    "kind": "kotlin-find",
+    "snippet": "val witch_door = find(\"door\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\draynor-manor\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\draynor\\manor\\DraynorManorScript.kt",
+    "line": 24,
+    "domain": "loc",
+    "name": "trapdoor_draynor_manor_closed",
+    "kind": "kotlin-find",
+    "snippet": "val basement_trapdoor_closed = find(\"trapdoor_draynor_manor_closed\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\draynor-manor\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\draynor\\manor\\DraynorManorScript.kt",
+    "line": 25,
+    "domain": "loc",
+    "name": "trapdoor_draynor_manor_open",
+    "kind": "kotlin-find",
+    "snippet": "val basement_trapdoor_open = find(\"trapdoor_draynor_manor_open\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\draynor-manor\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\draynor\\manor\\DraynorManorScript.kt",
+    "line": 27,
+    "domain": "loc",
+    "name": "staircase_draynor_manor_up",
+    "kind": "kotlin-find",
+    "snippet": "val stairs_up = find(\"staircase_draynor_manor_up\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\draynor-manor\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\draynor\\manor\\DraynorManorScript.kt",
+    "line": 28,
+    "domain": "loc",
+    "name": "staircase_draynor_manor_down",
+    "kind": "kotlin-find",
+    "snippet": "val stairs_down = find(\"staircase_draynor_manor_down\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\edgeville\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\edgeville\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\edgeville\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\edgeville\\objs.toml",
+    "line": 14,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\falador\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\falador\\npcs.toml",
+    "line": 142,
+    "domain": "npc",
+    "name": "dwarf",
+    "kind": "toml",
+    "snippet": "npc = 'dwarf'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\falador\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\falador\\npcs.toml",
+    "line": 146,
+    "domain": "npc",
+    "name": "dwarf",
+    "kind": "toml",
+    "snippet": "npc = 'dwarf'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\falador\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\falador\\npcs.toml",
+    "line": 151,
+    "domain": "npc",
+    "name": "party_pete",
+    "kind": "toml",
+    "snippet": "npc = 'party_pete'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\falador\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\falador\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\lumbridge\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\lumbridge\\npcs.toml",
+    "line": 2380,
+    "domain": "npc",
+    "name": "goblin_2",
+    "kind": "toml",
+    "snippet": "npc = 'goblin_2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\lumbridge\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\lumbridge\\objs.toml",
+    "line": 236,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\lumbridge\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\lumbridge\\objs.toml",
+    "line": 240,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\port-sarim\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\portsarim\\PortSarimNpcs.kt",
+    "line": 38,
+    "domain": "npc",
+    "name": "monk_of_entrana",
+    "kind": "kotlin-find",
+    "snippet": "val monk_entrana = find(\"monk_of_entrana\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\npcs.toml",
+    "line": 79,
+    "domain": "npc",
+    "name": "cowboy",
+    "kind": "toml",
+    "snippet": "npc = 'cowboy'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\npcs.toml",
+    "line": 84,
+    "domain": "npc",
+    "name": "dwarf_rimmington",
+    "kind": "toml",
+    "snippet": "npc = 'dwarf_rimmington'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "clay_rock",
+    "kind": "toml",
+    "snippet": "obj = 'clay_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 14,
+    "domain": "obj",
+    "name": "clay_rock",
+    "kind": "toml",
+    "snippet": "obj = 'clay_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 19,
+    "domain": "obj",
+    "name": "copper_rock",
+    "kind": "toml",
+    "snippet": "obj = 'copper_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 23,
+    "domain": "obj",
+    "name": "copper_rock",
+    "kind": "toml",
+    "snippet": "obj = 'copper_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 27,
+    "domain": "obj",
+    "name": "copper_rock",
+    "kind": "toml",
+    "snippet": "obj = 'copper_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 32,
+    "domain": "obj",
+    "name": "tin_rock",
+    "kind": "toml",
+    "snippet": "obj = 'tin_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 36,
+    "domain": "obj",
+    "name": "tin_rock",
+    "kind": "toml",
+    "snippet": "obj = 'tin_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 41,
+    "domain": "obj",
+    "name": "iron_rock",
+    "kind": "toml",
+    "snippet": "obj = 'iron_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 45,
+    "domain": "obj",
+    "name": "iron_rock",
+    "kind": "toml",
+    "snippet": "obj = 'iron_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 49,
+    "domain": "obj",
+    "name": "iron_rock",
+    "kind": "toml",
+    "snippet": "obj = 'iron_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 54,
+    "domain": "obj",
+    "name": "gold_rock",
+    "kind": "toml",
+    "snippet": "obj = 'gold_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 58,
+    "domain": "obj",
+    "name": "gold_rock",
+    "kind": "toml",
+    "snippet": "obj = 'gold_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 65,
+    "domain": "obj",
+    "name": "poh_rimmington_portal",
+    "kind": "toml",
+    "snippet": "obj = 'poh_rimmington_portal'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 72,
+    "domain": "obj",
+    "name": "crate",
+    "kind": "toml",
+    "snippet": "obj = 'crate'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 77,
+    "domain": "obj",
+    "name": "barrel",
+    "kind": "toml",
+    "snippet": "obj = 'barrel'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 82,
+    "domain": "obj",
+    "name": "well",
+    "kind": "toml",
+    "snippet": "obj = 'well'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 87,
+    "domain": "obj",
+    "name": "rimmington_poor_range",
+    "kind": "toml",
+    "snippet": "obj = 'rimmington_poor_range'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 92,
+    "domain": "obj",
+    "name": "rimmington_table",
+    "kind": "toml",
+    "snippet": "obj = 'rimmington_table'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 100,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 104,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 108,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 112,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 120,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\varrock\\configs\\VarrockObjs.kt",
+    "line": 17,
+    "domain": "obj",
+    "name": "bryophyta_staff",
+    "kind": "kotlin-find",
+    "snippet": "val bryophyta_staff = find(\"bryophyta_staff\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\npcs.toml",
+    "line": 156,
+    "domain": "npc",
+    "name": "cat",
+    "kind": "toml",
+    "snippet": "npc = 'cat'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\objs.toml",
+    "line": 14,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\objs.toml",
+    "line": 18,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\dungeons\\edgeville-dungeon\\src\\main\\resources\\org\\rsmod\\content\\areas\\dungeons\\edgevilledungeon\\npcs.toml",
+    "line": 142,
+    "domain": "npc",
+    "name": "skeleton_wilderness",
+    "kind": "toml",
+    "snippet": "npc = 'skeleton_wilderness'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\dungeons\\edgeville-dungeon\\src\\main\\resources\\org\\rsmod\\content\\areas\\dungeons\\edgevilledungeon\\npcs.toml",
+    "line": 146,
+    "domain": "npc",
+    "name": "skeleton_wilderness",
+    "kind": "toml",
+    "snippet": "npc = 'skeleton_wilderness'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\dungeons\\edgeville-dungeon\\src\\main\\resources\\org\\rsmod\\content\\areas\\dungeons\\edgevilledungeon\\npcs.toml",
+    "line": 150,
+    "domain": "npc",
+    "name": "skeleton_wilderness",
+    "kind": "toml",
+    "snippet": "npc = 'skeleton_wilderness'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\dungeons\\edgeville-dungeon\\src\\main\\resources\\org\\rsmod\\content\\areas\\dungeons\\edgevilledungeon\\npcs.toml",
+    "line": 287,
+    "domain": "npc",
+    "name": "vannaka",
+    "kind": "toml",
+    "snippet": "npc = 'vannaka'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\essence-mine\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\misc\\essencemine\\EssenceMineNpcs.kt",
+    "line": 16,
+    "domain": "npc",
+    "name": "sedridor",
+    "kind": "kotlin-find",
+    "snippet": "// val sedridor = find(\"sedridor\")  // TODO: Add when Wizards' Tower is implemented"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\essence-mine\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\misc\\essencemine\\EssenceMineNpcs.kt",
+    "line": 17,
+    "domain": "npc",
+    "name": "carwen_essencebinder",
+    "kind": "kotlin-find",
+    "snippet": "// val carwen_essencebinder = find(\"carwen_essencebinder\")  // Members"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 24,
+    "domain": "obj",
+    "name": "goblin_mail_red",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_red'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 28,
+    "domain": "obj",
+    "name": "goblin_mail_red",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_red'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 32,
+    "domain": "obj",
+    "name": "goblin_mail_red",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_red'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 39,
+    "domain": "obj",
+    "name": "goblin_mail_green",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_green'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 43,
+    "domain": "obj",
+    "name": "goblin_mail_green",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_green'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 47,
+    "domain": "obj",
+    "name": "goblin_mail_green",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_green'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 54,
+    "domain": "obj",
+    "name": "goblin_mail_blue",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_blue'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 58,
+    "domain": "obj",
+    "name": "goblin_mail_blue",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_blue'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 65,
+    "domain": "obj",
+    "name": "goblin_mail_orange",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_orange'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 69,
+    "domain": "obj",
+    "name": "goblin_mail_orange",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_orange'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 9,
+    "domain": "obj",
+    "name": "copperrock1",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 13,
+    "domain": "obj",
+    "name": "copperrock2",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 17,
+    "domain": "obj",
+    "name": "copperrock1",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 21,
+    "domain": "obj",
+    "name": "copperrock2",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 26,
+    "domain": "obj",
+    "name": "tinrock1",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 30,
+    "domain": "obj",
+    "name": "tinrock2",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 34,
+    "domain": "obj",
+    "name": "tinrock1",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 38,
+    "domain": "obj",
+    "name": "tinrock2",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\wizards-tower\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\misc\\wizardstower\\WizardsTowerNpcs.kt",
+    "line": 8,
+    "domain": "npc",
+    "name": "sedridor",
+    "kind": "kotlin-find",
+    "snippet": "val sedridor = find(\"sedridor\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\wizards-tower\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\misc\\wizardstower\\WizardsTowerNpcs.kt",
+    "line": 16,
+    "domain": "npc",
+    "name": "lesser_demon_caged",
+    "kind": "kotlin-find",
+    "snippet": "// val lesser_demon_caged = find(\"lesser_demon_caged\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\wizards-tower\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\misc\\wizardstower\\WizardsTowerNpcs.kt",
+    "line": 17,
+    "domain": "npc",
+    "name": "rune_guardian",
+    "kind": "kotlin-find",
+    "snippet": "// val rune_guardian = find(\"rune_guardian\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\wizards-tower\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\wizardstower\\npcs.toml",
+    "line": 8,
+    "domain": "npc",
+    "name": "sedridor",
+    "kind": "toml",
+    "snippet": "npc = 'sedridor'"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\achievement-diaries\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\achievementdiaries\\configs\\AchievementDiaryConfigs.kt",
+    "line": 48,
+    "domain": "varp",
+    "name": "karamja_achievement_diary",
+    "kind": "kotlin-find",
+    "snippet": "val karamja_achievement_diary = find(\"karamja_achievement_diary\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\achievement-diaries\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\achievementdiaries\\configs\\AchievementDiaryConfigs.kt",
+    "line": 49,
+    "domain": "varp",
+    "name": "karamja_achievement_diary2",
+    "kind": "kotlin-find",
+    "snippet": "val karamja_achievement_diary2 = find(\"karamja_achievement_diary2\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\clues\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\clues\\configs\\ClueRewardTablesImpl.kt",
+    "line": 105,
+    "domain": "obj",
+    "name": "team_cape",
+    "kind": "kotlin-reward-entry",
+    "snippet": "RewardEntry(\"team_cape\", 1, 80),"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\clues\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\clues\\configs\\ClueRewardTablesImpl.kt",
+    "line": 108,
+    "domain": "obj",
+    "name": "cape",
+    "kind": "kotlin-reward-entry",
+    "snippet": "RewardEntry(\"cape\", 1, 50),"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\clues\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\clues\\configs\\ClueRewardTablesImpl.kt",
+    "line": 130,
+    "domain": "obj",
+    "name": "blue_wizard_hat",
+    "kind": "kotlin-reward-entry",
+    "snippet": "RewardEntry(\"blue_wizard_hat\", 1, 20),"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\clues\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\clues\\configs\\ClueRewardTablesImpl.kt",
+    "line": 131,
+    "domain": "obj",
+    "name": "black_wizard_hat",
+    "kind": "kotlin-reward-entry",
+    "snippet": "RewardEntry(\"black_wizard_hat\", 1, 15),"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\clues\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\clues\\configs\\ClueScrollConfigs.kt",
+    "line": 20,
+    "domain": "obj",
+    "name": "clue_scroll_easy",
+    "kind": "kotlin-find",
+    "snippet": "val easy_clue_scroll = find(\"clue_scroll_easy\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\ranged\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\ranged\\configs\\CannonObjs.kt",
+    "line": 24,
+    "domain": "obj",
+    "name": "mcannonbase_obj",
+    "kind": "kotlin-find",
+    "snippet": "val base = find(\"mcannonbase_obj\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\ranged\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\ranged\\configs\\CannonObjs.kt",
+    "line": 27,
+    "domain": "obj",
+    "name": "mcannonstand_obj",
+    "kind": "kotlin-find",
+    "snippet": "val stand = find(\"mcannonstand_obj\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\ranged\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\ranged\\configs\\CannonObjs.kt",
+    "line": 30,
+    "domain": "obj",
+    "name": "mcannonbarrels_obj",
+    "kind": "kotlin-find",
+    "snippet": "val barrels = find(\"mcannonbarrels_obj\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\ranged\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\ranged\\configs\\CannonObjs.kt",
+    "line": 33,
+    "domain": "obj",
+    "name": "mcannonfurnace_obj",
+    "kind": "kotlin-find",
+    "snippet": "val furnace = find(\"mcannonfurnace_obj\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-combat\\src\\main\\resources\\org\\rsmod\\content\\other\\npccombat\\npcs.toml",
+    "line": 86,
+    "domain": "npc",
+    "name": "dwarf",
+    "kind": "toml",
+    "snippet": "npc = 'dwarf'"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-combat\\src\\main\\resources\\org\\rsmod\\content\\other\\npccombat\\npcs.toml",
+    "line": 100,
+    "domain": "npc",
+    "name": "bear",
+    "kind": "toml",
+    "snippet": "npc = 'bear'"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableNpcs.kt",
+    "line": 13,
+    "domain": "npc",
+    "name": "goblin_2",
+    "kind": "kotlin-find",
+    "snippet": "val goblin_2 = find(\"goblin_2\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableNpcs.kt",
+    "line": 14,
+    "domain": "npc",
+    "name": "goblin_3",
+    "kind": "kotlin-find",
+    "snippet": "val goblin_3 = find(\"goblin_3\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableNpcs.kt",
+    "line": 15,
+    "domain": "npc",
+    "name": "goblin_chef",
+    "kind": "kotlin-find",
+    "snippet": "val goblin_chef = find(\"goblin_chef\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableNpcs.kt",
+    "line": 20,
+    "domain": "npc",
+    "name": "chicken_2",
+    "kind": "kotlin-find",
+    "snippet": "val chicken_2 = find(\"chicken_2\") // TODO: verify internal name for rev-228 variant"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableObjs.kt",
+    "line": 37,
+    "domain": "obj",
+    "name": "bronze_bolts",
+    "kind": "kotlin-find",
+    "snippet": "val bronze_bolts = find(\"bronze_bolts\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableObjs.kt",
+    "line": 79,
+    "domain": "obj",
+    "name": "loop_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val loop_half_key = find(\"loop_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableObjs.kt",
+    "line": 80,
+    "domain": "obj",
+    "name": "tooth_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val tooth_half_key = find(\"tooth_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\DropTableObjs.kt",
+    "line": 81,
+    "domain": "obj",
+    "name": "giant_key",
+    "kind": "kotlin-find",
+    "snippet": "val giant_key = find(\"giant_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\BearDropTables.kt",
+    "line": 49,
+    "domain": "obj",
+    "name": "bear_fur",
+    "kind": "kotlin-find",
+    "snippet": "val bear_fur = find(\"bear_fur\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\DwarfDropTables.kt",
+    "line": 54,
+    "domain": "npc",
+    "name": "dwarf",
+    "kind": "kotlin-find",
+    "snippet": "val dwarf = find(\"dwarf\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\DwarfDropTables.kt",
+    "line": 61,
+    "domain": "obj",
+    "name": "bronze_bolts",
+    "kind": "kotlin-find",
+    "snippet": "val bronze_bolts = find(\"bronze_bolts\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\HillGiantDropTables.kt",
+    "line": 163,
+    "domain": "obj",
+    "name": "loop_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val loop_half_key = find(\"loop_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\HillGiantDropTables.kt",
+    "line": 164,
+    "domain": "obj",
+    "name": "tooth_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val tooth_half_key = find(\"tooth_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\HillGiantDropTables.kt",
+    "line": 167,
+    "domain": "obj",
+    "name": "giant_key",
+    "kind": "kotlin-find",
+    "snippet": "val giant_key = find(\"giant_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\LesserDemonDropTables.kt",
+    "line": 142,
+    "domain": "npc",
+    "name": "kourend_lesser_demon",
+    "kind": "kotlin-find",
+    "snippet": "val kourend_lesser_demon = find(\"kourend_lesser_demon\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\LesserDemonDropTables.kt",
+    "line": 165,
+    "domain": "obj",
+    "name": "jug_of_wine",
+    "kind": "kotlin-find",
+    "snippet": "val jug_of_wine = find(\"jug_of_wine\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\LesserDemonDropTables.kt",
+    "line": 168,
+    "domain": "obj",
+    "name": "loop_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val loop_half_key = find(\"loop_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\LesserDemonDropTables.kt",
+    "line": 169,
+    "domain": "obj",
+    "name": "tooth_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val tooth_half_key = find(\"tooth_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\LesserDemonDropTables.kt",
+    "line": 172,
+    "domain": "obj",
+    "name": "ensouled_demon_head",
+    "kind": "kotlin-find",
+    "snippet": "val ensouled_demon_head = find(\"ensouled_demon_head\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MossGiantDropTables.kt",
+    "line": 207,
+    "domain": "obj",
+    "name": "jangerberry_seed",
+    "kind": "kotlin-find",
+    "snippet": "val jangerberry_seed = find(\"jangerberry_seed\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MossGiantDropTables.kt",
+    "line": 209,
+    "domain": "obj",
+    "name": "wildblood_seed",
+    "kind": "kotlin-find",
+    "snippet": "val wildblood_seed = find(\"wildblood_seed\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MossGiantDropTables.kt",
+    "line": 214,
+    "domain": "obj",
+    "name": "whiteberry_seed",
+    "kind": "kotlin-find",
+    "snippet": "val whiteberry_seed = find(\"whiteberry_seed\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MossGiantDropTables.kt",
+    "line": 215,
+    "domain": "obj",
+    "name": "mushroom_spore",
+    "kind": "kotlin-find",
+    "snippet": "val mushroom_spore = find(\"mushroom_spore\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MossGiantDropTables.kt",
+    "line": 219,
+    "domain": "obj",
+    "name": "poison_ivy_seed",
+    "kind": "kotlin-find",
+    "snippet": "val poison_ivy_seed = find(\"poison_ivy_seed\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MossGiantDropTables.kt",
+    "line": 234,
+    "domain": "obj",
+    "name": "loop_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val loop_half_key = find(\"loop_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MossGiantDropTables.kt",
+    "line": 235,
+    "domain": "obj",
+    "name": "tooth_half_key",
+    "kind": "kotlin-find",
+    "snippet": "val tooth_half_key = find(\"tooth_half_key\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\MuggerDropTables.kt",
+    "line": 47,
+    "domain": "obj",
+    "name": "bronze_bolts",
+    "kind": "kotlin-find",
+    "snippet": "val bronze_bolts = find(\"bronze_bolts\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\WarriorDropTables.kt",
+    "line": 165,
+    "domain": "obj",
+    "name": "grimy_marrentill",
+    "kind": "kotlin-find",
+    "snippet": "val grimy_marrentill = find(\"grimy_marrentill\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 112,
+    "domain": "loc",
+    "name": "members_gate_taverley",
+    "kind": "kotlin-find",
+    "snippet": "val taverley_gate = find(\"members_gate_taverley\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 115,
+    "domain": "loc",
+    "name": "members_bridge_karamja",
+    "kind": "kotlin-find",
+    "snippet": "val karamja_bridge = find(\"members_bridge_karamja\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 118,
+    "domain": "loc",
+    "name": "members_gate_canifis",
+    "kind": "kotlin-find",
+    "snippet": "val canifis_gate = find(\"members_gate_canifis\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 121,
+    "domain": "loc",
+    "name": "members_dungeon_taverley_entrance",
+    "kind": "kotlin-find",
+    "snippet": "val taverley_dungeon_entrance = find(\"members_dungeon_taverley_entrance\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 124,
+    "domain": "loc",
+    "name": "members_basement_heroes",
+    "kind": "kotlin-find",
+    "snippet": "val heroes_guild_basement = find(\"members_basement_heroes\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 127,
+    "domain": "loc",
+    "name": "members_gate_legends",
+    "kind": "kotlin-find",
+    "snippet": "val legends_guild_gate = find(\"members_gate_legends\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 130,
+    "domain": "loc",
+    "name": "members_castle_wars",
+    "kind": "kotlin-find",
+    "snippet": "val castle_wars_entrance = find(\"members_castle_wars\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 133,
+    "domain": "loc",
+    "name": "members_fight_arena",
+    "kind": "kotlin-find",
+    "snippet": "val fight_arena_entrance = find(\"members_fight_arena\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\p2p-blocking\\src\\main\\kotlin\\org\\rsmod\\content\\other\\p2pblocking\\scripts\\F2PContentBlockingScript.kt",
+    "line": 136,
+    "domain": "loc",
+    "name": "members_wilderness_shortcut",
+    "kind": "kotlin-find",
+    "snippet": "val shortcut_wilderness_p2p = find(\"members_wilderness_shortcut\")"
+  },
+  {
+    "file": "rsmod\\content\\quests\\prince-ali-rescue\\src\\main\\kotlin\\org\\rsmod\\content\\quests\\princealirescue\\configs\\PrinceAliRescueNpcs.kt",
+    "line": 10,
+    "domain": "npc",
+    "name": "prince_ali",
+    "kind": "kotlin-find",
+    "snippet": "val prince_ali = find(\"prince_ali\") // The captive prince"
+  },
+  {
+    "file": "rsmod\\content\\quests\\prince-ali-rescue\\src\\main\\kotlin\\org\\rsmod\\content\\quests\\princealirescue\\configs\\PrinceAliRescueNpcs.kt",
+    "line": 11,
+    "domain": "npc",
+    "name": "chancellor_hassan",
+    "kind": "kotlin-find",
+    "snippet": "val hassan = find(\"chancellor_hassan\") // Reward giver in Al Kharid"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\al-kharid-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\al_kharid_rooftop\\AlKharidRooftopCourse.kt",
+    "line": 129,
+    "domain": "seq",
+    "name": "human_wall_climb",
+    "kind": "kotlin-find",
+    "snippet": "val human_wall_climb = find(\"human_wall_climb\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\al-kharid-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\al_kharid_rooftop\\AlKharidRooftopCourse.kt",
+    "line": 130,
+    "domain": "seq",
+    "name": "human_tightrope_walk",
+    "kind": "kotlin-find",
+    "snippet": "val human_tightrope_walk = find(\"human_tightrope_walk\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\al-kharid-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\al_kharid_rooftop\\AlKharidRooftopCourse.kt",
+    "line": 132,
+    "domain": "seq",
+    "name": "human_zip_line",
+    "kind": "kotlin-find",
+    "snippet": "val human_zip_line = find(\"human_zip_line\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\al-kharid-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\al_kharid_rooftop\\AlKharidRooftopCourse.kt",
+    "line": 133,
+    "domain": "seq",
+    "name": "human_climb_down",
+    "kind": "kotlin-find",
+    "snippet": "val human_climb_down = find(\"human_climb_down\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\draynor-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\draynor_rooftop\\DraynorRooftopCourse.kt",
+    "line": 132,
+    "domain": "seq",
+    "name": "human_wall_climb",
+    "kind": "kotlin-find",
+    "snippet": "val human_wall_climb = find(\"human_wall_climb\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\draynor-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\draynor_rooftop\\DraynorRooftopCourse.kt",
+    "line": 133,
+    "domain": "seq",
+    "name": "human_tightrope_walk",
+    "kind": "kotlin-find",
+    "snippet": "val human_tightrope_walk = find(\"human_tightrope_walk\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\draynor-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\draynor_rooftop\\DraynorRooftopCourse.kt",
+    "line": 134,
+    "domain": "seq",
+    "name": "human_wall_balance",
+    "kind": "kotlin-find",
+    "snippet": "val human_wall_balance = find(\"human_wall_balance\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\draynor-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\draynor_rooftop\\DraynorRooftopCourse.kt",
+    "line": 135,
+    "domain": "seq",
+    "name": "human_wall_scramble",
+    "kind": "kotlin-find",
+    "snippet": "val human_wall_scramble = find(\"human_wall_scramble\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\draynor-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\draynor_rooftop\\DraynorRooftopCourse.kt",
+    "line": 136,
+    "domain": "seq",
+    "name": "human_leap_gap",
+    "kind": "kotlin-find",
+    "snippet": "val human_leap_gap = find(\"human_leap_gap\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\draynor-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\draynor_rooftop\\DraynorRooftopCourse.kt",
+    "line": 137,
+    "domain": "seq",
+    "name": "human_jump",
+    "kind": "kotlin-find",
+    "snippet": "val human_jump = find(\"human_jump\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\varrock-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\varrock_rooftop\\VarrockRooftopCourse.kt",
+    "line": 143,
+    "domain": "seq",
+    "name": "human_wall_climb",
+    "kind": "kotlin-find",
+    "snippet": "val human_wall_climb = find(\"human_wall_climb\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\varrock-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\varrock_rooftop\\VarrockRooftopCourse.kt",
+    "line": 144,
+    "domain": "seq",
+    "name": "human_tightrope_walk",
+    "kind": "kotlin-find",
+    "snippet": "val human_tightrope_walk = find(\"human_tightrope_walk\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\varrock-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\varrock_rooftop\\VarrockRooftopCourse.kt",
+    "line": 145,
+    "domain": "seq",
+    "name": "human_leap_gap",
+    "kind": "kotlin-find",
+    "snippet": "val human_leap_gap = find(\"human_leap_gap\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\varrock-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\varrock_rooftop\\VarrockRooftopCourse.kt",
+    "line": 146,
+    "domain": "seq",
+    "name": "human_wall_swing",
+    "kind": "kotlin-find",
+    "snippet": "val human_wall_swing = find(\"human_wall_swing\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\varrock-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\varrock_rooftop\\VarrockRooftopCourse.kt",
+    "line": 147,
+    "domain": "seq",
+    "name": "human_wall_scramble",
+    "kind": "kotlin-find",
+    "snippet": "val human_wall_scramble = find(\"human_wall_scramble\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\varrock-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\varrock_rooftop\\VarrockRooftopCourse.kt",
+    "line": 148,
+    "domain": "seq",
+    "name": "human_step_up",
+    "kind": "kotlin-find",
+    "snippet": "val human_step_up = find(\"human_step_up\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\courses\\varrock-rooftop\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\courses\\varrock_rooftop\\VarrockRooftopCourse.kt",
+    "line": 149,
+    "domain": "seq",
+    "name": "human_leap_down",
+    "kind": "kotlin-find",
+    "snippet": "val human_leap_down = find(\"human_leap_down\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 8,
+    "domain": "loc",
+    "name": "gnome_obstacle_net_1",
+    "kind": "kotlin-find",
+    "snippet": "val gnome_obstacle_net_1 = find(\"gnome_obstacle_net_1\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 9,
+    "domain": "loc",
+    "name": "gnome_tree_branch_up",
+    "kind": "kotlin-find",
+    "snippet": "val gnome_tree_branch_up = find(\"gnome_tree_branch_up\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 10,
+    "domain": "loc",
+    "name": "gnome_balancing_rope",
+    "kind": "kotlin-find",
+    "snippet": "val gnome_balancing_rope = find(\"gnome_balancing_rope\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 11,
+    "domain": "loc",
+    "name": "gnome_tree_branch_down",
+    "kind": "kotlin-find",
+    "snippet": "val gnome_tree_branch_down = find(\"gnome_tree_branch_down\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 12,
+    "domain": "loc",
+    "name": "gnome_obstacle_net_2",
+    "kind": "kotlin-find",
+    "snippet": "val gnome_obstacle_net_2 = find(\"gnome_obstacle_net_2\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 13,
+    "domain": "loc",
+    "name": "gnome_obstacle_pipe_left",
+    "kind": "kotlin-find",
+    "snippet": "val gnome_obstacle_pipe_left = find(\"gnome_obstacle_pipe_left\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 14,
+    "domain": "loc",
+    "name": "gnome_obstacle_pipe_right",
+    "kind": "kotlin-find",
+    "snippet": "val gnome_obstacle_pipe_right = find(\"gnome_obstacle_pipe_right\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 17,
+    "domain": "loc",
+    "name": "agility_ropeswing",
+    "kind": "kotlin-find",
+    "snippet": "val barb_ropeswing = find(\"agility_ropeswing\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 19,
+    "domain": "loc",
+    "name": "barb_obstacle_net",
+    "kind": "kotlin-find",
+    "snippet": "val barb_obstacle_net = find(\"barb_obstacle_net\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 20,
+    "domain": "loc",
+    "name": "barb_balancing_ledge",
+    "kind": "kotlin-find",
+    "snippet": "val barb_balancing_ledge = find(\"barb_balancing_ledge\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 21,
+    "domain": "loc",
+    "name": "agility_crumbling_wall",
+    "kind": "kotlin-find",
+    "snippet": "val barb_crumbling_wall_1 = find(\"agility_crumbling_wall\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 22,
+    "domain": "loc",
+    "name": "agility_crumbling_wall",
+    "kind": "kotlin-find",
+    "snippet": "val barb_crumbling_wall_2 = find(\"agility_crumbling_wall\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 23,
+    "domain": "loc",
+    "name": "agility_crumbling_wall",
+    "kind": "kotlin-find",
+    "snippet": "val barb_crumbling_wall_3 = find(\"agility_crumbling_wall\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 24,
+    "domain": "loc",
+    "name": "barb_ladder",
+    "kind": "kotlin-find",
+    "snippet": "val barb_ladder = find(\"barb_ladder\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 27,
+    "domain": "loc",
+    "name": "wild_obstacle_pipe",
+    "kind": "kotlin-find",
+    "snippet": "val wild_obstacle_pipe = find(\"wild_obstacle_pipe\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 28,
+    "domain": "loc",
+    "name": "agility_ropeswing",
+    "kind": "kotlin-find",
+    "snippet": "val wild_ropeswing = find(\"agility_ropeswing\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 29,
+    "domain": "loc",
+    "name": "wild_stepping_stone",
+    "kind": "kotlin-find",
+    "snippet": "val wild_stepping_stone = find(\"wild_stepping_stone\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 31,
+    "domain": "loc",
+    "name": "wild_rocks",
+    "kind": "kotlin-find",
+    "snippet": "val wild_rocks = find(\"wild_rocks\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 34,
+    "domain": "loc",
+    "name": "seers_wall_climb",
+    "kind": "kotlin-find",
+    "snippet": "val seers_wall_climb = find(\"seers_wall_climb\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 35,
+    "domain": "loc",
+    "name": "seers_gap_1",
+    "kind": "kotlin-find",
+    "snippet": "val seers_gap_1 = find(\"seers_gap_1\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 36,
+    "domain": "loc",
+    "name": "seers_tightrope",
+    "kind": "kotlin-find",
+    "snippet": "val seers_tightrope = find(\"seers_tightrope\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 37,
+    "domain": "loc",
+    "name": "seers_gap_2",
+    "kind": "kotlin-find",
+    "snippet": "val seers_gap_2 = find(\"seers_gap_2\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 38,
+    "domain": "loc",
+    "name": "seers_gap_3",
+    "kind": "kotlin-find",
+    "snippet": "val seers_gap_3 = find(\"seers_gap_3\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\agility\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\agility\\configs\\AgilityLocs.kt",
+    "line": 39,
+    "domain": "loc",
+    "name": "seers_edge",
+    "kind": "kotlin-find",
+    "snippet": "val seers_edge = find(\"seers_edge\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 102,
+    "domain": "obj",
+    "name": "small_fishing_net",
+    "kind": "kotlin-find",
+    "snippet": "val small_fishing_net = find(\"small_fishing_net\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 103,
+    "domain": "obj",
+    "name": "big_fishing_net",
+    "kind": "kotlin-find",
+    "snippet": "val big_fishing_net = find(\"big_fishing_net\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 106,
+    "domain": "obj",
+    "name": "barbarian_rod",
+    "kind": "kotlin-find",
+    "snippet": "val barbarian_rod = find(\"barbarian_rod\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 110,
+    "domain": "obj",
+    "name": "dark_crab_pot",
+    "kind": "kotlin-find",
+    "snippet": "val dark_crab_pot = find(\"dark_crab_pot\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 134,
+    "domain": "obj",
+    "name": "leaping_trout",
+    "kind": "kotlin-find",
+    "snippet": "val leaping_trout = find(\"leaping_trout\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 135,
+    "domain": "obj",
+    "name": "leaping_salmon",
+    "kind": "kotlin-find",
+    "snippet": "val leaping_salmon = find(\"leaping_salmon\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 136,
+    "domain": "obj",
+    "name": "leaping_sturgeon",
+    "kind": "kotlin-find",
+    "snippet": "val leaping_sturgeon = find(\"leaping_sturgeon\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 153,
+    "domain": "seq",
+    "name": "human_fishing_net",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_net = find(\"human_fishing_net\") // anim 621"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 154,
+    "domain": "seq",
+    "name": "human_fishing_bignet",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_bignet = find(\"human_fishing_bignet\") // anim 620"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 155,
+    "domain": "seq",
+    "name": "human_fishing_bait",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_bait = find(\"human_fishing_bait\") // anim 622/623 (rod loop)"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 156,
+    "domain": "seq",
+    "name": "human_fishing_cage",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_cage = find(\"human_fishing_cage\") // anim 619"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 157,
+    "domain": "seq",
+    "name": "human_fishing_harpoon",
+    "kind": "kotlin-find",
+    "snippet": "val human_fishing_harpoon = find(\"human_fishing_harpoon\") // anim 618"
+  },
+  {
+    "file": "rsmod\\content\\skills\\herblore\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\herblore\\configs\\HerbloreObjs.kt",
+    "line": 7,
+    "domain": "obj",
+    "name": "grimy_marrentill",
+    "kind": "kotlin-find",
+    "snippet": "val grimy_marrentill = find(\"grimy_marrentill\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\herblore\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\herblore\\configs\\HerbloreObjs.kt",
+    "line": 10,
+    "domain": "obj",
+    "name": "grimy_ranarr_weed",
+    "kind": "kotlin-find",
+    "snippet": "val grimy_ranarr_weed = find(\"grimy_ranarr_weed\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\herblore\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\herblore\\configs\\HerbloreObjs.kt",
+    "line": 12,
+    "domain": "obj",
+    "name": "grimy_irit_leaf",
+    "kind": "kotlin-find",
+    "snippet": "val grimy_irit_leaf = find(\"grimy_irit_leaf\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\prayer\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\prayer\\scripts\\Priest.kt",
+    "line": 73,
+    "domain": "npc",
+    "name": "lumbridge_priest",
+    "kind": "kotlin-find",
+    "snippet": "val lumbridge_priest = find(\"lumbridge_priest\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\prayer\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\prayer\\scripts\\Priest.kt",
+    "line": 74,
+    "domain": "npc",
+    "name": "varrock_priest",
+    "kind": "kotlin-find",
+    "snippet": "val varrock_priest = find(\"varrock_priest\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\slayer\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\slayer\\scripts\\Slayer.kt",
+    "line": 425,
+    "domain": "obj",
+    "name": "enchanted_gem",
+    "kind": "kotlin-find",
+    "snippet": "val enchanted_gem = find(\"enchanted_gem\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\slayer\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\slayer\\scripts\\Slayer.kt",
+    "line": 426,
+    "domain": "obj",
+    "name": "slayer_ring",
+    "kind": "kotlin-find",
+    "snippet": "val slayer_ring = find(\"slayer_ring\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 820,
+    "domain": "npc",
+    "name": "farmer",
+    "kind": "kotlin-find",
+    "snippet": "val farmer = find(\"farmer\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 821,
+    "domain": "npc",
+    "name": "ham_member",
+    "kind": "kotlin-find",
+    "snippet": "val ham_member = find(\"ham_member\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 822,
+    "domain": "npc",
+    "name": "ham_guard",
+    "kind": "kotlin-find",
+    "snippet": "val ham_guard = find(\"ham_guard\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 826,
+    "domain": "npc",
+    "name": "master_farmer",
+    "kind": "kotlin-find",
+    "snippet": "val master_farmer = find(\"master_farmer\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 829,
+    "domain": "npc",
+    "name": "menaphite_thug",
+    "kind": "kotlin-find",
+    "snippet": "val menaphite_thug = find(\"menaphite_thug\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 904,
+    "domain": "loc",
+    "name": "hiddenchest_closed",
+    "kind": "kotlin-find",
+    "snippet": "val chest_11735 = find(\"hiddenchest_closed\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 914,
+    "domain": "seq",
+    "name": "human_thieving_stall",
+    "kind": "kotlin-find",
+    "snippet": "val human_pickpocket = find(\"human_thieving_stall\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 917,
+    "domain": "seq",
+    "name": "human_thieving_stall",
+    "kind": "kotlin-find",
+    "snippet": "val human_thieving_stall = find(\"human_thieving_stall\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 930,
+    "domain": "obj",
+    "name": "rustysword",
+    "kind": "kotlin-find",
+    "snippet": "val rusty_sword = find(\"rustysword\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 944,
+    "domain": "obj",
+    "name": "steel_arrow_tips",
+    "kind": "kotlin-find",
+    "snippet": "val steel_arrowtips = find(\"steel_arrow_tips\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 970,
+    "domain": "obj",
+    "name": "bear_fur",
+    "kind": "kotlin-find",
+    "snippet": "val bear_fur = find(\"bear_fur\") // Correct in main sym"
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "name": "Giant spider",
+  "combat_level": 2,
+  "hitpoints": 5,
+  "npc_ids": [3017],
+  "aggressive_level": 4,
+  "max_damage": 1,
+  "attack_style": "CRUSH",
+  "attack_speed": 4,
+  "respawn_time": 30,
+  "combat_stats": {
+    "attack": 1,
+    "strength": 1,
+    "defence": 1,
+    "ranged": 1,
+    "magic": 1
+  },
+  "attack_bonus": {
+    "stab": 0,
+    "slash": 0,
+    "crush": 0,
+    "magic": 0,
+    "ranged": 0
+  },
+  "defence_bonus": {
+    "stab": 0,
+    "slash": 0,
+    "crush": 0,
+    "magic": 0,
+    "ranged": 0
+  },
+  "immunities": {
+    "poison": false,
+    "venom": false
+  },
+  "animations": {
+    "attack": 5327,
+    "defend": 5328,
+    "death": 5329
+  },
+  "slayer": {
+    "level": 1,
+    "xp": 5,
+    "tasks": ["Spiders"]
+  },
+  "drops": [
+    {
+      "name": "Looting bag",
+      "rate": "1/15",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/316",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

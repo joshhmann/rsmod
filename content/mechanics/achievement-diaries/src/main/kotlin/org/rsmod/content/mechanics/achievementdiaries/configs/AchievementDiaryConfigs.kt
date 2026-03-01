@@ -45,8 +45,10 @@ object AchievementDiaryVarps : VarpReferences() {
     val kandarin_achievement_diary2 = find("kandarin_achievement_diary2")
 
     // Karamja Diary
-    // TODO(rev233): Karamja diary does not expose `karamja_achievement_diary*` varps in our symbols.
-    // Keep stable placeholders so packCache remains strict-clean until Karamja diary storage is verified.
+    // TODO(rev233): Karamja diary does not expose `karamja_achievement_diary*` varps in our
+    // symbols.
+    // Keep stable placeholders so packCache remains strict-clean until Karamja diary storage is
+    // verified.
     val karamja_achievement_diary = find("achievement_diary_taskcounts5")
     val karamja_achievement_diary2 = find("achievement_diary_taskcounts6")
 

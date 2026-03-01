@@ -34,44 +34,28 @@ class VarrockRooftopCourse @Inject constructor() : PluginScript() {
 
     override fun ScriptContext.startup() {
         // Obstacle 1: Rough Wall (start)
-        onOpLoc1(AgilityLocs.varrock_wallclimb) {
-            attemptObstacle(ObstacleType.ROUGH_WALL)
-        }
+        onOpLoc1(AgilityLocs.varrock_wallclimb) { attemptObstacle(ObstacleType.ROUGH_WALL) }
 
         // Obstacle 2: Clothesline
-        onOpLoc1(AgilityLocs.varrock_clothesline) {
-            attemptObstacle(ObstacleType.CLOTHESLINE)
-        }
+        onOpLoc1(AgilityLocs.varrock_clothesline) { attemptObstacle(ObstacleType.CLOTHESLINE) }
 
         // Obstacle 3: Gap leap to ruins
-        onOpLoc1(AgilityLocs.varrock_leaptoruins) {
-            attemptObstacle(ObstacleType.GAP_LEAP_1)
-        }
+        onOpLoc1(AgilityLocs.varrock_leaptoruins) { attemptObstacle(ObstacleType.GAP_LEAP_1) }
 
         // Obstacle 4: Wall swing
-        onOpLoc1(AgilityLocs.varrock_wallswing) {
-            attemptObstacle(ObstacleType.WALL_SWING)
-        }
+        onOpLoc1(AgilityLocs.varrock_wallswing) { attemptObstacle(ObstacleType.WALL_SWING) }
 
         // Obstacle 5: Gap leap
-        onOpLoc1(AgilityLocs.varrock_leaptobalcony) {
-            attemptObstacle(ObstacleType.GAP_LEAP_2)
-        }
+        onOpLoc1(AgilityLocs.varrock_leaptobalcony) { attemptObstacle(ObstacleType.GAP_LEAP_2) }
 
         // Obstacle 6: Wall scramble
-        onOpLoc1(AgilityLocs.varrock_wallscramble) {
-            attemptObstacle(ObstacleType.WALL_SCRAMBLE)
-        }
+        onOpLoc1(AgilityLocs.varrock_wallscramble) { attemptObstacle(ObstacleType.WALL_SCRAMBLE) }
 
         // Obstacle 7: Step up roof
-        onOpLoc1(AgilityLocs.varrock_stepuproof) {
-            attemptObstacle(ObstacleType.STEP_UP)
-        }
+        onOpLoc1(AgilityLocs.varrock_stepuproof) { attemptObstacle(ObstacleType.STEP_UP) }
 
         // Obstacle 8: Gap leap down (finish)
-        onOpLoc1(AgilityLocs.varrock_leapdown) {
-            attemptObstacle(ObstacleType.GAP_LEAP_DOWN)
-        }
+        onOpLoc1(AgilityLocs.varrock_leapdown) { attemptObstacle(ObstacleType.GAP_LEAP_DOWN) }
     }
 
     private suspend fun ProtectedAccess.attemptObstacle(type: ObstacleType) {

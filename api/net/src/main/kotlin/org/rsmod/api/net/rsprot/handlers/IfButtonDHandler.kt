@@ -4,7 +4,6 @@ import com.github.michaelbull.logging.InlineLogger
 import jakarta.inject.Inject
 import net.rsprot.protocol.game.incoming.buttons.IfButtonD
 import org.rsmod.annotations.InternalApi
-import org.rsmod.api.config.refs.objs
 import org.rsmod.api.net.rsprot.player.InterfaceEvents
 import org.rsmod.api.player.protect.ProtectedAccessLauncher
 import org.rsmod.api.player.ui.IfModalDrag

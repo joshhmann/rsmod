@@ -1,0 +1,673 @@
+{
+  "skill": "fishing",
+  "source": "OSRS Rev 233 cache via MCP osrs-cache tools",
+  "extraction_date": "2026-02-22",
+  
+  "tools": {
+    "small_fishing_net": {
+      "id": 303,
+      "sym_name": "net",
+      "level_req": 1,
+      "animation": 621,
+      "anim_sym": "human_smallnet",
+      "description": "Used to catch shrimp, anchovies, and monkfish"
+    },
+    "big_fishing_net": {
+      "id": 305,
+      "sym_name": "big_net",
+      "level_req": 16,
+      "animation": 620,
+      "anim_sym": "human_largenet",
+      "description": "Used to catch mackerel, cod, bass, and shark"
+    },
+    "fishing_rod": {
+      "id": 307,
+      "sym_name": "fishing_rod",
+      "level_req": 5,
+      "animation": 622,
+      "anim_sym": "human_fishing_casting",
+      "bait": "fishing_bait",
+      "description": "Used with bait to catch sardine, herring, pike, and anglerfish"
+    },
+    "fly_fishing_rod": {
+      "id": 309,
+      "sym_name": "fly_fishing_rod",
+      "level_req": 20,
+      "animation": 622,
+      "anim_sym": "human_fishing_casting",
+      "bait": "feather",
+      "description": "Used with feathers to catch trout and salmon"
+    },
+    "barbarian_rod": {
+      "id": 11323,
+      "sym_name": "brut_fishing_rod",
+      "level_req": 48,
+      "animation": 622,
+      "anim_sym": "human_fishing_casting",
+      "bait": "feather",
+      "description": "Used at Otto's Grotto for barbarian fishing (leaping fish)"
+    },
+    "lobster_pot": {
+      "id": 301,
+      "sym_name": "lobster_pot",
+      "level_req": 40,
+      "animation": 619,
+      "anim_sym": "human_lobster",
+      "description": "Used to catch lobsters"
+    },
+    "harpoon": {
+      "id": 311,
+      "sym_name": "harpoon",
+      "level_req": 35,
+      "animation": 618,
+      "anim_sym": "human_harpoon",
+      "description": "Used to catch tuna, swordfish, and shark"
+    },
+    "oily_fishing_rod": {
+      "id": 1585,
+      "sym_name": "oily_fishing_rod",
+      "level_req": 53,
+      "animation": 622,
+      "anim_sym": "human_fishing_casting_pearl_oily",
+      "bait": "fishing_bait",
+      "description": "Used to catch lava eels"
+    },
+    "dark_crab_pot": {
+      "id": 11940,
+      "sym_name": "wilderness_fishing_bait",
+      "level_req": 85,
+      "animation": 619,
+      "anim_sym": "human_lobster",
+      "description": "Special pot for catching dark crabs in the Wilderness"
+    },
+    "dragon_harpoon": {
+      "id": 21028,
+      "sym_name": "dragon_harpoon",
+      "level_req": 61,
+      "animation": 7401,
+      "anim_sym": "human_harpoon_dragon",
+      "description": "Special harpoon with +20% catch rate boost (special attack)"
+    },
+    "infernal_harpoon": {
+      "id": 21031,
+      "sym_name": "infernal_harpoon",
+      "level_req": 75,
+      "animation": 7402,
+      "anim_sym": "human_harpoon_infernal",
+      "description": "Harpoon with 1/3 chance to cook the catch"
+    },
+    "crystal_harpoon": {
+      "id": 23762,
+      "sym_name": "crystal_harpoon",
+      "level_req": 71,
+      "animation": 8336,
+      "anim_sym": "human_harpoon_crystal",
+      "description": "Elven harpoon with +20% catch rate boost"
+    }
+  },
+
+  "bait": {
+    "fishing_bait": {
+      "id": 313,
+      "sym_name": "fishing_bait",
+      "description": "Standard bait for rod fishing"
+    },
+    "feather": {
+      "id": 314,
+      "sym_name": "feather",
+      "description": "Used for fly fishing"
+    },
+    "fish_offcuts": {
+      "id": 11334,
+      "sym_name": "brut_fish_cuts",
+      "description": "Used as bait for barbarian fishing"
+    }
+  },
+
+  "fish": {
+    "shrimp": {
+      "raw_id": 317,
+      "raw_sym": "raw_shrimp",
+      "cooked_id": 315,
+      "cooked_sym": "shrimp",
+      "level_req": 1,
+      "xp": 10.0,
+      "tool": "small_fishing_net",
+      "bait": null,
+      "cooking_level": 1,
+      "cooking_xp": 30.0
+    },
+    "sardine": {
+      "raw_id": 327,
+      "raw_sym": "raw_sardine",
+      "cooked_id": 325,
+      "cooked_sym": "sardine",
+      "level_req": 5,
+      "xp": 20.0,
+      "tool": "fishing_rod",
+      "bait": "fishing_bait",
+      "cooking_level": 1,
+      "cooking_xp": 40.0
+    },
+    "herring": {
+      "raw_id": 345,
+      "raw_sym": "raw_herring",
+      "cooked_id": 347,
+      "cooked_sym": "herring",
+      "level_req": 10,
+      "xp": 30.0,
+      "tool": "fishing_rod",
+      "bait": "fishing_bait",
+      "cooking_level": 5,
+      "cooking_xp": 50.0
+    },
+    "anchovies": {
+      "raw_id": 321,
+      "raw_sym": "raw_anchovies",
+      "cooked_id": 319,
+      "cooked_sym": "anchovies",
+      "level_req": 15,
+      "xp": 40.0,
+      "tool": "small_fishing_net",
+      "bait": null,
+      "cooking_level": 1,
+      "cooking_xp": 30.0
+    },
+    "mackerel": {
+      "raw_id": 353,
+      "raw_sym": "raw_mackerel",
+      "cooked_id": 355,
+      "cooked_sym": "mackerel",
+      "level_req": 16,
+      "xp": 20.0,
+      "tool": "big_fishing_net",
+      "bait": null,
+      "cooking_level": 10,
+      "cooking_xp": 60.0
+    },
+    "trout": {
+      "raw_id": 335,
+      "raw_sym": "raw_trout",
+      "cooked_id": 333,
+      "cooked_sym": "trout",
+      "level_req": 20,
+      "xp": 50.0,
+      "tool": "fly_fishing_rod",
+      "bait": "feather",
+      "cooking_level": 15,
+      "cooking_xp": 70.0
+    },
+    "cod": {
+      "raw_id": 341,
+      "raw_sym": "raw_cod",
+      "cooked_id": 339,
+      "cooked_sym": "cod",
+      "level_req": 23,
+      "xp": 45.0,
+      "tool": "big_fishing_net",
+      "bait": null,
+      "cooking_level": 18,
+      "cooking_xp": 75.0
+    },
+    "pike": {
+      "raw_id": 349,
+      "raw_sym": "raw_pike",
+      "cooked_id": 351,
+      "cooked_sym": "pike",
+      "level_req": 25,
+      "xp": 60.0,
+      "tool": "fishing_rod",
+      "bait": "fishing_bait",
+      "cooking_level": 20,
+      "cooking_xp": 80.0
+    },
+    "salmon": {
+      "raw_id": 331,
+      "raw_sym": "raw_salmon",
+      "cooked_id": 329,
+      "cooked_sym": "salmon",
+      "level_req": 30,
+      "xp": 70.0,
+      "tool": "fly_fishing_rod",
+      "bait": "feather",
+      "cooking_level": 25,
+      "cooking_xp": 90.0
+    },
+    "tuna": {
+      "raw_id": 359,
+      "raw_sym": "raw_tuna",
+      "cooked_id": 361,
+      "cooked_sym": "tuna",
+      "level_req": 35,
+      "xp": 80.0,
+      "tool": "harpoon",
+      "bait": null,
+      "cooking_level": 30,
+      "cooking_xp": 100.0
+    },
+    "lobster": {
+      "raw_id": 377,
+      "raw_sym": "raw_lobster",
+      "cooked_id": 379,
+      "cooked_sym": "lobster",
+      "level_req": 40,
+      "xp": 90.0,
+      "tool": "lobster_pot",
+      "bait": null,
+      "cooking_level": 40,
+      "cooking_xp": 120.0
+    },
+    "bass": {
+      "raw_id": 363,
+      "raw_sym": "raw_bass",
+      "cooked_id": 365,
+      "cooked_sym": "bass",
+      "level_req": 46,
+      "xp": 100.0,
+      "tool": "big_fishing_net",
+      "bait": null,
+      "cooking_level": 43,
+      "cooking_xp": 130.0
+    },
+    "leaping_trout": {
+      "raw_id": 11328,
+      "raw_sym": "brut_spawning_trout",
+      "cooked_id": null,
+      "cooked_sym": null,
+      "level_req": 48,
+      "xp": 50.0,
+      "tool": "barbarian_rod",
+      "bait": "feather",
+      "notes": "Barbarian fishing - also gives Strength and Agility XP"
+    },
+    "swordfish": {
+      "raw_id": 371,
+      "raw_sym": "raw_swordfish",
+      "cooked_id": 373,
+      "cooked_sym": "swordfish",
+      "level_req": 50,
+      "xp": 100.0,
+      "tool": "harpoon",
+      "bait": null,
+      "cooking_level": 45,
+      "cooking_xp": 140.0
+    },
+    "leaping_salmon": {
+      "raw_id": 11330,
+      "raw_sym": "brut_spawning_salmon",
+      "cooked_id": null,
+      "cooked_sym": null,
+      "level_req": 58,
+      "xp": 70.0,
+      "tool": "barbarian_rod",
+      "bait": "feather",
+      "notes": "Barbarian fishing - also gives Strength and Agility XP"
+    },
+    "monkfish": {
+      "raw_id": 7944,
+      "raw_sym": "raw_monkfish",
+      "cooked_id": 7946,
+      "cooked_sym": "monkfish",
+      "level_req": 62,
+      "xp": 120.0,
+      "tool": "small_fishing_net",
+      "bait": null,
+      "cooking_level": 62,
+      "cooking_xp": 150.0
+    },
+    "leaping_sturgeon": {
+      "raw_id": 11332,
+      "raw_sym": "brut_sturgeon",
+      "cooked_id": null,
+      "cooked_sym": null,
+      "level_req": 70,
+      "xp": 80.0,
+      "tool": "barbarian_rod",
+      "bait": "feather",
+      "notes": "Barbarian fishing - also gives Strength and Agility XP"
+    },
+    "shark": {
+      "raw_id": 383,
+      "raw_sym": "raw_shark",
+      "cooked_id": 385,
+      "cooked_sym": "shark",
+      "level_req": 76,
+      "xp": 110.0,
+      "tool": "harpoon",
+      "bait": null,
+      "cooking_level": 80,
+      "cooking_xp": 210.0
+    },
+    "anglerfish": {
+      "raw_id": 13439,
+      "raw_sym": "raw_anglerfish",
+      "cooked_id": 13441,
+      "cooked_sym": "anglerfish",
+      "level_req": 82,
+      "xp": 120.0,
+      "tool": "fishing_rod",
+      "bait": "fishing_bait",
+      "cooking_level": 84,
+      "cooking_xp": 230.0
+    },
+    "dark_crab": {
+      "raw_id": 11934,
+      "raw_sym": "raw_dark_crab",
+      "cooked_id": 11936,
+      "cooked_sym": "dark_crab",
+      "level_req": 85,
+      "xp": 130.0,
+      "tool": "dark_crab_pot",
+      "bait": null,
+      "cooking_level": 90,
+      "cooking_xp": 215.0
+    },
+    "karambwan": {
+      "raw_id": 3142,
+      "raw_sym": "tbwt_raw_karambwan",
+      "cooked_id": 3144,
+      "cooked_sym": "tbwt_cooked_karambwan",
+      "level_req": 65,
+      "xp": 105.0,
+      "tool": "karambwan_vessel",
+      "bait": null,
+      "notes": "Requires Tai Bwo Wannai Trio quest completion"
+    }
+  },
+
+  "fishing_spots": {
+    "net_bait_spot": {
+      "npc_ids": [1518, 1511, 1525, 1524],
+      "sym_names": ["0_50_50_freshfish"],
+      "options": ["small net", "bait"],
+      "catches": {
+        "small_net": ["shrimp", "anchovies"],
+        "bait": ["sardine", "herring"]
+      },
+      "description": "Net/Bait spots - typically found in freshwater areas like Lumbridge Swamp"
+    },
+    "lure_bait_spot": {
+      "npc_ids": [1506, 1508, 1509, 1510, 1515, 1516, 1527, 1528, 1529, 1530],
+      "sym_names": ["0_50_50_lurefish"],
+      "options": ["lure", "bait"],
+      "catches": {
+        "lure": ["trout", "salmon"],
+        "bait": ["pike"]
+      },
+      "description": "Lure/Bait spots - typically found in rivers like Lumbridge River"
+    },
+    "cage_harpoon_spot": {
+      "npc_ids": [1519, 1521, 1522, 1523, 1536, 3913, 3914, 3915],
+      "sym_names": ["0_50_49_saltfish"],
+      "options": ["cage", "harpoon"],
+      "catches": {
+        "cage": ["lobster"],
+        "harpoon": ["tuna", "swordfish"]
+      },
+      "description": "Cage/Harpoon spots - typically found in coastal areas like Karamja"
+    },
+    "big_net_harpoon_spot": {
+      "npc_ids": [1520, 1522, 1533, 1534, 3911, 3912],
+      "sym_names": ["0_50_49_bignet"],
+      "options": ["big net", "harpoon"],
+      "catches": {
+        "big_net": ["mackerel", "cod", "bass"],
+        "harpoon": ["shark"]
+      },
+      "description": "Big Net/Harpoon spots - typically found in higher-level coastal areas"
+    },
+    "monkfish_spot": {
+      "npc_ids": [4316, 4317, 4318, 4319],
+      "sym_names": ["0_50_49_monkfish"],
+      "options": ["net", "harpoon"],
+      "catches": {
+        "net": ["monkfish"],
+        "harpoon": ["swordfish"]
+      },
+      "description": "Monkfish spots - found at Piscatoris Fishing Colony (requires Swan Song quest)"
+    },
+    "barbarian_spot": {
+      "npc_ids": [1542, 7323],
+      "sym_names": ["0_50_50_brut", "0_19_55_brut_fishing_spot"],
+      "options": ["use-rod"],
+      "catches": {
+        "barbarian_rod": ["leaping_trout", "leaping_salmon", "leaping_sturgeon"]
+      },
+      "description": "Barbarian fishing spots - found at Otto's Grotto"
+    },
+    "dark_crab_spot": {
+      "npc_ids": [1535, 1536],
+      "sym_names": ["0_50_49_darkcrab"],
+      "options": ["cage"],
+      "catches": {
+        "cage": ["dark_crab"]
+      },
+      "description": "Dark crab spots - found in Wilderness Resource Area"
+    },
+    "anglerfish_spot": {
+      "npc_ids": [6825, 6826, 6827],
+      "sym_names": ["0_50_50_anglerfish"],
+      "options": ["bait"],
+      "catches": {
+        "bait": ["anglerfish"]
+      },
+      "description": "Anglerfish spots - found at Port Piscarilius in Great Kourend"
+    },
+    "karambwan_spot": {
+      "npc_ids": [4712, 4713, 4714],
+      "options": ["fish"],
+      "catches": {
+        "karambwan_vessel": ["karambwan"]
+      },
+      "description": "Karambwan spots - found at Karamja (requires Tai Bwo Wannai Trio quest)"
+    }
+  },
+
+  "fishing_locations": [
+    {
+      "name": "Lumbridge Swamp",
+      "description": "Net/Bait fishing for shrimp and anchovies",
+      "spot_type": "net_bait_spot",
+      "coordinates": [
+        {"x": 3244, "z": 3155, "plane": 0},
+        {"x": 3246, "z": 3144, "plane": 0}
+      ],
+      "fish": ["shrimp", "sardine", "herring", "anchovies"],
+      "f2p": true
+    },
+    {
+      "name": "Lumbridge River",
+      "description": "Lure/Bait fishing for trout and salmon",
+      "spot_type": "lure_bait_spot",
+      "coordinates": [
+        {"x": 3238, "z": 3251, "plane": 0},
+        {"x": 3240, "z": 3247, "plane": 0}
+      ],
+      "fish": ["trout", "salmon", "pike"],
+      "f2p": true
+    },
+    {
+      "name": "Draynor Village",
+      "description": "Net/Bait fishing",
+      "spot_type": "net_bait_spot",
+      "coordinates": [
+        {"x": 3084, "z": 3228, "plane": 0},
+        {"x": 3089, "z": 3230, "plane": 0}
+      ],
+      "fish": ["shrimp", "sardine", "herring", "anchovies"],
+      "f2p": true
+    },
+    {
+      "name": "Al Kharid",
+      "description": "Net/Bait fishing near the oasis",
+      "spot_type": "net_bait_spot",
+      "coordinates": [
+        {"x": 3270, "z": 3140, "plane": 0}
+      ],
+      "fish": ["shrimp", "sardine", "herring", "anchovies"],
+      "f2p": true
+    },
+    {
+      "name": "Barbarian Village",
+      "description": "Lure/Bait fishing in the river",
+      "spot_type": "lure_bait_spot",
+      "coordinates": [
+        {"x": 3109, "z": 3433, "plane": 0},
+        {"x": 3110, "z": 3429, "plane": 0}
+      ],
+      "fish": ["trout", "salmon", "pike"],
+      "f2p": true
+    },
+    {
+      "name": "Karamja (Musa Point)",
+      "description": "Cage/Harpoon fishing for lobster, tuna, and swordfish",
+      "spot_type": "cage_harpoon_spot",
+      "coordinates": [
+        {"x": 2924, "z": 3178, "plane": 0},
+        {"x": 2926, "z": 3181, "plane": 0}
+      ],
+      "fish": ["lobster", "tuna", "swordfish"],
+      "f2p": true
+    },
+    {
+      "name": "Catherby",
+      "description": "Cage/Harpoon and Big Net/Harpoon fishing",
+      "spot_type": "cage_harpoon_spot",
+      "coordinates": [
+        {"x": 2844, "z": 3430, "plane": 0},
+        {"x": 2846, "z": 3428, "plane": 0},
+        {"x": 2850, "z": 3426, "plane": 0}
+      ],
+      "fish": ["lobster", "tuna", "swordfish", "mackerel", "cod", "bass", "shark"],
+      "f2p": false
+    },
+    {
+      "name": "Fishing Guild",
+      "description": "All types of fishing spots including shark fishing",
+      "spot_type": "big_net_harpoon_spot",
+      "coordinates": [
+        {"x": 2604, "z": 3417, "plane": 0},
+        {"x": 2606, "z": 3420, "plane": 0}
+      ],
+      "fish": ["lobster", "tuna", "swordfish", "mackerel", "cod", "bass", "shark"],
+      "f2p": false,
+      "notes": "Requires 68 Fishing to enter"
+    },
+    {
+      "name": "Piscatoris Fishing Colony",
+      "description": "Monkfish fishing spot",
+      "spot_type": "monkfish_spot",
+      "coordinates": [
+        {"x": 2354, "z": 3701, "plane": 0},
+        {"x": 2358, "z": 3702, "plane": 0}
+      ],
+      "fish": ["monkfish", "swordfish"],
+      "f2p": false,
+      "notes": "Requires completion of Swan Song quest"
+    },
+    {
+      "name": "Otto's Grotto",
+      "description": "Barbarian fishing for leaping fish",
+      "spot_type": "barbarian_spot",
+      "coordinates": [
+        {"x": 2502, "z": 3494, "plane": 0}
+      ],
+      "fish": ["leaping_trout", "leaping_salmon", "leaping_sturgeon"],
+      "f2p": false,
+      "notes": "Requires Barbarian Fishing training from Otto Godblessed"
+    },
+    {
+      "name": "Wilderness Resource Area",
+      "description": "Dark crab fishing",
+      "spot_type": "dark_crab_spot",
+      "coordinates": [
+        {"x": 3185, "z": 3945, "plane": 0}
+      ],
+      "fish": ["dark_crab"],
+      "f2p": false,
+      "notes": "Wilderness - PK risk"
+    },
+    {
+      "name": "Port Piscarilius",
+      "description": "Anglerfish fishing",
+      "spot_type": "anglerfish_spot",
+      "coordinates": [
+        {"x": 1808, "z": 3774, "plane": 0},
+        {"x": 1812, "z": 3772, "plane": 0}
+      ],
+      "fish": ["anglerfish"],
+      "f2p": false,
+      "notes": "Great Kourend"
+    },
+    {
+      "name": "Karamja (Tai Bwo Wannai)",
+      "description": "Karambwan fishing",
+      "spot_type": "karambwan_spot",
+      "coordinates": [
+        {"x": 2882, "z": 3114, "plane": 0}
+      ],
+      "fish": ["karambwan"],
+      "f2p": false,
+      "notes": "Requires Tai Bwo Wannai Trio quest completion"
+    }
+  ],
+
+  "animations": {
+    "human_smallnet": {
+      "id": 621,
+      "sym_name": "human_smallnet",
+      "description": "Small net fishing animation"
+    },
+    "human_largenet": {
+      "id": 620,
+      "sym_name": "human_largenet",
+      "description": "Big net fishing animation"
+    },
+    "human_fishing_casting": {
+      "id": 622,
+      "sym_name": "human_fishing_casting",
+      "description": "Rod casting animation (start)"
+    },
+    "human_fishing_onspot": {
+      "id": 623,
+      "sym_name": "human_fishing_onspot",
+      "description": "Rod fishing animation (loop)"
+    },
+    "human_lobster": {
+      "id": 619,
+      "sym_name": "human_lobster",
+      "description": "Lobster pot fishing animation"
+    },
+    "human_harpoon": {
+      "id": 618,
+      "sym_name": "human_harpoon",
+      "description": "Harpoon fishing animation"
+    },
+    "human_harpoon_dragon": {
+      "id": 7401,
+      "sym_name": "human_harpoon_dragon",
+      "description": "Dragon harpoon fishing animation"
+    },
+    "human_harpoon_infernal": {
+      "id": 7402,
+      "sym_name": "human_harpoon_infernal",
+      "description": "Infernal harpoon fishing animation"
+    },
+    "human_harpoon_crystal": {
+      "id": 8336,
+      "sym_name": "human_harpoon_crystal",
+      "description": "Crystal harpoon fishing animation"
+    }
+  },
+
+  "notes": [
+    "All item IDs and animation IDs are from OSRS Revision 233 cache",
+    "Symbol names (sym_name) are the internal cache names used in RSMod v2",
+    "Leaping fish from barbarian fishing give additional Strength and Agility XP",
+    "Dragon, infernal, and crystal harpoons provide +20% catch rate boost",
+    "Infernal harpoon has a 1/3 chance to cook the catch automatically",
+    "Some locations require quest completion or membership (noted in f2p field)",
+    "Dark crab fishing is in the Wilderness and carries PK risk",
+    "Karambwan fishing requires a karambwan vessel and bait (karambwanji)"
+  ]
+}

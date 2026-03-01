@@ -1,0 +1,562 @@
+[
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseVarps.kt",
+    "line": 35,
+    "domain": "varp",
+    "name": "blankobject",
+    "kind": "kotlin-find",
+    "snippet": "// NOTE: Do not add placeholder `find(\"blankobject\")` mappings here. If a quest/feature"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\edgeville\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\edgeville\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\edgeville\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\edgeville\\objs.toml",
+    "line": 14,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\falador\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\falador\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\lumbridge\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\lumbridge\\objs.toml",
+    "line": 236,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\lumbridge\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\lumbridge\\objs.toml",
+    "line": 240,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\npcs.toml",
+    "line": 79,
+    "domain": "npc",
+    "name": "cowboy",
+    "kind": "toml",
+    "snippet": "npc = 'cowboy'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "clay_rock",
+    "kind": "toml",
+    "snippet": "obj = 'clay_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 14,
+    "domain": "obj",
+    "name": "clay_rock",
+    "kind": "toml",
+    "snippet": "obj = 'clay_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 19,
+    "domain": "obj",
+    "name": "copper_rock",
+    "kind": "toml",
+    "snippet": "obj = 'copper_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 23,
+    "domain": "obj",
+    "name": "copper_rock",
+    "kind": "toml",
+    "snippet": "obj = 'copper_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 27,
+    "domain": "obj",
+    "name": "copper_rock",
+    "kind": "toml",
+    "snippet": "obj = 'copper_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 32,
+    "domain": "obj",
+    "name": "tin_rock",
+    "kind": "toml",
+    "snippet": "obj = 'tin_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 36,
+    "domain": "obj",
+    "name": "tin_rock",
+    "kind": "toml",
+    "snippet": "obj = 'tin_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 41,
+    "domain": "obj",
+    "name": "iron_rock",
+    "kind": "toml",
+    "snippet": "obj = 'iron_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 45,
+    "domain": "obj",
+    "name": "iron_rock",
+    "kind": "toml",
+    "snippet": "obj = 'iron_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 49,
+    "domain": "obj",
+    "name": "iron_rock",
+    "kind": "toml",
+    "snippet": "obj = 'iron_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 54,
+    "domain": "obj",
+    "name": "gold_rock",
+    "kind": "toml",
+    "snippet": "obj = 'gold_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 58,
+    "domain": "obj",
+    "name": "gold_rock",
+    "kind": "toml",
+    "snippet": "obj = 'gold_rock'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 65,
+    "domain": "obj",
+    "name": "poh_rimmington_portal",
+    "kind": "toml",
+    "snippet": "obj = 'poh_rimmington_portal'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 72,
+    "domain": "obj",
+    "name": "crate",
+    "kind": "toml",
+    "snippet": "obj = 'crate'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 77,
+    "domain": "obj",
+    "name": "barrel",
+    "kind": "toml",
+    "snippet": "obj = 'barrel'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 82,
+    "domain": "obj",
+    "name": "well",
+    "kind": "toml",
+    "snippet": "obj = 'well'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 87,
+    "domain": "obj",
+    "name": "rimmington_poor_range",
+    "kind": "toml",
+    "snippet": "obj = 'rimmington_poor_range'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 92,
+    "domain": "obj",
+    "name": "rimmington_table",
+    "kind": "toml",
+    "snippet": "obj = 'rimmington_table'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 100,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 104,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 108,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 112,
+    "domain": "obj",
+    "name": "mapletree",
+    "kind": "toml",
+    "snippet": "obj = 'mapletree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\rimmington\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\rimmington\\objs.toml",
+    "line": 120,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\city\\varrock\\configs\\VarrockObjs.kt",
+    "line": 17,
+    "domain": "obj",
+    "name": "bryophyta_staff",
+    "kind": "kotlin-find",
+    "snippet": "val bryophyta_staff = find(\"bryophyta_staff\")"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\npcs.toml",
+    "line": 156,
+    "domain": "npc",
+    "name": "cat",
+    "kind": "toml",
+    "snippet": "npc = 'cat'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\objs.toml",
+    "line": 10,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\objs.toml",
+    "line": 14,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\city\\varrock\\src\\main\\resources\\org\\rsmod\\content\\areas\\city\\varrock\\objs.toml",
+    "line": 18,
+    "domain": "obj",
+    "name": "yewtree",
+    "kind": "toml",
+    "snippet": "obj = 'yewtree'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\dungeons\\edgeville-dungeon\\src\\main\\resources\\org\\rsmod\\content\\areas\\dungeons\\edgevilledungeon\\npcs.toml",
+    "line": 287,
+    "domain": "npc",
+    "name": "vannaka",
+    "kind": "toml",
+    "snippet": "npc = 'vannaka'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\essence-mine\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\misc\\essencemine\\EssenceMineNpcs.kt",
+    "line": 17,
+    "domain": "npc",
+    "name": "carwen_essencebinder",
+    "kind": "kotlin-find",
+    "snippet": "// val carwen_essencebinder = find(\"carwen_essencebinder\")  // Members"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 24,
+    "domain": "obj",
+    "name": "goblin_mail_red",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_red'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 28,
+    "domain": "obj",
+    "name": "goblin_mail_red",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_red'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 32,
+    "domain": "obj",
+    "name": "goblin_mail_red",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_red'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 39,
+    "domain": "obj",
+    "name": "goblin_mail_green",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_green'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 43,
+    "domain": "obj",
+    "name": "goblin_mail_green",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_green'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 47,
+    "domain": "obj",
+    "name": "goblin_mail_green",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_green'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 54,
+    "domain": "obj",
+    "name": "goblin_mail_blue",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_blue'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 58,
+    "domain": "obj",
+    "name": "goblin_mail_blue",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_blue'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 65,
+    "domain": "obj",
+    "name": "goblin_mail_orange",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_orange'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\goblin-village\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\goblinvillage\\objs.toml",
+    "line": 69,
+    "domain": "obj",
+    "name": "goblin_mail_orange",
+    "kind": "toml",
+    "snippet": "obj = 'goblin_mail_orange'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 9,
+    "domain": "obj",
+    "name": "copperrock1",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 13,
+    "domain": "obj",
+    "name": "copperrock2",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 17,
+    "domain": "obj",
+    "name": "copperrock1",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 21,
+    "domain": "obj",
+    "name": "copperrock2",
+    "kind": "toml",
+    "snippet": "obj = 'copperrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 26,
+    "domain": "obj",
+    "name": "tinrock1",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 30,
+    "domain": "obj",
+    "name": "tinrock2",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 34,
+    "domain": "obj",
+    "name": "tinrock1",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock1'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\lumbridge-swamp\\src\\main\\resources\\org\\rsmod\\content\\areas\\misc\\lumbridgeswamp\\objs.toml",
+    "line": 38,
+    "domain": "obj",
+    "name": "tinrock2",
+    "kind": "toml",
+    "snippet": "obj = 'tinrock2'"
+  },
+  {
+    "file": "rsmod\\content\\areas\\misc\\wizards-tower\\src\\main\\kotlin\\org\\rsmod\\content\\areas\\misc\\wizardstower\\WizardsTowerNpcs.kt",
+    "line": 17,
+    "domain": "npc",
+    "name": "rune_guardian",
+    "kind": "kotlin-find",
+    "snippet": "// val rune_guardian = find(\"rune_guardian\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\achievement-diaries\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\achievementdiaries\\configs\\AchievementDiaryConfigs.kt",
+    "line": 48,
+    "domain": "varp",
+    "name": "karamja_achievement_diary",
+    "kind": "kotlin-find",
+    "snippet": "val karamja_achievement_diary = find(\"karamja_achievement_diary\")"
+  },
+  {
+    "file": "rsmod\\content\\mechanics\\achievement-diaries\\src\\main\\kotlin\\org\\rsmod\\content\\mechanics\\achievementdiaries\\configs\\AchievementDiaryConfigs.kt",
+    "line": 49,
+    "domain": "varp",
+    "name": "karamja_achievement_diary2",
+    "kind": "kotlin-find",
+    "snippet": "val karamja_achievement_diary2 = find(\"karamja_achievement_diary2\")"
+  },
+  {
+    "file": "rsmod\\content\\other\\npc-drops\\src\\main\\kotlin\\org\\rsmod\\content\\other\\npcdrops\\tables\\LesserDemonDropTables.kt",
+    "line": 172,
+    "domain": "obj",
+    "name": "ensouled_demon_head",
+    "kind": "kotlin-find",
+    "snippet": "val ensouled_demon_head = find(\"ensouled_demon_head\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 110,
+    "domain": "obj",
+    "name": "dark_crab_pot",
+    "kind": "kotlin-find",
+    "snippet": "val dark_crab_pot = find(\"dark_crab_pot\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 134,
+    "domain": "obj",
+    "name": "leaping_trout",
+    "kind": "kotlin-find",
+    "snippet": "val leaping_trout = find(\"leaping_trout\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 135,
+    "domain": "obj",
+    "name": "leaping_salmon",
+    "kind": "kotlin-find",
+    "snippet": "val leaping_salmon = find(\"leaping_salmon\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\fishing\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\fishing\\scripts\\Fishing.kt",
+    "line": 136,
+    "domain": "obj",
+    "name": "leaping_sturgeon",
+    "kind": "kotlin-find",
+    "snippet": "val leaping_sturgeon = find(\"leaping_sturgeon\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 820,
+    "domain": "npc",
+    "name": "farmer",
+    "kind": "kotlin-find",
+    "snippet": "val farmer = find(\"farmer\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 821,
+    "domain": "npc",
+    "name": "ham_member",
+    "kind": "kotlin-find",
+    "snippet": "val ham_member = find(\"ham_member\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 822,
+    "domain": "npc",
+    "name": "ham_guard",
+    "kind": "kotlin-find",
+    "snippet": "val ham_guard = find(\"ham_guard\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 826,
+    "domain": "npc",
+    "name": "master_farmer",
+    "kind": "kotlin-find",
+    "snippet": "val master_farmer = find(\"master_farmer\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 829,
+    "domain": "npc",
+    "name": "menaphite_thug",
+    "kind": "kotlin-find",
+    "snippet": "val menaphite_thug = find(\"menaphite_thug\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 904,
+    "domain": "loc",
+    "name": "hiddenchest_closed",
+    "kind": "kotlin-find",
+    "snippet": "val chest_11735 = find(\"hiddenchest_closed\")"
+  },
+  {
+    "file": "rsmod\\content\\skills\\thieving\\src\\main\\kotlin\\org\\rsmod\\content\\skills\\thieving\\scripts\\Thieving.kt",
+    "line": 931,
+    "domain": "obj",
+    "name": "rustysword",
+    "kind": "kotlin-find",
+    "snippet": "val rusty_sword = find(\"rustysword\")"
+  }
+]

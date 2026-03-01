@@ -1,0 +1,643 @@
+{
+  "name": "Skeleton",
+  "combat_level": 21,
+  "hitpoints": 24,
+  "attack": 17,
+  "strength": 17,
+  "defence": 17,
+  "attack_speed": 4,
+  "slayer_level": null,
+  "slayer_xp": 24.0,
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Skeleton champion scroll",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/301",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bronze arrow",
+      "rate": "1/18",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Bronze arrow",
+      "rate": "1/32",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Iron arrow",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Air rune",
+      "rate": "1/64",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/64",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Fire rune",
+      "rate": "1/64",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/64",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/128",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Steel arrow",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy guam leaf",
+      "rate": "1/24",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy marrentill",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy tarromin",
+      "rate": "1/43",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy harralander",
+      "rate": "1/55",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy ranarr weed",
+      "rate": "1/70",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy irit leaf",
+      "rate": "1/97",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy avantoe",
+      "rate": "1/130",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy kwuarm",
+      "rate": "1/156",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy cadantine",
+      "rate": "1/195",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy lantadyme",
+      "rate": "1/260",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy dwarf weed",
+      "rate": "1/260",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/6",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Coins",
+      "rate": "1/7",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Coins",
+      "rate": "1/8",
+      "qty_min": 12,
+      "qty_max": 12
+    },
+    {
+      "name": "Coins",
+      "rate": "1/18",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Coins",
+      "rate": "1/32",
+      "qty_min": 16,
+      "qty_max": 16
+    },
+    {
+      "name": "Coins",
+      "rate": "1/32",
+      "qty_min": 25,
+      "qty_max": 25
+    },
+    {
+      "name": "Coins",
+      "rate": "1/32",
+      "qty_min": 33,
+      "qty_max": 33
+    },
+    {
+      "name": "Coins",
+      "rate": "1/128",
+      "qty_min": 48,
+      "qty_max": 48
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/7",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron dagger",
+      "rate": "1/21",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Fire talisman",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron ore",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grain",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/256",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/512",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature talisman",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/16",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/262",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/524",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/699",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/14",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/100",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Skeleton champion scroll",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/301",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron med helm",
+      "rate": "1/21",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron sword",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron axe",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron scimitar",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Air rune",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Water rune",
+      "rate": "1/42",
+      "qty_min": 9,
+      "qty_max": 9
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/42",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Iron arrow",
+      "rate": "1/64",
+      "qty_min": 12,
+      "qty_max": 12
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/64",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Cosmic rune",
+      "rate": "1/128",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Grimy guam leaf",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy marrentill",
+      "rate": "1/34",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy tarromin",
+      "rate": "1/45",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy harralander",
+      "rate": "1/58",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy ranarr weed",
+      "rate": "1/74",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy irit leaf",
+      "rate": "1/102",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy avantoe",
+      "rate": "1/136",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy kwuarm",
+      "rate": "1/163",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy cadantine",
+      "rate": "1/204",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy lantadyme",
+      "rate": "1/273",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy dwarf weed",
+      "rate": "1/273",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/2",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Coins",
+      "rate": "1/5",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Coins",
+      "rate": "1/16",
+      "qty_min": 25,
+      "qty_max": 25
+    },
+    {
+      "name": "Coins",
+      "rate": "1/32",
+      "qty_min": 45,
+      "qty_max": 45
+    },
+    {
+      "name": "Coins",
+      "rate": "1/42",
+      "qty_min": 65,
+      "qty_max": 65
+    },
+    {
+      "name": "Coins",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bronze bar",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/256",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/512",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature talisman",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/8",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/131",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/262",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/349",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/14",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/100",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Skeleton champion scroll",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/301",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

@@ -3,7 +3,6 @@ package org.rsmod.content.skills.prayer.scripts
 import jakarta.inject.Inject
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
-import org.rsmod.api.script.onOpNpc1
 import org.rsmod.api.type.refs.npc.NpcReferences
 import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript

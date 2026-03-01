@@ -1,0 +1,331 @@
+{
+  "name": "Hellhound",
+  "combat_level": 122,
+  "hitpoints": 116,
+  "attack": 105,
+  "strength": 104,
+  "defence": 102,
+  "attack_speed": 4,
+  "slayer_level": null,
+  "slayer_xp": 116.0,
+  "drops": [
+    {
+      "name": "Vile ashes",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/8",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/16",
+      "qty_min": 20,
+      "qty_max": 20
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/50",
+      "qty_min": 50,
+      "qty_max": 50
+    },
+    {
+      "name": "Smouldering stone",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled hellhound head",
+      "rate": "1/40",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (elite)",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Reward casket (elite)",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (hard)",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Brimstone key",
+      "rate": "1/96",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ancient shard",
+      "rate": "1/256",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dark totem base",
+      "rate": "1/384",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dark totem middle",
+      "rate": "1/384",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dark totem top",
+      "rate": "1/384",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/91",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/228",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Vile ashes",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled hellhound head",
+      "rate": "1/40",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (hard)",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Brimstone key",
+      "rate": "1/95",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Vile ashes",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Smouldering stone",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled hellhound head",
+      "rate": "1/40",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (elite)",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Reward casket (elite)",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (hard)",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/76",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/200",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Blighted anglerfish",
+      "rate": "~1/8.7",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted manta ray",
+      "rate": "~1/8.7",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted karambwan",
+      "rate": "~1/13.1",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted teleport spell sack",
+      "rate": "~1/13.1",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted ancient ice sack",
+      "rate": "~1/13.1",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted vengeance sack",
+      "rate": "~1/13.1",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted entangle sack",
+      "rate": "~1/6.5",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted super restore(4)",
+      "rate": "~1/26.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Revenant cave teleport",
+      "rate": "~1/26.1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dareeyak teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wilderness crabs teleport",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Carrallanger teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Paddewwa teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Annakarl teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lassar teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Kharyrll teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Senntisten teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ghorrock teleport (tablet)",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Target teleport",
+      "rate": "~1/130.6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Magic shortbow scroll",
+      "rate": "~1/326.5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ring of wealth scroll",
+      "rate": "~1/326.5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Trouver parchment",
+      "rate": "~1/1,305.9",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Looting bag note",
+      "rate": "~1/1,305.9",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

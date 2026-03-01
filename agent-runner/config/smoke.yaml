@@ -1,0 +1,25 @@
+# Smoke test tier — runs on every commit.
+# Lightweight: verifies basic server responsiveness + one representative test per category.
+# Target runtime: < 2 minutes.
+
+tier: smoke
+
+bridge_url: "ws://localhost:43595"
+proxy_url: null  # RSProx not required for smoke tier
+
+tests:
+  - type: skill_tester
+    skill: woodcutting
+    description: "Verify willow XP grant at level 30+"
+    ticks: 50         # observe for 50 ticks (~30 seconds)
+    player: null      # null = any connected player
+
+  - type: skill_tester
+    skill: fishing
+    description: "Verify shrimp/trout XP grant"
+    ticks: 50
+
+  - type: skill_tester
+    skill: mining
+    description: "Verify copper/tin XP grant"
+    ticks: 50

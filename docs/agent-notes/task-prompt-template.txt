@@ -1,0 +1,50 @@
+You are working on the RSMod v2 OSRS private server at Z:\Projects\OSRS-PS-DEV.
+
+  ## REQUIRED: Read before touching any code
+
+  1. Read `START_HERE.md` at the project root in full — it contains the workflow, the mandatory pre-flight gate, and a table of banned patterns.
+  2. Read `docs/SYM_NAMING_GUIDE.md` — sym names are NOT wiki names. Consult it (or use MCP cache tools) before EVERY `find()` call.
+  3. Read `docs/NEXT_STEPS.md` — find your assigned task.
+
+  ## REQUIRED: Task coordination (every time, no exceptions)
+
+  1. `get_status()` — see what's in progress
+  2. `list_tasks({ status: "pending" })` — find available work
+  3. `get_task("TASK-ID")` — read the full task description
+  4. `claim_task("TASK-ID", "your-agent-name")` — atomically claim before starting
+  5. `check_conflicts(["path/to/file"])` — verify no one else is editing your files
+  6. `lock_file("path/to/file", "your-agent-name", "TASK-ID")` — lock every file before editing
+  7. Implement
+  8. **Run the Mandatory Pre-Flight Script AND Compile (see Build Gate below)**
+  9. `complete_task("TASK-ID", "your-agent-name", "what I did")`
+
+  ## REQUIRED: Build gate — DO NOT skip this
+
+  After every edit, before calling `complete_task()`, you MUST run both checks:
+
+  **Step 1: Pre-Flight Hygiene (Must exit with 0 issues)**
+  `& 'C:\Program Files\PowerShell\7\pwsh.exe' -File "scripts\preflight-ref-hygiene.ps1" -FailOnIssues`
+
+  **Step 2: Compile (Must exit BUILD SUCCESSFUL)**
+  `./gradlew :server:app:compileKotlin --console=plain`
+  
+  If either step fails, fix the errors. Do NOT mark a task complete with broken code — it blocks other agents and creates emergency tickets.
+
+  ## Top mistakes that break the build/server (Do NOT do these):
+  - `bindScript<T>()` in PluginModule — does NOT exist, delete it. Scripts are auto-discovered.
+  - `private object X : NpcReferences()` — must be `internal` or `public`, NEVER `private`.
+  - Using `String` as a placeholder for `ObjType` or `StatType`. Use real refs (`objs.x`, `stats.y`).
+  - `find("name", fallbackId)` — if the sym entry exists, use `find("name")` only to avoid hash mismatch crashes.
+  - Duplicate `edit(npc)` entries in NpcEditor for the same NPC across different modules (causes infinite startup loop).
+  - `mes(player, "text")` — use `mes("text")` inside ProtectedAccess.
+  - `Thread.sleep()` — BANNED. Freezes the server. Use `delay(ticks)`.
+  - `var` inside a singleton `object` — BANNED. Global mutable state breaks multiplayer. Store state on `Player`.
+  - `println()` — BANNED in content/api. Use RSMod's SLF4J `InlineLogger()`.
+  - `invAdd()` without checking `.success` — BANNED. Fails silently if full. Check `.success` or use `invAddOrDrop()`.
+  - Interface IDs > 924 in `.local/interface.sym` (rev233 max = 924).
+
+  ## If you're stuck
+  - `block_task("TASK-ID", "your-agent-name", "exact reason")` — don't sit idle
+  - Check `START_HERE.md` → "Agent Learnings" section for known patterns and fixes
+
+  ---

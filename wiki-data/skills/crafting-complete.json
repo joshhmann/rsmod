@@ -1,0 +1,988 @@
+{
+  "skill": "crafting",
+  "source": "OSRS Rev 233 cache - extracted via MCP tools",
+  "extraction_date": "2026-02-22",
+  "activities": {
+    "gem_cutting": {
+      "type": "chisel",
+      "tool_id": 1755,
+      "tool_name": "chisel",
+      "interactions": [
+        {
+          "name": "Cut opal",
+          "input_id": 1625,
+          "input_name": "uncut_opal",
+          "output_id": 1609,
+          "output_name": "opal",
+          "level_req": 1,
+          "xp": 15.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut jade",
+          "input_id": 1627,
+          "input_name": "uncut_jade",
+          "output_id": 1611,
+          "output_name": "jade",
+          "level_req": 13,
+          "xp": 20.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut red topaz",
+          "input_id": 1629,
+          "input_name": "uncut_red_topaz",
+          "output_id": 1613,
+          "output_name": "red_topaz",
+          "level_req": 16,
+          "xp": 25.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut sapphire",
+          "input_id": 1623,
+          "input_name": "uncut_sapphire",
+          "output_id": 1607,
+          "output_name": "sapphire",
+          "level_req": 20,
+          "xp": 50.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut emerald",
+          "input_id": 1621,
+          "input_name": "uncut_emerald",
+          "output_id": 1605,
+          "output_name": "emerald",
+          "level_req": 27,
+          "xp": 67.5,
+          "animation": 885
+        },
+        {
+          "name": "Cut ruby",
+          "input_id": 1619,
+          "input_name": "uncut_ruby",
+          "output_id": 1603,
+          "output_name": "ruby",
+          "level_req": 34,
+          "xp": 85.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut diamond",
+          "input_id": 1617,
+          "input_name": "uncut_diamond",
+          "output_id": 1601,
+          "output_name": "diamond",
+          "level_req": 43,
+          "xp": 107.5,
+          "animation": 885
+        },
+        {
+          "name": "Cut dragonstone",
+          "input_id": 1631,
+          "input_name": "uncut_dragonstone",
+          "output_id": 1615,
+          "output_name": "dragonstone",
+          "level_req": 55,
+          "xp": 137.5,
+          "animation": 885
+        },
+        {
+          "name": "Cut onyx",
+          "input_id": 6571,
+          "input_name": "uncut_onyx",
+          "output_id": 6573,
+          "output_name": "onyx",
+          "level_req": 67,
+          "xp": 167.5,
+          "animation": 885
+        },
+        {
+          "name": "Cut zenyte",
+          "input_id": 19496,
+          "input_name": "uncut_zenyte",
+          "output_id": 19493,
+          "output_name": "zenyte",
+          "level_req": 89,
+          "xp": 200.0,
+          "animation": 885
+        }
+      ]
+    },
+    "jewellery_rings": {
+      "type": "furnace",
+      "mould_id": 1592,
+      "mould_name": "ring_mould",
+      "interactions": [
+        {
+          "name": "Gold ring",
+          "input_id": 2357,
+          "input_name": "gold_bar",
+          "output_id": 1635,
+          "output_name": "gold_ring",
+          "level_req": 5,
+          "xp": 15.0,
+          "animation": 899
+        },
+        {
+          "name": "Sapphire ring",
+          "input_ids": [2357, 1607],
+          "input_names": ["gold_bar", "sapphire"],
+          "output_id": 1637,
+          "output_name": "sapphire_ring",
+          "level_req": 20,
+          "xp": 40.0,
+          "animation": 899
+        },
+        {
+          "name": "Emerald ring",
+          "input_ids": [2357, 1605],
+          "input_names": ["gold_bar", "emerald"],
+          "output_id": 1639,
+          "output_name": "emerald_ring",
+          "level_req": 27,
+          "xp": 55.0,
+          "animation": 899
+        },
+        {
+          "name": "Ruby ring",
+          "input_ids": [2357, 1603],
+          "input_names": ["gold_bar", "ruby"],
+          "output_id": 1641,
+          "output_name": "ruby_ring",
+          "level_req": 34,
+          "xp": 70.0,
+          "animation": 899
+        },
+        {
+          "name": "Diamond ring",
+          "input_ids": [2357, 1601],
+          "input_names": ["gold_bar", "diamond"],
+          "output_id": 1643,
+          "output_name": "diamond_ring",
+          "level_req": 43,
+          "xp": 85.0,
+          "animation": 899
+        },
+        {
+          "name": "Dragonstone ring",
+          "input_ids": [2357, 1615],
+          "input_names": ["gold_bar", "dragonstone"],
+          "output_id": 1645,
+          "output_name": "dragonstone_ring",
+          "level_req": 55,
+          "xp": 100.0,
+          "animation": 899
+        },
+        {
+          "name": "Onyx ring",
+          "input_ids": [2357, 6573],
+          "input_names": ["gold_bar", "onyx"],
+          "output_id": 6575,
+          "output_name": "onyx_ring",
+          "level_req": 67,
+          "xp": 115.0,
+          "animation": 899
+        },
+        {
+          "name": "Zenyte ring",
+          "input_ids": [2357, 19493],
+          "input_names": ["gold_bar", "zenyte"],
+          "output_id": 19538,
+          "output_name": "zenyte_ring",
+          "level_req": 89,
+          "xp": 150.0,
+          "animation": 899
+        }
+      ]
+    },
+    "jewellery_necklaces": {
+      "type": "furnace",
+      "mould_id": 1597,
+      "mould_name": "necklace_mould",
+      "interactions": [
+        {
+          "name": "Gold necklace",
+          "input_id": 2357,
+          "input_name": "gold_bar",
+          "output_id": 1654,
+          "output_name": "gold_necklace",
+          "level_req": 6,
+          "xp": 20.0,
+          "animation": 899
+        },
+        {
+          "name": "Sapphire necklace",
+          "input_ids": [2357, 1607],
+          "input_names": ["gold_bar", "sapphire"],
+          "output_id": 1656,
+          "output_name": "sapphire_necklace",
+          "level_req": 22,
+          "xp": 55.0,
+          "animation": 899
+        },
+        {
+          "name": "Emerald necklace",
+          "input_ids": [2357, 1605],
+          "input_names": ["gold_bar", "emerald"],
+          "output_id": 1658,
+          "output_name": "emerald_necklace",
+          "level_req": 29,
+          "xp": 60.0,
+          "animation": 899
+        },
+        {
+          "name": "Ruby necklace",
+          "input_ids": [2357, 1603],
+          "input_names": ["gold_bar", "ruby"],
+          "output_id": 1660,
+          "output_name": "ruby_necklace",
+          "level_req": 40,
+          "xp": 75.0,
+          "animation": 899
+        },
+        {
+          "name": "Diamond necklace",
+          "input_ids": [2357, 1601],
+          "input_names": ["gold_bar", "diamond"],
+          "output_id": 1662,
+          "output_name": "diamond_necklace",
+          "level_req": 56,
+          "xp": 90.0,
+          "animation": 899
+        },
+        {
+          "name": "Dragonstone necklace",
+          "input_ids": [2357, 1615],
+          "input_names": ["gold_bar", "dragonstone"],
+          "output_id": 1664,
+          "output_name": "dragonstone_necklace",
+          "level_req": 72,
+          "xp": 105.0,
+          "animation": 899
+        },
+        {
+          "name": "Onyx necklace",
+          "input_ids": [2357, 6573],
+          "input_names": ["gold_bar", "onyx"],
+          "output_id": 6577,
+          "output_name": "onyx_necklace",
+          "level_req": 82,
+          "xp": 120.0,
+          "animation": 899
+        }
+      ]
+    },
+    "jewellery_amulets": {
+      "type": "furnace",
+      "mould_id": 1595,
+      "mould_name": "amulet_mould",
+      "interactions": [
+        {
+          "name": "Gold amulet (unstrung)",
+          "input_id": 2357,
+          "input_name": "gold_bar",
+          "output_id": 1673,
+          "output_name": "unstrung_gold_amulet",
+          "level_req": 8,
+          "xp": 30.0,
+          "animation": 899
+        },
+        {
+          "name": "Sapphire amulet (unstrung)",
+          "input_ids": [2357, 1607],
+          "input_names": ["gold_bar", "sapphire"],
+          "output_id": 1675,
+          "output_name": "unstrung_sapphire_amulet",
+          "level_req": 24,
+          "xp": 65.0,
+          "animation": 899
+        },
+        {
+          "name": "Emerald amulet (unstrung)",
+          "input_ids": [2357, 1605],
+          "input_names": ["gold_bar", "emerald"],
+          "output_id": 1677,
+          "output_name": "unstrung_emerald_amulet",
+          "level_req": 31,
+          "xp": 70.0,
+          "animation": 899
+        },
+        {
+          "name": "Ruby amulet (unstrung)",
+          "input_ids": [2357, 1603],
+          "input_names": ["gold_bar", "ruby"],
+          "output_id": 1679,
+          "output_name": "unstrung_ruby_amulet",
+          "level_req": 50,
+          "xp": 85.0,
+          "animation": 899
+        },
+        {
+          "name": "Diamond amulet (unstrung)",
+          "input_ids": [2357, 1601],
+          "input_names": ["gold_bar", "diamond"],
+          "output_id": 1681,
+          "output_name": "unstrung_diamond_amulet",
+          "level_req": 70,
+          "xp": 100.0,
+          "animation": 899
+        },
+        {
+          "name": "Dragonstone amulet (unstrung)",
+          "input_ids": [2357, 1615],
+          "input_names": ["gold_bar", "dragonstone"],
+          "output_id": 1683,
+          "output_name": "unstrung_dragonstone_amulet",
+          "level_req": 80,
+          "xp": 150.0,
+          "animation": 899
+        }
+      ]
+    },
+    "jewellery_bracelets": {
+      "type": "furnace",
+      "mould_id": 11065,
+      "mould_name": "jewl_bracelet_mould",
+      "interactions": [
+        {
+          "name": "Gold bracelet",
+          "input_id": 2357,
+          "input_name": "gold_bar",
+          "output_id": 11069,
+          "output_name": "jewl_gold_bracelet",
+          "level_req": 7,
+          "xp": 25.0,
+          "animation": 899
+        },
+        {
+          "name": "Sapphire bracelet",
+          "input_ids": [2357, 1607],
+          "input_names": ["gold_bar", "sapphire"],
+          "output_id": 11072,
+          "output_name": "jewl_sapphire_bracelet",
+          "level_req": 23,
+          "xp": 60.0,
+          "animation": 899
+        },
+        {
+          "name": "Emerald bracelet",
+          "input_ids": [2357, 1605],
+          "input_names": ["gold_bar", "emerald"],
+          "output_id": 11076,
+          "output_name": "jewl_emerald_bracelet",
+          "level_req": 30,
+          "xp": 65.0,
+          "animation": 899
+        },
+        {
+          "name": "Ruby bracelet",
+          "input_ids": [2357, 1603],
+          "input_names": ["gold_bar", "ruby"],
+          "output_id": 11085,
+          "output_name": "jewl_ruby_bracelet",
+          "level_req": 42,
+          "xp": 80.0,
+          "animation": 899
+        },
+        {
+          "name": "Diamond bracelet",
+          "input_ids": [2357, 1601],
+          "input_names": ["gold_bar", "diamond"],
+          "output_id": 11092,
+          "output_name": "jewl_diamond_bracelet",
+          "level_req": 58,
+          "xp": 95.0,
+          "animation": 899
+        },
+        {
+          "name": "Dragonstone bracelet",
+          "input_ids": [2357, 1615],
+          "input_names": ["gold_bar", "dragonstone"],
+          "output_id": 11115,
+          "output_name": "jewl_dragonstone_bracelet",
+          "level_req": 74,
+          "xp": 110.0,
+          "animation": 899
+        }
+      ]
+    },
+    "stringing_amulets": {
+      "type": "item_on_item",
+      "material_id": 1734,
+      "material_name": "ball_of_wool",
+      "interactions": [
+        {
+          "name": "String gold amulet",
+          "input_id": 1673,
+          "input_name": "unstrung_gold_amulet",
+          "output_id": 1692,
+          "output_name": "strung_gold_amulet",
+          "level_req": 8,
+          "xp": 4.0,
+          "animation": 1249
+        },
+        {
+          "name": "String sapphire amulet",
+          "input_id": 1675,
+          "input_name": "unstrung_sapphire_amulet",
+          "output_id": 1694,
+          "output_name": "strung_sapphire_amulet",
+          "level_req": 24,
+          "xp": 4.0,
+          "animation": 1249
+        },
+        {
+          "name": "String emerald amulet",
+          "input_id": 1677,
+          "input_name": "unstrung_emerald_amulet",
+          "output_id": 1696,
+          "output_name": "strung_emerald_amulet",
+          "level_req": 31,
+          "xp": 4.0,
+          "animation": 1249
+        },
+        {
+          "name": "String ruby amulet",
+          "input_id": 1679,
+          "input_name": "unstrung_ruby_amulet",
+          "output_id": 1698,
+          "output_name": "strung_ruby_amulet",
+          "level_req": 50,
+          "xp": 4.0,
+          "animation": 1249
+        },
+        {
+          "name": "String diamond amulet",
+          "input_id": 1681,
+          "input_name": "unstrung_diamond_amulet",
+          "output_id": 1700,
+          "output_name": "strung_diamond_amulet",
+          "level_req": 70,
+          "xp": 4.0,
+          "animation": 1249
+        },
+        {
+          "name": "String dragonstone amulet",
+          "input_id": 1683,
+          "input_name": "unstrung_dragonstone_amulet",
+          "output_id": 1702,
+          "output_name": "strung_dragonstone_amulet",
+          "level_req": 80,
+          "xp": 4.0,
+          "animation": 1249
+        }
+      ]
+    },
+    "tiaras": {
+      "type": "furnace",
+      "mould_id": 5523,
+      "mould_name": "tiara_mould",
+      "interactions": [
+        {
+          "name": "Tiara",
+          "input_id": 2357,
+          "input_name": "gold_bar",
+          "output_id": 5525,
+          "output_name": "tiara",
+          "level_req": 23,
+          "xp": 52.5,
+          "animation": 899
+        }
+      ]
+    },
+    "leather_regular": {
+      "type": "needle_thread",
+      "needle_id": 1733,
+      "thread_id": 1734,
+      "interactions": [
+        {
+          "name": "Leather gloves",
+          "input_id": 1741,
+          "input_name": "leather",
+          "output_id": 1059,
+          "output_name": "leather_gloves",
+          "level_req": 1,
+          "xp": 13.8,
+          "animation": 1249
+        },
+        {
+          "name": "Leather boots",
+          "input_id": 1741,
+          "input_name": "leather",
+          "output_id": 1061,
+          "output_name": "leather_boots",
+          "level_req": 7,
+          "xp": 16.25,
+          "animation": 1249
+        },
+        {
+          "name": "Leather vambraces",
+          "input_id": 1741,
+          "input_name": "leather",
+          "output_id": 1063,
+          "output_name": "leather_vambraces",
+          "level_req": 11,
+          "xp": 22.0,
+          "animation": 1249
+        },
+        {
+          "name": "Leather chaps",
+          "input_id": 1741,
+          "input_name": "leather",
+          "output_id": 1095,
+          "output_name": "leather_chaps",
+          "level_req": 14,
+          "xp": 25.0,
+          "animation": 1249
+        },
+        {
+          "name": "Leather body",
+          "input_id": 1741,
+          "input_name": "leather",
+          "output_id": 1129,
+          "output_name": "leather_armour",
+          "level_req": 18,
+          "xp": 25.0,
+          "animation": 1249
+        },
+        {
+          "name": "Leather cowl",
+          "input_id": 1741,
+          "input_name": "leather",
+          "output_id": 1167,
+          "output_name": "leather_cowl",
+          "level_req": 9,
+          "xp": 18.5,
+          "animation": 1249
+        }
+      ]
+    },
+    "leather_hard": {
+      "type": "needle_thread",
+      "needle_id": 1733,
+      "thread_id": 1734,
+      "interactions": [
+        {
+          "name": "Hardleather body",
+          "input_id": 1743,
+          "input_name": "hard_leather",
+          "output_id": 1131,
+          "output_name": "hardleather_body",
+          "level_req": 28,
+          "xp": 35.0,
+          "animation": 1249
+        }
+      ]
+    },
+    "leather_dragonhide": {
+      "type": "needle_thread",
+      "needle_id": 1733,
+      "thread_id": 1734,
+      "interactions": [
+        {
+          "name": "Green d'hide vambraces",
+          "input_id": 1745,
+          "input_name": "dragon_leather",
+          "output_id": 1065,
+          "output_name": "dragonhide_vambraces",
+          "level_req": 57,
+          "xp": 62.0,
+          "animation": 1249
+        },
+        {
+          "name": "Green d'hide chaps",
+          "input_id": 1745,
+          "input_name": "dragon_leather",
+          "output_id": 1099,
+          "output_name": "dragonhide_chaps",
+          "level_req": 60,
+          "xp": 124.0,
+          "animation": 1249
+        },
+        {
+          "name": "Green d'hide body",
+          "input_id": 1745,
+          "input_name": "dragon_leather",
+          "output_id": 1135,
+          "output_name": "dragonhide_body",
+          "level_req": 63,
+          "xp": 186.0,
+          "animation": 1249
+        },
+        {
+          "name": "Blue d'hide vambraces",
+          "input_id": 2505,
+          "input_name": "dragon_leather_blue",
+          "output_id": 2487,
+          "output_name": "blue_dragonhide_vambraces",
+          "level_req": 66,
+          "xp": 70.0,
+          "animation": 1249
+        },
+        {
+          "name": "Blue d'hide chaps",
+          "input_id": 2505,
+          "input_name": "dragon_leather_blue",
+          "output_id": 2493,
+          "output_name": "blue_dragonhide_chaps",
+          "level_req": 68,
+          "xp": 140.0,
+          "animation": 1249
+        },
+        {
+          "name": "Blue d'hide body",
+          "input_id": 2505,
+          "input_name": "dragon_leather_blue",
+          "output_id": 2499,
+          "output_name": "blue_dragonhide_body",
+          "level_req": 71,
+          "xp": 210.0,
+          "animation": 1249
+        },
+        {
+          "name": "Red d'hide vambraces",
+          "input_id": 2507,
+          "input_name": "dragon_leather_red",
+          "output_id": 2489,
+          "output_name": "red_dragonhide_vambraces",
+          "level_req": 73,
+          "xp": 78.0,
+          "animation": 1249
+        },
+        {
+          "name": "Red d'hide chaps",
+          "input_id": 2507,
+          "input_name": "dragon_leather_red",
+          "output_id": 2495,
+          "output_name": "red_dragonhide_chaps",
+          "level_req": 75,
+          "xp": 156.0,
+          "animation": 1249
+        },
+        {
+          "name": "Red d'hide body",
+          "input_id": 2507,
+          "input_name": "dragon_leather_red",
+          "output_id": 2501,
+          "output_name": "red_dragonhide_body",
+          "level_req": 77,
+          "xp": 234.0,
+          "animation": 1249
+        },
+        {
+          "name": "Black d'hide vambraces",
+          "input_id": 2509,
+          "input_name": "dragon_leather_black",
+          "output_id": 2491,
+          "output_name": "black_dragonhide_vambraces",
+          "level_req": 79,
+          "xp": 86.0,
+          "animation": 1249
+        },
+        {
+          "name": "Black d'hide chaps",
+          "input_id": 2509,
+          "input_name": "dragon_leather_black",
+          "output_id": 2497,
+          "output_name": "black_dragonhide_chaps",
+          "level_req": 82,
+          "xp": 172.0,
+          "animation": 1249
+        },
+        {
+          "name": "Black d'hide body",
+          "input_id": 2509,
+          "input_name": "dragon_leather_black",
+          "output_id": 2503,
+          "output_name": "black_dragonhide_body",
+          "level_req": 84,
+          "xp": 258.0,
+          "animation": 1249
+        }
+      ]
+    },
+    "pottery_wheel": {
+      "type": "pottery_wheel",
+      "tool_ids": [14887, 4310],
+      "tool_names": ["potterywheel", "viking_potterywheel"],
+      "interactions": [
+        {
+          "name": "Pot (unfired)",
+          "input_id": 1761,
+          "input_name": "softclay",
+          "output_id": 1787,
+          "output_name": "pot_unfired",
+          "level_req": 1,
+          "xp": 6.3,
+          "animation": 883
+        },
+        {
+          "name": "Pie dish (unfired)",
+          "input_id": 1761,
+          "input_name": "softclay",
+          "output_id": 1789,
+          "output_name": "piedish_unfired",
+          "level_req": 7,
+          "xp": 15.0,
+          "animation": 883
+        },
+        {
+          "name": "Bowl (unfired)",
+          "input_id": 1761,
+          "input_name": "softclay",
+          "output_id": 1791,
+          "output_name": "bowl_unfired",
+          "level_req": 8,
+          "xp": 18.0,
+          "animation": 883
+        },
+        {
+          "name": "Plant pot (unfired)",
+          "input_id": 1761,
+          "input_name": "softclay",
+          "output_id": 5352,
+          "output_name": "plantpot_unfired",
+          "level_req": 19,
+          "xp": 20.0,
+          "animation": 883
+        }
+      ]
+    },
+    "pottery_oven": {
+      "type": "pottery_oven",
+      "tool_ids": [14888, 4308],
+      "tool_names": ["potteryoven", "viking_potteryoven"],
+      "interactions": [
+        {
+          "name": "Pot",
+          "input_id": 1787,
+          "input_name": "pot_unfired",
+          "output_id": 1931,
+          "output_name": "pot_empty",
+          "level_req": 1,
+          "xp": 6.3,
+          "animation": 899
+        },
+        {
+          "name": "Pie dish",
+          "input_id": 1789,
+          "input_name": "piedish_unfired",
+          "output_id": 2313,
+          "output_name": "piedish",
+          "level_req": 7,
+          "xp": 10.0,
+          "animation": 899
+        },
+        {
+          "name": "Bowl",
+          "input_id": 1791,
+          "input_name": "bowl_unfired",
+          "output_id": 1923,
+          "output_name": "bowl_empty",
+          "level_req": 8,
+          "xp": 15.0,
+          "animation": 899
+        }
+      ]
+    },
+    "glassblowing": {
+      "type": "glassblowing_pipe",
+      "tool_name": "glassblowing_pipe",
+      "interactions": [
+        {
+          "name": "Beer glass",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 1919,
+          "output_name": "glass_empty",
+          "level_req": 1,
+          "xp": 17.5,
+          "animation": 884
+        },
+        {
+          "name": "Empty candle lantern",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 4527,
+          "output_name": "lantern_candle_empty",
+          "level_req": 4,
+          "xp": 19.0,
+          "animation": 884
+        },
+        {
+          "name": "Empty oil lamp",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 4525,
+          "output_name": "lamp_oil_empty",
+          "level_req": 12,
+          "xp": 25.0,
+          "animation": 884
+        },
+        {
+          "name": "Vial",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 229,
+          "output_name": "vial_empty",
+          "level_req": 33,
+          "xp": 35.0,
+          "animation": 884
+        },
+        {
+          "name": "Empty fishbowl",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 6667,
+          "output_name": "fishbowl_empty",
+          "level_req": 42,
+          "xp": 42.5,
+          "animation": 884
+        },
+        {
+          "name": "Unpowered orb",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 567,
+          "output_name": "orb_unpowered",
+          "level_req": 46,
+          "xp": 52.5,
+          "animation": 884
+        },
+        {
+          "name": "Lantern lens",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 4542,
+          "output_name": "lantern_lens",
+          "level_req": 49,
+          "xp": 55.0,
+          "animation": 884
+        },
+        {
+          "name": "Empty light orb",
+          "input_id": 1775,
+          "input_name": "molten_glass",
+          "output_id": 10980,
+          "output_name": "light_orb_empty",
+          "level_req": 87,
+          "xp": 70.0,
+          "animation": 884
+        }
+      ]
+    },
+    "spinning": {
+      "type": "spinning_wheel",
+      "interactions": [
+        {
+          "name": "Wool into ball of wool",
+          "input_id": 1737,
+          "input_name": "wool",
+          "output_id": 1759,
+          "output_name": "ball_of_wool",
+          "level_req": 1,
+          "xp": 2.5,
+          "animation": 894
+        },
+        {
+          "name": "Flax into bow string",
+          "input_id": 1779,
+          "input_name": "flax",
+          "output_id": 1777,
+          "output_name": "bow_string",
+          "level_req": 10,
+          "xp": 15.0,
+          "animation": 894
+        }
+      ]
+    }
+  },
+  "materials": {
+    "gems": {
+      "uncut": {
+        "uncut_opal": { "id": 1625, "level_req": 1 },
+        "uncut_jade": { "id": 1627, "level_req": 13 },
+        "uncut_red_topaz": { "id": 1629, "level_req": 16 },
+        "uncut_sapphire": { "id": 1623, "level_req": 20 },
+        "uncut_emerald": { "id": 1621, "level_req": 27 },
+        "uncut_ruby": { "id": 1619, "level_req": 34 },
+        "uncut_diamond": { "id": 1617, "level_req": 43 },
+        "uncut_dragonstone": { "id": 1631, "level_req": 55 },
+        "uncut_onyx": { "id": 6571, "level_req": 67 },
+        "uncut_zenyte": { "id": 19496, "level_req": 89 }
+      },
+      "cut": {
+        "opal": { "id": 1609, "level_req": 1 },
+        "jade": { "id": 1611, "level_req": 13 },
+        "red_topaz": { "id": 1613, "level_req": 16 },
+        "sapphire": { "id": 1607, "level_req": 20 },
+        "emerald": { "id": 1605, "level_req": 27 },
+        "ruby": { "id": 1603, "level_req": 34 },
+        "diamond": { "id": 1601, "level_req": 43 },
+        "dragonstone": { "id": 1615, "level_req": 55 },
+        "onyx": { "id": 6573, "level_req": 67 },
+        "zenyte": { "id": 19493, "level_req": 89 }
+      }
+    },
+    "leather": {
+      "leather": { "id": 1741, "level_req": 1 },
+      "hard_leather": { "id": 1743, "level_req": 28 },
+      "green_dragon_leather": { "id": 1745, "level_req": 57 },
+      "blue_dragon_leather": { "id": 2505, "level_req": 66 },
+      "red_dragon_leather": { "id": 2507, "level_req": 73 },
+      "black_dragon_leather": { "id": 2509, "level_req": 79 }
+    },
+    "pottery": {
+      "clay": { "id": 434 },
+      "soft_clay": { "id": 1761 }
+    },
+    "glass": {
+      "molten_glass": { "id": 1775 }
+    },
+    "spinning": {
+      "wool": { "id": 1737 },
+      "flax": { "id": 1779 }
+    }
+  },
+  "tools": {
+    "chisel": { "id": 1755 },
+    "needle": { "id": 1733 },
+    "thread": { "id": 1734 },
+    "ring_mould": { "id": 1592 },
+    "necklace_mould": { "id": 1597 },
+    "amulet_mould": { "id": 1595 },
+    "bracelet_mould": { "id": 11065 },
+    "tiara_mould": { "id": 5523 },
+    "glassblowing_pipe": { "id": 1785 }
+  },
+  "test_locations": [
+    { "desc": "Lumbridge spinning wheel", "x": 3208, "z": 3213, "plane": 1 },
+    { "desc": "Falador spinning wheel", "x": 3012, "z": 3357, "plane": 1 },
+    { "desc": "Lumbridge furnace", "x": 3228, "z": 3256 },
+    { "desc": "Al Kharid furnace", "x": 3277, "z": 3185 },
+    { "desc": "Edgeville furnace", "x": 3109, "z": 3496 },
+    { "desc": "Barbarian Village pottery wheel", "x": 3086, "z": 3408 },
+    { "desc": "Crafting Guild pottery wheel", "x": 2935, "z": 3290 },
+    { "desc": "Rimmington crafting house", "x": 2947, "z": 3206 }
+  ],
+  "animations": {
+    "gem_cutting": 885,
+    "pottery_wheel": 883,
+    "pottery_oven": 899,
+    "glassblowing": 884,
+    "spinning": 894,
+    "leather_crafting": 1249,
+    "jewellery_furnace": 899
+  },
+  "notes": [
+    "All gem cutting requires a chisel (1755) and uses animation 885",
+    "All jewellery making requires appropriate mould and gold bar (2357) at a furnace",
+    "Leather crafting requires needle (1733) and thread (1734) in inventory",
+    "Amulet stringing requires ball of wool (1759)",
+    "Pottery requires soft clay (1761) - use clay (434) on water source first",
+    "Glassblowing requires molten glass (1775) and glassblowing pipe (1785)",
+    "Dragon leather requires corresponding dragonhide - use knife on hide first"
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "_metadata": {
+    "revision": "233",
+    "extraction_date": "2026-02-22",
+    "total_sounds": 1126,
+    "description": "Comprehensive music and sound data from OSRS Rev 233 cache"
+  },
+  "music_tracks": {
+    "description": "Background music tracks playable via the music player",
+    "count": 780,
+    "f2p_music": {
+      "lumbridge": [
+        {"id": 474, "name": "newbie_melody", "unlock_location": "Tutorial Island", "members": false},
+        {"id": 76, "name": "poh_lumbridge", "unlock_location": "Lumbridge", "members": false},
+        {"id": 492, "name": "homescape", "unlock_location": "Lumbridge/Player houses", "members": false}
+      ],
+      "falador": [
+        {"id": 645, "name": "knightly", "unlock_location": "Falador/White Knights Castle", "members": false},
+        {"id": 555, "name": "harmony", "unlock_location": "Falador", "members": false},
+        {"id": 756, "name": "harmony2", "unlock_location": "Falador area", "members": false}
+      ],
+      "varrock": [
+        {"id": 541, "name": "village", "unlock_location": "Varrock outskirts", "members": false},
+        {"id": 954, "name": "autumn_voyage", "unlock_location": "Varrock area", "members": false}
+      ],
+      "draynor": [
+        {"id": 697, "name": "flute_salad", "unlock_location": "Draynor Village", "members": false},
+        {"id": 350, "name": "twilight", "unlock_location": "Draynor Manor area", "members": false},
+        {"id": 665, "name": "nightfall", "unlock_location": "Draynor/Dusk areas", "members": false}
+      ],
+      "port_sarim": [
+        {"id": 789, "name": "sarim_s_vermin", "unlock_location": "Port Sarim", "members": false},
+        {"id": 810, "name": "sea_shanty", "unlock_location": "Port Sarim", "members": false}
+      ],
+      "al_kharid": [
+        {"id": 851, "name": "al_kharid", "unlock_location": "Al Kharid", "members": false},
+        {"id": 860, "name": "arabian", "unlock_location": "Al Kharid/Desert", "members": false},
+        {"id": 861, "name": "arabian2", "unlock_location": "Al Kharid/Desert", "members": false},
+        {"id": 866, "name": "arabian3", "unlock_location": "Al Kharid/Desert", "members": false}
+      ],
+      "barbarian_village": [
+        {"id": 981, "name": "barbarianism", "unlock_location": "Barbarian Village", "members": false}
+      ],
+      "wilderness": [
+        {"id": 615, "name": "wilderness", "unlock_location": "Wilderness entrance", "members": false},
+        {"id": 992, "name": "wilderness2", "unlock_location": "Wilderness", "members": false},
+        {"id": 994, "name": "wilderness3", "unlock_location": "Deep Wilderness", "members": false},
+        {"id": 418, "name": "scape_wild", "unlock_location": "Wilderness", "members": false},
+        {"id": 718, "name": "deep_wildy", "unlock_location": "Deep Wilderness", "members": false}
+      ],
+      "dungeons": [
+        {"id": 700, "name": "scape_cave", "unlock_location": "Dungeons", "members": false},
+        {"id": 1025, "name": "cave_background", "unlock_location": "Caves", "members": false}
+      ]
+    },
+    "members_music": {
+      "guilds": [
+        {"id": 739, "name": "warriors_guild", "unlock_location": "Warriors' Guild", "members": true},
+        {"id": 931, "name": "hunter_guild", "unlock_location": "Hunters' Guild", "members": true},
+        {"id": 1083, "name": "myths_guild", "unlock_location": "Myths' Guild", "members": true}
+      ],
+      "dungeons_members": [
+        {"id": 566, "name": "ghorrock_dungeon", "unlock_location": "Ghorrock", "members": true},
+        {"id": 911, "name": "forthos_dungeon", "unlock_location": "Forthos", "members": true},
+        {"id": 958, "name": "prif_slayer_dungeon", "unlock_location": "Prifddinas Slayer", "members": true},
+        {"id": 1038, "name": "slepe_dungeon", "unlock_location": "Slepe", "members": true},
+        {"id": 1103, "name": "undead_dungeon", "unlock_location": "Undead areas", "members": true}
+      ],
+      "regions_members": [
+        {"id": 580, "name": "darkmeyer", "unlock_location": "Darkmeyer", "members": true},
+        {"id": 986, "name": "morytania", "unlock_location": "Morytania", "members": true},
+        {"id": 1049, "name": "rellekka", "unlock_location": "Rellekka", "members": true},
+        {"id": 922, "name": "warrens", "unlock_location": "Warrens", "members": true}
+      ],
+      "minigames_members": [
+        {"id": 971, "name": "gauntlet_minigame", "unlock_location": "Gauntlet", "members": true},
+        {"id": 1034, "name": "barbarian_assault_tutorial", "unlock_location": "Barbarian Assault", "members": true},
+        {"id": 479, "name": "trawler", "unlock_location": "Fishing Trawler", "members": true},
+        {"id": 699, "name": "gnomeball", "unlock_location": "Gnome Ball", "members": true},
+        {"id": 573, "name": "goblin_game", "unlock_location": "Goblin Games", "members": true}
+      ],
+      "boss_music": [
+        {"id": 370, "name": "xarpus_combat", "location": "Theatre of Blood", "members": true},
+        {"id": 371, "name": "nylocas_combat", "location": "Theatre of Blood", "members": true},
+        {"id": 372, "name": "pestilent_bloat_combat", "location": "Theatre of Blood", "members": true},
+        {"id": 374, "name": "verzik_combat", "location": "Theatre of Blood", "members": true},
+        {"id": 379, "name": "sotetseg_combat", "location": "Theatre of Blood", "members": true},
+        {"id": 380, "name": "maiden_combat", "location": "Theatre of Blood", "members": true},
+        {"id": 1039, "name": "nightmare_combat", "location": "Nightmare", "members": true},
+        {"id": 978, "name": "araxxor_combat", "location": "Araxxor", "members": true},
+        {"id": 972, "name": "zalcano_combat", "location": "Zalcano", "members": true},
+        {"id": 497, "name": "alchemical_hydra", "location": "Alchemical Hydra", "members": true},
+        {"id": 440, "name": "corporealbeast", "location": "Corporeal Beast", "members": true},
+        {"id": 518, "name": "olm_battle", "location": "Chambers of Xeric", "members": true},
+        {"id": 564, "name": "muspah_boss", "location": "Muspah", "members": true}
+      ]
+    }
+  },
+  "level_up_jingles": {
+    "description": "Jingles played when leveling up skills",
+    "skills": {
+      "attack": [
+        {"id": 287, "name": "advance_attack", "skill": "Attack"},
+        {"id": 303, "name": "advance_attack2", "skill": "Attack"}
+      ],
+      "strength": [
+        {"id": 40, "name": "advance_strength", "skill": "Strength"},
+        {"id": 281, "name": "advance_strength2", "skill": "Strength"}
+      ],
+      "defence": [
+        {"id": 146, "name": "advance_defense2", "skill": "Defence"},
+        {"id": 202, "name": "advance_defense", "skill": "Defence"}
+      ],
+      "hitpoints": [
+        {"id": 89, "name": "advance_hitpoints2", "skill": "Hitpoints"},
+        {"id": 211, "name": "advance_hitpoints", "skill": "Hitpoints"}
+      ],
+      "ranged": [
+        {"id": 110, "name": "advance_ranged2", "skill": "Ranged"},
+        {"id": 235, "name": "advance_ranged", "skill": "Ranged"}
+      ],
+      "magic": [
+        {"id": 58, "name": "advance_magic2", "skill": "Magic"},
+        {"id": 254, "name": "advance_magic", "skill": "Magic"}
+      ],
+      "prayer": [
+        {"id": 1, "name": "advance_prayer2", "skill": "Prayer"},
+        {"id": 177, "name": "advance_prayer", "skill": "Prayer"}
+      ],
+      "woodcutting": [
+        {"id": 256, "name": "advance_woodcutting2", "skill": "Woodcutting"},
+        {"id": 264, "name": "advance_woodcutting", "skill": "Woodcutting"}
+      ],
+      "fishing": [
+        {"id": 249, "name": "advance_fishing2", "skill": "Fishing"},
+        {"id": 250, "name": "advance_fishing", "skill": "Fishing"}
+      ],
+      "mining": [
+        {"id": 57, "name": "advance_mining2", "skill": "Mining"},
+        {"id": 171, "name": "advance_mining", "skill": "Mining"}
+      ],
+      "cooking": [
+        {"id": 153, "name": "advance_cooking2", "skill": "Cooking"},
+        {"id": 220, "name": "advance_cooking", "skill": "Cooking"}
+      ],
+      "smithing": [
+        {"id": 103, "name": "advance_smithing", "skill": "Smithing"},
+        {"id": 127, "name": "advance_smithing2", "skill": "Smithing"}
+      ],
+      "crafting": [
+        {"id": 77, "name": "advance_crafting", "skill": "Crafting"},
+        {"id": 217, "name": "advance_crafting2", "skill": "Crafting"}
+      ],
+      "thieving": [
+        {"id": 23, "name": "advance_thieving", "skill": "Thieving"},
+        {"id": 88, "name": "advance_thieving2", "skill": "Thieving"}
+      ],
+      "combat": [
+        {"id": 305, "name": "combat_level_up", "skill": "Combat (overall)"}
+      ],
+      "firemaking": [
+        {"id": 185, "name": "advance_firemarking", "skill": "Firemaking"},
+        {"id": 304, "name": "advance_firemarking2", "skill": "Firemaking"}
+      ],
+      "runecrafting": [
+        {"id": 160, "name": "advance_runecraft", "skill": "Runecrafting"},
+        {"id": 308, "name": "advance_runecraft2", "skill": "Runecrafting"}
+      ],
+      "fletching": [
+        {"id": 138, "name": "advance_fletching2", "skill": "Fletching"},
+        {"id": 172, "name": "advance_fletching", "skill": "Fletching"}
+      ],
+      "slayer": [
+        {"id": 183, "name": "advance_slayer", "skill": "Slayer"},
+        {"id": 245, "name": "advance_slayer2", "skill": "Slayer"}
+      ],
+      "herblore": [
+        {"id": 30, "name": "advance_herblaw", "skill": "Herblore"},
+        {"id": 201, "name": "advance_herblaw2", "skill": "Herblore"}
+      ],
+      "agility": [
+        {"id": 150, "name": "advance_agility", "skill": "Agility"}
+      ],
+      "hunter": [
+        {"id": 19, "name": "advance_hunting2", "skill": "Hunter"},
+        {"id": 140, "name": "advance_hunting", "skill": "Hunter"}
+      ],
+      "construction": [
+        {"id": 39, "name": "advance_carpentry", "skill": "Construction"},
+        {"id": 265, "name": "advance_carpentry2", "skill": "Construction"}
+      ]
+    }
+  },
+  "quest_jingles": {
+    "description": "Jingles played during or after quests",
+    "completion": [
+      {"id": 91, "name": "quest_complete_1", "type": "quest_completion"},
+      {"id": 307, "name": "quest_complete_2", "type": "quest_completion"},
+      {"id": 168, "name": "quest_complete_3", "type": "quest_completion"},
+      {"id": 1065, "name": "quest", "type": "quest_completion"},
+      {"id": 185, "name": "darkmeyer_end_of_quest_jingle", "type": "quest_completion", "quest": "Darkmeyer"}
+    ],
+    "cutscenes": [
+      {"id": 33, "name": "romeo_cutscene", "quest": "Romeo & Juliet"},
+      {"id": 28, "name": "zaniks_theme", "quest": "Dorgeshuun"},
+      {"id": 117, "name": "petra_cutscene", "quest": "Varrock"},
+      {"id": 239, "name": "contact_intro_jingle", "quest": "Contact!"},
+      {"id": 27, "name": "bkf_cutscene", "quest": "Black Knights' Fortress"}
+    ]
+  },
+  "combat_sounds": {
+    "description": "Combat-related music and sounds",
+    "attack_sounds": [
+      {"id": 987, "name": "attack1"},
+      {"id": 447, "name": "attack2"},
+      {"id": 720, "name": "attack3"},
+      {"id": 597, "name": "attack4"},
+      {"id": 815, "name": "attack5"},
+      {"id": 710, "name": "attack6"}
+    ],
+    "minigame_combat": [
+      {"id": 554, "name": "bcs_combat", "minigame": "Barbarian Assault"},
+      {"id": 425, "name": "castlewars", "minigame": "Castle Wars"},
+      {"id": 438, "name": "soul_wars", "minigame": "Soul Wars"},
+      {"id": 589, "name": "clanwars", "minigame": "Clan Wars"}
+    ],
+    "death": [
+      {"id": 182, "name": "death", "type": "player_death"},
+      {"id": 189, "name": "death2", "type": "player_death"},
+      {"id": 738, "name": "dance_of_death", "type": "music_track"}
+    ]
+  },
+  "skill_sounds": {
+    "description": "Skill training and activity sounds",
+    "fishing": [
+      {"id": 592, "name": "fishing", "activity": "Fishing"},
+      {"id": 109, "name": "tbwt_fishing", "activity": "Tempoross Fishing"},
+      {"id": 923, "name": "zeah_fishing", "activity": "Zeah Fishing"}
+    ],
+    "cooking": [
+      {"id": 11, "name": "tbwt_cooking", "activity": "Cooking"}
+    ],
+    "mining": [
+      {"id": 60, "name": "star_mining_boost", "activity": "Shooting Star"},
+      {"id": 904, "name": "zeah_mining", "activity": "Zeah Mining"}
+    ],
+    "farming": [
+      {"id": 102, "name": "farming_amulet_jingle", "activity": "Farming Amulet"},
+      {"id": 149, "name": "farming_levelup", "activity": "Farming Level"},
+      {"id": 187, "name": "farming_levelup_2", "activity": "Farming Level"},
+      {"id": 258, "name": "farming_grow", "activity": "Farming Growth"}
+    ],
+    "agility": [
+      {"id": 150, "name": "advance_agility", "activity": "Agility Level"},
+      {"id": 144, "name": "agility_complete", "activity": "Agility Course Complete"}
+    ]
+  },
+  "ui_sounds": {
+    "description": "User interface and system sounds",
+    "general_ui": [
+      {"id": 51, "name": "grand_exchange_trade_jingle", "activity": "Grand Exchange trade"},
+      {"id": 204, "name": "guide_quiz_complete", "activity": "Tutorial completion"},
+      {"id": 817, "name": "doorways", "activity": "Door opening"},
+      {"id": 87, "name": "open_light_chest", "activity": "Opening chest"}
+    ],
+    "achievement": [
+      {"id": 118, "name": "skillcape_jingle", "activity": "Skillcape purchase"},
+      {"id": 90, "name": "air_guitar_jingle", "activity": "Air guitar emote"}
+    ],
+    "silence_tracks": [
+      {"id": 26, "name": "6_second_silence", "type": "silence"},
+      {"id": 68, "name": "silence_25_seconds", "type": "silence"},
+      {"id": 142, "name": "silence_1_second", "type": "silence"},
+      {"id": 816, "name": "silence", "type": "silence"}
+    ]
+  },
+  "environmental_sounds": {
+    "description": "Environmental and location-based music",
+    "churches": [
+      {"id": 491, "name": "church_music_2", "location": "Churches"},
+      {"id": 648, "name": "church_music_1", "location": "Churches"},
+      {"id": 3, "name": "ambient_church_happy", "location": "Churches"},
+      {"id": 259, "name": "ambient_church_moody", "location": "Churches"},
+      {"id": 247, "name": "ambient_church_spooky", "location": "Churches"}
+    ],
+    "jungle": [
+      {"id": 820, "name": "jungly1", "location": "Karamja Jungle"},
+      {"id": 784, "name": "jungly2", "location": "Karamja Jungle"},
+      {"id": 884, "name": "jungly3", "location": "Karamja Jungle"},
+      {"id": 726, "name": "ambient_jungle", "location": "Jungle areas"}
+    ],
+    "caves": [
+      {"id": 700, "name": "scape_cave", "location": "Caves"},
+      {"id": 1025, "name": "cave_background", "location": "Caves"},
+      {"id": 393, "name": "cave_of_beasts", "location": "Dungeons"},
+      {"id": 576, "name": "cave_of_the_goblins", "location": "Goblin caves"},
+      {"id": 583, "name": "the_terrible_caverns", "location": "Dungeons"},
+      {"id": 898, "name": "little_cave_of_horrors", "location": "Dungeons"}
+    ]
+  },
+  "misc_jingles": {
+    "description": "Various other jingles and special sounds",
+    "minigames": [
+      {"id": 44, "name": "gotr_win_jingle", "minigame": "Guardians of the Rift"},
+      {"id": 45, "name": "gotr_lose_jingle", "minigame": "Guardians of the Rift"},
+      {"id": 221, "name": "tempoross_win_jingle", "minigame": "Tempoross"},
+      {"id": 222, "name": "tempoross_lose_jingle", "minigame": "Tempoross"},
+      {"id": 50, "name": "soul_wars_win", "minigame": "Soul Wars"},
+      {"id": 49, "name": "soul_wars_lose", "minigame": "Soul Wars"},
+      {"id": 148, "name": "castlewars_win", "minigame": "Castle Wars"},
+      {"id": 70, "name": "castlewars_lose", "minigame": "Castle Wars"},
+      {"id": 223, "name": "castlewars_draw", "minigame": "Castle Wars"},
+      {"id": 65, "name": "toa_boss_complete_jingle", "minigame": "Tombs of Amascut"},
+      {"id": 66, "name": "toa_path_complete_jingle", "minigame": "Tombs of Amascut"}
+    ],
+    "events": [
+      {"id": 22, "name": "easter_jingle", "event": "Easter"},
+      {"id": 25, "name": "xmas_2021_jingle", "event": "Christmas 2021"},
+      {"id": 69, "name": "xmas22_sting_jingle", "event": "Christmas 2022"}
+    ],
+    "diary": [
+      {"id": 64, "name": "area_tasks_jungle_jingle_all_easy", "type": "Achievement Diary"},
+      {"id": 97, "name": "area_tasks_jungle_jingle_med", "type": "Achievement Diary"},
+      {"id": 104, "name": "area_tasks_jungle_jingle_all_med", "type": "Achievement Diary"},
+      {"id": 161, "name": "area_tasks_jungle_jingle_hard", "type": "Achievement Diary"}
+    ]
+  },
+  "all_tracks_index": {
+    "description": "Complete index of all sound/music tracks",
+    "note": "Tracks are 0-indexed. IDs listed are the actual cache IDs.",
+    "track_count": 1126,
+    "id_range": {"min": 0, "max": 1125},
+    "categories_by_count": {
+      "music_tracks": 600,
+      "jingles": 85,
+      "cutscene_sounds": 150,
+      "ambient_sounds": 200,
+      "ui_sounds": 91
+    }
+  }
+}

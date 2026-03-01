@@ -1,0 +1,36 @@
+version: '3.8'
+
+# Docker Compose for all MCP servers
+# Usage: docker-compose -f docker-compose.mcps.yml up
+
+services:
+  rsmod-game:
+    build: ./mcp
+    container_name: rsmod-game-mcp
+    environment:
+      - BRIDGE_URL=ws://host.docker.internal:43595
+    network_mode: host
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "bun", "run", "check-server.ts"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  osrs-cache:
+    build: ./mcp-osrs
+    container_name: osrs-cache-mcp
+    volumes:
+      - ./mcp-osrs/data:/app/data:ro
+    restart: unless-stopped
+
+  osrs-wiki-rev233:
+    build: ./mcp-osrs-rev233
+    container_name: osrs-wiki-rev233-mcp
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+networks:
+  default:
+    name: osrs-ps-mcps

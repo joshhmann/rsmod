@@ -1,0 +1,96 @@
+{
+  "name": "Scorpion",
+  "combat_level": 14,
+  "hitpoints": 17,
+  "npc_ids": [3024],
+  "aggressive_level": 28,
+  "max_damage": 2,
+  "attack_style": "STAB",
+  "attack_speed": 6,
+  "respawn_time": 30,
+  "combat_stats": {
+    "attack": 11,
+    "strength": 12,
+    "defence": 11,
+    "ranged": 1,
+    "magic": 1
+  },
+  "attack_bonus": {
+    "stab": 0,
+    "slash": 0,
+    "crush": 0,
+    "magic": 0,
+    "ranged": 0
+  },
+  "defence_bonus": {
+    "stab": 5,
+    "slash": 15,
+    "crush": 15,
+    "magic": 0,
+    "ranged": 5
+  },
+  "immunities": {
+    "poison": false,
+    "venom": true
+  },
+  "animations": {
+    "attack": 6254,
+    "defend": 6255,
+    "death": 6256
+  },
+  "slayer": {
+    "level": 1,
+    "xp": 17,
+    "tasks": ["Scorpions"]
+  },
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ],
+  "variants": [
+    {
+      "name": "Scorpion (37)",
+      "combat_level": 37,
+      "hitpoints": 37,
+      "npc_ids": [2480],
+      "aggressive_level": 74,
+      "max_damage": 3,
+      "combat_stats": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "ranged": 1,
+        "magic": 1
+      },
+      "slayer": {
+        "level": 1,
+        "xp": 30,
+        "tasks": ["Scorpions"]
+      }
+    },
+    {
+      "name": "Scorpion (59)",
+      "combat_level": 59,
+      "hitpoints": 55,
+      "npc_ids": [2479],
+      "aggressive_level": 118,
+      "max_damage": 6,
+      "combat_stats": {
+        "attack": 1,
+        "strength": 1,
+        "defence": 1,
+        "ranged": 1,
+        "magic": 1
+      },
+      "slayer": {
+        "level": 1,
+        "xp": 55,
+        "tasks": ["Scorpions"]
+      }
+    }
+  ]
+}

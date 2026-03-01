@@ -1,0 +1,841 @@
+{
+  "name": "Black dragon",
+  "combat_level": 227,
+  "hitpoints": 190,
+  "attack": 200,
+  "strength": 200,
+  "defence": 200,
+  "attack_speed": 4,
+  "slayer_level": null,
+  "slayer_xp": 194.7,
+  "drops": [
+    {
+      "name": "Dragon bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Black dragonhide",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon token",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril 2h sword",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril axe",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mithril battleaxe",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune knife",
+      "rate": "1/42",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Mithril kiteshield",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant platebody",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune longsword",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant javelin",
+      "rate": "1/6",
+      "qty_min": 30,
+      "qty_max": 30
+    },
+    {
+      "name": "Adamant dart(p)",
+      "rate": "1/18",
+      "qty_min": 16,
+      "qty_max": 16
+    },
+    {
+      "name": "Fire rune",
+      "rate": "1/16",
+      "qty_min": 50,
+      "qty_max": 50
+    },
+    {
+      "name": "Blood rune",
+      "rate": "1/42",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Air rune",
+      "rate": "1/128",
+      "qty_min": 75,
+      "qty_max": 75
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/25",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Coins",
+      "rate": "1/3",
+      "qty_min": 196,
+      "qty_max": 196
+    },
+    {
+      "name": "Coins",
+      "rate": "1/12",
+      "qty_min": 330,
+      "qty_max": 330
+    },
+    {
+      "name": "Coins",
+      "rate": "1/128",
+      "qty_min": 690,
+      "qty_max": 690
+    },
+    {
+      "name": "Dragon javelin tips",
+      "rate": "1/21",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Adamantite bar",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chocolate cake",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/68",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/390",
+      "qty_min": 3,
+      "qty_max": 0
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/154",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/378",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/378",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/309",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/618",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Runite bar",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/2",
+      "qty_min": 67,
+      "qty_max": 67
+    },
+    {
+      "name": "Rune 2h sword",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune battleaxe",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/4",
+      "qty_min": 45,
+      "qty_max": 45
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/4",
+      "qty_min": 45,
+      "qty_max": 45
+    },
+    {
+      "name": "Steel arrow",
+      "rate": "1/4",
+      "qty_min": 150,
+      "qty_max": 150
+    },
+    {
+      "name": "Rune arrow",
+      "rate": "1/4",
+      "qty_min": 42,
+      "qty_max": 42
+    },
+    {
+      "name": "Adamant javelin",
+      "rate": "1/4",
+      "qty_min": 20,
+      "qty_max": 20
+    },
+    {
+      "name": "Rune sq shield",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragonstone",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Silver ore",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature talisman",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune kiteshield",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon med helm",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/7",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/4",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/15",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/20",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled dragon head",
+      "rate": "1/35",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Brimstone key",
+      "rate": "1/75",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (hard)",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (elite)",
+      "rate": "1/500",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Draconic visage",
+      "rate": "1/10",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/72",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/168",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Black dragonhide",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant platebody",
+      "rate": "1/6",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune knife",
+      "rate": "1/18",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Rune knife",
+      "rate": "1/21",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Adamant 2h sword",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Adamant battleaxe",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune axe",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune knife",
+      "rate": "1/42",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Rune med helm",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune kiteshield",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune longsword",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/16",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/25",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Blood rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/128",
+      "qty_min": 25,
+      "qty_max": 25
+    },
+    {
+      "name": "Coins",
+      "rate": "1/3",
+      "qty_min": 500,
+      "qty_max": 999
+    },
+    {
+      "name": "Coins",
+      "rate": "1/12",
+      "qty_min": 1,
+      "qty_max": 0
+    },
+    {
+      "name": "Coins",
+      "rate": "1/128",
+      "qty_min": 690,
+      "qty_max": 690
+    },
+    {
+      "name": "Dragon javelin tips",
+      "rate": "1/21",
+      "qty_min": 25,
+      "qty_max": 25
+    },
+    {
+      "name": "Adamantite bar",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Monkfish",
+      "rate": "1/42",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/68",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/390",
+      "qty_min": 3,
+      "qty_max": 0
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/154",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/378",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/378",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/309",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/618",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Runite bar",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/2",
+      "qty_min": 67,
+      "qty_max": 67
+    },
+    {
+      "name": "Rune 2h sword",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune battleaxe",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/4",
+      "qty_min": 45,
+      "qty_max": 45
+    },
+    {
+      "name": "Death rune",
+      "rate": "1/4",
+      "qty_min": 45,
+      "qty_max": 45
+    },
+    {
+      "name": "Steel arrow",
+      "rate": "1/4",
+      "qty_min": 150,
+      "qty_max": 150
+    },
+    {
+      "name": "Rune arrow",
+      "rate": "1/4",
+      "qty_min": 42,
+      "qty_max": 42
+    },
+    {
+      "name": "Adamant javelin",
+      "rate": "1/4",
+      "qty_min": 20,
+      "qty_max": 20
+    },
+    {
+      "name": "Rune sq shield",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragonstone",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Silver ore",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune kiteshield",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon med helm",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/7",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/4",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/15",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/20",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ensouled dragon head",
+      "rate": "1/35",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (hard)",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (elite)",
+      "rate": "1/500",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Draconic visage",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Larran's key",
+      "rate": "1/59",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Slayer's enchantment",
+      "rate": "1/120",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Blighted anglerfish",
+      "rate": "~1/8.1",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted manta ray",
+      "rate": "~1/8.1",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted karambwan",
+      "rate": "~1/12.2",
+      "qty_min": 1,
+      "qty_max": 2
+    },
+    {
+      "name": "Blighted teleport spell sack",
+      "rate": "~1/12.2",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted ancient ice sack",
+      "rate": "~1/12.2",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted vengeance sack",
+      "rate": "~1/12.2",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted entangle sack",
+      "rate": "~1/6.1",
+      "qty_min": 1,
+      "qty_max": 10
+    },
+    {
+      "name": "Blighted super restore(4)",
+      "rate": "~1/24.4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Revenant cave teleport",
+      "rate": "~1/24.4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dareeyak teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wilderness crabs teleport",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Carrallanger teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Paddewwa teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Annakarl teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lassar teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Kharyrll teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Senntisten teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ghorrock teleport (tablet)",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Target teleport",
+      "rate": "~1/122",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Magic shortbow scroll",
+      "rate": "~1/304.9",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ring of wealth scroll",
+      "rate": "~1/304.9",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Trouver parchment",
+      "rate": "~1/1,219.8",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Looting bag note",
+      "rate": "~1/1,219.8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Draconic visage",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

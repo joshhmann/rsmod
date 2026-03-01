@@ -10,9 +10,9 @@ import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.InputStream
 import java.util.logging.Logger
+import org.rsmod.api.cache.map.loc.MapLocDefinition
 import org.rsmod.api.cache.map.loc.MapLocListDecoder
 import org.rsmod.api.cache.map.loc.MapLocListDefinition
-import org.rsmod.api.cache.map.loc.MapLocDefinition
 import org.rsmod.api.cache.util.InlineByteBuf
 import org.rsmod.api.parsers.toml.Toml
 import org.rsmod.api.type.builders.resource.TypeResourceFile

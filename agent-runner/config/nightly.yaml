@@ -1,0 +1,25 @@
+# Nightly test tier — runs on schedule (not on every commit).
+# Comprehensive: all skills, drop table sampling, edge cases.
+# Target runtime: < 30 minutes.
+
+tier: nightly
+
+bridge_url: "ws://localhost:43595"
+proxy_url: "ws://localhost:43596"  # RSProx layer enabled for wire-level validation
+
+tests:
+  # --- All skills ---
+  - { type: skill_tester, skill: woodcutting, ticks: 300 }
+  - { type: skill_tester, skill: fishing,     ticks: 300 }
+  - { type: skill_tester, skill: cooking,     ticks: 300 }
+  - { type: skill_tester, skill: firemaking,  ticks: 300 }
+  - { type: skill_tester, skill: mining,      ticks: 300 }
+  - { type: skill_tester, skill: thieving,    ticks: 300 }
+  - { type: skill_tester, skill: prayer,      ticks: 200 }
+
+  # --- Drop tables (50 kills each) ---
+  - { type: drop_tester, npc: "Goblin",     kills: 50 }
+  - { type: drop_tester, npc: "Cow",        kills: 50 }
+  - { type: drop_tester, npc: "Chicken",    kills: 50 }
+  - { type: drop_tester, npc: "Giant rat",  kills: 50 }
+  - { type: drop_tester, npc: "Guard",      kills: 50 }

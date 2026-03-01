@@ -1,0 +1,596 @@
+{
+  "skill": "woodcutting",
+  "source": "OSRS Rev 233 Cache Extraction",
+  "extraction_date": "2026-02-22",
+  "metadata": {
+    "revision": 233,
+    "cache_version": "Rev 233 (Varlamore Part 2, Sept 25, 2024)"
+  },
+
+  "axes": {
+    "bronze_axe": {
+      "item_id": 1351,
+      "name": "bronze_axe",
+      "level_req": 1,
+      "attack_req": 1,
+      "animation_id": 879,
+      "animation_name": "human_woodcutting_bronze_axe",
+      "notes": "Basic starting axe"
+    },
+    "iron_axe": {
+      "item_id": 1349,
+      "name": "iron_axe",
+      "level_req": 1,
+      "attack_req": 1,
+      "animation_id": 877,
+      "animation_name": "human_woodcutting_iron_axe",
+      "notes": "Slightly better than bronze"
+    },
+    "steel_axe": {
+      "item_id": 1353,
+      "name": "steel_axe",
+      "level_req": 6,
+      "attack_req": 5,
+      "animation_id": 875,
+      "animation_name": "human_woodcutting_steel_axe",
+      "notes": "Mid-tier axe"
+    },
+    "black_axe": {
+      "item_id": 1361,
+      "name": "black_axe",
+      "level_req": 6,
+      "attack_req": 10,
+      "animation_id": 873,
+      "animation_name": "human_woodcutting_black_axe",
+      "notes": "Cannot be smithed, only obtained from monsters"
+    },
+    "mithril_axe": {
+      "item_id": 1355,
+      "name": "mithril_axe",
+      "level_req": 21,
+      "attack_req": 20,
+      "animation_id": 871,
+      "animation_name": "human_woodcutting_mithril_axe",
+      "notes": "Members-only after this tier"
+    },
+    "adamant_axe": {
+      "item_id": 1357,
+      "name": "adamant_axe",
+      "level_req": 31,
+      "attack_req": 30,
+      "animation_id": 869,
+      "animation_name": "human_woodcutting_adamant_axe",
+      "notes": "High-tier axe"
+    },
+    "rune_axe": {
+      "item_id": 1359,
+      "name": "rune_axe",
+      "level_req": 41,
+      "attack_req": 40,
+      "animation_id": 867,
+      "animation_name": "human_woodcutting_rune_axe",
+      "notes": "Best F2P axe"
+    },
+    "dragon_axe": {
+      "item_id": 6739,
+      "name": "dragon_axe",
+      "level_req": 61,
+      "attack_req": 60,
+      "animation_id": 2846,
+      "animation_name": "human_woodcutting_dragon_axe",
+      "special_attack": "Clobber - drains run energy",
+      "notes": "Members-only, special attack"
+    },
+    "crystal_axe": {
+      "item_id": 23673,
+      "name": "crystal_axe",
+      "level_req": 71,
+      "attack_req": 70,
+      "animation_id": 8324,
+      "animation_name": "human_woodcutting_crystal_axe",
+      "inactive_id": 23675,
+      "notes": "Requires Song of the Elves completion"
+    },
+    "infernal_axe": {
+      "item_id": 13241,
+      "name": "infernal_axe",
+      "level_req": 61,
+      "attack_req": 60,
+      "animation_id": 2117,
+      "animation_name": "human_woodcutting_infernal_axe",
+      "empty_id": 13242,
+      "burn_chance": 0.33,
+      "notes": "1/3 chance to burn logs for Firemaking XP, requires dragon axe + smouldering stone"
+    },
+    "gilded_axe": {
+      "item_id": 23279,
+      "name": "trail_gilded_axe",
+      "level_req": 41,
+      "attack_req": 40,
+      "animation_id": 8303,
+      "animation_name": "human_woodcutting_gilded_axe",
+      "notes": "Cosmetic variant of rune axe from clue scrolls"
+    },
+    "3rd_age_axe": {
+      "item_id": 20011,
+      "name": "3a_axe",
+      "level_req": 61,
+      "attack_req": 65,
+      "animation_id": 7264,
+      "animation_name": "human_woodcutting_3a_axe",
+      "notes": "Rare reward from master clue scrolls"
+    },
+    "blessed_axe": {
+      "item_id": 7824,
+      "name": "blessed_axe",
+      "level_req": 1,
+      "attack_req": 1,
+      "animation_id": 5383,
+      "animation_name": "human_woodcutting_blessed_axe",
+      "miss_animation": 5384,
+      "notes": "Quest item for Animal Magnetism, used on undead trees"
+    }
+  },
+
+  "trees": {
+    "normal_tree": {
+      "name": "Tree",
+      "level_req": 1,
+      "xp": 25.0,
+      "log_id": 1511,
+      "log_name": "logs",
+      "chop_animation": 879,
+      "respawn_ticks": 60,
+      "loc_ids": [1276, 1277, 1278, 1279, 1280, 1282, 1283, 1284, 1285, 1286, 1287, 1288, 1289, 1290, 1291, 1292],
+      "loc_names": ["tree", "lighttree", "tree2", "tree3", "lighttree2", "deadtree1", "deadtree1_large", "deadtree4", "lightdeadtree1", "deadtree2", "deadtree2_web_r", "deadtree2_web_l", "deadtree2_dark", "deadtree3", "deadtree2_snowy", "dramentree"],
+      "stump_ids": [1341, 1342, 1343, 1344, 1345, 1346, 1347, 1348, 1349, 1350, 1351, 1352, 1353, 1354, 1355],
+      "notes": "Most common tree, multiple variants with same mechanics"
+    },
+    "oak_tree": {
+      "name": "Oak Tree",
+      "level_req": 15,
+      "xp": 37.5,
+      "log_id": 1521,
+      "log_name": "oak_logs",
+      "chop_animation": 879,
+      "respawn_ticks": 14,
+      "loc_ids": [10820, 1281, 3037, 3038, 3039, 3040, 3041, 3042, 3043, 3044, 3045, 3046],
+      "loc_names": ["oaktree"],
+      "stump_id": 1356,
+      "stump_name": "oaktree_stump",
+      "seed_id": 5312,
+      "seed_name": "acorn",
+      "notes": "Good early training tree"
+    },
+    "willow_tree": {
+      "name": "Willow Tree",
+      "level_req": 30,
+      "xp": 67.5,
+      "log_id": 1519,
+      "log_name": "willow_logs",
+      "chop_animation": 879,
+      "respawn_ticks": 14,
+      "loc_ids": [10819, 10829, 10831, 10832, 10833, 10834, 10835, 10836, 10837, 10838],
+      "loc_names": ["willow_tree", "willow_tree4"],
+      "stump_id": 8489,
+      "stump_name": "willow_tree_stump",
+      "seed_id": 5313,
+      "seed_name": "willow_seed",
+      "notes": "Popular AFK training spot at Draynor"
+    },
+    "teak_tree": {
+      "name": "Teak Tree",
+      "level_req": 35,
+      "xp": 85.0,
+      "log_id": 6333,
+      "log_name": "teak_logs",
+      "chop_animation": 879,
+      "respawn_ticks": 14,
+      "loc_ids": [9036, 15062, 15063],
+      "loc_names": ["teak_tree", "teak_tree_fullygrown"],
+      "stump_ids": [30446, 30447],
+      "stump_names": ["teak_tree_stump"],
+      "seed_id": 21486,
+      "seed_name": "teak_seed",
+      "notes": "Members-only, found in Tai Bwo Wannai and Miscellania"
+    },
+    "maple_tree": {
+      "name": "Maple Tree",
+      "level_req": 45,
+      "xp": 100.0,
+      "log_id": 1517,
+      "log_name": "maple_logs",
+      "chop_animation": 879,
+      "respawn_ticks": 29,
+      "loc_ids": [1307, 1308, 4674, 8437, 8438, 8439, 8440, 8441, 8442, 8443, 8444],
+      "loc_names": ["mapletree", "maple_tree_fullygrown_1", "maple_tree_fullygrown_2"],
+      "stump_id": 8445,
+      "stump_name": "maple_tree_stump",
+      "seed_id": 5314,
+      "seed_name": "maple_seed",
+      "notes": "Found near Seers' Village"
+    },
+    "mahogany_tree": {
+      "name": "Mahogany Tree",
+      "level_req": 50,
+      "xp": 125.0,
+      "log_id": 6332,
+      "log_name": "mahogany_logs",
+      "chop_animation": 879,
+      "respawn_ticks": 14,
+      "loc_ids": [9034, 30417, 30418],
+      "loc_names": ["mahogany_tree", "mahogany_tree_fullygrown"],
+      "stump_id": 30418,
+      "stump_name": "mahogany_tree_stump",
+      "seed_id": 21488,
+      "seed_name": "mahogany_seed",
+      "notes": "Members-only, found in Tai Bwo Wannai"
+    },
+    "yew_tree": {
+      "name": "Yew Tree",
+      "level_req": 60,
+      "xp": 175.0,
+      "log_id": 1515,
+      "log_name": "yew_logs",
+      "chop_animation": 879,
+      "respawn_ticks": 99,
+      "loc_ids": [1309, 1310, 1311, 1312, 8512, 8513],
+      "loc_names": ["yewtree", "yew_tree_fullygrown_1", "yew_tree_fullygrown_2"],
+      "stump_id": 8514,
+      "stump_name": "yew_tree_stump",
+      "seed_id": 5315,
+      "seed_name": "yew_seed",
+      "notes": "High value logs for Fletching and Firemaking"
+    },
+    "magic_tree": {
+      "name": "Magic Tree",
+      "level_req": 75,
+      "xp": 250.0,
+      "log_id": 1513,
+      "log_name": "magic_logs",
+      "chop_animation": 879,
+      "respawn_ticks": 399,
+      "loc_ids": [1306, 1293, 1294, 8408, 8409],
+      "loc_names": ["magictree", "magic_tree_fullygrown_1", "magic_tree_fullygrown_2"],
+      "stump_id": 8410,
+      "stump_name": "magic_tree_stump",
+      "seed_id": 5316,
+      "seed_name": "magic_seed",
+      "notes": "Rare, very profitable but slow respawn"
+    },
+    "redwood_tree": {
+      "name": "Redwood Tree",
+      "level_req": 90,
+      "xp": 380.0,
+      "log_id": 19669,
+      "log_name": "redwood_logs",
+      "chop_animation": 2846,
+      "respawn_ticks": 99,
+      "loc_ids": [29668, 29670, 29669, 29671],
+      "loc_names": ["redwoodtree_l", "redwoodtree_r", "redwoodtree_l_cut", "redwoodtree_r_cut"],
+      "stump_ids": [29669, 29671],
+      "stump_names": ["redwoodtree_l_cut", "redwoodtree_r_cut"],
+      "seed_id": null,
+      "seed_name": null,
+      "notes": "Members-only, only found in Woodcutting Guild, special animation"
+    }
+  },
+
+  "animations": {
+    "human_woodcutting_bronze_axe": 879,
+    "human_woodcutting_iron_axe": 877,
+    "human_woodcutting_steel_axe": 875,
+    "human_woodcutting_black_axe": 873,
+    "human_woodcutting_mithril_axe": 871,
+    "human_woodcutting_adamant_axe": 869,
+    "human_woodcutting_rune_axe": 867,
+    "human_woodcutting_dragon_axe": 2846,
+    "human_woodcutting_crystal_axe": 8324,
+    "human_woodcutting_infernal_axe": 2117,
+    "human_woodcutting_gilded_axe": 8303,
+    "human_woodcutting_3a_axe": 7264,
+    "human_woodcutting_blessed_axe": 5383,
+    "human_woodcutting_blessed_axe_miss": 5384,
+    "human_woodcutting_gauntlet_axe_hm": 8325,
+    "human_woodcutting_league_axe": 12025,
+    "human_woodcutting_trailblazer_axe": 12026,
+    "human_woodcutting_trailblazer_axe_no_infernal": 24,
+    "human_woodcutting_trailblazer_reloaded_axe": 11939,
+    "human_woodcutting_trailblazer_reloaded_axe_no_infernal": 11940,
+    "skillcapes_woodcutting_player_anim": 4957,
+    "skillcapes_woodcutting_spotanim": 4958
+  },
+
+  "bird_nests": {
+    "bird_nest_empty": {
+      "item_id": 5075,
+      "name": "bird_nest_empty",
+      "notes": "Empty nest, can be ground for crushed nest"
+    },
+    "bird_nest_seeds": {
+      "item_id": 5073,
+      "name": "bird_nest_seeds",
+      "notes": "Contains random tree seeds"
+    },
+    "bird_nest_decentseeds": {
+      "item_id": 13653,
+      "name": "bird_nest_decentseeds",
+      "notes": "Higher tier tree seeds"
+    },
+    "bird_nest_cheapseeds": {
+      "item_id": 7413,
+      "name": "bird_nest_cheapseeds",
+      "notes": "Lower tier tree seeds"
+    },
+    "bird_nest_ring": {
+      "item_id": 5074,
+      "name": "bird_nest_ring",
+      "notes": "Contains random ring"
+    },
+    "bird_nest_egg_red": {
+      "item_id": 5070,
+      "name": "bird_nest_egg_red",
+      "notes": "Contains red bird egg"
+    },
+    "bird_nest_egg_green": {
+      "item_id": 5071,
+      "name": "bird_nest_egg_green",
+      "notes": "Contains green bird egg"
+    },
+    "bird_nest_egg_blue": {
+      "item_id": 5072,
+      "name": "bird_nest_egg_blue",
+      "notes": "Contains blue bird egg"
+    },
+    "crushed_bird_nest": {
+      "item_id": 6693,
+      "name": "crushed_bird_nest",
+      "notes": "Used in Saradomin brew"
+    },
+    "nest_drop_rate": "While woodcutting: 1/256 chance per log (increased with Woodcutting Guild and tier of tree)"
+  },
+
+  "lumberjack_outfit": {
+    "ramble_lumberjack_hat": {
+      "item_id": 10941,
+      "name": "ramble_lumberjack_hat",
+      "xp_bonus": 0.004,
+      "notes": "2.5% XP bonus when full set worn"
+    },
+    "ramble_lumberjack_top": {
+      "item_id": 10939,
+      "name": "ramble_lumberjack_top",
+      "xp_bonus": 0.008,
+      "notes": "2.5% XP bonus when full set worn"
+    },
+    "ramble_lumberjack_legs": {
+      "item_id": 10940,
+      "name": "ramble_lumberjack_legs",
+      "xp_bonus": 0.006,
+      "notes": "2.5% XP bonus when full set worn"
+    },
+    "ramble_lumberjack_boots": {
+      "item_id": 10933,
+      "name": "ramble_lumberjack_boots",
+      "xp_bonus": 0.002,
+      "notes": "2.5% XP bonus when full set worn"
+    },
+    "forestry_lumberjack_hat": {
+      "item_id": 28173,
+      "name": "forestry_lumberjack_hat",
+      "notes": "Forestry update variant"
+    },
+    "forestry_lumberjack_top": {
+      "item_id": 28169,
+      "name": "forestry_lumberjack_top",
+      "notes": "Forestry update variant"
+    },
+    "forestry_lumberjack_legs": {
+      "item_id": 28171,
+      "name": "forestry_lumberjack_legs",
+      "notes": "Forestry update variant"
+    },
+    "forestry_lumberjack_boots": {
+      "item_id": 28175,
+      "name": "forestry_lumberjack_boots",
+      "notes": "Forestry update variant"
+    },
+    "total_xp_bonus": 0.025,
+    "notes": "2.5% XP bonus when wearing full lumberjack outfit"
+  },
+
+  "tree_seeds": {
+    "acorn": {
+      "item_id": 5312,
+      "tree_type": "oak_tree",
+      "farming_level": 15
+    },
+    "willow_seed": {
+      "item_id": 5313,
+      "tree_type": "willow_tree",
+      "farming_level": 30
+    },
+    "maple_seed": {
+      "item_id": 5314,
+      "tree_type": "maple_tree",
+      "farming_level": 45
+    },
+    "yew_seed": {
+      "item_id": 5315,
+      "tree_type": "yew_tree",
+      "farming_level": 60
+    },
+    "magic_seed": {
+      "item_id": 5316,
+      "tree_type": "magic_tree",
+      "farming_level": 75
+    },
+    "spirit_tree_seed": {
+      "item_id": 5317,
+      "notes": "For Spirit Tree farming, not woodcutting"
+    },
+    "teak_seed": {
+      "item_id": 21486,
+      "tree_type": "teak_tree",
+      "farming_level": 35
+    },
+    "mahogany_seed": {
+      "item_id": 21488,
+      "tree_type": "mahogany_tree",
+      "farming_level": 55
+    }
+  },
+
+  "logs": {
+    "logs": { "item_id": 1511, "name": "logs", "tree_type": "normal", "firemaking_xp": 40 },
+    "oak_logs": { "item_id": 1521, "name": "oak_logs", "tree_type": "oak", "firemaking_xp": 60 },
+    "willow_logs": { "item_id": 1519, "name": "willow_logs", "tree_type": "willow", "firemaking_xp": 90 },
+    "teak_logs": { "item_id": 6333, "name": "teak_logs", "tree_type": "teak", "firemaking_xp": 105 },
+    "maple_logs": { "item_id": 1517, "name": "maple_logs", "tree_type": "maple", "firemaking_xp": 135 },
+    "mahogany_logs": { "item_id": 6332, "name": "mahogany_logs", "tree_type": "mahogany", "firemaking_xp": 157.5 },
+    "yew_logs": { "item_id": 1515, "name": "yew_logs", "tree_type": "yew", "firemaking_xp": 202.5 },
+    "magic_logs": { "item_id": 1513, "name": "magic_logs", "tree_type": "magic", "firemaking_xp": 303.8 },
+    "redwood_logs": { "item_id": 19669, "name": "redwood_logs", "tree_type": "redwood", "firemaking_xp": 350 },
+    "achey_tree_logs": { "item_id": 2862, "name": "achey_tree_logs", "notes": "From ogre area, used for composite bows" }
+  },
+
+  "test_locations": [
+    {
+      "name": "Lumbridge normal trees",
+      "x": 3191,
+      "z": 3216,
+      "tree_type": "normal_tree",
+      "notes": "Safe starting area near bank"
+    },
+    {
+      "name": "Draynor Village willows",
+      "x": 3088,
+      "z": 3237,
+      "tree_type": "willow_tree",
+      "notes": "Popular AFK spot, near bank"
+    },
+    {
+      "name": "Draynor Village oaks",
+      "x": 3100,
+      "z": 3234,
+      "tree_type": "oak_tree",
+      "notes": "Multiple oaks near bank"
+    },
+    {
+      "name": "Edgeville yews",
+      "x": 3087,
+      "z": 3469,
+      "tree_type": "yew_tree",
+      "notes": "F2P yew spot near bank"
+    },
+    {
+      "name": "Seers' Village maples",
+      "x": 2731,
+      "z": 3494,
+      "tree_type": "maple_tree",
+      "notes": "Multiple maples, bank nearby"
+    },
+    {
+      "name": "Seers' Village yews",
+      "x": 2710,
+      "z": 3461,
+      "tree_type": "yew_tree",
+      "notes": "Common yew spot"
+    },
+    {
+      "name": "Magic Trees (Sorcerer's Tower)",
+      "x": 2702,
+      "z": 3397,
+      "tree_type": "magic_tree",
+      "notes": "3 magic trees, high competition"
+    },
+    {
+      "name": "Woodcutting Guild redwoods",
+      "x": 1570,
+      "z": 3475,
+      "tree_type": "redwood_tree",
+      "notes": "Requires 60 WC and favour, unique 2-tree system"
+    },
+    {
+      "name": "Tai Bwo Wannai teak",
+      "x": 2823,
+      "z": 3082,
+      "tree_type": "teak_tree",
+      "notes": "Members-only, good for construction planks"
+    },
+    {
+      "name": "Tai Bwo Wannai mahogany",
+      "x": 2839,
+      "z": 3088,
+      "tree_type": "mahogany_tree",
+      "notes": "Members-only, high construction XP"
+    },
+    {
+      "name": "Varrock Palace oaks",
+      "x": 3223,
+      "z": 3502,
+      "tree_type": "oak_tree",
+      "notes": "Multiple oaks near GE"
+    }
+  ],
+
+  "woodcutting_guild": {
+    "location": { "x": 1590, "z": 3475, "plane": 0 },
+    "requirements": {
+      "woodcutting_level": 60,
+      "hosidius_favour": 75
+    },
+    "bonuses": {
+      "invisible_boost": 7,
+      "bird_nest_rate": "Doubled",
+      "notes": "+7 invisible WC boost while inside guild area"
+    },
+    "features": [
+      "11 Magic trees (east side)",
+      "4 Yew trees (center)",
+      "Redwood trees (west side - 2 trees)",
+      "Woodcutting bank (north)",
+      "Log shortcut (south)"
+    ]
+  },
+
+  "mechanics": {
+    "axe_success_formula": "Based on WC level, axe tier, and tree difficulty",
+    "bird_nest_drops": "1/256 chance per log cut, doubled in WC guild",
+    "log_burning": "Infernal axe burns 1/3 logs for Firemaking XP",
+    "special_trees": {
+      "redwood": "Requires cutting from both sides (left and right) to fell",
+      "dramen_tree": "Quest tree from Lost City, gives dramen branch",
+      "achey_tree": "Ogre area only, for composite ogre arrows"
+    }
+  },
+
+  "quest_requirements": {
+      "Lost City": {
+        "required": true,
+        "access": "Dramen tree for dramen staff",
+        "tree_id": 1292
+      },
+      "Animal Magnetism": {
+        "required": true,
+        "access": "Blessed axe for undead trees",
+        "axe_id": 7824
+      },
+      "Song of the Elves": {
+        "required": true,
+        "access": "Crystal axe and Prifddinas woodcutting",
+        "axe_id": 23673
+      }
+  },
+
+  "xp_table": {
+    "notes": "XP rates are base rates. Lumberjack outfit adds 2.5% bonus",
+    "level_1_15": { "tree": "normal", "xp_per_hour": "~5,000", "notes": "Trees everywhere" },
+    "level_15_30": { "tree": "oak", "xp_per_hour": "~15,000", "notes": "Fast training" },
+    "level_30_45": { "tree": "willow", "xp_per_hour": "~30,000", "notes": "AFK option" },
+    "level_45_60": { "tree": "maple", "xp_per_hour": "~35,000", "notes": "Seers' Village" },
+    "level_60_75": { "tree": "yew", "xp_per_hour": "~40,000", "notes": "Profit + XP" },
+    "level_75_90": { "tree": "magic", "xp_per_hour": "~35,000", "notes": "High profit" },
+    "level_90_99": { "tree": "redwood", "xp_per_hour": "~65,000", "notes": "AFK at WC guild" }
+  }
+}

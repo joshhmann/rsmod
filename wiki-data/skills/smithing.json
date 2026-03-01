@@ -1,0 +1,1035 @@
+{
+  "skill": "smithing",
+  "source": "OSRS Wiki (rev 228/233, accessed 2026-02)",
+  "actions": {
+    "bronze_bar": {
+      "level_req": 1,
+      "xp": 6.2,
+      "animation": 898,
+      "input_ids": [436, 438],
+      "output_id": 2349,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "blurite_bar": {
+      "level_req": 13,
+      "xp": 8.0,
+      "animation": 898,
+      "input_ids": [668],
+      "output_id": 9467,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "iron_bar": {
+      "level_req": 15,
+      "xp": 12.5,
+      "animation": 898,
+      "input_ids": [440],
+      "output_id": 2351,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "silver_bar": {
+      "level_req": 20,
+      "xp": 13.7,
+      "animation": 898,
+      "input_ids": [442],
+      "output_id": 2355,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "steel_bar": {
+      "level_req": 30,
+      "xp": 17.5,
+      "animation": 898,
+      "input_ids": [440, 453],
+      "output_id": 2353,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "gold_bar": {
+      "level_req": 40,
+      "xp": 22.5,
+      "animation": 898,
+      "input_ids": [444],
+      "output_id": 2357,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "mithril_bar": {
+      "level_req": 50,
+      "xp": 30.0,
+      "animation": 898,
+      "input_ids": [447, 453],
+      "output_id": 2359,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "adamantite_bar": {
+      "level_req": 70,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [449, 453],
+      "output_id": 2361,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "runite_bar": {
+      "level_req": 85,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [451, 453],
+      "output_id": 2363,
+      "loc_pattern": "furnace",
+      "members": false
+    },
+    "bronze_dagger": {
+      "level_req": 1,
+      "xp": 12.5,
+      "animation": 898,
+      "input_ids": [2349],
+      "output_id": 1205,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_axe": {
+      "level_req": 1,
+      "xp": 12.5,
+      "animation": 898,
+      "input_ids": [2349],
+      "output_id": 1351,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_mace": {
+      "level_req": 2,
+      "xp": 12.5,
+      "animation": 898,
+      "input_ids": [2349],
+      "output_id": 1422,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_med_helm": {
+      "level_req": 3,
+      "xp": 12.5,
+      "animation": 898,
+      "input_ids": [2349],
+      "output_id": 1139,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_sword": {
+      "level_req": 4,
+      "xp": 12.5,
+      "animation": 898,
+      "input_ids": [2349],
+      "output_id": 1277,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_scimitar": {
+      "level_req": 5,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2349, 2349],
+      "output_id": 1321,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_longsword": {
+      "level_req": 6,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2349, 2349],
+      "output_id": 1291,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_full_helm": {
+      "level_req": 7,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2349, 2349],
+      "output_id": 1155,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_sq_shield": {
+      "level_req": 8,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2349, 2349],
+      "output_id": 1173,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_warhammer": {
+      "level_req": 9,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349],
+      "output_id": 1337,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_battleaxe": {
+      "level_req": 10,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349],
+      "output_id": 1375,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_chainbody": {
+      "level_req": 11,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349],
+      "output_id": 1103,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_kiteshield": {
+      "level_req": 12,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349],
+      "output_id": 1189,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_2h_sword": {
+      "level_req": 14,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349],
+      "output_id": 1307,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_platelegs": {
+      "level_req": 16,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349],
+      "output_id": 1075,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_plateskirt": {
+      "level_req": 16,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349],
+      "output_id": 1087,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "bronze_platebody": {
+      "level_req": 18,
+      "xp": 62.5,
+      "animation": 898,
+      "input_ids": [2349, 2349, 2349, 2349, 2349],
+      "output_id": 1117,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_dagger": {
+      "level_req": 15,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2351],
+      "output_id": 1203,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_axe": {
+      "level_req": 16,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2351],
+      "output_id": 1349,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_mace": {
+      "level_req": 17,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2351],
+      "output_id": 1420,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_med_helm": {
+      "level_req": 18,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2351],
+      "output_id": 1137,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_sword": {
+      "level_req": 19,
+      "xp": 25.0,
+      "animation": 898,
+      "input_ids": [2351],
+      "output_id": 1279,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_scimitar": {
+      "level_req": 20,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2351, 2351],
+      "output_id": 1323,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_longsword": {
+      "level_req": 21,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2351, 2351],
+      "output_id": 1293,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_full_helm": {
+      "level_req": 22,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2351, 2351],
+      "output_id": 1153,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_sq_shield": {
+      "level_req": 23,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2351, 2351],
+      "output_id": 1175,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_warhammer": {
+      "level_req": 24,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351],
+      "output_id": 1335,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_battleaxe": {
+      "level_req": 25,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351],
+      "output_id": 1363,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_chainbody": {
+      "level_req": 26,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351],
+      "output_id": 1101,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_kiteshield": {
+      "level_req": 27,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351],
+      "output_id": 1191,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_2h_sword": {
+      "level_req": 29,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351],
+      "output_id": 1309,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_platelegs": {
+      "level_req": 31,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351],
+      "output_id": 1067,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_plateskirt": {
+      "level_req": 31,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351],
+      "output_id": 1081,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "iron_platebody": {
+      "level_req": 33,
+      "xp": 125.0,
+      "animation": 898,
+      "input_ids": [2351, 2351, 2351, 2351, 2351],
+      "output_id": 1115,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_dagger": {
+      "level_req": 30,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2353],
+      "output_id": 1217,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_axe": {
+      "level_req": 31,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2353],
+      "output_id": 1353,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_mace": {
+      "level_req": 32,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2353],
+      "output_id": 1424,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_med_helm": {
+      "level_req": 33,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2353],
+      "output_id": 1141,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_sword": {
+      "level_req": 34,
+      "xp": 37.5,
+      "animation": 898,
+      "input_ids": [2353],
+      "output_id": 1281,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_scimitar": {
+      "level_req": 35,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2353, 2353],
+      "output_id": 1325,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_longsword": {
+      "level_req": 36,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2353, 2353],
+      "output_id": 1295,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_full_helm": {
+      "level_req": 37,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2353, 2353],
+      "output_id": 1157,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_sq_shield": {
+      "level_req": 38,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2353, 2353],
+      "output_id": 1177,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_warhammer": {
+      "level_req": 39,
+      "xp": 112.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353],
+      "output_id": 1339,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_battleaxe": {
+      "level_req": 40,
+      "xp": 112.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353],
+      "output_id": 1365,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_chainbody": {
+      "level_req": 41,
+      "xp": 112.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353],
+      "output_id": 1105,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_kiteshield": {
+      "level_req": 42,
+      "xp": 112.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353],
+      "output_id": 1193,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_2h_sword": {
+      "level_req": 44,
+      "xp": 112.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353],
+      "output_id": 1311,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_platelegs": {
+      "level_req": 46,
+      "xp": 112.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353],
+      "output_id": 1069,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_plateskirt": {
+      "level_req": 46,
+      "xp": 112.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353],
+      "output_id": 1083,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "steel_platebody": {
+      "level_req": 48,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2353, 2353, 2353, 2353, 2353],
+      "output_id": 1119,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_dagger": {
+      "level_req": 50,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2359],
+      "output_id": 1219,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_axe": {
+      "level_req": 51,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2359],
+      "output_id": 1355,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_mace": {
+      "level_req": 52,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2359],
+      "output_id": 1428,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_med_helm": {
+      "level_req": 53,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2359],
+      "output_id": 1143,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_sword": {
+      "level_req": 54,
+      "xp": 50.0,
+      "animation": 898,
+      "input_ids": [2359],
+      "output_id": 1285,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_scimitar": {
+      "level_req": 55,
+      "xp": 100.0,
+      "animation": 898,
+      "input_ids": [2359, 2359],
+      "output_id": 1329,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_longsword": {
+      "level_req": 56,
+      "xp": 100.0,
+      "animation": 898,
+      "input_ids": [2359, 2359],
+      "output_id": 1299,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_full_helm": {
+      "level_req": 57,
+      "xp": 100.0,
+      "animation": 898,
+      "input_ids": [2359, 2359],
+      "output_id": 1159,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_sq_shield": {
+      "level_req": 58,
+      "xp": 100.0,
+      "animation": 898,
+      "input_ids": [2359, 2359],
+      "output_id": 1181,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_warhammer": {
+      "level_req": 59,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359],
+      "output_id": 1343,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_battleaxe": {
+      "level_req": 60,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359],
+      "output_id": 1369,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_chainbody": {
+      "level_req": 61,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359],
+      "output_id": 1109,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_kiteshield": {
+      "level_req": 62,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359],
+      "output_id": 1197,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_2h_sword": {
+      "level_req": 64,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359],
+      "output_id": 1315,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_platelegs": {
+      "level_req": 66,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359],
+      "output_id": 1071,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_plateskirt": {
+      "level_req": 66,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359],
+      "output_id": 1085,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "mithril_platebody": {
+      "level_req": 68,
+      "xp": 250.0,
+      "animation": 898,
+      "input_ids": [2359, 2359, 2359, 2359, 2359],
+      "output_id": 1121,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_dagger": {
+      "level_req": 70,
+      "xp": 62.5,
+      "animation": 898,
+      "input_ids": [2361],
+      "output_id": 1211,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_axe": {
+      "level_req": 71,
+      "xp": 62.5,
+      "animation": 898,
+      "input_ids": [2361],
+      "output_id": 1357,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_mace": {
+      "level_req": 72,
+      "xp": 62.5,
+      "animation": 898,
+      "input_ids": [2361],
+      "output_id": 1430,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_med_helm": {
+      "level_req": 73,
+      "xp": 62.5,
+      "animation": 898,
+      "input_ids": [2361],
+      "output_id": 1145,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_sword": {
+      "level_req": 74,
+      "xp": 62.5,
+      "animation": 898,
+      "input_ids": [2361],
+      "output_id": 1287,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_scimitar": {
+      "level_req": 75,
+      "xp": 125.0,
+      "animation": 898,
+      "input_ids": [2361, 2361],
+      "output_id": 1331,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_longsword": {
+      "level_req": 76,
+      "xp": 125.0,
+      "animation": 898,
+      "input_ids": [2361, 2361],
+      "output_id": 1301,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_full_helm": {
+      "level_req": 77,
+      "xp": 125.0,
+      "animation": 898,
+      "input_ids": [2361, 2361],
+      "output_id": 1161,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_sq_shield": {
+      "level_req": 78,
+      "xp": 125.0,
+      "animation": 898,
+      "input_ids": [2361, 2361],
+      "output_id": 1183,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_warhammer": {
+      "level_req": 79,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361],
+      "output_id": 1345,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_battleaxe": {
+      "level_req": 80,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361],
+      "output_id": 1371,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_chainbody": {
+      "level_req": 81,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361],
+      "output_id": 1111,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_kiteshield": {
+      "level_req": 82,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361],
+      "output_id": 1199,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_2h_sword": {
+      "level_req": 84,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361],
+      "output_id": 1317,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_platelegs": {
+      "level_req": 86,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361],
+      "output_id": 1073,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_plateskirt": {
+      "level_req": 86,
+      "xp": 187.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361],
+      "output_id": 1091,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "adamant_platebody": {
+      "level_req": 88,
+      "xp": 312.5,
+      "animation": 898,
+      "input_ids": [2361, 2361, 2361, 2361, 2361],
+      "output_id": 1123,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_dagger": {
+      "level_req": 85,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2363],
+      "output_id": 1213,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_axe": {
+      "level_req": 86,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2363],
+      "output_id": 1359,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_mace": {
+      "level_req": 87,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2363],
+      "output_id": 1432,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_med_helm": {
+      "level_req": 88,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2363],
+      "output_id": 1147,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_sword": {
+      "level_req": 89,
+      "xp": 75.0,
+      "animation": 898,
+      "input_ids": [2363],
+      "output_id": 1289,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_scimitar": {
+      "level_req": 90,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2363, 2363],
+      "output_id": 1333,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_longsword": {
+      "level_req": 91,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2363, 2363],
+      "output_id": 1303,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_full_helm": {
+      "level_req": 92,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2363, 2363],
+      "output_id": 1163,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_sq_shield": {
+      "level_req": 93,
+      "xp": 150.0,
+      "animation": 898,
+      "input_ids": [2363, 2363],
+      "output_id": 1185,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_warhammer": {
+      "level_req": 94,
+      "xp": 225.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363],
+      "output_id": 1347,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_battleaxe": {
+      "level_req": 95,
+      "xp": 225.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363],
+      "output_id": 1373,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_chainbody": {
+      "level_req": 96,
+      "xp": 225.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363],
+      "output_id": 1113,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_kiteshield": {
+      "level_req": 97,
+      "xp": 225.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363],
+      "output_id": 1201,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_2h_sword": {
+      "level_req": 99,
+      "xp": 225.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363],
+      "output_id": 1319,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_platelegs": {
+      "level_req": 99,
+      "xp": 225.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363],
+      "output_id": 1079,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_plateskirt": {
+      "level_req": 99,
+      "xp": 225.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363],
+      "output_id": 1093,
+      "loc_pattern": "anvil",
+      "members": false
+    },
+    "rune_platebody": {
+      "level_req": 99,
+      "xp": 375.0,
+      "animation": 898,
+      "input_ids": [2363, 2363, 2363, 2363, 2363],
+      "output_id": 1127,
+      "loc_pattern": "anvil",
+      "members": false
+    }
+  },
+  "tools": {
+    "hammer": { "item_id": 2347, "level_req": 1 }
+  },
+  "materials": {
+    "copper_ore": { "item_id": 436, "level_req": 1 },
+    "tin_ore": { "item_id": 438, "level_req": 1 },
+    "bronze_bar": { "item_id": 2349, "level_req": 1 },
+    "iron_ore": { "item_id": 440, "level_req": 15 },
+    "iron_bar": { "item_id": 2351, "level_req": 15 },
+    "silver_ore": { "item_id": 442, "level_req": 20 },
+    "silver_bar": { "item_id": 2355, "level_req": 20 },
+    "coal": { "item_id": 453, "level_req": 30 },
+    "steel_bar": { "item_id": 2353, "level_req": 30 },
+    "gold_ore": { "item_id": 444, "level_req": 40 },
+    "gold_bar": { "item_id": 2357, "level_req": 40 },
+    "mithril_ore": { "item_id": 447, "level_req": 50 },
+    "mithril_bar": { "item_id": 2359, "level_req": 50 },
+    "adamantite_ore": { "item_id": 449, "level_req": 70 },
+    "adamantite_bar": { "item_id": 2361, "level_req": 70 },
+    "runite_ore": { "item_id": 451, "level_req": 85 },
+    "runite_bar": { "item_id": 2363, "level_req": 85 }
+  },
+  "test_locations": [
+    { "desc": "Lumbridge furnace", "x": 3228, "z": 3256 },
+    { "desc": "Al Kharid furnace", "x": 3277, "z": 3185 },
+    { "desc": "Falador furnace", "x": 2974, "z": 3240 },
+    { "desc": "Varrock anvil (west)", "x": 3188, "z": 3425 },
+    { "desc": "Varrock anvil (east)", "x": 3249, "z": 3486 }
+  ],
+  "notes": "Iron bars have 50% success rate when smelting without ring of forging. Goldsmith gauntlets increase gold bar XP to 56.2. Smelting requires furnace, smithing requires anvil and hammer."
+}

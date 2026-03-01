@@ -1,0 +1,209 @@
+{
+  "skill": "magic",
+  "spellbook": "standard",
+  "description": "Standard spellbook magic spells - F2P accessible",
+  "source": "OSRS Wiki Rev 233 (Varlamore Part 2)",
+  "categories": {
+    "strike_spells": {
+      "description": "Entry-level elemental combat spells",
+      "spells": [
+        {
+          "name": "Wind Strike",
+          "level": 1,
+          "runes": {"air": 1, "mind": 1},
+          "xp": 5.5,
+          "base_damage_min": 2,
+          "base_damage_max": 8,
+          "element": "air",
+          "f2p": true
+        },
+        {
+          "name": "Water Strike",
+          "level": 5,
+          "runes": {"air": 1, "water": 1, "mind": 1},
+          "xp": 7.5,
+          "base_damage_min": 4,
+          "base_damage_max": 8,
+          "element": "water",
+          "f2p": true
+        },
+        {
+          "name": "Earth Strike",
+          "level": 9,
+          "runes": {"air": 1, "earth": 2, "mind": 1},
+          "xp": 9.5,
+          "base_damage_min": 6,
+          "base_damage_max": 8,
+          "element": "earth",
+          "f2p": true
+        },
+        {
+          "name": "Fire Strike",
+          "level": 13,
+          "runes": {"air": 2, "fire": 3, "mind": 1},
+          "xp": 11.5,
+          "base_damage_min": 8,
+          "base_damage_max": 8,
+          "element": "fire",
+          "f2p": true
+        }
+      ]
+    },
+    "bolt_spells": {
+      "description": "Mid-level elemental combat spells",
+      "spells": [
+        {
+          "name": "Wind Bolt",
+          "level": 17,
+          "runes": {"air": 2, "chaos": 1},
+          "xp": 13.5,
+          "base_damage_min": 9,
+          "base_damage_max": 12,
+          "element": "air",
+          "f2p": true
+        },
+        {
+          "name": "Water Bolt",
+          "level": 23,
+          "runes": {"air": 2, "water": 2, "chaos": 1},
+          "xp": 16.5,
+          "base_damage_min": 10,
+          "base_damage_max": 12,
+          "element": "water",
+          "f2p": true
+        },
+        {
+          "name": "Earth Bolt",
+          "level": 29,
+          "runes": {"air": 2, "earth": 3, "chaos": 1},
+          "xp": 19.5,
+          "base_damage_min": 11,
+          "base_damage_max": 12,
+          "element": "earth",
+          "f2p": true
+        },
+        {
+          "name": "Fire Bolt",
+          "level": 35,
+          "runes": {"air": 3, "fire": 4, "chaos": 1},
+          "xp": 22.5,
+          "base_damage_min": 12,
+          "base_damage_max": 12,
+          "element": "fire",
+          "f2p": true
+        }
+      ]
+    },
+    "blast_spells": {
+      "description": "High-level elemental combat spells",
+      "spells": [
+        {
+          "name": "Wind Blast",
+          "level": 41,
+          "runes": {"air": 3, "death": 1},
+          "xp": 25.5,
+          "base_damage_min": 13,
+          "base_damage_max": 16,
+          "element": "air",
+          "f2p": true
+        },
+        {
+          "name": "Water Blast",
+          "level": 47,
+          "runes": {"air": 3, "water": 3, "death": 1},
+          "xp": 28.5,
+          "base_damage_min": 14,
+          "base_damage_max": 16,
+          "element": "water",
+          "f2p": true
+        },
+        {
+          "name": "Earth Blast",
+          "level": 53,
+          "runes": {"air": 3, "earth": 4, "death": 1},
+          "xp": 31.5,
+          "base_damage_min": 15,
+          "base_damage_max": 16,
+          "element": "earth",
+          "f2p": true
+        },
+        {
+          "name": "Fire Blast",
+          "level": 59,
+          "runes": {"air": 4, "fire": 5, "death": 1},
+          "xp": 34.5,
+          "base_damage_min": 16,
+          "base_damage_max": 16,
+          "element": "fire",
+          "f2p": true
+        }
+      ]
+    },
+    "teleport_spells": {
+      "description": "Transportation spells",
+      "spells": [
+        {
+          "name": "Varrock Teleport",
+          "level": 25,
+          "runes": {"air": 3, "fire": 1, "law": 1},
+          "xp": 35,
+          "destination": "Varrock Market Square",
+          "f2p": true
+        },
+        {
+          "name": "Lumbridge Teleport",
+          "level": 31,
+          "runes": {"air": 3, "earth": 1, "law": 1},
+          "xp": 41,
+          "destination": "Lumbridge Castle Courtyard",
+          "f2p": true
+        },
+        {
+          "name": "Falador Teleport",
+          "level": 37,
+          "runes": {"air": 3, "water": 1, "law": 1},
+          "xp": 48,
+          "destination": "Falador Centre",
+          "f2p": true
+        },
+        {
+          "name": "Lumbridge Home Teleport",
+          "level": 0,
+          "runes": {},
+          "xp": 0,
+          "destination": "Lumbridge",
+          "note": "Once every 30 minutes, interrupted by combat",
+          "f2p": true
+        }
+      ]
+    },
+    "utility_spells": {
+      "description": "Non-combat utility spells",
+      "spells": [
+        {
+          "name": "Telekinetic Grab",
+          "level": 33,
+          "runes": {"air": 1, "law": 1},
+          "xp": 43,
+          "description": "Pick up items up to 10 tiles away",
+          "f2p": true,
+          "note": "Cannot pick up noted items or certain quest items"
+        },
+        {
+          "name": "Superheat Item",
+          "level": 43,
+          "runes": {"fire": 4, "nature": 1},
+          "xp": 53,
+          "description": "Smelt ore into bars without a furnace",
+          "f2p": true,
+          "note": "Requires same Smithing level as normal smelting"
+        }
+      ]
+    }
+  },
+  "notes": {
+    "damage_scaling": "Elemental spell max hits scale to match the highest-level spell of that tier. For example, once Fire Bolt (L35) is unlocked, all bolt spells have max hit of 12.",
+    "combat_xp": "Combat spells grant spell XP + 2 Magic XP + 1.33 HP XP per damage dealt",
+    "f2p_note": "All spells in this database are free-to-play accessible"
+  }
+}

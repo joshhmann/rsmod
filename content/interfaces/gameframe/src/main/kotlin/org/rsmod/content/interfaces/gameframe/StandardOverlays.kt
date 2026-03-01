@@ -19,7 +19,10 @@ internal object StandardOverlays {
             GameframeOverlay(interfaces.orbs, components.toplevel_osrs_stretch_orbs),
             GameframeOverlay(interfaces.xp_drops, components.toplevel_osrs_stretch_xp_drops),
             GameframeOverlay(interfaces.popout, components.toplevel_osrs_stretch_popout),
-            GameframeOverlay(interfaces.ehc_worldhop, components.toplevel_osrs_stretch_ehc_listener),
+            GameframeOverlay(
+                interfaces.ehc_worldhop,
+                components.toplevel_osrs_stretch_ehc_listener,
+            ),
             GameframeOverlay(interfaces.stats, components.toplevel_osrs_stretch_side1),
             GameframeOverlay(interfaces.side_journal, components.toplevel_osrs_stretch_side2),
             GameframeOverlay(interfaces.inventory, components.toplevel_osrs_stretch_side3),

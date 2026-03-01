@@ -33,3 +33,4 @@ Remove-Item Env:JAVA_TOOL_OPTIONS -ErrorAction SilentlyContinue
 ```powershell
 & 'C:\Program Files\PowerShell\7\pwsh.exe' -Command ".\gradlew.bat :api:net:build :api:game-process:build --console=plain"
 ```
+

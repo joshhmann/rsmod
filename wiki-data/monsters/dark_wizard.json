@@ -1,0 +1,431 @@
+{
+  "name": "Dark wizard",
+  "combat_level": 7,
+  "hitpoints": 12,
+  "npc_ids": [2870, 5086, 5087],
+  "aggressive_level": 14,
+  "max_damage": 6,
+  "attack_style": "CRUSH",
+  "attack_speed": 4,
+  "respawn_time": 30,
+  "combat_stats": {
+    "attack": 5,
+    "strength": 2,
+    "defence": 5,
+    "ranged": 1,
+    "magic": 6
+  },
+  "attack_bonus": {
+    "stab": 0,
+    "slash": 0,
+    "crush": 0,
+    "magic": 0,
+    "ranged": 0
+  },
+  "defence_bonus": {
+    "stab": 0,
+    "slash": 0,
+    "crush": 0,
+    "magic": 3,
+    "ranged": 0
+  },
+  "immunities": {
+    "poison": false,
+    "venom": true
+  },
+  "animations": {
+    "attack": 1162,
+    "defend": 424,
+    "death": 836
+  },
+  "slayer": {
+    "level": 1,
+    "xp": 0
+  },
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Staff",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wizard hat",
+      "rate": "1/21",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Black robe",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/32",
+      "qty_min": 36,
+      "qty_max": 36
+    },
+    {
+      "name": "Air rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Water rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Fire rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Air rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Water rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Fire rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/18",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/21",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Mind rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Body rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Mind rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Body rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Blood rune",
+      "rate": "1/64",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Cosmic rune",
+      "rate": "1/128",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/128",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Coins",
+      "rate": "1/7",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/8",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Coins",
+      "rate": "1/18",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Coins",
+      "rate": "1/42",
+      "qty_min": 29,
+      "qty_max": 29
+    },
+    {
+      "name": "Coins",
+      "rate": "1/128",
+      "qty_min": 30,
+      "qty_max": 30
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Water talisman",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Fire talisman",
+      "rate": "1/128",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/15",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/50",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Staff",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wizard hat",
+      "rate": "1/21",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Black robe",
+      "rate": "1/42",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/32",
+      "qty_min": 36,
+      "qty_max": 36
+    },
+    {
+      "name": "Air rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Water rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Fire rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Air rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Water rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Earth rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Fire rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/18",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Chaos rune",
+      "rate": "1/21",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Mind rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Body rune",
+      "rate": "1/42",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Mind rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Body rune",
+      "rate": "1/64",
+      "qty_min": 18,
+      "qty_max": 18
+    },
+    {
+      "name": "Blood rune",
+      "rate": "1/64",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Cosmic rune",
+      "rate": "1/128",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Law rune",
+      "rate": "1/128",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Coins",
+      "rate": "1/7",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Coins",
+      "rate": "1/8",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Coins",
+      "rate": "1/14",
+      "qty_min": 4,
+      "qty_max": 4
+    },
+    {
+      "name": "Coins",
+      "rate": "1/42",
+      "qty_min": 29,
+      "qty_max": 29
+    },
+    {
+      "name": "Coins",
+      "rate": "1/128",
+      "qty_min": 30,
+      "qty_max": 30
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Water talisman",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Fire talisman",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Looting bag",
+      "rate": "1/7",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/35",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

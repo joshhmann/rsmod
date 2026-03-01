@@ -1,0 +1,237 @@
+{
+    "mechanic": "experience_system",
+    "source": "OSRS Wiki (oldschool.runescape.wiki/w/Experience)",
+    "extraction_date": "2026-02-22",
+    "rsmod_api_status": "implemented - api/stats handles XP grants",
+    "overview": {
+        "description": "Experience (EXP/XP) is a measure of skill progress. Gained by performing skill-related tasks, quests, lamps, minigames, etc.",
+        "storage": "Signed 32-bit integer treated as fixed-point with 1 decimal place",
+        "display": "Game shows integer XP values; internally stored as tenths (e.g., 83 XP = 830 internally)",
+        "max_xp_per_skill": 200000000,
+        "max_internal": 2147483647,
+        "level_cap": 99,
+        "virtual_level_cap": 126,
+        "xp_to_99": 13034431,
+        "xp_to_92": 6517253,
+        "rule_92_is_half_of_99": "Level 92 is almost exactly the halfway point to 99",
+        "rule_85_is_quarter": "Level 85 requires approximately 1/4 of the XP needed for 99"
+    },
+    "formula": {
+        "description": "XP required for level L (total cumulative XP to reach level L)",
+        "formula": "XP(L) = floor(1/4 * sum(l=1 to L-1, floor(l + 300 * 2^(l/7))))",
+        "note": "The sum is accumulated from level 1. Due to multiple floor operations the exact difference must be calculated per level.",
+        "level_difference_approximate": "floor(L-1 + 300 * 2^((L-1)/7)) ±1",
+        "xp_increase_per_level": "approximately 10% more each level",
+        "doubling_every": "7 levels approximately doubles XP requirement (from level 30+)"
+    },
+    "xp_table": {
+        "note": "Full XP table for levels 1-99",
+        "levels": [
+            {
+                "level": 1,
+                "xp": 0
+            },
+            {
+                "level": 2,
+                "xp": 83
+            },
+            {
+                "level": 3,
+                "xp": 174
+            },
+            {
+                "level": 4,
+                "xp": 276
+            },
+            {
+                "level": 5,
+                "xp": 388
+            },
+            {
+                "level": 10,
+                "xp": 1154
+            },
+            {
+                "level": 20,
+                "xp": 4470
+            },
+            {
+                "level": 30,
+                "xp": 13363
+            },
+            {
+                "level": 40,
+                "xp": 37224
+            },
+            {
+                "level": 50,
+                "xp": 101333
+            },
+            {
+                "level": 60,
+                "xp": 273742
+            },
+            {
+                "level": 70,
+                "xp": 737627
+            },
+            {
+                "level": 75,
+                "xp": 1210421
+            },
+            {
+                "level": 80,
+                "xp": 1986068
+            },
+            {
+                "level": 85,
+                "xp": 3258594
+            },
+            {
+                "level": 90,
+                "xp": 5346332
+            },
+            {
+                "level": 92,
+                "xp": 6517253
+            },
+            {
+                "level": 95,
+                "xp": 8771558
+            },
+            {
+                "level": 99,
+                "xp": 13034431
+            }
+        ]
+    },
+    "xp_grants": {
+        "combat": {
+            "melee_xp_per_damage": 4,
+            "ranged_xp_per_damage": 4,
+            "magic_xp_per_spell_cast": "per-spell defined",
+            "hitpoints_xp_per_damage": "1/3 of combat style XP",
+            "xp_distribution": {
+                "accurate": {
+                    "attack": "full",
+                    "hitpoints": "1/3"
+                },
+                "aggressive": {
+                    "strength": "full",
+                    "hitpoints": "1/3"
+                },
+                "defensive": {
+                    "defence": "full",
+                    "hitpoints": "1/3"
+                },
+                "controlled": {
+                    "attack": "1/3",
+                    "strength": "1/3",
+                    "defence": "1/3",
+                    "hitpoints": "1/3"
+                },
+                "ranged_accurate": {
+                    "ranged": "full",
+                    "hitpoints": "1/3"
+                },
+                "ranged_rapid": {
+                    "ranged": "full",
+                    "hitpoints": "1/3"
+                },
+                "ranged_long_range": {
+                    "ranged": "1/2",
+                    "defence": "1/2",
+                    "hitpoints": "1/3"
+                },
+                "magic_accurate": {
+                    "magic": "full",
+                    "hitpoints": "1/3"
+                },
+                "magic_defensive": {
+                    "magic": "1/2",
+                    "defence": "1/2",
+                    "hitpoints": "1/3"
+                }
+            }
+        }
+    },
+    "experience_boosting": {
+        "description": "Certain items provide XP multipliers. Values with multiple decimal points are rounded DOWN to 1 decimal.",
+        "items": {
+            "lumberjack_outfit": {
+                "components": [
+                    "top",
+                    "legs",
+                    "hat",
+                    "boots"
+                ],
+                "each_piece_bonus": "0.5%",
+                "full_set_total_bonus": "2.5%",
+                "skill": "woodcutting"
+            },
+            "mining_outfit": {
+                "components": [
+                    "top",
+                    "legs",
+                    "helmet",
+                    "gloves"
+                ],
+                "each_piece_bonus": "0.5%",
+                "full_set_total_bonus": "2.5%",
+                "skill": "mining"
+            },
+            "angler_outfit": {
+                "skill": "fishing",
+                "each_piece_bonus": "0.5%",
+                "full_set_total_bonus": "2.5%"
+            },
+            "farmer_outfit": {
+                "skill": "farming",
+                "each_piece_bonus": "0.5%",
+                "full_set_total_bonus": "2.5%"
+            },
+            "pyromancer_outfit": {
+                "skill": "firemaking",
+                "each_piece_bonus": "0.5%",
+                "full_set_total_bonus": "2.5%"
+            },
+            "graceful_outfit": {
+                "note": "Does NOT give XP boost - only weight/run energy",
+                "agility_xp_boost": false
+            }
+        }
+    },
+    "lamp_sources": {
+        "genie_lamp": {
+            "description": "Random event lamp, applies XP directly to chosen skill",
+            "note": "Scales with level: higher level = more XP from lamp"
+        },
+        "book_of_knowledge": {
+            "source": "Surprise Exam random event",
+            "description": "Gives XP equivalent to the lamp"
+        },
+        "antique_lamp": {
+            "source": "Achievement diaries",
+            "description": "Gives fixed XP amounts based on diary tier"
+        }
+    },
+    "implementation_notes": {
+        "rsmod_api_status": "Partially implemented in api/stats",
+        "rsmod_gaps": [
+            "XP boost item set tracking (lumberjack, angler, etc.) not fully implemented",
+            "XP lamp / direct XP grant interface may need checking",
+            "Decimal XP rounding for boost sets needs verification (rounds to 1 decimal place)",
+            "Virtual level tracking beyond 99 may not be complete"
+        ],
+        "rsmod_implemented": [
+            "Basic XP grant via giveXp()",
+            "Level-up detection and notification",
+            "XP stored as integer (x10 internally)"
+        ],
+        "notes": [
+            "XP is stored internally multiplied by 10 for 1 decimal precision",
+            "200M XP hardcap per skill must be enforced",
+            "Level ups should trigger skill animations and chat messages"
+        ]
+    }
+}

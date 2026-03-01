@@ -1,0 +1,427 @@
+{
+  "name": "Jogre",
+  "combat_level": 53,
+  "hitpoints": 60,
+  "attack": 43,
+  "strength": 43,
+  "defence": 43,
+  "attack_speed": 6,
+  "slayer_level": null,
+  "slayer_xp": null,
+  "drops": [
+    {
+      "name": "Jogre bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bronze spear",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Iron spear",
+      "rate": "1/32",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/12",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/64",
+      "qty_min": 10,
+      "qty_max": 10
+    },
+    {
+      "name": "Nature rune",
+      "rate": "1/64",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Steel javelin",
+      "rate": "1/64",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Grimy rogue's purse",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy snake weed",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy guam leaf",
+      "rate": "1/86",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy marrentill",
+      "rate": "1/114",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy tarromin",
+      "rate": "1/152",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy harralander",
+      "rate": "1/196",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy ranarr weed",
+      "rate": "1/250",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy irit leaf",
+      "rate": "1/344",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy avantoe",
+      "rate": "1/458",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy kwuarm",
+      "rate": "1/550",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy cadantine",
+      "rate": "1/688",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy lantadyme",
+      "rate": "1/917",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Grimy dwarf weed",
+      "rate": "1/917",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Limpwurt seed",
+      "rate": "1/65",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Strawberry seed",
+      "rate": "1/68",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Marrentill seed",
+      "rate": "1/72",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Jangerberry seed",
+      "rate": "1/98",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tarromin seed",
+      "rate": "1/106",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Wildblood seed",
+      "rate": "1/108",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Watermelon seed",
+      "rate": "1/143",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Harralander seed",
+      "rate": "1/160",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snape grass seed",
+      "rate": "1/225",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Ranarr seed",
+      "rate": "1/231",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Whiteberry seed",
+      "rate": "1/265",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Mushroom spore",
+      "rate": "1/310",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Toadflax seed",
+      "rate": "1/333",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Belladonna seed",
+      "rate": "1/500",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Irit seed",
+      "rate": "1/500",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Poison ivy seed",
+      "rate": "1/693",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Avantoe seed",
+      "rate": "1/751",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cactus seed",
+      "rate": "1/751",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Kwuarm seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Potato cactus seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Snapdragon seed",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Cadantine seed",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Lantadyme seed",
+      "rate": "1/3",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dwarf weed seed",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Torstol seed",
+      "rate": "1/9",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Trading sticks",
+      "rate": "1/4",
+      "qty_min": 22,
+      "qty_max": 22
+    },
+    {
+      "name": "Pineapple",
+      "rate": "1/16",
+      "qty_min": 2,
+      "qty_max": 2
+    },
+    {
+      "name": "Knife",
+      "rate": "1/25",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Bones",
+      "rate": "1/43",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Big bones",
+      "rate": "1/43",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Big bones",
+      "rate": "1/64",
+      "qty_min": 3,
+      "qty_max": 3
+    },
+    {
+      "name": "Bones",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/64",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/258",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut sapphire",
+      "rate": "1/516",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut emerald",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut ruby",
+      "rate": "1/2",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Chaos talisman",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Nature talisman",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Uncut diamond",
+      "rate": "1/8",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune javelin",
+      "rate": "1/16",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Loop half of key",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Tooth half of key",
+      "rate": "1/16",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Rune spear",
+      "rate": "1/264",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Shield left half",
+      "rate": "1/528",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Dragon spear",
+      "rate": "1/704",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Jogre bone",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (medium)",
+      "rate": "1/129",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Jogre champion scroll",
+      "rate": "1/5",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

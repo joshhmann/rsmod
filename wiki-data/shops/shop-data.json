@@ -1,0 +1,579 @@
+{
+  "revision": 233,
+  "description": "OSRS Rev 233 F2P Shop Data - NPC IDs, Locations, Stock, and Prices",
+  "last_updated": "2026-02-22",
+  
+  "general_stores": [
+    {
+      "name": "Varrock General Store",
+      "shopkeeper": {
+        "name": "Shop keeper",
+        "npc_id": 2815
+      },
+      "location": {
+        "city": "Varrock",
+        "x": 3217,
+        "z": 3417,
+        "description": "Center of Varrock, near the fountain"
+      },
+      "inventory_type_id": 3,
+      "is_general_store": true,
+      "currency": "coins",
+      "sell_multiplier": 1.3,
+      "buy_multiplier": 0.4,
+      "stock": [
+        { "item_id": 1931, "name": "pot_empty", "stock": 5, "price": 1, "restock_ticks": 10 },
+        { "item_id": 1935, "name": "jug_empty", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1735, "name": "shears", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1925, "name": "bucket_empty", "stock": 3, "price": 2, "restock_ticks": 10 },
+        { "item_id": 1923, "name": "bowl_empty", "stock": 2, "price": 5, "restock_ticks": 50 },
+        { "item_id": 1887, "name": "cake_tin", "stock": 2, "price": 13, "restock_ticks": 50 },
+        { "item_id": 590, "name": "tinderbox", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 2347, "name": "hammer", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 550, "name": "newcomer_map", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 9003, "name": "security_book", "stock": 5, "price": 2, "restock_ticks": 100 }
+      ]
+    },
+    {
+      "name": "Lumbridge General Store",
+      "shopkeeper": {
+        "name": "Shop keeper",
+        "npc_id": 2813
+      },
+      "location": {
+        "city": "Lumbridge",
+        "x": 3211,
+        "z": 3247,
+        "description": "North of Lumbridge Castle"
+      },
+      "inventory_type_id": 3,
+      "is_general_store": true,
+      "currency": "coins",
+      "sell_multiplier": 1.3,
+      "buy_multiplier": 0.4,
+      "stock": [
+        { "item_id": 1931, "name": "pot_empty", "stock": 5, "price": 1, "restock_ticks": 10 },
+        { "item_id": 1935, "name": "jug_empty", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 946, "name": "knife", "stock": 5, "price": 7, "restock_ticks": 100 },
+        { "item_id": 1735, "name": "shears", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1925, "name": "bucket_empty", "stock": 3, "price": 2, "restock_ticks": 10 },
+        { "item_id": 1923, "name": "bowl_empty", "stock": 2, "price": 5, "restock_ticks": 50 },
+        { "item_id": 1887, "name": "cake_tin", "stock": 2, "price": 13, "restock_ticks": 50 },
+        { "item_id": 590, "name": "tinderbox", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 952, "name": "spade", "stock": 5, "price": 3, "restock_ticks": 100 },
+        { "item_id": 2347, "name": "hammer", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 550, "name": "newcomer_map", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 9003, "name": "security_book", "stock": 5, "price": 2, "restock_ticks": 100 }
+      ]
+    },
+    {
+      "name": "Falador General Store",
+      "shopkeeper": {
+        "name": "Shop keeper",
+        "npc_id": 2817
+      },
+      "location": {
+        "city": "Falador",
+        "x": 2958,
+        "z": 3386,
+        "description": "North-west of Falador square, near the north gate"
+      },
+      "inventory_type_id": 13,
+      "is_general_store": true,
+      "currency": "coins",
+      "sell_multiplier": 1.3,
+      "buy_multiplier": 0.4,
+      "stock": [
+        { "item_id": 1931, "name": "pot_empty", "stock": 5, "price": 1, "restock_ticks": 10 },
+        { "item_id": 1935, "name": "jug_empty", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1735, "name": "shears", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1925, "name": "bucket_empty", "stock": 3, "price": 2, "restock_ticks": 10 },
+        { "item_id": 1923, "name": "bowl_empty", "stock": 2, "price": 5, "restock_ticks": 50 },
+        { "item_id": 1887, "name": "cake_tin", "stock": 2, "price": 13, "restock_ticks": 50 },
+        { "item_id": 590, "name": "tinderbox", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 2347, "name": "hammer", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 550, "name": "newcomer_map", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 9003, "name": "security_book", "stock": 5, "price": 2, "restock_ticks": 100 }
+      ]
+    },
+    {
+      "name": "Al Kharid General Store",
+      "shopkeeper": {
+        "name": "Shop keeper",
+        "npc_id": 2819
+      },
+      "location": {
+        "city": "Al Kharid",
+        "x": 3314,
+        "z": 3177,
+        "description": "South-east Al Kharid, near the palace"
+      },
+      "inventory_type_id": 4,
+      "is_general_store": true,
+      "currency": "coins",
+      "sell_multiplier": 1.3,
+      "buy_multiplier": 0.4,
+      "stock": [
+        { "item_id": 1931, "name": "pot_empty", "stock": 5, "price": 1, "restock_ticks": 10 },
+        { "item_id": 1935, "name": "jug_empty", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1735, "name": "shears", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1925, "name": "bucket_empty", "stock": 3, "price": 2, "restock_ticks": 10 },
+        { "item_id": 1923, "name": "bowl_empty", "stock": 2, "price": 5, "restock_ticks": 50 },
+        { "item_id": 1887, "name": "cake_tin", "stock": 2, "price": 13, "restock_ticks": 50 },
+        { "item_id": 590, "name": "tinderbox", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 2347, "name": "hammer", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 550, "name": "newcomer_map", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 9003, "name": "security_book", "stock": 5, "price": 2, "restock_ticks": 100 }
+      ]
+    },
+    {
+      "name": "Edgeville General Store",
+      "shopkeeper": {
+        "name": "Shop keeper",
+        "npc_id": 2821
+      },
+      "location": {
+        "city": "Edgeville",
+        "x": 3079,
+        "z": 3509,
+        "description": "North-west Edgeville"
+      },
+      "inventory_type_id": 17,
+      "is_general_store": true,
+      "currency": "coins",
+      "sell_multiplier": 1.3,
+      "buy_multiplier": 0.4,
+      "stock": [
+        { "item_id": 1931, "name": "pot_empty", "stock": 5, "price": 1, "restock_ticks": 10 },
+        { "item_id": 1935, "name": "jug_empty", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1735, "name": "shears", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1925, "name": "bucket_empty", "stock": 3, "price": 2, "restock_ticks": 10 },
+        { "item_id": 1923, "name": "bowl_empty", "stock": 2, "price": 5, "restock_ticks": 50 },
+        { "item_id": 1887, "name": "cake_tin", "stock": 2, "price": 13, "restock_ticks": 50 },
+        { "item_id": 590, "name": "tinderbox", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 946, "name": "knife", "stock": 1, "price": 7, "restock_ticks": 2 },
+        { "item_id": 2347, "name": "hammer", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 550, "name": "newcomer_map", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 9003, "name": "security_book", "stock": 5, "price": 2, "restock_ticks": 100 }
+      ]
+    },
+    {
+      "name": "Catherby General Store (Arhein Store)",
+      "shopkeeper": {
+        "name": "Arhein",
+        "npc_id": 2894
+      },
+      "location": {
+        "city": "Catherby",
+        "x": 2807,
+        "z": 3430,
+        "description": "Catherby, near the beach and farming patch",
+        "members_only": true
+      },
+      "inventory_type_id": 34,
+      "is_general_store": true,
+      "currency": "coins",
+      "sell_multiplier": 1.3,
+      "buy_multiplier": 0.4,
+      "stock": [
+        { "item_id": 1931, "name": "pot_empty", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1935, "name": "jug_empty", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1735, "name": "shears", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1925, "name": "bucket_empty", "stock": 10, "price": 3, "restock_ticks": 10 },
+        { "item_id": 1923, "name": "bowl_empty", "stock": 2, "price": 5, "restock_ticks": 50 },
+        { "item_id": 1887, "name": "cake_tin", "stock": 2, "price": 13, "restock_ticks": 50 },
+        { "item_id": 590, "name": "tinderbox", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 2347, "name": "hammer", "stock": 5, "price": 1, "restock_ticks": 100 },
+        { "item_id": 954, "name": "rope", "stock": 2, "price": 23, "restock_ticks": 100 },
+        { "item_id": 1265, "name": "bronze_pickaxe", "stock": 2, "price": 1, "restock_ticks": 100 }
+      ]
+    }
+  ],
+  
+  "weapon_shops": [
+    {
+      "name": "Varrock Sword Shop",
+      "shopkeeper": {
+        "name": "Shop keeper",
+        "npc_id": 2884
+      },
+      "location": {
+        "city": "Varrock",
+        "x": 3204,
+        "z": 3397,
+        "description": "South Varrock, opposite Blue Moon Inn"
+      },
+      "inventory_type_id": 6,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.6,
+      "stock": [
+        { "item_id": 1205, "name": "bronze_dagger", "stock": 10, "price": 10, "restock_ticks": 100 },
+        { "item_id": 1277, "name": "bronze_sword", "stock": 5, "price": 26, "restock_ticks": 100 },
+        { "item_id": 1291, "name": "bronze_longsword", "stock": 4, "price": 40, "restock_ticks": 100 },
+        { "item_id": 1203, "name": "iron_dagger", "stock": 6, "price": 35, "restock_ticks": 200 },
+        { "item_id": 1279, "name": "iron_sword", "stock": 4, "price": 91, "restock_ticks": 200 },
+        { "item_id": 1293, "name": "iron_longsword", "stock": 3, "price": 140, "restock_ticks": 200 },
+        { "item_id": 1207, "name": "steel_dagger", "stock": 5, "price": 125, "restock_ticks": 400 },
+        { "item_id": 1281, "name": "steel_sword", "stock": 4, "price": 325, "restock_ticks": 400 },
+        { "item_id": 1295, "name": "steel_longsword", "stock": 3, "price": 500, "restock_ticks": 400 },
+        { "item_id": 1217, "name": "black_dagger", "stock": 4, "price": 240, "restock_ticks": 1000 },
+        { "item_id": 1283, "name": "black_sword", "stock": 3, "price": 624, "restock_ticks": 1000 },
+        { "item_id": 1297, "name": "black_longsword", "stock": 2, "price": 960, "restock_ticks": 1000 },
+        { "item_id": 1209, "name": "mithril_dagger", "stock": 3, "price": 325, "restock_ticks": 3000 },
+        { "item_id": 1285, "name": "mithril_sword", "stock": 3, "price": 845, "restock_ticks": 3000 },
+        { "item_id": 1299, "name": "mithril_longsword", "stock": 2, "price": 1300, "restock_ticks": 3000 },
+        { "item_id": 1211, "name": "adamant_dagger", "stock": 2, "price": 800, "restock_ticks": 12000 },
+        { "item_id": 1287, "name": "adamant_sword", "stock": 2, "price": 2080, "restock_ticks": 12000 },
+        { "item_id": 1301, "name": "adamant_longsword", "stock": 1, "price": 3200, "restock_ticks": 12000 }
+      ]
+    }
+  ],
+  
+  "armor_shops": [
+    {
+      "name": "Horvik's Armour Shop",
+      "shopkeeper": {
+        "name": "Horvik",
+        "npc_id": 2882
+      },
+      "location": {
+        "city": "Varrock",
+        "x": 3233,
+        "z": 3420,
+        "description": "East Varrock, near the square"
+      },
+      "inventory_type_id": 2,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.6,
+      "stock": [
+        { "item_id": 1103, "name": "bronze_chainbody", "stock": 5, "price": 60, "restock_ticks": 100 },
+        { "item_id": 1101, "name": "iron_chainbody", "stock": 3, "price": 210, "restock_ticks": 200 },
+        { "item_id": 1105, "name": "steel_chainbody", "stock": 3, "price": 750, "restock_ticks": 400 },
+        { "item_id": 1109, "name": "mithril_chainbody", "stock": 1, "price": 1950, "restock_ticks": 3000 },
+        { "item_id": 1117, "name": "bronze_platebody", "stock": 3, "price": 160, "restock_ticks": 100 },
+        { "item_id": 1115, "name": "iron_platebody", "stock": 1, "price": 560, "restock_ticks": 200 },
+        { "item_id": 1119, "name": "steel_platebody", "stock": 1, "price": 2000, "restock_ticks": 400 },
+        { "item_id": 1125, "name": "black_platebody", "stock": 1, "price": 3840, "restock_ticks": 3000 },
+        { "item_id": 1121, "name": "mithril_platebody", "stock": 1, "price": 5200, "restock_ticks": 3000 },
+        { "item_id": 1067, "name": "iron_platelegs", "stock": 1, "price": 280, "restock_ticks": 100 },
+        { "item_id": 1133, "name": "studded_body", "stock": 1, "price": 850, "restock_ticks": 700 },
+        { "item_id": 1095, "name": "studded_chaps", "stock": 1, "price": 750, "restock_ticks": 700 }
+      ]
+    },
+    {
+      "name": "Cassie's Shield Shop",
+      "shopkeeper": {
+        "name": "Cassie",
+        "npc_id": 3214
+      },
+      "location": {
+        "city": "Falador",
+        "x": 2974,
+        "z": 3383,
+        "description": "North Falador, west of the park"
+      },
+      "inventory_type_id": 15,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.6,
+      "stock": [
+        { "item_id": 1171, "name": "wooden_shield", "stock": 5, "price": 20, "restock_ticks": 100 },
+        { "item_id": 1173, "name": "bronze_sq_shield", "stock": 3, "price": 48, "restock_ticks": 100 },
+        { "item_id": 1189, "name": "bronze_kiteshield", "stock": 3, "price": 68, "restock_ticks": 300 },
+        { "item_id": 1175, "name": "iron_sq_shield", "stock": 2, "price": 168, "restock_ticks": 400 },
+        { "item_id": 1191, "name": "iron_kiteshield", "stock": 0, "price": 238, "restock_ticks": 1500 },
+        { "item_id": 1177, "name": "steel_sq_shield", "stock": 0, "price": 600, "restock_ticks": 1500 },
+        { "item_id": 1193, "name": "steel_kiteshield", "stock": 0, "price": 850, "restock_ticks": 1500 },
+        { "item_id": 1181, "name": "mithril_sq_shield", "stock": 0, "price": 1560, "restock_ticks": 1500 }
+      ]
+    },
+    {
+      "name": "Wayne's Chains - Chainmail Specialist",
+      "shopkeeper": {
+        "name": "Wayne",
+        "npc_id": 2885
+      },
+      "location": {
+        "city": "Falador",
+        "x": 2967,
+        "z": 3379,
+        "description": "South Falador, west of the south gate"
+      },
+      "inventory_type_id": 22,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.65,
+      "stock": [
+        { "item_id": 1103, "name": "bronze_chainbody", "stock": 3, "price": 60, "restock_ticks": 200 },
+        { "item_id": 1101, "name": "iron_chainbody", "stock": 2, "price": 210, "restock_ticks": 300 },
+        { "item_id": 1105, "name": "steel_chainbody", "stock": 1, "price": 750, "restock_ticks": 2000 },
+        { "item_id": 1107, "name": "black_chainbody", "stock": 1, "price": 1440, "restock_ticks": 2500 },
+        { "item_id": 1109, "name": "mithril_chainbody", "stock": 1, "price": 1950, "restock_ticks": 3500 },
+        { "item_id": 1111, "name": "adamant_chainbody", "stock": 1, "price": 4800, "restock_ticks": 9000 }
+      ]
+    },
+    {
+      "name": "Louie's Armoured Legs Bazaar",
+      "shopkeeper": {
+        "name": "Louie Legs",
+        "npc_id": 2876
+      },
+      "location": {
+        "city": "Al Kharid",
+        "x": 3318,
+        "z": 3175,
+        "description": "South-east Al Kharid"
+      },
+      "inventory_type_id": 12,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.65,
+      "stock": [
+        { "item_id": 1075, "name": "bronze_platelegs", "stock": 5, "price": 80, "restock_ticks": 100 },
+        { "item_id": 1067, "name": "iron_platelegs", "stock": 3, "price": 280, "restock_ticks": 400 },
+        { "item_id": 1069, "name": "steel_platelegs", "stock": 2, "price": 1000, "restock_ticks": 900 },
+        { "item_id": 1077, "name": "black_platelegs", "stock": 1, "price": 1920, "restock_ticks": 1200 },
+        { "item_id": 1071, "name": "mithril_platelegs", "stock": 1, "price": 2600, "restock_ticks": 2000 },
+        { "item_id": 1073, "name": "adamant_platelegs", "stock": 1, "price": 6400, "restock_ticks": 7800 }
+      ]
+    }
+  ],
+  
+  "rune_shops": [
+    {
+      "name": "Aubury's Rune Shop",
+      "shopkeeper": {
+        "name": "Aubury",
+        "npc_id": 2886
+      },
+      "location": {
+        "city": "Varrock",
+        "x": 3253,
+        "z": 3401,
+        "description": "South-east Varrock, behind the east bank"
+      },
+      "inventory_type_id": 5,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.6,
+      "stock": [
+        { "item_id": 556, "name": "airrune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 555, "name": "waterrune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 557, "name": "earthrune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 554, "name": "firerune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 558, "name": "mindrune", "stock": 5000, "price": 3, "restock_ticks": 6 },
+        { "item_id": 559, "name": "bodyrune", "stock": 5000, "price": 3, "restock_ticks": 6 },
+        { "item_id": 562, "name": "chaosrune", "stock": 250, "price": 90, "restock_ticks": 6 },
+        { "item_id": 560, "name": "deathrune", "stock": 250, "price": 180, "restock_ticks": 9 },
+        { "item_id": 12850, "name": "fire_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12851, "name": "water_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12849, "name": "air_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12852, "name": "earth_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12853, "name": "mind_rune_pack", "stock": 40, "price": 330, "restock_ticks": 6 },
+        { "item_id": 12855, "name": "chaos_rune_pack", "stock": 35, "price": 9950, "restock_ticks": 6 }
+      ]
+    },
+    {
+      "name": "Betty's Magic Emporium",
+      "shopkeeper": {
+        "name": "Betty",
+        "npc_id": 5905
+      },
+      "location": {
+        "city": "Port Sarim",
+        "x": 3014,
+        "z": 3258,
+        "description": "North Port Sarim"
+      },
+      "inventory_type_id": 25,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.6,
+      "stock": [
+        { "item_id": 556, "name": "airrune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 555, "name": "waterrune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 557, "name": "earthrune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 554, "name": "firerune", "stock": 5000, "price": 4, "restock_ticks": 6 },
+        { "item_id": 558, "name": "mindrune", "stock": 5000, "price": 3, "restock_ticks": 6 },
+        { "item_id": 559, "name": "bodyrune", "stock": 5000, "price": 3, "restock_ticks": 6 },
+        { "item_id": 562, "name": "chaosrune", "stock": 250, "price": 90, "restock_ticks": 6 },
+        { "item_id": 560, "name": "deathrune", "stock": 250, "price": 180, "restock_ticks": 9 },
+        { "item_id": 12850, "name": "fire_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12851, "name": "water_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12849, "name": "air_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12852, "name": "earth_rune_pack", "stock": 80, "price": 430, "restock_ticks": 6 },
+        { "item_id": 12853, "name": "mind_rune_pack", "stock": 40, "price": 330, "restock_ticks": 6 },
+        { "item_id": 12855, "name": "chaos_rune_pack", "stock": 35, "price": 9950, "restock_ticks": 6 },
+        { "item_id": 221, "name": "eye_of_newt", "stock": 300, "price": 3, "restock_ticks": 6 },
+        { "item_id": 12854, "name": "eye_of_newt_pack", "stock": 60, "price": 300, "restock_ticks": 30 },
+        { "item_id": 579, "name": "blue_wizard_hat", "stock": 1, "price": 2, "restock_ticks": 100 },
+        { "item_id": 1017, "name": "wizard_hat", "stock": 1, "price": 2, "restock_ticks": 100 }
+      ]
+    }
+  ],
+  
+  "food_shops": [
+    {
+      "name": "Wydin's Food Store",
+      "shopkeeper": {
+        "name": "Wydin",
+        "npc_id": 2890
+      },
+      "location": {
+        "city": "Port Sarim",
+        "x": 3013,
+        "z": 3205,
+        "description": "South Port Sarim"
+      },
+      "inventory_type_id": 20,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.7,
+      "stock": [
+        { "item_id": 1933, "name": "pot_of_flour", "stock": 3, "price": 10, "restock_ticks": 100 },
+        { "item_id": 2132, "name": "raw_beef", "stock": 1, "price": 1, "restock_ticks": 100 },
+        { "item_id": 2138, "name": "raw_chicken", "stock": 1, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1965, "name": "cabbage", "stock": 3, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1963, "name": "banana", "stock": 3, "price": 2, "restock_ticks": 100 },
+        { "item_id": 1951, "name": "redberries", "stock": 1, "price": 3, "restock_ticks": 100 },
+        { "item_id": 2309, "name": "bread", "stock": 0, "price": 12, "restock_ticks": 100 },
+        { "item_id": 1973, "name": "chocolate_bar", "stock": 1, "price": 10, "restock_ticks": 100 },
+        { "item_id": 1985, "name": "cheese", "stock": 3, "price": 4, "restock_ticks": 100 },
+        { "item_id": 1982, "name": "tomato", "stock": 3, "price": 4, "restock_ticks": 100 },
+        { "item_id": 1942, "name": "potato", "stock": 1, "price": 1, "restock_ticks": 100 }
+      ]
+    }
+  ],
+  
+  "crafting_shops": [
+    {
+      "name": "Dommik's Crafting Store",
+      "shopkeeper": {
+        "name": "Dommik",
+        "npc_id": 2883
+      },
+      "location": {
+        "city": "Al Kharid",
+        "x": 3318,
+        "z": 3195,
+        "description": "Al Kharid, near the furnace"
+      },
+      "inventory_type_id": 27,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.65,
+      "stock": [
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1592, "name": "ring_mould", "stock": 4, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1597, "name": "necklace_mould", "stock": 2, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1595, "name": "amulet_mould", "stock": 2, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1733, "name": "needle", "stock": 3, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1734, "name": "thread", "stock": 100, "price": 1, "restock_ticks": 5 },
+        { "item_id": 1599, "name": "holy_mould", "stock": 3, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1594, "name": "sickle_mould", "stock": 6, "price": 10, "restock_ticks": 15 },
+        { "item_id": 5523, "name": "tiara_mould", "stock": 10, "price": 100, "restock_ticks": 10 },
+        { "item_id": 5525, "name": "bracelet_mould", "stock": 5, "price": 5, "restock_ticks": 100 }
+      ]
+    },
+    {
+      "name": "Rommik's Crafty Supplies",
+      "shopkeeper": {
+        "name": "Rommik",
+        "npc_id": 2887
+      },
+      "location": {
+        "city": "Rimmington",
+        "x": 2947,
+        "z": 3215,
+        "description": "South-west Rimmington, near Crafting Guild"
+      },
+      "inventory_type_id": 32,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.65,
+      "stock": [
+        { "item_id": 1755, "name": "chisel", "stock": 2, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1592, "name": "ring_mould", "stock": 4, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1597, "name": "necklace_mould", "stock": 2, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1595, "name": "amulet_mould", "stock": 2, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1733, "name": "needle", "stock": 3, "price": 1, "restock_ticks": 100 },
+        { "item_id": 1734, "name": "thread", "stock": 100, "price": 1, "restock_ticks": 5 },
+        { "item_id": 1599, "name": "holy_mould", "stock": 3, "price": 5, "restock_ticks": 100 },
+        { "item_id": 1594, "name": "sickle_mould", "stock": 6, "price": 10, "restock_ticks": 15 },
+        { "item_id": 5523, "name": "tiara_mould", "stock": 10, "price": 100, "restock_ticks": 10 },
+        { "item_id": 5525, "name": "bracelet_mould", "stock": 5, "price": 5, "restock_ticks": 100 }
+      ]
+    }
+  ],
+  
+  "archery_shops": [
+    {
+      "name": "Brian's Archery Supplies",
+      "shopkeeper": {
+        "name": "Brian",
+        "npc_id": 2889
+      },
+      "location": {
+        "city": "Rimmington",
+        "x": 2953,
+        "z": 3211,
+        "description": "South Rimmington"
+      },
+      "inventory_type_id": 49,
+      "is_general_store": false,
+      "currency": "coins",
+      "sell_multiplier": 1.0,
+      "buy_multiplier": 0.65,
+      "stock": [
+        { "item_id": 884, "name": "steel_arrow", "stock": 1500, "price": 12, "restock_ticks": 6 },
+        { "item_id": 886, "name": "mithril_arrow", "stock": 1000, "price": 32, "restock_ticks": 9 },
+        { "item_id": 888, "name": "adamant_arrow", "stock": 800, "price": 80, "restock_ticks": 12 },
+        { "item_id": 843, "name": "oak_shortbow", "stock": 4, "price": 100, "restock_ticks": 100 },
+        { "item_id": 845, "name": "oak_longbow", "stock": 4, "price": 160, "restock_ticks": 100 },
+        { "item_id": 849, "name": "willow_shortbow", "stock": 3, "price": 200, "restock_ticks": 200 },
+        { "item_id": 847, "name": "willow_longbow", "stock": 3, "price": 320, "restock_ticks": 200 },
+        { "item_id": 853, "name": "maple_shortbow", "stock": 2, "price": 400, "restock_ticks": 200 },
+        { "item_id": 851, "name": "maple_longbow", "stock": 2, "price": 640, "restock_ticks": 200 }
+      ]
+    }
+  ],
+  
+  "notes": {
+    "restock_mechanics": {
+      "description": "Shops restock items at different rates based on the item",
+      "general_store_ticks": 52,
+      "formula": "Items restock 1 unit per restock interval until reaching default stock"
+    },
+    "price_mechanics": {
+      "description": "Shop prices fluctuate based on stock levels",
+      "sell_price": "Base price * sell_multiplier (higher when stock is low)",
+      "buy_price": "Base price * buy_multiplier (lower when stock is high)",
+      "general_store_sell": "Low alch value (40% of item value)"
+    },
+    "currency": {
+      "coins_id": 995,
+      "description": "Most shops use coins as currency"
+    },
+    "f2p_shop_count": 17,
+    "members_shop_count": 3,
+    "total_shops": 20
+  }
+}

@@ -1,0 +1,850 @@
+[
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 14,
+    "domain": "obj",
+    "name": "07_enchant_lvl_1_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _07_enchant_lvl_1_jewellery = find(\"07_enchant_lvl_1_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 18,
+    "domain": "obj",
+    "name": "15_bones_to_bananas",
+    "kind": "kotlin-find",
+    "snippet": "val _15_bones_to_bananas = find(\"15_bones_to_bananas\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 22,
+    "domain": "obj",
+    "name": "21_low_level_alchemy",
+    "kind": "kotlin-find",
+    "snippet": "val _21_low_level_alchemy = find(\"21_low_level_alchemy\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 25,
+    "domain": "obj",
+    "name": "27_enchant_lvl_2_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _27_enchant_lvl_2_jewellery = find(\"27_enchant_lvl_2_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 28,
+    "domain": "obj",
+    "name": "33_telekinetic_grab",
+    "kind": "kotlin-find",
+    "snippet": "val _33_telekinetic_grab = find(\"33_telekinetic_grab\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 37,
+    "domain": "obj",
+    "name": "49_enchant_lvl_3_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _49_enchant_lvl_3_jewellery = find(\"49_enchant_lvl_3_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 43,
+    "domain": "obj",
+    "name": "55_high_level_alchemy",
+    "kind": "kotlin-find",
+    "snippet": "val _55_high_level_alchemy = find(\"55_high_level_alchemy\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 45,
+    "domain": "obj",
+    "name": "57_enchant_lvl_4_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _57_enchant_lvl_4_jewellery = find(\"57_enchant_lvl_4_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 60,
+    "domain": "obj",
+    "name": "67_vulnerability",
+    "kind": "kotlin-find",
+    "snippet": "val _67_vulnerability = find(\"67_vulnerability\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 62,
+    "domain": "obj",
+    "name": "68_enchant_lvl_5_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _68_enchant_lvl_5_jewellery = find(\"68_enchant_lvl_5_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 66,
+    "domain": "obj",
+    "name": "72_enfeeble",
+    "kind": "kotlin-find",
+    "snippet": "val _72_enfeeble = find(\"72_enfeeble\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 69,
+    "domain": "obj",
+    "name": "76_entangle",
+    "kind": "kotlin-find",
+    "snippet": "val _76_entangle = find(\"76_entangle\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 70,
+    "domain": "obj",
+    "name": "78_stun",
+    "kind": "kotlin-find",
+    "snippet": "val _78_stun = find(\"78_stun\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 79,
+    "domain": "obj",
+    "name": "87_enchant_lvl_6_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _87_enchant_lvl_6_jewellery = find(\"87_enchant_lvl_6_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 87,
+    "domain": "obj",
+    "name": "97_enchant_lvl_7_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _97_enchant_lvl_7_jewellery = find(\"97_enchant_lvl_7_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 111,
+    "domain": "obj",
+    "name": "03_bake_pie",
+    "kind": "kotlin-find",
+    "snippet": "val _bake_pie = find(\"03_bake_pie\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 112,
+    "domain": "obj",
+    "name": "05_geomancy",
+    "kind": "kotlin-find",
+    "snippet": "val _geomancy = find(\"05_geomancy\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 113,
+    "domain": "obj",
+    "name": "07_cure_plant",
+    "kind": "kotlin-find",
+    "snippet": "val _cure_plant = find(\"07_cure_plant\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 114,
+    "domain": "obj",
+    "name": "11_npc_contact",
+    "kind": "kotlin-find",
+    "snippet": "val _npc_contact = find(\"11_npc_contact\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 115,
+    "domain": "obj",
+    "name": "15_humidify",
+    "kind": "kotlin-find",
+    "snippet": "val _humidify = find(\"15_humidify\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 116,
+    "domain": "obj",
+    "name": "17_moonclan_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _moonclan_teleport = find(\"17_moonclan_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 117,
+    "domain": "obj",
+    "name": "19_moonclan_telegroup",
+    "kind": "kotlin-find",
+    "snippet": "val _moonclan_telegroup = find(\"19_moonclan_telegroup\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 118,
+    "domain": "obj",
+    "name": "23_ourania_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _zmi_teleport = find(\"23_ourania_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 119,
+    "domain": "obj",
+    "name": "25_hunter_kit",
+    "kind": "kotlin-find",
+    "snippet": "val _hunter_kit = find(\"25_hunter_kit\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 120,
+    "domain": "obj",
+    "name": "27_waterbirth_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _waterbirth_teleport = find(\"27_waterbirth_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 121,
+    "domain": "obj",
+    "name": "29_waterbirth_telegroup",
+    "kind": "kotlin-find",
+    "snippet": "val _waterbirth_telegroup = find(\"29_waterbirth_telegroup\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 122,
+    "domain": "obj",
+    "name": "31_cure_group",
+    "kind": "kotlin-find",
+    "snippet": "val _cure_group = find(\"31_cure_group\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 123,
+    "domain": "obj",
+    "name": "33_stat_spy",
+    "kind": "kotlin-find",
+    "snippet": "val _stat_spy = find(\"33_stat_spy\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 124,
+    "domain": "obj",
+    "name": "35_barbarian_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _barboutpost_teleport = find(\"35_barbarian_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 125,
+    "domain": "obj",
+    "name": "37_barbarian_telegroup",
+    "kind": "kotlin-find",
+    "snippet": "val _barboutpost_telegroup = find(\"37_barbarian_telegroup\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 126,
+    "domain": "obj",
+    "name": "41_superglass_make",
+    "kind": "kotlin-find",
+    "snippet": "val _superglass_make = find(\"41_superglass_make\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 127,
+    "domain": "obj",
+    "name": "43_tan_leather",
+    "kind": "kotlin-find",
+    "snippet": "val _tan_leather = find(\"43_tan_leather\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 128,
+    "domain": "obj",
+    "name": "45_port_khazard_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _portkhazard_teleport = find(\"45_port_khazard_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 129,
+    "domain": "obj",
+    "name": "47_port_khazard_telegroup",
+    "kind": "kotlin-find",
+    "snippet": "val _portkhazard_telegroup = find(\"47_port_khazard_telegroup\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 130,
+    "domain": "obj",
+    "name": "49_dream",
+    "kind": "kotlin-find",
+    "snippet": "val _dream = find(\"49_dream\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 131,
+    "domain": "obj",
+    "name": "51_string_jewellery",
+    "kind": "kotlin-find",
+    "snippet": "val _string_jewellery = find(\"51_string_jewellery\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 132,
+    "domain": "obj",
+    "name": "57_magic_imbue",
+    "kind": "kotlin-find",
+    "snippet": "val _magic_imbue = find(\"57_magic_imbue\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 133,
+    "domain": "obj",
+    "name": "59_fertile_soil",
+    "kind": "kotlin-find",
+    "snippet": "val _fertile_soil = find(\"59_fertile_soil\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 134,
+    "domain": "obj",
+    "name": "61_boost_potion_share",
+    "kind": "kotlin-find",
+    "snippet": "val _boost_potion_share = find(\"61_boost_potion_share\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 135,
+    "domain": "obj",
+    "name": "63_fishing_guild_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _fishing_guild_teleport = find(\"63_fishing_guild_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 136,
+    "domain": "obj",
+    "name": "65_fishing_guild_telegroup",
+    "kind": "kotlin-find",
+    "snippet": "val _fishing_guild_telegroup = find(\"65_fishing_guild_telegroup\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 137,
+    "domain": "obj",
+    "name": "67_plank_make",
+    "kind": "kotlin-find",
+    "snippet": "val _plank_make = find(\"67_plank_make\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 138,
+    "domain": "obj",
+    "name": "69_catherby_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _catherby_teleport = find(\"69_catherby_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 139,
+    "domain": "obj",
+    "name": "71_catherby_telegroup",
+    "kind": "kotlin-find",
+    "snippet": "val _catherby_telegroup = find(\"71_catherby_telegroup\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 140,
+    "domain": "obj",
+    "name": "73_recharge_dragonstone",
+    "kind": "kotlin-find",
+    "snippet": "val _recharge_dragonstone = find(\"73_recharge_dragonstone\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 141,
+    "domain": "obj",
+    "name": "75_ice_plateau_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _ice_plateau_teleport = find(\"75_ice_plateau_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 142,
+    "domain": "obj",
+    "name": "77_ice_plateau_telegroup",
+    "kind": "kotlin-find",
+    "snippet": "val _ice_plateau_telegroup = find(\"77_ice_plateau_telegroup\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 143,
+    "domain": "obj",
+    "name": "79_energy_transfer",
+    "kind": "kotlin-find",
+    "snippet": "val _energy_transfer = find(\"79_energy_transfer\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 144,
+    "domain": "obj",
+    "name": "81_heal_other",
+    "kind": "kotlin-find",
+    "snippet": "val _heal_other = find(\"81_heal_other\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 145,
+    "domain": "obj",
+    "name": "83_vengeance_other",
+    "kind": "kotlin-find",
+    "snippet": "val _vengeance_other = find(\"83_vengeance_other\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 146,
+    "domain": "obj",
+    "name": "85_vengeance",
+    "kind": "kotlin-find",
+    "snippet": "val _vengeance = find(\"85_vengeance\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 147,
+    "domain": "obj",
+    "name": "87_heal_group",
+    "kind": "kotlin-find",
+    "snippet": "val _heal_group = find(\"87_heal_group\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 148,
+    "domain": "obj",
+    "name": "89_spellbook_swap",
+    "kind": "kotlin-find",
+    "snippet": "val _spellbook_swap = find(\"89_spellbook_swap\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 149,
+    "domain": "obj",
+    "name": "01_arceuus_home_tele",
+    "kind": "kotlin-find",
+    "snippet": "val _arceuus_hometeleport = find(\"01_arceuus_home_tele\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 150,
+    "domain": "obj",
+    "name": "03_arceuus_library_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _arceuus_library_teleport = find(\"03_arceuus_library_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 151,
+    "domain": "obj",
+    "name": "05_basic_reanimation",
+    "kind": "kotlin-find",
+    "snippet": "val _basic_reanimation = find(\"05_basic_reanimation\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 152,
+    "domain": "obj",
+    "name": "07_draynor_manor_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _draynor_manor_teleport = find(\"07_draynor_manor_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 153,
+    "domain": "obj",
+    "name": "09_battlefront_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _battlefront_teleport = find(\"09_battlefront_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 154,
+    "domain": "obj",
+    "name": "11_mind_altar_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _mind_altar_teleport = find(\"11_mind_altar_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 155,
+    "domain": "obj",
+    "name": "13_respawn_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _respawn_teleport = find(\"13_respawn_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 156,
+    "domain": "obj",
+    "name": "15_ghostly_grasp",
+    "kind": "kotlin-find",
+    "snippet": "val _ghostly_grasp = find(\"15_ghostly_grasp\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 157,
+    "domain": "obj",
+    "name": "17_resurrect_lesser_ghost",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_lesser_ghost = find(\"17_resurrect_lesser_ghost\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 158,
+    "domain": "obj",
+    "name": "19_resurrect_lesser_skeleton",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_lesser_skeleton = find(\"19_resurrect_lesser_skeleton\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 159,
+    "domain": "obj",
+    "name": "21_resurrect_lesser_zombie",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_lesser_zombie = find(\"21_resurrect_lesser_zombie\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 160,
+    "domain": "obj",
+    "name": "23_salve_graveyard_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _salve_graveyard_teleport = find(\"23_salve_graveyard_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 161,
+    "domain": "obj",
+    "name": "25_adept_reanimation",
+    "kind": "kotlin-find",
+    "snippet": "val _adept_reanimation = find(\"25_adept_reanimation\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 162,
+    "domain": "obj",
+    "name": "27_inferior_demonbane",
+    "kind": "kotlin-find",
+    "snippet": "val _inferior_demonbane = find(\"27_inferior_demonbane\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 163,
+    "domain": "obj",
+    "name": "29_shadow_veil",
+    "kind": "kotlin-find",
+    "snippet": "val _shadow_veil = find(\"29_shadow_veil\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 164,
+    "domain": "obj",
+    "name": "31_fenkenstrains_castle_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _fenkenstrains_castle_teleport = find(\"31_fenkenstrains_castle_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 165,
+    "domain": "obj",
+    "name": "33_dark_lure",
+    "kind": "kotlin-find",
+    "snippet": "val _dark_lure = find(\"33_dark_lure\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 166,
+    "domain": "obj",
+    "name": "35_skeletal_grasp",
+    "kind": "kotlin-find",
+    "snippet": "val _skeletal_grasp = find(\"35_skeletal_grasp\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 167,
+    "domain": "obj",
+    "name": "37_resurrect_superior_ghost",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_superior_ghost = find(\"37_resurrect_superior_ghost\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 168,
+    "domain": "obj",
+    "name": "39_resurrect_superior_skeleton",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_superior_skeleton = find(\"39_resurrect_superior_skeleton\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 169,
+    "domain": "obj",
+    "name": "41_resurrect_superior_zombie",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_superior_zombie = find(\"41_resurrect_superior_zombie\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 170,
+    "domain": "obj",
+    "name": "43_mark_of_darkness",
+    "kind": "kotlin-find",
+    "snippet": "val _mark_of_darkness = find(\"43_mark_of_darkness\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 171,
+    "domain": "obj",
+    "name": "45_west_ardougne_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _west_ardougne_teleport = find(\"45_west_ardougne_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 172,
+    "domain": "obj",
+    "name": "47_superior_demonbane",
+    "kind": "kotlin-find",
+    "snippet": "val _superior_demonbane = find(\"47_superior_demonbane\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 173,
+    "domain": "obj",
+    "name": "49_lesser_corruption",
+    "kind": "kotlin-find",
+    "snippet": "val _lesser_corruption = find(\"49_lesser_corruption\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 174,
+    "domain": "obj",
+    "name": "51_harmony_island_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _harmony_island_teleport = find(\"51_harmony_island_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 175,
+    "domain": "obj",
+    "name": "53_vile_vigour",
+    "kind": "kotlin-find",
+    "snippet": "val _vile_vigour = find(\"53_vile_vigour\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 176,
+    "domain": "obj",
+    "name": "55_degrime",
+    "kind": "kotlin-find",
+    "snippet": "val _degrime = find(\"55_degrime\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 177,
+    "domain": "obj",
+    "name": "57_cemetery_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _cemetery_teleport = find(\"57_cemetery_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 178,
+    "domain": "obj",
+    "name": "59_expert_reanimation",
+    "kind": "kotlin-find",
+    "snippet": "val _expert_reanimation = find(\"59_expert_reanimation\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 179,
+    "domain": "obj",
+    "name": "61_ward_of_arceuus",
+    "kind": "kotlin-find",
+    "snippet": "val _ward_of_arceuus = find(\"61_ward_of_arceuus\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 180,
+    "domain": "obj",
+    "name": "63_resurrect_greater_ghost",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_greater_ghost = find(\"63_resurrect_greater_ghost\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 181,
+    "domain": "obj",
+    "name": "65_resurrect_greater_skeleton",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_greater_skeleton = find(\"65_resurrect_greater_skeleton\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 182,
+    "domain": "obj",
+    "name": "67_resurrect_greater_zombie",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_greater_zombie = find(\"67_resurrect_greater_zombie\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 183,
+    "domain": "obj",
+    "name": "69_resurrect_crops",
+    "kind": "kotlin-find",
+    "snippet": "val _resurrect_crops = find(\"69_resurrect_crops\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 184,
+    "domain": "obj",
+    "name": "71_undead_grasp",
+    "kind": "kotlin-find",
+    "snippet": "val _undead_grasp = find(\"71_undead_grasp\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 185,
+    "domain": "obj",
+    "name": "73_death_charge",
+    "kind": "kotlin-find",
+    "snippet": "val _death_charge = find(\"73_death_charge\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 186,
+    "domain": "obj",
+    "name": "75_dark_demonbane",
+    "kind": "kotlin-find",
+    "snippet": "val _dark_demonbane = find(\"75_dark_demonbane\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 187,
+    "domain": "obj",
+    "name": "77_barrows_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _barrows_teleport = find(\"77_barrows_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 188,
+    "domain": "obj",
+    "name": "79_demonic_offering",
+    "kind": "kotlin-find",
+    "snippet": "val _demonic_offering = find(\"79_demonic_offering\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 189,
+    "domain": "obj",
+    "name": "81_greater_corruption",
+    "kind": "kotlin-find",
+    "snippet": "val _greater_corruption = find(\"81_greater_corruption\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 190,
+    "domain": "obj",
+    "name": "83_master_reanimation",
+    "kind": "kotlin-find",
+    "snippet": "val _master_reanimation = find(\"83_master_reanimation\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 191,
+    "domain": "obj",
+    "name": "85_ape_atoll_teleport",
+    "kind": "kotlin-find",
+    "snippet": "val _ape_atoll_teleport_arceuus = find(\"85_ape_atoll_teleport\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 192,
+    "domain": "obj",
+    "name": "87_sinister_offering",
+    "kind": "kotlin-find",
+    "snippet": "val _sinister_offering = find(\"87_sinister_offering\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 1979,
+    "domain": "obj",
+    "name": "15_bones_to_bananas",
+    "kind": "kotlin-find",
+    "snippet": "val spell_15_bones_to_bananas = find(\"15_bones_to_bananas\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 1983,
+    "domain": "obj",
+    "name": "21_low_level_alchemy",
+    "kind": "kotlin-find",
+    "snippet": "val spell_21_low_level_alchemy = find(\"21_low_level_alchemy\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 1989,
+    "domain": "obj",
+    "name": "33_telekinetic_grab",
+    "kind": "kotlin-find",
+    "snippet": "val spell_33_telekinetic_grab = find(\"33_telekinetic_grab\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 2004,
+    "domain": "obj",
+    "name": "55_high_level_alchemy",
+    "kind": "kotlin-find",
+    "snippet": "val spell_55_high_level_alchemy = find(\"55_high_level_alchemy\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 2021,
+    "domain": "obj",
+    "name": "67_vulnerability",
+    "kind": "kotlin-find",
+    "snippet": "val spell_67_vulnerability = find(\"67_vulnerability\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 2027,
+    "domain": "obj",
+    "name": "72_enfeeble",
+    "kind": "kotlin-find",
+    "snippet": "val spell_72_enfeeble = find(\"72_enfeeble\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 2030,
+    "domain": "obj",
+    "name": "76_entangle",
+    "kind": "kotlin-find",
+    "snippet": "val spell_76_entangle = find(\"76_entangle\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 2031,
+    "domain": "obj",
+    "name": "78_stun",
+    "kind": "kotlin-find",
+    "snippet": "val spell_78_stun = find(\"78_stun\")"
+  },
+  {
+    "file": "rsmod\\api\\config\\src\\main\\kotlin\\org\\rsmod\\api\\config\\refs\\BaseObjs.kt",
+    "line": 2061,
+    "domain": "obj",
+    "name": "01_arceuus_home_tele",
+    "kind": "kotlin-find",
+    "snippet": "val spell_01_arceuus_home_tele = find(\"01_arceuus_home_tele\")"
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "name": "Chicken",
+  "combat_level": 1,
+  "hitpoints": 3,
+  "attack": 1,
+  "strength": 1,
+  "defence": 1,
+  "attack_speed": 4,
+  "slayer_level": null,
+  "slayer_xp": 3.0,
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Raw chicken",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Feather",
+      "rate": "1/2",
+      "qty_min": 5,
+      "qty_max": 5
+    },
+    {
+      "name": "Feather",
+      "rate": "1/4",
+      "qty_min": 15,
+      "qty_max": 15
+    },
+    {
+      "name": "Nothing",
+      "rate": "1/4",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Key (medium)",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    },
+    {
+      "name": "Clue scroll (beginner)",
+      "rate": "1/300",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ]
+}

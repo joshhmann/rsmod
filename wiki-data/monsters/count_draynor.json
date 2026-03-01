@@ -1,0 +1,84 @@
+{
+  "name": "Count Draynor",
+  "combat_level": 34,
+  "hitpoints": 35,
+  "npc_ids": [3481, 3482, 6393],
+  "aggressive_level": 68,
+  "max_damage": 3,
+  "attack_style": "CRUSH",
+  "attack_speed": 4,
+  "respawn_time": 30,
+  "combat_stats": {
+    "attack": 30,
+    "strength": 25,
+    "defence": 30,
+    "ranged": 1,
+    "magic": 1
+  },
+  "attack_bonus": {
+    "stab": 0,
+    "slash": 0,
+    "crush": 0,
+    "magic": 0,
+    "ranged": 0
+  },
+  "defence_bonus": {
+    "stab": 2,
+    "slash": 1,
+    "crush": 3,
+    "magic": 0,
+    "ranged": 0
+  },
+  "immunities": {
+    "poison": false,
+    "venom": true
+  },
+  "animations": {
+    "attack": 422,
+    "defend": 424,
+    "death": 836
+  },
+  "slayer": {
+    "level": 1,
+    "xp": 0
+  },
+  "drops": [
+    {
+      "name": "Bones",
+      "rate": "1/1",
+      "qty_min": 1,
+      "qty_max": 1
+    }
+  ],
+  "variants": [
+    {
+      "name": "Count Draynor (hard)",
+      "combat_level": 177,
+      "hitpoints": 210,
+      "npc_ids": [6332],
+      "aggressive_level": 354,
+      "max_damage": 17,
+      "combat_stats": {
+        "attack": 198,
+        "strength": 165,
+        "defence": 30,
+        "ranged": 1,
+        "magic": 1
+      },
+      "attack_bonus": {
+        "stab": 1,
+        "slash": 1,
+        "crush": 1,
+        "magic": 1,
+        "ranged": 1
+      },
+      "defence_bonus": {
+        "stab": 2,
+        "slash": 1,
+        "crush": 3,
+        "magic": 0,
+        "ranged": 0
+      }
+    }
+  ]
+}

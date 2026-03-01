@@ -1,0 +1,545 @@
+{
+  "skill": "slayer",
+  "description": "Slayer mechanics, masters, monsters, and rewards for Rev 233",
+  "masters": [
+    {
+      "name": "Turael",
+      "npc_id": 13618,
+      "location": {
+        "area": "Burthorpe",
+        "x": 2939,
+        "z": 3533
+      },
+      "requirements": {
+        "combat_level": 0,
+        "quests": [],
+        "slayer_level": 0
+      },
+      "points_per_task": 0,
+      "notes": "Can reset tasks from other masters (resets streak). No points awarded.",
+      "f2p": true
+    },
+    {
+      "name": "Mazchna",
+      "npc_id": 13620,
+      "location": {
+        "area": "Canifis (bridge)",
+        "x": 3509,
+        "z": 3511
+      },
+      "requirements": {
+        "combat_level": 20,
+        "quests": ["Priest in Peril"],
+        "slayer_level": 0
+      },
+      "points_per_task": 6,
+      "notes": "Easy tasks, some short assignments. F2P accessible.",
+      "f2p": false
+    },
+    {
+      "name": "Vannaka",
+      "npc_id": 403,
+      "location": {
+        "area": "Edgeville Dungeon",
+        "x": 3147,
+        "z": 9914
+      },
+      "requirements": {
+        "combat_level": 40,
+        "quests": [],
+        "slayer_level": 0
+      },
+      "points_per_task": 8,
+      "notes": "Mid-level slayer master. Can assign Abyssal demons.",
+      "f2p": false
+    },
+    {
+      "name": "Chaeldar",
+      "npc_id": 404,
+      "location": {
+        "area": "Zanaris (Fairy Queen court)",
+        "x": 2444,
+        "z": 4431
+      },
+      "requirements": {
+        "combat_level": 70,
+        "quests": ["Lost City"],
+        "slayer_level": 0
+      },
+      "points_per_task": 10,
+      "notes": "Mid-to-high level slayer master.",
+      "f2p": false
+    },
+    {
+      "name": "Konar quo Maten",
+      "npc_id": 490,
+      "location": {
+        "area": "Mount Karuulm",
+        "x": 1309,
+        "z": 3785
+      },
+      "requirements": {
+        "combat_level": 75,
+        "quests": [],
+        "slayer_level": 0
+      },
+      "points_per_task": 18,
+      "notes": "Assigns tasks with location requirement. Can drop Brimstone keys.",
+      "f2p": false
+    },
+    {
+      "name": "Nieve",
+      "npc_id": 6797,
+      "location": {
+        "area": "Tree Gnome Stronghold",
+        "x": 2432,
+        "z": 3424
+      },
+      "requirements": {
+        "combat_level": 85,
+        "quests": [],
+        "slayer_level": 0
+      },
+      "points_per_task": 12,
+      "notes": "High-level slayer master. Replaced by Steve after Monkey Madness II.",
+      "f2p": false
+    },
+    {
+      "name": "Duradel",
+      "npc_id": 13622,
+      "location": {
+        "area": "Shilo Village (Fishing store)",
+        "x": 2869,
+        "z": 2982,
+        "plane": 1
+      },
+      "requirements": {
+        "combat_level": 100,
+        "quests": ["Shilo Village"],
+        "slayer_level": 50
+      },
+      "points_per_task": 15,
+      "notes": "Highest-level slayer master. Assigns very similar tasks to Nieve but higher quantities.",
+      "f2p": false
+    },
+    {
+      "name": "Krystilia",
+      "npc_id": 13651,
+      "location": {
+        "area": "Edgeville",
+        "x": 3110,
+        "z": 3516
+      },
+      "requirements": {
+        "combat_level": 0,
+        "quests": [],
+        "slayer_level": 0
+      },
+      "points_per_task": 25,
+      "notes": "Wilderness-only tasks. Separate task streak from normal slayer. No combat level requirement.",
+      "f2p": true
+    }
+  ],
+  "monsters": [
+    {
+      "name": "Crawling Hand",
+      "npc_ids": [448, 449, 450, 451, 452],
+      "slayer_level": 5,
+      "hp": 8,
+      "attack_style": "Crush",
+      "location": "Slayer Tower",
+      "xp_per_kill": 12.5,
+      "weakness": null,
+      "drops": ["Bones"],
+      "f2p": true,
+      "notes": "Not cannonable. Undead."
+    },
+    {
+      "name": "Cave Crawler",
+      "npc_ids": [406, 407, 408, 409],
+      "slayer_level": 10,
+      "hp": 15,
+      "attack_style": "Crush",
+      "location": "Fremennik Slayer Dungeon, Dorgesh-Kaan South Dungeon",
+      "xp_per_kill": 26,
+      "weakness": null,
+      "drops": ["Bones"],
+      "f2p": false,
+      "notes": "Poisonous. Not cannonable. Single-way combat."
+    },
+    {
+      "name": "Banshee",
+      "npc_ids": [414],
+      "slayer_level": 15,
+      "hp": 22,
+      "attack_style": "Magical melee",
+      "location": "Slayer Tower",
+      "xp_per_kill": 32.5,
+      "weakness": null,
+      "drops": ["Bones"],
+      "f2p": false,
+      "notes": "Requires earmuffs or Slayer helmet. Not cannonable. Undead."
+    },
+    {
+      "name": "Cockatrice",
+      "npc_ids": [419],
+      "slayer_level": 25,
+      "hp": 37,
+      "attack_style": "Stab",
+      "location": "Fremennik Slayer Dungeon",
+      "xp_per_kill": 47,
+      "weakness": null,
+      "drops": ["Bones", "Cockatrice egg"],
+      "f2p": false,
+      "notes": "Requires mirror shield or V's shield to kill. Not cannonable."
+    },
+    {
+      "name": "Pyrefiend",
+      "npc_ids": [433, 434, 435, 436],
+      "slayer_level": 27,
+      "hp": 28,
+      "attack_style": "Magical melee",
+      "location": "Isle of Souls, Godwars Dungeon",
+      "xp_per_kill": 40,
+      "weakness": null,
+      "drops": ["Fire talisman", "Golden apron"],
+      "f2p": false,
+      "notes": "Demon. Fiery. Cannonable."
+    },
+    {
+      "name": "Jelly",
+      "npc_ids": [437, 438, 439, 440, 441, 442],
+      "slayer_level": 32,
+      "hp": 75,
+      "attack_style": "Magical melee",
+      "location": "Fremennik Slayer Dungeon",
+      "xp_per_kill": 68,
+      "weakness": null,
+      "drops": ["Bones"],
+      "f2p": false,
+      "notes": "Cannonable."
+    },
+    {
+      "name": "Cave Horror",
+      "npc_ids": [],
+      "slayer_level": 35,
+      "hp": 45,
+      "attack_style": "Crush",
+      "location": "Cathedral of Learning, Dorgesh-Kaan South Dungeon",
+      "xp_per_kill": 60,
+      "weakness": null,
+      "drops": ["Bones", "Black mask (rare)"],
+      "f2p": false,
+      "notes": "Requires light source. Drops Black mask (10% base chance)."
+    },
+    {
+      "name": "Rockslug",
+      "npc_ids": [],
+      "slayer_level": 38,
+      "hp": 35,
+      "attack_style": "Crush",
+      "location": "Fremennik Slayer Dungeon",
+      "xp_per_kill": 50,
+      "weakness": null,
+      "drops": ["Bones", "Bag of salt"],
+      "f2p": false,
+      "notes": "Requires bag of salt to kill. Not cannonable."
+    },
+    {
+      "name": "Desert Lizard",
+      "npc_ids": [],
+      "slayer_level": 41,
+      "hp": 23,
+      "attack_style": "Melee",
+      "location": "Kharidian Desert",
+      "xp_per_kill": 35,
+      "weakness": "Ice cooler",
+      "drops": ["Bones", "Desert lizard feet"],
+      "f2p": false,
+      "notes": "Requires ice cooler to kill. Cannonable."
+    },
+    {
+      "name": "Mogre",
+      "npc_ids": [],
+      "slayer_level": 42,
+      "hp": 50,
+      "attack_style": "Crush",
+      "location": "Mudskipper Point",
+      "xp_per_kill": 60,
+      "weakness": "Fishing explosives",
+      "drops": ["Mogre bones"],
+      "f2p": false,
+      "notes": "Requires fishing explosives to kill. Not cannonable."
+    },
+    {
+      "name": "Kalphite Worker",
+      "npc_ids": [],
+      "slayer_level": 45,
+      "hp": 15,
+      "attack_style": "Melee",
+      "location": "Kalphite Cave, Kalphite Lair",
+      "xp_per_kill": 23,
+      "weakness": null,
+      "drops": ["Bones", "Kalphite exoskeleton"],
+      "f2p": true,
+      "notes": "Cannonable. Multi-combat in Lair."
+    },
+    {
+      "name": "Dagannoth",
+      "npc_ids": [],
+      "slayer_level": 46,
+      "hp": 100,
+      "attack_style": "Ranged",
+      "location": "Fremennik Slayer Dungeon",
+      "xp_per_kill": 105,
+      "weakness": null,
+      "drops": ["Bones", "Dagannoth hide"],
+      "f2p": false,
+      "notes": "Multi-combat. Ranged attacker."
+    },
+    {
+      "name": "Dust Devil",
+      "npc_ids": [11161],
+      "slayer_level": 50,
+      "hp": 65,
+      "attack_style": "Magical melee",
+      "location": "Karuulm Slayer Dungeon, Smoke Dungeon",
+      "xp_per_kill": 75,
+      "weakness": "Facemask",
+      "drops": ["Bones", "Dust devil bones"],
+      "f2p": false,
+      "notes": "Requires facemask or Slayer helmet. Not cannonable."
+    },
+    {
+      "name": "Fire Giant",
+      "npc_ids": [],
+      "slayer_level": 52,
+      "hp": 190,
+      "attack_style": "Slash",
+      "location": "Brimhaven Dungeon, Chaos Temple dungeon",
+      "xp_per_kill": 157,
+      "weakness": null,
+      "drops": ["Bones", "Fire talisman"],
+      "f2p": false,
+      "notes": "Cannonable."
+    },
+    {
+      "name": "Aberrant Spectre",
+      "npc_ids": [6, 7],
+      "slayer_level": 60,
+      "hp": 130,
+      "attack_style": "Magic",
+      "location": "Slayer Tower, Stronghold of Security",
+      "xp_per_kill": 112,
+      "weakness": null,
+      "drops": ["Bones", "Aberrant spectre drop"],
+      "f2p": false,
+      "notes": "Cannonable. Requires 85 Slayer for Stalker (Superior)."
+    },
+    {
+      "name": "Gargoyle",
+      "npc_ids": [412],
+      "slayer_level": 75,
+      "hp": 105,
+      "attack_style": "Slash",
+      "location": "Slayer Tower",
+      "xp_per_kill": 125,
+      "weakness": "Slayer helmet (mandatory)",
+      "drops": ["Bones", "Granite maul (rare)", "Gargoyle shade"],
+      "f2p": false,
+      "notes": "Requires Slayer helmet to damage. Must use rock hammer to finish. Not cannonable."
+    },
+    {
+      "name": "Nechryael",
+      "npc_ids": [8],
+      "slayer_level": 78,
+      "hp": 105,
+      "attack_style": "Crush",
+      "location": "Slayer Tower, Catacombs of Kourend",
+      "xp_per_kill": 145,
+      "weakness": null,
+      "drops": ["Bones", "Nechryael drop"],
+      "f2p": false,
+      "notes": "Demon. Spawns additional minions on death. Requires 92 Slayer for Stalker."
+    },
+    {
+      "name": "Dark Beast",
+      "npc_ids": [],
+      "slayer_level": 90,
+      "hp": 190,
+      "attack_style": "Ranged",
+      "location": "Slayer Tower",
+      "xp_per_kill": 200,
+      "weakness": null,
+      "drops": ["Bones", "Dark beast bow (rare)"],
+      "f2p": false,
+      "notes": "Ranged attacker. Cannonable."
+    }
+  ],
+  "equipment": [
+    {
+      "name": "Enchanted gem",
+      "obj_id": 4155,
+      "slayer_level": 1,
+      "cost": 1,
+      "use": "Contact Slayer masters, check task progress"
+    },
+    {
+      "name": "Mirror shield",
+      "obj_id": 4156,
+      "slayer_level": 25,
+      "cost": 200,
+      "use": "Protects against Cockatrice"
+    },
+    {
+      "name": "Earmuffs",
+      "obj_id": 4166,
+      "slayer_level": 15,
+      "cost": 200,
+      "use": "Protects against Banshees"
+    },
+    {
+      "name": "Facemask",
+      "obj_id": 4164,
+      "slayer_level": 10,
+      "cost": 200,
+      "use": "Protects against Smoke Dungeon and Dust devils"
+    },
+    {
+      "name": "Spiny helmet",
+      "obj_id": 4163,
+      "slayer_level": 1,
+      "cost": 650,
+      "use": "Protects against Wall beasts"
+    },
+    {
+      "name": "Black mask",
+      "obj_id": 4170,
+      "slayer_level": 1,
+      "cost": "Drop-only (Cave horror)",
+      "use": "+16.67% melee accuracy/strength on task. Component for Slayer helmet."
+    },
+    {
+      "name": "Slayer helmet",
+      "obj_id": 15492,
+      "slayer_level": 55,
+      "cost": "400 reward points + components",
+      "use": "Combines all slayer gear protections + Black mask bonus"
+    },
+    {
+      "name": "Expeditious bracelet",
+      "obj_id": 13171,
+      "slayer_level": 1,
+      "cost": "Lvl-1 Enchant on Opal bracelet",
+      "use": "25% chance kill counts as 2 (30 charges)"
+    },
+    {
+      "name": "Bracelet of slaughter",
+      "obj_id": 13173,
+      "slayer_level": 1,
+      "cost": "Lvl-3 Enchant on Topaz bracelet",
+      "use": "25% chance to not count kill but still get XP (30 charges)"
+    }
+  ],
+  "rewards": {
+    "note": "Points awarded after completing 5th task and onward. First 4 tasks grant no points.",
+    "bonus_intervals": {
+      "10th": "5x points",
+      "50th": "15x points",
+      "100th": "25x points",
+      "250th": "35x points",
+      "1000th": "50x points"
+    },
+    "unlocks": [
+      {
+        "name": "Slayer helmet (craftable)",
+        "cost": 400,
+        "description": "Craft from components - combines all slayer gear protections"
+      },
+      {
+        "name": "Superior Slayer monster chance",
+        "cost": 400,
+        "description": "Chance for superior variant to spawn"
+      },
+      {
+        "name": "Ring Bling (Slayer ring crafting)",
+        "cost": 150,
+        "description": "Craft Slayer rings with 75 Crafting"
+      },
+      {
+        "name": "Unlock Extend/Block slots",
+        "cost": 100,
+        "description": "Each additional block/extend slot (up to 6 total at 300 QP)"
+      },
+      {
+        "name": "Ranged/magic slayer tasks",
+        "cost": 200,
+        "description": "Get melee, ranged, or magic tasks"
+      },
+      {
+        "name": "Shayzien armour (free respawn)",
+        "cost": 300,
+        "description": "Free respawn at Combat Ring"
+      },
+      {
+        "name": "Lizard Shaman drop rate",
+        "cost": 500,
+        "description": "Double chance for Lizard shaman unique drops"
+      },
+      {
+        "name": "Skipping tasks cheaper",
+        "cost": 100,
+        "description": "Reduce cost to skip tasks by 50%"
+      },
+      {
+        "name": "Turael/Spria ignore combat req",
+        "cost": 200,
+        "description": "Allow Turael/Spria to assign any task regardless of combat"
+      }
+    ],
+    "task_extensions": [
+      {
+        "name": "Extend Ranged tasks",
+        "cost": 150,
+        "description": "Ranged tasks 2x length"
+      },
+      {
+        "name": "Extend Melee tasks",
+        "cost": 150,
+        "description": "Melee tasks 2x length"
+      },
+      {
+        "name": "Extend Magic tasks",
+        "cost": 150,
+        "description": "Magic tasks 2x length"
+      }
+    ]
+  },
+  "test_locations": [
+    {
+      "desc": "Turael - Burthorpe",
+      "x": 2939,
+      "z": 3533
+    },
+    {
+      "desc": "Mazchna - Canifis bridge",
+      "x": 3509,
+      "z": 3511
+    },
+    {
+      "desc": "Crawling Hands/Banshees - Slayer Tower",
+      "x": 3428,
+      "z": 3537
+    },
+    {
+      "desc": "Cave Crawlers/Cockatrice - Fremennik Dungeon",
+      "x": 2438,
+      "z": 3515
+    },
+    {
+      "desc": "Vannaka - Edgeville Dungeon",
+      "x": 3147,
+      "z": 9914
+    }
+  ]
+}

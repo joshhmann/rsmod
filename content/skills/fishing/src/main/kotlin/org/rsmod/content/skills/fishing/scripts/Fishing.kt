@@ -146,7 +146,8 @@ internal object FishingSeqs : SeqReferences() {
     //   OILY_FISHING_ROD(1585, 313, 622, 623)
     //   DARK_CRAB_POT(301, 11940, 619)
     // Rev 233 canonical internal names (seq.sym):
-    // 621 -> human_smallnet, 620 -> human_largenet, 622/623 -> human_fishing_casting/human_fish_onspot,
+    // 621 -> human_smallnet, 620 -> human_largenet, 622/623 ->
+    // human_fishing_casting/human_fish_onspot,
     // 619 -> human_lobster, 618 -> human_harpoon.
     val human_fishing_net = find("human_smallnet") // anim 621
     val human_fishing_bignet = find("human_largenet") // anim 620

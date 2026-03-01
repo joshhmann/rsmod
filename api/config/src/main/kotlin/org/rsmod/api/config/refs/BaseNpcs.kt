@@ -6,9 +6,7 @@ import org.rsmod.api.type.refs.npc.NpcReferences
 
 typealias npcs = BaseNpcs
 
-/**
- * Auto-generated symbol bindings (Smart Subset). Do not edit manually.
- */
+/** Auto-generated symbol bindings (Smart Subset). Do not edit manually. */
 object BaseNpcs : NpcReferences() {
     val _0_50_49_saltfish = find("0_50_49_saltfish")
     val _0_50_50_freshfish = find("0_50_50_freshfish")

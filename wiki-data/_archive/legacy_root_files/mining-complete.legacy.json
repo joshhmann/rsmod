@@ -1,0 +1,327 @@
+{
+  "skill": "mining",
+  "source": "OSRS Rev 233 Cache",
+  "last_updated": "2026-02-22",
+  
+  "pickaxes": {
+    "bronze": {
+      "item_id": 1265,
+      "cert_id": 1266,
+      "level_req": 1,
+      "attack_level_req": 1,
+      "animation": 625,
+      "animation_wall": 6753,
+      "animation_noreach": 6747,
+      "broken_item_id": 468,
+      "pickaxehead_id": 480,
+      "notes": "Weakest pickaxe, no requirements"
+    },
+    "iron": {
+      "item_id": 1267,
+      "cert_id": 1268,
+      "level_req": 1,
+      "attack_level_req": 1,
+      "animation": 626,
+      "animation_wall": 6754,
+      "animation_noreach": 6748,
+      "broken_item_id": 470,
+      "pickaxehead_id": 482,
+      "notes": "Slightly better than bronze"
+    },
+    "steel": {
+      "item_id": 1269,
+      "cert_id": 1270,
+      "level_req": 6,
+      "attack_level_req": 5,
+      "animation": 627,
+      "animation_wall": 6755,
+      "animation_noreach": 6749,
+      "broken_item_id": 472,
+      "pickaxehead_id": 484,
+      "notes": "First upgrade worth getting"
+    },
+    "mithril": {
+      "item_id": 1273,
+      "cert_id": 1274,
+      "level_req": 21,
+      "attack_level_req": 20,
+      "animation": 629,
+      "animation_wall": 6757,
+      "animation_noreach": 6751,
+      "broken_item_id": 474,
+      "pickaxehead_id": 486,
+      "notes": "Mid-tier pickaxe"
+    },
+    "adamant": {
+      "item_id": 1271,
+      "cert_id": 1272,
+      "level_req": 31,
+      "attack_level_req": 30,
+      "animation": 628,
+      "animation_wall": 6756,
+      "animation_noreach": 6750,
+      "broken_item_id": 476,
+      "pickaxehead_id": 488,
+      "notes": "High-tier pickaxe"
+    },
+    "rune": {
+      "item_id": 1275,
+      "cert_id": 1276,
+      "level_req": 41,
+      "attack_level_req": 40,
+      "animation": 624,
+      "animation_wall": 6752,
+      "animation_noreach": 6746,
+      "broken_item_id": 478,
+      "pickaxehead_id": 490,
+      "notes": "Best non-dragon pickaxe"
+    },
+    "dragon": {
+      "item_id": 11920,
+      "cert_id": 11921,
+      "level_req": 61,
+      "attack_level_req": 60,
+      "animation": 7139,
+      "animation_pretty": 642,
+      "animation_wall": 6758,
+      "animation_noreach": 7140,
+      "animation_pretty_wall": 335,
+      "animation_pretty_noreach": 643,
+      "broken_item_id": 11923,
+      "upgrade_kit_id": 12800,
+      "pretty_version_id": 12797,
+      "notes": "Best pickaxe until crystal, can be upgraded to infernal"
+    }
+  },
+  
+  "ores": {
+    "clay": {
+      "item_id": 434,
+      "cert_id": 435,
+      "soft_clay_id": 1761,
+      "level_req": 1,
+      "xp": 5.0,
+      "respawn_ticks": 2,
+      "rock_ids": [11362, 11363],
+      "notes": "Used for pottery, crafting"
+    },
+    "copper": {
+      "item_id": 436,
+      "cert_id": 437,
+      "placeholder_id": 16233,
+      "level_req": 1,
+      "xp": 17.5,
+      "respawn_ticks": 4,
+      "rock_ids": [10079, 10943, 11161, 37944],
+      "notes": "Smelt with tin for bronze bars"
+    },
+    "tin": {
+      "item_id": 438,
+      "cert_id": 439,
+      "placeholder_id": 16234,
+      "level_req": 1,
+      "xp": 17.5,
+      "respawn_ticks": 4,
+      "rock_ids": [10080, 11360, 11361, 37945],
+      "notes": "Smelt with copper for bronze bars"
+    },
+    "iron": {
+      "item_id": 440,
+      "cert_id": 441,
+      "placeholder_id": 16235,
+      "level_req": 15,
+      "xp": 35.0,
+      "respawn_ticks": 9,
+      "rock_ids": [11364, 11365, 36203, 42833],
+      "notes": "Used for steel bars, common smithing material"
+    },
+    "silver": {
+      "item_id": 442,
+      "cert_id": 443,
+      "placeholder_id": 16236,
+      "level_req": 20,
+      "xp": 40.0,
+      "respawn_ticks": 100,
+      "rock_ids": [11368, 11369, 36205],
+      "notes": "Used for crafting, holy symbols, tiaras"
+    },
+    "coal": {
+      "item_id": 453,
+      "cert_id": 454,
+      "placeholder_id": 16242,
+      "level_req": 30,
+      "xp": 50.0,
+      "respawn_ticks": 50,
+      "rock_ids": [4676, 11366, 11367, 36204],
+      "related_items": {
+        "coal_bag": 12019,
+        "juniper_charcoal": 13570
+      },
+      "notes": "Required for steel+ bars, often mined in Mining Guild"
+    },
+    "gold": {
+      "item_id": 444,
+      "cert_id": 445,
+      "perfect_gold_id": 446,
+      "placeholder_id": 16237,
+      "placeholder_perfect_id": 16238,
+      "level_req": 40,
+      "xp": 65.0,
+      "respawn_ticks": 100,
+      "rock_ids": [11370, 11371, 36206],
+      "notes": "Used for crafting jewelry, crowns"
+    },
+    "mithril": {
+      "item_id": 447,
+      "cert_id": 448,
+      "placeholder_id": 16239,
+      "level_req": 55,
+      "xp": 80.0,
+      "respawn_ticks": 200,
+      "rock_ids": [11372, 11373, 36207],
+      "notes": "Mid-tier bar for mithril equipment"
+    },
+    "adamantite": {
+      "item_id": 449,
+      "cert_id": 450,
+      "placeholder_id": 16240,
+      "level_req": 70,
+      "xp": 95.0,
+      "respawn_ticks": 400,
+      "rock_ids": [],
+      "notes": "High-tier bar for adamant equipment"
+    },
+    "runite": {
+      "item_id": 451,
+      "cert_id": 452,
+      "placeholder_id": 16241,
+      "level_req": 85,
+      "xp": 125.0,
+      "respawn_ticks": 1200,
+      "rock_ids": [11376, 11377, 36209],
+      "notes": "Best non-members ore, very rare"
+    }
+  },
+  
+  "gems": {
+    "uncut": {
+      "sapphire": {"item_id": 1623, "cert_id": 1624, "level_req": 20},
+      "emerald": {"item_id": 1621, "cert_id": 1622, "level_req": 27},
+      "ruby": {"item_id": 1619, "cert_id": 1620, "level_req": 34},
+      "diamond": {"item_id": 1617, "cert_id": 1618, "level_req": 43},
+      "dragonstone": {"item_id": 1631, "cert_id": 1632, "level_req": 55},
+      "onyx": {"item_id": 6571, "cert_id": 6572, "level_req": 67},
+      "opal": {"item_id": 1625, "cert_id": 1626, "level_req": 1},
+      "jade": {"item_id": 1627, "cert_id": 1628, "level_req": 13},
+      "red_topaz": {"item_id": 1629, "cert_id": 1630, "level_req": 35}
+    },
+    "related_items": {
+      "crushed_gemstone": 1633,
+      "gem_bag": 12020,
+      "gem_bag_open": 24481,
+      "reward_gem_bag": 19473,
+      "reward_gem_bag_guild": 24853
+    }
+  },
+  
+  "mining_helmets": {
+    "cave_goblin_mining_helmet": {
+      "lit": {"item_id": 5013, "placeholder_id": 18011},
+      "unlit": {"item_id": 5014, "cert_id": 5015, "placeholder_id": 18012}
+    }
+  },
+  
+  "random_events": {
+    "rock_golem": {
+      "description": "Random event when mining",
+      "ore_specific": true
+    },
+    "broken_pickaxe": {
+      "description": "Niles/Flippa event, pickaxe becomes unusable until fixed",
+      "pickaxeheads": {
+        "bronze": 480,
+        "iron": 482,
+        "steel": 484,
+        "mithril": 486,
+        "adamant": 488,
+        "rune": 490
+      },
+      "handle": 466
+    }
+  },
+  
+  "animations": {
+    "bronze_pickaxe": {"standard": 625, "wall": 6753, "noreach": 6747},
+    "iron_pickaxe": {"standard": 626, "wall": 6754, "noreach": 6748},
+    "steel_pickaxe": {"standard": 627, "wall": 6755, "noreach": 6749},
+    "mithril_pickaxe": {"standard": 629, "wall": 6757, "noreach": 6751},
+    "adamant_pickaxe": {"standard": 628, "wall": 6756, "noreach": 6750},
+    "rune_pickaxe": {"standard": 624, "wall": 6752, "noreach": 6746},
+    "dragon_pickaxe": {
+      "standard": 7139,
+      "pretty": 642,
+      "wall": 6758,
+      "noreach": 7140,
+      "pretty_wall": 335,
+      "pretty_noreach": 643
+    }
+  },
+  
+  "rock_locations": {
+    "copper": {
+      "loc_ids": [10079, 10943, 11161, 37944],
+      "variants": ["newbiecopperrock", "copperrock1", "copperrock2", "tut2_copperrock"]
+    },
+    "tin": {
+      "loc_ids": [10080, 11360, 11361, 37945],
+      "variants": ["newbietinrock", "tinrock1", "tinrock2", "tut2_tinrock"]
+    },
+    "clay": {
+      "loc_ids": [11362, 11363, 34956, 34957, 36210],
+      "variants": ["clayrock1", "clayrock2", "softclayrock1", "softclayrock2", "prif_mine_softclayrock1"]
+    },
+    "iron": {
+      "loc_ids": [11364, 11365, 36203, 42833],
+      "variants": ["ironrock1", "ironrock2", "prif_mine_ironrock1", "gim_ironrock"]
+    },
+    "coal": {
+      "loc_ids": [4676, 11366, 11367, 36204],
+      "variants": ["misc_dummy_coalrock1", "coalrock1", "coalrock2", "prif_mine_coalrock1"]
+    },
+    "silver": {
+      "loc_ids": [11368, 11369, 36205],
+      "variants": ["silverrock1", "silverrock2", "prif_mine_silverrock1"]
+    },
+    "gold": {
+      "loc_ids": [11370, 11371, 36206],
+      "variants": ["goldrock1", "goldrock2", "prif_mine_goldrock1"]
+    },
+    "mithril": {
+      "loc_ids": [11372, 11373, 36207],
+      "variants": ["mithrilrock1", "mithrilrock2", "prif_mine_mithrilrock1"]
+    },
+    "runite": {
+      "loc_ids": [11376, 11377, 36209],
+      "variants": ["runiterock1", "runiterock2", "prif_mine_runiterock1"]
+    }
+  },
+  
+  "test_locations": [
+    {"desc": "Lumbridge Swamp copper/tin mine", "x": 3227, "z": 3150},
+    {"desc": "Dwarven Mine iron/coal", "x": 3020, "z": 9850},
+    {"desc": "Al Kharid mine (iron, coal, gold, mithril, adamant)", "x": 3296, "z": 3292},
+    {"desc": "Mining Guild entrance (coal)", "x": 3046, "z": 9736},
+    {"desc": "Rimmington mine (copper, tin, iron, gold)", "x": 2978, "z": 3241},
+    {"desc": "Varrock South East mine (copper, tin, iron)", "x": 3288, "z": 3364},
+    {"desc": "Falador mine (copper, tin, iron, coal)", "x": 2940, "z": 3280},
+    {"desc": "Crafting Guild mine (clay, silver, gold)", "x": 2937, "z": 3290}
+  ],
+  
+  "meta": {
+    "total_pickaxe_types": 7,
+    "total_ore_types": 11,
+    "total_rock_variants": 35,
+    "total_animations": 24,
+    "max_level_req": 85
+  }
+}

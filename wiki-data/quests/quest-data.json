@@ -1,0 +1,465 @@
+{
+  "metadata": {
+    "revision": "233",
+    "source": "OSRS Rev 233 Cache",
+    "extracted": "2025-02-22",
+    "type": "quest_data"
+  },
+  "quests": [
+    {
+      "id": "cooks-assistant",
+      "name": "Cook's Assistant",
+      "varp": 29,
+      "varp_name": "cookquest",
+      "difficulty": "Novice",
+      "length": "Short",
+      "members": false,
+      "quest_points": 1,
+      "required_levels": {},
+      "required_items": [
+        {"id": 1927, "name": "bucket_milk", "quantity": 1, "obtainable": true},
+        {"id": 1944, "name": "egg", "quantity": 1, "obtainable": true},
+        {"id": 1933, "name": "pot_flour", "quantity": 1, "obtainable": true}
+      ],
+      "quest_items": [],
+      "xp_rewards": {
+        "cooking": 500
+      },
+      "npcs": [
+        {"id": 4626, "name": "cook", "role": "quest_giver", "location": {"x": 3208, "y": 3215, "plane": 0}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to the Cook in Lumbridge Castle kitchen",
+        "1": "Started - Need to bring: milk, egg, flour",
+        "2": "Items collected",
+        "100": "Complete - Returned ingredients to Cook"
+      },
+      "start_location": {
+        "description": "Lumbridge Castle kitchen",
+        "x": 3208,
+        "y": 3215,
+        "plane": 0
+      },
+      "notes": "Simple gathering quest. Items can be obtained in Lumbridge area."
+    },
+    {
+      "id": "sheep-shearer",
+      "name": "Sheep Shearer",
+      "varp": 60,
+      "varp_name": "sheepherderquest",
+      "difficulty": "Novice",
+      "length": "Short",
+      "members": false,
+      "quest_points": 1,
+      "required_levels": {},
+      "required_items": [],
+      "quest_items": [
+        {"id": 1759, "name": "ball_of_wool", "quantity": 20, "obtainable": true}
+      ],
+      "xp_rewards": {
+        "crafting": 150
+      },
+      "npcs": [
+        {"id": 732, "name": "fred_the_farmer", "role": "quest_giver", "location": {"x": 3189, "y": 3274, "plane": 0}}
+      ],
+      "stages": {
+        "0": "Not started",
+        "1": "Started - Shear sheep and collect 20 balls of wool",
+        "2": "Complete - Returned wool to Fred"
+      },
+      "start_location": {
+        "description": "Fred's house north of Lumbridge",
+        "x": 3189,
+        "y": 3274,
+        "plane": 0
+      },
+      "notes": "Requires shears. Shear sheep in the pen and spin wool on spinning wheel."
+    },
+    {
+      "id": "rune-mysteries",
+      "name": "Rune Mysteries",
+      "varp": 0,
+      "varp_name": "none",
+      "difficulty": "Novice",
+      "length": "Short",
+      "members": false,
+      "quest_points": 1,
+      "required_levels": {},
+      "required_items": [],
+      "quest_items": [
+        {"id": 1438, "name": "air_talisman", "quantity": 1, "obtainable": true, "note": "Given during quest"},
+        {"id": 290, "name": "research_package", "quantity": 1, "obtainable": true},
+        {"id": 291, "name": "research_notes", "quantity": 1, "obtainable": true}
+      ],
+      "xp_rewards": {},
+      "npcs": [
+        {"id": 5034, "name": "head_wizard", "role": "quest_giver", "location": {"x": 3109, "y": 3159, "plane": 0}},
+        {"id": 2886, "name": "aubury", "role": "mage_shop_owner", "location": {"x": 3253, "y": 3402, "plane": 0}},
+        {"id": 3257, "name": "wizard", "role": "quest_helper", "location": {"x": 3108, "y": 3158, "plane": 0}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Duke Horacio in Lumbridge Castle",
+        "1": "Started - Talk to Sedridor in Wizards' Tower basement",
+        "2": "Got package to deliver to Aubury in Varrock",
+        "3": "Got research notes - return to Sedridor",
+        "4": "Complete - Given air talisman, can now craft runes"
+      },
+      "start_location": {
+        "description": "Lumbridge Castle, talk to Duke Horacio on 2nd floor",
+        "x": 3210,
+        "y": 3220,
+        "plane": 1
+      },
+      "notes": "First runecrafting quest. Rewards air talisman and unlocks rune essence mining."
+    },
+    {
+      "id": "restless-ghost",
+      "name": "The Restless Ghost",
+      "varp": 0,
+      "varp_name": "none",
+      "difficulty": "Novice",
+      "length": "Short",
+      "members": false,
+      "quest_points": 1,
+      "required_levels": {},
+      "required_items": [],
+      "quest_items": [
+        {"id": 553, "name": "ghostskull", "quantity": 1, "obtainable": true, "note": "From Wizards' Tower basement"},
+        {"id": 552, "name": "amulet_of_ghostspeak", "quantity": 1, "obtainable": true, "note": "Reward from quest"}
+      ],
+      "xp_rewards": {
+        "prayer": 1125
+      },
+      "npcs": [
+        {"id": 2812, "name": "father_aereck", "role": "quest_giver", "location": {"x": 3241, "y": 3207, "plane": 0}},
+        {"id": 923, "name": "father_urhney", "role": "amulet_giver", "location": {"x": 3146, "y": 3178, "plane": 0}},
+        {"id": 5087, "name": "restless_ghost", "role": "quest_target", "location": {"x": 3248, "y": 3193, "plane": 0}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Father Aereck in Lumbridge church",
+        "1": "Started - Talk to Father Urhney in Lumbridge Swamp for amulet",
+        "2": "Got ghostspeak amulet - Talk to ghost in Lumbridge graveyard",
+        "3": "Find skull in Wizards' Tower basement",
+        "4": "Complete - Skull returned to coffin, ghost at rest"
+      },
+      "start_location": {
+        "description": "Lumbridge Church",
+        "x": 3241,
+        "y": 3207,
+        "plane": 0
+      },
+      "notes": "Rewards ghostspeak amulet and prayer XP. Allows talking to ghosts."
+    },
+    {
+      "id": "dorics-quest",
+      "name": "Doric's Quest",
+      "varp": 31,
+      "varp_name": "doricquest",
+      "difficulty": "Novice",
+      "length": "Short",
+      "members": false,
+      "quest_points": 1,
+      "required_levels": {
+        "mining": 15
+      },
+      "required_items": [
+        {"id": 434, "name": "clay", "quantity": 6, "obtainable": true},
+        {"id": 436, "name": "copper_ore", "quantity": 4, "obtainable": true},
+        {"id": 440, "name": "iron_ore", "quantity": 2, "obtainable": true}
+      ],
+      "quest_items": [],
+      "xp_rewards": {
+        "mining": 1300,
+        "smithing": 400
+      },
+      "npcs": [
+        {"id": 3893, "name": "doric", "role": "quest_giver", "location": {"x": 2952, "y": 3452, "plane": 0}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Doric north of Falador",
+        "1": "Started - Need: 6 clay, 4 copper ore, 2 iron ore",
+        "2": "Complete - Ores delivered to Doric"
+      },
+      "start_location": {
+        "description": "Doric's house north of Falador",
+        "x": 2952,
+        "y": 3452,
+        "plane": 0
+      },
+      "notes": "Requires 15 Mining. Ores can be mined at Dwarven Mine or Rimmington."
+    },
+    {
+      "id": "witchs-potion",
+      "name": "Witch's Potion",
+      "varp": 0,
+      "varp_name": "none",
+      "difficulty": "Novice",
+      "length": "Short",
+      "members": false,
+      "quest_points": 1,
+      "required_levels": {},
+      "required_items": [
+        {"id": 2136, "name": "raw_bear_meat", "quantity": 1, "obtainable": true},
+        {"id": 223, "name": "red_spiders_eggs", "quantity": 1, "obtainable": true},
+        {"id": 225, "name": "limpwurt_root", "quantity": 1, "obtainable": true},
+        {"id": 1937, "name": "water", "quantity": 1, "obtainable": true}
+      ],
+      "quest_items": [],
+      "xp_rewards": {
+        "magic": 325
+      },
+      "npcs": [
+        {"id": 4619, "name": "hetty", "role": "quest_giver", "location": {"x": 3070, "y": 3253, "plane": 0}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Hetty in Rimmington",
+        "1": "Started - Collect: raw bear meat, red spider eggs, limpwurt root, water",
+        "2": "Complete - All items given to Hetty"
+      },
+      "start_location": {
+        "description": "Hetty's house in Rimmington",
+        "x": 3070,
+        "y": 3253,
+        "plane": 0
+      },
+      "notes": "Items: Raw bear meat (bears), Red spider eggs (Varrock sewers), Limpwurt root (Hobgoblins/Dwarven Mine), Water (any water source)"
+    },
+    {
+      "id": "black-knights-fortress",
+      "name": "Black Knights' Fortress",
+      "varp": 0,
+      "varp_name": "none",
+      "difficulty": "Novice",
+      "length": "Medium",
+      "members": false,
+      "quest_points": 3,
+      "required_levels": {},
+      "required_items": [],
+      "quest_items": [
+        {"id": 1965, "name": "cabbage", "quantity": 1, "obtainable": true, "note": "From Draynor Manor, NOT from Falador"}
+      ],
+      "xp_rewards": {
+        "combat": 2500
+      },
+      "npcs": [
+        {"id": 4771, "name": "sir_amik_varze", "role": "quest_giver", "location": {"x": 2958, "y": 3336, "plane": 2}},
+        {"id": 11642, "name": "joe", "role": "guard", "location": {"x": 3023, "y": 3514, "plane": 0}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Sir Amik Varze in Falador Castle",
+        "1": "Started - Infiltrate Black Knights' Fortress",
+        "2": "Found secret entrance/climbed wall",
+        "3": "Found the witch's cauldron room",
+        "4": "Planted cabbage in cauldron",
+        "5": "Complete - Returned to Sir Amik Varze"
+      },
+      "start_location": {
+        "description": "White Knights' Castle in Falador, 3rd floor",
+        "x": 2958,
+        "y": 3336,
+        "plane": 2
+      },
+      "notes": "Requires bronze medium helm and iron chainbody for disguise. Bring cabbage from Draynor Manor."
+    },
+    {
+      "id": "imp-catcher",
+      "name": "Imp Catcher",
+      "varp": 0,
+      "varp_name": "none",
+      "difficulty": "Novice",
+      "length": "Medium",
+      "members": false,
+      "quest_points": 1,
+      "required_levels": {},
+      "required_items": [],
+      "quest_items": [
+        {"id": 1470, "name": "red_bead", "quantity": 1, "obtainable": true, "source": "Imps drop"},
+        {"id": 1472, "name": "yellow_bead", "quantity": 1, "obtainable": true, "source": "Imps drop"},
+        {"id": 1474, "name": "black_bead", "quantity": 1, "obtainable": true, "source": "Imps drop"},
+        {"id": 1476, "name": "white_bead", "quantity": 1, "obtainable": true, "source": "Imps drop"}
+      ],
+      "xp_rewards": {
+        "magic": 875
+      },
+      "npcs": [
+        {"id": 5005, "name": "wizard_mizgog", "role": "quest_giver", "location": {"x": 3103, "y": 3161, "plane": 2}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Wizard Mizgog on 2nd floor of Wizards' Tower",
+        "1": "Started - Kill imps for 4 colored beads",
+        "2": "Complete - All beads returned to Mizgog"
+      },
+      "start_location": {
+        "description": "Wizards' Tower, 2nd floor",
+        "x": 3103,
+        "y": 3161,
+        "plane": 2
+      },
+      "notes": "Imps drop colored beads. Good spots: Falador south gate, Karamja volcano, Wizards' Tower area."
+    },
+    {
+      "id": "prince-ali-rescue",
+      "name": "Prince Ali Rescue",
+      "varp": 273,
+      "varp_name": "princequest",
+      "difficulty": "Novice",
+      "length": "Medium",
+      "members": false,
+      "quest_points": 3,
+      "required_levels": {},
+      "required_items": [
+        {"id": 1929, "name": "water", "quantity": 1, "obtainable": true},
+        {"id": 1957, "name": "onion", "quantity": 1, "obtainable": true},
+        {"id": 1933, "name": "pot_flour", "quantity": 1, "obtainable": true},
+        {"id": 954, "name": "rope", "quantity": 1, "obtainable": true},
+        {"id": 2349, "name": "bronze_bar", "quantity": 1, "obtainable": true},
+        {"id": 1759, "name": "ball_of_wool", "quantity": 3, "obtainable": true}
+      ],
+      "quest_items": [
+        {"id": 2419, "name": "blondwig", "quantity": 1, "obtainable": true, "note": "Made during quest"},
+        {"id": 2421, "name": "plainwig", "quantity": 1, "obtainable": true, "note": "Made during quest"},
+        {"id": 2424, "name": "skinpaste", "quantity": 1, "obtainable": true, "note": "Made during quest"},
+        {"id": 1013, "name": "pink_skirt", "quantity": 1, "obtainable": true, "note": "For disguise"}
+      ],
+      "xp_rewards": {
+        "gp": 500
+      },
+      "npcs": [
+        {"id": 11580, "name": "prince_ali_vis", "role": "quest_target", "location": {"x": 3114, "y": 3162, "plane": 0}},
+        {"id": 4274, "name": "leela", "role": "quest_helper", "location": {"x": 3067, "y": 3256, "plane": 0}},
+        {"id": 11577, "name": "joe_vis", "role": "guard", "location": {"x": 3123, "y": 3245, "plane": 0}},
+        {"id": 4771, "name": "sir_amik_varze", "role": "quest_giver", "location": {"x": 2958, "y": 3336, "plane": 2}}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Chancellor Hassan in Al Kharid Palace",
+        "1": "Started - Talk to Osman outside the palace",
+        "2": "Talked to Leela in Draynor Village",
+        "3": "Gathered disguise items (wig, skin paste, skirt)",
+        "4": "Got key imprint from Lady Keli",
+        "5": "Got bronze key from Osman",
+        "6": "Rescued Prince Ali",
+        "7": "Complete - Talk to Hassan for reward"
+      },
+      "start_location": {
+        "description": "Al Kharid Palace",
+        "x": 3293,
+        "y": 3163,
+        "plane": 0
+      },
+      "notes": "Complex quest with multiple steps. Need to make wig (3 wool + water), skin paste (flour + water + ashes), get key imprint."
+    },
+    {
+      "id": "romeo-juliet",
+      "name": "Romeo & Juliet",
+      "varp": 144,
+      "varp_name": "rjquest",
+      "difficulty": "Novice",
+      "length": "Medium",
+      "members": false,
+      "quest_points": 5,
+      "required_levels": {},
+      "required_items": [],
+      "quest_items": [
+        {"id": 755, "name": "cadava_potion", "quantity": 1, "obtainable": true, "note": "Made by Apothecary"}
+      ],
+      "xp_rewards": {},
+      "npcs": [
+        {"id": 5037, "name": "romeo", "role": "quest_giver", "location": {"x": 3211, "y": 3426, "plane": 0}},
+        {"id": 5035, "name": "juliet", "role": "quest_target", "location": {"x": 3157, "y": 3425, "plane": 1}},
+        {"id": 5038, "name": "father_lawrence", "role": "quest_helper", "location": {"x": 3254, "y": 3483, "plane": 0}},
+        {"id": 3344, "name": "apothecary", "role": "potion_maker", "location": {"x": 3196, "y": 3403, "plane": 0}},
+        {"id": 3055, "name": "philip", "role": "cutscene", "location": null},
+        {"id": 3056, "name": "draul", "role": "cutscene", "location": null}
+      ],
+      "stages": {
+        "0": "Not started - Talk to Romeo in Varrock square",
+        "1": "Started - Talk to Juliet in her house (west Varrock)",
+        "2": "Talk to Father Lawrence in Varrock church",
+        "3": "Talk to the Apothecary for cadava potion",
+        "4": "Got cadava potion - take to Juliet",
+        "5": "Juliet drank potion - tell Romeo",
+        "100": "Complete - The star-crossed lovers are reunited"
+      },
+      "start_location": {
+        "description": "Varrock Square, near fountain",
+        "x": 3211,
+        "y": 3426,
+        "plane": 0
+      },
+      "notes": "Longest F2P novice quest. Multiple dialogue stages between Romeo, Juliet, Father Lawrence, and Apothecary."
+    }
+  ],
+  "item_references": {
+    "cooks_assistant": {
+      "bucket_milk": 1927,
+      "egg": 1944,
+      "pot_flour": 1933
+    },
+    "sheep_shearer": {
+      "ball_of_wool": 1759
+    },
+    "rune_mysteries": {
+      "air_talisman": 1438,
+      "research_package": 290,
+      "research_notes": 291
+    },
+    "restless_ghost": {
+      "ghostskull": 553,
+      "amulet_of_ghostspeak": 552
+    },
+    "dorics_quest": {
+      "clay": 434,
+      "copper_ore": 436,
+      "iron_ore": 440
+    },
+    "witchs_potion": {
+      "raw_bear_meat": 2136,
+      "red_spiders_eggs": 223,
+      "limpwurt_root": 225
+    },
+    "black_knights_fortress": {
+      "cabbage": 1965
+    },
+    "imp_catcher": {
+      "red_bead": 1470,
+      "yellow_bead": 1472,
+      "black_bead": 1474,
+      "white_bead": 1476
+    },
+    "prince_ali_rescue": {
+      "rope": 954,
+      "bronze_bar": 2349,
+      "pink_skirt": 1013,
+      "blondwig": 2419,
+      "plainwig": 2421,
+      "skinpaste": 2424
+    },
+    "romeo_juliet": {
+      "cadava_potion": 755
+    }
+  },
+  "npc_references": {
+    "cook": 4626,
+    "fred_the_farmer": 732,
+    "doric": 3893,
+    "hetty": 4619,
+    "father_aereck": 2812,
+    "father_urhney": 923,
+    "head_wizard": 5034,
+    "wizard_mizgog": 5005,
+    "aubury": 2886,
+    "romeo": 5037,
+    "juliet": 5035,
+    "father_lawrence": 5038,
+    "sir_amik_varze": 4771,
+    "leela": 4274,
+    "apothecary": 3344
+  },
+  "varp_references": {
+    "cookquest": 29,
+    "sheepherderquest": 60,
+    "doricquest": 31,
+    "rjquest": 144,
+    "princequest": 273
+  }
+}

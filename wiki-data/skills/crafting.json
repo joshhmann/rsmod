@@ -1,0 +1,176 @@
+{
+  "skill": "crafting",
+  "source": "OSRS wiki (rev 228/233, accessed 2026-02)",
+  "activities": {
+    "spinning": {
+      "type": "spinning_wheel",
+      "interactions": [
+        {
+          "name": "Ball of wool",
+          "input_id": 1737,
+          "output_id": 1759,
+          "level_req": 1,
+          "xp": 2.5,
+          "animation": 894
+        }
+      ]
+    },
+    "leather": {
+      "type": "needle_thread",
+      "interactions": [
+        {
+          "name": "Leather gloves",
+          "input_id": 1741,
+          "output_id": 1059,
+          "level_req": 1,
+          "xp": 1.0,
+          "animation": 1249
+        },
+        {
+          "name": "Leather boots",
+          "input_id": 1741,
+          "output_id": 1061,
+          "level_req": 7,
+          "xp": 1.0,
+          "animation": 1249
+        },
+        {
+          "name": "Leather vambraces",
+          "input_id": 1741,
+          "output_id": 1063,
+          "level_req": 11,
+          "xp": 1.0,
+          "animation": 1249
+        },
+        {
+          "name": "Leather chaps",
+          "input_id": 1741,
+          "output_id": 1095,
+          "level_req": 14,
+          "xp": 1.0,
+          "animation": 1249
+        },
+        {
+          "name": "Leather armour",
+          "input_id": 1741,
+          "output_id": 1129,
+          "level_req": 18,
+          "xp": 1.0,
+          "animation": 1249
+        },
+        {
+          "name": "Hardleather body",
+          "input_id": 1743,
+          "output_id": 1131,
+          "level_req": 28,
+          "xp": 1.0,
+          "animation": 1249
+        }
+      ]
+    },
+    "gem_cutting": {
+      "type": "chisel",
+      "interactions": [
+        {
+          "name": "Cut opal",
+          "input_id": 1625,
+          "output_id": 1609,
+          "level_req": 1,
+          "xp": 15.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut jade",
+          "input_id": 1627,
+          "output_id": 1611,
+          "level_req": 13,
+          "xp": 20.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut sapphire",
+          "input_id": 1623,
+          "output_id": 1607,
+          "level_req": 20,
+          "xp": 50.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut emerald",
+          "input_id": 1621,
+          "output_id": 1605,
+          "level_req": 27,
+          "xp": 67.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut ruby",
+          "input_id": 1619,
+          "output_id": 1603,
+          "level_req": 34,
+          "xp": 83.0,
+          "animation": 885
+        },
+        {
+          "name": "Cut diamond",
+          "input_id": 1617,
+          "output_id": 1601,
+          "level_req": 43,
+          "xp": 107.0,
+          "animation": 885
+        }
+      ]
+    },
+    "jewellery": {
+      "type": "furnace",
+      "interactions": [
+        {
+          "name": "Gold ring",
+          "input_id": 2357,
+          "output_id": 1635,
+          "level_req": 5,
+          "xp": 15.0,
+          "animation": 899
+        },
+        {
+          "name": "Gold necklace",
+          "input_id": 2357,
+          "output_id": 1654,
+          "level_req": 6,
+          "xp": 15.0,
+          "animation": 899
+        },
+        {
+          "name": "Gold amulet (unstrung)",
+          "input_id": 2357,
+          "output_id": 1673,
+          "level_req": 8,
+          "xp": 15.0,
+          "animation": 899
+        }
+      ]
+    },
+    "stringing": {
+      "type": "item_on_item",
+      "interactions": [
+        {
+          "name": "String gold amulet",
+          "input_1_id": 1673,
+          "input_2_id": 1734,
+          "output_id": 1692,
+          "level_req": 8,
+          "xp": 4.0,
+          "animation": 1249
+        }
+      ]
+    }
+  },
+  "test_locations": [
+    { "desc": "Lumbridge spinning wheel", "x": 3208, "z": 3213 },
+    { "desc": "Falador spinning wheel", "x": 3012, "z": 3357 },
+    { "desc": "Lumbridge furnace", "x": 3228, "z": 3256 },
+    { "desc": "Al Kharid furnace", "x": 3277, "z": 3185 },
+    { "desc": "Edgeville furnace", "x": 3109, "z": 3496 }
+  ],
+  "notes": "Leather crafting requires needle (1733) and thread (1734) in inventory. Gem cutting requires chisel (1755). Jewellery making uses gold bar (2357) on furnace."
+}

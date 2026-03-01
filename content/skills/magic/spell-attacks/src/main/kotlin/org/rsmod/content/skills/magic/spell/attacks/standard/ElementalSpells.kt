@@ -14,6 +14,7 @@ import org.rsmod.api.spells.attack.SpellAttack
 import org.rsmod.api.spells.attack.SpellAttackManager
 import org.rsmod.api.spells.attack.SpellAttackMap
 import org.rsmod.api.spells.attack.SpellAttackRepository
+import org.rsmod.content.skills.magic.spell.attacks.standard.StandardSpellObjs as spellObjs
 import org.rsmod.game.entity.Npc
 import org.rsmod.game.entity.PathingEntity
 import org.rsmod.game.entity.Player
@@ -22,7 +23,6 @@ import org.rsmod.game.type.obj.UnpackedObjType
 import org.rsmod.game.type.seq.SeqType
 import org.rsmod.game.type.spot.SpotanimType
 import org.rsmod.game.type.synth.SynthType
-import org.rsmod.content.skills.magic.spell.attacks.standard.StandardSpellObjs as spellObjs
 
 class ElementalSpells @Inject constructor(private val objTypes: ObjTypeList) : SpellAttackMap {
     override fun SpellAttackRepository.register(manager: SpellAttackManager) {
