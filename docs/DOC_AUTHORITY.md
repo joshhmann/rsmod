@@ -9,7 +9,7 @@ Revision source anchor: OpenRS2 `runescape/2293` (build major `233`, built `2025
 
 1. `agent-tasks` registry (task status, ownership, blockers)
 2. `README.md` (definitive operational playbook)
-3. `AGENTS.md` (ownership tables, blockers, role scopes, DoD)
+3. `docs/AGENTS.md` (ownership tables, blockers, role scopes, DoD)
 4. `docs/NEXT_STEPS.md` (active sequencing)
 5. `docs/CONTENT_AUDIT.md` (feature status)
 6. `docs/MASTER_ROADMAP.md` (long-horizon scope only)
@@ -18,7 +18,9 @@ Revision source anchor: OpenRS2 `runescape/2293` (build major `233`, built `2025
 
 ### All Agents
 - `README.md`
-- `AGENTS.md`
+- `docs/AGENTS.md` (canonical)
+- `AGENTS.md` (shim that points to canonical)
+- `docs/COORDINATOR_SOP.md` (required for coordinators/delegators)
 - `docs/DOC_AUTHORITY.md` (this file)
 - `docs/NEXT_STEPS.md`
 - `docs/CONTENT_AUDIT.md`
@@ -98,7 +100,7 @@ These files are one-off research, outdated analysis, or superseded content. They
 
 | File | Reason |
 |------|--------|
-| `AGENTS.md` (in docs/) | Stale copy — authoritative version is at project root `AGENTS.md` |
+| `AGENTS.md` (project root) | Shim only — canonical policy lives at `docs/AGENTS.md` |
 | `AGENTBRIDGE_IRONMAN.md` | One-off research |
 | `AGENTBRIDGE_PORCELAIN.md` | One-off research |
 | `BULK_SCRAPER_GUIDE.md` | Tool-specific guide, not execution |
@@ -146,4 +148,3 @@ These files are one-off research, outdated analysis, or superseded content. They
 | `WHAT_YOU_CAN_BUILD.md` | Superseded by CONTENT_AUDIT + MASTER_ROADMAP |
 | `WIKI_SCRAPER_REV233_GUIDE.md` | Tool-specific guide |
 | `agent-pings.md` | Operational log — low reference value |
-

@@ -1,0 +1,48 @@
+name: PR Completion Metadata Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  completion-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate required PR completion metadata headings
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          import sys
+
+          body = os.environ.get('PR_BODY') or ''
+
+          required_headings = [
+              'Task ID',
+              'Allowed Paths Used',
+              'Forbidden Paths Used',
+              'Validation Commands Run',
+              'Evidence Artifacts',
+              'Blocker Info (if partial)',
+          ]
+
+          missing = []
+          for heading in required_headings:
+              pattern = rf'^###\s+{re.escape(heading)}\s*$'
+              if not re.search(pattern, body, re.IGNORECASE | re.MULTILINE):
+                  missing.append(heading)
+
+          if missing:
+              print('Missing required PR completion metadata heading(s):')
+              for heading in missing:
+                  print(f'- {heading}')
+              sys.exit(1)
+
+          print('All required PR completion metadata headings are present.')
+          PY
