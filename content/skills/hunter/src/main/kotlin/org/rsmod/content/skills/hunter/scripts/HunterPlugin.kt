@@ -83,6 +83,12 @@ internal object HunterNpcs : NpcReferences() {
     val hunting_leopard = find("hunting_leopard")
     val hunting_jaguar = find("hunting_jaguar")
     val hunting_snow_tiger = find("hunting_snow_tiger")
+
+    // Phase 9 — Falconry
+    val speedy_kebbit = find("huntingbeast_speedy")
+    val silent_kebbit = find("huntingbeast_silent")
+    val speedy2_kebbit = find("huntingbeast_speedy2")
+    val falconer = find("hunting_npc_falconer")
 }
 
 // ---------------------------------------------------------------------------
@@ -171,6 +177,15 @@ internal object HunterObjs : ObjReferences() {
     val leopard_fur_perfect = find("hunting_fur_leopard_perfect")
     val tiger_fur_shabby = find("hunting_fur_tiger_shabby")
     val tiger_fur_perfect = find("hunting_fur_tiger_perfect")
+
+    // Phase 9 — Falconry items
+    val falcon_gloves = find("falcon_gloves")
+    val falcon_on_gloves = find("falcon_on_gloves")
+    val speedy_fur = find("huntingbeast_speedy_fur")
+    val speedy2_fur = find("huntingbeast_speedy2_fur")
+    val silent_fur = find("huntingbeast_silent_fur")
+    val speedy2_meat = find("huntingbeast_speedy2_meat")
+    val wild_meat = find("huntingbeast_wild_meat")
 }
 
 // ---------------------------------------------------------------------------
@@ -247,6 +262,11 @@ constructor(
         onOpNpc1(HunterNpcs.hunting_leopard) { catchBigCat(it.npc, BIG_CATS[0]) }
         onOpNpc1(HunterNpcs.hunting_jaguar) { catchBigCat(it.npc, BIG_CATS[1]) }
         onOpNpc1(HunterNpcs.hunting_snow_tiger) { catchBigCat(it.npc, BIG_CATS[2]) }
+
+        // Phase 9 — Falconry
+        onOpNpc1(HunterNpcs.speedy_kebbit) { catchFalconry(it.npc, FALCONRIES[0]) }
+        onOpNpc1(HunterNpcs.silent_kebbit) { catchFalconry(it.npc, FALCONRIES[1]) }
+        onOpNpc1(HunterNpcs.speedy2_kebbit) { catchFalconry(it.npc, FALCONRIES[2]) }
     }
 
     // -----------------------------------------------------------------------
@@ -561,6 +581,45 @@ constructor(
     }
 
     // -----------------------------------------------------------------------
+    // Falconry
+    // -----------------------------------------------------------------------
+    private suspend fun ProtectedAccess.catchFalconry(npc: Npc, def: FalconryDef) {
+        if (player.hunterLvl < def.levelReq) {
+            mes("You need a Hunter level of " + def.levelReq + " to hunt this.")
+            return
+        }
+        if (!inv.contains(HunterObjs.falcon_gloves)) {
+            mes("You need a falcon to hunt this kebbit.")
+            return
+        }
+        if (inv.isFull()) {
+            mes("Your inventory is too full.")
+            return
+        }
+
+        anim(HunterSeqs.net_swing)
+
+        val levelDiff = player.hunterLvl - def.levelReq
+        val successChance = (25 + levelDiff * 3).coerceIn(5, 95)
+        val roll = Random.nextInt(100)
+
+        if (roll >= successChance) {
+            spam("The " + def.name + " evades your falcon!")
+            return
+        }
+
+        val xp = def.xp * xpMods.get(player, stats.hunter)
+        spam("Your falcon catches " + articleFor(def.name) + " " + def.name + "!")
+        statAdvance(stats.hunter, xp)
+
+        // Fur (always) + chance of meat
+        invAddOrDrop(objRepo, def.furObj, count = 1)
+        if (def.meatObj != null && Random.nextInt(100) < 40) {
+            invAddOrDrop(objRepo, def.meatObj, count = 1)
+        }
+    }
+
+    // -----------------------------------------------------------------------
     // Data
     // -----------------------------------------------------------------------
     private data class ButterflyDef(
@@ -620,6 +679,14 @@ constructor(
         val xp: Double,
         val shabbyFur: ObjType,
         val perfectFur: ObjType,
+        val name: String,
+    )
+
+    private data class FalconryDef(
+        val levelReq: Int,
+        val xp: Double,
+        val furObj: ObjType,
+        val meatObj: ObjType?,
         val name: String,
     )
 
@@ -688,6 +755,13 @@ constructor(
             BigCatDef(61, 280.0, HunterObjs.leopard_fur_shabby, HunterObjs.leopard_fur_perfect, "leopard"),
             BigCatDef(63, 290.0, HunterObjs.jaguar_fur_shabby, HunterObjs.jaguar_fur_perfect, "jaguar"),
             BigCatDef(71, 335.0, HunterObjs.tiger_fur_shabby, HunterObjs.tiger_fur_perfect, "snow tiger"),
+        )
+
+        // Phase 9 — Falconry (levels 55-79)
+        private val FALCONRIES = listOf(
+            FalconryDef(55, 244.0, HunterObjs.speedy_fur, null, "dashing kebbit"),
+            FalconryDef(65, 300.0, HunterObjs.silent_fur, HunterObjs.wild_meat, "dark kebbit"),
+            FalconryDef(79, 400.0, HunterObjs.speedy2_fur, HunterObjs.speedy2_meat, "dashing kebbit (elite)"),
         )
     }
 }

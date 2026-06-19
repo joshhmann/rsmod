@@ -1,0 +1,261 @@
+# =============================================================================
+# Hunter Creature Spawns
+# All NPCs verified in rev 233 cache.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Woodland Birds (lvl 11) — South Lumbridge forest
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_bird_woodland'
+coords = '0_49_49_30_15'
+
+[[spawn]]
+npc = 'hunting_bird_woodland'
+coords = '0_49_49_35_20'
+
+[[spawn]]
+npc = 'hunting_bird_woodland'
+coords = '0_49_49_40_18'
+
+[[spawn]]
+npc = 'hunting_bird_woodland'
+coords = '0_49_49_45_22'
+
+# ---------------------------------------------------------------------------
+# Desert Birds (lvl 19) — Al Kharid desert
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_bird_desert'
+coords = '0_51_48_20_30'
+
+[[spawn]]
+npc = 'hunting_bird_desert'
+coords = '0_51_48_25_25'
+
+[[spawn]]
+npc = 'hunting_bird_desert'
+coords = '0_51_48_30_35'
+
+[[spawn]]
+npc = 'hunting_bird_desert'
+coords = '0_51_48_35_28'
+
+# ---------------------------------------------------------------------------
+# Polar Birds (lvl 29) — Ice Mountain area
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_bird_polar'
+coords = '0_50_47_20_30'
+
+[[spawn]]
+npc = 'hunting_bird_polar'
+coords = '0_50_47_25_35'
+
+[[spawn]]
+npc = 'hunting_bird_polar'
+coords = '0_50_47_30_25'
+
+[[spawn]]
+npc = 'hunting_bird_polar'
+coords = '0_50_47_35_40'
+
+# ---------------------------------------------------------------------------
+# Jungle Birds (lvl 39) — Karamja area
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_bird_jungle'
+coords = '0_56_50_20_30'
+
+[[spawn]]
+npc = 'hunting_bird_jungle'
+coords = '0_56_50_25_35'
+
+[[spawn]]
+npc = 'hunting_bird_jungle'
+coords = '0_56_50_30_25'
+
+# ---------------------------------------------------------------------------
+# Spiky Kebbits (lvl 23) — Forest west of Lumbridge
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'huntingbeast_spiky'
+coords = '0_49_49_20_30'
+
+[[spawn]]
+npc = 'huntingbeast_spiky'
+coords = '0_49_49_25_35'
+
+[[spawn]]
+npc = 'huntingbeast_spiky'
+coords = '0_49_49_30_40'
+
+[[spawn]]
+npc = 'huntingbeast_spiky'
+coords = '0_49_49_35_25'
+
+# ---------------------------------------------------------------------------
+# Sabre-toothed Kebbits (lvl 33) — Ice Mountain foothills
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'huntingbeast_sabreteeth'
+coords = '0_50_47_15_35'
+
+[[spawn]]
+npc = 'huntingbeast_sabreteeth'
+coords = '0_50_47_20_40'
+
+[[spawn]]
+npc = 'huntingbeast_sabreteeth'
+coords = '0_50_47_25_30'
+
+[[spawn]]
+npc = 'huntingbeast_sabreteeth'
+coords = '0_50_47_30_45'
+
+# ---------------------------------------------------------------------------
+# Barb-tailed Kebbits (lvl 43) — Desert border
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'huntingbeast_barbedtail'
+coords = '0_51_48_15_35'
+
+[[spawn]]
+npc = 'huntingbeast_barbedtail'
+coords = '0_51_48_20_40'
+
+[[spawn]]
+npc = 'huntingbeast_barbedtail'
+coords = '0_51_48_25_30'
+
+[[spawn]]
+npc = 'huntingbeast_barbedtail'
+coords = '0_51_48_30_45'
+
+# ---------------------------------------------------------------------------
+# Claw Kebbits (lvl 53) — Jungle areas
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'huntingbeast_claws'
+coords = '0_56_50_25_25'
+
+[[spawn]]
+npc = 'huntingbeast_claws'
+coords = '0_56_50_30_30'
+
+[[spawn]]
+npc = 'huntingbeast_claws'
+coords = '0_56_50_35_20'
+
+# ---------------------------------------------------------------------------
+# Leopards (lvl 61) — Karamja jungles
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_leopard'
+coords = '0_56_50_30_35'
+
+[[spawn]]
+npc = 'hunting_leopard'
+coords = '0_56_50_35_30'
+
+[[spawn]]
+npc = 'hunting_leopard'
+coords = '0_56_50_40_25'
+
+# ---------------------------------------------------------------------------
+# Jaguars (lvl 63) — Jungle / tropical
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_jaguar'
+coords = '0_56_50_28_32'
+
+[[spawn]]
+npc = 'hunting_jaguar'
+coords = '0_56_50_33_38'
+
+[[spawn]]
+npc = 'hunting_jaguar'
+coords = '0_56_50_38_28'
+
+# ---------------------------------------------------------------------------
+# Snow Tigers (lvl 71) — Ice Mountain / White Wolf
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_snow_tiger'
+coords = '0_50_47_18_38'
+
+[[spawn]]
+npc = 'hunting_snow_tiger'
+coords = '0_50_47_22_42'
+
+[[spawn]]
+npc = 'hunting_snow_tiger'
+coords = '0_50_47_28_32'
+
+# ---------------------------------------------------------------------------
+# Ferrets (lvl 27) — Near Lumbridge fields
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_ferret'
+coords = '0_49_49_35_50'
+
+[[spawn]]
+npc = 'hunting_ferret'
+coords = '0_49_49_40_55'
+
+[[spawn]]
+npc = 'hunting_ferret'
+coords = '0_49_49_45_48'
+
+# ---------------------------------------------------------------------------
+# Falconer NPC — Yanille area
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'hunting_npc_falconer'
+coords = '0_56_52_30_25'
+direction = 'south'
+
+# ---------------------------------------------------------------------------
+# Dashing Kebbits / Falconry (lvl 55) — Falconry meadow
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'huntingbeast_speedy'
+coords = '0_56_52_25_30'
+
+[[spawn]]
+npc = 'huntingbeast_speedy'
+coords = '0_56_52_30_30'
+
+[[spawn]]
+npc = 'huntingbeast_speedy'
+coords = '0_56_52_35_35'
+
+# ---------------------------------------------------------------------------
+# Dark Kebbits (lvl 65) — Deeper falconry area
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'huntingbeast_silent'
+coords = '0_56_52_25_20'
+
+[[spawn]]
+npc = 'huntingbeast_silent'
+coords = '0_56_52_30_20'
+
+[[spawn]]
+npc = 'huntingbeast_silent'
+coords = '0_56_52_35_25'
+
+# ---------------------------------------------------------------------------
+# Elite Dashing Kebbits (lvl 79) — Advanced falconry
+# ---------------------------------------------------------------------------
+[[spawn]]
+npc = 'huntingbeast_speedy2'
+coords = '0_56_52_40_30'
+
+[[spawn]]
+npc = 'huntingbeast_speedy2'
+coords = '0_56_52_45_35'
+
+[[spawn]]
+npc = 'huntingbeast_speedy2'
+coords = '0_56_52_40_40'
