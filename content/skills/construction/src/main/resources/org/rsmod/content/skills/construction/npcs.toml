@@ -1,0 +1,11 @@
+# Construction NPC Spawns
+
+[[spawn]]
+npc = 'poh_estate_agent'
+coords = '0_48_52_15_20'
+direction = 'south'
+
+[[spawn]]
+npc = 'poh_sawmill_opp'
+coords = '0_48_52_20_20'
+direction = 'south'
