@@ -14,4 +14,5 @@ object LumbridgeLocs : LocReferences() {
     val kitchen_trapdoor_closed = find("trapdoor")
     val kitchen_trapdoor_open = find("trapdoor_open")
     val cellar_ladder = find("ladder")
+    val castle_front_door = find("hundred_lumbridge_door")
 }

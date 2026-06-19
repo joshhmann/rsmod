@@ -25,6 +25,8 @@ constructor(private val locRepo: LocRepository, private val objRepo: ObjReposito
         onOpLoc1(lumbridge_locs.kitchen_trapdoor_closed) { openTrapdoor(it.loc) }
         onOpLoc1(lumbridge_locs.kitchen_trapdoor_open) { climbDownTrapdoor() }
         onOpLoc1(lumbridge_locs.cellar_ladder) { climbUpLadder() }
+
+        onOpLoc1(lumbridge_locs.castle_front_door) { openCastleFrontDoor(it.loc) }
     }
 
     private fun ProtectedAccess.openTrapdoor(loc: BoundLocInfo) {
@@ -41,6 +43,12 @@ constructor(private val locRepo: LocRepository, private val objRepo: ObjReposito
     private fun ProtectedAccess.climbUpLadder() {
         teleport(CoordGrid(3209, 3214, 0))
         mes("You climb up the ladder.")
+    }
+
+    private fun ProtectedAccess.openCastleFrontDoor(loc: BoundLocInfo) {
+        locRepo.del(loc, 500)
+        soundSynth(synths.door_open)
+        mes("You open the door.")
     }
 
     private fun ProtectedAccess.operateWinch() {
