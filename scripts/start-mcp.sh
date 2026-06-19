@@ -15,7 +15,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
 MCP_DIR="$PROJECT_ROOT/mcp"
 
 if ! command -v bun &>/dev/null; then

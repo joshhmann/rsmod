@@ -8,7 +8,7 @@
 setlocal
 
 set "SCRIPT_DIR=%~dp0"
-for %%A in ("%SCRIPT_DIR%..") do set "PROJECT_ROOT=%%~fA\"
+for %%A in ("%SCRIPT_DIR%..\..") do set "PROJECT_ROOT=%%~fA\"
 set "PWSH=C:\Program Files\PowerShell\7\pwsh.exe"
 
 :: Force a full reset for now to ensure stale client caches are cleared after cache/symbol overhaul.

@@ -17,7 +17,7 @@
 setlocal
 
 set "SCRIPT_DIR=%~dp0"
-for %%A in ("%SCRIPT_DIR%..") do set "PROJECT_ROOT=%%~fA\"
+for %%A in ("%SCRIPT_DIR%..\..") do set "PROJECT_ROOT=%%~fA\"
 set "MCP_DIR=%PROJECT_ROOT%mcp"
 
 :: Check bun is installed

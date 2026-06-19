@@ -16,6 +16,12 @@ public abstract class HashTypeReferences<T>(type: Class<T>) : TypeReferences<T, 
      */
     protected abstract fun find(internal: String, hash: Long? = null): T
 
+    protected fun findOrNull(internal: String, hash: Long? = null): T? {
+        // Implementation detail: Most 'find' implementations just create a Hashed*Type
+        // which will be resolved later. We can do the same here.
+        return find(internal, hash)
+    }
+
     /**
      * Verifies that the "identity hash" of the type associated with [internal] matches the expected
      * [hash]. Unlike [find], this function does not return the type itself but ensures that its

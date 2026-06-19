@@ -22,6 +22,7 @@ class TypeBuilderLoader @Inject constructor(@PluginGraph private val scanner: Cl
                     error("TypeBuilder subclasses must not be marked as private: ${clazz.name}")
                 }
                 val instance = clazz.kotlin.objectInstance ?: continue
+                println("Discovered TypeBuilder: ${clazz.name}")
                 builders += instance
             }
         }

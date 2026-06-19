@@ -13,16 +13,27 @@ the sym file entry exactly.
 - `NameIdOverlap` is checked **per-file** — same ID can appear in main + local under different names
 - Both directories are loaded by `SymbolModule.kt` via `shallowSymbolDirectories()`
 
+## Canonical Workflow
+
+Read `docs/REV233_SYMBOL_WORKFLOW.md` before adding or changing symbols, refs, cache enrichers,
+wiki-data IDs, generated drop tables, or content that depends on NPC/object/location IDs.
+
+Hard rule: content adapts to rev 233 symbols. Do not rename symbols to make content fit.
+
 ## Adding New Content Items
 
-If your `find("wiki_name")` isn't in the main sym:
+If your `find("wiki_name")` is not in the main sym:
 
-1. Find the item's OSRS cache ID (check main sym by searching for partial matches, or use Kronos data)
-2. Add an alias to `.data/symbols/.local/obj.sym`:
-   ```
-   <id>	<your_modern_name>
-   ```
-3. No code changes needed — both names resolve to the same cache ID
+1. Search the relevant base sym file for the canonical cache name.
+2. Update Kotlin/TOML/wiki-data to use that canonical name.
+3. If a compatibility name is needed, add a Kotlin getter alias only; do not add a `.local/*.sym`
+   alias for an existing base cache ID.
+4. Add `.local/*.sym` entries only for genuinely server-only/generated types with no base cache
+   identity.
+5. Run the validation order in `docs/REV233_SYMBOL_WORKFLOW.md`.
+
+Do not use `.local` as a vocabulary layer for wiki names. That is how later agents accidentally
+revert IDs, introduce `NameIdOverlap`, or make `packCache` fail with `internalId=-1`.
 
 ## Common Name Mappings (obj.sym)
 
@@ -100,6 +111,43 @@ If your `find("wiki_name")` isn't in the main sym:
 | blood_rune            | bloodrune              | 565      |
 | hp_orb_toxin          | hp_orb_toxin           | 102      |
 
+## Common NPC Name Quirks (npc.sym)
+
+NPC names are often role/location variants, not wiki display names. Do not assume `guard`,
+`banker`, or `shop_keeper` exists just because the wiki or in-game right-click text says so.
+
+| Wiki/display name | Rev 233 sym candidates | Notes |
+|-------------------|------------------------|-------|
+| Banker | `banker1`, `banker2`, `banker1_west`, `banker1_east`, `banker1_new`, `banker2_new` | Pick by spawn/location context. Do not create a generic `banker` alias. |
+| Al Kharid banker | `kharidbanker1`, `kharidbanker2` | Use area-specific symbols where present. |
+| Falador banker | `falador_banker` | Area-specific banker symbol. |
+| Guard | `fai_varrock_guard`, `fai_falador_guard1`..`fai_falador_guard6`, many quest/area variants | Search by area first; generic wiki "Guard" is not enough. |
+| Man | `man` | Verify combat/dialogue variant before using for spawns. |
+| Woman | `woman` | Verify combat/dialogue variant before using for spawns. |
+| Cook | `cook` | Used for Cook's Assistant/Lumbridge context. |
+| Father Aereck | `father_aereck` | Quest NPC symbol. |
+| Aubury | `aubury` | Varrock/Rune Mysteries context. |
+| Reldo | `reldo` | Varrock Palace library. |
+| Shop keeper | Search `shop`, `keeper`, and area name | Historical duplicate issue: do not map a generic `shop_keeper` to an area-specific NPC ID. |
+
+## Common Loc Name Quirks (loc.sym)
+
+Location/object names are even more collision-prone than item names. Many doors, trees, ranges,
+and gates are specialized variants.
+
+| Wiki/display name | Rev 233 sym candidates | Notes |
+|-------------------|------------------------|-------|
+| Tree | `tree`, `tree2`, `tree3`, `lighttree`, `lighttree2` | Use content groups or exact map loc data when available. |
+| Oak tree | Search `oak` and verify map loc/context | Do not invent `oak_tree` if absent. |
+| Willow/Yew/Magic tree | Search the exact tree family and verify map loc/context | Woodcutting content often uses content groups instead of one loc ref. |
+| Dead tree | `deadtree1`, `deadtree2`, `deadtree3`, `deadtree4`, `deadtree6`, stump variants | Pick the exact loc from map data. |
+| Furnace | `furnace`, plus quest/minigame variants such as `plaguesheep_furnace` | Use `furnace` only when the map loc actually resolves to that symbol. |
+| Range | `range`, plus quest-specific variants such as `cooksquestrange` | Cooking interactions must account for generic and special ranges separately. |
+| Anvil | `anvil` | Verify exact loc for area placement. |
+| Bank door | `bankdoor_r`, `bankdoor_l`, `openbankdoor_r`, `openbankdoor_l` | Door state/direction matters. |
+| Generic door | Many variants: `castledoor`, `thickpoordoor`, `archeddoorclosed`, etc. | Prefer existing door systems/content groups over new one-off refs. |
+| Gate | Many variants: `gnome_gate`, `fishinggateclosedl`, `fishinggateclosedr`, etc. | Left/right/open/closed variants matter. |
+
 ## Symbol Hygiene Workflow
 
 To fix "invalid symbol reference" errors reported by `validateSymbols` while maintaining project stability:
@@ -115,6 +163,7 @@ To fix "invalid symbol reference" errors reported by `validateSymbols` while mai
 5.  **Verify**:
     - Run `./gradlew validateSymbols` to confirm the error is gone for your module.
     - Run module-specific compilation (e.g., `./gradlew :content:skills:herblore:compileKotlin`).
+    - For symbol/cache/global changes, run `./gradlew packCache --console=plain` before boot/testing.
 
 ## Custom Server-Side Varps
 

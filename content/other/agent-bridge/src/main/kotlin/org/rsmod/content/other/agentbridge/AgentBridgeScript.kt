@@ -41,6 +41,7 @@ import org.rsmod.game.type.hunt.HuntVis
 import org.rsmod.game.type.loc.LocTypeList
 import org.rsmod.game.type.obj.ObjTypeList
 import org.rsmod.map.CoordGrid
+import org.rsmod.content.other.agentbridge.PlayerBotService
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
 
@@ -73,6 +74,7 @@ constructor(
     private val groundItemPorcelain: GroundItemPorcelain,
     private val prayerPorcelain: PrayerPorcelain,
     private val ironmanMode: IronmanMode,
+    private val playerBotService: PlayerBotService,
 ) : PluginScript() {
 
     /** Per-player state tracking for event detection. */
@@ -1631,15 +1633,34 @@ constructor(
                     )
                 }
 
-                is BotAction.SetCombatStyle -> {
-                    val result = botPorcelain.setCombatStyle(player, action.style)
+                is BotAction.SpawnBot -> {
+                    val a = action as BotAction.SpawnBot
+                    val bot = playerBotService.spawnBot(a.name, a.x, a.z)
                     ActionResult(
-                        result.success,
-                        result.message,
+                        bot != null,
+                        if (bot != null) "Spawned bot" else "Failed to spawn bot (no slots)",
                         xpBefore,
-                        captureXpSnapshot(player),
+                        xpBefore,
                     )
                 }
+
+                is BotAction.DespawnBot -> {
+                    val a = action as BotAction.DespawnBot
+                    val removed = playerBotService.despawnBot(a.name)
+                    ActionResult(
+                        removed,
+                        if (removed) "Despawned bot" else "Bot not found",
+                        xpBefore,
+                        xpBefore,
+                    )
+                }
+
+                is BotAction.ListBots -> {
+                    val count = playerBotService.botCount()
+                    ActionResult(true, "Active bots", xpBefore, xpBefore)
+                }
+
+                else -> ActionResult(false, "Unknown action", xpBefore, xpBefore)
             }
 
         return result.copy(xpAfter = captureXpSnapshot(player))

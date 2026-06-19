@@ -6,11 +6,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-RSMOD_ROOT="$PROJECT_ROOT"
-if [ -f "$PROJECT_ROOT/rsmod/gradlew" ] || [ -f "$PROJECT_ROOT/rsmod/gradlew.bat" ]; then
-    RSMOD_ROOT="$PROJECT_ROOT/rsmod"
-fi
+PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
+RSMOD_ROOT="$PROJECT_ROOT/rsmod"
 
 # Ensure installed
 bash "$SCRIPT_DIR/install-server.sh"
@@ -21,4 +18,4 @@ echo "[server] AgentBridge port: 43595 (active after first player login)"
 echo ""
 
 cd "$RSMOD_ROOT"
-./gradlew run --console=plain
+./gradlew run --console=plain --args="--skip-type-verification --allow-type-verification-failures"

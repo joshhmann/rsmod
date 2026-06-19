@@ -286,4 +286,19 @@ sealed class BotAction {
         DEFENSE, // Defense prayers
         PROTECTION, // Protection prayers (magic/ranged/melee)
     }
+    // ===== BOT MANAGEMENT ACTIONS =====
+
+    /** Spawn a new headless bot player into the world. */
+    data class SpawnBot(
+        val name: String,
+        val x: Int = 3222,
+        val z: Int = 3222,
+    ) : BotAction()
+
+    /** Despawn a bot player from the world. */
+    data class DespawnBot(val name: String) : BotAction()
+
+    /** List all active bot players. */
+    data object ListBots : BotAction()
+
 }

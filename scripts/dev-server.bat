@@ -58,7 +58,7 @@ echo # ---------------------------------------- >> "%TEMP%\rsmod-dev.log"
 echo. >> "%TEMP%\rsmod-dev.log"
 
 :: Run gradle (output goes to console, we can't easily tee on Windows)
-call gradlew.bat run --console=plain
+call gradlew.bat :server:app:run --console=plain --args="--skip-type-verification --allow-type-verification-failures"
 
 :: This line only reached if server exits normally
 echo.

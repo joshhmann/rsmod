@@ -6,6 +6,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 import kotlin.io.path.PathWalkOption
 import kotlin.io.path.isDirectory
+import kotlin.io.path.isRegularFile
 import kotlin.io.path.name
 import kotlin.io.path.nameWithoutExtension
 import kotlin.io.path.relativeTo
@@ -71,6 +72,7 @@ private class NameMappingProvider : Provider<NameMapping> {
         val varnbits = dirs.readSymbols("varnbit")
         val varps = dirs.readSymbols("varp")
         val walkTriggers = dirs.readSymbols("walktrigger")
+        logger.info { "Loaded NameMapping: enums=${enums.size}, dbRows=${dbRows.size}, dbTables=${dbTables.size}, objs=${objs.size}" }
         return NameMapping(
             areas = areas,
             categories = categories,
@@ -153,8 +155,12 @@ private class NameMappingProvider : Provider<NameMapping> {
         directory: String,
         fileName: String,
     ): Map<String, Int> {
-        val file = find(directory, fileName) ?: return emptyMap()
-        return NameLoader.read(file)
+        val merged = mutableMapOf<String, Int>()
+        val files = find(directory, fileName)
+        for (file in files) {
+            merged += NameLoader.read(file)
+        }
+        return merged
     }
 
     private fun ShallowDirectoryMap.readComps(
@@ -162,8 +168,12 @@ private class NameMappingProvider : Provider<NameMapping> {
         fileName: String,
         interfaces: Map<String, Int>,
     ): Map<String, Int> {
-        val file = find(directory, fileName) ?: return emptyMap()
-        return NameLoader.readComponents(file, interfaces)
+        val merged = mutableMapOf<String, Int>()
+        val files = find(directory, fileName)
+        for (file in files) {
+            merged += NameLoader.readComponents(file, interfaces)
+        }
+        return merged
     }
 
     private fun ShallowDirectoryMap.readDbColumns(
@@ -171,8 +181,12 @@ private class NameMappingProvider : Provider<NameMapping> {
         fileName: String,
         interfaces: Map<String, Int>,
     ): Map<String, Int> {
-        val file = find(directory, fileName) ?: return emptyMap()
-        return NameLoader.readDbColumns(file, interfaces)
+        val merged = mutableMapOf<String, Int>()
+        val files = find(directory, fileName)
+        for (file in files) {
+            merged += NameLoader.readDbColumns(file, interfaces)
+        }
+        return merged
     }
 
     private companion object {
@@ -187,17 +201,18 @@ private fun shallowSymbolDirectories(): List<ShallowDirectoryMap> {
 }
 
 private fun Path.shallowDirectoryMap(): ShallowDirectoryMap {
-    val map =
-        walk(PathWalkOption.INCLUDE_DIRECTORIES)
-            .filter { it.isDirectory() }
-            .associate { it.relativeTo(this).name to it.listFiles() }
+    if (!isDirectory()) return ShallowDirectoryMap(emptyMap())
+    val map = mutableMapOf<String, MutableList<Path>>()
+    walk().filter { it.isRegularFile() && it.toString().endsWith(".sym") }.forEach { path ->
+        val name = path.nameWithoutExtension
+        map.computeIfAbsent(name) { mutableListOf() }.add(path)
+    }
     return ShallowDirectoryMap(map)
 }
 
 private fun Path.listFiles(): List<Path> = Files.list(this).filter(Files::isRegularFile).toList()
 
-private data class ShallowDirectoryMap(private val directories: Map<String, List<Path>>) :
-    Map<String, List<Path>> by directories {
-    fun find(parent: String, fileName: String): Path? =
-        this[parent]?.firstOrNull { fileName == it.nameWithoutExtension }
+private data class ShallowDirectoryMap(private val files: Map<String, List<Path>>) :
+    Map<String, List<Path>> by files {
+    fun find(parent: String, fileName: String): List<Path> = this[fileName] ?: emptyList()
 }

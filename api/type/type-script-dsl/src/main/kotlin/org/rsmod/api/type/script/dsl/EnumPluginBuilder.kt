@@ -33,6 +33,12 @@ public class AutoIntEnumPluginBuilder<V : Any>(
         backing.vals[currKey++] = value
     }
 
+    public fun addSafe(value: V?) {
+        if (value != null) {
+            this += value
+        }
+    }
+
     @EnumBuildersDsl
     public inner class ListBuilder {
         private fun add(value: V?) {
@@ -89,6 +95,12 @@ public class EnumPluginBuilder<K : Any, V : Any>(
 
     public operator fun set(key: K, value: V?) {
         vals[key] = value
+    }
+
+    public fun putSafe(key: K?, value: V?) {
+        if (key != null && value != null) {
+            this[key] = value
+        }
     }
 
     private fun Map<K, V?>.toPrimitiveMap(

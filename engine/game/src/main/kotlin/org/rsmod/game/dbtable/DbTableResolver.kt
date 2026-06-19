@@ -16,9 +16,13 @@ public class DbTableResolver(private val cacheTypes: TypeListMap) {
     private val tables: DbTableTypeList by cacheTypes::dbTables
 
     public operator fun get(table: DbTableType): List<DbRow> {
-        val table = tables[table]
-        val rowList = tableRows[table.id] ?: return emptyList()
-        return rowList.map { DbRow(cacheTypes, table, rows.getValue(it)) }
+        val unpacked = tables.getOrNull(table)
+        if (unpacked == null) {
+            System.err.println("WARNING: DbTable missing in map: $table. Returning empty list.")
+            return emptyList()
+        }
+        val rowList = tableRows[unpacked.id] ?: return emptyList()
+        return rowList.map { DbRow(cacheTypes, unpacked, rows.getValue(it)) }
     }
 
     private fun associateTableRows(): Int2ObjectMap<IntSet> {

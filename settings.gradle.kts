@@ -6,7 +6,7 @@ rootProject.name = "rsmod"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
 @Suppress("UnstableApiUsage")
@@ -25,13 +25,15 @@ include(
     "api",
     "content",
     "engine",
-    "server"
+    "server",
+    "tools"
 )
 
 includeProjects(project(":api"))
 includeProjects(project(":content"))
 includeProjects(project(":engine"))
 includeProjects(project(":server"))
+includeProjects(project(":tools"))
 
 fun includeProjects(pluginProject: ProjectDescriptor) {
     val projectPath = pluginProject.projectDir.toPath()

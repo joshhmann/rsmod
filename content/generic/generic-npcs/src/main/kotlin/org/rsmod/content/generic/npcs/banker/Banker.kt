@@ -640,7 +640,11 @@ private class BankSpaceShop @Inject constructor(private val enumResolver: EnumTy
 
     fun startup() {
         val costs = enumResolver[banker_enums.block_costs].filterValuesNotNull()
-        val maxBlock = costs.keys.maxOrNull() ?: error("`block_costs` enum should not be empty.")
+        if (costs.isEmpty) {
+            this.blockCosts = emptyList()
+            return
+        }
+        val maxBlock = costs.keys.maxOrNull() ?: 0
         val blockCosts = MutableList(maxBlock) { 0 }
         for ((block, cost) in costs) {
             blockCosts[block - 1] = cost

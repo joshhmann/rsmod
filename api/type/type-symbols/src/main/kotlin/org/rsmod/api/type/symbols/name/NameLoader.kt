@@ -28,10 +28,11 @@ public object NameLoader {
         val map = Object2IntOpenHashMap<String>()
         val ids = IntOpenHashSet()
         for (line in lines) {
-            if (line.startsWith(COMMENT)) {
+            val trimmed = line.trim()
+            if (trimmed.isEmpty() || trimmed.startsWith(COMMENT)) {
                 continue
             }
-            val split = line.split(SEPARATOR, limit = 2)
+            val split = trimmed.split(Regex("\\s+"), limit = 2)
             if (split.size != 2) {
                 continue
             }

@@ -48,7 +48,10 @@ constructor(private val objTypes: ObjTypeList, private val enumResolver: EnumTyp
         for (spellbookEnum in spellbookList.values) {
             val spellList = enumResolver[spellbookEnum].filterValuesNotNull()
             for (spellObj in spellList.values) {
-                spells[spellObj.id] = spellObj.toMagicSpell()
+                val spell = spellObj.toMagicSpell()
+                if (spell != null) {
+                    spells[spellObj.id] = spell
+                }
             }
         }
 
@@ -61,15 +64,28 @@ constructor(private val objTypes: ObjTypeList, private val enumResolver: EnumTyp
         val autocastSpells = enumResolver[spell_enums.autocast_spells].filterValuesNotNull()
         for ((autocastId, spellObj) in autocastSpells) {
             val spell = objSpells[spellObj.id]
-            checkNotNull(spell) { "Unexpected null spell for obj: $spellObj" }
-            spells[autocastId] = spell
+            if (spell != null) {
+                spells[autocastId] = spell
+            } else {
+                logger.fine { "Autocast spell not found in objSpells for obj: $spellObj (autocastId=$autocastId)" }
+            }
         }
 
         return spells
     }
 
-    private fun ObjType.toMagicSpell(): MagicSpell {
+    private fun ObjType.toMagicSpell(): MagicSpell? {
         val unpacked = objTypes[this]
+
+        val name = unpacked.paramOrNull(params.spell_name)
+        val button = unpacked.paramOrNull(params.spell_button)
+
+        if (name == null || button == null) {
+            if (warnedMissingCastXp.add(id)) {
+                logger.info { "Skipping non-spell obj in spellbook: '$internalName' ($id)" }
+            }
+            return null
+        }
 
         // Some spells can have a default (-1) spellbook, such as `teleport_to_target_spell`.
         val spellbookId = unpacked.param(params.spell_spellbook)
@@ -80,15 +96,13 @@ constructor(private val objTypes: ObjTypeList, private val enumResolver: EnumTyp
             MagicSpellType[spellTypeId]
                 ?: error("Invalid MagicSpellType: $spellTypeId (spell=$unpacked)")
 
-        val name = unpacked.param(params.spell_name)
-        val button = unpacked.param(params.spell_button)
         val maxHit = unpacked.param(params.spell_maxhit)
         val levelReq = unpacked.param(params.spell_levelreq)
         val packedExperience = unpacked.paramOrNull(params.spell_castxp)
         if (packedExperience == null && warnedMissingCastXp.add(id)) {
             // Prefer boot stability over hard failure. Missing values are still surfaced.
             logger.warning(
-                "spell_castxp missing for spell obj: '$internalName' ($id); defaulting to 0. " +
+                "spell_castxp missing for spell: '$name' ($internalName, $id); defaulting to 0. " +
                     "Fix via cache overlays/type editors when symbols are normalized."
             )
         }

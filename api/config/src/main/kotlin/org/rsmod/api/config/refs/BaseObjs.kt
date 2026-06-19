@@ -1871,7 +1871,6 @@ object BaseObjs : ObjReferences() {
     val spell_67_vulnerability = find("67_vulnerability")
     val spell_72_enfeeble = find("72_enfeeble")
     val spell_74_teleother_lumbridge = find("74_teleother_lumbridge")
-    val spell_76_entangle = find("76_entangle")
     val spell_78_stun = find("78_stun")
     val spell_80_charge = find("80_charge")
     val spell_82_teleother_falador = find("82_teleother_falador")

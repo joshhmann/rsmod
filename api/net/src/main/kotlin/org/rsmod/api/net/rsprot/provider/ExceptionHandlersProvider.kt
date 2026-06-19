@@ -10,14 +10,18 @@ import org.rsmod.game.entity.Player
 
 object ExceptionHandlersProvider {
     fun provide(): ExceptionHandlers<Player> {
-        val channelHandler = ChannelExceptionHandler { _: ChannelHandlerContext, cause: Throwable ->
+        val channelHandler = ChannelExceptionHandler { ctx: ChannelHandlerContext, cause: Throwable ->
+            System.err.println("NETTY CHANNEL EXCEPTION on ${ctx.channel()}: ${cause.message}")
+            cause.printStackTrace()
             throw cause
         }
         val messageHandler =
             IncomingGameMessageConsumerExceptionHandler {
-                _: Session<Player>,
-                _: IncomingGameMessage,
+                session: Session<Player>,
+                message: IncomingGameMessage,
                 throwable: Throwable ->
+                System.err.println("NETTY MESSAGE EXCEPTION on session $session: ${throwable.message} (message=$message)")
+                throwable.printStackTrace()
                 throw throwable
             }
         return ExceptionHandlers(channelHandler, messageHandler)

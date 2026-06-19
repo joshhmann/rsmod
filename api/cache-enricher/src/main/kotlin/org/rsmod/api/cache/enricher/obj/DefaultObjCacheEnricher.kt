@@ -159,8 +159,12 @@ constructor(
         }
         val symbolId =
             nameMapping.projanims[projAnimName] ?: error("Invalid projanim name: '$projAnimName'")
-        val projAnim = projAnimTypes.getValue(symbolId).toHashedType()
-        param[params.proj_type] = projAnim
+        val projAnim = projAnimTypes[symbolId]
+        if (projAnim == null) {
+            System.err.println("WARNING: ProjAnim symbol '$projAnimName' (id=$symbolId) not found in cache. Skipping enrichment for object: $internal")
+            return
+        }
+        param[params.proj_type] = projAnim.toHashedType()
     }
 
     private companion object {

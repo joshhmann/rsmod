@@ -55,12 +55,12 @@ constructor(@Toml private val objectMapper: ObjectMapper, private val nameMappin
             fileName.endsWith(".toml") -> {
                 decodeTomlSpawn(input, relativePath)
             }
-            fileName.startsWith('l') -> {
-                if (fileName.contains('.')) {
-                    val message = "Loc binary file must not have an extension: $relativePath"
-                    throw IOException(message)
-                }
+            fileName.startsWith('l') && !fileName.contains('.') -> {
                 listOf(decodeBinarySpawn(fileName, input))
+            }
+            fileName.startsWith('l') && fileName.contains('.') -> {
+                val message = "Loc binary file must not have an extension: $relativePath"
+                throw IOException(message)
             }
             else -> {
                 val message = "Unsupported loc spawn file format: $relativePath"

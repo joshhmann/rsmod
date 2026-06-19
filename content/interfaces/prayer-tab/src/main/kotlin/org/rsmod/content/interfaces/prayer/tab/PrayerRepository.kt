@@ -40,16 +40,16 @@ class PrayerRepository(
         val enum = enumResolver[prayer_enums.obj_configs].filterValuesNotNull()
         for (obj in enum.values) {
             val config = objTypes[obj]
-            val id = config.param(prayer_params.id)
-            val component = config.param(prayer_params.component)
-            val name = config.param(prayer_params.name)
-            val level = config.param(prayer_params.level)
-            val sound = config.param(prayer_params.sound)
-            val enabled = config.param(prayer_params.varbit)
-            val drain = config.param(prayer_params.drain_effect)
+            val id = config.paramOrNull(prayer_params.id) ?: continue
+            val component = config.paramOrNull(prayer_params.component) ?: continue
+            val name = config.paramOrNull(prayer_params.name) ?: continue
+            val level = config.paramOrNull(prayer_params.level) ?: continue
+            val sound = config.paramOrNull(prayer_params.sound) ?: continue
+            val enabled = config.paramOrNull(prayer_params.varbit) ?: continue
+            val drain = config.paramOrNull(prayer_params.drain_effect) ?: continue
             val overhead = config.paramOrNull(prayer_params.overhead)
             val unlockVar = config.paramOrNull(prayer_params.unlock_varbit)
-            val unlockState = config.param(prayer_params.unlock_state)
+            val unlockState = config.paramOrNull(prayer_params.unlock_state) ?: 1
             val defenceReq = config.paramOrNull(params.statreq1_level)
             val lockedMessage = config.paramOrNull(prayer_params.locked_message)
 

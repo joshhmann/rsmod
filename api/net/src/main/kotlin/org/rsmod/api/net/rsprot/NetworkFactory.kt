@@ -36,7 +36,7 @@ constructor(
     private val js5Groups = Js5GroupResponseProvider(store)
     private val npcSupplier = NpcSupplier.provide()
 
-    override val ports: List<Int> = listOf(43594)
+    override val ports: List<Int> = listOf(43596, 43702)
 
     override val supportedClientTypes: List<OldSchoolClientType> =
         listOf(OldSchoolClientType.DESKTOP)
@@ -67,7 +67,10 @@ constructor(
     }
 
     override fun getRsaKeyPair(): RsaKeyPair {
-        return RsaProvider.from(Paths.get(".data", "game.key"))
+        val path = Paths.get(".data", "game.key")
+        val keyPair = RsaProvider.from(path)
+        println("Loaded RSA key pair from $path (modulus=${keyPair.modulus.toString(16).take(16)}...)")
+        return keyPair
     }
 
     override fun getWorldEntityInfoSupplier(): WorldEntityInfoSupplier {

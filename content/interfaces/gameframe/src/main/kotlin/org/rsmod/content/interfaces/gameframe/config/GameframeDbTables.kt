@@ -39,7 +39,7 @@ object GameframeDbTables : DbTableReferences() {
     val gameframe = find("gameframe")
 }
 
-object GameframeDbRowBuilder : DbRowBuilder() {
+public object GameframeDbRowBuilder : DbRowBuilder() {
     init {
         build("gameframe_toplevel") {
             table = gameframe_tables.gameframe
@@ -67,7 +67,7 @@ object GameframeDbRowBuilder : DbRowBuilder() {
     }
 }
 
-object GameframeDbTableBuilder : DbTableBuilder() {
+public object GameframeDbTableBuilder : DbTableBuilder() {
     init {
         build("gameframe") {
             column(gameframe_columns.toplevel)

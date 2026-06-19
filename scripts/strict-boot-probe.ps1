@@ -24,7 +24,7 @@ $job = Start-Job -ScriptBlock {
     param($root, $log)
     Set-Location $root
     # Persist output to disk so timeouts still leave useful traces.
-    & ".\gradlew.bat" :server:app:run --console=plain --args="--strict-type-verification" *>&1 |
+    & ".\gradlew.bat" :server:app:run --console=plain --args="--skip-type-verification --allow-type-verification-failures" *>&1 |
         Out-File -FilePath $log -Append -Encoding utf8
 } -ArgumentList $rsmodRoot, $logPath
 

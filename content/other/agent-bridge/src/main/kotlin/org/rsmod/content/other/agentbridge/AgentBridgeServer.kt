@@ -21,6 +21,7 @@ import org.rsmod.api.config.refs.components
 import org.rsmod.api.config.refs.stats
 import org.rsmod.game.MapClock
 import org.rsmod.game.entity.Player
+import org.rsmod.game.type.timer.TimerType
 
 private const val PORT = 43595
 
@@ -162,6 +163,11 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
         val playerKey = player.avatar.name.lowercase()
         val current = player.client
         player.client = AgentBridgeTapClient(current, telemetrySink(playerKey))
+    }
+
+    fun registerBotPlayer(player: Player) {
+        ensureClientTap(player)
+        player.softTimer(agent_timers.agent_bridge, 1)
     }
 
     private fun enqueue(playerName: String, action: BotAction) {

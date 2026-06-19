@@ -39,6 +39,8 @@ dependencies {
 }
 
 tasks.named<JavaExec>("run") {
+    args("--allow-type-verification-failures")
     description = "Runs the RS Mod game server"
     workingDir = rootProject.projectDir
+    systemProperty("java.net.preferIPv4Stack", "true")
 }

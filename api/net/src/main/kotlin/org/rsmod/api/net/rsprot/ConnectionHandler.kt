@@ -55,6 +55,7 @@ private constructor(
         responseHandler: GameLoginResponseHandler<Player>,
         block: LoginBlock<AuthenticationType>,
     ) {
+        logger.debug { "onLogin called for username: ${block.username} (client=${block.clientType}, rev=${block.version})" }
         if (accountManager.isLoaderShuttingDown()) {
             responseHandler.writeFailedResponse(LoginResponse.LoginServerOffline)
             return
@@ -225,6 +226,7 @@ private constructor(
         responseHandler: GameLoginResponseHandler<Player>,
         block: LoginBlock<XteaKey>,
     ) {
+        logger.debug { "onReconnect called for username: ${block.username}" }
         if (!block.crc.validate(js5Crc)) {
             responseHandler.writeFailedResponse(LoginResponse.OutOfDateReload)
             return

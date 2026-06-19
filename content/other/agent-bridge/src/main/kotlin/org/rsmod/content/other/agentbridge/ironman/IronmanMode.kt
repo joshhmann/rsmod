@@ -129,6 +129,7 @@ class IronmanMode @Inject constructor() {
             is BotAction.FightUntilHp -> true
             is BotAction.EatFood -> true
             is BotAction.SetCombatStyle -> true
+            else -> true
         }
     }
 

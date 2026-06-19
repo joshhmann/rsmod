@@ -13,7 +13,7 @@ internal object StyleEnums : EnumReferences() {
     val weapon_attack_styles = find<Int, Int>("weapon_attack_styles")
 }
 
-internal object StyleEnumBuilder : EnumBuilder() {
+public object StyleEnumBuilder : EnumBuilder() {
     init {
         build<Int, Int>("weapon_attack_styles") {
             styles(WeaponCategory.Unarmed, accurate, aggressive, defensive)

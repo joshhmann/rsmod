@@ -6,11 +6,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-RSMOD_ROOT="$PROJECT_ROOT"
-if [ -f "$PROJECT_ROOT/rsmod/gradlew" ] || [ -f "$PROJECT_ROOT/rsmod/gradlew.bat" ]; then
-    RSMOD_ROOT="$PROJECT_ROOT/rsmod"
-fi
+PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
+RSMOD_ROOT="$PROJECT_ROOT/rsmod"
 CLIENT_KEY="$RSMOD_ROOT/.data/client.key"
 RSPROX_CONFIG_DIR="$HOME/.rsprox"
 TARGETS_FILE="$RSPROX_CONFIG_DIR/proxy-targets.yaml"
@@ -34,7 +31,7 @@ mkdir -p "$RSPROX_CONFIG_DIR"
 cat > "$TARGETS_FILE" <<EOF
 config:
   - name: "RSMod Local"
-    jav_config_url: "https://client.blurite.io/jav_local_233.ws"
+    jav_config_url: "http://192.168.0.175/jav_config.ws"
     modulus: "$MODULUS"
     revision: "233"
     game_server_port: 43594

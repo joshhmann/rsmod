@@ -1,0 +1,20 @@
+title=Old School RuneScape
+codebase=http://192.168.0.175/
+initial_jar=gamepack.jar
+initial_class=client
+localhosturl=http://127.0.0.1/
+param=1-modifiable-param=liveurl,http://127.0.0.1/
+param=0-modifiable-param=liveurl,http://127.0.0.1/
+param=2-modifiable-param=liveurl,http://127.0.0.1/
+param=3-modifiable-param=liveurl,http://127.0.0.1/
+param=game-demoname=oldscape
+param=com-jagex-config:url=gamepack.jar
+param=stand-alone=true
+param=haveie6=true
+param=haveie8=true
+param=havefirefox=true
+param=havechrome=true
+param=haveopera=true
+param=havenoguests=true
+msg=loc=UK
+msg=lang=0

@@ -37,6 +37,9 @@ constructor(private val objTypes: ObjTypeList, private val enumResolver: EnumTyp
     internal fun startup() {
         val weaponStyles = loadWeaponStylesMap()
         this.weaponStyles = weaponStyles
+        if (weaponStyles.isEmpty) {
+            System.err.println("WARNING: weapon_attack_styles enum is empty or missing. Combat styles will not function correctly.")
+        }
     }
 
     private fun loadWeaponStylesMap(): WeaponStyleMap {
@@ -61,6 +64,9 @@ constructor(private val objTypes: ObjTypeList, private val enumResolver: EnumTyp
     }
 
     private class WeaponStyleMap(private val backing: Int2IntOpenHashMap = Int2IntOpenHashMap()) {
+        val isEmpty: Boolean
+            get() = backing.isEmpty()
+
         operator fun get(weapon: WeaponCategory): WeaponStyleList {
             val packedStyles = backing[weapon.id]
             if (packedStyles == backing.defaultReturnValue()) {

@@ -11613,6 +11613,16 @@ npc = 'veos'
 coords = '0_47_49_50_56'
 
 [[spawn]]
+npc = 'veos_lumbridge'
+coords = '0_50_50_17_19'
+direction = 'west'
+
+[[spawn]]
+npc = 'veos_sarim'
+coords = '0_47_50_47_58'
+direction = 'north'
+
+[[spawn]]
 npc = 'harmless_island_cave_pirate'
 coords = '0_47_50_4_59'
 

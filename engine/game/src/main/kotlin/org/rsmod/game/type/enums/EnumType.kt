@@ -133,6 +133,28 @@ public data class UnpackedEnumType<K : Any, V : Any>(
     }
 
     override fun hashCode(): Int = computeIdentityHash().toInt()
+
+    public companion object {
+        public fun <K : Any, V : Any> empty(
+            keyType: KClass<K>,
+            valType: KClass<V>,
+            internalName: String? = null,
+        ): UnpackedEnumType<K, V> =
+            UnpackedEnumType(
+                keyType = keyType,
+                valType = valType,
+                keyLiteral = CacheVarLiteral.INT,
+                valLiteral = CacheVarLiteral.INT,
+                primitiveMap = emptyMap(),
+                defaultStr = null,
+                defaultInt = null,
+                transmit = false,
+                default = null,
+                typedMap = emptyMap(),
+                internalId = -1,
+                internalName = internalName,
+            )
+    }
 }
 
 public fun <V : Any> UnpackedEnumType<ObjType, V>.findOrNull(obj: InvObj): V? {

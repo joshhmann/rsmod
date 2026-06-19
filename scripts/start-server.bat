@@ -7,9 +7,8 @@
 setlocal
 
 set "SCRIPT_DIR=%~dp0"
-for %%A in ("%SCRIPT_DIR%..") do set "PROJECT_ROOT=%%~fA\"
-set "RSMOD_ROOT=%PROJECT_ROOT%"
-if exist "%PROJECT_ROOT%rsmod\gradlew.bat" set "RSMOD_ROOT=%PROJECT_ROOT%rsmod\"
+for %%A in ("%SCRIPT_DIR%..\..") do set "PROJECT_ROOT=%%~fA\"
+set "RSMOD_ROOT=%PROJECT_ROOT%rsmod\"
 
 :: Ensure installed
 call "%SCRIPT_DIR%install-server.bat"

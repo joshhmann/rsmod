@@ -50,6 +50,11 @@ internal constructor(
     override fun ScriptContext.startup() {
         loadAll()
 
+        if (gameframes.isEmpty()) {
+            System.err.println("WARNING: No gameframes loaded. GameframeScript will not be initialized.")
+            return
+        }
+
         onPlayerInit { player.openLoginGameframe() }
 
         for ((topLevel, gameframe) in gameframes) {
@@ -181,8 +186,14 @@ internal constructor(
         return map { MoveEvent(it.key, it.value) }
     }
 
-    private fun selectDefault(from: Iterable<Gameframe>): Gameframe {
-        return from.single(Gameframe::isDefault)
+    private fun selectDefault(from: Collection<Gameframe>): Gameframe {
+        val default = from.singleOrNull(Gameframe::isDefault)
+        if (default == null && from.isNotEmpty()) {
+            val first = from.first()
+            System.err.println("WARNING: Multiple or no default gameframes found. Falling back to first: $first")
+            return first
+        }
+        return default ?: error("No gameframes loaded. Check gameframe enums/configs.")
     }
 
     private data class MoveEvent(val target: ComponentType, val event: ComponentType)

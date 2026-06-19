@@ -6,11 +6,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
-RSMOD="$PROJECT_ROOT"
-if [ -f "$PROJECT_ROOT/rsmod/gradlew" ] || [ -f "$PROJECT_ROOT/rsmod/gradlew.bat" ]; then
-    RSMOD="$PROJECT_ROOT/rsmod"
-fi
+PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
+RSMOD="$PROJECT_ROOT/rsmod"
 GAME_KEY="$RSMOD/.data/game.key"
 
 if [ -f "$GAME_KEY" ]; then

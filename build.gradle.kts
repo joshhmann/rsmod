@@ -16,16 +16,39 @@ project(":server") { subprojects { group = "org.rsmod.server" } }
 
 dependencies {
     implementation(projects.server.install)
+    implementation(projects.server.app)
 }
 
-tasks.register("run") {
+tasks.register<JavaExec>("run") {
     group = "application"
     description = "Runs the RS Mod game server"
 
-    dependsOn(":server:app:run")
+    mainClass.set("org.rsmod.server.app.GameServerKt")
+    classpath = project(":server:app").sourceSets["main"].runtimeClasspath
+
+    systemProperty("java.net.preferIPv4Stack", "true")
+
+    if (project.hasProperty("args")) {
+        val serverArgs = project.property("args").toString().split(" ")
+        args = serverArgs
+    }
+}
+
+tasks.register<JavaExec>("generateSymbols") {
+    group = "codegen"
+    description = "Generates Kotlin symbol bindings from .sym files"
+
+    mainClass.set("org.rsmod.tools.symbol.codegen.SymbolCodegenKt")
+    classpath = project(":tools:symbol-codegen").sourceSets["main"].runtimeClasspath
+
+    args = listOf(
+        "--symbols-dir", projectDir.resolve(".data/symbols").absolutePath,
+        "--output-dir", project(":api:config").projectDir.resolve("src/main/kotlin/org/rsmod/api/config/refs").absolutePath
+    )
 }
 
 tasks.register<Exec>("validateSymbols") {
+    dependsOn("generateSymbols")
     group = "verification"
     description = "Validate Kotlin symbol references against rev-233 symbol tables."
     workingDir = rootProject.projectDir
@@ -43,6 +66,7 @@ tasks.register<Exec>("validateSymbols") {
 
 if (providers.gradleProperty("validateSymbolsGate").orNull == "true") {
     tasks.named("build") {
+        dependsOn("generateSymbols")
         dependsOn("validateSymbols")
     }
 }
@@ -55,6 +79,10 @@ tasks.register<JavaExec>("install") {
     classpath = sourceSets["main"].runtimeClasspath
 
     doLast { logger.lifecycle("Installation process completed.") }
+}
+
+tasks.named("install") {
+    dependsOn("generateRsa")
 }
 
 tasks.register<JavaExec>("cleanInstall") {

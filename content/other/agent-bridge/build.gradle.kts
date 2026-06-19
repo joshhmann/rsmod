@@ -7,6 +7,7 @@ dependencies {
     implementation(projects.api.hunt)
     implementation(projects.api.pluginCommons)
     implementation(projects.api.player)
+    implementation(projects.api.invPlugin)
     implementation(projects.api.registry)
     implementation(projects.api.route)
     implementation(projects.engine.events)
