@@ -14,6 +14,14 @@ internal object DropTableNpcs : NpcReferences() {
     val goblin_3 = find("goblin_unarmed_melee_3")
     val goblin_chef = find("goblin_cook")
     val goblin_guard = find("goblin_guard")
+    // Additional goblin variants (all Lumbridge goblin types)
+    val goblin_unarmed_melee_1 = find("goblin_unarmed_melee_1")
+    val goblin_unarmed_melee_4 = find("goblin_unarmed_melee_4")
+    val goblin_unarmed_melee_5 = find("goblin_unarmed_melee_5")
+    val goblin_unarmed_melee_6 = find("goblin_unarmed_melee_6")
+    val goblin_unarmed_melee_7 = find("goblin_unarmed_melee_7")
+    val goblin_unarmed_melee_8 = find("goblin_unarmed_melee_8")
+    val goblin_armed = find("goblin_armed")
 
     // Chicken
     val chicken = find("chicken")
@@ -23,6 +31,12 @@ internal object DropTableNpcs : NpcReferences() {
     val giantrat = find("giantrat")
     val giantrat2 = find("giantrat2")
     val giantrat3 = find("giantrat3")
+    // Additional giant rat variants (Lumbridge basement)
+    val giantrat_grey = find("giantrat_grey")
+    val giantrat_grey2 = find("giantrat_grey2")
+    val giantrat_grey3 = find("giantrat_grey3")
+    val giantrat1_2 = find("giantrat1_2")
+    val giantrat1_3 = find("giantrat1_3")
 
     // Cow — variant names cross-referenced with CowNpcs in generic-npcs.
     // cow_beef is the "ready to milk" variant; cow2/cow3 are graphical variants.
@@ -30,6 +44,8 @@ internal object DropTableNpcs : NpcReferences() {
     val cow2 = find("cow2")
     val cow3 = find("cow3")
     val cow_beef = find("cow_beef")
+    val cow2_calf = find("cow2_calf")
+    val cow3_calf = find("cow3_calf")
 
     // Guard variants (Lumbridge / Al-Kharid)
     val guard = find("city_guard")
@@ -95,6 +111,13 @@ internal object DropTableNpcs : NpcReferences() {
     val spider = find("spider")
     val giantspider1 = find("giantspider1")
     val giantspider2 = find("giantspider2")
+
+    // Rat variants (regular, non-giant)
+    val rat = find("rat")
+    val rat_indoors = find("rat_indoors")
+
+    // Deadman guard variants (Lumbridge)
+    val deadman_guard_lumbridge = find("deadman_guard_lumbridge")
 
     // Moss Giant variants (F2P - found in Varrock Sewers, Wilderness, Crandor)
     val mossgiant = find("mossgiant")

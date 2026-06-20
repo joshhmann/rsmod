@@ -114,6 +114,13 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 DropTableNpcs.goblin_3,
                 DropTableNpcs.goblin_chef,
                 DropTableNpcs.goblin_guard,
+                DropTableNpcs.goblin_unarmed_melee_1,
+                DropTableNpcs.goblin_unarmed_melee_4,
+                DropTableNpcs.goblin_unarmed_melee_5,
+                DropTableNpcs.goblin_unarmed_melee_6,
+                DropTableNpcs.goblin_unarmed_melee_7,
+                DropTableNpcs.goblin_unarmed_melee_8,
+                DropTableNpcs.goblin_armed,
             )
         registry.register(goblinNpcs.distinct(), goblinTable)
     }
@@ -137,6 +144,8 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
                 DropTableNpcs.cow2,
                 DropTableNpcs.cow3,
                 DropTableNpcs.cow_beef,
+                DropTableNpcs.cow2_calf,
+                DropTableNpcs.cow3_calf,
             )
         registry.register(cowNpcs.distinct(), cowTable)
     }
@@ -175,7 +184,16 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         }
 
         val giantRatNpcs: List<NpcType> =
-            listOf(DropTableNpcs.giantrat, DropTableNpcs.giantrat2, DropTableNpcs.giantrat3)
+            listOf(
+                DropTableNpcs.giantrat,
+                DropTableNpcs.giantrat2,
+                DropTableNpcs.giantrat3,
+                DropTableNpcs.giantrat_grey,
+                DropTableNpcs.giantrat_grey2,
+                DropTableNpcs.giantrat_grey3,
+                DropTableNpcs.giantrat1_2,
+                DropTableNpcs.giantrat1_3,
+            )
         registry.register(giantRatNpcs.distinct(), giantRatTable)
     }
 
@@ -241,7 +259,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         }
 
         val guardNpcs: List<NpcType> =
-            listOf(DropTableNpcs.guard, DropTableNpcs.guard_2, DropTableNpcs.guard_3)
+            listOf(DropTableNpcs.guard, DropTableNpcs.guard_2, DropTableNpcs.guard_3, DropTableNpcs.deadman_guard_lumbridge)
         registry.register(guardNpcs.distinct(), guardTable)
     }
 
@@ -426,5 +444,40 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
 
         // Register for KQ NPC type
         registry.register(DropTableNpcs.kalphite_queen, kqTable)
+    }
+
+    // -----------------------------------------------------------------------
+    // Rat (regular, non-giant)
+    // Drop table source: https://oldschool.runescape.wiki/w/Rat
+    // Always: Bones (no random table at rev 228)
+    // -----------------------------------------------------------------------
+    private fun registerRat() {
+        val ratTable = dropTable {
+            always(objs.bones)
+            // Rat has no random loot table at rev 228.
+        }
+
+        val ratNpcs: List<NpcType> =
+            listOf(DropTableNpcs.rat, DropTableNpcs.rat)
+        registry.register(ratNpcs.distinct(), ratTable)
+    }
+
+    // -----------------------------------------------------------------------
+    // Spider / Giant Spider
+    // Drop table source: https://oldschool.runescape.wiki/w/Spider
+    // Always: Nothing (no guaranteed drops)
+    // -----------------------------------------------------------------------
+    private fun registerSpider() {
+        val spiderTable = dropTable {
+            // Spider has no guaranteed drops, only random
+            table("Other", weight = 1) {
+                nothing(weight = 5)
+                item(objs.coins, quantity = 1..5, weight = 3)
+            }
+        }
+
+        val spiderNpcs: List<NpcType> =
+            listOf(DropTableNpcs.spider, DropTableNpcs.giantspider1, DropTableNpcs.giantspider2)
+        registry.register(spiderNpcs.distinct(), spiderTable)
     }
 }
