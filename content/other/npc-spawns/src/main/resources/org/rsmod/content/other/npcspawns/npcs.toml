@@ -31720,3 +31720,42 @@ coords = '0_36_81_26_16'
 npc = 'sos_death_skeleton_unarmed4'
 coords = '0_36_81_26_15'
 
+
+# --------------------------------------------------------------------
+# below-ice-mountain — Quest NPCs
+# --------------------------------------------------------------------
+[[spawn]]
+npc = 'bim_willow_outside'
+coords = '0_47_49_16_16'
+
+[[spawn]]
+npc = 'bim_checkal_barb'
+coords = '0_48_53_10_28'
+
+[[spawn]]
+npc = 'bim_atlas'
+coords = '0_48_53_8_18'
+
+[[spawn]]
+npc = 'bim_burntof_pub'
+coords = '0_46_52_6_42'
+
+[[spawn]]
+npc = 'bim_marley_edge'
+coords = '0_48_54_15_14'
+
+[[spawn]]
+npc = 'bim_golem_boss'
+coords = '0_47_49_32_32'
+
+[[spawn]]
+npc = 'bim_golem_boss_inactive_cutscene'
+coords = '0_47_49_33_33'
+
+[[spawn]]
+npc = 'camzodaal_ramarno'
+coords = '0_47_49_20_20'
+
+[[spawn]]
+npc = 'camzodaal_ramarno_entrance'
+coords = '0_47_49_18_18'
