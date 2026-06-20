@@ -1,165 +1,719 @@
-# NPC Combat Definitions
-# Chaos Druid and related NPC combat configurations
+# NPC Combat Definitions — Extended
+# Ported from Kronos-184 JSON data and OSRS wiki reference
+# All animation IDs are rev 233 cache symbols
+# NPC names are rev 233 cache symbols (NOT numeric IDs)
 
+# =============================================================================
+# GUARDS — Level 22, aggressive in cities
+# =============================================================================
 [[config]]
-npc = 'chaos_druid'
-examine = 'A crazy, evil druid.'
+npc = 'guard1'
+examine = 'A city guard.'
 attack_type = 'Crush'
 attack_anim = 422
 attack_sound = 2566
-attack_speed = 4
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+attack_melee = 10
+defence_light = 8
+defence_standard = 10
+defence_heavy = 8
+
+[[config]]
+npc = 'guard1_variant01'
+examine = 'A city guard.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
 defend_anim = 424
 defend_sound = 513
 death_anim = 836
 death_sound = 512
 
 [[config]]
-npc = 'chaos_druid_warrior'
-examine = 'A crazy evil druid.'
+npc = 'guard1_f'
+examine = 'A city guard.'
 attack_type = 'Crush'
 attack_anim = 422
 attack_sound = 2566
-attack_speed = 4
 defend_anim = 424
 defend_sound = 513
 death_anim = 836
 death_sound = 512
 
 [[config]]
-npc = 'wilderness_chaos_druid'
-examine = 'An elder, more dangerous kind of druid.'
+npc = 'guard1_f_variant01'
+examine = 'A city guard.'
 attack_type = 'Crush'
 attack_anim = 422
 attack_sound = 2566
-attack_speed = 4
 defend_anim = 424
 defend_sound = 513
 death_anim = 836
 death_sound = 512
 
-# Unicorn - Level 15
-# Found in Barbarian Village pen, non-aggressive
+# =============================================================================
+# SKELETONS — Level 13-25, aggressive in many dungeons
+# =============================================================================
 [[config]]
-npc = 'unicorn'
-examine = 'Horse with a horn.'
+npc = 'skeleton_unarmed'
+examine = 'The walking dead.'
 attack_type = 'Crush'
-attack_anim = 289
-attack_sound = 508
-attack_speed = 4
-defend_anim = 290
-defend_sound = 513
-death_anim = 292
-death_sound = 512
-
-# Black Unicorn - Level 27
-# Found in Wilderness, non-aggressive
-[[config]]
-npc = 'black_unicorn'
-examine = 'A unicorn with a blackened heart.'
-attack_type = 'Crush'
-attack_anim = 289
-attack_sound = 508
-attack_speed = 4
-defend_anim = 290
-defend_sound = 513
-death_anim = 292
-death_sound = 512
-
-
-# Mugger - Level 6
-# Aggressive NPC found in Lumbridge, Varrock, Edgeville
-[[config]]
-npc = 'mugger'
-examine = 'He looks a bit shifty.'
-attack_type = 'Crush'
-attack_anim = 422
+attack_anim = 260
 attack_sound = 2566
-attack_speed = 4
-defend_anim = 424
+defend_anim = 261
 defend_sound = 513
-death_anim = 836
+death_anim = 263
 death_sound = 512
 
-# Dwarf - Level 10
-# Found in Dwarven Mine and Ice Mountain, non-aggressive
 [[config]]
-npc = 'dwarf_normal'
-examine = 'A short, angry guy.'
+npc = 'skeleton_unarmed2'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'skeleton_unarmed3'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'skeleton_unarmed4'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'skeleton_armed'
+examine = 'A skeleton.'
 attack_type = 'Slash'
-attack_anim = 412
+attack_anim = 260
 attack_sound = 2566
-attack_speed = 4
-defend_anim = 424
+defend_anim = 261
 defend_sound = 513
-death_anim = 836
+death_anim = 263
 death_sound = 512
 
-# Bear - Level 21
-# Found in Varrock south, east of Dark Warriors' Fortress
 [[config]]
-npc = 'brownbear'
-examine = 'A big, scary bear.'
+npc = 'skeleton_armed2'
+examine = 'A skeleton.'
 attack_type = 'Slash'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'skeleton_armed3'
+examine = 'A skeleton.'
+attack_type = 'Slash'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'skeleton_armed4'
+examine = 'A skeleton.'
+attack_type = 'Slash'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'skeleton_armed5'
+examine = 'A skeleton.'
+attack_type = 'Slash'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'giantskeleton'
+examine = 'A really big skeleton.'
+attack_type = 'Crush'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+attack_melee = 20
+defence_standard = 15
+
+[[config]]
+npc = 'giantskeleton2'
+examine = 'A really big skeleton.'
+attack_type = 'Crush'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+[[config]]
+npc = 'skeletonmage'
+examine = 'An undead worker of dark magic.'
+attack_type = 'Crush'
+attack_anim = 260
+attack_sound = 2566
+defend_anim = 261
+defend_sound = 513
+death_anim = 263
+death_sound = 512
+
+# =============================================================================
+# ZOMBIES — Level 13-25, aggressive in sewers and dungeons
+# =============================================================================
+[[config]]
+npc = 'zombie_unarmed'
+examine = 'The walking dead.'
+attack_type = 'Crush'
 attack_anim = 299
-attack_sound = 508
-attack_speed = 4
+attack_sound = 2566
 defend_anim = 300
 defend_sound = 513
 death_anim = 302
 death_sound = 512
 
-# Zombie - Level 13
-# Found in various locations, aggressive
 [[config]]
-npc = 'zombie_unarmed'
+npc = 'zombie_unarmed2'
 examine = 'The walking dead.'
 attack_type = 'Crush'
-attack_anim = 5578
+attack_anim = 299
 attack_sound = 2566
-attack_speed = 4
-defend_anim = 5579
+defend_anim = 300
 defend_sound = 513
-death_anim = 5580
+death_anim = 302
 death_sound = 512
 
-# Barbarian - Level 10
-# Found in Barbarian Village, non-aggressive
 [[config]]
-npc = 'barbarian'
-examine = 'A barbarian warrior.'
+npc = 'zombie_unarmed3'
+examine = 'The walking dead.'
 attack_type = 'Crush'
-attack_anim = 422
+attack_anim = 299
 attack_sound = 2566
-attack_speed = 4
-defend_anim = 424
+defend_anim = 300
 defend_sound = 513
-death_anim = 836
+death_anim = 302
 death_sound = 512
 
-# Roving Moss Giant - Level 42
-# Found in various locations, aggressive
 [[config]]
-npc = 'roving_mossgiant'
-examine = 'A very large and green creature.'
+npc = 'zombie_unarmed4'
+examine = 'The walking dead.'
 attack_type = 'Crush'
-attack_anim = 4658
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie_unarmed5'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie_unarmed6'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie_armed'
+examine = 'A zombie.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie_armed2'
+examine = 'A zombie.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie_armed3'
+examine = 'A zombie.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie2'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie2_b'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+[[config]]
+npc = 'zombie2_c'
+examine = 'The walking dead.'
+attack_type = 'Crush'
+attack_anim = 299
+attack_sound = 2566
+defend_anim = 300
+defend_sound = 513
+death_anim = 302
+death_sound = 512
+
+# =============================================================================
+# GHOSTS — Level 13-19, found in various dungeons and quest areas
+# =============================================================================
+[[config]]
+npc = 'ghost'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+[[config]]
+npc = 'ghost2'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+[[config]]
+npc = 'ghost3'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+[[config]]
+npc = 'ghost4'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+[[config]]
+npc = 'ghost5'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+[[config]]
+npc = 'ghost6'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+[[config]]
+npc = 'ghost7'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+[[config]]
+npc = 'ghost8'
+examine = 'Ooooooh doooogee!'
+attack_type = 'Crush'
+attack_anim = 123
+attack_sound = 2566
+defend_anim = 124
+defend_sound = 513
+death_anim = 126
+death_sound = 512
+
+# =============================================================================
+# WOLVES — Level 11-38, aggressive wilderness NPCs
+# =============================================================================
+[[config]]
+npc = 'wolf'
+examine = 'A dominant predator.'
+attack_type = 'Stab'
+attack_anim = 75
 attack_sound = 508
-attack_speed = 4
-defend_anim = 4657
+defend_anim = 76
 defend_sound = 513
-death_anim = 4659
+death_anim = 78
 death_sound = 512
 
-# Hill Giant - Level 28
-# Popular F2P training monster - drops big bones
-# Found in Edgeville Dungeon, Wilderness, Giants' Plateau
+[[config]]
+npc = 'whitewolf'
+examine = 'A terrifying sight.'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+attack_melee = 15
+defence_standard = 15
+
+[[config]]
+npc = 'whitewolf_sentry'
+examine = 'A fierce guard.'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+
+[[config]]
+npc = 'wolfpack_leader'
+examine = 'The boss wolf.'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+
+[[config]]
+npc = 'pack_wolf'
+examine = 'A fierce wolf.'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+
+[[config]]
+npc = 'pack_wolf2'
+examine = 'A fierce wolf.'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+
+[[config]]
+npc = 'pack_wolf3'
+examine = 'A fierce wolf.'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+
+[[config]]
+npc = 'guarddog'
+examine = 'Beware of the dog!'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+
+# =============================================================================
+# DEMONS — Lesser (level 82), Greater (level 92), Black (level 172)
+# Highly aggressive combat NPCs
+# =============================================================================
+[[config]]
+npc = 'lesser_demon'
+examine = 'A lesser demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+attack_melee = 40
+defence_light = 20
+defence_standard = 25
+defence_heavy = 20
+
+[[config]]
+npc = 'lesser_demon2'
+examine = 'A lesser demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'lesser_demon3'
+examine = 'A lesser demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'lesser_demon4'
+examine = 'A lesser demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'lesser_demon5'
+examine = 'A lesser demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'greater_demon'
+examine = 'A greater demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+attack_melee = 50
+defence_light = 25
+defence_standard = 30
+defence_heavy = 25
+
+[[config]]
+npc = 'greater_demon2'
+examine = 'A greater demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'greater_demon3'
+examine = 'A greater demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'greater_demon4'
+examine = 'A greater demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'greater_demon5'
+examine = 'A greater demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'black_demon'
+examine = 'A black demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+attack_melee = 70
+defence_light = 35
+defence_standard = 40
+defence_heavy = 35
+poison_immunity = true
+
+[[config]]
+npc = 'black_demon2'
+examine = 'A black demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'black_demon3'
+examine = 'A black demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'black_demon4'
+examine = 'A black demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'black_demon5'
+examine = 'A black demon.'
+attack_type = 'Slash'
+attack_anim = 64
+attack_sound = 508
+defend_anim = 65
+defend_sound = 513
+death_anim = 67
+death_sound = 512
+
+[[config]]
+npc = 'hellhound'
+examine = 'A fierce guard dog of hell.'
+attack_type = 'Stab'
+attack_anim = 75
+attack_sound = 508
+defend_anim = 76
+defend_sound = 513
+death_anim = 78
+death_sound = 512
+attack_melee = 55
+defence_standard = 30
+
+# =============================================================================
+# GIANTS — Hill (28), Moss (42), Fire (86), Ice (53)
+# =============================================================================
 [[config]]
 npc = 'giant'
 examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -171,7 +725,6 @@ examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -183,7 +736,6 @@ examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -195,7 +747,6 @@ examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -207,7 +758,6 @@ examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -219,20 +769,17 @@ examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
 death_sound = 512
 
-# Wilderness Hill Giant variants
 [[config]]
 npc = 'wilderness_hill_giant'
 examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -244,7 +791,6 @@ examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -256,21 +802,17 @@ examine = 'A very large creature.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
 death_sound = 512
 
-# Moss Giant - Level 42
-# Found in Varrock Sewers, Crandor, Wilderness
 [[config]]
 npc = 'mossgiant'
 examine = 'His beard seems to have a life of its own.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -282,7 +824,6 @@ examine = 'His beard seems to have a life of its own.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -294,7 +835,6 @@ examine = 'His beard seems to have a life of its own.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
@@ -306,8 +846,565 @@ examine = 'His beard seems to have a life of its own.'
 attack_type = 'Crush'
 attack_anim = 4658
 attack_sound = 508
-attack_speed = 4
 defend_anim = 4657
 defend_sound = 513
 death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'roving_mossgiant'
+examine = 'A very large and green creature.'
+attack_type = 'Crush'
+attack_anim = 4658
+attack_sound = 508
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+# Fire Giants — Level 86, found in Brimhaven Dungeon, Waterfall Dungeon
+[[config]]
+npc = 'firegiant'
+examine = 'A tall, red-skinned giant wielding a large axe.'
+attack_type = 'Slash'
+attack_anim = 4658
+attack_sound = 508
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+attack_melee = 40
+defence_light = 25
+defence_standard = 30
+defence_heavy = 25
+
+[[config]]
+npc = 'firegiant2'
+examine = 'A tall, red-skinned giant wielding a large axe.'
+attack_type = 'Slash'
+attack_anim = 4658
+attack_sound = 508
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'firegiant3'
+examine = 'A tall, red-skinned giant wielding a large axe.'
+attack_type = 'Slash'
+attack_anim = 4658
+attack_sound = 508
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'firegiant_big'
+examine = 'A huge fire giant.'
+attack_type = 'Slash'
+attack_anim = 4658
+attack_sound = 508
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'firegiant_big2'
+examine = 'A huge fire giant.'
+attack_type = 'Slash'
+attack_anim = 4658
+attack_sound = 508
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+[[config]]
+npc = 'firegiant_big3'
+examine = 'A huge fire giant.'
+attack_type = 'Slash'
+attack_anim = 4658
+attack_sound = 508
+defend_anim = 4657
+defend_sound = 513
+death_anim = 4659
+death_sound = 512
+
+# Ice Giants — Level 53, found in White Wolf Mountain, Ice Mountain dungeon
+[[config]]
+npc = 'icegiant'
+examine = 'A tall, blue-skinned giant.'
+attack_type = 'Crush'
+attack_anim = 128
+attack_sound = 508
+defend_anim = 129
+defend_sound = 513
+death_anim = 131
+death_sound = 512
+attack_melee = 30
+defence_light = 20
+defence_standard = 25
+defence_heavy = 20
+
+[[config]]
+npc = 'icegiant2'
+examine = 'A tall, blue-skinned giant.'
+attack_type = 'Crush'
+attack_anim = 128
+attack_sound = 508
+defend_anim = 129
+defend_sound = 513
+death_anim = 131
+death_sound = 512
+
+[[config]]
+npc = 'icegiant3'
+examine = 'A tall, blue-skinned giant.'
+attack_type = 'Crush'
+attack_anim = 128
+attack_sound = 508
+defend_anim = 129
+defend_sound = 513
+death_anim = 131
+death_sound = 512
+
+[[config]]
+npc = 'icegiant_low_wanderrange'
+examine = 'A tall, blue-skinned giant.'
+attack_type = 'Crush'
+attack_anim = 128
+attack_sound = 508
+defend_anim = 129
+defend_sound = 513
+death_anim = 131
+death_sound = 512
+
+[[config]]
+npc = 'icegiant_low_wanderrange2'
+examine = 'A tall, blue-skinned giant.'
+attack_type = 'Crush'
+attack_anim = 128
+attack_sound = 508
+defend_anim = 129
+defend_sound = 513
+death_anim = 131
+death_sound = 512
+
+# =============================================================================
+# BEARS — Level 19-21, aggressive wilderness NPCs
+# =============================================================================
+[[config]]
+npc = 'brownbear'
+examine = 'A big, scary bear.'
+attack_type = 'Slash'
+attack_anim = 41
+attack_sound = 508
+defend_anim = 42
+defend_sound = 513
+death_anim = 44
+death_sound = 512
+
+[[config]]
+npc = 'darkbear'
+examine = 'A terrifying dark bear.'
+attack_type = 'Slash'
+attack_anim = 41
+attack_sound = 508
+defend_anim = 42
+defend_sound = 513
+death_anim = 44
+death_sound = 512
+
+[[config]]
+npc = 'brownbear_cub_1'
+examine = 'A cuddly but dangerous cub.'
+attack_type = 'Slash'
+attack_anim = 41
+attack_sound = 508
+defend_anim = 42
+defend_sound = 513
+death_anim = 44
+death_sound = 512
+
+[[config]]
+npc = 'brownbear_cub_2'
+examine = 'A cuddly but dangerous cub.'
+attack_type = 'Slash'
+attack_anim = 41
+attack_sound = 508
+defend_anim = 42
+defend_sound = 513
+death_anim = 44
+death_sound = 512
+
+# =============================================================================
+# DRAGONS — High-level combat NPCs
+# =============================================================================
+[[config]]
+npc = 'green_dragon'
+examine = 'A green dragon.'
+attack_type = 'Slash'
+attack_anim = 80
+attack_sound = 508
+defend_anim = 89
+defend_sound = 513
+death_anim = 92
+death_sound = 512
+attack_melee = 50
+defence_light = 30
+defence_standard = 40
+defence_heavy = 30
+poison_immunity = true
+
+[[config]]
+npc = 'blue_dragon'
+examine = 'A blue dragon.'
+attack_type = 'Slash'
+attack_anim = 80
+attack_sound = 508
+defend_anim = 89
+defend_sound = 513
+death_anim = 92
+death_sound = 512
+attack_melee = 60
+defence_light = 35
+defence_standard = 45
+defence_heavy = 35
+poison_immunity = true
+
+[[config]]
+npc = 'red_dragon'
+examine = 'A red dragon.'
+attack_type = 'Slash'
+attack_anim = 80
+attack_sound = 508
+defend_anim = 89
+defend_sound = 513
+death_anim = 92
+death_sound = 512
+attack_melee = 70
+defence_light = 40
+defence_standard = 50
+defence_heavy = 40
+poison_immunity = true
+
+[[config]]
+npc = 'black_dragon'
+examine = 'A black dragon.'
+attack_type = 'Slash'
+attack_anim = 80
+attack_sound = 508
+defend_anim = 89
+defend_sound = 513
+death_anim = 92
+death_sound = 512
+attack_melee = 80
+defence_light = 50
+defence_standard = 60
+defence_heavy = 50
+poison_immunity = true
+
+[[config]]
+npc = 'babybluedragon'
+examine = 'A baby blue dragon.'
+attack_type = 'Slash'
+attack_anim = 80
+attack_sound = 508
+defend_anim = 89
+defend_sound = 513
+death_anim = 92
+death_sound = 512
+
+[[config]]
+npc = 'babyreddragon'
+examine = 'A baby red dragon.'
+attack_type = 'Slash'
+attack_anim = 80
+attack_sound = 508
+defend_anim = 89
+defend_sound = 513
+death_anim = 92
+death_sound = 512
+
+# =============================================================================
+# SCORPIONS — Level 7-14, found in various locations
+# =============================================================================
+[[config]]
+npc = 'scorpion'
+examine = 'A poisonous scorpion.'
+attack_type = 'Stab'
+attack_anim = 270
+attack_sound = 508
+defend_anim = 271
+defend_sound = 513
+death_anim = 273
+death_sound = 512
+
+[[config]]
+npc = 'poison_scorpion'
+examine = 'A poisonous scorpion.'
+attack_type = 'Stab'
+attack_anim = 270
+attack_sound = 508
+defend_anim = 271
+defend_sound = 513
+death_anim = 273
+death_sound = 512
+
+[[config]]
+npc = 'kingscorpion'
+examine = 'A giant scorpion.'
+attack_type = 'Stab'
+attack_anim = 270
+attack_sound = 508
+defend_anim = 271
+defend_sound = 513
+death_anim = 273
+death_sound = 512
+
+# =============================================================================
+# SPIDERS — Level 1-8, found nearly everywhere
+# =============================================================================
+[[config]]
+npc = 'spider'
+examine = 'A small spider.'
+attack_type = 'Stab'
+attack_anim = 280
+attack_sound = 508
+defend_anim = 281
+defend_sound = 513
+death_anim = 282
+death_sound = 512
+
+[[config]]
+npc = 'giantspider1'
+examine = 'A giant spider.'
+attack_type = 'Stab'
+attack_anim = 143
+attack_sound = 508
+defend_anim = 144
+defend_sound = 513
+death_anim = 146
+death_sound = 512
+
+[[config]]
+npc = 'giantspider2'
+examine = 'A giant spider.'
+attack_type = 'Stab'
+attack_anim = 143
+attack_sound = 508
+defend_anim = 144
+defend_sound = 513
+death_anim = 146
+death_sound = 512
+
+[[config]]
+npc = 'deadly_red_spider'
+examine = 'A deadly red spider.'
+attack_type = 'Stab'
+attack_anim = 280
+attack_sound = 508
+defend_anim = 281
+defend_sound = 513
+death_anim = 282
+death_sound = 512
+
+[[config]]
+npc = 'jungle_spider'
+examine = 'A large, hairy spider.'
+attack_type = 'Stab'
+attack_anim = 280
+attack_sound = 508
+defend_anim = 281
+defend_sound = 513
+death_anim = 282
+death_sound = 512
+
+[[config]]
+npc = 'ice_spider'
+examine = 'An icy spider.'
+attack_type = 'Stab'
+attack_anim = 280
+attack_sound = 508
+defend_anim = 281
+defend_sound = 513
+death_anim = 282
+death_sound = 512
+
+[[config]]
+npc = 'shadow_spider'
+examine = 'A shadow spider.'
+attack_type = 'Stab'
+attack_anim = 280
+attack_sound = 508
+defend_anim = 281
+defend_sound = 513
+death_anim = 282
+death_sound = 512
+
+[[config]]
+npc = 'poisonspider'
+examine = 'A poisonous spider.'
+attack_type = 'Stab'
+attack_anim = 280
+attack_sound = 508
+defend_anim = 281
+defend_sound = 513
+death_anim = 282
+death_sound = 512
+
+# =============================================================================
+# BATS — Level 1-6, found in dungeons
+# =============================================================================
+[[config]]
+npc = 'giant_bat'
+examine = 'A giant bat.'
+attack_type = 'Stab'
+attack_anim = 30
+attack_sound = 508
+defend_anim = 30
+defend_sound = 513
+death_anim = 36
+death_sound = 512
+
+# =============================================================================
+# RATS — Level 1, basic fodder
+# =============================================================================
+[[config]]
+npc = 'rat'
+examine = 'A small rodent.'
+attack_type = 'Stab'
+attack_anim = 240
+attack_sound = 508
+defend_anim = 241
+defend_sound = 513
+death_anim = 243
+death_sound = 512
+
+[[config]]
+npc = 'giantrat'
+examine = 'A giant rat.'
+attack_type = 'Stab'
+attack_anim = 138
+attack_sound = 508
+defend_anim = 139
+defend_sound = 513
+death_anim = 141
+death_sound = 512
+
+[[config]]
+npc = 'giantrat2'
+examine = 'A giant rat.'
+attack_type = 'Stab'
+attack_anim = 138
+attack_sound = 508
+defend_anim = 139
+defend_sound = 513
+death_anim = 141
+death_sound = 512
+
+[[config]]
+npc = 'giantrat3'
+examine = 'A giant rat.'
+attack_type = 'Stab'
+attack_anim = 138
+attack_sound = 508
+defend_anim = 139
+defend_sound = 513
+death_anim = 141
+death_sound = 512
+
+# =============================================================================
+# HOBGOBLINS — Level 21-27, aggressive
+# =============================================================================
+[[config]]
+npc = 'hobgoblin_unarmed'
+examine = 'An ugly, bad-tempered hobgoblin.'
+attack_type = 'Crush'
+attack_anim = 163
+attack_sound = 508
+defend_anim = 165
+defend_sound = 513
+death_anim = 167
+death_sound = 512
+
+[[config]]
+npc = 'hobgoblin_armed'
+examine = 'An ugly, bad-tempered hobgoblin.'
+attack_type = 'Slash'
+attack_anim = 163
+attack_sound = 508
+defend_anim = 165
+defend_sound = 513
+death_anim = 167
+death_sound = 512
+
+# =============================================================================
+# BARBARIANS — Level 9-17, aggressive in Barbarian Village
+# =============================================================================
+[[config]]
+npc = 'barbarian'
+examine = 'A barbarian warrior.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+# =============================================================================
+# UNICORNS — Level 15-27, found in various locations
+# =============================================================================
+[[config]]
+npc = 'unicorn'
+examine = 'Horse with a horn.'
+attack_type = 'Crush'
+attack_anim = 289
+attack_sound = 508
+defend_anim = 290
+defend_sound = 513
+death_anim = 292
+death_sound = 512
+
+[[config]]
+npc = 'black_unicorn'
+examine = 'A unicorn with a blackened heart.'
+attack_type = 'Crush'
+attack_anim = 289
+attack_sound = 508
+defend_anim = 290
+defend_sound = 513
+death_anim = 292
+death_sound = 512
+
+# =============================================================================
+# DWARVES — Level 10-14, non-aggressive but retaliate
+# =============================================================================
+[[config]]
+npc = 'dwarf_normal'
+examine = 'A short, angry guy.'
+attack_type = 'Slash'
+attack_anim = 412
+attack_sound = 2566
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
+death_sound = 512
+
+# =============================================================================
+# MUGGER — Level 6, aggressive low-level NPC
+# =============================================================================
+[[config]]
+npc = 'mugger'
+examine = 'He looks a bit shifty.'
+attack_type = 'Crush'
+attack_anim = 422
+attack_sound = 2566
+defend_anim = 424
+defend_sound = 513
+death_anim = 836
 death_sound = 512
