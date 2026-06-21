@@ -14,7 +14,7 @@ The rsmod project is at `/root/osrs-ps-dev/OSRS-PS-DEV/rsmod/` on **CT 123**.
 
 | Host | IP | Purpose |
 |:-----|:---:|:--------|
-| **CT 123** | `192.168.0.175` | Primary build target — rsmod project, game server, gradle, cache symbols |
+| **CT 123** | `192.168.0.175` | Primary build target (colloquially "175", hostname 2004scape) — rsmod project, game server, gradle, cache symbols |
 | **CT 17** | `192.168.0.17` | Model server — 2x RTX 5060 Ti + RTX A4000, llama.cpp, corpus origin |
 | **CT 111** | `192.168.0.162` | ComfyUI image generation server
 Kanban workers interact with CT 123 via SSH from their sandbox workspace.
