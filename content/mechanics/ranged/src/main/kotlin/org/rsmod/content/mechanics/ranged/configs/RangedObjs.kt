@@ -4,9 +4,9 @@ import org.rsmod.api.config.refs.categories
 import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.params
 import org.rsmod.api.type.editors.obj.ObjEditor
-import org.rsmod.api.type.refs.projanim.ProjAnimReferences
+import org.rsmod.api.type.refs.proj.ProjAnimReferences
 import org.rsmod.api.type.refs.seq.SeqReferences
-import org.rsmod.api.type.refs.spotanim.SpotAnimReferences
+import org.rsmod.api.type.refs.spot.SpotanimReferences
 
 /**
  * Animation, projectile, and spot-anim references for ranged combat.
@@ -26,7 +26,7 @@ internal object RangedProjAnims : ProjAnimReferences() {
     val thrown = find("thrown")
 }
 
-internal object RangedSpotAnims : SpotAnimReferences() {
+internal object RangedSpotAnims : SpotanimReferences() {
     val bronze_arrow_travel = find("bronze_arrow_travel")
     val iron_arrow_travel = find("iron_arrow_travel")
     val steel_arrow_travel = find("steel_arrow_travel")
