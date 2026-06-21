@@ -28,9 +28,11 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         registerChicken()
         registerGiantRat()
         GuardDropTables.registerAll(registry)
+        JailGuardDropTables.registerAll(registry)
         registerScorpion()
         ImpDropTables.registerAll(registry)
         DarkWizardDropTables.registerAll(registry)
+        WizardDropTables.registerAll(registry)
         registerKingBlackDragon()
         registerKalphiteQueen()
 
