@@ -48,6 +48,8 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         UnicornDropTables.registerAll(registry)
         BearDropTables.registerAll(registry)
         DwarfDropTables.registerAll(registry)
+        SkeletonDropTables.registerAll(registry)
+        BatDropTables.registerAll(registry)
     }
 
     // -----------------------------------------------------------------------
