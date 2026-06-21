@@ -183,7 +183,7 @@ constructor(
 
         // Queue the typeless stun hit before delaying so it lands on the first stun tick.
         if (stunDamage > 0) {
-            queueHit(delay = 0, type = HitType.Typeless, damage = stunDamage)
+            queueHit(delay = 1, type = HitType.Typeless, damage = stunDamage)
         }
 
         // Stun: the protected-access delay holds the player locked for the stun duration.
@@ -267,7 +267,7 @@ constructor(
                         random.of(chest.trapMinDamage, chest.trapMaxDamage)
                     }
                 if (trapDamage > 0) {
-                    queueHit(delay = 0, type = HitType.Typeless, damage = trapDamage)
+                    queueHit(delay = 1, type = HitType.Typeless, damage = trapDamage)
                 }
                 mes("The trap springs and hits you!")
                 return

@@ -1,0 +1,190 @@
+{
+  "report_generated": "2026-06-20 19:23:22",
+  "resolver_version": "1.0.0",
+  "symbol_files": {
+    "obj.sym": 31173,
+    "npc.sym": 14793,
+    "loc.sym": 57690
+  },
+  "corpus_data": {
+    "items_by_name": 11872,
+    "items_by_id": 16133,
+    "npcs_by_name": 3906,
+    "npcs_by_id": 6970
+  },
+  "override_map_size": 85,
+  "item_resolution": {
+    "total": 11872,
+    "resolved": 4263,
+    "failed": 7609,
+    "match_rate_pct": 35.9,
+    "strategy_breakdown": {
+      "fuzzy_failed": 7609,
+      "underscore": 1489,
+      "fuzzy": 889,
+      "fuzzy_ambiguous": 871,
+      "parens": 655,
+      "exact": 167,
+      "apostrophe": 64,
+      "override": 57,
+      "rune_concat": 56,
+      "singular": 14,
+      "hyphen": 1
+    },
+    "confidence_breakdown": {
+      "failed": 7609,
+      "high": 2322,
+      "medium": 903,
+      "low": 871,
+      "exact": 167
+    },
+    "override_matches": 57,
+    "fuzzy_matches": 1774
+  },
+  "npc_resolution": {
+    "total": 3906,
+    "resolved": 1159,
+    "failed": 2747,
+    "match_rate_pct": 29.7,
+    "strategy_breakdown": {
+      "fuzzy_failed": 2747,
+      "fuzzy": 426,
+      "exact_npc": 408,
+      "fuzzy_ambiguous": 131,
+      "npc_suffix_match": 119,
+      "npc_prefix_strip": 74,
+      "npc_clean": 1
+    },
+    "confidence_breakdown": {
+      "failed": 2747,
+      "medium": 546,
+      "high": 482,
+      "low": 131
+    }
+  },
+  "top_unresolved_items": [
+    {
+      "name": "helm of neitiznot"
+    },
+    {
+      "name": "bronze defender (broken)"
+    },
+    {
+      "name": "bronze defender (l)"
+    },
+    {
+      "name": "bronze defender"
+    },
+    {
+      "name": "bronze boots"
+    },
+    {
+      "name": "bronze nails"
+    },
+    {
+      "name": "bronze crossbow (u)"
+    },
+    {
+      "name": "iron boots"
+    },
+    {
+      "name": "iron hasta(kp)"
+    },
+    {
+      "name": "iron hasta"
+    },
+    {
+      "name": "iron hasta(p++)"
+    },
+    {
+      "name": "iron hasta(p)"
+    },
+    {
+      "name": "iron hasta(p+)"
+    },
+    {
+      "name": "dragon gloves"
+    },
+    {
+      "name": "steel studs"
+    },
+    {
+      "name": "bullseye lantern (unf)"
+    },
+    {
+      "name": "steel defender (broken)"
+    },
+    {
+      "name": "steel defender (l)"
+    },
+    {
+      "name": "steel defender"
+    },
+    {
+      "name": "steel limbs"
+    }
+  ],
+  "top_unresolved_npcs": [
+    {
+      "name": "security guard"
+    },
+    {
+      "name": "strange plant"
+    },
+    {
+      "name": "turael"
+    },
+    {
+      "name": "vannaka"
+    },
+    {
+      "name": "chaeldar"
+    },
+    {
+      "name": "sergeant damien"
+    },
+    {
+      "name": "gielinor guide"
+    },
+    {
+      "name": "survival expert"
+    },
+    {
+      "name": "master chef"
+    },
+    {
+      "name": "h.a.m. member"
+    },
+    {
+      "name": "dunstan"
+    },
+    {
+      "name": "gravingas"
+    },
+    {
+      "name": "nature spirit"
+    },
+    {
+      "name": "crimson swift"
+    },
+    {
+      "name": "cat"
+    },
+    {
+      "name": "cow31337killer"
+    },
+    {
+      "name": "lucien"
+    },
+    {
+      "name": "restless ghost"
+    },
+    {
+      "name": "drezel"
+    },
+    {
+      "name": "tropical wagtail"
+    }
+  ],
+  "ready_for_generator_poc": true
+}

@@ -56,7 +56,10 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
 
     /** Pending actions per player (keyed by lowercase player name). Game thread reads these. */
     private val pendingActions = ConcurrentHashMap<String, ConcurrentLinkedQueue<BotAction>>()
+    private val systemActions = ConcurrentLinkedQueue<BotAction>()
     private val telemetry = ConcurrentHashMap<String, PlayerTelemetry>()
+    /** Track which bots each WebSocket connection spawned, for cleanup on disconnect. */
+    private val connBots = ConcurrentHashMap<WebSocket, CopyOnWriteArrayList<String>>()
 
     /** Current game tick for event timestamps. */
     private val currentTick = AtomicInteger(0)
@@ -156,6 +159,9 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
      */
     fun pollAction(playerName: String): BotAction? = pendingActions[playerName.lowercase()]?.poll()
 
+    /** Poll the next system-level action (spawn_bot, despawn_bot, etc). Called from game thread. */
+    fun pollSystemAction(): BotAction? = systemActions.poll()
+
     fun ensureClientTap(player: Player) {
         if (player.client is AgentBridgeTapClient) {
             return
@@ -174,7 +180,36 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
         pendingActions.getOrPut(playerName.lowercase()) { ConcurrentLinkedQueue() }.offer(action)
     }
 
-    private fun parseAndEnqueue(message: String) {
+    private fun parseSystemAction(node: JsonNode, type: String, conn: WebSocket? = null): BotAction? {
+        return try {
+            when (type) {
+                "spawn_bot" -> {
+                    val botName = node.req("name").asText()
+                    if (conn != null) { connBots.getOrPut(conn) { CopyOnWriteArrayList() }.add(botName) }
+                    BotAction.SpawnBot(
+                        name = botName,
+                        x = node.get("x")?.asInt() ?: 3222,
+                        z = node.get("z")?.asInt() ?: 3222,
+                    )
+                }
+                "despawn_bot" -> {
+                    val botName = node.req("name").asText()
+                    // Remove from all connection tracking (bot may have been spawned by any conn)
+                    for (entry in connBots.entries) {
+                        entry.value.remove(botName)
+                    }
+                    BotAction.DespawnBot(name = botName)
+                }
+                "list_bots" -> BotAction.ListBots
+                else -> return null
+            }
+        } catch (e: IllegalArgumentException) {
+            logger.error { "[AgentBridge] Missing field in $type action: ${e.message}" }
+            null
+        }
+    }
+
+    private fun parseAndEnqueue(conn: WebSocket, message: String) {
         val node: JsonNode =
             try {
                 mapper.readTree(message)
@@ -183,8 +218,16 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
                 return
             }
 
-        val playerName = node.get("player")?.asText() ?: "_all"
         val type = node.get("type")?.asText() ?: return
+        
+        // System-level actions (no player target needed)
+        if (type in listOf("spawn_bot", "despawn_bot", "list_bots")) {
+            val action = parseSystemAction(node, type, conn) ?: return
+            systemActions.offer(action)
+            return
+        }
+        
+        val playerName = node.get("player")?.asText() ?: return
 
         val action: BotAction =
             try {
@@ -333,10 +376,17 @@ class AgentBridgeServer @Inject constructor(private val clock: MapClock) {
             override fun onClose(conn: WebSocket, code: Int, reason: String, remote: Boolean) {
                 clients.remove(conn)
                 logger.info { "[AgentBridge] Agent disconnected: ${conn.remoteSocketAddress}" }
+                val botNames = connBots.remove(conn)
+                if (botNames != null) {
+                    for (botName in botNames) {
+                        systemActions.offer(BotAction.DespawnBot(name = botName))
+                    }
+                    logger.info { "[AgentBridge] Queued despawn for ${botNames.size} bots from disconnected client" }
+                }
             }
 
             override fun onMessage(conn: WebSocket, message: String) {
-                parseAndEnqueue(message)
+                parseAndEnqueue(conn, message)
             }
 
             override fun onError(conn: WebSocket?, ex: Exception) {

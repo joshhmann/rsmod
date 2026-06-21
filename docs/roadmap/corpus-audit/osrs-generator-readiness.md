@@ -69,7 +69,7 @@ Given the corpus strengths, start with:
 
 | Step | Effort | Description |
 |------|--------|-------------|
-| Copy corpus tarball | 5 min | `scp` from .17 to CT 175 (`rsmod/.data/osrs-corpus/`) |
+| Copy corpus tarball | 5 min | `scp` from .17 to CT 123 (`rsmod/.data/osrs-corpus/`) |
 | Name resolution module | 2-3 hrs | Python module to bridge corpus names to `.sym` names |
 | Extend G2 generator | 1-2 hrs | Add corpus as a 4th source (Kronos + wiki static + live scrape + corpus) |
 | Generate first drop tables | 30 min | Run generator against corpus drop data |

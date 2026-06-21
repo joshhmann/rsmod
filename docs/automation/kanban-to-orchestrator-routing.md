@@ -6,20 +6,20 @@ Define how a kanban-dispatched worker loads the orchestrator, detects workflow r
 
 ## Target Host & Deployment
 
-**All RSMod content work targets CT 175** (container 175, `192.168.0.175`).
+**All RSMod content work targets CT 123** (container 123, `192.168.0.175`).
 
-The rsmod project is at `/root/osrs-ps-dev/OSRS-PS-DEV/rsmod/` on **CT 175**.
+The rsmod project is at `/root/osrs-ps-dev/OSRS-PS-DEV/rsmod/` on **CT 123**.
 
 ### Fleet Reference
 
 | Host | IP | Purpose |
 |:-----|:---:|:--------|
-| **CT 175** | `192.168.0.175` | Primary build target — rsmod project, game server, gradle, cache symbols |
+| **CT 123** | `192.168.0.175` | Primary build target — rsmod project, game server, gradle, cache symbols |
 | **CT 17** | `192.168.0.17` | Model server — 2x RTX 5060 Ti + RTX A4000, llama.cpp, corpus origin |
 | **CT 111** | `192.168.0.162` | ComfyUI image generation server
-Kanban workers interact with CT 175 via SSH from their sandbox workspace.
+Kanban workers interact with CT 123 via SSH from their sandbox workspace.
 
-### Deployment Pattern: Sandbox → SCP → CT 175
+### Deployment Pattern: Sandbox → SCP → CT 123
 
 
 ```
@@ -29,34 +29,34 @@ Kanban workers interact with CT 175 via SSH from their sandbox workspace.
 |  - Query corpus data        |
 |  - Generate staged output   |
 +--------------+--------------+
-               | SCP to CT 175
+               | SCP to CT 123
                v
 +-----------------------------+
-| CT 175: rsmod/ target dir   |  Remote build host (192.168.0.175)
+| CT 123: rsmod/ target dir   |  Remote build host (192.168.0.175)
 |  - Compile (gradlew)        |
 |  - Run raw-ID scan          |
 |  - Verify via grep/git      |
 |  - Commit to git            |
 +--------------+--------------+
-               | Live on CT 175
+               | Live on CT 123
                v
 +-----------------------------+
-| Production (CT 175)         |  Committed and deployed
+| Production (CT 123)         |  Committed and deployed
 +-----------------------------+
 ```
 
 ### SSH Access
 
-Workers in the **mai** profile have SSH access to CT 175 (`ssh root@192.168.0.175`).
+Workers in the **mai** profile have SSH access to CT 123 (`ssh root@192.168.0.175`).
 
-Cross-profile workers (tai/rei/nei) that cannot directly execute on CT 175 **must produce a structured handoff package** instead of routing back:
+Cross-profile workers (tai/rei/nei) that cannot directly execute on CT 123 **must produce a structured handoff package** instead of routing back:
 
 1. Generate handoff to `staging/handoffs/<task-id>/`
 2. Set card status to `SANDBOX_STAGED`
-3. Mai picks up the handoff, applies to CT 175, validates, commits
-4. See `docs/automation/sandbox-to-ct175-handoff.md` for full format
+3. Mai picks up the handoff, applies to CT 123, validates, commits
+4. See `docs/automation/sandbox-to-ct123-handoff.md` for full format
 
-For docs-only or spec tasks where no code changes on CT 175 are needed:
+For docs-only or spec tasks where no code changes on CT 123 are needed:
 - Use `target_host: local` and handle locally
 - No handoff needed — commit directly to docs
 
@@ -64,8 +64,8 @@ For docs-only or spec tasks where no code changes on CT 175 are needed:
 
 - Isolated from production until SCP'd
 - Files are reviewed before transfer
-- Compile/git tools exist on CT 175, not in sandbox
-- CT 175 has the full cache and toolchain (JDK 21, Gradle 8.13, .sym files)
+- Compile/git tools exist on CT 123, not in sandbox
+- CT 123 has the full cache and toolchain (JDK 21, Gradle 8.13, .sym files)
 - Proven across 20+ commits and 10 regional batches
 
 ## Worker Startup Sequence
@@ -100,9 +100,9 @@ skills:
 content_type: drop_tables
 content_area: edgeville
 module_path: content/other/npc-drops
-target_host: ct175
+target_host: ct123
 sync_pattern: scp
-target_host: ct175
+target_host: ct123
 sync_pattern: scp
 validation:
   - raw_id_scan
@@ -114,14 +114,14 @@ validation:
 
 | content_type | workflow | Kanban Assignee | Target Host | Deployment |
 |--------------|----------|:---------------:|:-----------:|:----------:|
-| drop_tables | rsmod-corpus-drops | mai | ct175 | scp sandbox |
-| skill_validation | rsmod-skill-validation | mai/rei | ct175 | scp sandbox |
-| shop_stock | rsmod-shop-stock | mai | ct175 | scp sandbox |
+| drop_tables | rsmod-corpus-drops | mai | ct123 | scp sandbox |
+| skill_validation | rsmod-skill-validation | mai/rei | ct123 | scp sandbox |
+| shop_stock | rsmod-shop-stock | mai | ct123 | scp sandbox |
 | zone_readiness | rsmod-zone-readiness | mai | any | local docs |
 | minigame_spec | rsmod-minigame-spec | mai/nei | any | local docs |
 | quest_spec | rsmod-quest-spec | mai/nei | any | local docs |
-| playerbot_qa | rsmod-playerbot-qa | tai/rei | ct175 | ssh direct |
-| agent_playtest | rsmod-agent-playtest | tai | ct175 | ssh direct |
+| playerbot_qa | rsmod-playerbot-qa | tai/rei | ct123 | ssh direct |
+| agent_playtest | rsmod-agent-playtest | tai | ct123 | ssh direct |
 | docs_update | rsmod-worklog-updater | any | any | local |
 
 ## Card Completion Handoff
@@ -133,7 +133,7 @@ kanban_complete(
     summary="Edgeville batch: Black Knight + Hill Giant promoted",
     metadata={
         "commit": "11a026d6",
-        "target_host": "ct175",
+        "target_host": "ct123",
         "deployment": "sandbox-scp",
         "files_changed": ["content/other/npc-drops/tables/BlackKnightDropTables.kt"],
         "promoted": ["Black Knight", "Hill Giant"],

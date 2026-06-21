@@ -27,6 +27,7 @@ constructor(
         player.avatar.name = name
         player.coords = CoordGrid(x, z, 0)
         player.accountId = slot
+        player.userId = slot.toLong()
 
         // Initialize inventory containers (inv, worn) same as real players
         invMapInit.init(player)

@@ -3,7 +3,6 @@ package org.rsmod.content.other.progressivebots
 import jakarta.inject.Inject
 import org.rsmod.api.game.process.GameLifecycle
 import org.rsmod.api.player.isInCombat
-import org.rsmod.content.other.agentbridge.AgentBridgeServer
 import org.rsmod.content.other.agentbridge.PlayerBotService
 import org.rsmod.game.entity.Player
 import org.rsmod.game.seq.EntitySeq
@@ -43,7 +42,6 @@ class BotManager
 @Inject
 constructor(
     private val playerBotService: PlayerBotService,
-    private val agentBridgeServer: AgentBridgeServer,
 ) : PluginScript() {
 
     private val bots = mutableMapOf<String, BotState>()
@@ -61,8 +59,6 @@ constructor(
         for (def in BotConfig.bots) {
             try {
                 playerBotService.spawnBot(def.username, def.spawnX, def.spawnZ)
-                // Register with AgentBridge for live state broadcasting via WebSocket
-                playerBotService.findBot(def.username)?.let { agentBridgeServer.registerBotPlayer(it) }
                 bots[def.username] = BotState(def = def)
                 spawned++
             } catch (e: Exception) {

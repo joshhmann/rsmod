@@ -4,7 +4,7 @@ package org.rsmod.content.skills.prayer.scripts
 // Bone burying and altar offering for Prayer XP.
 //
 // Burying:
-//   - onOpHeld2(bone) — option 2 is "Bury" for all bone items.
+//   - onOpHeld1(bone) — option 1 is "Bury" for all bone items.
 //   - Plays human_pickupfloor (seq 827) — the canonical OSRS bury animation.
 //   - 1-tick delay then XP, matching wiki timing.
 //   - Message sequence matches RS: dig-hole message then bury message.
@@ -36,7 +36,7 @@ import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.player.protect.ProtectedAccess
-import org.rsmod.api.script.onOpHeld2
+import org.rsmod.api.script.onOpHeld1
 import org.rsmod.api.script.onOpLocU
 import org.rsmod.api.type.refs.loc.LocReferences
 import org.rsmod.api.type.refs.obj.ObjReferences
@@ -224,7 +224,7 @@ class PrayerTraining @Inject constructor() : PluginScript() {
     override fun ScriptContext.startup() {
         for (bone in BONE_DEFS) {
             // Bury handler — op2 = "Bury" on a bone in inventory
-            onOpHeld2(bone.obj) { buryBone(bone) }
+            onOpHeld1(bone.obj) { buryBone(bone) }
 
             // Standard world altar offerings
             for (altarLoc in STANDARD_WORLD_ALTARS) {

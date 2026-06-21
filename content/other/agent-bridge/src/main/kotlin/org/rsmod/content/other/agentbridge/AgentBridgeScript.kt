@@ -1,6 +1,7 @@
 package org.rsmod.content.other.agentbridge
 
 import jakarta.inject.Inject
+import org.rsmod.api.game.process.GameLifecycle
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.math.max
 import org.rsmod.api.config.refs.stats
@@ -94,6 +95,7 @@ constructor(
 
     override fun ScriptContext.startup() {
         server.start()
+        eventBus.subscribeUnbound(GameLifecycle.LateCycle::class.java) { processSystemActions() }
         onPlayerLogin {
             server.ensureClientTap(player)
             playerStates[player.avatar.name.lowercase()] =
@@ -167,6 +169,48 @@ constructor(
                     )
                 },
             )
+        }
+    }
+
+    /** Process system-level actions (spawn_bot, despawn_bot) on the game thread. */
+    private fun processSystemActions() {
+        try {
+            while (true) {
+            val action = server.pollSystemAction() ?: break
+            when (action) {
+                is BotAction.SpawnBot -> {
+                    val bot = playerBotService.spawnBot(action.name, action.x, action.z)
+                    if (bot != null) {
+                        server.registerBotPlayer(bot)
+                        System.err.println("[AgentBridge] System spawned bot " + action.name)
+                    }
+                }
+                is BotAction.DespawnBot -> {
+                    val playerName_lc = action.name.lowercase()
+                    // Clean up AgentBridge state BEFORE removing from player list
+                    val bot = playerBotService.findBot(playerName_lc)
+                    if (bot != null) {
+                        // Remove from AgentBridge state tracking
+                        playerStates.remove(playerName_lc)
+                        pendingWaits.remove(playerName_lc)
+                        waitResults.remove(playerName_lc)
+                        pendingDoorOps.remove(playerName_lc)
+                        // Set player health to 0 and force-remove from game engine
+                        // bot removed from AgentBridge state above
+                    }
+                    val removed = playerBotService.despawnBot(playerName_lc)
+                    if (removed) {
+                        System.err.println("[AgentBridge] System despawned bot " + action.name)
+                    }
+                }
+                is BotAction.ListBots -> {
+                    System.err.println("[AgentBridge] Bot count: " + playerBotService.botCount())
+                }
+                else -> { }
+            }
+            }
+        } catch (e: Exception) {
+            System.err.println("[AgentBridge] System action error: ${e.message}")
         }
     }
 
@@ -1636,6 +1680,9 @@ constructor(
                 is BotAction.SpawnBot -> {
                     val a = action as BotAction.SpawnBot
                     val bot = playerBotService.spawnBot(a.name, a.x, a.z)
+                    if (bot != null) {
+                        server.registerBotPlayer(bot)
+                    }
                     ActionResult(
                         bot != null,
                         if (bot != null) "Spawned bot" else "Failed to spawn bot (no slots)",

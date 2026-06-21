@@ -1,0 +1,5534 @@
+[
+  {
+    "name": "Fire Blast",
+    "level": 59,
+    "xp": 34.5,
+    "spellbook": "normal",
+    "spell_sym": "59_fire_blast",
+    "spell_id": 3307,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Fire Bolt",
+    "level": 35,
+    "xp": 22.5,
+    "spellbook": "normal",
+    "spell_sym": "35_fire_bolt",
+    "spell_id": 3291,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Fire Wave",
+    "level": 75,
+    "xp": 42.5,
+    "spellbook": "normal",
+    "spell_sym": "75_fire_wave",
+    "spell_id": 3321,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "High Level Alchemy",
+    "level": 55,
+    "xp": 65.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Low Level Alchemy",
+    "level": 21,
+    "xp": 31.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Superheat Item",
+    "level": 43,
+    "xp": 53.0,
+    "spellbook": "normal",
+    "spell_sym": "43_superheat_item",
+    "spell_id": 3295,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Iban Blast",
+    "level": 50,
+    "xp": 30.0,
+    "spellbook": "normal",
+    "spell_sym": "50_iban_blast",
+    "spell_id": 3299,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Bones to Bananas",
+    "level": 15,
+    "xp": 25.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Earth Wave",
+    "level": 70,
+    "xp": 40.0,
+    "spellbook": "normal",
+    "spell_sym": "70_earth_wave",
+    "spell_id": 3319,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Confuse",
+    "level": 3,
+    "xp": 13.0,
+    "spellbook": "normal",
+    "spell_sym": "03_confuse",
+    "spell_id": 3274,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Crumble Undead",
+    "level": 39,
+    "xp": 24.5,
+    "spellbook": "normal",
+    "spell_sym": "39_crumble_undead",
+    "spell_id": 3293,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Saradomin Strike",
+    "level": 60,
+    "xp": 35.0,
+    "spellbook": "normal",
+    "spell_sym": "60_saradomin_strike",
+    "spell_id": 3311,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Telekinetic Grab",
+    "level": 33,
+    "xp": 43.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Earth Bolt",
+    "level": 29,
+    "xp": 19.5,
+    "spellbook": "normal",
+    "spell_sym": "29_earth_bolt",
+    "spell_id": 3288,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Earth Strike",
+    "level": 9,
+    "xp": 9.5,
+    "spellbook": "normal",
+    "spell_sym": "09_earth_strike",
+    "spell_id": 3277,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Fire Strike",
+    "level": 13,
+    "xp": 11.5,
+    "spellbook": "normal",
+    "spell_sym": "13_fire_strike",
+    "spell_id": 3279,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lvl-4 Enchant",
+    "level": 57,
+    "xp": 67.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Flames of Zamorak",
+    "level": 60,
+    "xp": 35.0,
+    "spellbook": "normal",
+    "spell_sym": "60_flames_of_zamorak",
+    "spell_id": 3310,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Trollheim Teleport",
+    "level": 61,
+    "xp": 68.0,
+    "spellbook": "normal",
+    "spell_sym": "61_trollheim_teleport",
+    "spell_id": 3312,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lvl-6 Enchant",
+    "level": 87,
+    "xp": 97.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Water Blast",
+    "level": 47,
+    "xp": 28.5,
+    "spellbook": "normal",
+    "spell_sym": "47_water_blast",
+    "spell_id": 3297,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Block",
+    "level": 85,
+    "xp": 83.6,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Wind Strike",
+    "level": 1,
+    "xp": 5.5,
+    "spellbook": "normal",
+    "spell_sym": "01_wind_strike",
+    "spell_id": 3273,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Claws of Guthix",
+    "level": 60,
+    "xp": 35.0,
+    "spellbook": "normal",
+    "spell_sym": "60_claws_of_guthix",
+    "spell_id": 3309,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Bones to Peaches",
+    "level": 60,
+    "xp": 35.5,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lvl-3 Enchant",
+    "level": 49,
+    "xp": 59.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Water Bolt",
+    "level": 23,
+    "xp": 16.5,
+    "spellbook": "normal",
+    "spell_sym": "23_water_bolt",
+    "spell_id": 3285,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Water Wave",
+    "level": 65,
+    "xp": 37.5,
+    "spellbook": "normal",
+    "spell_sym": "65_water_wave",
+    "spell_id": 3315,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Wind Bolt",
+    "level": 17,
+    "xp": 13.5,
+    "spellbook": "normal",
+    "spell_sym": "17_wind_bolt",
+    "spell_id": 3281,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Water Strike",
+    "level": 5,
+    "xp": 7.5,
+    "spellbook": "normal",
+    "spell_sym": "05_water_strike",
+    "spell_id": 3275,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lumbridge Teleport",
+    "level": 31,
+    "xp": 41.0,
+    "spellbook": "normal",
+    "spell_sym": "31_lumbridge_teleport",
+    "spell_id": 3289,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Falador Teleport",
+    "level": 37,
+    "xp": 48.0,
+    "spellbook": "normal",
+    "spell_sym": "37_falador_teleport",
+    "spell_id": 3292,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Charge Air Orb",
+    "level": 66,
+    "xp": 76.0,
+    "spellbook": "normal",
+    "spell_sym": "66_charge_air_orb",
+    "spell_id": 3316,
+    "rune_count": 3,
+    "rune_resolution_ok": false,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Unpowered orb",
+        "sym": null,
+        "id": null,
+        "confidence": "failed"
+      }
+    ]
+  },
+  {
+    "name": "Varrock Teleport",
+    "level": 25,
+    "xp": 35.0,
+    "spellbook": "normal",
+    "spell_sym": "25_varrock_teleport",
+    "spell_id": 3286,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Wind Blast",
+    "level": 41,
+    "xp": 25.5,
+    "spellbook": "normal",
+    "spell_sym": "41_wind_blast",
+    "spell_id": 3294,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Earth Blast",
+    "level": 53,
+    "xp": 31.5,
+    "spellbook": "normal",
+    "spell_sym": "53_earth_blast",
+    "spell_id": 3302,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Wind Wave",
+    "level": 62,
+    "xp": 36.0,
+    "spellbook": "normal",
+    "spell_sym": "62_wind_wave",
+    "spell_id": 3313,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Magic Dart",
+    "level": 50,
+    "xp": 30.0,
+    "spellbook": "normal",
+    "spell_sym": "50_magic_dart",
+    "spell_id": 4176,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Charge",
+    "level": 80,
+    "xp": 180.0,
+    "spellbook": "normal",
+    "spell_sym": "56_charge_water_orb",
+    "spell_id": 3304,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Teleport to House",
+    "level": 40,
+    "xp": 30.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lumbridge Home Teleport",
+    "level": 0,
+    "xp": 0.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 0,
+    "rune_resolution_ok": true,
+    "runes": []
+  },
+  {
+    "name": "Camelot Teleport",
+    "level": 45,
+    "xp": 55.5,
+    "spellbook": "normal",
+    "spell_sym": "45_camelot_teleport",
+    "spell_id": 3296,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ardougne Teleport",
+    "level": 51,
+    "xp": 61.0,
+    "spellbook": "normal",
+    "spell_sym": "51_ardougne_teleport",
+    "spell_id": 3301,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Watchtower Teleport",
+    "level": 58,
+    "xp": 68.0,
+    "spellbook": "normal",
+    "spell_sym": "58_watchtower_teleport",
+    "spell_id": 3306,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ape Atoll Teleport (standard)",
+    "level": 64,
+    "xp": 74.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Banana",
+        "sym": "banana",
+        "id": 1963,
+        "confidence": "exact"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Red Topaz)",
+    "level": 29,
+    "xp": 33.5,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lvl-1 Enchant",
+    "level": 7,
+    "xp": 17.5,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lvl-2 Enchant",
+    "level": 27,
+    "xp": 37.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Weaken",
+    "level": 11,
+    "xp": 21.0,
+    "spellbook": "normal",
+    "spell_sym": "11_weaken",
+    "spell_id": 3278,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Curse",
+    "level": 19,
+    "xp": 29.0,
+    "spellbook": "normal",
+    "spell_sym": "19_curse",
+    "spell_id": 3282,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Bind",
+    "level": 20,
+    "xp": 31.0,
+    "spellbook": "normal",
+    "spell_sym": "book_of_binding",
+    "spell_id": 730,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Snare",
+    "level": 50,
+    "xp": 61.0,
+    "spellbook": "normal",
+    "spell_sym": "50_snare",
+    "spell_id": 3300,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Vulnerability",
+    "level": 66,
+    "xp": 76.0,
+    "spellbook": "normal",
+    "spell_sym": "66_vulnerability",
+    "spell_id": 3317,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enfeeble",
+    "level": 73,
+    "xp": 83.0,
+    "spellbook": "normal",
+    "spell_sym": "73_enfeeble",
+    "spell_id": 3320,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Entangle",
+    "level": 79,
+    "xp": 89.0,
+    "spellbook": "normal",
+    "spell_sym": "79_entangle",
+    "spell_id": 3322,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Stun",
+    "level": 80,
+    "xp": 90.0,
+    "spellbook": "normal",
+    "spell_sym": "80_stun",
+    "spell_id": 3324,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Teleother Lumbridge",
+    "level": 74,
+    "xp": 84.0,
+    "spellbook": "normal",
+    "spell_sym": "74_teleother_lumbridge",
+    "spell_id": 4553,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lvl-5 Enchant",
+    "level": 68,
+    "xp": 78.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Onyx)",
+    "level": 87,
+    "xp": 97.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Dragonstone)",
+    "level": 68,
+    "xp": 78.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Diamond)",
+    "level": 57,
+    "xp": 67.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Ruby)",
+    "level": 49,
+    "xp": 59.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Emerald)",
+    "level": 27,
+    "xp": 37.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Pearl)",
+    "level": 24,
+    "xp": 29.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Jade)",
+    "level": 14,
+    "xp": 19.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Sapphire)",
+    "level": 7,
+    "xp": 17.5,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Enchant Crossbow Bolt (Opal)",
+    "level": 4,
+    "xp": 9.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Charge Fire Orb",
+    "level": 63,
+    "xp": 73.0,
+    "spellbook": "normal",
+    "spell_sym": "63_charge_fire_orb",
+    "spell_id": 3314,
+    "rune_count": 3,
+    "rune_resolution_ok": false,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Unpowered orb",
+        "sym": null,
+        "id": null,
+        "confidence": "failed"
+      }
+    ]
+  },
+  {
+    "name": "Charge Earth Orb",
+    "level": 60,
+    "xp": 70.0,
+    "spellbook": "normal",
+    "spell_sym": "60_charge_earth_orb",
+    "spell_id": 3308,
+    "rune_count": 3,
+    "rune_resolution_ok": false,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Unpowered orb",
+        "sym": null,
+        "id": null,
+        "confidence": "failed"
+      }
+    ]
+  },
+  {
+    "name": "Charge Water Orb",
+    "level": 56,
+    "xp": 66.0,
+    "spellbook": "normal",
+    "spell_sym": "56_charge_water_orb",
+    "spell_id": 3304,
+    "rune_count": 3,
+    "rune_resolution_ok": false,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Unpowered orb",
+        "sym": null,
+        "id": null,
+        "confidence": "failed"
+      }
+    ]
+  },
+  {
+    "name": "Teleother Falador",
+    "level": 82,
+    "xp": 92.0,
+    "spellbook": "normal",
+    "spell_sym": "82_teleother_falador",
+    "spell_id": 4554,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Teleother Camelot",
+    "level": 90,
+    "xp": 100.0,
+    "spellbook": "normal",
+    "spell_sym": "90_teleother_camelot",
+    "spell_id": 4556,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Kourend Castle Teleport",
+    "level": 48,
+    "xp": 58.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lvl-7 Enchant",
+    "level": 93,
+    "xp": 110.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Wind Surge",
+    "level": 81,
+    "xp": 44.5,
+    "spellbook": "normal",
+    "spell_sym": "81_wind_surge",
+    "spell_id": 21876,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Wrath rune",
+        "sym": "wrathrune",
+        "id": 21880,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Water Surge",
+    "level": 85,
+    "xp": 46.5,
+    "spellbook": "normal",
+    "spell_sym": "85_water_surge",
+    "spell_id": 21877,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Wrath rune",
+        "sym": "wrathrune",
+        "id": 21880,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Earth Surge",
+    "level": 90,
+    "xp": 48.2,
+    "spellbook": "normal",
+    "spell_sym": "90_earth_surge",
+    "spell_id": 21878,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Wrath rune",
+        "sym": "wrathrune",
+        "id": 21880,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Fire Surge",
+    "level": 95,
+    "xp": 50.5,
+    "spellbook": "normal",
+    "spell_sym": "95_fire_surge",
+    "spell_id": 21879,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Wrath rune",
+        "sym": "wrathrune",
+        "id": 21880,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Civitas illa Fortis Teleport",
+    "level": 54,
+    "xp": 64.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Monster Inspect",
+    "level": 42,
+    "xp": 30.5,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Teleport to Boat",
+    "level": 67,
+    "xp": 77.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Summon Boat",
+    "level": 56,
+    "xp": 66.0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Alchemic Divergence",
+    "level": 1,
+    "xp": 0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 0,
+    "rune_resolution_ok": true,
+    "runes": []
+  },
+  {
+    "name": "Alchemic Convergence",
+    "level": 1,
+    "xp": 0,
+    "spellbook": "normal",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 0,
+    "rune_resolution_ok": true,
+    "runes": []
+  },
+  {
+    "name": "Ice Barrage",
+    "level": 94,
+    "xp": 52.0,
+    "spellbook": "ancient",
+    "spell_sym": "94_ice_barrage",
+    "spell_id": 4651,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ice Blitz",
+    "level": 82,
+    "xp": 46.0,
+    "spellbook": "ancient",
+    "spell_sym": "82_ice_blitz",
+    "spell_id": 4645,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ice Burst",
+    "level": 70,
+    "xp": 40.0,
+    "spellbook": "ancient",
+    "spell_sym": "70_ice_burst",
+    "spell_id": 4639,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ice Rush",
+    "level": 58,
+    "xp": 34.0,
+    "spellbook": "ancient",
+    "spell_sym": "58_ice_rush",
+    "spell_id": 4633,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Paddewwa Teleport",
+    "level": 54,
+    "xp": 64.0,
+    "spellbook": "ancient",
+    "spell_sym": "54_paddewwa_teleport",
+    "spell_id": 4631,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Smoke Rush",
+    "level": 50,
+    "xp": 30.0,
+    "spellbook": "ancient",
+    "spell_sym": "50_smoke_rush",
+    "spell_id": 4629,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Shadow Rush",
+    "level": 52,
+    "xp": 31.0,
+    "spellbook": "ancient",
+    "spell_sym": "52_shadow_rush",
+    "spell_id": 4630,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Blood Barrage",
+    "level": 92,
+    "xp": 51.0,
+    "spellbook": "ancient",
+    "spell_sym": "92_blood_barrage",
+    "spell_id": 4650,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ghorrock Teleport",
+    "level": 96,
+    "xp": 106.0,
+    "spellbook": "ancient",
+    "spell_sym": "96_ghorrock_teleport",
+    "spell_id": 4652,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Smoke Barrage",
+    "level": 86,
+    "xp": 48.0,
+    "spellbook": "ancient",
+    "spell_sym": "86_smoke_barrage",
+    "spell_id": 4647,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Kharyrll Teleport",
+    "level": 66,
+    "xp": 76.0,
+    "spellbook": "ancient",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Blood Burst",
+    "level": 68,
+    "xp": 39.0,
+    "spellbook": "ancient",
+    "spell_sym": "68_blood_burst",
+    "spell_id": 4638,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Blood Rush",
+    "level": 56,
+    "xp": 33.0,
+    "spellbook": "ancient",
+    "spell_sym": "56_blood_rush",
+    "spell_id": 4632,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Smoke Burst",
+    "level": 62,
+    "xp": 36.0,
+    "spellbook": "ancient",
+    "spell_sym": "62_smoke_burst",
+    "spell_id": 4635,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Shadow Barrage",
+    "level": 88,
+    "xp": 49.0,
+    "spellbook": "ancient",
+    "spell_sym": "88_shadow_barrage",
+    "spell_id": 4648,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Edgeville Home Teleport",
+    "level": 1,
+    "xp": 0.0,
+    "spellbook": "ancient",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 0,
+    "rune_resolution_ok": true,
+    "runes": []
+  },
+  {
+    "name": "Senntisten Teleport",
+    "level": 60,
+    "xp": 70.0,
+    "spellbook": "ancient",
+    "spell_sym": "60_senntisten_teleport",
+    "spell_id": 4634,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lassar Teleport",
+    "level": 72,
+    "xp": 82.0,
+    "spellbook": "ancient",
+    "spell_sym": "72_lassar_teleport",
+    "spell_id": 4640,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Dareeyak Teleport",
+    "level": 78,
+    "xp": 88.0,
+    "spellbook": "ancient",
+    "spell_sym": "78_dareeyak_teleport",
+    "spell_id": 4643,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Blood Blitz",
+    "level": 80,
+    "xp": 45.0,
+    "spellbook": "ancient",
+    "spell_sym": "80_blood_blitz",
+    "spell_id": 4644,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Shadow Burst",
+    "level": 64,
+    "xp": 37.0,
+    "spellbook": "ancient",
+    "spell_sym": "64_shadow_burst",
+    "spell_id": 4636,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Shadow Blitz",
+    "level": 76,
+    "xp": 43.0,
+    "spellbook": "ancient",
+    "spell_sym": "76_shadow_blitz",
+    "spell_id": 4642,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Smoke Blitz",
+    "level": 74,
+    "xp": 42.0,
+    "spellbook": "ancient",
+    "spell_sym": "74_smoke_blitz",
+    "spell_id": 4641,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Carrallanger Teleport",
+    "level": 84,
+    "xp": 94.0,
+    "spellbook": "ancient",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Annakarl Teleport",
+    "level": 90,
+    "xp": 100.0,
+    "spellbook": "ancient",
+    "spell_sym": "90_annakarl_teleport",
+    "spell_id": 4649,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "NPC Contact",
+    "level": 67,
+    "xp": 63.0,
+    "spellbook": "lunar",
+    "spell_sym": "67_npc_contact",
+    "spell_id": 9109,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Barbarian Teleport",
+    "level": 75,
+    "xp": 76.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_barbarian_teleport",
+    "spell_id": 24955,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Group Moonclan",
+    "level": 70,
+    "xp": 67.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Moonclan Teleport",
+    "level": 69,
+    "xp": 66.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_moonclan_teleport",
+    "spell_id": 24949,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Spellbook Swap",
+    "level": 96,
+    "xp": 130.0,
+    "spellbook": "lunar",
+    "spell_sym": "96_spellbook_swap",
+    "spell_id": 11150,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Humidify",
+    "level": 68,
+    "xp": 65.0,
+    "spellbook": "lunar",
+    "spell_sym": "68_humidify",
+    "spell_id": 11145,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Superglass Make",
+    "level": 77,
+    "xp": 78.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Waterbirth Teleport",
+    "level": 72,
+    "xp": 71.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_waterbirth_teleport",
+    "spell_id": 24953,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Khazard Teleport",
+    "level": 78,
+    "xp": 80.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_khazard_teleport",
+    "spell_id": 24957,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Fishing Guild Teleport",
+    "level": 85,
+    "xp": 89.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_fishing_guild_teleport",
+    "spell_id": 24959,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Catherby Teleport",
+    "level": 87,
+    "xp": 92.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_catherby_teleport",
+    "spell_id": 24961,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ice Plateau Teleport",
+    "level": 89,
+    "xp": 96.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_ice_plateau_teleport",
+    "spell_id": 24963,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lunar Home Teleport",
+    "level": 1,
+    "xp": 0.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 0,
+    "rune_resolution_ok": true,
+    "runes": []
+  },
+  {
+    "name": "String Jewellery",
+    "level": 80,
+    "xp": 83.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Plank Make",
+    "level": 86,
+    "xp": 90.0,
+    "spellbook": "lunar",
+    "spell_sym": "86_plank_make",
+    "spell_id": 11149,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Hunter Kit (spell)",
+    "level": 71,
+    "xp": 70.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Vengeance",
+    "level": 94,
+    "xp": 112.0,
+    "spellbook": "lunar",
+    "spell_sym": "93_vengeance_other",
+    "spell_id": 9135,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Monster Examine",
+    "level": 66,
+    "xp": 61.0,
+    "spellbook": "lunar",
+    "spell_sym": "66_monster_examine",
+    "spell_id": 11144,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Vengeance Other",
+    "level": 93,
+    "xp": 108.0,
+    "spellbook": "lunar",
+    "spell_sym": "93_vengeance_other",
+    "spell_id": 9135,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Group Waterbirth",
+    "level": 73,
+    "xp": 72.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Group Barbarian",
+    "level": 76,
+    "xp": 77.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Group Khazard",
+    "level": 79,
+    "xp": 81.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Group Fishing Guild",
+    "level": 86,
+    "xp": 90.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Group Catherby",
+    "level": 88,
+    "xp": 93.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tele Group Ice Plateau",
+    "level": 90,
+    "xp": 99.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Dream",
+    "level": 79,
+    "xp": 82.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_dream_logs",
+    "spell_id": 9067,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Stat Spy",
+    "level": 75,
+    "xp": 76.0,
+    "spellbook": "lunar",
+    "spell_sym": "75_stat_spy",
+    "spell_id": 11147,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Fertile Soil",
+    "level": 83,
+    "xp": 87.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Energy Transfer",
+    "level": 91,
+    "xp": 100.0,
+    "spellbook": "lunar",
+    "spell_sym": "91_energy_transfer",
+    "spell_id": 9133,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Cure Other",
+    "level": 68,
+    "xp": 65.0,
+    "spellbook": "lunar",
+    "spell_sym": "68_cure_other",
+    "spell_id": 9110,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Magic Imbue",
+    "level": 82,
+    "xp": 86.0,
+    "spellbook": "lunar",
+    "spell_sym": "82_magic_imbue",
+    "spell_id": 9124,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Bake Pie",
+    "level": 65,
+    "xp": 60.0,
+    "spellbook": "lunar",
+    "spell_sym": "65_bake_pie",
+    "spell_id": 9107,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Cure Plant",
+    "level": 66,
+    "xp": 60.0,
+    "spellbook": "lunar",
+    "spell_sym": "66_cure_plant",
+    "spell_id": 9108,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Cure Me",
+    "level": 71,
+    "xp": 69.0,
+    "spellbook": "lunar",
+    "spell_sym": "71_cure_me",
+    "spell_id": 9113,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Cure Group",
+    "level": 74,
+    "xp": 74.0,
+    "spellbook": "lunar",
+    "spell_sym": "74_cure_group",
+    "spell_id": 9116,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Heal Other",
+    "level": 92,
+    "xp": 101.0,
+    "spellbook": "lunar",
+    "spell_sym": "92_heal_other",
+    "spell_id": 9134,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Heal Group",
+    "level": 95,
+    "xp": 124.0,
+    "spellbook": "lunar",
+    "spell_sym": "95_heal_group",
+    "spell_id": 9137,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Stat Restore Pot Share",
+    "level": 81,
+    "xp": 84.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Boost Potion Share",
+    "level": 84,
+    "xp": 88.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Tan Leather",
+    "level": 78,
+    "xp": 81.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Recharge Dragonstone",
+    "level": 89,
+    "xp": 97.5,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Geomancy",
+    "level": 65,
+    "xp": 60.0,
+    "spellbook": "lunar",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Spin Flax",
+    "level": 76,
+    "xp": 75.0,
+    "spellbook": "lunar",
+    "spell_sym": "76_spin_flax",
+    "spell_id": 20589,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ourania Teleport",
+    "level": 71,
+    "xp": 69.0,
+    "spellbook": "lunar",
+    "spell_sym": "lunar_tablet_ourania_teleport",
+    "spell_id": 24951,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Astral rune",
+        "sym": "astralrune",
+        "id": 9075,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ape Atoll Teleport (Arceuus)",
+    "level": 90,
+    "xp": 100.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Arceuus Home Teleport",
+    "level": 1,
+    "xp": 0.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 0,
+    "rune_resolution_ok": true,
+    "runes": []
+  },
+  {
+    "name": "Draynor Manor Teleport",
+    "level": 17,
+    "xp": 16.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Water rune",
+        "sym": "waterrune",
+        "id": 555,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Mind Altar Teleport",
+    "level": 28,
+    "xp": 22.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Respawn Teleport",
+    "level": 34,
+    "xp": 27.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Salve Graveyard Teleport",
+    "level": 40,
+    "xp": 30.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Fenkenstrain's Castle Teleport",
+    "level": 48,
+    "xp": 50.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "West Ardougne Teleport",
+    "level": 61,
+    "xp": 68.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Harmony Island Teleport",
+    "level": 65,
+    "xp": 74.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Cemetery Teleport",
+    "level": 71,
+    "xp": 82.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Barrows Teleport",
+    "level": 83,
+    "xp": 90.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Crops",
+    "level": 78,
+    "xp": 90.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 4,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Battlefront Teleport",
+    "level": 23,
+    "xp": 19.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Lesser Corruption",
+    "level": 64,
+    "xp": 75.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Greater Corruption",
+    "level": 85,
+    "xp": 95.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ghostly Grasp",
+    "level": 35,
+    "xp": 22.5,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Skeletal Grasp",
+    "level": 56,
+    "xp": 33.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Undead Grasp",
+    "level": 79,
+    "xp": 46.5,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Inferior Demonbane",
+    "level": 44,
+    "xp": 27.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Chaos rune",
+        "sym": "chaosrune",
+        "id": 562,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Superior Demonbane",
+    "level": 62,
+    "xp": 36.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Dark Demonbane",
+    "level": 82,
+    "xp": 43.5,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Demonic Offering",
+    "level": 84,
+    "xp": 175.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      },
+      {
+        "name": "Wrath rune",
+        "sym": "wrathrune",
+        "id": 21880,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Sinister Offering",
+    "level": 92,
+    "xp": 180.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Wrath rune",
+        "sym": "wrathrune",
+        "id": 21880,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Degrime",
+    "level": 70,
+    "xp": 83.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Dark Lure",
+    "level": 50,
+    "xp": 60.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Death Charge",
+    "level": 80,
+    "xp": 90.0,
+    "spellbook": "arceuus",
+    "spell_sym": "death_charge_scroll",
+    "spell_id": 30806,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Mark of Darkness",
+    "level": 59,
+    "xp": 70.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Ward of Arceuus",
+    "level": 73,
+    "xp": 83.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Shadow Veil",
+    "level": 47,
+    "xp": 58.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Vile Vigour",
+    "level": 66,
+    "xp": 76.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Arceuus Library Teleport",
+    "level": 6,
+    "xp": 9.0,
+    "spellbook": "arceuus",
+    "spell_sym": "arceuus_library_teleportunlock",
+    "spell_id": 13537,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Law rune",
+        "sym": "lawrune",
+        "id": 563,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Basic Reanimation",
+    "level": 16,
+    "xp": 32.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 2,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Adept Reanimation",
+    "level": 41,
+    "xp": 80.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Body rune",
+        "sym": "bodyrune",
+        "id": 559,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Expert Reanimation",
+    "level": 72,
+    "xp": 138.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Master Reanimation",
+    "level": 90,
+    "xp": 170.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Nature rune",
+        "sym": "naturerune",
+        "id": 561,
+        "confidence": "high"
+      },
+      {
+        "name": "Soul rune",
+        "sym": "soulrune",
+        "id": 566,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Lesser Ghost",
+    "level": 38,
+    "xp": 55.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Lesser Skeleton",
+    "level": 38,
+    "xp": 55.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Lesser Zombie",
+    "level": 38,
+    "xp": 55.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Air rune",
+        "sym": "airrune",
+        "id": 556,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Mind rune",
+        "sym": "mindrune",
+        "id": 558,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Superior Ghost",
+    "level": 57,
+    "xp": 70.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Superior Skeleton",
+    "level": 57,
+    "xp": 70.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Superior Zombie",
+    "level": 57,
+    "xp": 70.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Earth rune",
+        "sym": "earthrune",
+        "id": 557,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      },
+      {
+        "name": "Death rune",
+        "sym": "deathrune",
+        "id": 560,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Greater Ghost",
+    "level": 76,
+    "xp": 88.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Greater Skeleton",
+    "level": 76,
+    "xp": 88.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "name": "Resurrect Greater Zombie",
+    "level": 76,
+    "xp": 88.0,
+    "spellbook": "arceuus",
+    "spell_sym": null,
+    "spell_id": null,
+    "rune_count": 3,
+    "rune_resolution_ok": true,
+    "runes": [
+      {
+        "name": "Fire rune",
+        "sym": "firerune",
+        "id": 554,
+        "confidence": "high"
+      },
+      {
+        "name": "Blood rune",
+        "sym": "bloodrune",
+        "id": 565,
+        "confidence": "high"
+      },
+      {
+        "name": "Cosmic rune",
+        "sym": "cosmicrune",
+        "id": 564,
+        "confidence": "high"
+      }
+    ]
+  }
+]

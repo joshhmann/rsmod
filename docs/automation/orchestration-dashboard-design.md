@@ -41,7 +41,7 @@ Future visual dashboard for `sisters.asslorde.com/orchestration-status` showing 
 
 | Panel | Source |
 |-------|--------|
-| Latest commit | `git log -1` on CT 175 |
+| Latest commit | `git log -1` on CT 123 |
 | Latest worklog | `docs/worklog/YYYY-MM/` via file listing |
 | Confidence levels | `docs/roadmap/system-status-matrix.md` |
 | Zone readiness | `docs/automation/zone-readiness-checklist.md` |

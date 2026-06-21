@@ -16,5 +16,7 @@ param=havefirefox=true
 param=havechrome=true
 param=haveopera=true
 param=havenoguests=true
+param=17=http://192.168.0.175/worldlist.ws
+param=25=233
 msg=loc=UK
 msg=lang=0

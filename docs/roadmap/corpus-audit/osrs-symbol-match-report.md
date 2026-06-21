@@ -1,7 +1,7 @@
 # OSRS Corpus → Rev 233 Symbol Match Report
 
 **Source:** `/tmp/osrs-corpus-audit/osrs/` on 192.168.0.17
-**Target:** `rsmod/.data/symbols/obj.sym` and `npc.sym` on CT 175 (rev 233)
+**Target:** `rsmod/.data/symbols/obj.sym` and `npc.sym` on CT 123 (rev 233)
 **Audit date:** 2026-06-20
 
 ## Symbol File Overview

@@ -6,6 +6,8 @@ import org.rsmod.api.config.refs.stats
 import org.rsmod.api.player.hands
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.cookingLvl
+import org.rsmod.api.quest.QuestList
+import org.rsmod.api.quest.isQuestComplete
 import org.rsmod.api.script.onOpLocU
 import org.rsmod.api.type.refs.loc.LocReferences
 import org.rsmod.api.type.refs.obj.ObjReferences
@@ -55,13 +57,25 @@ class Cooking @Inject constructor(private val objTypes: ObjTypeList) : PluginScr
                 onOpLocU(rangeLoc, food.rawObj) { cookNonfish(it.invSlot, isRange = true) }
             }
         }
+
+        // Cook-o-matic 100 (Lumbridge kitchen range) — 12% burn reduction after quest
+        for (food in CookingFood.entries) {
+            onOpLocU(cooking_locs.cooksquestrange, food.rawObj) {
+                cook(it.invSlot, isRange = true, isCookOMatic = true)
+            }
+        }
+        for (food in CookingNonfish.entries) {
+            onOpLocU(cooking_locs.cooksquestrange, food.rawObj) {
+                cookNonfish(it.invSlot, isRange = true, isCookOMatic = true)
+            }
+        }
     }
 
     // ---------------------------------------------------------------------------------
     // Core fish cook logic
     // ---------------------------------------------------------------------------------
 
-    private suspend fun ProtectedAccess.cook(invSlot: Int, isRange: Boolean) {
+    private suspend fun ProtectedAccess.cook(invSlot: Int, isRange: Boolean, isCookOMatic: Boolean = false) {
         val rawItem = inv[invSlot] ?: return
         val food = CookingFood.fromRawObj(rawItem) ?: return
 
@@ -80,7 +94,7 @@ class Cooking @Inject constructor(private val objTypes: ObjTypeList) : PluginScr
             return
         }
 
-        if (didBurnFood(food, isRange)) {
+        if (didBurnFood(food, isRange, isCookOMatic)) {
             invReplace(inv, food.rawObj, 1, food.burntObj)
             val cookedName = objTypes[food.cookedObj].name.lowercase()
             mes("You accidentally burn the $cookedName.")
@@ -96,7 +110,7 @@ class Cooking @Inject constructor(private val objTypes: ObjTypeList) : PluginScr
     // Non-fish cook logic (simpler — no burn mechanics for most non-fish items)
     // ---------------------------------------------------------------------------------
 
-    private suspend fun ProtectedAccess.cookNonfish(invSlot: Int, isRange: Boolean) {
+    private suspend fun ProtectedAccess.cookNonfish(invSlot: Int, isRange: Boolean, isCookOMatic: Boolean = false) {
         val rawItem = inv[invSlot] ?: return
         val food = CookingNonfish.fromRawObj(rawItem) ?: return
 
@@ -115,7 +129,7 @@ class Cooking @Inject constructor(private val objTypes: ObjTypeList) : PluginScr
             return
         }
 
-        if (food.burntObj != null && didBurnNonfish(food)) {
+        if (food.burntObj != null && didBurnNonfish(food, isCookOMatic)) {
             invReplace(inv, food.rawObj, 1, food.burntObj!!)
             mes("You accidentally burn the ${objTypes[food.cookedObj].name.lowercase()}.")
         } else {
@@ -130,11 +144,11 @@ class Cooking @Inject constructor(private val objTypes: ObjTypeList) : PluginScr
     // Burn chance roll (fish)
     // ---------------------------------------------------------------------------------
 
-    private fun ProtectedAccess.didBurnFood(food: CookingFood, isRange: Boolean): Boolean {
+    private fun ProtectedAccess.didBurnFood(food: CookingFood, isRange: Boolean, isCookOMatic: Boolean = false): Boolean {
         if (!food.canBurn) return false
         if (player.cookingLvl >= 99) return false
 
-        val burnStop = effectiveBurnStop(food, isRange)
+        val burnStop = effectiveBurnStop(food, isRange, isCookOMatic)
         val cookLevel = player.cookingLvl
 
         if (cookLevel >= burnStop) return false
@@ -151,28 +165,35 @@ class Cooking @Inject constructor(private val objTypes: ObjTypeList) : PluginScr
         return roll < burnChance.toInt()
     }
 
-    private fun ProtectedAccess.effectiveBurnStop(food: CookingFood, isRange: Boolean): Int {
+    private fun ProtectedAccess.effectiveBurnStop(food: CookingFood, isRange: Boolean, isCookOMatic: Boolean = false): Int {
         val wearingGauntlets = player.hands.isType(cooking_objs.gauntlets_of_cooking)
-        return when {
+        val baseStop = when {
             wearingGauntlets -> food.gauntletBurnLevel
             isRange -> food.burnLevelRange
             else -> food.burnLevelFire
         }
+        // Cook-o-matic 100 adds +3 to effective burn stop (~12% burn reduction)
+        return if (isCookOMatic && isQuestComplete(QuestList.cooks_assistant)) baseStop + 3 else baseStop
     }
 
     // ---------------------------------------------------------------------------------
     // Simplified burn for non-fish foods
     // ---------------------------------------------------------------------------------
 
-    private fun ProtectedAccess.didBurnNonfish(food: CookingNonfish): Boolean {
+    private fun ProtectedAccess.didBurnNonfish(food: CookingNonfish, isCookOMatic: Boolean = false): Boolean {
         if (player.cookingLvl >= 99) return false
         val cookLevel = player.cookingLvl
-        if (cookLevel >= food.burnStop) return false
+        val effectiveBurnStop = if (isCookOMatic && isQuestComplete(QuestList.cooks_assistant)) {
+            food.burnStop + 3
+        } else {
+            food.burnStop
+        }
+        if (cookLevel >= effectiveBurnStop) return false
 
         val baseChance = if (food.isRangeOnly) 30.0 else 40.0
         val levelReq = food.levelReq.toDouble()
 
-        val burnChance = baseChance - ((cookLevel - levelReq) * (baseChance / (food.burnStop - levelReq)))
+        val burnChance = baseChance - ((cookLevel - levelReq) * (baseChance / (effectiveBurnStop - levelReq)))
         if (burnChance <= 0.0) return false
 
         val roll = random.of(0, 99)
@@ -511,7 +532,6 @@ private val cookingRangeLocs: List<LocType>
     get() =
         listOf(
             cooking_locs.range,
-            cooking_locs.cooksquestrange,
             cooking_locs.hos_cooking_range,
             cooking_locs.hos_cooking_range_02,
             cooking_locs.ds2_guild_cooking_range,

@@ -106,8 +106,8 @@ constructor(
     }
 
     private fun Player.queueLogout() {
-        check(!pendingLogout) { "`queueLogout` has already been called." }
-        check(!loggingOut) { "`loggingOut` flag has already been set." }
+        if (pendingLogout) return
+        if (loggingOut) return
         pendingLogout = true
     }
 
@@ -124,7 +124,9 @@ constructor(
         ifCloseModals(eventBus)
         forceExitAreas()
 
-        if (isAccessProtected || engineQueueList.isNotEmpty || hasNonDiscardableQueue()) {
+        // Force logout for disconnected clients even with active queues
+        val queueBlocked = isAccessProtected || engineQueueList.isNotEmpty || hasNonDiscardableQueue()
+        if (queueBlocked && !clientDisconnected.get()) {
             return
         }
 

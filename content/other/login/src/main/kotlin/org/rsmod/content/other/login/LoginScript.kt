@@ -9,6 +9,7 @@ import net.rsprot.protocol.game.outgoing.misc.client.ResetAnims
 import net.rsprot.protocol.game.outgoing.misc.player.ChatFilterSettings
 import net.rsprot.protocol.game.outgoing.varp.VarpReset
 import org.rsmod.api.config.refs.objs
+import org.rsmod.api.config.refs.stats
 import org.rsmod.api.config.refs.varbits
 import org.rsmod.api.inv.weight.InvWeight
 import org.rsmod.api.invtx.invAddOrDrop
@@ -154,6 +155,11 @@ constructor(
             return
         }
 
+        // Set starting hitpoints (OSRS: level 10 after Tutorial Island)
+        statMap.setBaseLevel(stats.hitpoints, 10.toByte())
+        statMap.setCurrentLevel(stats.hitpoints, 10.toByte())
+        statMap.setFineXP(stats.hitpoints, 11540)
+
         // Give starter items
         giveStarterItems()
 
@@ -162,6 +168,11 @@ constructor(
 
         // Mark as no longer a new player
         isNewPlayer = false
+
+        // Re-send hitpoints so the client shows the correct level
+        val hpXp = statMap.getXP(stats.hitpoints)
+        val hpLvl = stat(stats.hitpoints)
+        UpdateStat.update(this, stats.hitpoints, hpXp, hpLvl, hpLvl)
 
         mes("Welcome to RuneScape! You've arrived in Lumbridge.", ChatType.Broadcast)
     }

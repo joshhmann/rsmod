@@ -15,6 +15,7 @@ public object QuestList {
                 questRewards {
                     xp(BaseStats.cooking, 300)
                     extra("1 Quest Point")
+                    extra("Permission to use the Cook-o-matic 100")
                 },
         )
 

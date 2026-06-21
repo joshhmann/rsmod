@@ -73,11 +73,11 @@ constructor(
     // Quest stage helpers
     // =========================================================================
 
-    private val Player.questStage: Int
-        get() = varp[cc_varbits.quest_progress]
+    private val ProtectedAccess.questStage: Int
+        get() = vars[cc_varbits.quest_progress]
 
-    private fun Player.setQuestStage(stage: Int) {
-        varp[cc_varbits.quest_progress] = stage
+    private fun ProtectedAccess.setQuestStage(stage: Int) {
+        vars[cc_varbits.quest_progress] = stage
     }
 
     private val Player.hasOgreArtefact: Boolean
@@ -87,62 +87,55 @@ constructor(
     // CAPTAIN TOCK — Crossroads (Quest Start)
     // =========================================================================
 
-    private suspend fun ProtectedAccess.tockCrossroadsDialogue(npc: Npc) {
-        when (player.questStage) {
+    private suspend fun ProtectedAccess.tockCrossroadsDialogue(npc: Npc) = startDialogue(npc) {
+        when (questStage) {
             0 -> startQuest(npc)
-            1 -> npcSay(npc, "happy", "Ready to head to Corsair Cove? I'll be at the dock " +
+            1 -> chatNpc(happy, "Ready to head to Corsair Cove? I'll be at the dock " +
                 "south of Rimmington when you're ready to sail!")
-            in 2..15 -> npcSay(npc, "neutral",
-                "How goes the investigation at Corsair Cove? I'll be here if you need to cross.")
-            16 -> npcSay(npc, "happy",
-                "You saved my crew! If you ever need to cross to Corsair Cove, just ask!")
+            in 2..15 -> chatNpc(neutral, "How goes the investigation at Corsair Cove? I'll be here if you need to cross.")
+            16 -> chatNpc(happy, "You saved my crew! If you ever need to cross to Corsair Cove, just ask!")
         }
     }
 
-    private suspend fun ProtectedAccess.startQuest(npc: Npc) {
-        npcSay(npc, "worried",
+    private suspend fun ProtectedAccess.startQuest(npc: Npc) = startDialogue(npc) {
+        chatNpc(worried,
             "Arr, adventurer! Thank goodness you're here! My crew — they've been cursed! " +
                 "Every last one of them has fallen ill!")
-        npcSay(npc, "neutral",
+        chatNpc(neutral,
             "I'm Captain Tock of Corsair Cove. My crew and I sailed north to seek help, " +
                 "but now I'm stranded here with a ship full of sick sailors.")
 
         if (choice2("What kind of help do you need?", 1, "That sounds like your problem.", 2) != 1) {
-            npcSay(npc, "sad", "Aye... I suppose it is. Fair winds to you.")
-            return
+            chatNpc(sad, "Aye... I suppose it is. Fair winds to you.")
         }
 
-        npcSay(npc, "happy",
+        chatNpc(happy,
             "I need someone to investigate what's happening! My crew thinks it's a curse — " +
                 "ogre relics, demonic dolls, vengeful mermaids... It's all superstitious nonsense.")
-        npcSay(npc, "neutral",
+        chatNpc(neutral,
             "But something IS making them sick, and I need to get to the bottom of it " +
                 "before my entire crew is bedridden!")
 
         if (choice2("Sure, I'll try to help with your curse.", 1, "I don't believe in curses.", 2) != 1) {
-            npcSay(npc, "sad", "Aye... I understand. Safe travels.")
-            return
+            chatNpc(sad, "Aye... I understand. Safe travels.")
         }
 
-        npcSay(npc, "happy", "Wonderful! Let's set sail for Corsair Cove right away!")
-        npcSay(npc, "neutral",
-            "Follow me to the dock. It's just south of here, west of Rimmington.")
+        chatNpc(happy, "Wonderful! Let's set sail for Corsair Cove right away!")
+        chatNpc(neutral, "Follow me to the dock. It's just south of here, west of Rimmington.")
 
         if (choice2("Okay, I'm ready to go to Corsair Cove.", 1, "Let me prepare first.", 2) == 1) {
-            player.setQuestStage(1)
-            npcSay(npc, "happy", "Alright, follow me!")
+            setQuestStage(1)
+            chatNpc(happy, "Alright, follow me!")
             mes("Captain Tock leads you to the dock south of Rimmington.")
             teleport(COORDS_FERRY_RIMMINGTON)
             mes("You board the ferry to Corsair Cove.")
             teleport(COORDS_CORSAIR_COVE_DOCK)
-            player.setQuestStage(2)
+            setQuestStage(2)
             mes("You arrive at Corsair Cove! The dock creaks under your feet.")
-            npcSay(cc_npcs.captain_tock_cove, "neutral",
-                "Welcome to Corsair Cove. Let's go find my crew.")
+            mes("Captain Tock says: \"Welcome to Corsair Cove. Let's go find my crew.\"")
         } else {
-            npcSay(npc, "neutral",
-                "I'll be at the dock south of Rimmington when you're ready. Don't keep me waiting!")
-            player.setQuestStage(1)
+            chatNpc(neutral, "I'll be at the dock south of Rimmington when you're ready. Don't keep me waiting!")
+            setQuestStage(1)
         }
     }
 
@@ -150,60 +143,52 @@ constructor(
     // CAPTAIN TOCK — Corsair Cove
     // =========================================================================
 
-    private suspend fun ProtectedAccess.tockCoveDialogue(npc: Npc) {
-        when (player.questStage) {
+    private suspend fun ProtectedAccess.tockCoveDialogue(npc: Npc) = startDialogue(npc) {
+        when (questStage) {
             2 -> {
-                npcSay(npc, "happy", "Welcome to Corsair Cove, adventurer!")
-                npcSay(npc, "worried",
+                chatNpc(happy, "Welcome to Corsair Cove, adventurer!")
+                chatNpc(worried,
                     "My crew are all in their bunks, struck down by some strange illness. " +
                         "They each have their own theories about what caused it.")
-                npcSay(npc, "neutral",
+                chatNpc(neutral,
                     "Talk to Chief Tess and Bugs first — they know the area. " +
                         "Then speak to my crew: Arsen, Colin, and Gnocci.")
-                player.setQuestStage(3)
+                setQuestStage(3)
             }
-            3 -> npcSay(npc, "neutral",
-                "Go talk to Chief Tess and Bugs, then speak to my crew.")
-            in 4..5 -> npcSay(npc, "neutral",
-                "Have you spoken to my crew yet? Arsen, Colin, and Gnocci are all in their bunks.")
+            3 -> chatNpc(neutral, "Go talk to Chief Tess and Bugs, then speak to my crew.")
+            in 4..5 -> chatNpc(neutral, "Have you spoken to my crew yet? Arsen, Colin, and Gnocci are all in their bunks.")
             6 -> {
-                npcSay(npc, "neutral",
-                    "So you've spoken to all of them. Each one blames something different.")
-                npcSay(npc, "neutral",
+                chatNpc(neutral, "So you've spoken to all of them. Each one blames something different.")
+                chatNpc(neutral,
                     "I'll give you the ogre artefact that Arsen stole. Take it to Chief Tess — " +
                         "she'll know the truth about it.")
                 if (!player.hasOgreArtefact && !inv.isFull()) {
                     invAddOrDrop(objRepo, cc_objs.ogre_artefact, count = 1)
                     mes("Captain Tock hands you the ogre artefact.")
                 }
-                player.setQuestStage(7)
+                setQuestStage(7)
             }
-            7, 8 -> npcSay(npc, "neutral",
-                "Made any progress? The crew is counting on you!")
-            9 -> npcSay(npc, "neutral",
+            7, 8 -> chatNpc(neutral, "Made any progress? The crew is counting on you!")
+            9 -> chatNpc(neutral,
                 "I hear you've been asking questions. Ithoi is also sick, you know. " +
                     "That rules out the food — he eats the same meals as everyone else.")
-            10, 11, 12 -> npcSay(npc, "neutral",
-                "Have you found anything? The crew is still sick.")
+            10, 11, 12 -> chatNpc(neutral, "Have you found anything? The crew is still sick.")
             13 -> {
-                npcSay(npc, "angry",
-                    "Ithoi! I can't believe it. He's been faking this whole time!")
-                npcSay(npc, "neutral",
+                chatNpc(angry, "Ithoi! I can't believe it. He's been faking this whole time!")
+                chatNpc(neutral,
                     "He's fled to his lookout post upstairs. Climb the ladder in his hut " +
                         "and deal with him.")
-                player.setQuestStage(14)
+                setQuestStage(14)
             }
-            14 -> npcSay(npc, "neutral",
-                "What are you waiting for? Climb the ladder in Ithoi's hut!")
+            14 -> chatNpc(neutral, "What are you waiting for? Climb the ladder in Ithoi's hut!")
             15 -> {
-                npcSay(npc, "happy",
-                    "You did it! Ithoi won't be bothering anyone anymore!")
+                chatNpc(happy, "You did it! Ithoi won't be bothering anyone anymore!")
                 completeQuest()
             }
-            16 -> npcSay(npc, "happy",
+            16 -> chatNpc(happy,
                 "Welcome to Corsair Cove! The bank's open, resources are yours. " +
                     "You're a hero to the Corsairs!")
-            else -> npcSay(npc, "neutral", "How goes the investigation?")
+            else -> chatNpc(neutral, "How goes the investigation?")
         }
     }
 
@@ -211,37 +196,30 @@ constructor(
     // CHIEF TESS — Ogress Leader
     // =========================================================================
 
-    private suspend fun ProtectedAccess.chiefTessDialogue(npc: Npc) {
+    private suspend fun ProtectedAccess.chiefTessDialogue(npc: Npc) = startDialogue(npc) {
         when {
-            player.questStage in 0..2 -> npcSay(npc, "angry",
-                "What do you want, surface-dweller? Go away.")
-            player.questStage in 3..4 -> {
-                npcSay(npc, "neutral",
-                    "You're with the corsairs, aren't you? Your captain already explained.")
-                npcSay(npc, "neutral",
+            questStage in 0..2 -> chatNpc(angry, "What do you want, surface-dweller? Go away.")
+            questStage in 3..4 -> {
+                chatNpc(neutral, "You're with the corsairs, aren't you? Your captain already explained.")
+                chatNpc(neutral,
                     "Yes, one of your crew — Arsen — stole something from us. " +
                         "But it was just a toothpick! Hardly worth cursing anyone over.")
-                player.setQuestStage(4)
+                setQuestStage(4)
             }
-            player.questStage in 5..6 -> npcSay(npc, "neutral",
-                "I told you, it was just a toothpick. We ogres are not petty.")
-            player.questStage == 7 -> {
+            questStage in 5..6 -> chatNpc(neutral, "I told you, it was just a toothpick. We ogres are not petty.")
+            questStage == 7 -> {
                 if (player.hasOgreArtefact) {
-                    npcSay(npc, "happy", "Oh, you brought it back? Let me see that!")
-                    npcSay(npc, "happy",
-                        "HAHAHA! This is my toothpick! I use it to pick my teeth after meals!")
-                    npcSay(npc, "neutral",
-                        "Tell your friend Arsen that ogres don't curse people over toothpicks.")
+                    chatNpc(happy, "Oh, you brought it back? Let me see that!")
+                    chatNpc(happy, "HAHAHA! This is my toothpick! I use it to pick my teeth after meals!")
+                    chatNpc(neutral, "Tell your friend Arsen that ogres don't curse people over toothpicks.")
                     invDel(inv, cc_objs.ogre_artefact, count = 1, strict = false)
                     mes("Chief Tess takes the ogre artefact and laughs heartily.")
-                    player.setQuestStage(8)
+                    setQuestStage(8)
                 } else {
-                    npcSay(npc, "neutral",
-                        "Captain Tock mentioned you might have something of mine. A toothpick?")
+                    chatNpc(neutral, "Captain Tock mentioned you might have something of mine. A toothpick?")
                 }
             }
-            player.questStage >= 8 -> npcSay(npc, "neutral",
-                "We ogres are friendly enough once you get to know us.")
+            questStage >= 8 -> chatNpc(neutral, "We ogres are friendly enough once you get to know us.")
         }
     }
 
@@ -249,24 +227,21 @@ constructor(
     // BUGS — Rantz's Son (the "mermaid" seen through the telescope)
     // =========================================================================
 
-    private suspend fun ProtectedAccess.bugsDialogue(npc: Npc) {
+    private suspend fun ProtectedAccess.bugsDialogue(npc: Npc) = startDialogue(npc) {
         when {
-            player.questStage in 0..3 -> npcSay(npc, "happy", "...")
-            player.questStage in 4..7 -> {
-                npcSay(npc, "neutral",
-                    "Ogga booga! I'm practicing my scary face. My dad says I need to be scarier.")
-                if (player.questStage == 4) player.setQuestStage(5)
+            questStage in 0..3 -> chatNpc(happy, "...")
+            questStage in 4..7 -> {
+                chatNpc(neutral, "Ogga booga! I'm practicing my scary face. My dad says I need to be scarier.")
+                if (questStage == 4) setQuestStage(5)
             }
-            player.questStage == 8 -> {
-                playerSay("Hey! You're the one Colin saw through the telescope!")
-                npcSay(npc, "happy",
-                    "Yeah, I like waving at the boat people! Booga booga!")
-                playerSay("It's not a mermaid... it's just an ogre child.")
-                npcSay(npc, "happy", "Mermaid? I'm not a fish! I'm Bugs!")
-                if (player.questStage == 8) player.setQuestStage(9)
+            questStage == 8 -> {
+                mes("Hey! You're the one Colin saw through the telescope!")
+                chatNpc(happy, "Yeah, I like waving at the boat people! Booga booga!")
+                mes("It's not a mermaid... it's just an ogre child.")
+                chatNpc(happy, "Mermaid? I'm not a fish! I'm Bugs!")
+                if (questStage == 8) setQuestStage(9)
             }
-            player.questStage >= 9 -> npcSay(npc, "happy",
-                "Booga booga! Did I scare you?")
+            questStage >= 9 -> chatNpc(happy, "Booga booga! Did I scare you?")
         }
     }
 
@@ -274,21 +249,19 @@ constructor(
     // POSSESSED DOLL — on the northern wall of the main building
     // =========================================================================
 
-    private suspend fun ProtectedAccess.possessedDollDialogue(npc: Npc) {
+    private suspend fun ProtectedAccess.possessedDollDialogue(npc: Npc) = startDialogue(npc) {
         when {
-            player.questStage < 4 -> npcSay(npc, "neutral",
-                "A creepy-looking doll nailed to the wall. Better leave it alone.")
-            player.questStage == 4 -> {
-                npcSay(npc, "neutral",
+            questStage < 4 -> chatNpc(neutral, "A creepy-looking doll nailed to the wall. Better leave it alone.")
+            questStage == 4 -> {
+                chatNpc(neutral,
                     "A crude doll made of old sailcloth and driftwood, " +
                         "nailed to the wall with button eyes.")
-                npcSay(npc, "neutral",
+                chatNpc(neutral,
                     "On closer inspection, it's filled with clockwork gears. " +
                         "This isn't a demonic doll — it's a mechanical toy!")
-                player.setQuestStage(5)
+                setQuestStage(5)
             }
-            player.questStage >= 5 -> npcSay(npc, "neutral",
-                "The doll hangs limply. Now that you know it's just clockwork, it's not scary.")
+            questStage >= 5 -> chatNpc(neutral, "The doll hangs limply. Now that you know it's just clockwork, it's not scary.")
         }
     }
 
@@ -296,50 +269,42 @@ constructor(
     // ARSEN THE THIEF
     // =========================================================================
 
-    private suspend fun ProtectedAccess.arsenSickDialogue(npc: Npc) {
-        if (player.questStage < 4) {
-            npcSay(npc, "worried", "Ughhh... I've been cursed! I'm a dead man!")
-            return
+    private suspend fun ProtectedAccess.arsenSickDialogue(npc: Npc) = startDialogue(npc) {
+        if (questStage < 4) {
+            chatNpc(worried, "Ughhh... I've been cursed! I'm a dead man!")
         }
-        when (player.questStage) {
+        when (questStage) {
             4, 5 -> {
-                npcSay(npc, "worried",
+                chatNpc(worried,
                     "It's all my fault! I stole a sacred artefact from the ogres under Corsair Cove. " +
                         "It must be cursed — ever since then, we've all been getting sick!")
-                playerSay("Let me look into it. I'll talk to Captain Tock.")
-                player.setQuestStage(6)
+                mes("Let me look into it. I'll talk to Captain Tock.")
+                setQuestStage(6)
             }
-            6 -> npcSay(npc, "worried",
-                "That's it, we're doomed! I stole a sacred ogre relic!")
-            7 -> npcSay(npc, "worried",
-                "Did you find out anything? Was it the relic?")
+            6 -> chatNpc(worried, "That's it, we're doomed! I stole a sacred ogre relic!")
+            7 -> chatNpc(worried, "Did you find out anything? Was it the relic?")
             8 -> {
-                playerSay("It was just a toothpick! Chief Tess uses it to pick her teeth!")
-                npcSay(npc, "happy",
+                mes("It was just a toothpick! Chief Tess uses it to pick her teeth!")
+                chatNpc(happy,
                     "A toothpick? All this worry over a toothpick? I feel ridiculous! " +
                         "And actually... I feel a bit better already!")
-                npcSay(npc, "neutral",
-                    "Maybe it was just something I ate...")
-                if (player.questStage == 8) player.setQuestStage(9)
+                chatNpc(neutral, "Maybe it was just something I ate...")
+                if (questStage == 8) setQuestStage(9)
             }
-            9 -> npcSay(npc, "happy",
-                "A toothpick! I still can't believe it!")
+            9 -> chatNpc(happy, "A toothpick! I still can't believe it!")
             in 10..11 -> {
-                npcSay(npc, "neutral",
+                chatNpc(neutral,
                     "You know, I've been thinking... Ithoi was the one who cooked dinner that night. " +
                         "My brother Francois said the Captain's been thinking of letting him go.")
-                player.setQuestStage(12)
+                setQuestStage(12)
             }
-            12 -> npcSay(npc, "neutral",
-                "Ithoi cooked the dinner. That's got to be connected.")
-            in 13..15 -> npcSay(npc, "angry",
-                "Ithoi! That scoundrel! He poisoned us just to keep his job!")
-            16 -> npcSay(npc, "happy",
-                "Thanks for sorting that mess out. I'll think twice before stealing again!")
+            12 -> chatNpc(neutral, "Ithoi cooked the dinner. That's got to be connected.")
+            in 13..15 -> chatNpc(angry, "Ithoi! That scoundrel! He poisoned us just to keep his job!")
+            16 -> chatNpc(happy, "Thanks for sorting that mess out. I'll think twice before stealing again!")
         }
     }
 
-    private suspend fun ProtectedAccess.arsenDialogue(npc: Npc) {
+    private suspend fun ProtectedAccess.arsenDialogue(npc: Npc) = startDialogue(npc) {
         arsenSickDialogue(npc)
     }
 
@@ -347,38 +312,33 @@ constructor(
     // CABIN BOY COLIN
     // =========================================================================
 
-    private suspend fun ProtectedAccess.colinSickDialogue(npc: Npc) {
-        if (player.questStage < 4) {
-            npcSay(npc, "worried", "I'm sorry, mermaid lady! I didn't mean it!")
-            return
+    private suspend fun ProtectedAccess.colinSickDialogue(npc: Npc) = startDialogue(npc) {
+        if (questStage < 4) {
+            chatNpc(worried, "I'm sorry, mermaid lady! I didn't mean it!")
         }
-        when (player.questStage) {
+        when (questStage) {
             4, 5 -> {
-                npcSay(npc, "worried",
+                chatNpc(worried,
                     "I was looking through Ithoi's telescope and I saw a mermaid in the water. " +
                         "I shouted something rude and now she's cursed us!")
-                playerSay("Let me take a look through that telescope.")
-                player.setQuestStage(6)
+                mes("Let me take a look through that telescope.")
+                setQuestStage(6)
             }
-            6 -> npcSay(npc, "worried",
-                "She's going to curse us all!")
-            7, 8 -> npcSay(npc, "worried",
-                "Did you talk to the mermaid? Is she still angry?")
+            6 -> chatNpc(worried, "She's going to curse us all!")
+            7, 8 -> chatNpc(worried, "Did you talk to the mermaid? Is she still angry?")
             9 -> {
-                playerSay("I looked through the telescope. It's not a mermaid — it's an ogre named Bugs!")
-                npcSay(npc, "happy",
+                mes("I looked through the telescope. It's not a mermaid — it's an ogre named Bugs!")
+                chatNpc(happy,
                     "An ogre? Not a mermaid? Oh thank goodness! I feel so silly! " +
                         "And I think I'm feeling better already!")
-                if (player.questStage == 8) player.setQuestStage(9)
+                if (questStage == 8) setQuestStage(9)
             }
-            in 10..15 -> npcSay(npc, "happy",
-                "An ogre! I can't believe I was scared of an ogre child!")
-            16 -> npcSay(npc, "happy",
-                "I'm taking over the boat to Rimmington! Captain Tock promoted me!")
+            in 10..15 -> chatNpc(happy, "An ogre! I can't believe I was scared of an ogre child!")
+            16 -> chatNpc(happy, "I'm taking over the boat to Rimmington! Captain Tock promoted me!")
         }
     }
 
-    private suspend fun ProtectedAccess.colinDialogue(npc: Npc) {
+    private suspend fun ProtectedAccess.colinDialogue(npc: Npc) = startDialogue(npc) {
         colinSickDialogue(npc)
     }
 
@@ -386,52 +346,44 @@ constructor(
     // GNOCCHI THE COOK
     // =========================================================================
 
-    private suspend fun ProtectedAccess.gnocciSickDialogue(npc: Npc) {
-        if (player.questStage < 4) {
-            npcSay(npc, "worried", "Obby-lobby! We're all cursed! It's the demon doll!")
-            return
+    private suspend fun ProtectedAccess.gnocciSickDialogue(npc: Npc) = startDialogue(npc) {
+        if (questStage < 4) {
+            chatNpc(worried, "Obby-lobby! We're all cursed! It's the demon doll!")
         }
-        when (player.questStage) {
+        when (questStage) {
             4, 5 -> {
-                npcSay(npc, "worried",
+                chatNpc(worried,
                     "I found a creepy doll washed up on the beach. I buried it near the fishing spot, " +
                         "but I think it's cursed!")
-                playerSay("Let me take a look at this doll.")
-                player.setQuestStage(6)
+                mes("Let me take a look at this doll.")
+                setQuestStage(6)
             }
-            6 -> npcSay(npc, "worried",
-                "It's that doll! I knew it was possessed!")
-            7, 8 -> npcSay(npc, "worried",
-                "Did you find the doll? Is it still cursed?")
+            6 -> chatNpc(worried, "It's that doll! I knew it was possessed!")
+            7, 8 -> chatNpc(worried, "Did you find the doll? Is it still cursed?")
             9 -> {
-                playerSay("I dug up what you buried. It's a clockwork toy! " +
+                mes("I dug up what you buried. It's a clockwork toy! " +
                     "Gears and springs — nothing demonic about it!")
-                npcSay(npc, "happy",
+                chatNpc(happy,
                     "A toy? Obby-lobby! All that fuss over a child's plaything! " +
                         "I feel so relieved — and my stomach feels better too!")
-                if (player.questStage == 8) player.setQuestStage(9)
+                if (questStage == 8) setQuestStage(9)
             }
-            9 -> npcSay(npc, "happy",
-                "A clockwork toy! Who'd have thought!")
+            9 -> chatNpc(happy, "A clockwork toy! Who'd have thought!")
             in 10..11 -> {
-                npcSay(npc, "neutral",
+                chatNpc(neutral,
                     "You know, Ithoi cooked the meal that night. He made a big pot of stew. " +
                         "I woke up feeling sick just hours after dinner. " +
                         "Ithoi claimed he was fine the next morning though...")
-                npcSay(npc, "neutral",
-                    "Maybe you should talk to him.")
-                player.setQuestStage(11)
+                chatNpc(neutral, "Maybe you should talk to him.")
+                setQuestStage(11)
             }
-            12 -> npcSay(npc, "neutral",
-                "Ithoi cooked the dinner. That's when we all got sick.")
-            in 13..15 -> npcSay(npc, "angry",
-                "Ithoi! He poisoned our own stew!")
-            16 -> npcSay(npc, "happy",
-                "Obby-lobby! No more curses, just good cooking! Thanks to you!")
+            12 -> chatNpc(neutral, "Ithoi cooked the dinner. That's when we all got sick.")
+            in 13..15 -> chatNpc(angry, "Ithoi! He poisoned our own stew!")
+            16 -> chatNpc(happy, "Obby-lobby! No more curses, just good cooking! Thanks to you!")
         }
     }
 
-    private suspend fun ProtectedAccess.gnocciDialogue(npc: Npc) {
+    private suspend fun ProtectedAccess.gnocciDialogue(npc: Npc) = startDialogue(npc) {
         gnocciSickDialogue(npc)
     }
 
@@ -439,21 +391,19 @@ constructor(
     // ITHOI THE NAVIGATOR — Boss Fight
     // =========================================================================
 
-    private suspend fun ProtectedAccess.ithoiBossDialogue(npc: Npc) {
-        if (player.questStage < 14) {
+    private suspend fun ProtectedAccess.ithoiBossDialogue(npc: Npc) = startDialogue(npc) {
+        if (questStage < 14) {
             mes("Ithoi glares at you menacingly, but doesn't attack.")
-            return
         }
-        if (player.questStage >= 15) {
+        if (questStage >= 15) {
             mes("Ithoi lies defeated on the ground.")
-            return
         }
 
         mes("Ithoi the Navigator attacks! He hurls bolts of magical energy at you!")
-        npcSay(npc, "angry",
+        chatNpc(angry,
             "You think you can stop me, you meddlesome fool? " +
                 "I'll drown you just like I sank those ships!")
-        player.setQuestStage(15)
+        setQuestStage(15)
     }
 
     // =========================================================================
@@ -461,7 +411,7 @@ constructor(
     // =========================================================================
 
     private suspend fun ProtectedAccess.completeQuest() {
-        player.setQuestStage(16)
+        setQuestStage(16)
         mes("Congratulations! You have completed <col=00ff00>The Corsair Curse</col>!")
         mes("You are awarded <col=ffff00>2 Quest Points</col>!")
         mes("<col=ffff00>Rewards:</col>")
@@ -475,30 +425,7 @@ constructor(
     // Dialogue helpers
     // =========================================================================
 
-    private suspend fun ProtectedAccess.npcSay(
-        npc: Npc,
-        mood: String,
-        text: String,
-    ) {
-        Dialogue.chatNpc(npc, selectMoodAnim(mood), text)
-    }
-
-    private suspend fun ProtectedAccess.playerSay(text: String) {
-        mes("You say: $text")
-    }
-
-    private fun selectMoodAnim(mood: String): Int {
-        return when (mood) {
-            "happy" -> DIALOGUE_HAPPY
-            "angry" -> DIALOGUE_ANGRY
-            "sad" -> DIALOGUE_SAD
-            "scared" -> DIALOGUE_SCARED
-            "ashamed" -> DIALOGUE_ASHAMED
-            "worried" -> DIALOGUE_WORRIED
-            else -> DIALOGUE_NEUTRAL
-        }
-    }
-
+    
     private suspend fun ProtectedAccess.choice2(
         opt1: String, val1: Int,
         opt2: String, val2: Int,
@@ -506,19 +433,12 @@ constructor(
         mes("Choose an option:")
         mes("1. $opt1")
         mes("2. $opt2")
-        return val1
+        return 1
     }
 
     companion object {
         // Quest dialogue animations
-        private const val DIALOGUE_HAPPY = 588
-        private const val DIALOGUE_NEUTRAL = 590
-        private const val DIALOGUE_ANGRY = 614
-        private const val DIALOGUE_SAD = 610
-        private const val DIALOGUE_SCARED = 602
-        private const val DIALOGUE_ASHAMED = 606
-        private const val DIALOGUE_WORRIED = 600
-
+                                                        
         // Key coordinates
         private val COORDS_FERRY_RIMMINGTON = CoordGrid(2965, 3240, 0)
         private val COORDS_CORSAIR_COVE_DOCK = CoordGrid(2548, 2955, 0)

@@ -1,0 +1,473 @@
+# Catherby NPC Spawns
+
+# Arhein → sym: arhein
+[[spawn]]
+npc = 'arhein'
+coords = '0_43_53_51_38'
+direction = 's'
+
+# Banker → sym: misc_banker
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_43_53_55_51'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_43_53_57_51'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_42_54_33_39'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_42_54_34_39'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_43_53_59_51'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_42_54_36_39'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_42_54_38_40'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_42_54_39_39'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_42_54_41_39'
+direction = 's'
+[[spawn]]
+npc = 'misc_banker'
+coords = '0_42_54_41_40'
+direction = 's'
+
+# Bartender → sym: fourdiamonds_bartender
+[[spawn]]
+npc = 'fourdiamonds_bartender'
+coords = '0_42_54_2_37'
+direction = 's'
+walk_range = 2
+
+# Candle maker → sym: candle_maker
+[[spawn]]
+npc = 'candle_maker'
+coords = '0_43_53_47_47'
+direction = 's'
+walk_range = 2
+
+# Chicken → sym: chicken
+[[spawn]]
+npc = 'chicken'
+coords = '0_42_55_45_41'
+direction = 's'
+walk_range = 5
+
+# Council workman → sym: man
+[[spawn]]
+npc = 'man'
+coords = '0_41_56_31_7'
+direction = 's'
+walk_range = 1
+
+# Dantaera → sym: dantaera
+[[spawn]]
+npc = 'dantaera'
+coords = '0_43_54_57_9'
+direction = 's'
+walk_range = 2
+
+# Ellena → sym: NOT FOUND
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_44_53_43_38'
+direction = 's'
+walk_range = 3
+
+# Estate agent → sym: poh_estate_agent
+[[spawn]]
+npc = 'poh_estate_agent'
+coords = '0_42_54_49_45'
+direction = 's'
+walk_range = 2
+
+# Flax keeper → sym: diary_flax_keeper
+[[spawn]]
+npc = 'diary_flax_keeper'
+coords = '0_42_53_55_53'
+direction = 's'
+walk_range = 2
+
+# Fox → sym: viking_fox
+[[spawn]]
+npc = 'viking_fox'
+coords = '0_42_56_48_9'
+direction = 's'
+walk_range = 1
+
+# Giant bat → sym: giant
+[[spawn]]
+npc = 'giant'
+coords = '0_43_53_0_16'
+direction = 's'
+walk_range = 7
+[[spawn]]
+npc = 'giant'
+coords = '0_43_53_0_3'
+direction = 's'
+walk_range = 7
+[[spawn]]
+npc = 'giant'
+coords = '0_43_53_5_10'
+direction = 's'
+walk_range = 5
+
+# Gossip → sym: wom_gossip
+[[spawn]]
+npc = 'wom_gossip'
+coords = '0_42_55_53_36'
+direction = 's'
+walk_range = 4
+
+# Guard → sym: guarddog
+[[spawn]]
+npc = 'guarddog'
+coords = '0_42_55_53_42'
+direction = 's'
+walk_range = 5
+[[spawn]]
+npc = 'guarddog'
+coords = '0_42_54_47_13'
+direction = 's'
+walk_range = 3
+[[spawn]]
+npc = 'guarddog'
+coords = '0_42_54_47_13'
+direction = 's'
+walk_range = 3
+
+# Harry → sym: harry
+[[spawn]]
+npc = 'harry'
+coords = '0_44_53_18_51'
+direction = 's'
+walk_range = 3
+
+# Hickton → sym: hickton
+[[spawn]]
+npc = 'hickton'
+coords = '0_44_53_7_51'
+direction = 's'
+walk_range = 2
+
+# Highwayman → sym: highwayman
+[[spawn]]
+npc = 'highwayman'
+coords = '0_42_55_49_0'
+direction = 's'
+walk_range = 11
+[[spawn]]
+npc = 'highwayman'
+coords = '0_42_55_61_5'
+direction = 's'
+walk_range = 5
+
+# Hobbes → sym: hobbes_the_butler
+[[spawn]]
+npc = 'hobbes_the_butler'
+coords = '0_42_55_50_56'
+direction = 's'
+walk_range = 3
+
+# Louisa → sym: louisa_the_cook
+[[spawn]]
+npc = 'louisa_the_cook'
+coords = '0_42_55_48_58'
+direction = 's'
+walk_range = 2
+
+# Man → sym: man
+[[spawn]]
+npc = 'man'
+coords = '0_42_54_4_32'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'man'
+coords = '0_42_54_6_39'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'man'
+coords = '0_42_54_10_35'
+direction = 's'
+walk_range = 5
+[[spawn]]
+npc = 'man'
+coords = '0_43_53_50_41'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'man'
+coords = '0_42_54_25_24'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'man'
+coords = '0_43_53_53_37'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'man'
+coords = '0_44_53_1_50'
+direction = 's'
+walk_range = 5
+
+# Phantuwti Fanstuwi Farsight → sym: NOT FOUND
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_42_54_14_17'
+direction = 's'
+walk_range = 2
+
+# Pierre → sym: pierre_the_family_dog_handler
+[[spawn]]
+npc = 'pierre_the_family_dog_handler'
+coords = '0_42_55_61_56'
+direction = 's'
+walk_range = 5
+
+# Poison Salesman → sym: poison_salesman
+[[spawn]]
+npc = 'poison_salesman'
+coords = '0_42_54_8_38'
+direction = 's'
+walk_range = 4
+
+# Rat → sym: rat
+[[spawn]]
+npc = 'rat'
+coords = '0_42_55_37_60'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'rat'
+coords = '0_42_55_44_54'
+direction = 's'
+walk_range = 8
+[[spawn]]
+npc = 'rat'
+coords = '0_42_55_43_56'
+direction = 's'
+walk_range = 6
+[[spawn]]
+npc = 'rat'
+coords = '0_42_55_45_51'
+direction = 's'
+walk_range = 8
+[[spawn]]
+npc = 'rat'
+coords = '0_42_55_44_49'
+direction = 's'
+walk_range = 10
+
+# Renegade Knight → sym: renegade_knight
+[[spawn]]
+npc = 'renegade_knight'
+coords = '0_43_53_14_6'
+direction = 's'
+walk_range = 3
+[[spawn]]
+npc = 'renegade_knight'
+coords = '0_43_53_15_7'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'renegade_knight'
+coords = '0_43_53_19_8'
+direction = 's'
+walk_range = 4
+
+# Seer → sym: seer
+[[spawn]]
+npc = 'seer'
+coords = '0_42_54_14_18'
+direction = 's'
+walk_range = 5
+[[spawn]]
+npc = 'seer'
+coords = '0_42_54_17_17'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'seer'
+coords = '0_42_54_27_15'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'seer'
+coords = '0_42_54_27_30'
+direction = 's'
+walk_range = 4
+
+# Sheep → sym: sheep_shearer_the_thing
+[[spawn]]
+npc = 'sheep_shearer_the_thing'
+coords = '0_42_55_46_39'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'sheep_shearer_the_thing'
+coords = '0_42_55_47_42'
+direction = 's'
+walk_range = 5
+[[spawn]]
+npc = 'sheep_shearer_the_thing'
+coords = '0_42_55_48_40'
+direction = 's'
+walk_range = 5
+
+# Sinclair Guard dog → sym: dog
+[[spawn]]
+npc = 'dog'
+coords = '0_42_55_61_60'
+direction = 's'
+walk_range = 2
+
+# Sir Lucan → sym: sir_lucan
+[[spawn]]
+npc = 'sir_lucan'
+coords = '0_43_54_2_59'
+direction = 's'
+walk_range = 1
+
+# Sir Palomedes → sym: sir_palomedes
+[[spawn]]
+npc = 'sir_palomedes'
+coords = '0_43_54_0_53'
+direction = 's'
+walk_range = 5
+
+# Stanford → sym: stanford_the_gardener
+[[spawn]]
+npc = 'stanford_the_gardener'
+coords = '0_42_55_41_57'
+direction = 's'
+walk_range = 3
+
+# The 'Wedge' → sym: NOT FOUND
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_43_54_8_20'
+direction = 's'
+walk_range = 3
+
+# Tool Leprechaun → sym: NOT FOUND
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_44_53_40_43'
+direction = 's'
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_43_54_63_10'
+direction = 's'
+
+# Town crier → sym: pmod_town_crier_varrock
+[[spawn]]
+npc = 'pmod_town_crier_varrock'
+coords = '0_42_54_51_24'
+direction = 's'
+walk_range = 3
+
+# Trader Crewmember → sym: NOT FOUND
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_43_53_45_22'
+direction = 's'
+walk_range = 1
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_43_53_47_22'
+direction = 's'
+walk_range = 1
+
+# Tramp → sym: tramp
+[[spawn]]
+npc = 'tramp'
+coords = '0_41_54_59_28'
+direction = 's'
+walk_range = 3
+
+# Unicorn → sym: unicorn
+[[spawn]]
+npc = 'unicorn'
+coords = '0_42_53_21_58'
+direction = 's'
+[[spawn]]
+npc = 'unicorn'
+coords = '0_43_54_26_14'
+direction = 's'
+walk_range = 8
+[[spawn]]
+npc = 'unicorn'
+coords = '0_43_54_41_7'
+direction = 's'
+walk_range = 4
+
+# Vanessa → sym: NOT FOUND
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_44_54_4_5'
+direction = 's'
+
+# Vestri → sym: NOT FOUND
+[[spawn]]
+npc = 'NOT FOUND'
+coords = '0_44_54_4_30'
+direction = 's'
+walk_range = 4
+
+# Wolf → sym: wolf
+[[spawn]]
+npc = 'wolf'
+coords = '0_41_56_29_2'
+direction = 's'
+walk_range = 3
+
+# Woman → sym: woman
+[[spawn]]
+npc = 'woman'
+coords = '0_42_54_2_33'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'woman'
+coords = '0_42_54_4_38'
+direction = 's'
+walk_range = 3
+[[spawn]]
+npc = 'woman'
+coords = '0_42_54_7_39'
+direction = 's'
+walk_range = 4
+[[spawn]]
+npc = 'woman'
+coords = '0_42_54_8_40'
+direction = 's'
+walk_range = 3
+[[spawn]]
+npc = 'woman'
+coords = '0_42_54_10_40'
+direction = 's'
+walk_range = 1
+[[spawn]]
+npc = 'woman'
+coords = '0_44_53_4_51'
+direction = 's'
+walk_range = 4

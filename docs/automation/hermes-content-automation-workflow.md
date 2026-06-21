@@ -168,7 +168,7 @@ When promoting:
 
 ```bash
 # Write to correct module path
-scp <file> ct175:<rsmod>/content/other/npc-drops/src/main/kotlin/.../tables/
+scp <file> ct123:<rsmod>/content/other/npc-drops/src/main/kotlin/.../tables/
 
 # Update registration (add to NpcDropTablesScript.kt startup)
 # Remove inline function if refactoring
