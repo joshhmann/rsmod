@@ -2,6 +2,36 @@
 # Format: plane_regionX_regionY_localX_localY
 
 [[spawn]]
-loc = 'bank_deposit_box'
-coords = '0_48_50_19_45' # Outside Draynor Bank (3091, 3245)
-direction = 'east'
+loc = "bank_deposit_box"
+coords = "0_48_50_19_45" # Outside Draynor Bank (3091, 3245)
+direction = "east"
+
+# ============================================
+# Draynor Mining Rocks - Copper & Tin
+# South of Draynor Village, near river crossing
+# Region: 48_50 (world 3072-3135, 3200-3263)
+# ============================================
+
+[[spawn]]
+loc = "copperrock1"
+coords = "0_48_50_34_33" # (3106, 3233)
+
+[[spawn]]
+loc = "copperrock2"
+coords = "0_48_50_36_36" # (3108, 3236)
+
+[[spawn]]
+loc = "copperrock1"
+coords = "0_48_50_32_39" # (3104, 3239)
+
+[[spawn]]
+loc = "tinrock1"
+coords = "0_48_50_23_34" # (3095, 3234)
+
+[[spawn]]
+loc = "tinrock2"
+coords = "0_48_50_21_38" # (3093, 3238)
+
+[[spawn]]
+loc = "tinrock1"
+coords = "0_48_50_26_41" # (3098, 3241)
