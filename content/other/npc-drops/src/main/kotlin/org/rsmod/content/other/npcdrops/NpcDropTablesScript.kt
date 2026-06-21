@@ -29,8 +29,8 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         registerGiantRat()
         GuardDropTables.registerAll(registry)
         registerScorpion()
-        registerImp()
-        registerDarkWizard()
+        ImpDropTables.registerAll(registry)
+        DarkWizardDropTables.registerAll(registry)
         registerKingBlackDragon()
         registerKalphiteQueen()
 
@@ -50,6 +50,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         DwarfDropTables.registerAll(registry)
         SkeletonDropTables.registerAll(registry)
         BatDropTables.registerAll(registry)
+        RatDropTables.registerAll(registry)
     }
 
     // -----------------------------------------------------------------------
@@ -215,54 +216,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         registry.register(DropTableNpcs.scorpion, scorpionTable)
     }
 
-    // -----------------------------------------------------------------------
-    // Imp
-    // Drop table source: https://oldschool.runescape.wiki/w/Imp
-    // Always: Nothing (no guaranteed drops)
-    // -----------------------------------------------------------------------
-    private fun registerImp() {
-        val impTable = dropTable {
-            // Imp has no guaranteed drops - only random loot
-            table("Other", weight = 1) {
-                item(objs.coins, quantity = 1..10, weight = 20) // TODO: wiki-validate drop rates
-            }
-        }
-        registry.register(DropTableNpcs.imp, impTable)
-    }
 
-    // -----------------------------------------------------------------------
-    // Dark Wizard
-    // Drop table source: https://oldschool.runescape.wiki/w/Dark_wizard
-    // Always: Bones
-    // -----------------------------------------------------------------------
-    private fun registerDarkWizard() {
-        val wizardTable = dropTable {
-            always(objs.bones)
-
-            // Runes and equipment
-            table("Loot", weight = 1) {
-                item(
-                    objs.waterrune,
-                    quantity = 5..15,
-                    weight = 15,
-                ) // TODO: wiki-validate drop rates
-                item(objs.bodyrune, quantity = 5..15, weight = 15)
-                item(objs.mindrune, quantity = 5..15, weight = 15)
-                item(objs.earthrune, quantity = 5..15, weight = 10)
-                item(objs.chaosrune, quantity = 2..5, weight = 5)
-                item(objs.naturerune, quantity = 2..5, weight = 3)
-                item(objs.lawrune, quantity = 2..5, weight = 2)
-            }
-        }
-
-        val wizardNpcs: List<NpcType> =
-            listOf(
-                // Note: dark_wizard symbol does not exist in rev 228
-                DropTableNpcs.bearded_dark_wizard,
-                DropTableNpcs.young_dark_wizard,
-            )
-        registry.register(wizardNpcs.distinct(), wizardTable)
-    }
 
     // -----------------------------------------------------------------------
     // King Black Dragon (Boss)
@@ -383,21 +337,6 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         registry.register(DropTableNpcs.kalphite_queen, kqTable)
     }
 
-    // -----------------------------------------------------------------------
-    // Rat (regular, non-giant)
-    // Drop table source: https://oldschool.runescape.wiki/w/Rat
-    // Always: Bones (no random table at rev 228)
-    // -----------------------------------------------------------------------
-    private fun registerRat() {
-        val ratTable = dropTable {
-            always(objs.bones)
-            // Rat has no random loot table at rev 228.
-        }
-
-        val ratNpcs: List<NpcType> =
-            listOf(DropTableNpcs.rat, DropTableNpcs.rat)
-        registry.register(ratNpcs.distinct(), ratTable)
-    }
 
     // -----------------------------------------------------------------------
     // Spider / Giant Spider
