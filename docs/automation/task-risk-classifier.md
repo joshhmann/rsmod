@@ -197,3 +197,84 @@ The Task Risk Classifier provides a structured, auditable, and configurable way 
 > **"Can this task run safely without human supervision?"**
 
 By mapping content types to risk levels and risk levels to execution modes, the Night Run automation framework balances **efficiency** (fully autonomous for safe tasks) with **safety** (mandatory human approval for dangerous operations). This layered approach is essential for operating reliably in production environments where mistakes are costly.
+
+---
+
+## 7. Pre-Flight Report Requirement (v3.4)
+
+**Before writing any code**, every dispatched worker must produce a short pre-flight report as a card comment within the first 10 iterations.
+
+### Mandatory Pre-Flight Fields
+
+| Field | Description |
+|:------|:------------|
+| **target_host** | Where the implementation lives (always `ct123`) |
+| **repo_path** | Full path to the rsmod project |
+| **files_searched** | Exact `find` or `grep` commands and their output |
+| **existing_implementation** | Was code found? Cite exact file paths |
+| **module_path** | Gradle module path for compile (e.g., `:content:other:npc-drops`) |
+| **compile_command** | Exact `./gradlew` command for the relevant module |
+| **decision** | One of: `CLOSE_ALREADY_EXISTS`, `PATCH_SMALL_GAP`, `PROCEED_IMPLEMENT`, `SPEC_FIRST`, `BLOCK_NEEDS_HUMAN` |
+
+### When Pre-Flight Fires
+
+| Condition | Action |
+|:----------|:-------|
+| 0-10 iterations: report posted | Continue normally |
+| 10 iterations: no report | Orchestrator blocks card with MISSING_PREFLIGHT |
+| Report finds target exists | Close card as CLOSE_ALREADY_EXISTS, cite evidence |
+| Report finds partial gaps | Scope to smallest patch, create patch card |
+
+---
+
+## 8. Iteration Budget Integration (v3.4)
+
+The task risk level determines the **max allowed iterations** before the card is blocked for human review.
+
+| Risk Level | Max Iterations | Pre-Flight Deadline | File Change Deadline |
+|:----------:|:--------------:|:-------------------:|:--------------------:|
+| 1 (Documentation) | 5 | — | 5 |
+| 2 (Low) | 15 | 10 | 15 |
+| 3 (Moderate) | 30 | 10 | 25 |
+| 4 (High) | 50 (spec only) | — | 15 (spec) |
+| 5 (Dangerous) | 50 (spec only) | — | 30 (spec) |
+
+### Budget Enforcement
+
+- Iteration count is tracked per card run
+- When deadline is exceeded → card blocked with specific stop condition
+- 90 iterations is a **systemic failure** — triggers orchestration review
+- See `docs/automation/task-sizing-policy.md` for full iteration guard rules
+
+---
+
+## 9. Already-Exists Closure Protocol (v3.4)
+
+When pre-flight discovers existing implementation:
+
+### Steps
+
+1. **Do NOT write code** — the implementation already exists
+2. **Cite evidence** — post file paths in a card comment:
+   ```bash
+   find content/ -name "*.kt" -path "*<module>*" 2>/dev/null
+   git log --oneline -5 -- content/<module>/
+   ```
+3. **Close the card** with decision CLOSE_ALREADY_EXISTS
+4. Optionally create a **validation card** if the existing code needs testing
+
+### Example
+
+```yaml
+card: "Implement bank booth handler"
+pre-flight:
+  target_host: ct123
+  files_searched: find content/ -name "BankBooth*"
+  existing: true
+  paths:
+    - content/objects/bank/BankBooth.kt
+    - content/objects/bank/Banker.kt
+    - content/objects/bank/BankOpenScript.kt
+  decision: CLOSE_ALREADY_EXISTS
+  action: Close card, spawn validation card
+```

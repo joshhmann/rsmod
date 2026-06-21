@@ -3,6 +3,7 @@ package org.rsmod.content.skills.prayer.scripts
 import jakarta.inject.Inject
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
+import org.rsmod.api.script.onOpNpc1
 import org.rsmod.api.type.refs.npc.NpcReferences
 import org.rsmod.game.entity.Npc
 import org.rsmod.plugin.scripts.PluginScript
@@ -15,10 +16,10 @@ import org.rsmod.plugin.scripts.ScriptContext
 class Priest @Inject constructor() : PluginScript() {
     override fun ScriptContext.startup() {
         // Lumbridge Church Priest (Father Aereck) is handled in RestlessGhost.kt
-        // onOpNpc1(PrayerNpcRefs.lumbridge_priest) { lumbridgePriestDialogue(it.npc) }
+        onOpNpc1(PrayerNpcRefs.lumbridge_priest) { lumbridgePriestDialogue(it.npc) }
 
         // Varrock Church Priest (Father Lawrence) is handled in RomeoJuliet.kt
-        // onOpNpc1(PrayerNpcRefs.varrock_priest) { varrockPriestDialogue(it.npc) }
+        onOpNpc1(PrayerNpcRefs.varrock_priest) { varrockPriestDialogue(it.npc) }
     }
 
     private suspend fun ProtectedAccess.lumbridgePriestDialogue(npc: Npc) =

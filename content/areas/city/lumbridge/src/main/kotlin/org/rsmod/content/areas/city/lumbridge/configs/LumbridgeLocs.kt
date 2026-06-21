@@ -1,3 +1,5 @@
+@file:Suppress("unused", "SpellCheckingInspection")
+
 package org.rsmod.content.areas.city.lumbridge.configs
 
 import org.rsmod.api.config.refs.content
@@ -27,10 +29,15 @@ object LumbridgeLocs : LocReferences() {
     // Generic open variants used as next_loc_stage targets
     val generic_double_door_left_open = find("opencastledoubledoorl")
     val generic_double_door_right_open = find("opencastledoubledoorr")
+
+    // Lumbridge castle tall door (upper floor)
+    val castle_tall_door_closed = find("fai_varrock_door_taller")
+    val castle_tall_door_open = find("fai_varrock_door_open_taller")
 }
 
 internal object LumbridgeDoorEdits : LocEditor() {
     init {
+        // Castle inner double doors — left
         edit(lumbridge_locs.castle_double_door_left) {
             param[params.next_loc_stage] = lumbridge_locs.generic_double_door_left_open
             param[params.opensound] = synths.door_open
@@ -40,6 +47,18 @@ internal object LumbridgeDoorEdits : LocEditor() {
             param[params.next_loc_stage] = lumbridge_locs.generic_double_door_right_open
             param[params.opensound] = synths.door_open
             contentGroup = content.closed_right_door
+        }
+
+        // Castle tall door (upper floor) — open/close pair
+        edit(lumbridge_locs.castle_tall_door_closed) {
+            param[params.next_loc_stage] = lumbridge_locs.castle_tall_door_open
+            param[params.opensound] = synths.door_open
+            contentGroup = content.closed_single_door
+        }
+        edit(lumbridge_locs.castle_tall_door_open) {
+            param[params.next_loc_stage] = lumbridge_locs.castle_tall_door_closed
+            param[params.closesound] = synths.door_close
+            contentGroup = content.opened_single_door
         }
     }
 }

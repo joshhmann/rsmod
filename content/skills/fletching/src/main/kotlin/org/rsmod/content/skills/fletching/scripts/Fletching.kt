@@ -4,8 +4,8 @@ package org.rsmod.content.skills.fletching.scripts
 // Fletching is fully inventory-based (no loc interaction needed).
 // Five interaction types:
 //
-// 1. KNIFE ON LOG → unstrung bow (shortbow only - longbow selection TODO)
-//    onOpHeldU(log, objs.knife) — delay 4 ticks per bow, uses countDialog Make-X.
+// 1. KNIFE ON LOG → unstrung bow (shortbow or longbow via choice dialog)
+//    onOpHeldU(log, objs.knife) — delay 4 ticks per bow, uses choice2 + countDialog.
 //
 // 2. BOWSTRING ON UNSTRUNG BOW → strung bow
 //    onOpHeldU(unstrung_bow, objs.bowstring) — delay 4 ticks per bow, uses countDialog Make-X.
@@ -77,9 +77,7 @@ class Fletching
 constructor(private val xpMods: XpModifiers, private val objRepo: ObjRepository) : PluginScript() {
 
     override fun ScriptContext.startup() {
-        // ---- Knife on log → unstrung bow (shortbow) ----
-        // Each log produces a shortbow; pressing again produces a longbow.
-        // For simplicity without a menu: knife + log → shortbow_u (lower level req).
+        // ---- Knife on log → unstrung bow (choice: shortbow or longbow) ----
         for (def in BOW_DEFS) {
             onOpHeldU(def.log, objs.knife) { fletchBow(def) }
         }
@@ -106,8 +104,20 @@ constructor(private val xpMods: XpModifiers, private val objRepo: ObjRepository)
     // ---- Fletching helpers ----
 
     private suspend fun ProtectedAccess.fletchBow(def: BowDef) {
-        if (player.fletchingLvl < def.shortbowLevelReq) {
-            mes("You need a Fletching level of ${def.shortbowLevelReq} to fletch this bow.")
+        val isLongbow =
+            choice2(
+                choice1 = "Shortbow",
+                result1 = false,
+                choice2 = "Longbow",
+                result2 = true,
+                title = "What kind of bow would you like to fletch?",
+            )
+        val levelReq = if (isLongbow) def.longbowLevelReq else def.shortbowLevelReq
+        val unstrungBow = if (isLongbow) def.longbow_u else def.shortbow_u
+        val xp = if (isLongbow) def.longbowXp else def.shortbowXp
+        if (player.fletchingLvl < levelReq) {
+            val name = if (isLongbow) "longbow" else "shortbow"
+            mes("You need a Fletching level of $levelReq to fletch this $name.")
             return
         }
         if (!inv.contains(def.log)) {
@@ -130,9 +140,9 @@ constructor(private val xpMods: XpModifiers, private val objRepo: ObjRepository)
             }
             anim(fletchSeqs.human_fletching_knife)
             delay(4)
-            val xp = def.shortbowXp * xpMods.get(player, stats.fletching)
-            statAdvance(stats.fletching, xp)
-            invAddOrDrop(objRepo, def.shortbow_u)
+            val actualXp = xp * xpMods.get(player, stats.fletching)
+            statAdvance(stats.fletching, actualXp)
+            invAddOrDrop(objRepo, unstrungBow)
             mes("You fletch the logs into an unstrung bow.")
         }
     }

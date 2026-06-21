@@ -96,3 +96,8 @@ direction = 'south'
 npc = 'generalassistant6'
 coords = '0_46_50_6_30'
 direction = 'south'
+
+# Port Sarim - Captain Tobias (Boat to Karamja)
+[[spawn]]
+npc = 'captain_tobias'
+coords = '0_47_50_28_18'

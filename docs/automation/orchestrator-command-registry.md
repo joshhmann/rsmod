@@ -299,6 +299,63 @@ Update worklog/status/roadmap from latest completed work.
 **Validation:** None (docs only)
 **Documentation:** Updated worklog + status matrix
 
+
+### RS_RECLASSIFY
+Reclassify existing cards by size, mark broad/L/XL cards for spec-first or decomposition.
+
+**Expansion:**
+1. Query kanban board for ready/running cards
+2. For each card, classify by size (XS/S/M/L/XL)
+3. If L or XL or trigger phrases found:
+   - Comment on card with reclassification notice
+   - Block the card
+   - Create child cards (decomposed S/M tasks) or spec-first card
+4. Report: cards reclassified, new cards created, decomposition tree
+
+**Workflow:** rsmod-content-orchestrator (reclassification)
+**Mode:** ANY
+**Risk Level:** 2 (planning only)
+**Target Host:** CT123 (card updates)
+**Validation:** Manifest review (children cover parent scope)
+**Documentation:** Reclassification report + card comments
+
+### RS_SIZING_CHECK
+Read a card or task description and return its size class, triggers, and recommended routing.
+
+**Expansion:**
+1. Read card body or task description
+2. Check against auto-decomposition trigger table
+3. Assign size class (XS/S/M/L/XL)
+4. Report: class, trigger matches, recommended routing (dispatch/spec-first/decompose)
+5. If L/XL: recommend decomposition plan
+
+**Workflow:** rsmod-content-orchestrator (planning)
+**Mode:** ANY
+**Risk Level:** 1 (read-only)
+**Target Host:** Local
+**Validation:** None (advisory only)
+**Documentation:** Sizing report only
+
+### RS_DECOMPOSE
+Take a broad card and decompose it into sized child cards with dependency links.
+
+**Expansion:**
+1. Read card body for scope
+2. Identify natural decomposition boundaries (per-region, per-system, per-mechanic)
+3. Create child cards for each piece:
+   - Each child S or M sized
+   - Explicit scope boundaries
+   - Dependency links via parents: []
+4. Block original card until children complete
+5. Report: original card, child cards, dependency tree
+
+**Workflow:** rsmod-content-orchestrator (decomposition)
+**Mode:** ANY
+**Risk Level:** 2 (planning only)
+**Target Host:** CT123 (card updates)
+**Validation:** Children cover parent scope completely
+**Documentation:** Decomposition report
+
 ## Command-to-Workflow Mapping
 
 | Command | Primary Workflow | Secondary Workflow |
@@ -315,6 +372,9 @@ Update worklog/status/roadmap from latest completed work.
 | RS_NIGHT_LIMITED | rsmod-content-orchestrator | -- |
 | RS_BLOCKED_REVIEW | rsmod-content-orchestrator | -- |
 | RS_WORKLOG | rsmod-worklog-updater | -- |
+| RS_RECLASSIFY | rsmod-content-orchestrator | task-sizing-policy |
+| RS_SIZING_CHECK | rsmod-content-orchestrator | task-sizing-policy |
+| RS_DECOMPOSE | rsmod-content-orchestrator | rsmod-content-orchestrator |
 
 ## Usage Rules
 

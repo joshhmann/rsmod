@@ -29,6 +29,7 @@ object FaladorNpcs : NpcReferences() {
     val sir_amik_varze = find("sir_amik_varze") // White Knights leader
     val sir_vyvin = find("sir_vyvin") // White Knight armourer (The Knight's Sword)
     val squire = find("squire") // Squire Asrol - The Knight's Sword quest starter
+    val cook = find("cook") // Castle cook - gives redberry pie for Knight's Sword
 
     // Guards
     val falador_guard = find("fai_falador_guard1")

@@ -1,0 +1,35 @@
+# Varrock East Mine Loc Spawns
+# Format: plane_regionX_regionY_localX_localY
+# Region 51_52: world_x 3264-3327, world_y 3328-3391 (Varrock East / S.E. Mine area)
+
+# Coal rocks (variants 1 and 2)
+[[spawn]]
+loc = 'coalrock1'
+coords = '0_51_52_21_39'  # (3285, 3367) — centre-north of mine
+direction = 'north'
+
+[[spawn]]
+loc = 'coalrock1'
+coords = '0_51_52_26_44'  # (3290, 3372) — east side of mine
+direction = 'north'
+
+[[spawn]]
+loc = 'coalrock2'
+coords = '0_51_52_23_42'  # (3287, 3370) — centre of mine
+direction = 'west'
+
+[[spawn]]
+loc = 'coalrock2'
+coords = '0_51_52_30_36'  # (3294, 3364) — far east, near path
+direction = 'east'
+
+# Mithril rocks (variants 1 and 2)
+[[spawn]]
+loc = 'mithrilrock1'
+coords = '0_51_52_26_45'  # (3290, 3373) — east-north of mine
+direction = 'north'
+
+[[spawn]]
+loc = 'mithrilrock2'
+coords = '0_51_52_30_45'  # (3294, 3373) — far east, scattered
+direction = 'east'

@@ -47,6 +47,31 @@ class PlacedLocExportCommand : CliktCommand(name = "placed-loc-export") {
             arrayOf("48","53","Edgeville general"),
             arrayOf("49","50","Lumbridge south"),
             arrayOf("50","49","Lumbridge swamp south"),
+            // F2P Mining Zones - surface mines
+            arrayOf("51","51","Al Kharid Mine"),
+            arrayOf("52","51","Al Kharid East"),
+            arrayOf("48","50","Draynor Village"),
+            arrayOf("48","51","Draynor South"),
+            arrayOf("46","51","Falador South / Rimmington"),
+            arrayOf("47","51","Falador West / Dwarven Mine entrance"),
+            arrayOf("45","51","Crafting Guild"),
+            arrayOf("49","49","Lumbridge Swamp Central"),
+            arrayOf("49","51","Lumbridge East"),
+            arrayOf("44","46","Karamja North"),
+            arrayOf("44","47","Karamja Volcano"),
+            arrayOf("45","46","Karamja East"),
+            arrayOf("45","47","Karamja Southeast"),
+            arrayOf("49","56","Ice Mountain"),
+            arrayOf("50","56","Ice Mountain East"),
+            arrayOf("50","55","Rune Essence Mine"),
+            arrayOf("48","55","Wilderness Edge"),
+            // Underground mining areas
+            arrayOf("47","152","Dwarven Mine / Mining Guild"),
+            arrayOf("46","152","Dwarven Mine West"),
+            arrayOf("48","152","Dwarven Mine East / Motherlode"),
+            // Wilderness mines
+            arrayOf("48","62","Wilderness Hobgoblin Mine / Resource Area"),
+
         )
 
         echo("Opening cache store...")

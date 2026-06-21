@@ -36,6 +36,8 @@ object PortSarimNpcs : NpcReferences() {
 
     // Monks
     val monk_entrana = find("entrana_monk")
+    // Captain Tobias - boat travel to Karamja
+    val captain_tobias = find("captain_tobias")
 
     // Hobgoblins (Rimmington)
     val rimmington_hobgoblin_1 = find("rimmington_hobgoblin_unarmed_1")
@@ -76,6 +78,7 @@ internal object PortSarimNpcEditor : NpcEditor() {
 
         edit(portsarim_npcs.klarense) { wanderRange = 2 }
         edit(portsarim_npcs.captain_barnaby) { wanderRange = 1 }
+n        edit(portsarim_npcs.captain_tobias) { wanderRange = 1 }
 
         edit(portsarim_npcs.chemist) { moveRestrict = indoors }
 

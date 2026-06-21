@@ -316,3 +316,54 @@ kanban_complete() with structured metadata
 
 - `orchestrator-command-registry.md` -- full command definitions
 - `task-capsule-format.md` -- capsule field reference
+
+---
+
+## Pre-Dispatch Sizing Gate (v3.4)
+
+**Before any card is dispatched**, the orchestrator must classify it by size using `docs/automation/task-sizing-policy.md`.
+
+### Dispatch Decision Flow
+
+```yaml
+Card arrives:
+  1. Classify: XS? S? M? L? XL?
+  2. Check auto-decomposition triggers (see §3 of sizing policy)
+  3. If XL: decompose or spec-first, DO NOT dispatch
+  4. If L: decompose or spec-first
+  5. If S/M: dispatch with pre-flight requirement
+  6. If XS: dispatch without pre-flight
+```
+
+### What Gets Added to Every Card
+
+For S/M dispatch, the orchestrator must add these to the card body:
+
+```yaml
+mandatory:
+  preflight_required: true           # for S/M
+  preflight_files_to_search:         # based on card scope
+    - "find content/ -name '*.kt' -path '*<target>*'"
+    - "git log --oneline -5 -- content/<target>/"
+  compile_command: "./gradlew :<module>:compileKotlin"
+  max_iterations: <see sizing table>
+```
+
+### Sizing Reference
+
+See `docs/automation/task-sizing-policy.md` for:
+- Full class definitions (XS/S/M/L/XL)
+- Auto-decomposition trigger phrases
+- Iteration budget guard tables
+- Already-exists closure protocol
+- Delegation decision tree
+
+### Existing Card Reclassification
+
+When reclassifying existing cards:
+
+1. Read card title + body
+2. Classify by scope and trigger phrases
+3. If L/XL: comment with reclassification notice, block card, create decomposition
+4. If S/M but has pre-flight: add pre-flight requirement to card body
+5. Update NEXT_ACTION.md with reclassification summary

@@ -306,3 +306,55 @@ operator_required: false
 
 ---
 *End of Document 3 — Autonomous Stop Conditions*
+
+---
+
+## 7. Iteration Budget Stop Condition
+
+Added in v3.4. Guards against workers exhausting resources on oversized or already-existing tasks.
+
+### Hard Stop: STOP_BUDGET_EXCEEDED
+
+| Property | Value |
+|:---------|:------|
+| **Identifier** | `STOP_BUDGET_EXCEEDED` |
+| **Trigger** | Worker exceeds the iteration budget for its task size class |
+| **Budget Table** | See `docs/automation/task-sizing-policy.md` §4 |
+| **Exit Code** | 100 |
+| **Response** | Kill worker, write `failure-budget-exceeded.md`, block card |
+
+### Hard Stop: STOP_NO_PREFLIGHT
+
+| Property | Value |
+|:---------|:------|
+| **Identifier** | `STOP_NO_PREFLIGHT` |
+| **Trigger** | 10 iterations without a pre-flight report posted to card comments |
+| **Exit Code** | 101 |
+| **Response** | Block card with reason `MISSING_PREFLIGHT`, tag for human review |
+
+### Hard Stop: STOP_ALREADY_EXISTS
+
+| Property | Value |
+|:---------|:------|
+| **Identifier** | `STOP_ALREADY_EXISTS` |
+| **Trigger** | Worker produced code for a system that already exists on CT 123 |
+| **Exit Code** | 102 |
+| **Response** | Discard code, close card as `CLOSE_ALREADY_EXISTS`, optionally spawn validation card |
+
+### Soft Stop: SOFT_BUDGET_WARNING
+
+| Property | Value |
+|:---------|:------|
+| **Identifier** | `SOFT_BUDGET_WARNING` |
+| **Trigger** | Worker at 75% of iteration budget with no validation result |
+| **Behavior** | Post warning to card comment, allow continuation but flag for post-completion review |
+
+### Integration with Hard Stop Table (Extended)
+
+Add to the Immediate Stop Conditions table:
+
+| # | Condition | Identifier | Trigger | Rationale |
+|---|-----------|------------|---------|-----------|
+| 14 | **Budget exceeded** | `STOP_BUDGET_EXCEEDED` | Worker iteration count > task size class hard cap | Worker caught in loop or oversized task — must break |
+| 15 | **No pre-flight report** | `STOP_NO_PREFLIGHT` | 10 iterations without pre-flight post | Worker skipped reality check — likely burning budget on wrong task |
+| 16 | **Already exists** | `STOP_ALREADY_EXISTS` | Worker wrote code for system found on CT 123 | Worker skipped pre-flight — code is redundant |

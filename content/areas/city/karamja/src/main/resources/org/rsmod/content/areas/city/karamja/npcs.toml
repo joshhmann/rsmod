@@ -1,0 +1,26 @@
+[[spawn]]
+npc = 'luthas'
+coords = '0_46_49_60_59'
+[[spawn]]
+npc = 'customs_officer'
+coords = '0_46_49_15_30'
+[[spawn]]
+npc = 'karamja_man'
+coords = '0_46_49_20_40'
+wander = 3
+[[spawn]]
+npc = 'man4_for_musa_point'
+coords = '0_46_49_30_45'
+wander = 3
+[[spawn]]
+npc = 'gub_musa_child_1'
+coords = '0_46_49_55_50'
+wander = 4
+[[spawn]]
+npc = 'gub_musa_child_2'
+coords = '0_46_49_58_55'
+wander = 4
+[[spawn]]
+npc = 'gub_musa_child_3'
+coords = '0_46_49_53_52'
+wander = 4

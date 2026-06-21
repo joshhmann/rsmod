@@ -175,6 +175,7 @@ object BaseComponents : ComponentReferences() {
     val magic_spellbook_lumbridge_teleport = find("magic_spellbook:lumbridge_teleport")
     val magic_spellbook_superheat = find("magic_spellbook:superheat")
     val magic_spellbook_varrock_teleport = find("magic_spellbook:varrock_teleport")
+    val magic_spellbook_teleport_home_standard = find("magic_spellbook:teleport_home_standard")
     val mainmodal = find("toplevel_osrs_stretch:mainmodal")
     val menu_lj_layer2 = find("menu:lj_layer2")
     val menu_lj_layer1 = find("menu:lj_layer1")
