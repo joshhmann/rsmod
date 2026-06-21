@@ -15,7 +15,7 @@
 
 | Content Category | Confidence | Proven Commits | Notes |
 |-----------------|:----------:|---------------|-------|
-| **Drop tables** | **Level 5** | `8420e7dc`, `3ff81785`, `fb5d6beb`, `f1e0466a` | Proven across 5 phases, 14+ NPC families. Draynor validated (no workflow changes). Ready for batch regional expansion |
+| **Drop tables** | **Level 5** | `8420e7dc`, `3ff81785`, `fb5d6beb`, `f1e0466a` | Proven across 5 phases, 16+ NPC families. Draynor validated (no workflow changes). Ready for batch regional expansion |
 | **Shops** | Level 1 | — | Generator skeleton works. Blocked by missing corpus stock data |
 | **Spells** | Level 1 | — | Corpus too sparse (5 fields). Cache has richer data. Not useful until behavior APIs targeted |
 | **NPC combat defs** | Level 1 | — | Core stats cache-defined. Corpus lacks anim/sound IDs. Low value |

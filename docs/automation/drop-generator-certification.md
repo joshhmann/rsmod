@@ -20,7 +20,7 @@
 
 ## Successful Target Families
 
-14+ NPC families processed across 5 phases + Draynor validation:
+16+ NPC families processed across 5 phases + 3 regions:
 
 | Family | Phase | Status |
 |--------|:-----:|:------:|
@@ -37,6 +37,8 @@
 | Rat | 4 | ✅ Promoted |
 | Wizard | Draynor | ✅ Promoted |
 | Jail Guard | Draynor | ✅ Promoted |
+| Thief | Varrock | ✅ Promoted |
+| Chaos Druid | Varrock | ✅ Promoted |
 | Scorpion | 4 | ✅ Skipped (no corpus value) |
 
 ## Skip Rules

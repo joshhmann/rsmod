@@ -56,6 +56,23 @@ Track which content categories are automated and verified per zone. Used before 
 **Result:** ✅ **WORKFLOW GENERALIZES.** All Draynor-area combat NPCs now have drop handlers.
 No workflow changes, special-casing, or combat behavior changes needed.
 
+## Zone: Varrock (First Regional Batch — ✅ PASSED)
+
+| Category | Status | Notes |
+|----------|--------|-------|
+| **Drop generation pipeline** | 🏆 Certified | Same workflow, no changes needed |
+| **Drop tables — Thief** | ✅ Promoted | New handler (commit dffde286) |
+| **Drop tables — Chaos Druid** | ✅ Promoted | New handler (commit dffde286) |
+| **Drop tables — Guards** | ✅ Already handled | Phase 3 |
+| **Drop tables — Men/Women** | ✅ Already handled | Phase 1.5 |
+| **Drop tables — Sewer NPCs** | ✅ Already handled | Zombies, skeletons, rats, moss giants all covered |
+| **Drop tables — Other** | ✅ Already handled | Barbarians, dark wizards |
+| **Rogue** | ⏭️ Skipped | Wilderness-only per safety rules |
+| **Highwayman** | ⏭️ Skipped | No combat registration |
+
+**Result:** ✅ **FIRST REGIONAL BATCH PASSES.** Workflow unchanged from single-NPC to regional mode.
+2 NPC families promoted, within the 10-family batch cap.
+
 ## Zone: Varrock West (Alternative Second Validation Zone)
 
 | Category | Status | Notes |
