@@ -133,6 +133,26 @@ Most Falador NPCs are non-combat or already covered by generic tables.
 Use this template for new zones:
 
 ```
+
+## Skipped NPC Registry
+
+NPCs that were evaluated and skipped during drop automation batches, with the reasoning and unblock conditions for future revisit.
+
+| NPC | Region | Symbols | Drop Count (Corpus) | Block Reason | Unblock Condition | Batch |
+|-----|--------|---------|:-------------------:|-------------|-------------------|:-----:|
+| Highwayman | Varrock | `highwayman` | Unknown | No combat registration. | Add onNpcHit registration + create table. | Varrock |
+| Rogue | Wilderness | `rogue`, `wilderness_rogue` | Wilderness-only | Wilderness NPC. Looting bags, keys — would need wilderness zone filter. | Wilderness zone handling. | Varrock |
+| Scorpion | Al Kharid | `scorpion` | 6 (all post-2013/wilderness) | All corpus items are post-2013, wilderness-only, or not in rev 233 cache. | No corpus value — not worth revisit. | Al Kharid |
+| Al Kharid Warrior | Al Kharid | `alkharid_warrior` | Unknown | No combat registration (thieving only NPC). | Add onNpcHit registration. | Al Kharid |
+| Bear | Lumbridge/Draynor | `brownbear`, `darkbear`, `brownbear_cub_1`, `brownbear_cub_2` | 0 | Corpus has 0 drops. Existing table is final. | No corpus value — existing table is correct. | Phase 2 |
+| Spider | Lumbridge/Draynor | `spider`, `giantspider1-2`, etc. | Conditional only | Only conditional/clue/loot bag drops. | No corpus value for generic drops. | Phase 2 |
+| Ghost | Lumbridge/Draynor | `ghost`, `ghost2-8` | Wilderness only | Only wilderness-only drops (looting bag) + clues. | Wilderness zone handling. | Phase 2 |
+| Monk | Edgeville | N/A | Unknown | No combat registration. | Add onNpcHit registration. | Edgeville |
+| White Knight | Falador | `white_knight`, `white_knight_yellow_plumes`, `white_knight_green_plumes`, `white_knight_blue_plumes` | 228 | No combat registration (no onNpcHit handler). Drops would never fire. | Add onNpcHit registration in AggressiveNpcCombat or dedicated combat script. Then create WhiteKnightDropTables.kt from corpus (228 items). | Falador |
+| Falador dwarf variants | Falador | `fai_falador_dwarf_normal1`, `fai_falador_dwarf_normal2`, `fai_falador_dwarf_normal3` | 0 (part of Dwarf corpus) | Non-combat city NPCs. No spawns in current Falador TOML. | Verify if cache gives them combat levels. If yes, add to DwarfDropTables registration. | Falador |
+| Falador citizens | Falador | `falador_gardener`, `falador_gardener2`, `falador_workman_young`, `falador_workman_fat`, `falador_banker` | 0 | Non-combat NPCs (shopkeepers, bankers, gardeners). | None expected — these should never be attackable. | Falador |
+| Doric area NPCs | Falador | `falador_doric_area_man1-4`, `falador_doric_area_guard` | 0 | Non-combat zone NPCs. | Verify if they have cache combat levels. Doric area guard could be attackable if cache levels exist. | Falador |
+
 ## Zone: [Name]
 
 | Category | Status | Notes |
