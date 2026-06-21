@@ -5,8 +5,18 @@
 
 ## Type: [drops/skill/shop/zone/quest/minigame/qa/docs]
 
+## Mode: [MANUAL_MODE/ASSISTED_MODE/SAFE_AUTONOMOUS_MODE/NIGHT_RUN_MODE/LOCKDOWN_MODE]
+
+## Risk Level: [1/2/3/4/5]
+
 ## Summary
 <1-3 sentence description>
+
+## Source Worker
+<profile name if cross-profile handoff>
+
+## Applying Worker
+<profile name if different from source>
 
 ## Results
 | Metric | Value |

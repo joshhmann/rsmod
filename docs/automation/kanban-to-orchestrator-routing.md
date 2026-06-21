@@ -155,3 +155,45 @@ When the orchestrator receives a high-level goal (e.g., "Complete all drops for 
 3. Set `parents: []` to express dependencies
 4. Dispatch to the appropriate assignee profiles
 5. Complete its own card with the decomposition summary
+
+---
+
+## Night Run Mode Integration
+
+
+## Night Run Mode Integration
+
+When operating under NIGHT_RUN_MODE, kanban workers receive additional constraints:
+
+### Risk Classification Filter
+Every card is classified using `docs/automation/task-risk-classifier.md` before dispatch:
+- **Level 1-2** → dispatched normally
+- **Level 3** → dispatched with batch limit enforcement (max 10 NPC families, max 5 files per task)
+- **Level 4** → blocked, human-approval card created instead
+- **Level 5** → always blocked, human required
+
+### Night Run Worker Startup
+Workers dispatched during NIGHT_RUN_MODE must check `/root/.night-run-state.json` (if exists) for current mode before proceeding. If the file indicates LOCKDOWN_MODE, the worker exits immediately without executing.
+
+### Metadata Extension for Night Run
+```yaml
+# In card metadata, add:
+risk_level: 3                    # from task-risk-classifier
+mode_allowed: NIGHT_RUN_MODE     # highest mode this task runs in
+batch_remaining: 7               # slot tracking if part of a night batch
+```
+
+### Completion States (Night Run)
+| State | Auto-Approved? | Notes |
+|:------|:--------------:|:------|
+| SANDBOX_STAGED | X | Always allowed |
+| CT123_APPLIED | X | After SCP |
+| CT123_VALIDATED | X | Only if compile + raw-ID pass |
+| COMMITTED | X | Level 1-3 only, within batch limits |
+| DOCUMENTED | X | Required for all night-run tasks |
+
+Policy references:
+- `night-run-policy.md` — autonomous mode policy
+- `task-risk-classifier.md` — risk classification
+- `autonomous-stop-conditions.md` — stop conditions
+- `morning-report-template.md` — report format

@@ -217,3 +217,43 @@ staging/handoffs/kanban-44/
 Target: CT 123, rsmod project.
 Workflow: rsmod-minigame-spec.
 No code changed — spec only. Mai copies, commits.
+
+---
+
+
+## Night Run State Chain Extension
+
+Under NIGHT_RUN_MODE, the completion state chain extends to handle autonomous validation:
+
+| State | Who | Gate | Auto-Approved? |
+|:------|:----|:-----|:--------------:|
+| SANDBOX_STAGED | Source | manifest.yaml present | X |
+| CT123_APPLIED | Mai | Files on target | X |
+| CT123_VALIDATED | Mai | Compile + raw-ID pass | X (must pass) |
+| COMMITTED | Mai | git log confirms | X (Level 1-3 only) |
+| DOCUMENTED | Mai | All docs updated | X |
+
+### Auto-Stop Integration
+If any stop condition from `docs/automation/autonomous-stop-conditions.md` fires during the CT123_APPLIED -> COMMITTED phase:
+1. Stop immediately
+2. Do NOT commit unvalidated changes
+3. Block the card with the stop reason
+4. Write failure to run log (`docs/reports/<date>-failure.md`)
+
+### Rollback on Night Run Failure
+If a night-run commit later fails gameplay QA:
+- Create revert card per `docs/automation/rollback-policy.md`
+- Never auto-revert -- always record reason and create fix task
+- Link to original worklog entry
+
+### Handoff manifest.yaml extension for night run
+```yaml
+# Add to manifest.yaml:
+risk_level: 3
+mode_generated_in: NIGHT_RUN_MODE
+stop_conditions_checked:
+  - compile
+  - raw_id
+  - batch_limit
+batch_slot: 3                      # which slot in the night batch sequence
+```
