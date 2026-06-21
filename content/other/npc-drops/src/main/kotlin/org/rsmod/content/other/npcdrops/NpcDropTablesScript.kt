@@ -27,7 +27,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         registerCow()
         registerChicken()
         registerGiantRat()
-        registerGuard()
+        GuardDropTables.registerAll(registry)
         registerScorpion()
         registerImp()
         registerDarkWizard()
@@ -199,71 +199,6 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         registry.register(giantRatNpcs.distinct(), giantRatTable)
     }
 
-    // -----------------------------------------------------------------------
-    // Guard
-    // Drop table source: https://oldschool.runescape.wiki/w/Guard
-    // Always: Bones
-    // Five equal-weight tables: Armour/Weapons, Ores/Bars, Runes/Talismans, Seeds, Other
-    // TODO: wiki-validate drop rates — Kronos weights used as starting point (rev 184 vs 228)
-    // -----------------------------------------------------------------------
-    private fun registerGuard() {
-        val guardTable = dropTable {
-            always(objs.bones)
-
-            // Armour / Weapons (weight 1 of 5)
-            table("Armour/Weapons", weight = 1) {
-                item(DropTableObjs.iron_dagger, weight = 8)
-                // Iron bolts — not in BaseObjs; using bronze_bolts as placeholder
-                // TODO: add iron_bolts to DropTableObjs once internal name is verified
-                item(
-                    DropTableObjs.bronze_bolts,
-                    quantity = 1..12,
-                    weight = 6,
-                ) // TODO: wiki-validate drop rates (should be iron bolts)
-                item(objs.bronze_arrow, quantity = 1..2, weight = 3)
-                item(DropTableObjs.steel_sword, weight = 1) // TODO: wiki-validate drop rates
-                item(DropTableObjs.steel_med_helm, weight = 1) // TODO: wiki-validate drop rates
-            }
-
-            // Ores / Bars (weight 1 of 5)
-            table("Ores/Bars", weight = 1) { item(DropTableObjs.iron_ore, weight = 1) }
-
-            // Runes / Talismans (weight 1 of 5)
-            table("Runes/Talismans", weight = 1) {
-                item(objs.airrune, quantity = 6..6, weight = 10) // TODO: wiki-validate drop rates
-                item(objs.earthrune, quantity = 3..3, weight = 10) // TODO: wiki-validate drop rates
-                item(objs.firerune, quantity = 2..2, weight = 10) // TODO: wiki-validate drop rates
-                item(objs.chaosrune, quantity = 1..2, weight = 6) // TODO: wiki-validate drop rates
-                item(objs.naturerune, weight = 1)
-            }
-
-            // Seeds (weight 1 of 5) — low-level farming seeds
-            // TODO: wiki-validate drop rates — seed names must match cache internal names
-            table("Seeds", weight = 1) {
-                item(objs.cabbage_seed, quantity = 4..4, weight = 6)
-                // Potato seed, onion seed, tomato seed, sweetcorn seed etc. are not yet in
-                // BaseObjs; add them when their internal names are verified.
-                // TODO: add potato_seed, onion_seed, tomato_seed, sweetcorn_seed to refs
-            }
-
-            // Other (weight 1 of 5)
-            table("Other", weight = 1) {
-                item(objs.coins, quantity = 1..30, weight = 10) // TODO: wiki-validate drop rates
-                item(objs.grain, weight = 10)
-            }
-
-            // Tertiary drops - clue scrolls (1/128 each = 2/128 total)
-            table("Tertiary", weight = 1) {
-                nothing(weight = 126) // 126/128 chance of nothing
-                item(DropTableObjs.trail_clue_beginner, weight = 1) // 1/128 beginner
-                item(DropTableObjs.trail_clue_easy_simple001, weight = 1) // 1/128 easy
-            }
-        }
-
-        val guardNpcs: List<NpcType> =
-            listOf(DropTableNpcs.guard, DropTableNpcs.guard_2, DropTableNpcs.guard_3, DropTableNpcs.deadman_guard_lumbridge)
-        registry.register(guardNpcs.distinct(), guardTable)
-    }
 
     // -----------------------------------------------------------------------
     // Scorpion
