@@ -33,6 +33,7 @@ internal object ManWomanDropTables {
         registry.register(DropTableNpcs.man, table)
         registry.register(DropTableNpcs.man2, table)
         registry.register(DropTableNpcs.man3, table)
+        registry.register(DropTableNpcs.al_kharid_man, table)
     }
 
     private fun registerWomen(registry: NpcDropTableRegistry) {

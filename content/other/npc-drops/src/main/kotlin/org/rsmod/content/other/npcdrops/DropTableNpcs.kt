@@ -192,6 +192,9 @@ internal object DropTableNpcs : NpcReferences() {
     val woman2 = find("woman2")
     val woman3 = find("woman3")
 
+    // Al Kharid man variant — region-specific
+    val al_kharid_man = find("al_kharid_man")
+
     // King Black Dragon (Boss) - Combat Level 276
     // Found in Wilderness (level 40+), accessed via lever in Edgeville
     val black_dragon = find("black_dragon")
