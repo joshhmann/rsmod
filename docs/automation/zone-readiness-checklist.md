@@ -35,19 +35,26 @@ Track which content categories are automated and verified per zone. Used before 
 | **Dialogue** | 🔴 Not started | Need G3 dialogue porter | — |
 | **Skill actions** | 🔴 Not started | Manual implementation | — |
 
-## Zone: Draynor (Second Validation Zone — Target)
+## Zone: Draynor (Second Validation Zone — ✅ PASSED)
 
 | Category | Status | Notes |
 |----------|--------|-------|
-| **Cache/symbol truth** | ✅ Inherited from Lumbridge | Global cache |
+| **Cache/symbol truth** | ✅ Inherited | Global cache |
 | **Placed loc extraction** | ✅ Inherited | Full export available |
 | **Doors/stairs/ladders** | 🔴 Not started | — |
 | **Bank/shop interactions** | 🔴 Not started | — |
-| **Drop generation pipeline** | 🏆 Certified | Uses same G2 generator |
-| **Drop tables (all NPCs)** | 🔴 Not started | — |
-| **NPC spawns** | 🔴 Not started | — |
+| **Drop generation pipeline** | 🏆 Certified | Same G2 generator, no workflow changes needed |
+| **Drop tables — Jail Guard** | ✅ Promoted | New handler created (commit 51e66957) |
+| **Drop tables — Wizard (regular)** | ✅ Promoted | New handler created (commit 51e66957) |
+| **Drop tables — Skeletons** | ✅ Already handled | Draynor Manor skeletons covered by SkeletonDropTables |
+| **Drop tables — Ghosts** | ✅ Skipped (Phase 2) | Wilderness-only drops |
+| **Drop tables — Other NPCs** | ✅ Already handled | Men, women, guards, rats, spiders, dark wizards all covered |
+| **NPC spawns** | ✅ Present | draynor.toml + draynor-manor.toml exist |
 | **Dialogue** | 🔴 Not started | — |
 | **Skill actions** | 🔴 Not started | — |
+
+**Result:** ✅ **WORKFLOW GENERALIZES.** All Draynor-area combat NPCs now have drop handlers.
+No workflow changes, special-casing, or combat behavior changes needed.
 
 ## Zone: Varrock West (Alternative Second Validation Zone)
 

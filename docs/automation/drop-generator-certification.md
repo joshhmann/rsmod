@@ -1,8 +1,9 @@
 # Drop Generator Certification
 
-**Status:** CERTIFIED — Level 4 (Controlled Regional Expansion)
+**Status:** CERTIFIED — Level 5 (Batch Regional Expansion)
 
 **Date:** 2026-06-20
+**Upgraded:** 2026-06-20 (Draynor validation passed — Level 5)
 
 **Certified by:** Mai (Hyraxknot Division Operations)
 
@@ -11,14 +12,15 @@
 | Phase | Commit | Description |
 |:-----:|:------:|-------------|
 | Tooling | `499eae9` | Shared resolver + G2 corpus drop generator committed |
-| 1.5 | `8420e7dc` | Man/Woman drops promoted (standard city variants fix) |
+| 1.5 | `8420e7dc` | Man/Woman drops promoted |
+| Draynor | `51e66957` | Wizard, Jail Guard promoted — Draynor zone validated | (standard city variants fix) |
 | 2 | `3ff81785` | Skeleton, Zombie, Bat promoted |
 | 3 | `fb5d6beb` | Guard, Mugger, Barbarian, Dwarf promoted |
 | 4 | `f1e0466a` | Imp, Dark Wizard, Rat promoted. Scorpion skipped |
 
 ## Successful Target Families
 
-12 NPC families processed across 4 phases:
+14+ NPC families processed across 5 phases + Draynor validation:
 
 | Family | Phase | Status |
 |--------|:-----:|:------:|
@@ -33,6 +35,8 @@
 | Imp | 4 | ✅ Promoted |
 | Dark Wizard | 4 | ✅ Promoted |
 | Rat | 4 | ✅ Promoted |
+| Wizard | Draynor | ✅ Promoted |
+| Jail Guard | Draynor | ✅ Promoted |
 | Scorpion | 4 | ✅ Skipped (no corpus value) |
 
 ## Skip Rules
@@ -112,9 +116,17 @@ These should NOT be automated through the drop generator:
 | Named/regional NPC variants | Medium | Corpus may conflate generic and named variants |
 | Clue scroll handling | High | Requires clue scroll system implementation |
 
-## Next Steps
+## Rat Tail Verification
 
-After Draynor zone validation:
-- Call drops automation **Level 5** (batch expansion)
-- Authorize Hermes to batch-expand drops by region
-- Move to next content category (shops, NPC spawns, or dialogue)
+**Status:** ✅ ACCEPTABLE as generic drop.
+Rat's tail (obj.sym ID 300) is in the rev 233 cache and is a standard OSRS
+always-drop from rats alongside bones. Used in Witch's Potion quest but not
+quest-locked — rats always drop it regardless of quest status. No issue found.
+
+## Next Steps — Level 5 Achieved ✅
+
+Drop automation is now **Level 5 certified** for controlled batch regional expansion.
+
+- ✅ **Authorized:** Hermes can batch-expand drops by region
+- ✅ **Proven workflow:** Lumbridge → Draynor, no changes needed
+- ✅ **Next category:** Shops (unblock stock data), NPC spawns (G1), or dialogue (G3)
