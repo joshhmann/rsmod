@@ -97,6 +97,7 @@ internal object SkeletonDropTables {
             SkeletonNpcs.skeleton_armed, SkeletonNpcs.skeleton_armed2,
             SkeletonNpcs.skeleton_armed3, SkeletonNpcs.skeleton_armed4,
             SkeletonNpcs.skeleton_armed5,
+            SkeletonNpcs.draynor_skeleton,
         )
         registry.register(skeletonNpcs.distinct(), table)
     }
@@ -115,6 +116,7 @@ internal object SkeletonNpcs : NpcReferences() {
     val skeleton_armed3 = find("skeleton_armed3")
     val skeleton_armed4 = find("skeleton_armed4")
     val skeleton_armed5 = find("skeleton_armed5")
+    val draynor_skeleton = find("draynor_skeleton")
 }
 
 internal object SkeletonObjs : ObjReferences() {

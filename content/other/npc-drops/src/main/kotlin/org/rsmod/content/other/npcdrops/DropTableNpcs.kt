@@ -99,6 +99,7 @@ internal object DropTableNpcs : NpcReferences() {
     val skeleton_armed3 = find("skeleton_armed3")
     val skeleton_armed4 = find("skeleton_armed4")
     val skeleton_armed5 = find("skeleton_armed5")
+    val draynor_skeleton = find("draynor_skeleton")
 
     // Zombie variants (F2P - found in Edgeville Dungeon, Draynor Sewers, Varrock Sewers)
     val zombie_unarmed = find("zombie_unarmed")

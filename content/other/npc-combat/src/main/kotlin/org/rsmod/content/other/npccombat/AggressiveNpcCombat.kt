@@ -70,6 +70,7 @@ class AggressiveNpcCombatScript @Inject constructor() : PluginScript() {
             AggressiveCombatNpcs.giantskeleton,
             AggressiveCombatNpcs.giantskeleton2,
             AggressiveCombatNpcs.skeletonmage,
+            AggressiveCombatNpcs.draynor_skeleton,
         )
         (unarmed + armed + special).forEach { onNpcHit(it) { /* Combat handled by engine */ } }
     }
@@ -318,6 +319,7 @@ internal object AggressiveCombatNpcs : NpcReferences() {
     val giantskeleton = find("giantskeleton")
     val giantskeleton2 = find("giantskeleton2")
     val skeletonmage = find("skeletonmage")
+    val draynor_skeleton = find("draynor_skeleton")
 
     // ZOMBIES
     val zombie_unarmed = find("zombie_unarmed")
