@@ -1,0 +1,21 @@
+# Asgarnian Ice Dungeon Loc Spawns
+# Blurite rocks for The Knight's Sword quest
+# Region: 47_49 (same as NPC spawns)
+# Coordinates based on OSRS: blurite rocks in western area near ice giants
+
+# ============================
+# Blurite Rocks (Mining level 10, Knight's Sword quest)
+# Located in the western/southwestern area of the dungeon
+# ============================
+
+[[spawn]]
+loc = 'blurite_rock_1'
+coords = '0_47_49_9_15'  # ~(3017, 3151)
+
+[[spawn]]
+loc = 'blurite_rock_2'
+coords = '0_47_49_9_12'  # ~(3017, 3148)
+
+[[spawn]]
+loc = 'blurite_rock_1'
+coords = '0_47_49_16_9'  # ~(3024, 3145)

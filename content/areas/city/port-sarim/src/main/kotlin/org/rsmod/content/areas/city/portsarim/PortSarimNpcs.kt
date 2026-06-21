@@ -78,7 +78,7 @@ internal object PortSarimNpcEditor : NpcEditor() {
 
         edit(portsarim_npcs.klarense) { wanderRange = 2 }
         edit(portsarim_npcs.captain_barnaby) { wanderRange = 1 }
-n        edit(portsarim_npcs.captain_tobias) { wanderRange = 1 }
+        edit(portsarim_npcs.captain_tobias) { wanderRange = 1 }
 
         edit(portsarim_npcs.chemist) { moveRestrict = indoors }
 

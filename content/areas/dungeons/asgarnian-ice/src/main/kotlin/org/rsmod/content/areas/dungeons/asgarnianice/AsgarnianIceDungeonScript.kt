@@ -15,7 +15,9 @@ import org.rsmod.plugin.scripts.ScriptContext
  * - Ice giants (level 53) - aggressive
  * - Hobgoblins (level 28/42) - aggressive
  *
- * Note: Blurite rocks (P2P) and Skeletal wyverns (P2P) are not implemented.
+ * Note: Skeletal wyverns (P2P) are not implemented.
+ *
+ * Blurite rocks are implemented for The Knight's Sword quest (F2P).
  *
  * The dungeon is a multicombat area and all monsters are aggressive, making it dangerous for
  * low-level players.
@@ -30,7 +32,7 @@ class AsgarnianIceDungeonScript @Inject constructor() : PluginScript() {
         // Drop tables are handled by separate NPC drop tasks
 
         // Future additions:
-        // - Blurite rock mining (P2P - The Knight's Sword quest)
+        // - Blurite rock mining (implemented - The Knight's Sword quest)
         // - Skeletal wyverns (P2P - Slayer area)
         // - Agility shortcuts (levels 60, 72, 82)
         // - Trapdoor entrance handling from surface

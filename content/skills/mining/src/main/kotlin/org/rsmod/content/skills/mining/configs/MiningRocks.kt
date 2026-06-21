@@ -25,6 +25,7 @@ internal object MiningOreObjs : ObjReferences() {
     val mithril_ore = find("mithril_ore")
     val adamantite_ore = find("adamantite_ore")
     val runite_ore = find("runite_ore")
+    val blurite_ore = find("blurite_ore") // Blurite ore (Knight's Sword quest)
     val rune_essence = find("blankrune") // Rune essence (F2P)
 
     // Gem rock products (uncut gems)
@@ -105,6 +106,10 @@ internal object MiningRockLocs : LocReferences() {
     // Gem rocks (found in Al Kharid, Shilo Village, and Mining Guild)
     val gemrock1 = find("gemrock1") // loc id 11380
     val gemrock = find("gemrock") // loc id 11381
+
+    // Blurite rocks (Knight's Sword quest, Asgarnian Ice Dungeon)
+    val blurite_rock_1 = find("blurite_rock_1")
+    val blurite_rock_2 = find("blurite_rock_2")
 }
 
 /**
@@ -170,6 +175,8 @@ internal object MiningRocks : LocEditor() {
         // Found in Al Kharid, Shilo Village, and Mining Guild
         gemRock(MiningRockLocs.gemrock1, MiningRockLocs.rocks1)
         gemRock(MiningRockLocs.gemrock, MiningRockLocs.rocks2)
+        blurite(MiningRockLocs.blurite_rock_1, MiningRockLocs.rocks1)
+        blurite(MiningRockLocs.blurite_rock_2, MiningRockLocs.rocks2)
     }
 
     private fun ore(
@@ -224,6 +231,9 @@ internal object MiningRocks : LocEditor() {
 
     private fun runite(type: LocType, depleted: LocType) =
         ore(type, depleted, MiningOreObjs.runite_ore, 85, 125.0, 102, 480, 560)
+
+    private fun blurite(type: LocType, depleted: LocType) =
+        ore(type, depleted, MiningOreObjs.blurite_ore, 10, 17.5, 32, 3, 6)
 
     private fun essenceRock(type: LocType) {
         // Essence rocks never deplete (deplete_chance = 0)

@@ -7,6 +7,7 @@ import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.script.onOpLoc1
 import org.rsmod.api.type.refs.loc.LocReferences
 import org.rsmod.api.type.refs.obj.ObjReferences
+import org.rsmod.game.type.obj.ObjType
 import org.rsmod.map.CoordGrid
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
@@ -27,7 +28,8 @@ class GangplankTravel @Inject constructor() : PluginScript() {
     }
 
     private suspend fun ProtectedAccess.travelToKaramja() {
-        if (!player.inv.contains(GangplankObjs.coins, 30)) {
+        val coins = player.inv.filterNotNull { it.id == GangplankObjs.coins.id }.sumOf { it.count }
+        if (coins < 30) {
             mes("You need 30 gold pieces to sail to Karamja.")
             return
         }

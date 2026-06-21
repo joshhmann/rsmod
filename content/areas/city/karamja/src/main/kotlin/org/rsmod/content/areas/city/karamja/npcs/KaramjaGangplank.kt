@@ -7,6 +7,7 @@ import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.script.onOpLoc1
 import org.rsmod.api.type.refs.loc.LocReferences
 import org.rsmod.content.areas.city.karamja.configs.karamja_objs
+import org.rsmod.game.type.obj.ObjType
 import org.rsmod.map.CoordGrid
 import org.rsmod.plugin.scripts.PluginScript
 import org.rsmod.plugin.scripts.ScriptContext
@@ -22,7 +23,8 @@ class KaramjaGangplank @Inject constructor() : PluginScript() {
     }
 
     private suspend fun ProtectedAccess.travelToPortSarim() {
-        if (!player.inv.contains(karamja_objs.coins, 30)) {
+        val coins = player.inv.filterNotNull { it.id == karamja_objs.coins.id }.sumOf { it.count }
+        if (coins < 30) {
             mes("You need 30 gold pieces to sail back to Port Sarim.")
             return
         }
