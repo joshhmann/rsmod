@@ -3,130 +3,123 @@ package org.rsmod.content.other.npcdrops
 import org.rsmod.api.config.refs.objs
 import org.rsmod.api.drop.table.NpcDropTableRegistry
 import org.rsmod.api.drop.table.dropTable
-import org.rsmod.api.type.refs.npc.NpcReferences
 import org.rsmod.api.type.refs.obj.ObjReferences
 
 /**
  * Drop table registrations for Man and Woman NPCs.
  *
- * Drop table source: https://oldschool.runescape.wiki/w/Man
- * - Found throughout Gielinor (Lumbridge, Varrock, Falador, etc.)
- * - Level 2/3 combat.
+ * Data sources:
+ * - Primary: drops_by_source.json (OSRS wiki corpus, 28 items per NPC after rev 233 filtering)
+ * - Secondary: https://oldschool.runescape.wiki/w/Man
  *
- * Drop structure:
- * - Always: Bones (100%)
- * - Main drops: Coins
- * - Rare: Cabbage, Herbs, Earth talisman
- * - Tertiary: Clue scroll (beginner)
+ * Man/Woman are found throughout Gielinor (Lumbridge, Varrock, Falador, etc.).
+ * Level 2/3 combat, non-aggressive — attackable only when player initiates combat.
+ *
+ * Conditional drops filtered out (not valid for Lumbridge standard NPCs):
+ * - Clue scroll (beginner) — post-2018
+ * - Clue scroll (easy) — reserved for DropTableObjs pattern
+ * - Grimy marrentill — not in rev 233 cache
+ * - Key (medium) — post-2013 RDT expansion
+ * - Looting bag — Wilderness-only
  */
 internal object ManWomanDropTables {
     fun registerAll(registry: NpcDropTableRegistry) {
-        registerMan(registry)
-        registerWoman(registry)
+        registerMen(registry)
+        registerWomen(registry)
     }
 
-    // -----------------------------------------------------------------------
-    // Man
-    // Drop table source: https://oldschool.runescape.wiki/w/Man
-    // Always: Bones
-    // Main drops: Coins
-    // Rare: Cabbage, Earth talisman, Grimy herbs
-    // Tertiary: Clue scroll (beginner)
-    // -----------------------------------------------------------------------
-    private fun registerMan(registry: NpcDropTableRegistry) {
-        val manTable = dropTable {
-            always(objs.bones)
-
-            // Coins - most common drop
-            table("Coins", weight = 70) {
-                item(objs.coins, quantity = 1..5, weight = 40)
-                item(objs.coins, quantity = 6..10, weight = 20)
-                item(objs.coins, quantity = 11..20, weight = 8)
-                item(objs.coins, quantity = 21..50, weight = 2)
-            }
-
-            // Rare drops
-            table("Rare", weight = 20) {
-                nothing(weight = 15)
-                item(ManWomanObjs.cabbage, weight = 3)
-                item(ManWomanObjs.earth_talisman, weight = 1)
-                item(ManWomanObjs.grimy_guam, weight = 1)
-            }
-
-            // Tertiary drops - clue scrolls (1/128 each = 2/128 total)
-            table("Tertiary", weight = 1) {
-                nothing(weight = 126) // 126/128 chance of nothing
-                item(DropTableObjs.trail_clue_beginner, weight = 1) // 1/128 beginner
-                item(DropTableObjs.trail_clue_easy_simple001, weight = 1) // 1/128 easy
-            }
-        }
-
-        // Register for all man variants
-        registry.register(ManWomanNpcs.man_1, manTable)
-        registry.register(ManWomanNpcs.man_2, manTable)
-        registry.register(ManWomanNpcs.man_3, manTable)
+    private fun registerMen(registry: NpcDropTableRegistry) {
+        val table = manWomanDropTable()
+        registry.register(DropTableNpcs.man, table)
+        registry.register(DropTableNpcs.man2, table)
+        registry.register(DropTableNpcs.man3, table)
     }
 
-    // -----------------------------------------------------------------------
-    // Woman
-    // Same drops as Man
-    // -----------------------------------------------------------------------
-    private fun registerWoman(registry: NpcDropTableRegistry) {
-        val womanTable = dropTable {
-            always(objs.bones)
+    private fun registerWomen(registry: NpcDropTableRegistry) {
+        val table = manWomanDropTable()
+        registry.register(DropTableNpcs.woman, table)
+        registry.register(DropTableNpcs.woman2, table)
+        registry.register(DropTableNpcs.woman3, table)
+    }
 
-            // Coins - most common drop
-            table("Coins", weight = 70) {
-                item(objs.coins, quantity = 1..5, weight = 40)
-                item(objs.coins, quantity = 6..10, weight = 20)
-                item(objs.coins, quantity = 11..20, weight = 8)
-                item(objs.coins, quantity = 21..50, weight = 2)
-            }
+    private fun manWomanDropTable() = dropTable {
+        // Always drops — guaranteed on every kill
+        always(objs.bones)
+        always(objs.coins, quantity = 3)
 
-            // Rare drops
-            table("Rare", weight = 20) {
-                nothing(weight = 15)
-                item(ManWomanObjs.cabbage, weight = 3)
-                item(ManWomanObjs.earth_talisman, weight = 1)
-                item(ManWomanObjs.grimy_guam, weight = 1)
-            }
-
-            // Tertiary drops - clue scrolls (1/128 each = 2/128 total)
-            table("Tertiary", weight = 1) {
-                nothing(weight = 126) // 126/128 chance of nothing
-                item(DropTableObjs.trail_clue_beginner, weight = 1) // 1/128 beginner
-                item(DropTableObjs.trail_clue_easy_simple001, weight = 1) // 1/128 easy
-            }
+        // Main coins table (weight 75 of 126 = ~60% chance to roll)
+        table("Coins", weight = 75) {
+            item(objs.coins, quantity = 3, weight = 38)  // ~9.5%: 3 coins
+            item(objs.coins, quantity = 10, weight = 23) // ~5.7%: 10 coins
+            item(objs.coins, quantity = 5, weight = 9)   // ~2.2%: 5 coins
+            item(objs.coins, quantity = 15, weight = 4)  // ~1.0%: 15 coins
+            item(objs.coins, quantity = 25, weight = 1)  // ~0.2%: 25 coins
         }
 
-        // Register for all woman variants
-        registry.register(ManWomanNpcs.woman_1, womanTable)
-        registry.register(ManWomanNpcs.woman_2, womanTable)
-        registry.register(ManWomanNpcs.woman_3, womanTable)
+        // Weapon / Armour drops (weight 28 of 126 = ~22% chance to roll)
+        table("Weapons/Armour", weight = 28) {
+            item(objs.bronze_med_helm, weight = 2)
+            item(DropTableObjs.iron_dagger, weight = 1)
+            item(DropTableObjs.bronze_bolts, quantity = 2..12, weight = 22)
+            item(objs.bronze_arrow, weight = 3)
+        }
+
+        // Rune drops (weight 7 of 126 = ~5.5% chance to roll)
+        table("Runes", weight = 7) {
+            item(objs.earthrune, quantity = 4, weight = 2)
+            item(objs.firerune, quantity = 6, weight = 2)
+            item(objs.mindrune, quantity = 9, weight = 2)
+            item(objs.chaosrune, quantity = 2, weight = 1)
+        }
+
+        // Rare misc drops (weight 15 of 126 = ~12% chance to roll)
+        table("Rare", weight = 15) {
+            nothing(weight = 6)
+            item(objs.fishing_bait, weight = 5)
+            item(objs.copper_ore, weight = 2)
+            item(objs.earth_talisman, weight = 2)
+            item(objs.cabbage, weight = 2)
+            item(ManWomanObjs.grimy_guam, weight = 1)
+            item(ManWomanObjs.grimy_tarromin, weight = 1)
+            item(ManWomanObjs.grimy_harralander, weight = 1)
+            item(ManWomanObjs.grimy_ranarr, weight = 1)
+        }
+
+        // Tertiary herbs table — rare herb drops (weight 1 of 126 = ~0.8% chance to roll)
+        table("Herbs", weight = 1) {
+            nothing(weight = 900)
+            item(ManWomanObjs.grimy_guam, weight = 32)
+            item(ManWomanObjs.grimy_tarromin, weight = 24)
+            item(ManWomanObjs.grimy_harralander, weight = 18)
+            item(ManWomanObjs.grimy_ranarr, weight = 14)
+            item(ManWomanObjs.grimy_irit, weight = 11)
+            item(ManWomanObjs.grimy_avantoe, weight = 9)
+            item(ManWomanObjs.grimy_kwuarm, weight = 7)
+            item(ManWomanObjs.grimy_cadantine, weight = 5)
+            item(ManWomanObjs.grimy_lantadyme, weight = 4)
+            item(ManWomanObjs.grimy_dwarf_weed, weight = 4)
+        }
     }
 }
 
-/** NPC type references for Man and Woman variants. */
-internal object ManWomanNpcs : NpcReferences() {
-    // Man variants - found throughout Gielinor
-    val man_1 = find("misc_etc_man_1")
-    val man_2 = find("misc_etc_man_2")
-    val man_3 = find("misc_etc_man_3")
-
-    // Woman variants - found throughout Gielinor
-    val woman_1 = find("misc_etc_woman_1")
-    val woman_2 = find("misc_etc_woman_2")
-    val woman_3 = find("misc_etc_woman_3")
-}
-
-/** Object type references for Man/Woman drops not in BaseObjs or DropTableObjs. */
+/**
+ * Object type references for Man/Woman drops not in BaseObjs or DropTableObjs.
+ *
+ * Grimy (unidentified) herbs are used for monster drops. Clean variants
+ * (guam_leaf, tarromin, etc.) are in BaseObjs but the grimy versions
+ * are not — they're declared here.
+ *
+ * Symbol names verified against rev 233 obj.sym.
+ */
 internal object ManWomanObjs : ObjReferences() {
-    // Food
-    val cabbage = find("cabbage")
-
-    // Herbs (grimy - for low-level NPCs)
     val grimy_guam = find("unidentified_guam")
-
-    // Talismans
-    val earth_talisman = find("earth_talisman")
+    val grimy_tarromin = find("unidentified_tarromin")
+    val grimy_harralander = find("unidentified_harralander")
+    val grimy_ranarr = find("unidentified_ranarr")
+    val grimy_irit = find("unidentified_irit")
+    val grimy_avantoe = find("unidentified_avantoe")
+    val grimy_kwuarm = find("unidentified_kwuarm")
+    val grimy_cadantine = find("unidentified_cadantine")
+    val grimy_lantadyme = find("unidentified_lantadyme")
+    val grimy_dwarf_weed = find("unidentified_dwarf_weed")
 }
