@@ -367,3 +367,70 @@ When reclassifying existing cards:
 3. If L/XL: comment with reclassification notice, block card, create decomposition
 4. If S/M but has pre-flight: add pre-flight requirement to card body
 5. Update NEXT_ACTION.md with reclassification summary
+
+### Context Snapshot Requirement
+
+Every card created from an audit finding MUST include a `context_snapshot` block in its body. This allows the downstream worker to diff against the original probe results and detect stale data in ~2 iterations instead of ~90.
+
+#### Format
+
+```yaml
+context_snapshot:
+  taken_at: "2026-06-21T00:00:00Z"    # ISO timestamp of when snapshot was taken
+  target_host: ct123                   # target hostname
+  repo_path: /root/osrs-ps-dev/OSRS-PS-DEV/rsmod
+  probes:                               # ordered list of probes (2-3 is sufficient)
+    - type: find
+      command: find content/skills/<name> -name '*.kt' 2>/dev/null | wc -l
+      result: "0 files found"
+    - type: git_log
+      command: git log --oneline -3 -- content/<area>/
+      result: "no commits found"
+    - type: dir_check
+      command: ls -la content/<area>/ 2>/dev/null | head -3
+      result: "ls: cannot access: No such file or directory"
+```
+
+#### Worker Diff Protocol
+
+1. Extract `context_snapshot.probes` from card body
+2. Re-run each probe command on CT 123 (SSH)
+3. Compare output with snapshot's `result` field:
+   - **All match** → gap still valid → PROCEED_IMPLEMENT
+   - **Any mismatch** → gap was closed since card creation → CLOSE_STALE_SNAPSHOT (2 iterations)
+4. If no `context_snapshot` on card, fall through to full manual pre-flight
+
+#### Probe Types
+
+| Type | Checks | Output Example |
+|:-----|:-------|:---------------|
+| `find` | File existence count | "0 files found" / "5 files found (790 lines)" |
+| `git_log` | Recent commits in area | "no commits found" / "a1b2c3 feat: add cooking module" |
+| `dir_check` | Directory existence | "No such directory" / "Cooking.kt  Firemaking.kt  module.kt" |
+| `grep` | Pattern presence | "0 matches" / "3 files match 'onOpNpc1'" |
+| `stat` | File metadata | "stat: cannot stat: No such file or directory" |
+
+#### Example: Context Snapshot in Action
+
+**Card body excerpt:**
+```yaml
+workflow: rsmod-corpus-drops
+content_type: drop_tables
+content_area: karamja-pirate
+risk_level: 3
+context_snapshot:
+  taken_at: "2026-06-21T05:30:00Z"
+  target_host: ct123
+  probes:
+    - type: find
+      command: find content/ -name '*pirate*' -o -name '*Pirate*' 2>/dev/null
+      result: "0 files found"
+```
+
+**Worker pre-flight result (2 iterations later):**
+```yaml
+Re-running probe: find content/ -name '*pirate*'
+  Snapshot: "0 files found"
+  Current:  "0 files found"
+  ✅ Match — gap valid, proceed
+```
