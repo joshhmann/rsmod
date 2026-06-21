@@ -1,0 +1,34 @@
+workflow: rsmod-corpus-drops
+content_type: drop_tables
+content_area: staged-code-test
+risk_level: 2
+mode: ASSISTED_MODE
+target_host: CT123
+target_host_ip: 192.168.0.175
+promotion_allowed: false
+
+npc:
+  id: 15452
+  name: Karamja Pirate
+  symbol: pirate1
+  source: KaramjaNpcs.kt
+
+files:
+  - source: files/staging/drops/karamja-pirate/PirateDropTables.kt
+    target: content/other/npc-drops/src/main/kotlin/org/rsmod/content/other/npcdrops/tables/PirateDropTables.kt
+    description: Drop table definitions for Karamja Pirate
+
+registration:
+  required: true
+  file: NpcDropTablesScript.kt
+  method: startup
+
+drops_total: 32
+items_skipped:
+  - clue_scrolls: Post-2013 content
+  - rune_spear: Legends Quest gate
+  - dragon_spear: Legends Quest gate
+  - shield_left_half: Post-2013 gem table expansion
+
+symbols_to_verify:
+  - find("right_eye_patch"): May need find("eye_patch") if cache symbol differs
