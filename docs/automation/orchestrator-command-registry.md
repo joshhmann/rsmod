@@ -83,6 +83,38 @@ Run staged-code delegated handoff test. Risk level 2, ASSISTED_MODE, promotion_a
 **Validation:** Raw-ID scan, production path check, no combat registration
 **Documentation:** Worklog + kanban complete
 
+### RS_STEP_3_PROD_HANDOFF
+One production-code delegated handoff. Level 5 certified workflow only. Max one production commit.
+
+**Expansion:**
+1. Create kanban card with:
+   - workflow: Level 5 certified workflow (e.g. rsmod-corpus-drops)
+   - content_type: drop_tables (or as specified)
+   - risk_level: 3
+   - mode: ASSISTED_MODE or SAFE_AUTONOMOUS_MODE
+   - target_host: CT123
+   - promotion_allowed: true
+   - max_commits: 1
+   - validation: raw_id_scan, compile, worklog_update
+2. Assign to specified worker (default: rei)
+3. Worker generates code + handoff artifacts with production paths
+4. Worker blocks with handoff-ready after manifest review
+5. Mai reviews manifest — production path allowed only after manifest review
+6. Mai applies to CT 123 production path
+7. Mai validates:
+   - Raw-ID scan required
+   - Relevant compile required
+   - No combat registration unless explicitly included and reviewed
+8. Mai commits production artifact (max 1 commit)
+9. Stop after first success or first failure
+10. Report: card id, commit hash, validation results, paths changed
+
+**Workflow:** Level 5 certified (e.g. rsmod-corpus-drops)
+**Mode:** ASSISTED_MODE or SAFE_AUTONOMOUS_MODE with review gate
+**Risk Level:** 3
+**Target Host:** CT123
+**Validation:** Raw-ID scan, compile, manifest review, combat registration check
+**Documentation:** Worklog + handoff report + kanban complete
 ### RS_M1_MINING_QA
 Run Mining 1-30 playerbot QA workflow.
 
@@ -223,6 +255,7 @@ Update worklog/status/roadmap from latest completed work.
 | RS_CONTINUE | rsmod-content-orchestrator | Per task |
 | RS_NEXT_SAFE | rsmod-content-orchestrator | Per task |
 | RS_STEP_2_HANDOFF | rsmod-corpus-drops | -- |
+| RS_STEP_3_PROD_HANDOFF | Level 5 certified | -- |
 | RS_M1_MINING_QA | rsmod-skill-validation | rsmod-playerbot-qa |
 | RS_M1_COOKING_WC_QA | rsmod-skill-validation | rsmod-playerbot-qa |
 | RS_KANBAN_DISPATCH | rsmod-content-orchestrator | -- |
