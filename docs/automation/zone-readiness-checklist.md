@@ -103,6 +103,25 @@ Edgeville Dungeon NPCs now fully covered.
 **Result:** ✅ **SECOND REGIONAL BATCH PASSES.** Workflow unchanged.
 Al Kharid is small but validates desert/city variant handling.
 
+## Zone: Falador (Regional Batch #4 — ✅ PASSED)
+
+| Category | Status | Notes |
+|----------|--------|-------|
+| **Drop generation pipeline** | 🏆 Certified | Same workflow, no changes needed |
+| **Drop tables — Falador Guard** | ✅ Promoted | `fai_falador_guard1` added to GuardDropTables registration (commit cc752479) |
+| **Drop tables — Guards (generic)** | ✅ Already handled | `city_guard`/`guard1` already in GuardDropTables |
+| **Drop tables — Hill Giant (mine)** | ✅ Already handled | `wilderness_hill_giant` in HillGiantDropTables |
+| **Drop tables — Dwarf (mine)** | ✅ Already handled | `dwarf_normal` in DwarfDropTables |
+| **Drop tables — Men/Women** | ✅ Already handled | Generic man/woman in ManWomanDropTables |
+| **White Knights** | ⏭️ Skipped | No combat registration. Would need onNpcHit first. |
+| **Falador dwarf variants** | ⏭️ Skipped | `fai_falador_dwarf_normal*` — non-combat city dwarves |
+| **Falador citizens** | ⏭️ Skipped | Gardeners, workmen, bankers — non-combat NPCs |
+
+**Result:** ✅ **FOURTH REGIONAL BATCH PASSES.** Workflow unchanged.
+Falador is a guard-variant test: `fai_falador_guard1` uses existing guard table.
+Most Falador NPCs are non-combat or already covered by generic tables.
+
+
 ## Zone: Varrock West (Alternative Second Validation Zone)
 
 | Category | Status | Notes |
