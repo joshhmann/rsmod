@@ -85,6 +85,7 @@ internal object GuardDropTables {
                 GuardNpcs.city_guard,
                 GuardNpcs.guard1,
                 GuardNpcs.deadman_guard_lumbridge,
+                GuardNpcs.falador_guard,
             )
         registry.register(guardNpcs.distinct(), guardTable)
     }
@@ -94,6 +95,7 @@ internal object GuardNpcs : NpcReferences() {
     val city_guard = find("city_guard")
     val guard1 = find("guard1")
     val deadman_guard_lumbridge = find("deadman_guard_lumbridge")
+    val falador_guard = find("fai_falador_guard1")
 }
 
 internal object GuardObjs : ObjReferences() {
