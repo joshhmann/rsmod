@@ -284,6 +284,10 @@ class AggressiveNpcCombatScript @Inject constructor() : PluginScript() {
         val npcs = listOf(
             AggressiveCombatNpcs.hobgoblin_unarmed,
             AggressiveCombatNpcs.hobgoblin_armed,
+            AggressiveCombatNpcs.rimmington_hobgoblin_unarmed_1,
+            AggressiveCombatNpcs.rimmington_hobgoblin_unarmed_2,
+            AggressiveCombatNpcs.rimmington_hobgoblin_unarmed_3,
+            AggressiveCombatNpcs.rimmington_hobgoblin_armed_1,
         )
         npcs.forEach { onNpcHit(it) { /* Combat handled by engine */ } }
     }
@@ -435,4 +439,8 @@ internal object AggressiveCombatNpcs : NpcReferences() {
     // HOBGOBLINS
     val hobgoblin_unarmed = find("hobgoblin_unarmed")
     val hobgoblin_armed = find("hobgoblin_armed")
+    val rimmington_hobgoblin_unarmed_1 = find("rimmington_hobgoblin_unarmed_1")
+    val rimmington_hobgoblin_unarmed_2 = find("rimmington_hobgoblin_unarmed_2")
+    val rimmington_hobgoblin_unarmed_3 = find("rimmington_hobgoblin_unarmed_3")
+    val rimmington_hobgoblin_armed_1 = find("rimmington_hobgoblin_armed_1")
 }
