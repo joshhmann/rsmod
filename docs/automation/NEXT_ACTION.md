@@ -1,11 +1,11 @@
 # Next Recommended RS Orchestration Action
 
-Command: RS_STEP_3_PROD_HANDOFF
-Mode: ASSISTED_MODE
-Risk Level: 3
-Worker: rei
+Command: RS_KANBAN_DISPATCH
+Mode: SAFE_AUTONOMOUS_MODE
+Risk Level: 2
+Worker: mai
 Target Host: CT123
 Promotion Allowed: true
-Max Commits: 1
-Reason: Docs-only delegation (Step 1) and staged-code delegation (Step 2) both passed. Next gate is one review-gated production-code delegation (Step 3). Mining 1-30 QA is staged behind the handoff pipeline completion.
-Updated: 2026-06-21T05:30:00Z
+Max Commits: Per-batch
+Reason: Step 3 production handoff complete (commit 7e64cb23). Full delegation pipeline proven. Next: decompose unstarted zones (Varrock, Al Kharid, etc.) into production cards for batch expansion. Alternatively: RS_M1_MINING_QA for skill validation.
+Updated: 2026-06-21T05:40:00Z
