@@ -48,9 +48,17 @@ Kanban workers interact with CT 175 via SSH from their sandbox workspace.
 ### SSH Access
 
 Workers in the **mai** profile have SSH access to CT 175 (`ssh root@192.168.0.175`).
-Cross-profile workers (tai/rei/nei) should either:
-1. Be dispatched with `target_host: local` for docs-only tasks, OR
-2. Route execution back to the **mai** profile via kanban child task
+
+Cross-profile workers (tai/rei/nei) that cannot directly execute on CT 175 **must produce a structured handoff package** instead of routing back:
+
+1. Generate handoff to `staging/handoffs/<task-id>/`
+2. Set card status to `SANDBOX_STAGED`
+3. Mai picks up the handoff, applies to CT 175, validates, commits
+4. See `docs/automation/sandbox-to-ct175-handoff.md` for full format
+
+For docs-only or spec tasks where no code changes on CT 175 are needed:
+- Use `target_host: local` and handle locally
+- No handoff needed — commit directly to docs
 
 ### Why Sandbox
 
