@@ -27,6 +27,7 @@ class AggressiveNpcCombatScript @Inject constructor() : PluginScript() {
         registerWolves()
         registerDemons()
         registerGiants()
+        registerIceWarriors()
         registerBears()
         registerDragons()
         registerScorpions()
@@ -197,6 +198,17 @@ class AggressiveNpcCombatScript @Inject constructor() : PluginScript() {
             AggressiveCombatNpcs.icegiant_low_wanderrange2,
         )
         (hill + moss + fire + ice).forEach { onNpcHit(it) { /* Combat handled by engine */ } }
+    }
+
+    // =========================================================================
+    // ICE WARRIORS — Level 34, aggressive in Asgarnian Ice Caves
+    // =========================================================================
+    private fun ScriptContext.registerIceWarriors() {
+        val npcs = listOf(
+            AggressiveCombatNpcs.icewarrior,
+            AggressiveCombatNpcs.icewarrior_low_wanderrange,
+        )
+        npcs.forEach { onNpcHit(it) { /* Combat handled by engine */ } }
     }
 
     // =========================================================================
@@ -445,4 +457,6 @@ internal object AggressiveCombatNpcs : NpcReferences() {
     val rimmington_hobgoblin_unarmed_2 = find("rimmington_hobgoblin_unarmed_2")
     val rimmington_hobgoblin_unarmed_3 = find("rimmington_hobgoblin_unarmed_3")
     val rimmington_hobgoblin_armed_1 = find("rimmington_hobgoblin_armed_1")
+    val icewarrior = find("icewarrior")
+    val icewarrior_low_wanderrange = find("icewarrior_low_wanderrange")
 }
