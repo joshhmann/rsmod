@@ -257,3 +257,44 @@ stop_conditions_checked:
   - batch_limit
 batch_slot: 3                      # which slot in the night batch sequence
 ```
+
+
+## Pre-Flight Verification (Reality Check)
+
+**Before writing ANY code, verify the claimed gap actually exists on CT 123.**
+
+Workers dispatched from stale audit data routinely burn 90-iteration budgets trying to implement systems that already exist. This step prevents that.
+
+### Required Checks
+
+For each claim in the card body (e.g. "no bank booth handler", "no ditch crossing"):
+
+```bash
+# Verify the gap is real
+ssh root@192.168.0.175 "cd /root/osrs-ps-dev/OSRS-PS-DEV/rsmod && \
+  find content/ -name '*.kt' -path '*suspected-module*' 2>/dev/null | head -5 && \
+  grep -rl 'suspected-symbol' content/ --include='*.kt' 2>/dev/null | head -5 && \
+  git log --oneline -5 -- content/<suspected-area>/"
+```
+
+### Decision Tree
+
+| Pre-Flight Result | Action |
+|:------------------|:-------|
+| Files already exist on CT 123 | **Close card as already-implemented.** Do NOT write new code. Note existing paths in handoff. |
+| Files partially exist with gaps | Only write code for the genuinely missing parts. Do not rewrite existing working code. |
+| Nothing exists | Proceed with normal handoff lifecycle. |
+
+### Compile Pattern
+
+Always compile individual modules first, never the full server build:
+
+```bash
+# GOOD -- individual module, ~15-30s
+./gradlew :content:other:npc-drops:compileKotlin
+
+# BAD -- full server build, ~120s+, catches errors from unrelated modules
+./gradlew :server:app:compileKotlin
+```
+
+This rule was added after 3 workers exhausted 90-iteration budgets on already-implemented systems (bank booth, cooking/smithing/firemaking, wilderness ditch stub).
