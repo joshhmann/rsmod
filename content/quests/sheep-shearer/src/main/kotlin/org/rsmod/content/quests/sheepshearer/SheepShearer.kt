@@ -4,6 +4,7 @@ import jakarta.inject.Inject
 import org.rsmod.api.config.refs.content
 import org.rsmod.api.config.refs.objs
 import org.rsmod.api.config.refs.seqs
+import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.dialogue.Dialogue
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.quest.QuestList
@@ -67,7 +68,8 @@ class SheepShearer @Inject constructor(private val objRepo: ObjRepository) : Plu
     }
 
     private suspend fun Dialogue.fredInProgressDialogue() {
-        val woolInInv = player.inv.count(sheep_shearer_objs.wool)
+        val woolId = sheep_shearer_objs.wool.id
+        val woolInInv = countWoolInInventory(woolId)
 
         if (woolInInv > 0) {
             chatNpc(happy, "Have you brought some wool for me?")
@@ -75,7 +77,7 @@ class SheepShearer @Inject constructor(private val objRepo: ObjRepository) : Plu
 
             player.invDel(player.inv, sheep_shearer_objs.wool, woolInInv)
 
-            val stage = getQuestStage(QuestList.sheep_shearer)
+            val stage = access.getQuestStage(QuestList.sheep_shearer)
             val givenSoFar = (stage - 1).coerceAtLeast(0)
             val newTotal = (givenSoFar + woolInInv).coerceAtMost(20)
 
@@ -87,7 +89,7 @@ class SheepShearer @Inject constructor(private val objRepo: ObjRepository) : Plu
                 )
                 completeQuest()
             } else {
-                setQuestStage(QuestList.sheep_shearer, newTotal + 1)
+                access.setQuestStage(QuestList.sheep_shearer, newTotal + 1)
                 chatNpc(
                     happy,
                     "Great, that's $newTotal balls of wool so far. " +
@@ -95,7 +97,7 @@ class SheepShearer @Inject constructor(private val objRepo: ObjRepository) : Plu
                 )
             }
         } else {
-            val stage = getQuestStage(QuestList.sheep_shearer)
+            val stage = access.getQuestStage(QuestList.sheep_shearer)
             val givenSoFar = (stage - 1).coerceAtLeast(0)
 
             if (givenSoFar == 0) {
@@ -154,11 +156,17 @@ class SheepShearer @Inject constructor(private val objRepo: ObjRepository) : Plu
 
         invAddOrDrop(objRepo, sheep_shearer_objs.wool, 1)
 
-        val total = player.inv.count(sheep_shearer_objs.wool)
-        if (total < 20) {
-            mes("You shear the sheep and get some wool.")
-        } else {
-            mes("You have enough wool to take back to Fred!")
+        mes("You shear the sheep and get some wool.")
+    }
+
+    private fun Dialogue.countWoolInInventory(objId: Int): Int {
+        var count = 0
+        for (i in player.inv.indices) {
+            val slot = player.inv[i]
+            if (slot != null && slot.id == objId) {
+                count += slot.count
+            }
         }
+        return count
     }
 }
