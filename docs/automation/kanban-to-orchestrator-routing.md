@@ -6,42 +6,51 @@ Define how a kanban-dispatched worker loads the orchestrator, detects workflow r
 
 ## Target Host & Deployment
 
-**All RSMod content work targets CT 175 (192.168.0.175).**
+**All RSMod content work targets CT 175** (container 175, `192.168.0.175`).
 
-The rsmod project is at `/root/osrs-ps-dev/OSRS-PS-DEV/rsmod/` on CT 175.
+The rsmod project is at `/root/osrs-ps-dev/OSRS-PS-DEV/rsmod/` on **CT 175**.
+
+### Fleet Reference
+
+| Host | IP | Purpose |
+|:-----|:---:|:--------|
+| **CT 175** | `192.168.0.175` | Primary build target — rsmod project, game server, gradle, cache symbols |
+| **CT 17** | `192.168.0.17` | Model server — 2x RTX 5060 Ti + RTX A4000, llama.cpp, corpus origin |
+| **CT 111** | `192.168.0.162` | ComfyUI image generation server
 Kanban workers interact with CT 175 via SSH from their sandbox workspace.
 
 ### Deployment Pattern: Sandbox → SCP → CT 175
 
+
 ```
-┌─────────────────────────────┐
-│ Kanban Workspace (sandbox)  │  Local temp dir on worker host
-│  - Write/modify files       │
-│  - Query corpus data        │
-│  - Generate staged output   │
-└──────────┬──────────────────┘
-           │ SCP files to CT 175
-           ▼
-┌─────────────────────────────┐
-│ CT 175: rsmod/ target dir   │  Remote build host
-│  - Compile (gradlew)        │
-│  - Run raw-ID scan          │
-│  - Verify via grep/git      │
-│  - Commit to git            │
-└──────────┬──────────────────┘
-           │ Live on CT 175
-           ▼
-┌─────────────────────────────┐
-│ Production (CT 175)         │  Committed and deployed
-└─────────────────────────────┘
++-----------------------------+
+| Kanban Workspace (sandbox)  |  Local temp dir on worker host
+|  - Write/modify files       |
+|  - Query corpus data        |
+|  - Generate staged output   |
++--------------+--------------+
+               | SCP to CT 175
+               v
++-----------------------------+
+| CT 175: rsmod/ target dir   |  Remote build host (192.168.0.175)
+|  - Compile (gradlew)        |
+|  - Run raw-ID scan          |
+|  - Verify via grep/git      |
+|  - Commit to git            |
++--------------+--------------+
+               | Live on CT 175
+               v
++-----------------------------+
+| Production (CT 175)         |  Committed and deployed
++-----------------------------+
 ```
 
 ### SSH Access
 
-Workers in the `mai` profile have SSH access to CT 175 configured.
+Workers in the **mai** profile have SSH access to CT 175 (`ssh root@192.168.0.175`).
 Cross-profile workers (tai/rei/nei) should either:
 1. Be dispatched with `target_host: local` for docs-only tasks, OR
-2. Route execution back to the `mai` profile via kanban child task
+2. Route execution back to the **mai** profile via kanban child task
 
 ### Why Sandbox
 
