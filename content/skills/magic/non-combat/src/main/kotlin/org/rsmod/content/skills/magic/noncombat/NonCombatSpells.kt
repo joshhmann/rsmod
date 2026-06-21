@@ -10,7 +10,6 @@ import org.rsmod.api.config.refs.seqs
 import org.rsmod.api.config.refs.stats
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.player.stat.statAdvance
-import org.rsmod.api.player.ui.IfModalButtonT
 import org.rsmod.api.repo.obj.ObjRepository
 import org.rsmod.api.script.onIfModalButton
 import org.rsmod.api.script.onIfModalButtonT
@@ -56,19 +55,22 @@ constructor(
 
         /* ------------ Alchemy ------------ */
         onIfModalButton(components.magic_spellbook_low_alchemy) { /* select spell */ }
-        onIfModalButtonT(spellComponents.low_alchemy, components.inventory_items) {
-            castAlchemy(lowAlchemy ?: return@onIfModalButtonT, AlchemyType.Low)
+        onIfModalButtonT(spellComponents.low_alchemy, components.inventory_items) { event ->
+            val targetId = event.targetObj?.id ?: return@onIfModalButtonT
+            castAlchemy(lowAlchemy ?: return@onIfModalButtonT, AlchemyType.Low, targetId)
         }
 
         onIfModalButton(components.magic_spellbook_high_alchemy) { /* select spell */ }
-        onIfModalButtonT(spellComponents.high_alchemy, components.inventory_items) {
-            castAlchemy(highAlchemy ?: return@onIfModalButtonT, AlchemyType.High)
+        onIfModalButtonT(spellComponents.high_alchemy, components.inventory_items) { event ->
+            val targetId = event.targetObj?.id ?: return@onIfModalButtonT
+            castAlchemy(highAlchemy ?: return@onIfModalButtonT, AlchemyType.High, targetId)
         }
 
         /* ------------ Superheat ------------ */
         onIfModalButton(components.magic_spellbook_superheat) { /* select spell */ }
-        onIfModalButtonT(spellComponents.superheat, components.inventory_items) {
-            castSuperheat(superheat ?: return@onIfModalButtonT)
+        onIfModalButtonT(spellComponents.superheat, components.inventory_items) { event ->
+            val targetId = event.targetObj?.id ?: return@onIfModalButtonT
+            castSuperheat(superheat ?: return@onIfModalButtonT, targetId)
         }
     }
 
@@ -85,20 +87,18 @@ constructor(
         }
     }
 
-    private suspend fun ProtectedAccess.castAlchemy(spell: MagicSpell, type: AlchemyType) {
-        val event = IfModalButtonT
-        val targetId = event.targetObj?.id ?: return
+    private suspend fun ProtectedAccess.castAlchemy(spell: MagicSpell, type: AlchemyType, targetId: Int) {
         val result = runes.attemptCast(player, spell)
         if (result.isFailure()) return
 
         val itemType = objTypes[targetId]
-        val storePrice = itemType.cost
+        val storePrice = itemType?.cost ?: return
         val alchValue = when (type) {
             AlchemyType.Low -> (storePrice * 0.4).toInt().coerceAtLeast(1)
             AlchemyType.High -> (storePrice * 0.6).toInt().coerceAtLeast(1)
         }
 
-        if (!invDel(inv, targetId, count = 1).success) return
+        invDel(inv, objTypes[targetId]!!, count = 1)
         invAddOrDrop(objRepo, objs.coins, count = alchValue)
 
         anim(seqs.human_castteleport)
@@ -107,9 +107,7 @@ constructor(
         statAdvance(stats.magic, spell.castXp)
     }
 
-    private suspend fun ProtectedAccess.castSuperheat(spell: MagicSpell) {
-        val event = IfModalButtonT
-        val targetId = event.targetObj?.id ?: return
+    private suspend fun ProtectedAccess.castSuperheat(spell: MagicSpell, targetId: Int) {
         val result = runes.attemptCast(player, spell)
         if (result.isFailure()) return
 
@@ -118,7 +116,7 @@ constructor(
             return
         }
 
-        if (!invDel(inv, targetId, count = 1).success) return
+        invDel(inv, objTypes[targetId]!!, count = 1)
         invAddOrDrop(objRepo, barId, count = 1)
 
         anim(seqs.human_castteleport)

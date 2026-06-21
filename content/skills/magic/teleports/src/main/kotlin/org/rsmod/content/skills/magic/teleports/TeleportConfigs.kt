@@ -1,6 +1,6 @@
 package org.rsmod.content.skills.magic.teleports
 
-import org.rsmod.api.type.refs.component.ComponentReferences
+import org.rsmod.api.type.refs.comp.ComponentReferences
 import org.rsmod.api.type.refs.obj.ObjReferences
 import org.rsmod.map.CoordGrid
 

@@ -47,7 +47,7 @@ constructor(
             }
 
             if (spell.xp > 0.0) {
-                statAdvance(stats.magic, constant = 0, percent = spell.xp)
+                statAdvance(stats.magic, spell.xp)
             }
 
             anim(seqs.human_castteleport)

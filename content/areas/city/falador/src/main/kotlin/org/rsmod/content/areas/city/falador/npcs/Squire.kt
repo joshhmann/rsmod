@@ -2,6 +2,7 @@ package org.rsmod.content.areas.city.falador.npcs
 
 import jakarta.inject.Inject
 import org.rsmod.api.player.dialogue.Dialogue
+import org.rsmod.api.invtx.invDel
 import org.rsmod.api.player.protect.ProtectedAccess
 import org.rsmod.api.quest.QuestList
 import org.rsmod.api.quest.getQuestStage
