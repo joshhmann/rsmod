@@ -73,6 +73,21 @@ No workflow changes, special-casing, or combat behavior changes needed.
 **Result:** ✅ **FIRST REGIONAL BATCH PASSES.** Workflow unchanged from single-NPC to regional mode.
 2 NPC families promoted, within the 10-family batch cap.
 
+## Zone: Edgeville (Regional Batch #3 — ✅ PASSED)
+
+| Category | Status | Notes |
+|----------|--------|-------|
+| **Drop generation pipeline** | 🏆 Certified | Same workflow, no changes |
+| **Drop tables — Black Knight** | ✅ Enriched | Herbs, runes, aggressive fix (commit 11a026d6) |
+| **Drop tables — Hill Giant** | ✅ Enriched | Herbs, post-2013 cleanup (commit 11a026d6) |
+| **Drop tables — Chaos Druid** | ✅ Already handled | Varrock batch |
+| **Drop tables — Dungeon NPCs** | ✅ Already handled | Zombies, skeletons, rats, spiders all covered |
+| **Monk (Edgeville Monastery)** | ⏭️ Skipped | No combat registration |
+| **Surface NPCs** | ⏭️ Skipped | Shop/quest NPCs only |
+
+**Result:** ✅ **THIRD REGIONAL BATCH PASSES.** Workflow unchanged.
+Edgeville Dungeon NPCs now fully covered.
+
 ## Zone: Al Kharid (Regional Batch #2 — ✅ PASSED)
 
 | Category | Status | Notes |

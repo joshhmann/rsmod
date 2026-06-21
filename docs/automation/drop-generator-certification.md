@@ -20,7 +20,7 @@
 
 ## Successful Target Families
 
-18+ NPC families processed across 5 phases + 4 regions:
+20+ NPC families processed across 5 phases + 5 regions:
 
 | Family | Phase | Status |
 |--------|:-----:|:------:|
@@ -41,6 +41,8 @@
 | Chaos Druid | Varrock | ✅ Promoted |
 | Warrior Woman | Al Kharid | ✅ Promoted |
 | Al Kharid Man | Al Kharid | ✅ Promoted |
+| Black Knight | Edgeville | ✅ Enriched |
+| Hill Giant | Edgeville | ✅ Enriched |
 | Scorpion | 4 | ✅ Skipped (no corpus value) |
 
 ## Skip Rules
