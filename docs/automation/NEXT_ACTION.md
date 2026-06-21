@@ -1,35 +1,24 @@
 # Next Action
 
-## Status After June 21 Orchestration Sweep
+## Status — June 21 End of Night
 
-7 blocked cards processed. 6 already-implemented and closed. 1 has child card in todo.
+### Completed Tonight
+- ✅ NPC dialogue handlers (26 NPCs, 7 zones) — fd15499c
+- ✅ Magic utility spells (teleports, enchant, non-combat) — on disk
+- ✅ Boat travel + Karamja module (GangplankTravel, NPCs, spawns) — on disk
+- ✅ Sheep Shearer, X Marks the Spot, Knight's Sword quests — on disk
+- ✅ Ranged F2P skill module (bow/arrow configs) — 61f9c4b8
+- ✅ v3.4.0: Sizing policy, pre-flight, iteration budgets
+- ✅ v3.4.1: Context snapshot diff protocol, data freshness universal rule
+- ✅ Worker Close phase persistence steps
+- ✅ 7 blocked cards processed, 6 closed, 1 child completed
 
-### Closed as Already-Implemented (6)
+### Ready Tasks
+| Card | Title | Size | Action |
+|:-----|:------|:----:|:-------|
+| t_cb1a7aba | QA Review: Ranged + Magic Utility | M | Dispatch to Rei |
+| (new) | Mining 1-30 Playerbot QA scenario execution | S | After QA clears |
 
-| Card | Title | Result |
-|:-----|:------|:-------|
-| t_2d07b142 | Boat travel + Karamja | Full Karamja NPC module + GangplankTravel |
-| t_ca6d87a0 | Magic utility spells | Teleports, enchant, non-combat all done |
-| t_66b6219b | Magic utility (broad) | Same as above, QA review pending |
-| t_0f3eb8b6 | Sheep Shearer quest | 3 files + build.gradle.kts |
-| t_35d77cbe | X Marks the Spot | Full implementation |
-| t_981e843b | Knight's Sword quest | 4 files, committed 0a855810 |
-
-### Remaining Work (1 card)
-
-| Card | Title | Size | Status | Action |
-|:-----|:------|:----:|:------:|:-------|
-| t_278afa1c | Ranged skill module (bow/arrow configs) | S | todo → ready soon | Dispatch with pre-flight |
-| t_db911e58 | Ranged parent | L | blocked | Wait for child completion |
-| t_cb1a7aba | QA Review: Ranged + Magic | M | todo | Dispatch after ranged child done |
-
-### Recommended Next Action
-
-`RS_DISPATCH_RANGED` — Dispatch child card t_278afa1c (ranged skill module files). S-sized, ~3 files, known pattern. Compile with:
-```bash
-./gradlew :content:skills:ranged:compileKotlin
-```
-
-After that completes, dispatch t_cb1a7aba (QA Review by Rei) to validate both ranged and magic utility.
-
-Once all child cards complete, close parent t_db911e58.
+### Recommended Next Command
+Dispatch QA review card t_cb1a7aba (Rei reviews ranged + magic utility for correctness).
+Then run Mining 1-30 playerbot scenario against the validated modules.
