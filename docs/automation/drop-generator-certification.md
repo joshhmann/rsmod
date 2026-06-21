@@ -20,7 +20,7 @@
 
 ## Successful Target Families
 
-16+ NPC families processed across 5 phases + 3 regions:
+18+ NPC families processed across 5 phases + 4 regions:
 
 | Family | Phase | Status |
 |--------|:-----:|:------:|
@@ -39,6 +39,8 @@
 | Jail Guard | Draynor | ✅ Promoted |
 | Thief | Varrock | ✅ Promoted |
 | Chaos Druid | Varrock | ✅ Promoted |
+| Warrior Woman | Al Kharid | ✅ Promoted |
+| Al Kharid Man | Al Kharid | ✅ Promoted |
 | Scorpion | 4 | ✅ Skipped (no corpus value) |
 
 ## Skip Rules

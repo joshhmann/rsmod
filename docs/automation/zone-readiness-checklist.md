@@ -73,6 +73,21 @@ No workflow changes, special-casing, or combat behavior changes needed.
 **Result:** ✅ **FIRST REGIONAL BATCH PASSES.** Workflow unchanged from single-NPC to regional mode.
 2 NPC families promoted, within the 10-family batch cap.
 
+## Zone: Al Kharid (Regional Batch #2 — ✅ PASSED)
+
+| Category | Status | Notes |
+|----------|--------|-------|
+| **Drop generation pipeline** | 🏆 Certified | Same workflow, no changes needed |
+| **Drop tables — Warrior Woman** | ✅ Enriched | Expanded herb/runes, added gem table (commit 5913a82a) |
+| **Drop tables — Al Kharid Man** | ✅ Promoted | Added to city man table (commit 5913a82a) |
+| **Drop tables — Guards (city)** | ✅ Already handled | city_guard / guard1 covered by GuardDropTables |
+| **Scorpion** | ⏭️ Skipped (Phase 4) | No corpus value — all post-2013/wilderness |
+| **Al Kharid Warrior** | ⏭️ Skipped | No combat registration (thieving only) |
+| **Border guard** | ⏭️ Skipped | Dialogue NPC, no combat |
+
+**Result:** ✅ **SECOND REGIONAL BATCH PASSES.** Workflow unchanged.
+Al Kharid is small but validates desert/city variant handling.
+
 ## Zone: Varrock West (Alternative Second Validation Zone)
 
 | Category | Status | Notes |
