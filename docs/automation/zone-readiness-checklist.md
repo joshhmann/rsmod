@@ -137,6 +137,22 @@ Most Falador NPCs are non-combat or already covered by generic tables.
 Port Sarim is mostly quest/shop NPCs. Rimmington hobgoblins were the
 only combat target — created full drop table and extended combat registration.
 
+## Zone: Asgarnian Ice Caves (Regional Batch #7 — ✅ PASSED)
+
+| Category | Status | Notes |
+|----------|--------|-------|
+| **Drop generation pipeline** | 🏆 Certified | Same workflow, no changes needed |
+| **Drop tables — Ice Giant** | ✅ Created | New IceGiantDropTables.kt from corpus (161 items). Mithril/adamant gear, 8 rune types, rich seeds, gem/RDT (commit 0bbbe735) |
+| **Drop tables — Ice Warrior** | ✅ Created | New IceWarriorDropTables.kt from corpus (67 items). Runes, herbs, seeds, gem/RDT (commit 0bbbe735) |
+| **Combat registration — Ice Warrior** | ✅ Extended | Added `icewarrior`, `icewarrior_low_wanderrange` to AggressiveNpcCombat |
+| **Drop tables — Lesser Demon** | ✅ Already handled | `lesser_demon3` covered by LesserDemonDropTables |
+| **Drop tables — Skeletons** | ✅ Already handled | `skeleton_armed`/`skeleton_armed5` covered by SkeletonDropTables |
+| **Dark Warrior** | ⏭️ Skipped | Wilderness NPC in Dark Warriors' Fortress, not Ice Caves |
+
+**Result:** ✅ **SEVENTH REGIONAL BATCH PASSES.** Workflow unchanged.
+First higher-level F2P combat zone (Ice Giants lv53, Ice Warriors lv34).
+Confirms Level 5 automation handles mid-level combat NPCs correctly.
+
 
 ## Zone: Varrock West (Alternative Second Validation Zone)
 
@@ -165,7 +181,9 @@ NPCs that were evaluated and skipped during drop automation batches, with the re
 | Ghost | Lumbridge/Draynor | `ghost`, `ghost2-8` | Wilderness only | Only wilderness-only drops (looting bag) + clues. | Wilderness zone handling. | Phase 2 |
 | Monk | Edgeville | N/A | Unknown | No combat registration. | Add onNpcHit registration. | Edgeville |
 | Hobgoblin (Rimmington variants) | Rimmington | `rimmington_hobgoblin_unarmed_1-3`, `rimmington_hobgoblin_armed_1` | 135 (now promoted) | Were region-specific variants with no combat registration in AggressiveNpcCombat. | ✅ Resolved — added to AggressiveNpcCombat + created HobgoblinDropTables.kt. | Port Sarim |
-| Pirate (Port Sarim) | Port Sarim | `pirate1`, `pirate2`, `pirate_aggressive` | 39 | No combat registration. Spawns are in Karamja/Brimhaven area, not Port Sarim in this build. | Add onNpcHit registration + create table. Verify spawns are in Port Sarim area. | Port Sarim |
+| Ice Warrior | Asgarnian Ice Caves | `icewarrior`, `icewarrior_low_wanderrange` | 67 (now promoted) | Had no combat registration in AggressiveNpcCombat. | ✅ Resolved — added to AggressiveNpcCombat + created IceWarriorDropTables.kt. | Ice Caves |
+| Dark Warrior | Asgarnian Ice Caves | `dark_warrior` (531) | 100 | Wilderness NPC (Dark Warriors' Fortress), not in Ice Caves area. | Would need wilderness zone handling. | Ice Caves |
+| Pirate (Port Sarim) | Port Sarim| Pirate (Port Sarim) | Port Sarim | `pirate1`, `pirate2`, `pirate_aggressive` | 39 | No combat registration. Spawns are in Karamja/Brimhaven area, not Port Sarim in this build. | Add onNpcHit registration + create table. Verify spawns are in Port Sarim area. | Port Sarim |
 | White Knight | Falador | `white_knight`, `white_knight_yellow_plumes`, `white_knight_green_plumes`, `white_knight_blue_plumes` | 228 | No combat registration (no onNpcHit handler). Drops would never fire. | Add onNpcHit registration in AggressiveNpcCombat or dedicated combat script. Then create WhiteKnightDropTables.kt from corpus (228 items). | Falador |
 | Falador dwarf variants | Falador | `fai_falador_dwarf_normal1`, `fai_falador_dwarf_normal2`, `fai_falador_dwarf_normal3` | 0 (part of Dwarf corpus) | Non-combat city NPCs. No spawns in current Falador TOML. | Verify if cache gives them combat levels. If yes, add to DwarfDropTables registration. | Falador |
 | Falador citizens | Falador | `falador_gardener`, `falador_gardener2`, `falador_workman_young`, `falador_workman_fat`, `falador_banker` | 0 | Non-combat NPCs (shopkeepers, bankers, gardeners). | None expected — these should never be attackable. | Falador |
