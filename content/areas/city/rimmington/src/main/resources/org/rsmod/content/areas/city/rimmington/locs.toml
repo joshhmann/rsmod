@@ -1,0 +1,69 @@
+# Rimmington Mining Rock Spawns
+# Region: 46_50 (Rimmington mine), 46_49 (Clay south of town)
+# Format: plane_regionX_regionY_localX_localY
+
+# ============================================
+# Rimmington Mine - Copper and Tin (surface)
+# ============================================
+
+[[spawn]]
+loc = "copperrock1"
+coords = "0_46_50_39_34"  # (2983, 3234)
+
+[[spawn]]
+loc = "copperrock2"
+coords = "0_46_50_42_25"  # (2986, 3225)
+
+[[spawn]]
+loc = "copperrock1"
+coords = "0_46_50_44_28"  # (2988, 3228)
+
+[[spawn]]
+loc = "copperrock2"
+coords = "0_46_50_46_26"  # (2990, 3226)
+
+[[spawn]]
+loc = "tinrock1"
+coords = "0_46_50_32_37"  # (2976, 3237)
+
+[[spawn]]
+loc = "tinrock2"
+coords = "0_46_50_34_40"  # (2978, 3240)
+
+[[spawn]]
+loc = "tinrock1"
+coords = "0_46_50_39_32"  # (2983, 3232)
+
+[[spawn]]
+loc = "tinrock2"
+coords = "0_46_50_41_29"  # (2985, 3229)
+
+[[spawn]]
+loc = "tinrock1"
+coords = "0_46_50_43_27"  # (2987, 3227)
+
+# ============================================
+# Clay Rocks - South of Rimmington
+# Region 46_49 (y = 3136-3199)
+# ============================================
+
+[[spawn]]
+loc = "clayrock1"
+coords = "0_46_49_38_55"  # (2982, 3191)
+
+[[spawn]]
+loc = "clayrock2"
+coords = "0_46_49_40_49"  # (2984, 3185)
+
+[[spawn]]
+loc = "clayrock1"
+coords = "0_46_49_41_52"  # (2985, 3188)
+
+[[spawn]]
+loc = "clayrock2"
+coords = "0_46_49_43_56"  # (2987, 3192)
+
+[[spawn]]
+loc = "clayrock1"
+coords = "0_46_49_44_54"  # (2988, 3190)
+
