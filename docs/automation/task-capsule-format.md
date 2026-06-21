@@ -74,6 +74,28 @@ When Josh sends a command + capsule:
 3. Multiline values are NOT supported -- use `notes:` for short context only
 4. Capsules are optional -- commands work standalone with defaults
 
+
+## Context-Boundary Rules
+
+Capsules are only expanded into RSMod workflows when RSMod orchestration context is active. See `orchestrator-command-registry.md` for the full context-boundary rules.
+
+### Capsule Routing Table
+
+| Capsule Contains | Routes To | Requires RSMod Context? |
+|:-----------------|:----------|:-----------------------:|
+| `command: RS_*` | rsmod-content-orchestrator | No (prefix activates it) |
+| `command: RS_M1_MINING_QA` | rsmod-skill-validation | No (prefix activates it) |
+| Non-RS command | Non-RS workflow | N/A — only RS_* commands route to orchestrator |
+| `candidate:` + zone/NPC name | rsmod-content-orchestrator | Yes — implicit RSMod mention |
+| No `command:` field | Normal routing | See context-boundary rules |
+
+### Safe Fallback
+
+If Josh sends a capsule without `command:` and context is ambiguous:
+- Mai asks: "Do you mean continue RSMod orchestration, or continue the current non-RS task?"
+- Josh answers with `RS_*` command, "continue", or "exit RS mode"
+
+
 ## See Also
 
 - `orchestrator-command-registry.md` -- command registry

@@ -4,6 +4,58 @@
 
 Define short RS_* commands that reduce Josh's orchestration prompts from long paragraphs to single line commands. Mai expands each command using the registry entries below.
 
+## Context-Boundary Rules
+
+RSMod commands must only trigger when RSMod orchestration context is active. This prevents generic phrases like "continue" or "status" from accidentally invoking RSMod workflows during non-RS sessions.
+
+### Accepting RSMod Commands
+
+Only route to `rsmod-content-orchestrator` when one or more of these conditions is true:
+
+1. **Explicit activation** -- Josh says "Start RS orchestration" (or "RS mode", "RS on")
+2. **RS_* prefix** -- command starts with `RS_` (e.g. `RS_STATUS`, `RS_CONTINUE`)
+3. **RSMod mention** -- request clearly mentions: RSMod, OSRS, content drops, skills, zones, playerbots, CT123, or kanban RS tasks
+4. **Active context** -- RSMod orchestration mode is already active from a prior command
+5. **Kanban metadata** -- card body references an `rsmod-*` workflow
+
+### Generic Commands That DO NOT Route to RSMod
+
+The following commands only map to RSMod if RSMod context is already active (condition 4):
+
+- `continue` / `Continue`
+- `next` / `Next`
+- `status` / `Status`
+- `run it` / `run`
+- `do the next one` / `do it`
+
+If RSMod context is not active and Josh sends one of these, Mai should:
+1. Assume it refers to the current non-RS task
+2. Do NOT route to rsmod-content-orchestrator
+3. If ambiguous, ask: "Do you mean continue RSMod orchestration, or continue the current non-RS task?"
+
+### Exiting RSMod Context
+
+These commands turn RSMod orchestration mode OFF:
+
+- `Exit RS orchestration`
+- `General mode`
+- `Switch project`
+- `Exit RS mode`
+
+After exit, subsequent generic commands (continue, next, status) no longer route to RSMod workflows.
+
+### State Tracking
+
+RSMod context state is tracked in-memory for the current session:
+- **RSMod active:** True/False
+- **Set by:** "Start RS orchestration", `RS_*` command, RSMod mention
+- **Cleared by:** "Exit RS orchestration", "General mode", "Switch project"
+- **On ambiguous input:** Ask before acting
+
+---
+
+## Command Shortcuts
+
 ## Command Shortcuts
 
 ### RS_STATUS
