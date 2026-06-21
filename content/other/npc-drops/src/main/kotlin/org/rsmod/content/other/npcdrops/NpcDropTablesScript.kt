@@ -53,6 +53,7 @@ class NpcDropTablesScript @Inject constructor(private val registry: NpcDropTable
         IceGiantDropTables.registerAll(registry)
         IceWarriorDropTables.registerAll(registry)
         DwarfDropTables.registerAll(registry)
+        PirateDropTables.registerAll(registry)
         SkeletonDropTables.registerAll(registry)
         BatDropTables.registerAll(registry)
         ThiefDropTables.registerAll(registry)
