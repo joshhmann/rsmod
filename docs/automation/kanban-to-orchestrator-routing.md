@@ -197,3 +197,122 @@ Policy references:
 - `task-risk-classifier.md` — risk classification
 - `autonomous-stop-conditions.md` — stop conditions
 - `morning-report-template.md` — report format
+
+---
+
+## Command Alias Support in Card Bodies
+
+Cards can now use RS_* command aliases in their body to specify workflow behavior. This allows short commands to replace verbose metadata blocks.
+
+### Card Body Format with Command Alias
+
+Instead of specifying all metadata fields explicitly, a card body can reference a command shortcut:
+
+
+
+### Expansion Rules
+
+When the orchestrator detects a  field in a card body:
+
+1. Load the command definition from 
+2. Fill in all metadata fields from the command default expansion
+3. Override with any capsule fields present in the card body
+4. Merge with explicit , ,  etc. if also present (explicit fields win)
+5. Route the task normally
+
+### Example: Before (verbose)
+
+
+
+### Example: After (with command alias)
+
+
+
+### Integration with Orchestrator Startup
+
+The orchestration startup sequence now includes command alias resolution:
+
+
+
+### See Also
+
+-  -- full command definitions
+-  -- capsule field reference
+
+
+---
+
+## Command Alias Support in Card Bodies
+
+Cards can now use RS_* command aliases in their body to specify workflow behavior. This allows short commands to replace verbose metadata blocks.
+
+### Card Body Format with Command Alias
+
+Instead of specifying all metadata fields explicitly, a card body can reference a command shortcut:
+
+```
+command: RS_STEP_2_HANDOFF
+# Optional capsule overrides:
+worker: rei
+candidate: Karamja Pirate
+promotion_allowed: false
+```
+
+### Expansion Rules
+
+When the orchestrator detects a `command:` field in a card body:
+
+1. Load the command definition from `docs/automation/orchestrator-command-registry.md`
+2. Fill in all metadata fields from the command default expansion
+3. Override with any capsule fields present in the card body
+4. Merge with explicit `workflow:`, `content_type:`, `risk_level:` etc. if also present (explicit fields win)
+5. Route the task normally
+
+### Example: Before (verbose)
+
+```
+workflow: rsmod-corpus-drops
+skills:
+  - rsmod-content-orchestrator
+  - rsmod-corpus-drops
+content_type: drop_tables
+content_area: staged-code-test
+risk_level: 2
+target_host: ct123
+sync_pattern: sandbox_to_ct123
+```
+
+### Example: After (with command alias)
+
+```
+command: RS_STEP_2_HANDOFF
+candidate: Karamja Pirate
+```
+
+### Integration with Orchestrator Startup
+
+The orchestration startup sequence now includes command alias resolution:
+
+```
+kanban_show() reads card
+    |
+    v
+Detect "command:" field in body?
+    Yes -> Expand command from registry
+            Apply capsule overrides
+            Merge with any explicit fields
+    No  -> Fall through to standard metadata detection
+    |
+    v
+Load rsmod-content-orchestrator
+Load specialized workflow skill
+Execute lifecycle
+    |
+    v
+kanban_complete() with structured metadata
+```
+
+### See Also
+
+- `orchestrator-command-registry.md` -- full command definitions
+- `task-capsule-format.md` -- capsule field reference
