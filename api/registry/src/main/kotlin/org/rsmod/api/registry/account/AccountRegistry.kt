@@ -7,6 +7,7 @@ import org.rsmod.api.account.loader.request.AccountLoadResponse
 import org.rsmod.api.account.saver.request.AccountSaveResponse
 import org.rsmod.api.registry.player.PlayerRegistry
 import org.rsmod.events.EventBus
+import org.rsmod.game.entity.PathingEntity.Companion.INVALID_SLOT
 import org.rsmod.game.entity.Player
 
 public class AccountRegistry
@@ -73,6 +74,9 @@ constructor(
     }
 
     private fun handleLogout(player: Player) {
+        // Player may already be removed from registry by PlayerLogoutProcess
+        // (slot freed immediately to match OSRS behavior).
+        if (player.slotId == INVALID_SLOT) return
         playerRegistry.del(player)
     }
 

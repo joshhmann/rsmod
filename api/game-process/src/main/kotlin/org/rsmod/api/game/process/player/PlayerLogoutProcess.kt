@@ -6,6 +6,7 @@ import org.rsmod.api.player.output.ChatType
 import org.rsmod.api.player.output.mes
 import org.rsmod.api.player.ui.ifCloseModals
 import org.rsmod.api.registry.account.AccountRegistry
+import org.rsmod.api.registry.player.PlayerRegistry
 import org.rsmod.api.utils.logging.GameExceptionHandler
 import org.rsmod.events.EventBus
 import org.rsmod.game.MapClock
@@ -19,6 +20,7 @@ constructor(
     private val eventBus: EventBus,
     private val mapClock: MapClock,
     private val playerList: ShuffledPlayerList,
+    private val playerRegistry: PlayerRegistry,
     private val accountRegistry: AccountRegistry,
     private val exceptionHandler: GameExceptionHandler,
     private val logoutProcessor: PlayerLogoutProcessor,
@@ -134,6 +136,12 @@ constructor(
         loggingOut = true
         logoutProcessor.process(this)
 
+        /*
+         * Free the player slot immediately, matching real OSRS behavior.
+         * The async save continues in the background.
+         */
+        playerRegistry.del(this)
+
         if (pendingCloseClient) {
             pendingCloseClient = false
             closeClient = true
@@ -178,7 +186,7 @@ constructor(
          * remain in the world before their logout is queued. This gives them a chance to reconnect
          * in time, based on this constant.
          */
-        private const val RECONNECT_GRACE_PERIOD: Int = 16
+        private const val RECONNECT_GRACE_PERIOD: Int = 100
 
         /**
          * A hard cap period (in server cycles) after which the player's [Player.preventLogoutUntil]
